@@ -398,15 +398,41 @@ function composeAftermath(
   impactNotes: string[],
   docketChanges: DocketChange[],
 ) {
-  const selectedNotes = impactNotes.slice(0, 3);
+  const impactSentence = composeImpactSentence(impactNotes);
   const docketSentence = describeDocketChanges(docketChanges);
-  const additions = [...selectedNotes, docketSentence].filter(Boolean);
+  const additions = [impactSentence, docketSentence].filter(Boolean);
 
   if (additions.length === 0) {
     return consequence;
   }
 
   return [consequence, ...additions].join(" ");
+}
+
+function composeImpactSentence(impactNotes: string[]) {
+  const clauses = impactNotes.slice(0, 3).map(toClause).filter(Boolean);
+
+  if (clauses.length === 0) {
+    return "";
+  }
+  if (clauses.length === 1) {
+    return `${clauses[0]}.`;
+  }
+  if (clauses.length === 2) {
+    return `${clauses[0]}, while ${lowercaseFirst(clauses[1])}.`;
+  }
+
+  return `${clauses[0]}, while ${lowercaseFirst(clauses[1])}; ${lowercaseFirst(
+    clauses[2],
+  )}.`;
+}
+
+function toClause(sentence: string) {
+  return sentence.trim().replace(/[.!?]+$/, "");
+}
+
+function lowercaseFirst(value: string) {
+  return value.length === 0 ? value : `${value[0].toLowerCase()}${value.slice(1)}`;
 }
 
 function describeDocketChanges(changes: DocketChange[]) {

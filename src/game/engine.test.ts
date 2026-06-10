@@ -197,6 +197,25 @@ describe("game engine", () => {
     expect(entry.impact_notes.length).toBeGreaterThan(0);
   });
 
+  it("folds consequence notes into a flowing paragraph instead of stacking short sentences", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const card = getCurrentCard(gameDatabase, state)!;
+    const next = chooseOption(
+      gameDatabase,
+      state,
+      card.id,
+      "opt_augsburg_compromise_inheritance",
+    );
+    const aftermath = next.log.at(-1)!.aftermath;
+    const sentenceCount = aftermath
+      .split(/[.!?]\s+/)
+      .filter((sentence) => sentence.trim().length > 0).length;
+
+    expect(sentenceCount).toBeLessThanOrEqual(3);
+    expect(aftermath).toMatch(/while|;| and /i);
+    expect(aftermath).not.toMatch(/submission\. Catholic reformers/i);
+  });
+
   it("varies consequence prose across different choices with similar effects", () => {
     const firstCard = gameDatabase.cards[0];
     const sharedOption = firstCard.options[0];
