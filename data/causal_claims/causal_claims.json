@@ -1,5 +1,41 @@
 [
   {
+    "id": "claim_augsburg_ambiguities_fault_lines",
+    "historical_fact": "The 1555 Peace of Augsburg embedded Catholic-Lutheran coexistence in imperial law but left contested questions over ecclesiastical lands, mediate church property, and subjects' religious rights.",
+    "source_backed_interpretation": "Wilson treats Augsburg as a wider constitutional settlement rather than a simple truce. Its durability mattered, but its unresolved ambiguities created legal-confessional fault lines that later rulers, estates, and courts could interpret in incompatible ways.",
+    "causal_claim": "A narrow reading of Augsburg strengthens legal clarity for immediate enforcement but raises fear that inherited compromises are being weaponized; a broader compromise reading improves estate trust while frustrating confessional restoration.",
+    "game_abstraction": "The campaign begins with an inherited settlement whose gaps turn later policy into constitutional risk.",
+    "player_facing_text": "Augsburg keeps the peace until someone asks what, exactly, the peace protects.",
+    "mechanical_effect": "Narrow enforcement raises imperial_authority or confessional_legitimacy while lowering estate_trust; compromise readings raise estate_trust and lower intervention risk while constraining restoration.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_primary_augsburg_peace_1555_reference_translation"]
+  },
+  {
+    "id": "claim_union_liga_security_dilemma",
+    "historical_fact": "The Protestant Union and Catholic Liga formed in 1608-1609 as confessional and dynastic security organizations inside the Empire.",
+    "source_backed_interpretation": "Wilson presents the Union and Liga as defensive instruments and princely platforms that claimed constitutional legitimacy while spreading costs and sharpening mutual suspicion. Their existence did not make war inevitable, but it changed how local crises could be widened.",
+    "causal_claim": "Treating confessional leagues as constitutional insurance can contain panic but leaves organized blocs in place; leaning on one bloc increases short-term support while raising dependence and fear of overreach.",
+    "game_abstraction": "Security blocs are not simple ally/enemy camps: they are insurance schemes, bargaining machines, and escalation channels.",
+    "player_facing_text": "Every league promises defense. Every neighbor wonders defense against whom.",
+    "mechanical_effect": "League cooperation can raise military_dependence and confessional_legitimacy; legal containment can raise estate_trust but reduce immediate force.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+  },
+  {
+    "id": "claim_ferdinand_legalistic_bohemia_escalates",
+    "historical_fact": "In 1617-1618 Ferdinand accepted a narrow legal reading of the Bohemian religious settlement and backed measures against Protestant worship at disputed sites before the Defenestration.",
+    "source_backed_interpretation": "Wilson stresses that Ferdinand's line could look technically defensible while still being politically mishandled. The policy fed Bohemian grievances because estate actors treated the Letter of Majesty as a recorded religious and political guarantee.",
+    "causal_claim": "Legalistic enforcement improves Catholic confidence and dynastic firmness while reducing estate trust and increasing the chance that technical law is read as existential threat.",
+    "game_abstraction": "The first true Ferdinand choice is not whether to answer Prague after the window, but how hard to press the legal reading that made the window possible.",
+    "player_facing_text": "A legally clean order can still be politically explosive.",
+    "mechanical_effect": "Strict enforcement raises confessional_legitimacy and imperial_authority, but lowers estate_trust and raises foreign_intervention_risk.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_public_letter_of_majesty_1609_cz_wikisource"]
+  },
+  {
     "id": "claim_bavarian_help_leverage",
     "historical_fact": "Ferdinand relied on Maximilian of Bavaria and Catholic League forces during the Bohemian crisis.",
     "source_backed_interpretation": "Valeš's legal-history reading of the 1619 Munich Treaty emphasizes that Maximilian's support was tied to Catholic League direction, compensation obligations, and later Palatine/electoral expectations; this solved Ferdinand's immediate battlefield problem while increasing Bavarian leverage over imperial settlement.",

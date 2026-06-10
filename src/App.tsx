@@ -306,7 +306,7 @@ function OutcomePanel({
       </div>
       <button className="choice-button restart-choice" type="button" onClick={onRestart}>
         <span>Return</span>
-        Begin again from Prague
+        Begin again from Augsburg
       </button>
     </article>
   );

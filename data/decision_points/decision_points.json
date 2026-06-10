@@ -1,5 +1,94 @@
 [
   {
+    "id": "dp_1555_augsburg_settlement_inheritance",
+    "actor_or_power_center_id": "pc_imperial_constitution",
+    "date_label": "1555",
+    "situation": "The Peace of Augsburg creates the legal-confessional settlement later actors inherit: durable enough to stabilize the Empire, ambiguous enough to become a battlefield of interpretation.",
+    "known_constraints": [
+      "Wilson frames Augsburg as part of a constitutional settlement, not merely a religious truce",
+      "The settlement gives the Empire a legal language for coexistence while leaving contested fault lines",
+      "Later actors can treat ambiguity as a reason for compromise or as an opportunity for stricter enforcement",
+      "Ferdinand inherits the settlement rather than personally creating it"
+    ],
+    "plausible_options": [
+      "Treat Augsburg as a narrow legal settlement whose gaps should be enforced by authority",
+      "Treat Augsburg as a fragile compromise that requires consultation and restraint",
+      "Avoid clarifying the gaps and let local rulers, courts, and estates keep testing them"
+    ],
+    "stakes": "How the player understands the Empire before Prague: as a confessional settlement to enforce, a constitutional compromise to preserve, or an ambiguity that has been deferred too long.",
+    "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines", "claim_legalism_reassures_estates"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_primary_augsburg_peace_1555_reference_translation"]
+  },
+  {
+    "id": "dp_1608_security_blocs",
+    "actor_or_power_center_id": "pc_imperial_constitution",
+    "date_label": "1608-1609",
+    "situation": "The Protestant Union and Catholic Liga convert local confessional insecurity into organized defensive blocs that claim to protect the imperial order while making escalation easier.",
+    "known_constraints": [
+      "Wilson treats the Union and Liga as security instruments and dynastic platforms, not as automatic war machines",
+      "Members often want insurance more than war",
+      "Directors such as the Palatinate and Bavaria can use league structures to spread costs and pursue wider ambitions",
+      "Ferdinand later inherits a world where aid may come through blocs rather than neutral imperial institutions"
+    ],
+    "plausible_options": [
+      "Recognize the leagues as temporary security insurance while keeping them inside imperial legality",
+      "Condemn confessional leagues as threats to the Landfrieden and try to dissolve them",
+      "Lean into Catholic organization as the only reliable answer to Protestant coordination"
+    ],
+    "stakes": "Whether defensive organization reassures frightened estates or creates ready-made machinery for a wider war.",
+    "causal_claim_ids": ["claim_union_liga_security_dilemma", "claim_legalism_reassures_estates"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+  },
+  {
+    "id": "dp_1609_letter_majesty_inheritance",
+    "actor_or_power_center_id": "pc_bohemian_estates",
+    "date_label": "1609",
+    "situation": "Rudolf II's Letter of Majesty gives Bohemian Protestant estates a recorded charter language for religion, schools, churches, and defenders that later Habsburg rulers must either acknowledge, narrow, or contest.",
+    "known_constraints": [
+      "The charter turns Bohemian religious practice into a recorded estate-liberty claim",
+      "Catholic royal officials and Protestant estates can read the charter differently",
+      "Wilson identifies the later enforcement of disputed sites as technically framed but politically inflammatory",
+      "Ferdinand inherits this paper as a constraint on Bohemian policy"
+    ],
+    "plausible_options": [
+      "Preserve the charter as a binding estate-liberty guarantee",
+      "Read the charter narrowly and reserve disputed sites to royal and Catholic authority",
+      "Delay clarification and hope the ambiguity remains manageable"
+    ],
+    "stakes": "Whether Bohemia's religious settlement remains a bridge between crown and estates or becomes the proof text for rebellion.",
+    "causal_claim_ids": ["claim_letter_majesty_bohemian_liberties", "claim_ferdinand_legalistic_bohemia_escalates"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+  },
+  {
+    "id": "dp_1617_bohemian_crown_enforcement",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1617-1618",
+    "situation": "After being accepted as Bohemian king, Ferdinand must decide how strongly to back the narrow legal line against Protestant worship at disputed sites before grievance becomes open revolt.",
+    "known_constraints": [
+      "Ferdinand wants dynastic security and Catholic restoration in the hereditary lands",
+      "The Letter of Majesty gives Bohemian Protestants a charter language for religious and estate rights",
+      "Wilson describes Ferdinand's position as legalistic and politically mishandled",
+      "A softer policy may reduce immediate anger while disappointing Catholic allies and court hardliners",
+      "A harder policy can look lawful to one side and existentially threatening to the other"
+    ],
+    "plausible_options": [
+      "Confirm the strict legal line and support closures, arrests, and royal judges",
+      "Suspend disputed-site enforcement and convene a controlled legal clarification",
+      "Let Klesl and moderates explore a face-saving settlement while preserving royal claims"
+    ],
+    "stakes": "Whether Ferdinand enters the Bohemian crisis with Catholic confidence and collapsing estate trust, or with more room for compromise but less hardline support.",
+    "causal_claim_ids": ["claim_ferdinand_legalistic_bohemia_escalates", "claim_letter_majesty_bohemian_liberties", "claim_legalism_reassures_estates"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_public_letter_of_majesty_1609_cz_wikisource"]
+  },
+  {
     "id": "dp_1618_defenestration_response",
     "actor_or_power_center_id": "actor_ferdinand_ii",
     "date_label": "May-June 1618",
