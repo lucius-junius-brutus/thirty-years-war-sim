@@ -175,7 +175,7 @@ describe("game engine", () => {
     const notes = next.log.at(-1)?.impact_notes ?? [];
 
     expect(notes.length).toBeGreaterThanOrEqual(3);
-    expect(notes.join(" ")).toMatch(/Moderate estates gain room/i);
+    expect(notes.join(" ")).toMatch(/Moderate estates|Doubtful estates|Petitioners/i);
     expect(notes.join(" ")).not.toMatch(/[+-]\d/);
     expect(notes.join(" ")).not.toMatch(/estate_trust|imperial_authority/i);
   });
@@ -192,9 +192,65 @@ describe("game engine", () => {
     const entry = next.log.at(-1)!;
 
     expect(entry.aftermath).toContain("The court appears as guardian");
-    expect(entry.aftermath).toContain("Moderate estates gain room");
+    expect(entry.aftermath).toMatch(/Moderate estates|Doubtful estates|Petitioners/i);
     expect(entry.aftermath).not.toMatch(/Consequences carried forward|[+-]\d/);
     expect(entry.impact_notes.length).toBeGreaterThan(0);
+  });
+
+  it("varies consequence prose across different choices with similar effects", () => {
+    const firstCard = gameDatabase.cards[0];
+    const sharedOption = firstCard.options[0];
+    const database = {
+      ...gameDatabase,
+      cards: [
+        {
+          ...firstCard,
+          options: [
+            {
+              ...sharedOption,
+              id: "opt_test_estates_a",
+              label: "Open one channel of consultation.",
+              consequence: "The files remain open and no estate is forced to retreat today.",
+              effects: {
+                estate_trust: 8,
+                imperial_authority: -3,
+              },
+            },
+            {
+              ...sharedOption,
+              id: "opt_test_estates_b",
+              label: "Open a second channel of consultation.",
+              consequence: "The files remain open and no estate is forced to retreat today.",
+              effects: {
+                estate_trust: 8,
+                imperial_authority: -3,
+              },
+            },
+          ],
+        },
+        ...gameDatabase.cards.slice(1),
+      ],
+    };
+    const state = createInitialGameState(database, "role_ferdinand_ii");
+    const afterFirst = chooseOption(
+      database,
+      state,
+      firstCard.id,
+      "opt_test_estates_a",
+    );
+    const afterSecond = chooseOption(
+      database,
+      state,
+      firstCard.id,
+      "opt_test_estates_b",
+    );
+
+    expect(afterFirst.log.at(-1)?.impact_notes.join(" ")).not.toBe(
+      afterSecond.log.at(-1)?.impact_notes.join(" "),
+    );
+    expect(afterFirst.log.at(-1)?.aftermath).not.toBe(
+      afterSecond.log.at(-1)?.aftermath,
+    );
   });
 
   it("carries prior choices into later dispatch wording", () => {

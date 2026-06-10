@@ -382,12 +382,12 @@ function clamp(value: number) {
 }
 
 function describeImmediateEffects(option: CardOptionRecord) {
-  const tagNotes = describeMemoryTags(option.memory_tags);
+  const tagNotes = describeMemoryTags(option.memory_tags, option.id);
   const pressureNotes = Object.entries(option.effects)
     .filter(([, delta]) => Math.abs(delta) >= 2)
     .sort(([, a], [, b]) => Math.abs(b) - Math.abs(a))
     .map(([key, delta]) =>
-      describePressureMovement(key as keyof PressureMap, delta),
+      describePressureMovement(key as keyof PressureMap, delta, option.id),
     );
 
   return [...new Set([...tagNotes, ...pressureNotes])].slice(0, 4);
@@ -441,71 +441,187 @@ function describeDocketChanges(changes: DocketChange[]) {
   return sentences.join(" ");
 }
 
-function describeMemoryTags(tags: string[] = []) {
-  const notesByTag: Record<string, string> = {
-    klesl_retained:
+function describeMemoryTags(tags: string[] = [], seed: string) {
+  const notesByTag: Record<string, string[]> = {
+    klesl_retained: [
       "A channel to moderate estates remains open, though Catholic councillors suspect delay.",
-    klesl_removed:
+      "Klesl's correspondents keep a door ajar for obedience without immediate humiliation.",
+      "Men still willing to mediate can approach Vienna, but zealous councillors mark the delay.",
+    ],
+    klesl_removed: [
       "The court speaks with a harder voice, and Prague expects less mercy from Vienna.",
-    bavarian_dependence_high:
+      "Prague hears that the emperor's councillors now prefer resolution to accommodation.",
+      "The removal stiffens Vienna's hand and narrows the space for moderate language.",
+    ],
+    bavarian_dependence_high: [
       "Bavaria becomes the necessary broker of armed Catholic assistance.",
-    bavarian_dependence_medium:
+      "Maximilian's aid now carries the weight of a creditor's claim as well as an ally's counsel.",
+      "The League's soldiers answer the need of the hour, but Bavaria stands nearer the center of decision.",
+    ],
+    bavarian_dependence_medium: [
       "Bavarian help remains close enough to demand reward and consultation.",
-    bavarian_dependence_low:
+      "Munich can still ask what price its loyalty has earned.",
+      "The court keeps Bavaria in harness, though not without future claims from Munich.",
+    ],
+    bavarian_dependence_low: [
       "The court keeps more direction in its own hands, but with fewer certain swords.",
-    electoral_transfer_transferred:
+      "Vienna preserves room to decide, at the cost of less assured Catholic force.",
+      "Independence from Munich leaves the crown freer and more exposed.",
+    ],
+    electoral_transfer_transferred: [
       "Maximilian's reward becomes a constitutional fact other electors must now measure.",
-    wallenstein_empowered:
+      "The electoral college receives not only a punishment of Frederick, but a warning about imperial emergency power.",
+      "Bavaria's elevation satisfies Catholic victory while unsettling the balance among electors.",
+    ],
+    wallenstein_empowered: [
       "Military command begins to gather around a servant whose credit may outrun ordinary obedience.",
-    restitution_edict_issued:
+      "Wallenstein's contracts promise armies faster than the estates can furnish them, and at a price not only reckoned in coin.",
+      "The court obtains soldiers by allowing a new military interest to gather authority around itself.",
+    ],
+    restitution_edict_issued: [
       "Ecclesiastical restitution is no longer a petition at court but an imperial command.",
-    prague_amnesty_broad:
+      "Catholic claimants can now point to an edict, while Protestant estates read the same paper as menace.",
+      "The question of church lands leaves the docket of complaint and enters the language of enforcement.",
+    ],
+    prague_amnesty_broad: [
       "Men who might otherwise remain enemies are given reason to seek terms under imperial authority.",
-    blood_court_executions:
+      "The offer of grace gives frightened estates a road back to obedience.",
+      "Those not already ruined by rebellion can imagine settlement without complete destruction.",
+    ],
+    blood_court_executions: [
       "The punishments in Prague teach obedience by terror as much as by law.",
+      "The scaffold makes an example for the kingdom, and also a memory that will not easily be quieted.",
+      "Royal justice is made visible in blood, binding obedience to fear.",
+    ],
   };
 
-  return tags.flatMap((tag) => notesByTag[tag] ?? []);
+  return tags
+    .map((tag) => selectVariant(notesByTag[tag] ?? [], `${seed}:${tag}`))
+    .filter(Boolean);
 }
 
-function describePressureMovement(pressure: keyof PressureMap, delta: number) {
+function describePressureMovement(
+  pressure: keyof PressureMap,
+  delta: number,
+  seed: string,
+) {
   const rising = delta > 0;
-  const notes: Record<keyof PressureMap, { rising: string; falling: string }> = {
+  const notes: Record<keyof PressureMap, { rising: string[]; falling: string[] }> = {
     imperial_authority: {
-      rising: "Imperial command is easier to present as lawful remedy.",
-      falling: "More estates can say the crown governs by bargain rather than command.",
+      rising: [
+        "Imperial command is easier to present as lawful remedy.",
+        "The chancery can write more confidently in the language of mandate and obedience.",
+        "The crown's answer carries more of the weight of public authority.",
+      ],
+      falling: [
+        "More estates can say the crown governs by bargain rather than command.",
+        "The emperor's title remains high, but this settlement teaches others to ask for terms.",
+        "Authority is preserved in form while its exercise becomes more dependent on consent.",
+      ],
     },
     confessional_legitimacy: {
-      rising: "Catholic reformers hear firmer warrant for recovery of churches, schools, and revenues.",
-      falling: "Catholic reformers hear caution where they expected recovery.",
+      rising: [
+        "Catholic reformers hear firmer warrant for recovery of churches, schools, and revenues.",
+        "The Catholic party receives language it can carry to bishops, chapters, and Jesuit advisers.",
+        "Restoration-minded allies find more in the decree to praise than to excuse.",
+      ],
+      falling: [
+        "Catholic reformers hear caution where they expected recovery.",
+        "Zealous allies complain that peace is being purchased with church property still withheld.",
+        "Those pressing restoration find the court's hand slower than their petitions require.",
+      ],
     },
     estate_trust: {
-      rising: "Moderate estates gain room to remain obedient without surrendering every privilege.",
-      falling: "Estate petitions speak more readily of fear, privilege, and precedent.",
+      rising: [
+        "Moderate estates gain room to remain obedient without surrendering every privilege.",
+        "Doubtful estates can describe obedience as prudence rather than submission.",
+        "Petitioners who fear innovation receive enough language of law to stay at the table.",
+      ],
+      falling: [
+        "Estate petitions speak more readily of fear, privilege, and precedent.",
+        "The language of obedience gives way to complaints over liberties and jurisdiction.",
+        "Moderates find it harder to answer neighbors who call the court's course a threat.",
+      ],
     },
     fiscal_capacity: {
-      rising: "Creditors and contributors see firmer means behind the court's orders.",
-      falling: "The treasury must buy time with arrears, pledges, or new concessions.",
+      rising: [
+        "Creditors and contributors see firmer means behind the court's orders.",
+        "The treasury can answer more petitions with payment rather than promises alone.",
+        "Contribution and credit look less like desperate expedients and more like policy.",
+      ],
+      falling: [
+        "The treasury must buy time with arrears, pledges, or new concessions.",
+        "Every order now travels with the question of who will pay for obedience.",
+        "Creditors hear more promises than coin, and soldiers learn to wait upon contribution.",
+      ],
     },
     military_dependence: {
-      rising: "Armed allies and military contractors gain a larger claim on the court.",
-      falling: "The court carries more of its cause without surrendering direction to armed partners.",
+      rising: [
+        "Armed allies and military contractors gain a larger claim on the court.",
+        "The cause is strengthened by soldiers whose commanders will expect recompense.",
+        "Military necessity places new counsellors beside the legal ones.",
+      ],
+      falling: [
+        "The court carries more of its cause without surrendering direction to armed partners.",
+        "Vienna keeps a freer hand by asking less from men who command armies.",
+        "The crown avoids one creditor of war, though it must find strength elsewhere.",
+      ],
     },
     foreign_intervention_risk: {
-      rising: "Foreign courts receive a clearer pretext to watch, bargain, or intervene.",
-      falling: "Outsiders find fewer openings to present intervention as protection.",
+      rising: [
+        "Foreign courts receive a clearer pretext to watch, bargain, or intervene.",
+        "Envoys beyond the Empire can now describe the quarrel as a matter touching the balance of Europe.",
+        "The more decisive the court appears, the easier it is for outsiders to claim an interest.",
+      ],
+      falling: [
+        "Outsiders find fewer openings to present intervention as protection.",
+        "Foreign envoys receive less material for complaints dressed as guarantees.",
+        "The quarrel remains easier to describe as imperial business, not a summons to Europe.",
+      ],
     },
     dynastic_security: {
-      rising: "Habsburg succession and hereditary right look less exposed.",
-      falling: "The dynasty's claim appears more dependent on consent and military fortune.",
+      rising: [
+        "Habsburg succession and hereditary right look less exposed.",
+        "The dynasty's friends can speak with more confidence of continuity and right.",
+        "The hereditary lands appear less likely to choose their moment against the house.",
+      ],
+      falling: [
+        "The dynasty's claim appears more dependent on consent and military fortune.",
+        "Rivals can whisper that Habsburg right stands only where force or bargain upholds it.",
+        "The house keeps its titles, but less of the certainty that should attend them.",
+      ],
     },
     devastation: {
-      rising: "Billeting, contributions, and reprisals fall more heavily on the lands.",
-      falling: "More districts escape the immediate weight of soldiers and contribution.",
+      rising: [
+        "Billeting, contributions, and reprisals fall more heavily on the lands.",
+        "Subjects far from the council feel the decision in quarters, levies, and requisitions.",
+        "The war's necessities move from paper into barns, roads, and town accounts.",
+      ],
+      falling: [
+        "More districts escape the immediate weight of soldiers and contribution.",
+        "The countryside is spared one turn of quartering and forced provision.",
+        "Town councils and village officers receive fewer demands in the soldiers' name.",
+      ],
     },
   };
 
-  return rising ? notes[pressure].rising : notes[pressure].falling;
+  return selectVariant(
+    rising ? notes[pressure].rising : notes[pressure].falling,
+    `${seed}:${pressure}:${delta}`,
+  );
+}
+
+function selectVariant(variants: string[], seed: string) {
+  if (variants.length === 0) {
+    return "";
+  }
+  return variants[hashString(seed) % variants.length];
+}
+
+function hashString(value: string) {
+  return [...value].reduce((hash, char) => {
+    return (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }, 17);
 }
 
 function getDocketChanges(

@@ -35,7 +35,7 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/aftermath/i)).toBeInTheDocument();
     expect(screen.queryByText(/leagues of protection/i)).not.toBeInTheDocument();
     expect(screen.getAllByText(/The court appears as guardian/i).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/Moderate estates gain room/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Moderate estates|Doubtful estates|Petitioners/i).length).toBeGreaterThan(0);
     expect(screen.queryByText(/consequences carried forward/i)).not.toBeInTheDocument();
     expect(container.querySelector(".consequence-docket")).not.toBeInTheDocument();
     expect(container.querySelector(".effect-list")).not.toBeInTheDocument();
