@@ -185,6 +185,15 @@ const cardOptionRecordSchema = z.object({
   effects: z.partialRecord(pressureKeySchema, z.number()),
   causal_claim_ids: z.array(z.string().min(1)).min(1),
   historical_option: z.boolean().optional(),
+  memory_tags: z.array(z.string().min(1)).optional(),
+});
+
+const cardMemoryVariantRecordSchema = z.object({
+  required_memory_tags: z.array(z.string().min(1)).min(1),
+  title: z.string().min(1).optional(),
+  date_label: z.string().min(1).optional(),
+  briefing: z.string().min(1).optional(),
+  situation: z.string().min(1).optional(),
 });
 
 const cardRecordSchema = z.object({
@@ -200,6 +209,9 @@ const cardRecordSchema = z.object({
   source_refs: sourceRefsSchema,
   causal_claim_ids: z.array(z.string().min(1)).min(1),
   review_status: reviewStatusSchema,
+  requires_memory_tags: z.array(z.string().min(1)).optional(),
+  excludes_memory_tags: z.array(z.string().min(1)).optional(),
+  memory_variants: z.array(cardMemoryVariantRecordSchema).optional(),
   options: z.array(cardOptionRecordSchema).min(2),
 });
 

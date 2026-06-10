@@ -14,12 +14,14 @@ export interface GameLogEntry {
   consequence: string;
   causal_claim_ids: string[];
   pressure_delta: Partial<PressureMap>;
+  memory_tags_added?: string[];
 }
 
 export interface GameState {
   roleId: string;
   cardIndex: number;
   pressures: PressureMap;
+  memory_tags: string[];
   log: GameLogEntry[];
   completed: boolean;
 }
@@ -33,6 +35,7 @@ export function createInitialGameState(
     roleId,
     cardIndex: 0,
     pressures: { ...role.initial_pressures },
+    memory_tags: [],
     log: [],
     completed: false,
   };
@@ -51,9 +54,17 @@ export function getRole(
 
 export function getCardsForRole(
   database: GameDatabase,
-  roleId: string,
+  roleOrState: string | GameState,
 ): CardRecord[] {
-  return database.cards.filter((card) => card.role_id === roleId);
+  const roleId =
+    typeof roleOrState === "string" ? roleOrState : roleOrState.roleId;
+  const memoryTags =
+    typeof roleOrState === "string" ? [] : roleOrState.memory_tags;
+
+  return database.cards
+    .filter((card) => card.role_id === roleId)
+    .filter((card) => cardMatchesMemory(card, memoryTags))
+    .map((card) => applyMemoryVariant(card, memoryTags));
 }
 
 export function getCurrentCard(
@@ -63,7 +74,7 @@ export function getCurrentCard(
   if (state.completed) {
     return null;
   }
-  return getCardsForRole(database, state.roleId)[state.cardIndex] ?? null;
+  return getCardsForRole(database, state)[state.cardIndex] ?? null;
 }
 
 export function chooseOption(
@@ -83,13 +94,21 @@ export function chooseOption(
   }
 
   const pressures = applyEffects(state.pressures, option.effects);
-  const cards = getCardsForRole(database, state.roleId);
+  const memoryTags = mergeMemoryTags(state.memory_tags, option.memory_tags);
   const nextIndex = state.cardIndex + 1;
+  const nextState = {
+    ...state,
+    cardIndex: nextIndex,
+    pressures,
+    memory_tags: memoryTags,
+  };
+  const cards = getCardsForRole(database, nextState);
 
   return {
     ...state,
     cardIndex: nextIndex,
     pressures,
+    memory_tags: memoryTags,
     completed: nextIndex >= cards.length,
     log: [
       ...state.log,
@@ -102,6 +121,7 @@ export function chooseOption(
         consequence: option.consequence,
         causal_claim_ids: option.causal_claim_ids,
         pressure_delta: option.effects,
+        memory_tags_added: option.memory_tags,
       },
     ],
   };
@@ -150,4 +170,40 @@ export function scoreOutcome(database: GameDatabase, state: GameState) {
 
 function clamp(value: number) {
   return Math.max(0, Math.min(100, Math.round(value)));
+}
+
+function cardMatchesMemory(card: CardRecord, memoryTags: string[]) {
+  const hasAllRequired = (card.requires_memory_tags ?? []).every((tag) =>
+    memoryTags.includes(tag),
+  );
+  const hasExcluded = (card.excludes_memory_tags ?? []).some((tag) =>
+    memoryTags.includes(tag),
+  );
+
+  return hasAllRequired && !hasExcluded;
+}
+
+function applyMemoryVariant(
+  card: CardRecord,
+  memoryTags: string[],
+): CardRecord {
+  const variant = card.memory_variants?.find((item) =>
+    item.required_memory_tags.every((tag) => memoryTags.includes(tag)),
+  );
+
+  if (!variant) {
+    return card;
+  }
+
+  return {
+    ...card,
+    title: variant.title ?? card.title,
+    date_label: variant.date_label ?? card.date_label,
+    briefing: variant.briefing ?? card.briefing,
+    situation: variant.situation ?? card.situation,
+  };
+}
+
+function mergeMemoryTags(existing: string[], additions: string[] = []) {
+  return [...new Set([...existing, ...additions])];
 }

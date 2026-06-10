@@ -166,6 +166,15 @@ export interface CardOptionRecord {
   effects: Partial<PressureMap>;
   causal_claim_ids: string[];
   historical_option?: boolean;
+  memory_tags?: string[];
+}
+
+export interface CardMemoryVariantRecord {
+  required_memory_tags: string[];
+  title?: string;
+  date_label?: string;
+  briefing?: string;
+  situation?: string;
 }
 
 export interface CardRecord {
@@ -181,6 +190,9 @@ export interface CardRecord {
   source_refs: string[];
   causal_claim_ids: string[];
   review_status: ReviewStatus;
+  requires_memory_tags?: string[];
+  excludes_memory_tags?: string[];
+  memory_variants?: CardMemoryVariantRecord[];
   options: CardOptionRecord[];
 }
 

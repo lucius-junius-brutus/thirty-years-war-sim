@@ -23,7 +23,8 @@
           "estate_trust": -7,
           "foreign_intervention_risk": 2
         },
-        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines"]
+        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines"],
+        "memory_tags": ["augsburg_strict"]
       },
       {
         "id": "opt_augsburg_compromise_inheritance",
@@ -35,7 +36,8 @@
           "confessional_legitimacy": -5,
           "imperial_authority": -2
         },
-        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines", "claim_legalism_reassures_estates"]
+        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines", "claim_legalism_reassures_estates"],
+        "memory_tags": ["augsburg_consultation"]
       },
       {
         "id": "opt_augsburg_deferred_inheritance",
@@ -46,7 +48,8 @@
           "imperial_authority": -3,
           "foreign_intervention_risk": 3
         },
-        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines"]
+        "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines"],
+        "memory_tags": ["augsburg_deferred"]
       }
     ]
   },
@@ -63,6 +66,23 @@
     "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"],
     "causal_claim_ids": ["claim_union_liga_security_dilemma", "claim_legalism_reassures_estates"],
     "review_status": "needs_review",
+    "memory_variants": [
+      {
+        "required_memory_tags": ["augsburg_strict"],
+        "briefing": "Because the court has chosen stricter enforcement of the Augsburg settlement, the reports from Auhausen and Munich arrive as warnings of organized resistance. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
+        "situation": "That earlier posture gives Catholic petitioners confidence that old rights may be pressed, but it also sharpens Protestant claims that ordinary remedies have become unsafe. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+      },
+      {
+        "required_memory_tags": ["augsburg_consultation"],
+        "briefing": "Because the court has chosen consultation over immediate enforcement, the reports from Auhausen and Munich arrive as warnings rather than summons. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
+        "situation": "The reports add that earlier posture gives Ferdinand a language of restraint, but it also makes both leagues harder to condemn at once. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+      },
+      {
+        "required_memory_tags": ["augsburg_deferred"],
+        "briefing": "Because the court has left disputed usages to stand until complaint forces judgment, the reports from Auhausen and Munich arrive beside a growing file of unanswered petitions. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
+        "situation": "That earlier posture avoids a single imperial provocation, but it leaves each estate to judge danger for itself. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+      }
+    ],
     "options": [
       {
         "id": "opt_leagues_constitutional_insurance",
