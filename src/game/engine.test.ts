@@ -5,8 +5,10 @@ import {
   createInitialGameState,
   getCardsForRole,
   getCurrentCard,
+  getDesignerReport,
   getOptionAvailability,
   getOptionsForCard,
+  scoreOutcome,
 } from "./engine";
 
 describe("game engine", () => {
@@ -335,5 +337,82 @@ describe("game engine", () => {
 
     expect(calmDeck).not.toContain("card_1631_intervention_crisis");
     expect(interventionDeck).toContain("card_1631_intervention_crisis");
+  });
+
+  it("explains hidden cards and locked options for the private designer view", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const kleslCardIndex = getCardsForRole(gameDatabase, state).findIndex(
+      (card) => card.id === "card_1618_remove_klesl",
+    );
+    const kleslCard = getCardsForRole(gameDatabase, state)[kleslCardIndex];
+    const afterRetainingKlesl = chooseOption(
+      gameDatabase,
+      { ...state, cardIndex: kleslCardIndex },
+      kleslCard.id,
+      "opt_keep_klesl_negotiating",
+    );
+
+    const report = getDesignerReport(gameDatabase, afterRetainingKlesl);
+
+    expect(report.visible_card_ids).toContain("card_1618_mediation_channel");
+    expect(report.skipped_cards).toContainEqual(
+      expect.objectContaining({
+        card_id: "card_1619_stormy_petition",
+        reasons: expect.arrayContaining([
+          expect.stringContaining("klesl_removed"),
+        ]),
+      }),
+    );
+
+    const electoralTransferIndex = getCardsForRole(gameDatabase, state).findIndex(
+      (card) => card.id === "card_1623_electoral_transfer",
+    );
+    const dependentState = {
+      ...state,
+      cardIndex: electoralTransferIndex,
+      pressures: {
+        ...state.pressures,
+        military_dependence: 82,
+        estate_trust: 28,
+      },
+    };
+    const optionReport = getDesignerReport(gameDatabase, dependentState);
+
+    expect(optionReport.current_options).toContainEqual(
+      expect.objectContaining({
+        option_id: "opt_preserve_electoral_balance",
+        available: false,
+        reason: expect.stringContaining("Bavarian claims"),
+      }),
+    );
+  });
+
+  it("scores Ferdinand's ending from the path taken as well as the meters", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const restrained = scoreOutcome(gameDatabase, {
+      ...state,
+      completed: true,
+      memory_tags: [
+        "prague_amnesty_broad",
+        "palatine_proxy_settlement",
+        "restitution_peace_bargain",
+        "ferdinand_iii_elected",
+      ],
+    });
+    const hardLine = scoreOutcome(gameDatabase, {
+      ...state,
+      completed: true,
+      memory_tags: [
+        "prague_exclusions_hardline",
+        "blood_court_executions",
+        "restitution_edict_issued",
+        "ferdinand_iii_elected",
+      ],
+    });
+
+    expect(restrained.title).toBe("A Settlement Bought by Restraint");
+    expect(restrained.legacy).toMatch(/concession/i);
+    expect(hardLine.title).toBe("Hard Victory, Unquiet Empire");
+    expect(hardLine.legacy).toMatch(/punishment|Edict/i);
   });
 });

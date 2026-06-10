@@ -1,8 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import App from "./App";
 
 describe("Empire in Ashes app", () => {
+  beforeEach(() => {
+    window.history.pushState({}, "", "/");
+  });
+
   it("renders the political desk and advances after a choice", async () => {
     const { container } = render(<App />);
 
@@ -13,12 +17,16 @@ describe("Empire in Ashes app", () => {
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
     expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
+    expect(screen.getByText(/received at council/i)).toBeInTheDocument();
+    expect(screen.getByText(/memorial before the council/i)).toBeInTheDocument();
     expect(screen.queryByText(/how we got here/i)).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Religious Peace of Augsburg/i })).toBeInTheDocument();
-    expect(screen.getByText(/Memorials before the court/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/course proposed/i).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/historical path/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/campaign begins/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/historian note/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/chancery log/i)).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /designer view/i })).not.toBeInTheDocument();
 
     fireEvent.click(
       screen.getByRole("button", { name: /preserve Augsburg as a living compact/i }),
@@ -46,5 +54,21 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
     expect(screen.getByText(/Religious and constitutional settlement/i)).toBeInTheDocument();
     expect(screen.getByText(/Why it matters/i)).toBeInTheDocument();
+  });
+
+  it("keeps a private designer docket outside the normal play surface", () => {
+    window.history.pushState({}, "", "/?designer=1");
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+
+    expect(screen.queryByText(/designer docket/i)).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /designer view/i }));
+
+    expect(screen.getByText(/designer docket/i)).toBeInTheDocument();
+    expect(screen.getByText(/current dispatch/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/card_1555_augsburg_settlement/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/remaining dispatches/i)).toBeInTheDocument();
   });
 });

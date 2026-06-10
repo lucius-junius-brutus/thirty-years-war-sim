@@ -28,6 +28,40 @@ export interface GameState {
   completed: boolean;
 }
 
+export interface DesignerCardReport {
+  card_id: string;
+  title: string;
+  date_label: string;
+  reasons: string[];
+}
+
+export interface DesignerOptionReport {
+  option_id: string;
+  label: string;
+  available: boolean;
+  reason?: string;
+}
+
+export interface DesignerReport {
+  current_card_id: string | null;
+  visible_card_ids: string[];
+  remaining_cards: DesignerCardReport[];
+  skipped_cards: DesignerCardReport[];
+  current_options: DesignerOptionReport[];
+  memory_tags: string[];
+  pressures: PressureMap;
+}
+
+export interface OutcomeScore {
+  title: string;
+  legacy: string;
+  inheritance: string;
+  comparison: string;
+  path_signals: string[];
+  strengths: string[];
+  dangers: string[];
+}
+
 export function createInitialGameState(
   database: GameDatabase,
   roleId: string,
@@ -166,6 +200,42 @@ export function getOptionAvailability(
   };
 }
 
+export function getDesignerReport(
+  database: GameDatabase,
+  state: GameState,
+): DesignerReport {
+  const visibleCards = getCardsForRole(database, state);
+  const currentCard = getCurrentCard(database, state);
+  const visibleIds = new Set(visibleCards.map((card) => card.id));
+  const roleCards = database.cards.filter((card) => card.role_id === state.roleId);
+
+  return {
+    current_card_id: currentCard?.id ?? null,
+    visible_card_ids: visibleCards.map((card) => card.id),
+    remaining_cards: visibleCards.slice(state.cardIndex).map(toDesignerCard),
+    skipped_cards: roleCards
+      .filter((card) => !visibleIds.has(card.id))
+      .map((card) => ({
+        ...toDesignerCard(card),
+        reasons: getCardAvailabilityReasons(card, state),
+      }))
+      .filter((card) => card.reasons.length > 0),
+    current_options: currentCard
+      ? currentCard.options.map((option) => {
+          const availability = getOptionAvailability(option, state);
+          return {
+            option_id: option.id,
+            label: option.label,
+            available: availability.available,
+            reason: availability.reason,
+          };
+        })
+      : [],
+    memory_tags: [...state.memory_tags],
+    pressures: { ...state.pressures },
+  };
+}
+
 export function applyEffects(
   pressures: PressureMap,
   effects: Partial<PressureMap>,
@@ -178,7 +248,10 @@ export function applyEffects(
   return next;
 }
 
-export function scoreOutcome(database: GameDatabase, state: GameState) {
+export function scoreOutcome(
+  database: GameDatabase,
+  state: GameState,
+): OutcomeScore {
   const variableById = new Map(
     database.game_variables.map((variable) => [variable.id, variable]),
   );
@@ -191,17 +264,99 @@ export function scoreOutcome(database: GameDatabase, state: GameState) {
     return variable?.high_is_dangerous ? value >= 65 : value < 35;
   });
 
-  let title = "Uneasy Consolidation";
-  if (dangers.length >= 4) {
+  const tags = new Set(state.memory_tags);
+  const hasAny = (...items: string[]) => items.some((item) => tags.has(item));
+  const hasAll = (...items: string[]) => items.every((item) => tags.has(item));
+
+  let title = "Dynasty Secured, Peace Deferred";
+  let legacy =
+    "Ferdinand dies with the succession guarded and the imperial cause still standing, but the means of survival have left unsettled claims in every quarter of the Empire.";
+  let inheritance =
+    "Ferdinand III receives a crown strengthened by victory and burdened by war finance, armed allies, confessional grievance, and estates that have learned to bargain under arms.";
+  let comparison =
+    "The broad line still resembles the historical reign: recovery after Bohemia, enlarged imperial ambition, dependence on armed contractors, Swedish and French pressure, and no final peace before Ferdinand II's death.";
+  const pathSignals: string[] = [];
+
+  if (
+    hasAny("wallenstein_removed_by_force", "wallenstein_trial") &&
+    hasAny("wallenstein_recalled_broad", "wallenstein_recalled_limited")
+  ) {
+    title = "Army Recovered, Trust Spent";
+    legacy =
+      "The crown regains command from Wallenstein only after proving that its greatest servant can also become its most dangerous power center.";
+    inheritance =
+      "Ferdinand III inherits an imperial army that can still fight, but officers and princes now watch Vienna's promises with sharpened suspicion.";
+    comparison =
+      "This follows the historical warning Wilson draws from Wallenstein: military capacity solved immediate weakness while creating an authority beside the emperor.";
+    pathSignals.push("Wallenstein first empowered, then broken");
+  } else if (
+    hasAny("bohemian_punishment_hardline", "blood_court_executions") &&
+    hasAny("restitution_edict_issued", "prague_exclusions_hardline")
+  ) {
+    title = "Hard Victory, Unquiet Empire";
+    legacy =
+      "Punishment in Bohemia, the Edict of Restitution, and narrow peace terms give Ferdinand a visible Catholic victory while keeping Protestant and princely fear alive.";
+    inheritance =
+      "Ferdinand III receives stronger Habsburg rights, but also a wider coalition of enemies and allies who have learned to fear imperial overreach.";
+    comparison =
+      "This is closest to the hard edge of the historical course: victories were real, but they enlarged the war's political field rather than closing it.";
+    pathSignals.push("Bohemian punishment made exemplary");
+    pathSignals.push("Restitution pressed as imperial command");
+  } else if (
+    hasAll("prague_amnesty_broad", "palatine_proxy_settlement") ||
+    hasAll("restitution_peace_bargain", "palatine_proxy_settlement")
+  ) {
+    title = "A Settlement Bought by Restraint";
+    legacy =
+      "Ferdinand has traded some punishment and restoration for concession, preserving more room for settlement while disappointing those who expected complete Catholic recovery.";
+    inheritance =
+      "Ferdinand III inherits fewer enemies committed beyond recall, but also a court and Catholic party less certain that victory has been fully used.";
+    comparison =
+      "This course departs from the harsher historical pattern by accepting that imperial authority may survive through bargains rather than exemplary punishment alone.";
+    pathSignals.push("Broad amnesty or proxy settlement used to keep doors open");
+    pathSignals.push("Restitution treated as negotiable peace business");
+  } else if (dangers.length >= 4) {
     title = "Victory Turns Against Itself";
+    legacy =
+      "The crown survives, but too many supports have become liabilities: fiscal strain, distrust, military dependence, devastation, or foreign alarm now answer every gain.";
+    inheritance =
+      "Ferdinand III receives authority in name, but the practical tools of rule have grown brittle.";
+    comparison =
+      "This keeps the historical tragedy visible: useful victories could harden the conditions that made peace harder.";
   } else if (strengths.length >= 5 && dangers.length <= 1) {
     title = "A Narrowly Governable Peace";
+    legacy =
+      "Ferdinand leaves a realm still divided, yet more of its princes and estates can imagine obedience without immediate ruin.";
+    inheritance =
+      "Ferdinand III receives a stronger hand than history usually allowed, though not a quiet Empire.";
+    comparison =
+      "This is a better-than-historical consolidation, bounded by the same constitutional, fiscal, and confessional pressures Wilson emphasizes.";
   } else if (state.pressures.foreign_intervention_risk >= 75) {
     title = "The Empire Draws Europe In";
+    legacy =
+      "Imperial success has become a summons to outsiders. What began as authority within the Empire now looks like a European balance problem.";
+    inheritance =
+      "Ferdinand III receives a crown whose German victories have invited Swedish, French, Dutch, or Spanish calculations into every settlement.";
+    comparison =
+      "This follows the war's historical widening, where domestic settlement and foreign security could no longer be separated.";
+  }
+
+  if (hasAny("ferdinand_iii_elected", "succession_broad_capitulation")) {
+    pathSignals.push("Succession secured before Ferdinand II's death");
+  }
+  if (hasAny("electoral_transfer_transferred", "electoral_transfer_delayed")) {
+    pathSignals.push("The Palatine electorate remains a constitutional wound");
+  }
+  if (hasAny("restitution_edict_issued", "restitution_diet_interpretation")) {
+    pathSignals.push("Ecclesiastical restitution shapes the late reign");
   }
 
   return {
     title,
+    legacy,
+    inheritance,
+    comparison,
+    path_signals: pathSignals,
     strengths: strengths.map(([key]) => key),
     dangers: dangers.map(([key]) => key),
   };
@@ -220,6 +375,58 @@ function cardMatchesMemory(card: CardRecord, memoryTags: string[]) {
   );
 
   return hasAllRequired && !hasExcluded;
+}
+
+function getCardAvailabilityReasons(card: CardRecord, state: GameState) {
+  return [
+    ...getMemoryReasons(card, state.memory_tags),
+    ...getPressureReasons(card.requires_pressures, state.pressures),
+  ];
+}
+
+function getMemoryReasons(card: CardRecord, memoryTags: string[]) {
+  const reasons: string[] = [];
+  (card.requires_memory_tags ?? []).forEach((tag) => {
+    if (!memoryTags.includes(tag)) {
+      reasons.push(`requires memory tag "${tag}"`);
+    }
+  });
+  (card.excludes_memory_tags ?? []).forEach((tag) => {
+    if (memoryTags.includes(tag)) {
+      reasons.push(`excludes memory tag "${tag}"`);
+    }
+  });
+  return reasons;
+}
+
+function getPressureReasons(
+  conditions: PressureConditionRecord[] = [],
+  pressures: PressureMap,
+) {
+  return conditions.flatMap((condition) => {
+    const value = pressures[condition.pressure];
+    const reasons: string[] = [];
+    if (condition.min !== undefined && value < condition.min) {
+      reasons.push(
+        `${condition.pressure} must be at least ${condition.min}; current value is ${value}`,
+      );
+    }
+    if (condition.max !== undefined && value > condition.max) {
+      reasons.push(
+        `${condition.pressure} must be at most ${condition.max}; current value is ${value}`,
+      );
+    }
+    return reasons;
+  });
+}
+
+function toDesignerCard(card: CardRecord): DesignerCardReport {
+  return {
+    card_id: card.id,
+    title: card.title,
+    date_label: card.date_label,
+    reasons: [],
+  };
 }
 
 function matchesPressureConditions(

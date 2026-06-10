@@ -1,4 +1,4 @@
-import { RotateCcw, ScrollText, ShieldAlert } from "lucide-react";
+import { ClipboardList, RotateCcw, ScrollText, ShieldAlert } from "lucide-react";
 import { useState } from "react";
 import { gameDatabase } from "./data/gameDatabase";
 import type {
@@ -10,6 +10,7 @@ import {
   chooseOption,
   createInitialGameState,
   getCurrentCard,
+  getDesignerReport,
   getOptionAvailability,
   getOptionsForCard,
   getRole,
@@ -34,6 +35,8 @@ function App() {
   });
   const [showAftermath, setShowAftermath] = useState(false);
   const [selectedDossierId, setSelectedDossierId] = useState<string | null>(null);
+  const [showDesigner, setShowDesigner] = useState(false);
+  const designerEnabled = isDesignerMode();
 
   const role = getRole(gameDatabase, state.roleId);
   const card = getCurrentCard(gameDatabase, state);
@@ -104,6 +107,17 @@ function App() {
         <section className="desk-grid" aria-label="Political desk">
           <aside className="side-panel">
             <PressurePanel state={state} />
+            {designerEnabled ? (
+              <button
+                className="quiet-button side-toggle"
+                type="button"
+                onClick={() => setShowDesigner((current) => !current)}
+              >
+                <ClipboardList size={16} />
+                Designer view
+              </button>
+            ) : null}
+            {designerEnabled && showDesigner ? <DesignerPanel state={state} /> : null}
             {selectedDossier ? <DossierPanel dossier={selectedDossier} /> : null}
           </aside>
 
@@ -144,6 +158,13 @@ function getBrowserStorage() {
     return null;
   }
   return storage;
+}
+
+function isDesignerMode() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+  return new URLSearchParams(window.location.search).get("designer") === "1";
 }
 
 function RoleSelect({
@@ -235,6 +256,10 @@ function EventCard({
 
   return (
     <article className="event-card">
+      <div className="dispatch-meta">
+        <span>Memorial before the council</span>
+        <span>Received at council: {card.date_label}</span>
+      </div>
       <div className="date-ribbon">{card.date_label}</div>
       <h2>{card.title}</h2>
       <section className="historical-brief">
@@ -265,9 +290,9 @@ function EventCard({
               <span>
                 {availability.available
                   ? option.historical_option
-                    ? "Historical path"
-                    : "Option"
-                  : "Unavailable"}
+                    ? "Recorded course"
+                    : "Course proposed"
+                  : "Not credible before council"}
               </span>
               {availability.available ? option.label : availability.reason}
             </button>
@@ -351,6 +376,65 @@ function DossierPanel({ dossier }: { dossier: DossierRecord }) {
   );
 }
 
+function DesignerPanel({ state }: { state: GameState }) {
+  const report = getDesignerReport(gameDatabase, state);
+
+  return (
+    <section className="designer-panel" aria-label="Designer docket">
+      <div className="panel-title">
+        <ClipboardList size={16} />
+        Designer docket
+      </div>
+      <DesignerLine label="Current dispatch" value={report.current_card_id ?? "none"} />
+      <DesignerLine
+        label="Remaining dispatches"
+        value={`${report.remaining_cards.length}`}
+      />
+      <div className="designer-scroll">
+        {report.remaining_cards.slice(0, 12).map((card) => (
+          <article key={card.card_id}>
+            <b>{card.card_id}</b>
+            <span>
+              {card.date_label} - {card.title}
+            </span>
+          </article>
+        ))}
+      </div>
+      <div className="designer-group">
+        <strong>Current courses</strong>
+        {report.current_options.map((option) => (
+          <p key={option.option_id}>
+            <b>{option.available ? "open" : "locked"}</b> {option.option_id}
+            {option.reason ? ` - ${option.reason}` : ""}
+          </p>
+        ))}
+      </div>
+      <div className="designer-group">
+        <strong>Skipped or gated</strong>
+        {report.skipped_cards.slice(0, 8).map((card) => (
+          <p key={card.card_id}>
+            <b>{card.card_id}</b> - {card.reasons.join("; ")}
+          </p>
+        ))}
+        {report.skipped_cards.length === 0 ? <p>None at this point.</p> : null}
+      </div>
+      <div className="designer-group">
+        <strong>Memory tags</strong>
+        <p>{report.memory_tags.length ? report.memory_tags.join(", ") : "none"}</p>
+      </div>
+    </section>
+  );
+}
+
+function DesignerLine({ label, value }: { label: string; value: string }) {
+  return (
+    <p className="designer-line">
+      <strong>{label}</strong>
+      <span>{value}</span>
+    </p>
+  );
+}
+
 function AftermathPanel({
   entry,
   onContinue,
@@ -382,12 +466,27 @@ function OutcomePanel({
 }) {
   return (
     <article className="event-card outcome-card">
-      <div className="date-ribbon">1623 assessment</div>
+      <div className="dispatch-meta">
+        <span>Memorial of the reign</span>
+        <span>Filed after Vienna, 1637</span>
+      </div>
+      <div className="date-ribbon">1637 assessment</div>
       <h2>{outcome?.title ?? "Campaign Complete"}</h2>
+      <p className="situation">{outcome?.legacy}</p>
+      <p className="situation">{outcome?.inheritance}</p>
+      <p className="situation">{outcome?.comparison}</p>
+      {outcome?.path_signals.length ? (
+        <div className="outcome-path">
+          <h3>Marks on the record</h3>
+          <ul>
+            {outcome.path_signals.map((signal) => (
+              <li key={signal}>{signal}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <p className="situation">
-        Ferdinand has survived the first crisis cycle, but the settlement now has
-        a political shape. Your decisions produced {state.log.length} recorded
-        acts, each tied to source-backed or review-marked causal claims.
+        The reign closes with {state.log.length} recorded acts in the docket.
       </p>
       <div className="outcome-columns">
         <div>
