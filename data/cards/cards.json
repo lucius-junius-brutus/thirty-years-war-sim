@@ -92,6 +92,16 @@
           "option:opt_augsburg_deferred_inheritance"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Religious Peace of Augsburg",
+        "dossier_id": "dossier_peace_of_augsburg"
+      },
+      {
+        "term": "Peace of Augsburg",
+        "dossier_id": "dossier_peace_of_augsburg"
+      }
     ]
   },
   {
@@ -307,6 +317,106 @@
           "card:card_1609_letter_of_majesty",
           "option:opt_majesty_avoid_clarification"
         ]
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Letter of Majesty",
+        "dossier_id": "dossier_letter_of_majesty"
+      },
+      {
+        "term": "Bohemian estates",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ]
+  },
+  {
+    "id": "card_1598_styrian_reform",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1598_styrian_reform",
+    "phase_id": "phase_prewar_settlement",
+    "date_label": "1598-1605",
+    "title": "The Styrian Lesson",
+    "briefing": "From Graz come the papers of an earlier victory. In Inner Austria, Ferdinand has seen Protestant schools closed, pastors expelled, town councils altered, and Catholic officeholding rebuilt under the cover of princely right.",
+    "situation": "The Estates did not vanish. They withheld taxes, petitioned, threatened emigration, and then mostly remained. The lesson carried forward is dangerous because it appears to have worked: prepare carefully, divide provinces, keep within a narrow reading of law, and act once conscience and counsel are aligned.",
+    "historian_note": "Wilson treats Inner Austria as the formative setting for Ferdinand's legalistic Catholic restoration before the Bohemian crisis.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_styrian_reform_forms_ferdinand_legalism"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Inner Austria",
+        "dossier_id": "dossier_inner_austria"
+      },
+      {
+        "term": "Ferdinand",
+        "dossier_id": "dossier_ferdinand_ii"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_styrian_reform_commission",
+        "label": "Trust the Styrian method: legal commissions, Catholic officeholding, and force when needed.",
+        "consequence": "The archduke's confidence hardens. Restoration can be imagined as obedience to law rather than innovation.",
+        "effects": {
+          "confessional_legitimacy": 8,
+          "dynastic_security": 8,
+          "estate_trust": -6,
+          "imperial_authority": 4
+        },
+        "causal_claim_ids": [
+          "claim_styrian_reform_forms_ferdinand_legalism"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "styrian_method_confirmed"
+        ]
+      },
+      {
+        "id": "opt_styrian_slow_patronage",
+        "label": "Use patronage and Catholic appointments, but avoid spectacular expulsions.",
+        "consequence": "Catholic recovery continues more quietly. Zealous advisers ask whether caution has become surrender.",
+        "effects": {
+          "confessional_legitimacy": 3,
+          "dynastic_security": 4,
+          "estate_trust": 3,
+          "fiscal_capacity": -2
+        },
+        "causal_claim_ids": [
+          "claim_styrian_reform_forms_ferdinand_legalism"
+        ],
+        "memory_tags": [
+          "styrian_patronage_gradual"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_styrian_estate_compact",
+        "label": "Seek a new compact with the estates before renewing the commission.",
+        "consequence": "The Estates gain a language of consent. Ferdinand gains fewer enemies and a less certain conscience.",
+        "effects": {
+          "estate_trust": 8,
+          "confessional_legitimacy": -6,
+          "dynastic_security": -2,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": [
+          "claim_styrian_reform_forms_ferdinand_legalism"
+        ],
+        "memory_tags": [
+          "styrian_estate_compact"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
       }
     ]
   },
@@ -596,6 +706,12 @@
           "card:card_1618_remove_klesl",
           "option:opt_sideline_klesl_keep_channel"
         ]
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Klesl",
+        "dossier_id": "dossier_khlesl"
       }
     ]
   },
@@ -1070,6 +1186,16 @@
           "card:card_1620_bavarian_army",
           "option:opt_delay_for_imperial_levies"
         ]
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Maximilian",
+        "dossier_id": "dossier_maximilian_bavaria"
+      },
+      {
+        "term": "Munich",
+        "dossier_id": "dossier_munich_treaty"
       }
     ]
   },
@@ -1730,103 +1856,6 @@
     ]
   },
   {
-    "id": "card_1622_catholic_restoration",
-    "role_id": "role_ferdinand_ii",
-    "phase_id": "phase_palatinate_consolidation",
-    "date_label": "1622",
-    "title": "Restoration or Pacification",
-    "briefing": "Catholic allies expect the victories in Bohemia and the Palatinate to mean more than military order. Ferdinand must decide whether restoration should follow victory immediately or wait behind political consolidation.",
-    "situation": "Catholic restoration networks see providence in victory. Lutheran princes and imperial cities see the possibility that Bohemia is a rehearsal for them.",
-    "historian_note": "This card previews later overreach dynamics without jumping ahead to the Edict of Restitution.",
-    "source_refs": [
-      "src_primary_augsburg_peace_1555_reference_translation",
-      "src_wilson_europes_tragedy",
-      "src_asch_thirty_years_war"
-    ],
-    "causal_claim_ids": [
-      "claim_harsh_bohemian_punishment_alarm",
-      "claim_legalism_reassures_estates"
-    ],
-    "review_status": "inferred",
-    "options": [
-      {
-        "id": "opt_push_restoration",
-        "label": "Encourage visible Catholic restoration in recovered lands.",
-        "consequence": "Catholic confidence surges. Protestant alarm learns to organize itself.",
-        "effects": {
-          "confessional_legitimacy": 13,
-          "imperial_authority": 5,
-          "estate_trust": -12,
-          "foreign_intervention_risk": 8
-        },
-        "causal_claim_ids": [
-          "claim_harsh_bohemian_punishment_alarm"
-        ],
-        "memory_tags": [
-          "restoration_pushed"
-        ],
-        "counterfactual_source_status": "wilson_inference",
-        "research_tags": [
-          "source:wilson_europes_tragedy",
-          "needs_cross_source_check",
-          "card:card_1622_catholic_restoration",
-          "option:opt_push_restoration"
-        ]
-      },
-      {
-        "id": "opt_sequence_restoration",
-        "label": "Sequence restoration slowly, after oaths and fiscal order.",
-        "consequence": "The settlement advances, but not fast enough for the most zealous allies.",
-        "effects": {
-          "confessional_legitimacy": 4,
-          "estate_trust": 3,
-          "fiscal_capacity": 4,
-          "foreign_intervention_risk": 1
-        },
-        "causal_claim_ids": [
-          "claim_legalism_reassures_estates"
-        ],
-        "memory_tags": [
-          "restoration_sequenced"
-        ],
-        "counterfactual_source_status": "wilson_inference",
-        "research_tags": [
-          "source:wilson_europes_tragedy",
-          "needs_cross_source_check",
-          "card:card_1622_catholic_restoration",
-          "option:opt_sequence_restoration"
-        ]
-      },
-      {
-        "id": "opt_suspend_restoration",
-        "label": "Suspend major restoration measures to calm Lutheran and city opinion.",
-        "consequence": "Moderates breathe easier. Catholic allies wonder what victory was for.",
-        "effects": {
-          "estate_trust": 12,
-          "foreign_intervention_risk": -6,
-          "confessional_legitimacy": -11,
-          "imperial_authority": -3
-        },
-        "causal_claim_ids": [
-          "claim_legalism_reassures_estates"
-        ],
-        "memory_tags": [
-          "restoration_suspended"
-        ],
-        "counterfactual_source_status": "wilson_inference",
-        "research_tags": [
-          "source:wilson_europes_tragedy",
-          "needs_cross_source_check",
-          "card:card_1622_catholic_restoration",
-          "option:opt_suspend_restoration"
-        ]
-      }
-    ],
-    "requires_memory_tags": [
-      "campaign_expanded_restoration"
-    ]
-  },
-  {
     "id": "card_1621_ban_of_frederick",
     "role_id": "role_ferdinand_ii",
     "decision_point_id": "dp_1621_reichsacht_frederick",
@@ -1917,6 +1946,16 @@
           "card:card_1621_ban_of_frederick",
           "option:opt_narrow_ban_reassurance"
         ]
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Frederick",
+        "dossier_id": "dossier_frederick_v"
+      },
+      {
+        "term": "imperial ban",
+        "dossier_id": "dossier_imperial_ban"
       }
     ]
   },
@@ -2131,7 +2170,19 @@
           "needs_cross_source_check",
           "card:card_1623_electoral_transfer",
           "option:opt_preserve_electoral_balance"
-        ]
+        ],
+        "requires_pressures": [
+          {
+            "pressure": "military_dependence",
+            "max": 64
+          },
+          {
+            "pressure": "estate_trust",
+            "min": 45
+          }
+        ],
+        "unavailable_text": "Bavarian claims now bind the settlement too tightly for a balance policy to be credible.",
+        "hidden_when_unavailable": true
       }
     ],
     "memory_variants": [
@@ -2142,6 +2193,28 @@
         "title": "Maximilian's Claim",
         "briefing": "Regensburg has not ended Bavaria's claim. Maximilian's soldiers and credit helped recover the emperor's position, and Munich's promise still stands over every Palatine compromise.",
         "situation": "A softer Palatine settlement leaves Ferdinand with a different danger: if Frederick is not utterly stripped, Bavaria must still be satisfied without making the electoral college look disposable."
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Maximilian",
+        "dossier_id": "dossier_maximilian_bavaria"
+      },
+      {
+        "term": "Frederick",
+        "dossier_id": "dossier_frederick_v"
+      }
+    ],
+    "pressure_variants": [
+      {
+        "conditions": [
+          {
+            "pressure": "military_dependence",
+            "min": 70
+          }
+        ],
+        "briefing": "The memorials from Munich no longer read as requests. They read as accounts due. Maximilian's service in Bohemia, the League's expense, and the unsettled Palatine title are now presented together.",
+        "situation": "The electors hear that the emperor must reward useful loyalty, but several courts warn that an electoral title cannot be moved without wounding the balance of the Empire."
       }
     ]
   },
@@ -2240,9 +2313,543 @@
           "option:opt_demobilize_and_rebuild"
         ]
       }
+    ]
+  },
+  {
+    "id": "card_1625_lower_saxon_neutrality",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1625_lower_saxon_neutrality",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1625",
+    "title": "Lower Saxony Will Not Stay Quiet",
+    "briefing": "Letters from the north report assemblies claiming neutrality while Danish agents speak of protection, bishoprics, and the defence of endangered estates.",
+    "situation": "If neutrality is accepted without condition, an imperial circle may decide when imperial law binds it. If it is refused, Denmark may enter not as a distant king but as armed guardian of a threatened frontier.",
+    "historian_note": "Wilson frames the Danish-Lower Saxon phase around neutrality, bishoprics, circle politics, and imperial authority.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_lower_saxon_neutrality_escalates_danish_phase"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Lower Saxony",
+        "dossier_id": "dossier_john_george_saxony"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_refuse_lower_saxon_neutrality",
+        "label": "Refuse a neutrality that shelters Denmark's cause.",
+        "consequence": "Imperial orders speak of common liberty and obedience. Northern estates hear command; Denmark hears invitation.",
+        "effects": {
+          "imperial_authority": 8,
+          "foreign_intervention_risk": 8,
+          "devastation": 5,
+          "estate_trust": -5
+        },
+        "causal_claim_ids": [
+          "claim_lower_saxon_neutrality_escalates_danish_phase"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "lower_saxon_neutrality_refused"
+        ]
+      },
+      {
+        "id": "opt_recognize_temporary_neutrality",
+        "label": "Recognize a temporary Kreis neutrality under imperial review.",
+        "consequence": "The north breathes for a season, but Catholic petitioners ask whether imperial law now waits upon every circle's convenience.",
+        "effects": {
+          "estate_trust": 8,
+          "foreign_intervention_risk": -5,
+          "imperial_authority": -7,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": [
+          "claim_lower_saxon_neutrality_escalates_danish_phase"
+        ],
+        "memory_tags": [
+          "lower_saxon_neutrality_recognized"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_force_lower_saxony_by_league",
+        "label": "Let League pressure compel the wavering estates.",
+        "consequence": "The language of law arrives with soldiers behind it. The warning is clear, and so is the danger.",
+        "effects": {
+          "military_dependence": 8,
+          "foreign_intervention_risk": 10,
+          "estate_trust": -8,
+          "devastation": 6
+        },
+        "causal_claim_ids": [
+          "claim_lower_saxon_neutrality_escalates_danish_phase"
+        ],
+        "memory_tags": [
+          "league_pressure_north"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1625_wallenstein_army",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1625_wallenstein_army",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1625",
+    "title": "A Field Army of Ferdinand's Own",
+    "briefing": "A proposal reaches court promising men faster than the treasury can pay them. Credit, commissions, contributions, and the commander's name will do what ordinary revenue cannot.",
+    "situation": "The emperor can remain dependent on Bavaria and the League, or he can accept an army whose purse lies in the lands it occupies and whose officers look upward through Wallenstein.",
+    "historian_note": "Wilson treats Wallenstein's system as both capacity solution and autonomous military-fiscal network.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_army_solves_capacity_creates_autonomy"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "pressure_variants": [
+      {
+        "conditions": [
+          {
+            "pressure": "fiscal_capacity",
+            "max": 34
+          }
+        ],
+        "briefing": "The treasury figures arrive in a poor hand and worse news. Arrears, pledges, and ally claims leave little room for an ordinary imperial army."
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_contract_wallenstein_army",
+        "label": "Accept Wallenstein's contribution army.",
+        "consequence": "Recruiting begins with astonishing speed. So do complaints from the lands asked to feed it.",
+        "effects": {
+          "fiscal_capacity": 8,
+          "military_dependence": 15,
+          "devastation": 10,
+          "imperial_authority": 5
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_army_solves_capacity_creates_autonomy"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "wallenstein_empowered"
+        ]
+      },
+      {
+        "id": "opt_limit_wallenstein_powers",
+        "label": "Authorize a smaller army under tighter warrants.",
+        "consequence": "The court keeps the commander on a shorter leash, and receives a smaller instrument in return.",
+        "effects": {
+          "military_dependence": 5,
+          "devastation": 3,
+          "fiscal_capacity": -5,
+          "imperial_authority": 2
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_army_solves_capacity_creates_autonomy"
+        ],
+        "memory_tags": [
+          "wallenstein_limited"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_remain_league_dependent",
+        "label": "Remain with League and Spanish support rather than build a new system.",
+        "consequence": "Maximilian's value rises again. The emperor avoids one dangerous servant by leaning harder on another ally.",
+        "effects": {
+          "military_dependence": 10,
+          "fiscal_capacity": -4,
+          "estate_trust": 2,
+          "dynastic_security": -5
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_army_solves_capacity_creates_autonomy"
+        ],
+        "memory_tags": [
+          "league_dependence_confirmed"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1627_palatine_peace_opening",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1627_palatine_peace_opening",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1627",
+    "title": "Frederick Nearly Bends",
+    "briefing": "After Danish reverses, word arrives that Frederick will yield more than before: Bohemia renounced, Maximilian accepted for life, submission offered by proxy.",
+    "situation": "The remaining question is not whether Frederick loses face, but how much face the emperor requires him to lose in public before peace can be made.",
+    "historian_note": "Wilson notes that agreement was close, but Ferdinand's demand for personal submission helped close the opening.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_1627_palatine_peace_opening_missed"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Frederick",
+        "dossier_id": "dossier_frederick_v"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_require_frederick_personal_submission",
+        "label": "Require Frederick's personal submission to imperial authority.",
+        "consequence": "The dignity of punishment is preserved. The settlement slips away on the form of obedience.",
+        "effects": {
+          "imperial_authority": 5,
+          "foreign_intervention_risk": 6,
+          "estate_trust": -3
+        },
+        "causal_claim_ids": [
+          "claim_1627_palatine_peace_opening_missed"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "palatine_submission_required"
+        ]
+      },
+      {
+        "id": "opt_accept_proxy_submission",
+        "label": "Accept proxy submission and secure the renunciations.",
+        "consequence": "A humiliating journey is spared. Bavaria asks what certainty remains when rebellion can be softened by parchment.",
+        "effects": {
+          "foreign_intervention_risk": -8,
+          "estate_trust": 6,
+          "military_dependence": 4,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": [
+          "claim_1627_palatine_peace_opening_missed"
+        ],
+        "memory_tags": [
+          "palatine_proxy_settlement"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_restore_palatine_security_terms",
+        "label": "Trade limited restoration for security and reparations.",
+        "consequence": "The Palatine cause is divided from the mercenary war, but every clause must pass through Bavarian suspicion.",
+        "effects": {
+          "fiscal_capacity": 3,
+          "estate_trust": 4,
+          "military_dependence": 6,
+          "foreign_intervention_risk": -5
+        },
+        "causal_claim_ids": [
+          "claim_1627_palatine_peace_opening_missed"
+        ],
+        "memory_tags": [
+          "palatine_security_bargain"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1627_restoration_mandates",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1627-1628",
+    "title": "Mandates in the Hereditary Lands",
+    "briefing": "Reports from Bohemia, Moravia, and Austria list pastors removed, churches inspected, offices watched, and noble houses pressed toward conformity.",
+    "situation": "Catholic loyalists ask that victory now be made visible in worship, schooling, marriage, office, and landholding. Other advisers warn that sudden uniformity will send property, labor, and hatred abroad with the exiles.",
+    "historian_note": "This card previews later overreach dynamics without jumping ahead to the Edict of Restitution.",
+    "source_refs": [
+      "src_primary_augsburg_peace_1555_reference_translation",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ],
+    "causal_claim_ids": [
+      "claim_harsh_bohemian_punishment_alarm",
+      "claim_legalism_reassures_estates"
+    ],
+    "review_status": "inferred",
+    "options": [
+      {
+        "id": "opt_push_restoration",
+        "label": "Encourage visible Catholic restoration in recovered lands.",
+        "consequence": "Catholic confidence surges. Protestant alarm learns to organize itself.",
+        "effects": {
+          "confessional_legitimacy": 13,
+          "imperial_authority": 5,
+          "estate_trust": -12,
+          "foreign_intervention_risk": 8
+        },
+        "causal_claim_ids": [
+          "claim_harsh_bohemian_punishment_alarm"
+        ],
+        "memory_tags": [
+          "restoration_pushed"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_1622_catholic_restoration",
+          "option:opt_push_restoration"
+        ]
+      },
+      {
+        "id": "opt_sequence_restoration",
+        "label": "Sequence restoration slowly, after oaths and fiscal order.",
+        "consequence": "The settlement advances, but not fast enough for the most zealous allies.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 3,
+          "fiscal_capacity": 4,
+          "foreign_intervention_risk": 1
+        },
+        "causal_claim_ids": [
+          "claim_legalism_reassures_estates"
+        ],
+        "memory_tags": [
+          "restoration_sequenced"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_1622_catholic_restoration",
+          "option:opt_sequence_restoration"
+        ]
+      },
+      {
+        "id": "opt_suspend_restoration",
+        "label": "Suspend major restoration measures to calm Lutheran and city opinion.",
+        "consequence": "Moderates breathe easier. Catholic allies wonder what victory was for.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -6,
+          "confessional_legitimacy": -11,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": [
+          "claim_legalism_reassures_estates"
+        ],
+        "memory_tags": [
+          "restoration_suspended"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_1622_catholic_restoration",
+          "option:opt_suspend_restoration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_1628_mecklenburg_reward",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1628_mecklenburg_reward",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1627-1628",
+    "title": "Mecklenburg as Payment",
+    "briefing": "The commander who raised the army now seeks a reward large enough to satisfy credit, honor, and arrears. Mecklenburg lies under imperial displeasure.",
+    "situation": "To pay with land is easier than paying with money. It also tells every prince that victory may move old houses out and new servants in.",
+    "historian_note": "Wilson presents Wallenstein's elevation in Mecklenburg as a key overreach signal.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_mecklenburg_reward_magnifies_overreach_fear"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
     ],
     "requires_memory_tags": [
-      "legacy_generic_peace_feelers"
+      "wallenstein_empowered"
+    ],
+    "options": [
+      {
+        "id": "opt_grant_mecklenburg_wallenstein",
+        "label": "Grant Mecklenburg to Wallenstein.",
+        "consequence": "The army's maker is paid in princely coin. The Empire studies the precedent with fear.",
+        "effects": {
+          "fiscal_capacity": 8,
+          "military_dependence": 9,
+          "foreign_intervention_risk": 9,
+          "estate_trust": -8
+        },
+        "causal_claim_ids": [
+          "claim_mecklenburg_reward_magnifies_overreach_fear"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "mecklenburg_to_wallenstein"
+        ]
+      },
+      {
+        "id": "opt_mecklenburg_temporary_administration",
+        "label": "Grant administration without hereditary title.",
+        "consequence": "Wallenstein receives substance without the full shock of a ducal transfer. The distinction satisfies few, but alarms fewer.",
+        "effects": {
+          "fiscal_capacity": 3,
+          "military_dependence": 5,
+          "foreign_intervention_risk": 3,
+          "estate_trust": -2
+        },
+        "causal_claim_ids": [
+          "claim_mecklenburg_reward_magnifies_overreach_fear"
+        ],
+        "memory_tags": [
+          "mecklenburg_admin_only"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_pay_wallenstein_without_land",
+        "label": "Seek cash and movable confiscations instead.",
+        "consequence": "The old dynastic order is spared a warning, but the treasury groans and the army waits.",
+        "effects": {
+          "fiscal_capacity": -10,
+          "military_dependence": 3,
+          "estate_trust": 3,
+          "dynastic_security": -3
+        },
+        "causal_claim_ids": [
+          "claim_mecklenburg_reward_magnifies_overreach_fear"
+        ],
+        "memory_tags": [
+          "wallenstein_no_princely_reward"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1629_lubeck_peace",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1629_lubeck_peace",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1629",
+    "title": "Peace at Lubeck",
+    "briefing": "Christian of Denmark has lost the mainland war but not his kingdom. Negotiators ask whether the emperor wants vengeance, compensation, or one enemy removed before Sweden moves.",
+    "situation": "A generous peace can look like weakness to friends expecting spoils. A punitive peace can keep Denmark in the field when the north is already too open.",
+    "historian_note": "Wilson emphasizes the generosity and strategic logic of Lubeck, especially the wish to remove Denmark.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_lubeck_peace_creates_settlement_chance"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Peace at Lubeck",
+        "dossier_id": "dossier_peace_of_lubeck"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_lubeck_generous_peace",
+        "label": "Return Danish provinces if Christian abandons the Lower Saxons.",
+        "consequence": "Denmark leaves the war. The abandoned estates learn what imperial peace costs them.",
+        "effects": {
+          "foreign_intervention_risk": -5,
+          "devastation": -4,
+          "confessional_legitimacy": -3,
+          "imperial_authority": 4
+        },
+        "causal_claim_ids": [
+          "claim_lubeck_peace_creates_settlement_chance"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "lubeck_generous_peace"
+        ]
+      },
+      {
+        "id": "opt_lubeck_punitive_terms",
+        "label": "Demand compensation and sharper guarantees.",
+        "consequence": "Friends applaud a harder peace. Denmark hesitates, and Swedish calculations improve.",
+        "effects": {
+          "fiscal_capacity": 5,
+          "foreign_intervention_risk": 8,
+          "devastation": 5,
+          "confessional_legitimacy": 3
+        },
+        "causal_claim_ids": [
+          "claim_lubeck_peace_creates_settlement_chance"
+        ],
+        "memory_tags": [
+          "lubeck_punitive_terms"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_lubeck_general_settlement",
+        "label": "Use Lubeck to open a general imperial settlement.",
+        "consequence": "The war party complains that victory is being spent too cheaply; moderates see the first real door in years.",
+        "effects": {
+          "estate_trust": 8,
+          "foreign_intervention_risk": -8,
+          "confessional_legitimacy": -6,
+          "imperial_authority": -2
+        },
+        "causal_claim_ids": [
+          "claim_lubeck_peace_creates_settlement_chance"
+        ],
+        "memory_tags": [
+          "lubeck_general_settlement"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      }
     ]
   },
   {
@@ -2360,8 +2967,773 @@
         ]
       }
     ],
+    "context_links": [
+      {
+        "term": "Edict of Restitution",
+        "dossier_id": "dossier_edict_of_restitution"
+      },
+      {
+        "term": "Peace of Augsburg",
+        "dossier_id": "dossier_peace_of_augsburg"
+      }
+    ]
+  },
+  {
+    "id": "card_1630_regensburg_wallenstein",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1630_regensburg_wallenstein",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1630",
+    "title": "Regensburg: The Price of Consent",
+    "briefing": "Electoral complaints arrive in a single chorus: contributions, Mecklenburg, the army, the Edict, and Wallenstein's shadow over imperial liberties.",
+    "situation": "Ferdinand seeks consent and dynastic advantage. The electors answer that consent begins with the dismissal of the man who made imperial victory so frightening.",
+    "historian_note": "Wilson treats Regensburg as collective imperial politics checking Ferdinand's overreach.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Regensburg",
+        "dossier_id": "dossier_regensburg_congress"
+      },
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_dismiss_wallenstein_regensburg",
+        "label": "Dismiss Wallenstein to recover electoral consent.",
+        "consequence": "The electors receive the sacrifice. Sweden receives a less ready enemy.",
+        "effects": {
+          "estate_trust": 7,
+          "military_dependence": -8,
+          "dynastic_security": -5,
+          "imperial_authority": -2
+        },
+        "causal_claim_ids": [
+          "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "wallenstein_dismissed"
+        ]
+      },
+      {
+        "id": "opt_keep_wallenstein_regensburg",
+        "label": "Keep Wallenstein with reduced powers.",
+        "consequence": "The army remains; consent thins. The congress begins to look less like settlement than warning.",
+        "effects": {
+          "military_dependence": 6,
+          "estate_trust": -10,
+          "foreign_intervention_risk": 6,
+          "imperial_authority": 3
+        },
+        "causal_claim_ids": [
+          "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
+        ],
+        "memory_tags": [
+          "wallenstein_retained_1630"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_trade_army_reform_succession",
+        "label": "Offer army reform in exchange for succession support.",
+        "consequence": "The bargain protects the dynasty more than the field army. It buys time, not peace.",
+        "effects": {
+          "dynastic_security": 8,
+          "military_dependence": -3,
+          "estate_trust": 3,
+          "fiscal_capacity": -3
+        },
+        "causal_claim_ids": [
+          "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
+        ],
+        "memory_tags": [
+          "regensburg_succession_bargain"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1631_intervention_crisis",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1631_leipzig_off_ramp",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1631",
+    "title": "The Door Stands Open",
+    "briefing": "Reports from Saxony and the Protestant estates no longer ask only for delay. They speak of armed security, lawful defence, and the Swedish king already on imperial soil.",
+    "situation": "If Ferdinand offers no public settlement, the middle party may cease to be middle. If he yields too much, Catholic allies ask what victory and law were for.",
+    "historian_note": "Wilson says Ferdinand's refusal of the Leipzig off-ramp compounded the Edict error and helped drive Saxony toward Sweden.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_leipzig_rejection_drives_saxony_to_sweden"
+    ],
+    "review_status": "needs_review",
+    "requires_pressures": [
+      {
+        "pressure": "foreign_intervention_risk",
+        "min": 70
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Saxony",
+        "dossier_id": "dossier_john_george_saxony"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_reject_leipzig",
+        "label": "Reject Leipzig and command disarmament.",
+        "consequence": "Saxon neutrality breaks under the weight of command. Sweden gains the ally it needed.",
+        "effects": {
+          "imperial_authority": 4,
+          "estate_trust": -12,
+          "foreign_intervention_risk": 12,
+          "devastation": 8
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "leipzig_rejected"
+        ]
+      },
+      {
+        "id": "opt_suspend_edict_for_saxony",
+        "label": "Suspend the Edict and accept Saxon mediation.",
+        "consequence": "The Catholic party murmurs, but the Lutheran elector remains reachable.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -10,
+          "confessional_legitimacy": -8,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "leipzig_compromise"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_private_saxon_concessions",
+        "label": "Offer private concessions while refusing a public bloc.",
+        "consequence": "The court tries to buy trust without admitting necessity. The answer depends on how much trust remains.",
+        "effects": {
+          "estate_trust": 4,
+          "foreign_intervention_risk": -3,
+          "confessional_legitimacy": -3
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "leipzig_private_terms"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1632_recall_wallenstein",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1632_recall_wallenstein",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1632",
+    "title": "Gollersdorf",
+    "briefing": "After Swedish victories, the dismissed general receives visitors again. He will not return as a mere servant who can be corrected by every ally's complaint.",
+    "situation": "The army can be restored quickly only by granting powers that make the court uneasy. Without him, Bavaria and scattered commands must carry the war.",
+    "historian_note": "Wilson presents Wallenstein's recall as necessity joined to broad delegation.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_recall_necessity_recreates_autonomy"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_recall_wallenstein_broad",
+        "label": "Recall Wallenstein with broad Gollersdorf powers.",
+        "consequence": "The imperial army gathers around its old magnet. So do old fears.",
+        "effects": {
+          "military_dependence": 14,
+          "dynastic_security": 8,
+          "estate_trust": -5,
+          "devastation": 6
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_recall_necessity_recreates_autonomy"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "wallenstein_recalled_broad"
+        ]
+      },
+      {
+        "id": "opt_recall_wallenstein_limited",
+        "label": "Recall him under written limits.",
+        "consequence": "The court asks for a safer miracle. Wallenstein weighs whether such a command is worth taking.",
+        "effects": {
+          "military_dependence": 7,
+          "dynastic_security": 4,
+          "estate_trust": -2
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_recall_necessity_recreates_autonomy"
+        ],
+        "memory_tags": [
+          "wallenstein_recalled_limited"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_bavarian_coalition_command",
+        "label": "Build a coalition command without him.",
+        "consequence": "The old dependency returns under worse circumstances. Maximilian is necessary again.",
+        "effects": {
+          "military_dependence": 8,
+          "dynastic_security": -8,
+          "estate_trust": 2,
+          "foreign_intervention_risk": 5
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_recall_necessity_recreates_autonomy"
+        ],
+        "memory_tags": [
+          "coalition_command_1632"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1633_wallenstein_peace",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1634_remove_wallenstein",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1633",
+    "title": "The General Makes His Own Peace",
+    "briefing": "Wallenstein's letters and silences grow harder to read. Some reports say he seeks settlement; others say he seeks command of the settlement itself.",
+    "situation": "To tolerate his diplomacy may split the enemy. To supervise it may provoke him. To prepare alternatives may turn suspicion into rupture.",
+    "historian_note": "Wilson treats Wallenstein's opaque diplomacy as a real source of mistrust even if outright treason remains difficult to prove cleanly.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_liquidation_restores_control_stains_legality"
+    ],
+    "review_status": "needs_review",
     "requires_memory_tags": [
-      "campaign_expanded_1629"
+      "wallenstein_recalled_broad"
+    ],
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_prepare_wallenstein_alternatives",
+        "label": "Build Spanish and Bavarian alternatives to Wallenstein.",
+        "consequence": "Trust becomes a military plan. The general reads the plan as accusation.",
+        "effects": {
+          "military_dependence": -2,
+          "estate_trust": -3,
+          "dynastic_security": 3
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "wallenstein_rupture_begun"
+        ]
+      },
+      {
+        "id": "opt_authorize_wallenstein_talks",
+        "label": "Authorize his peace soundings under explicit warrant.",
+        "consequence": "The court turns danger into instrument, but every ally fears what the instrument may sign.",
+        "effects": {
+          "foreign_intervention_risk": -4,
+          "estate_trust": 4,
+          "military_dependence": 7,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "memory_tags": [
+          "wallenstein_talks_authorized"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_confront_wallenstein_directly",
+        "label": "Confront and renegotiate his powers.",
+        "consequence": "The wound is opened before the army chooses sides.",
+        "effects": {
+          "imperial_authority": 4,
+          "military_dependence": -5,
+          "dynastic_security": -3
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "memory_tags": [
+          "wallenstein_confronted"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1634_remove_wallenstein",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1634_remove_wallenstein",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "January-February 1634",
+    "title": "Dead or Alive",
+    "briefing": "Patents are drafted releasing officers from obedience. The matter can be made legal in form only if the army first ceases to be his.",
+    "situation": "An arrest risks delay, trial, and exposure. A removal by force recovers command swiftly, but the chancery will inherit the stain.",
+    "historian_note": "Wilson describes Ferdinand's patents and the political burial after Eger.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_liquidation_restores_control_stains_legality"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "wallenstein_rupture_begun"
+    ],
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_wallenstein_dead_or_alive",
+        "label": "Release the officers and authorize dead-or-alive removal.",
+        "consequence": "Wallenstein falls at Eger. The army returns to obedience; the papers do not return to innocence.",
+        "effects": {
+          "military_dependence": -14,
+          "imperial_authority": 7,
+          "estate_trust": -6,
+          "dynastic_security": 5
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "wallenstein_removed_by_force"
+        ]
+      },
+      {
+        "id": "opt_wallenstein_arrest_trial",
+        "label": "Arrest him for trial before imperial authority.",
+        "consequence": "The legal road is cleaner and slower. Every day gives the army time to ask whom it serves.",
+        "effects": {
+          "imperial_authority": 3,
+          "military_dependence": -7,
+          "dynastic_security": -5,
+          "estate_trust": 4
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "memory_tags": [
+          "wallenstein_trial"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_wallenstein_reconcile_narrow",
+        "label": "Reconcile and narrow his command.",
+        "consequence": "The crisis is postponed inside a smaller circle. Bavaria and Spain do not mistake postponement for safety.",
+        "effects": {
+          "military_dependence": 6,
+          "foreign_intervention_risk": 3,
+          "dynastic_security": -4
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "memory_tags": [
+          "wallenstein_reconciled"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1635_prague_peace",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1635_prague_peace",
+    "phase_id": "phase_prague_succession",
+    "date_label": "1635",
+    "title": "The Peace of Prague",
+    "briefing": "After Nordlingen, Saxon articles come within reach. The Edict can be quieted, armies joined under emperor and Empire, and many Lutheran estates brought home.",
+    "situation": "The danger lies in the names left outside the pardon. Every excluded prince, exile, and army becomes useful to France or Sweden.",
+    "historian_note": "Wilson calls Prague a broad settlement undermined by exclusions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_prague_peace_settles_too_narrowly"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Peace of Prague",
+        "dossier_id": "dossier_peace_of_prague"
+      },
+      {
+        "term": "Edict",
+        "dossier_id": "dossier_edict_of_restitution"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_prague_historical_exclusions",
+        "label": "Make the elector peace and exclude the hard cases.",
+        "consequence": "Saxony returns. The excluded learn that foreign protection is now their last court of appeal.",
+        "effects": {
+          "estate_trust": 8,
+          "imperial_authority": 8,
+          "foreign_intervention_risk": 7,
+          "confessional_legitimacy": -3
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "prague_exclusions_hardline"
+        ]
+      },
+      {
+        "id": "opt_prague_broad_amnesty",
+        "label": "Broaden the amnesty while protecting core loyalist rewards.",
+        "consequence": "The settlement cuts deeper into the enemy's German support, but loyal beneficiaries ask which promises still hold.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -10,
+          "military_dependence": 5,
+          "confessional_legitimacy": -5
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "memory_tags": [
+          "prague_amnesty_broad"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "requires_pressures": [
+          {
+            "pressure": "estate_trust",
+            "min": 50
+          }
+        ],
+        "unavailable_text": "Too much trust has been spent for a broad amnesty to command belief.",
+        "hidden_when_unavailable": true
+      },
+      {
+        "id": "opt_prague_hard_catholic_terms",
+        "label": "Use Nordlingen to demand a harder Catholic settlement.",
+        "consequence": "Victory is spent like a confession of strength. The peace party thins; foreign patrons gain clients.",
+        "effects": {
+          "confessional_legitimacy": 8,
+          "estate_trust": -12,
+          "foreign_intervention_risk": 10,
+          "imperial_authority": 4
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "memory_tags": [
+          "prague_hard_terms"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1636_hessen_amnesty",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1635_prague_peace",
+    "phase_id": "phase_prague_succession",
+    "date_label": "1635-1636",
+    "title": "The Amnesty Question",
+    "briefing": "Hessen-Kassel still has soldiers, claims, and foreign suitors. Provisional acceptance of Prague will not become obedience unless terms are made real.",
+    "situation": "To press Westphalian bishoprics may satisfy friends and reopen war. To concede enough may remove an armed enemy while teaching every holdout to bargain.",
+    "historian_note": "Wilson treats Hessen-Kassel as a missed chance after Prague.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_prague_peace_settles_too_narrowly"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "prague_exclusions_hardline"
+    ],
+    "options": [
+      {
+        "id": "opt_hessen_deal_fails",
+        "label": "Hold the line and let the deal fail if Wilhelm will not yield enough.",
+        "consequence": "The ban follows. Hessen returns to the anti-imperial war with a sharper grievance.",
+        "effects": {
+          "imperial_authority": 4,
+          "foreign_intervention_risk": 6,
+          "estate_trust": -6,
+          "devastation": 4
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "hessen_lost"
+        ]
+      },
+      {
+        "id": "opt_hessen_security_concessions",
+        "label": "Offer security concessions to close the Hessen deal.",
+        "consequence": "One dangerous army may be removed from the enemy list. Friends with claims in the region count the cost.",
+        "effects": {
+          "foreign_intervention_risk": -6,
+          "estate_trust": 6,
+          "confessional_legitimacy": -3,
+          "military_dependence": 3
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "memory_tags": [
+          "hessen_settled"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_hessen_military_pressure",
+        "label": "Use military pressure to compel obedience.",
+        "consequence": "The settlement speaks with cannon behind it. The war in the west hardens.",
+        "effects": {
+          "imperial_authority": 3,
+          "devastation": 8,
+          "foreign_intervention_risk": 7,
+          "estate_trust": -5
+        },
+        "causal_claim_ids": [
+          "claim_prague_peace_settles_too_narrowly"
+        ],
+        "memory_tags": [
+          "hessen_forced"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1637_ferdinand_iii_election",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1636_ferdinand_iii_election",
+    "phase_id": "phase_prague_succession",
+    "date_label": "1636-1637",
+    "title": "Regensburg Again",
+    "briefing": "The emperor's health is no longer a private matter. The electors can secure Ferdinand's son, but they can also write new restraints into the price of continuity.",
+    "situation": "To delay is to gamble with succession. To press forward is to accept that the next emperor will inherit both the crown and the conditions attached to it.",
+    "historian_note": "Wilson treats Ferdinand III's election as dynastic success bound by consultation limits and unresolved war.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+    ],
+    "review_status": "needs_review",
+    "context_links": [
+      {
+        "term": "Regensburg",
+        "dossier_id": "dossier_regensburg_congress"
+      },
+      {
+        "term": "Ferdinand",
+        "dossier_id": "dossier_ferdinand_ii"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_secure_ferdinand_iii",
+        "label": "Secure Ferdinand III's election as king of the Romans.",
+        "consequence": "The dynasty survives the emperor's body. The war survives the dynasty's success.",
+        "effects": {
+          "dynastic_security": 16,
+          "imperial_authority": 3,
+          "estate_trust": 4
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "ferdinand_iii_elected"
+        ]
+      },
+      {
+        "id": "opt_buy_unanimous_succession",
+        "label": "Buy warmer consent with broader procedural guarantees.",
+        "consequence": "The election becomes less brittle and the crown less free.",
+        "effects": {
+          "dynastic_security": 12,
+          "estate_trust": 8,
+          "imperial_authority": -5,
+          "fiscal_capacity": -3
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "succession_broad_capitulation"
+        ],
+        "research_tags": [
+          "wilson_inference"
+        ],
+        "counterfactual_source_status": "wilson_inference"
+      },
+      {
+        "id": "opt_delay_succession_for_war",
+        "label": "Delay the election until military fortunes improve.",
+        "consequence": "The chancery gains negotiating room and loses sleep. Every fever now has constitutional meaning.",
+        "effects": {
+          "dynastic_security": -14,
+          "imperial_authority": 2,
+          "fiscal_capacity": 3
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "succession_delayed"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
+    ]
+  },
+  {
+    "id": "card_1637_ferdinand_death",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_prague_succession",
+    "date_label": "February 1637",
+    "title": "The Emperor Dies",
+    "briefing": "Ferdinand dies with Bohemia held, the dynasty continued, and Catholic restoration rooted deeply in the hereditary lands.",
+    "situation": "The Empire is not at peace. Every unresolved file passes to Ferdinand III: amnesty, armies, foreign crowns, devastated lands, and the question of how much imperial authority can bear before it breaks cooperation.",
+    "historian_note": "Wilson marks Ferdinand II's death as dynastic continuity amid unresolved amnesty, fiscal, foreign, and military problems.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+    ],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_receive_final_memorial",
+        "label": "Receive the final memorial of the reign.",
+        "consequence": "The record is sealed for the next emperor. Ferdinand's victories remain real; so do the wars they did not end.",
+        "effects": {},
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "historical_option": true,
+        "memory_tags": [
+          "ferdinand_ii_reign_complete"
+        ]
+      },
+      {
+        "id": "opt_order_final_settlement_summary",
+        "label": "Order a final settlement summary for Ferdinand III.",
+        "consequence": "The clerks gather the unsettled questions into one inheritance: authority, confession, debt, armies, and peace.",
+        "effects": {},
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "final_settlement_summary"
+        ],
+        "research_tags": [
+          "game_inference"
+        ],
+        "counterfactual_source_status": "game_inference"
+      }
     ]
   }
 ]

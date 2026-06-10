@@ -1,0 +1,146 @@
+[
+  {
+    "id": "dossier_peace_of_augsburg",
+    "title": "Peace of Augsburg",
+    "dossier_type": "treaty",
+    "summary": "Religious and constitutional settlement of 1555 that recognized Catholic and Lutheran estates within imperial law while leaving several disputed questions unresolved.",
+    "why_it_matters": "Ferdinand inherits its language as both shield and weapon: enforcing one clause may reassure Catholic petitioners while frightening estates that depend on long local practice.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_letter_of_majesty",
+    "title": "Letter of Majesty",
+    "dossier_type": "document",
+    "summary": "Rudolf II's 1609 Bohemian charter confirming Protestant rights claimed by the Bohemian estates.",
+    "why_it_matters": "The charter gives Bohemian Protestants a legal language for grievance, while Ferdinand's court can still dispute how far those protections extend.",
+    "source_refs": ["src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_ferdinand_ii",
+    "title": "Ferdinand II",
+    "dossier_type": "person",
+    "summary": "Habsburg ruler of Inner Austria, later king of Bohemia, king of Hungary, and emperor.",
+    "why_it_matters": "The role is built around Ferdinand's attempt to secure dynasty, law, and Catholic restoration without losing the Empire's political cooperation.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_inner_austria",
+    "title": "Inner Austria",
+    "dossier_type": "place",
+    "summary": "The Styrian Habsburg lands of Styria, Carinthia, Krain, Gorz, and Gradisca, lying near the Ottoman frontier and governed by Ferdinand before his imperial rise.",
+    "why_it_matters": "Ferdinand's successful reform commission in Inner Austria taught him that careful preparation, legal narrowness, Catholic officeholding, and force could restore dynastic authority without immediate general revolt.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_khlesl",
+    "title": "Cardinal Klesl",
+    "dossier_type": "person",
+    "summary": "Matthias's chief minister and a figure associated with negotiation and dynastic caution during the first Bohemian crisis.",
+    "why_it_matters": "Keeping or removing him changes whether Ferdinand still has a high-level channel for compromise after Prague.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_maximilian_bavaria",
+    "title": "Maximilian of Bavaria",
+    "dossier_type": "person",
+    "summary": "Duke of Bavaria and leader of the Catholic League, indispensable to Ferdinand's early military survival.",
+    "why_it_matters": "Bavarian help defeats Bohemia, but the price becomes leverage over money, military command, and the Palatine electorate.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_vales_munich_treaty_1619"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_munich_treaty",
+    "title": "Treaty of Munich",
+    "dossier_type": "treaty",
+    "summary": "The 1619 bargain by which Maximilian and the Catholic League supplied decisive aid to Ferdinand under conditions that protected Bavarian interests.",
+    "why_it_matters": "It turns a survival problem into a dependency problem. Later rewards to Bavaria are not merely generosity; they answer obligations created in the crisis.",
+    "source_refs": ["src_vales_munich_treaty_1619", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_frederick_v",
+    "title": "Frederick V",
+    "dossier_type": "person",
+    "summary": "Elector Palatine, elected king by the Bohemian Confederation in 1619 and later placed under the imperial ban.",
+    "why_it_matters": "His punishment and possible restoration become a European grievance linking Bohemia, the Palatinate, England, the Dutch, Spain, and Bavaria.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_public_reichsacht_frederick_1621"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_john_george_saxony",
+    "title": "John George I of Saxony",
+    "dossier_type": "person",
+    "summary": "Lutheran elector whose legal cooperation helps isolate Bohemia, and whose later alarm helps make Swedish intervention effective.",
+    "why_it_matters": "Saxony is not simply Protestant opposition. Ferdinand can use Saxon legality, but only while Lutheran trust survives.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_wallenstein",
+    "title": "Albrecht von Wallenstein",
+    "dossier_type": "person",
+    "summary": "Imperial commander and military entrepreneur whose credit, officers, and contribution system gave Ferdinand an army beyond ordinary treasury capacity.",
+    "why_it_matters": "Wallenstein solves force and finance while creating a power center that can frighten princes, allies, and Vienna itself.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_edict_of_restitution",
+    "title": "Edict of Restitution",
+    "dossier_type": "document",
+    "summary": "Ferdinand's 1629 decree demanding restoration of many ecclesiastical properties and excluding Calvinists from the protection of the religious peace.",
+    "why_it_matters": "Wilson treats it as a grave overreach: legally framed, confessionally attractive, and politically disastrous among moderate Lutherans.",
+    "source_refs": ["src_public_restitutionsedikt_1629", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_peace_of_lubeck",
+    "title": "Peace of Lubeck",
+    "dossier_type": "treaty",
+    "summary": "The 1629 settlement that removed Denmark from the war on comparatively generous terms.",
+    "why_it_matters": "It offers Ferdinand a chance to convert military success into wider peace, a chance later damaged by restitution politics.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_regensburg_congress",
+    "title": "Regensburg Electoral Congress",
+    "dossier_type": "institution",
+    "summary": "Meetings of electors and imperial authority where consent, succession, military command, and constitutional limits could be bargained.",
+    "why_it_matters": "Regensburg shows that Ferdinand's imperial title does not give free command; collective politics can force concessions at moments of apparent strength.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_peace_of_prague",
+    "title": "Peace of Prague",
+    "dossier_type": "treaty",
+    "summary": "The 1635 imperial settlement with Saxony and many Lutheran estates, compromising on the Edict and reorganizing military authority.",
+    "why_it_matters": "It can restore much of the Empire to Ferdinand's side, but exclusions from its amnesty keep important enemies in the war.",
+    "source_refs": ["src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_imperial_ban",
+    "title": "Imperial Ban",
+    "dossier_type": "concept",
+    "summary": "A legal punishment placing an offender outside imperial protection and opening the way to confiscation or coercion.",
+    "why_it_matters": "Against Frederick it strengthens Ferdinand's legal position while turning punishment into a durable Palatine and Protestant grievance.",
+    "source_refs": ["src_public_reichsacht_frederick_1621", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_bohemian_estates",
+    "title": "Bohemian Estates",
+    "dossier_type": "institution",
+    "summary": "Corporate political bodies of the Bohemian crown lands that claimed privileges, religious protections, and a role in guarding the kingdom's liberties.",
+    "why_it_matters": "Ferdinand's conflict with them is legal, confessional, dynastic, and constitutional at once; reducing them to rebels or Protestants misses the pressure of the crisis.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  }
+]

@@ -137,6 +137,16 @@ const gameVariableRecordSchema = z.object({
 
 const pressureMapSchema = z.record(pressureKeySchema, z.number().min(0).max(100));
 
+const pressureConditionRecordSchema = z
+  .object({
+    pressure: pressureKeySchema,
+    min: z.number().min(0).max(100).optional(),
+    max: z.number().min(0).max(100).optional(),
+  })
+  .refine((item) => item.min !== undefined || item.max !== undefined, {
+    message: "pressure condition requires min or max",
+  });
+
 const playableRoleRecordSchema = z.object({
   id: z.string().min(1),
   actor_id: z.string().min(1),
@@ -193,6 +203,9 @@ const cardOptionRecordSchema = z.object({
   memory_tags: z.array(z.string().min(1)).optional(),
   research_tags: z.array(z.string().min(1)).optional(),
   counterfactual_source_status: counterfactualSourceStatusSchema.optional(),
+  requires_pressures: z.array(pressureConditionRecordSchema).optional(),
+  unavailable_text: z.string().min(1).optional(),
+  hidden_when_unavailable: z.boolean().optional(),
 });
 
 const cardMemoryVariantRecordSchema = z.object({
@@ -201,6 +214,19 @@ const cardMemoryVariantRecordSchema = z.object({
   date_label: z.string().min(1).optional(),
   briefing: z.string().min(1).optional(),
   situation: z.string().min(1).optional(),
+});
+
+const cardPressureVariantRecordSchema = z.object({
+  conditions: z.array(pressureConditionRecordSchema).min(1),
+  title: z.string().min(1).optional(),
+  date_label: z.string().min(1).optional(),
+  briefing: z.string().min(1).optional(),
+  situation: z.string().min(1).optional(),
+});
+
+const cardContextLinkRecordSchema = z.object({
+  term: z.string().min(1),
+  dossier_id: z.string().min(1),
 });
 
 const cardRecordSchema = z.object({
@@ -218,8 +244,28 @@ const cardRecordSchema = z.object({
   review_status: reviewStatusSchema,
   requires_memory_tags: z.array(z.string().min(1)).optional(),
   excludes_memory_tags: z.array(z.string().min(1)).optional(),
+  requires_pressures: z.array(pressureConditionRecordSchema).optional(),
   memory_variants: z.array(cardMemoryVariantRecordSchema).optional(),
+  pressure_variants: z.array(cardPressureVariantRecordSchema).optional(),
+  context_links: z.array(cardContextLinkRecordSchema).optional(),
   options: z.array(cardOptionRecordSchema).min(2),
+});
+
+const dossierRecordSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  dossier_type: z.enum([
+    "person",
+    "document",
+    "institution",
+    "concept",
+    "place",
+    "treaty",
+  ]),
+  summary: z.string().min(1),
+  why_it_matters: z.string().min(1),
+  source_refs: sourceRefsSchema,
+  review_status: reviewStatusSchema,
 });
 
 const gameDatabaseSchema = z.object({
@@ -232,6 +278,7 @@ const gameDatabaseSchema = z.object({
   playable_roles: z.array(playableRoleRecordSchema).min(1),
   causal_claims: z.array(causalClaimRecordSchema).min(1),
   decision_points: z.array(decisionPointRecordSchema).min(1),
+  dossiers: z.array(dossierRecordSchema).min(1),
   cards: z.array(cardRecordSchema).min(1),
 });
 
@@ -243,6 +290,7 @@ export function validateGameDatabase(database: unknown): GameDatabase {
   assertUnique(parsed.power_centers.map((item) => item.id), "power center");
   assertUnique(parsed.causal_claims.map((item) => item.id), "causal claim");
   assertUnique(parsed.decision_points.map((item) => item.id), "decision point");
+  assertUnique(parsed.dossiers.map((item) => item.id), "dossier");
   assertUnique(parsed.cards.map((item) => item.id), "card");
   assertUnique(parsed.game_variables.map((item) => item.id), "game variable");
 
@@ -253,6 +301,7 @@ export function validateGameDatabase(database: unknown): GameDatabase {
   const powerCenterIds = new Set(parsed.power_centers.map((item) => item.id));
   const causalClaimIds = new Set(parsed.causal_claims.map((item) => item.id));
   const decisionPointIds = new Set(parsed.decision_points.map((item) => item.id));
+  const dossierIds = new Set(parsed.dossiers.map((item) => item.id));
 
   [
     ...parsed.phases,
@@ -262,6 +311,7 @@ export function validateGameDatabase(database: unknown): GameDatabase {
     ...parsed.playable_roles,
     ...parsed.causal_claims,
     ...parsed.decision_points,
+    ...parsed.dossiers,
     ...parsed.cards,
   ].forEach((record) => {
     record.source_refs.forEach((sourceRef) => {
@@ -318,6 +368,11 @@ export function validateGameDatabase(database: unknown): GameDatabase {
     card.causal_claim_ids.forEach((claimId) => {
       if (!causalClaimIds.has(claimId)) {
         throw new Error(`Unknown causal claim in card ${card.id}: ${claimId}`);
+      }
+    });
+    card.context_links?.forEach((link) => {
+      if (!dossierIds.has(link.dossier_id)) {
+        throw new Error(`Unknown dossier in card ${card.id}: ${link.dossier_id}`);
       }
     });
     card.options.forEach((option) => {

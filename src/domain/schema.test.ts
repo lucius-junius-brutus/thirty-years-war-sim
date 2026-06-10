@@ -37,6 +37,28 @@ describe("historical database validation", () => {
     expect(() => validateGameDatabase(broken)).toThrow(/counterfactual tracking/i);
   });
 
+  it("requires card context links to point at in-game dossiers", () => {
+    expect(gameDatabase.dossiers.length).toBeGreaterThan(10);
+    const linkedCards = gameDatabase.cards.filter(
+      (card) => (card.context_links ?? []).length > 0,
+    );
+
+    expect(linkedCards.length).toBeGreaterThan(0);
+
+    const broken = structuredClone(gameDatabase);
+    broken.cards[0] = {
+      ...broken.cards[0],
+      context_links: [
+        {
+          term: "Peace of Augsburg",
+          dossier_id: "missing_dossier",
+        },
+      ],
+    };
+
+    expect(() => validateGameDatabase(broken)).toThrow(/Unknown dossier/i);
+  });
+
   it("rejects reviewed records that cite unread scholarly books", () => {
     const broken = structuredClone(gameDatabase);
     broken.sources = broken.sources.map((source) =>
@@ -52,5 +74,4 @@ describe("historical database validation", () => {
 
     expect(() => validateGameDatabase(broken)).toThrow(/unread scholarly/i);
   });
-
 });

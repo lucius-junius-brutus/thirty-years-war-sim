@@ -341,5 +341,173 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "claim_lower_saxon_neutrality_escalates_danish_phase",
+    "historical_fact": "By 1624-1625 Lower Saxon and Danish questions brought neutrality, bishoprics, and circle authority into the war.",
+    "source_backed_interpretation": "Wilson frames the issue as imperial authority and church-land politics, not merely Protestant rescue.",
+    "causal_claim": "Refusing an autonomous Lower Saxon neutrality widened the war while preserving Ferdinand's claim to common imperial order.",
+    "game_abstraction": "Neutrality becomes a pressure gate between territorial liberty and imperial command.",
+    "player_facing_text": "Lower Saxon neutrality cannot remain harmless.",
+    "mechanical_effect": "Imperial authority can rise at the cost of intervention risk and devastation.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_wallenstein_army_solves_capacity_creates_autonomy",
+    "historical_fact": "Ferdinand relied on Wallenstein's credit, recruiting, and contribution system after 1625.",
+    "source_backed_interpretation": "Wilson treats Wallenstein's army as a solution to imperial capacity and a new military-fiscal power center.",
+    "causal_claim": "The army reduces dependence on Bavaria while increasing devastation and command autonomy.",
+    "game_abstraction": "Fiscal weakness makes Wallenstein options more attractive and later more dangerous.",
+    "player_facing_text": "The emperor can buy an army by letting the army feed itself.",
+    "mechanical_effect": "Military dependence and devastation rise when Wallenstein is empowered.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_1627_palatine_peace_opening_missed",
+    "historical_fact": "Frederick V made concessions in 1627, but Ferdinand still required personal submission.",
+    "source_backed_interpretation": "Wilson says agreement was close and the humiliation question helped collapse the opening.",
+    "causal_claim": "Insisting on visible submission preserved rebellion-punishment logic but kept the Palatine grievance alive.",
+    "game_abstraction": "A proxy-submission branch can soften later Palatine and Bavarian cards.",
+    "player_facing_text": "A near peace can fail over the form of obedience.",
+    "mechanical_effect": "Peace viability falls if submission is made non-negotiable.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_mecklenburg_reward_magnifies_overreach_fear",
+    "historical_fact": "Ferdinand rewarded Wallenstein with Mecklenburg after Danish defeat.",
+    "source_backed_interpretation": "Wilson emphasizes how unprecedented territorial elevation frightened Protestant princes and Catholic allies.",
+    "causal_claim": "Paying military debt with territory increased fear that imperial victory could overturn dynastic possession.",
+    "game_abstraction": "Territorial rewards lower fiscal pressure while raising overreach and intervention risk.",
+    "player_facing_text": "A commander becomes a prince, and every prince reads the precedent.",
+    "mechanical_effect": "Military dependence and foreign intervention risk rise when old dynasties can be displaced.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_lubeck_peace_creates_settlement_chance",
+    "historical_fact": "The 1629 Peace of Lubeck removed Denmark on generous terms.",
+    "source_backed_interpretation": "Wilson presents the peace as pragmatic and potentially useful against Sweden, but not a general settlement.",
+    "causal_claim": "Generosity toward Denmark could free resources, but the unresolved religious settlement remained explosive.",
+    "game_abstraction": "A generous peace can create a later Edict fork.",
+    "player_facing_text": "Denmark leaves; the Empire is not yet pacified.",
+    "mechanical_effect": "Peace viability rises unless restitution policy consumes the opening.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein",
+    "historical_fact": "At Regensburg in 1630, electoral pressure forced Wallenstein's dismissal while Ferdinand sought wider consent.",
+    "source_backed_interpretation": "Wilson treats the congress as a check on imperial overreach and a moment of weakened military readiness.",
+    "causal_claim": "Conceding to electors lowered fear of overreach but left Ferdinand exposed to Swedish momentum.",
+    "game_abstraction": "High estate alarm can force military concessions.",
+    "player_facing_text": "Consent has a price, and the price is the general.",
+    "mechanical_effect": "Military dependence falls unevenly while military capacity weakens.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_leipzig_rejection_drives_saxony_to_sweden",
+    "historical_fact": "Ferdinand rejected the Leipzig Protestant off-ramp and demanded disarmament.",
+    "source_backed_interpretation": "Wilson says this compounded the Edict error and helped push Saxony toward Gustavus.",
+    "causal_claim": "Refusing legal Protestant security narrowed the middle path and made intervention more effective.",
+    "game_abstraction": "High intervention risk adds Swedish crisis dispatches.",
+    "player_facing_text": "A Lutheran elector runs out of neutral ground.",
+    "mechanical_effect": "Foreign intervention risk rises and estate trust falls when Saxony is refused.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_wallenstein_recall_necessity_recreates_autonomy",
+    "historical_fact": "After Swedish victories Ferdinand recalled Wallenstein with broad powers.",
+    "source_backed_interpretation": "Wilson presents the recall as driven by necessity and shadowed by renewed autonomy.",
+    "causal_claim": "The recall restores military capacity while recreating the independent command problem.",
+    "game_abstraction": "Military pressure can unlock Wallenstein's return.",
+    "player_facing_text": "The man dismissed as dangerous returns as necessary.",
+    "mechanical_effect": "Military dependence rises with restored capacity.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_wallenstein_liquidation_restores_control_stains_legality",
+    "historical_fact": "Ferdinand's patents released officers from obedience to Wallenstein before his murder at Eger.",
+    "source_backed_interpretation": "Wilson treats suspicion as plausible while noting the political burial of compromising evidence.",
+    "causal_claim": "Removing Wallenstein restored command but left a legal and moral stain inside imperial politics.",
+    "game_abstraction": "High military dependence creates a forced rupture card.",
+    "player_facing_text": "The army is recovered by cutting away its maker.",
+    "mechanical_effect": "Military dependence falls, while trust and legitimacy suffer.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_prague_peace_settles_too_narrowly",
+    "historical_fact": "The Peace of Prague compromised with Saxony and many Lutherans but excluded key enemies.",
+    "source_backed_interpretation": "Wilson says its exclusions undermined its general-peace character.",
+    "causal_claim": "The settlement restores imperial cooperation while preserving anti-imperial constituencies.",
+    "game_abstraction": "A broad or narrow amnesty branch determines late-war persistence.",
+    "player_facing_text": "Peace is made, but not for everyone who can still fight.",
+    "mechanical_effect": "Peace viability rises or falls according to amnesty breadth.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_ferdinand_iii_election_secures_dynasty_with_limits",
+    "historical_fact": "Ferdinand II secured Ferdinand III's election as king of the Romans in 1636-1637.",
+    "source_backed_interpretation": "Wilson notes the success came with consultation constraints and remaining war burdens.",
+    "causal_claim": "Dynastic continuity was achieved at the price of constitutional limits and inherited crises.",
+    "game_abstraction": "The end state should measure legacy, not simple victory.",
+    "player_facing_text": "A son is elected; the war is not ended.",
+    "mechanical_effect": "Dynastic security rises while imperial freedom remains constrained.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_styrian_reform_forms_ferdinand_legalism",
+    "historical_fact": "Ferdinand revived reform commissions in Inner Austria from 1598 after careful preparation and consultation.",
+    "source_backed_interpretation": "Wilson presents Inner Austria as the place where Catholic restoration, dynastic loyalty, legal narrowness, and force were combined systematically.",
+    "causal_claim": "Success in Styria encouraged Ferdinand's later confidence that disputed privileges could be narrowed legally and enforced politically.",
+    "game_abstraction": "The pre-1617 formation card sets Ferdinand's governing instinct before Bohemia erupts.",
+    "player_facing_text": "The archduke learns that careful force can look like law.",
+    "mechanical_effect": "Confessional legitimacy and dynastic security rise while estate trust narrows.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

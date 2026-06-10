@@ -14,7 +14,7 @@ describe("Empire in Ashes app", () => {
 
     expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
     expect(screen.queryByText(/how we got here/i)).not.toBeInTheDocument();
-    expect(screen.getByText(/articles of the Religious Peace of Augsburg/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Religious Peace of Augsburg/i })).toBeInTheDocument();
     expect(screen.getByText(/Memorials before the court/i)).toBeInTheDocument();
     expect(screen.queryByText(/campaign begins/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/historian note/i)).not.toBeInTheDocument();
@@ -35,5 +35,16 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/chosen consultation over immediate enforcement/i)).toBeInTheDocument();
     expect(screen.getByText(/Tolerate the leagues as temporary instruments/i)).toBeInTheDocument();
     expect(screen.queryByText(/aftermath/i)).not.toBeInTheDocument();
+  });
+
+  it("keeps important historical terms inside an in-game dossier panel", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
+
+    expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
+    expect(screen.getByText(/Religious and constitutional settlement/i)).toBeInTheDocument();
+    expect(screen.getByText(/Why it matters/i)).toBeInTheDocument();
   });
 });

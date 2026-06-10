@@ -1,7 +1,9 @@
 import type {
   CardRecord,
+  CardOptionRecord,
   GameDatabase,
   PlayableRoleRecord,
+  PressureConditionRecord,
   PressureMap,
 } from "../domain/types";
 
@@ -60,11 +62,17 @@ export function getCardsForRole(
     typeof roleOrState === "string" ? roleOrState : roleOrState.roleId;
   const memoryTags =
     typeof roleOrState === "string" ? [] : roleOrState.memory_tags;
+  const pressures =
+    typeof roleOrState === "string"
+      ? getRole(database, roleOrState).initial_pressures
+      : roleOrState.pressures;
 
   return database.cards
     .filter((card) => card.role_id === roleId)
     .filter((card) => cardMatchesMemory(card, memoryTags))
-    .map((card) => applyMemoryVariant(card, memoryTags));
+    .filter((card) => matchesPressureConditions(card.requires_pressures, pressures))
+    .map((card) => applyMemoryVariant(card, memoryTags))
+    .map((card) => applyPressureVariant(card, pressures));
 }
 
 export function getCurrentCard(
@@ -88,9 +96,15 @@ export function chooseOption(
     throw new Error(`Card ${cardId} is not the current card`);
   }
 
-  const option = currentCard.options.find((item) => item.id === optionId);
+  const option = getOptionsForCard(currentCard, state).find(
+    (item) => item.id === optionId,
+  );
   if (!option) {
     throw new Error(`Unknown option ${optionId} for card ${cardId}`);
+  }
+  const availability = getOptionAvailability(option, state);
+  if (!availability.available) {
+    throw new Error(availability.reason ?? `Option ${optionId} is unavailable`);
   }
 
   const pressures = applyEffects(state.pressures, option.effects);
@@ -124,6 +138,31 @@ export function chooseOption(
         memory_tags_added: option.memory_tags,
       },
     ],
+  };
+}
+
+export function getOptionsForCard(
+  card: CardRecord,
+  state: GameState,
+): CardOptionRecord[] {
+  return card.options.filter((option) => {
+    const availability = getOptionAvailability(option, state);
+    return availability.available || !option.hidden_when_unavailable;
+  });
+}
+
+export function getOptionAvailability(
+  option: CardOptionRecord,
+  state: GameState,
+) {
+  const available = matchesPressureConditions(
+    option.requires_pressures,
+    state.pressures,
+  );
+
+  return {
+    available,
+    reason: available ? undefined : option.unavailable_text,
   };
 }
 
@@ -183,12 +222,49 @@ function cardMatchesMemory(card: CardRecord, memoryTags: string[]) {
   return hasAllRequired && !hasExcluded;
 }
 
+function matchesPressureConditions(
+  conditions: PressureConditionRecord[] = [],
+  pressures: PressureMap,
+) {
+  return conditions.every((condition) => {
+    const value = pressures[condition.pressure];
+    if (condition.min !== undefined && value < condition.min) {
+      return false;
+    }
+    if (condition.max !== undefined && value > condition.max) {
+      return false;
+    }
+    return true;
+  });
+}
+
 function applyMemoryVariant(
   card: CardRecord,
   memoryTags: string[],
 ): CardRecord {
   const variant = card.memory_variants?.find((item) =>
     item.required_memory_tags.every((tag) => memoryTags.includes(tag)),
+  );
+
+  if (!variant) {
+    return card;
+  }
+
+  return {
+    ...card,
+    title: variant.title ?? card.title,
+    date_label: variant.date_label ?? card.date_label,
+    briefing: variant.briefing ?? card.briefing,
+    situation: variant.situation ?? card.situation,
+  };
+}
+
+function applyPressureVariant(
+  card: CardRecord,
+  pressures: PressureMap,
+): CardRecord {
+  const variant = card.pressure_variants?.find((item) =>
+    matchesPressureConditions(item.conditions, pressures),
   );
 
   if (!variant) {

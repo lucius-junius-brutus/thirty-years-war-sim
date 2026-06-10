@@ -5,6 +5,8 @@ import {
   createInitialGameState,
   getCardsForRole,
   getCurrentCard,
+  getOptionAvailability,
+  getOptionsForCard,
 } from "./engine";
 
 describe("game engine", () => {
@@ -26,6 +28,14 @@ describe("game engine", () => {
     expect(prePragueCards.length).toBeGreaterThanOrEqual(4);
     expect(prePragueCards.map((card) => card.phase_id)).toContain(
       "phase_prewar_settlement",
+    );
+    expect(prePragueCards.map((card) => card.id)).toContain(
+      "card_1598_styrian_reform",
+    );
+    expect(
+      ferdinandCards.findIndex((card) => card.id === "card_1598_styrian_reform"),
+    ).toBeLessThan(
+      ferdinandCards.findIndex((card) => card.id === "card_1617_bohemian_enforcement"),
     );
     expect(prePragueCards[0]?.date_label).toContain("1555");
     expect(prePragueCards[0]?.source_refs).toContain(
@@ -216,10 +226,10 @@ describe("game engine", () => {
     );
   });
 
-  it("keeps 1629 restitution out of the early playable deck until expansion", () => {
+  it("expands Ferdinand's playable deck through the 1629 restitution crisis", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
 
-    expect(getCardsForRole(gameDatabase, state).map((card) => card.id)).not.toContain(
+    expect(getCardsForRole(gameDatabase, state).map((card) => card.id)).toContain(
       "card_1629_restitution_edict",
     );
   });
@@ -230,10 +240,12 @@ describe("game engine", () => {
       (card) => card.id,
     );
 
-    expect(visibleCardIds).not.toContain("card_1623_peace_feelers");
     expect(visibleCardIds).not.toContain("card_1622_catholic_restoration");
     expect(visibleCardIds.indexOf("card_1621_ban_of_frederick")).toBeLessThan(
       visibleCardIds.indexOf("card_1622_palatine_settlement"),
+    );
+    expect(visibleCardIds.indexOf("card_1623_peace_feelers")).toBeGreaterThan(
+      visibleCardIds.indexOf("card_1623_electoral_transfer"),
     );
   });
 
@@ -271,5 +283,57 @@ describe("game engine", () => {
     expect(
       getCardsForRole(gameDatabase, afterRemovingKlesl).map((card) => card.id),
     ).toContain("card_1619_stormy_petition");
+  });
+
+  it("lets pressure levels open or close later options", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const card = gameDatabase.cards.find(
+      (item) => item.id === "card_1623_electoral_transfer",
+    )!;
+    const balanceOption = card.options.find(
+      (option) => option.id === "opt_preserve_electoral_balance",
+    )!;
+
+    const dependentState = {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        military_dependence: 82,
+        estate_trust: 28,
+      },
+    };
+    const freerState = {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        military_dependence: 38,
+        estate_trust: 66,
+      },
+    };
+
+    expect(getOptionAvailability(balanceOption, dependentState)).toMatchObject({
+      available: false,
+    });
+    expect(getOptionsForCard(card, dependentState).map((option) => option.id)).not.toContain(
+      "opt_preserve_electoral_balance",
+    );
+    expect(getOptionsForCard(card, freerState).map((option) => option.id)).toContain(
+      "opt_preserve_electoral_balance",
+    );
+  });
+
+  it("uses pressure levels to add crisis dispatches to the deck", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const calmDeck = getCardsForRole(gameDatabase, state).map((card) => card.id);
+    const interventionDeck = getCardsForRole(gameDatabase, {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        foreign_intervention_risk: 78,
+      },
+    }).map((card) => card.id);
+
+    expect(calmDeck).not.toContain("card_1631_intervention_crisis");
+    expect(interventionDeck).toContain("card_1631_intervention_crisis");
   });
 });

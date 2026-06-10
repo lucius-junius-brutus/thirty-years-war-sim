@@ -492,5 +492,306 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "dp_1625_lower_saxon_neutrality",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1625",
+    "situation": "Lower Saxon estates and Denmark press the language of neutrality while imperial and League forces see that neutrality shielding enemies will hollow out imperial authority.",
+    "known_constraints": [
+      "Denmark can widen the war.",
+      "Imperial circles claim legal liberties.",
+      "Church land disputes remain unsettled."
+    ],
+    "plausible_options": [
+      "Refuse neutrality",
+      "Recognize a temporary neutrality",
+      "Use League pressure to force compliance"
+    ],
+    "stakes": "The choice decides whether imperial order is asserted by law, concession, or arms.",
+    "causal_claim_ids": [
+      "claim_lower_saxon_neutrality_escalates_danish_phase"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1625_wallenstein_army",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1625",
+    "situation": "Ferdinand needs a field army larger than his treasury can sustain.",
+    "known_constraints": [
+      "Bavaria and the League remain indispensable.",
+      "The crown lacks ready cash.",
+      "Credit depends on confidence in commanders and rewards."
+    ],
+    "plausible_options": [
+      "Contract Wallenstein",
+      "Limit the army",
+      "Remain League-dependent"
+    ],
+    "stakes": "Military capacity can be purchased, but the price is autonomy and burden on the lands.",
+    "causal_claim_ids": [
+      "claim_wallenstein_army_solves_capacity_creates_autonomy"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1627_palatine_peace_opening",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1627",
+    "situation": "Frederick V offers concessions as imperial fortunes rise, but the form of submission remains contested.",
+    "known_constraints": [
+      "Bavaria expects reward.",
+      "Frederick resists humiliation.",
+      "The Palatine question connects to foreign courts."
+    ],
+    "plausible_options": [
+      "Require personal submission",
+      "Accept proxy submission",
+      "Trade restoration for security"
+    ],
+    "stakes": "A near settlement can reduce the war's grievance core or fail over obedience.",
+    "causal_claim_ids": [
+      "claim_1627_palatine_peace_opening_missed"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1628_mecklenburg_reward",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1627-1628",
+    "situation": "Wallenstein must be paid and secured after victory against Denmark.",
+    "known_constraints": [
+      "Imperial cash is short.",
+      "Old dynasties watch the Palatine precedent.",
+      "The army expects reward."
+    ],
+    "plausible_options": [
+      "Transfer Mecklenburg",
+      "Grant temporary administration",
+      "Find money instead of land"
+    ],
+    "stakes": "The reward can keep the army together while alarming the Empire.",
+    "causal_claim_ids": [
+      "claim_mecklenburg_reward_magnifies_overreach_fear"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1629_lubeck_peace",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1629",
+    "situation": "Denmark is beaten on the mainland but not destroyed, while Sweden and Mantua draw attention.",
+    "known_constraints": [
+      "Denmark still has islands.",
+      "The Lower Saxons are exposed.",
+      "A harsh peace may prolong war."
+    ],
+    "plausible_options": [
+      "Generous peace",
+      "Punitive peace",
+      "Broaden peace into settlement"
+    ],
+    "stakes": "One enemy can be removed, but the general settlement remains unresolved.",
+    "causal_claim_ids": [
+      "claim_lubeck_peace_creates_settlement_chance"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1630_regensburg_wallenstein",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1630",
+    "situation": "The electors demand relief from Wallenstein and imperial overreach while Ferdinand seeks consent and dynastic progress.",
+    "known_constraints": [
+      "Electoral consent matters.",
+      "Wallenstein's army frightens allies.",
+      "Sweden has landed in Pomerania."
+    ],
+    "plausible_options": [
+      "Dismiss Wallenstein",
+      "Retain him with limits",
+      "Trade army reform for succession support"
+    ],
+    "stakes": "Consent can be bought, but the military price may be severe.",
+    "causal_claim_ids": [
+      "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1631_leipzig_off_ramp",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1631",
+    "situation": "Saxony and other Protestant estates seek a lawful middle course as Sweden's presence and Magdeburg's ruin change the field.",
+    "known_constraints": [
+      "The Edict alarms Lutherans.",
+      "Gustavus seeks German allies.",
+      "Tilly's pressure can make neutrality impossible."
+    ],
+    "plausible_options": [
+      "Reject Leipzig",
+      "Suspend the Edict and accept mediation",
+      "Offer private concessions"
+    ],
+    "stakes": "Saxony can still be held near the Empire, or pushed into Sweden's camp.",
+    "causal_claim_ids": [
+      "claim_leipzig_rejection_drives_saxony_to_sweden"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1632_recall_wallenstein",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1632",
+    "situation": "Swedish victories force Ferdinand to consider the commander he dismissed.",
+    "known_constraints": [
+      "Tilly and the League cannot restore the situation alone.",
+      "Wallenstein will demand broad powers.",
+      "Bavaria fears both Sweden and Wallenstein."
+    ],
+    "plausible_options": [
+      "Recall with broad powers",
+      "Recall with limits",
+      "Use coalition command"
+    ],
+    "stakes": "Necessity may re-create the power center previously dismantled.",
+    "causal_claim_ids": [
+      "claim_wallenstein_recall_necessity_recreates_autonomy"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1634_remove_wallenstein",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1634",
+    "situation": "Wallenstein's opaque negotiations and inactivity make defection fears plausible in Vienna.",
+    "known_constraints": [
+      "The army's loyalty is uncertain.",
+      "An open trial may expose embarrassing concessions.",
+      "Spain and Bavaria press alternatives."
+    ],
+    "plausible_options": [
+      "Release officers and remove him",
+      "Arrest and try him",
+      "Reconcile under narrow command"
+    ],
+    "stakes": "The emperor can regain the army only by choosing a dangerous legal path.",
+    "causal_claim_ids": [
+      "claim_wallenstein_liquidation_restores_control_stains_legality"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1635_prague_peace",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1635",
+    "situation": "Nordlingen restores leverage and Saxony is ready for a settlement.",
+    "known_constraints": [
+      "The Edict must be compromised.",
+      "Bavaria and loyalists expect their rewards protected.",
+      "France and Sweden can use excluded Germans."
+    ],
+    "plausible_options": [
+      "Monarchical-elector peace",
+      "Broader amnesty settlement",
+      "Hard Catholic settlement"
+    ],
+    "stakes": "The peace can recover the Empire or preserve the war's excluded enemies.",
+    "causal_claim_ids": [
+      "claim_prague_peace_settles_too_narrowly"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1636_ferdinand_iii_election",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1636-1637",
+    "situation": "Ferdinand II's health fails while the dynasty still needs elected continuity.",
+    "known_constraints": [
+      "Electors can demand capitulation limits.",
+      "War finance remains unresolved.",
+      "Delay risks succession uncertainty."
+    ],
+    "plausible_options": [
+      "Secure the election",
+      "Buy broader enthusiasm",
+      "Delay for military leverage"
+    ],
+    "stakes": "Dynastic security can be won without ending the war.",
+    "causal_claim_ids": [
+      "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1598_styrian_reform",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1598-1605",
+    "situation": "Ferdinand returns to Inner Austria with Protestant estate privileges still standing and Catholic advisers urging him to revive the reform commission.",
+    "known_constraints": [
+      "His father had conceded privileges under pressure.",
+      "The Estates remain necessary for taxation.",
+      "Catholic advisers believe loyalty and confession must be joined.",
+      "Open revolt remains possible if the provinces combine."
+    ],
+    "plausible_options": [
+      "Revive the reform commission",
+      "Preserve privileges while building Catholic officeholding",
+      "Seek a new estate compact"
+    ],
+    "stakes": "This is Ferdinand's training ground: whether Catholic restoration can be made through law, patronage, sequencing, and force.",
+    "causal_claim_ids": [
+      "claim_styrian_reform_forms_ferdinand_legalism"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

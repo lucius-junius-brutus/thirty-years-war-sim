@@ -173,6 +173,9 @@ export interface CardOptionRecord {
   memory_tags?: string[];
   research_tags?: string[];
   counterfactual_source_status?: CounterfactualSourceStatus;
+  requires_pressures?: PressureConditionRecord[];
+  unavailable_text?: string;
+  hidden_when_unavailable?: boolean;
 }
 
 export interface CardMemoryVariantRecord {
@@ -181,6 +184,25 @@ export interface CardMemoryVariantRecord {
   date_label?: string;
   briefing?: string;
   situation?: string;
+}
+
+export interface PressureConditionRecord {
+  pressure: PressureKey;
+  min?: number;
+  max?: number;
+}
+
+export interface CardPressureVariantRecord {
+  conditions: PressureConditionRecord[];
+  title?: string;
+  date_label?: string;
+  briefing?: string;
+  situation?: string;
+}
+
+export interface CardContextLinkRecord {
+  term: string;
+  dossier_id: string;
 }
 
 export interface CardRecord {
@@ -198,8 +220,27 @@ export interface CardRecord {
   review_status: ReviewStatus;
   requires_memory_tags?: string[];
   excludes_memory_tags?: string[];
+  requires_pressures?: PressureConditionRecord[];
   memory_variants?: CardMemoryVariantRecord[];
+  pressure_variants?: CardPressureVariantRecord[];
+  context_links?: CardContextLinkRecord[];
   options: CardOptionRecord[];
+}
+
+export interface DossierRecord {
+  id: string;
+  title: string;
+  dossier_type:
+    | "person"
+    | "document"
+    | "institution"
+    | "concept"
+    | "place"
+    | "treaty";
+  summary: string;
+  why_it_matters: string;
+  source_refs: string[];
+  review_status: ReviewStatus;
 }
 
 export interface GameDatabase {
@@ -212,5 +253,6 @@ export interface GameDatabase {
   playable_roles: PlayableRoleRecord[];
   causal_claims: CausalClaimRecord[];
   decision_points: DecisionPointRecord[];
+  dossiers: DossierRecord[];
   cards: CardRecord[];
 }

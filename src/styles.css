@@ -156,6 +156,7 @@ h1 {
 
 .role-card,
 .pressure-panel,
+.dossier-panel,
 .event-card,
 .aftermath-panel {
   background:
@@ -169,6 +170,7 @@ h1 {
 
 .role-card,
 .pressure-panel,
+.dossier-panel,
 .aftermath-panel {
   padding: 18px;
 }
@@ -308,6 +310,53 @@ h1 {
   margin: 0 0 14px;
 }
 
+.context-link {
+  display: inline;
+  color: #f8df8d;
+  text-decoration: underline;
+  text-decoration-color: rgba(214, 180, 92, 0.55);
+  text-underline-offset: 4px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.context-link:hover,
+.context-link:focus-visible {
+  color: #fff5bd;
+  outline: 0;
+  text-decoration-color: var(--red-bright);
+}
+
+.dossier-panel {
+  color: #eadfc3;
+  line-height: 1.5;
+}
+
+.dossier-panel h3 {
+  color: #f4d789;
+  font-size: 1rem;
+}
+
+.dossier-panel p {
+  margin: 8px 0 12px;
+}
+
+.dossier-panel strong {
+  color: var(--gold);
+  font-family: "Special Elite", ui-monospace, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.dossier-type {
+  color: var(--paper-dim);
+  font-family: "Special Elite", ui-monospace, monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
 .choices {
   position: relative;
   z-index: 1;
@@ -336,6 +385,15 @@ h1 {
 .choice-button:hover {
   background: rgba(156, 34, 41, 0.2);
   transform: translateX(2px);
+}
+
+.choice-button:disabled {
+  color: rgba(216, 201, 166, 0.52);
+  cursor: not-allowed;
+  background: rgba(18, 15, 20, 0.4);
+  border-color: rgba(153, 140, 116, 0.16);
+  border-left-color: rgba(153, 140, 116, 0.4);
+  transform: none;
 }
 
 .choice-button span {

@@ -1,11 +1,17 @@
 import { RotateCcw, ScrollText, ShieldAlert } from "lucide-react";
 import { useState } from "react";
 import { gameDatabase } from "./data/gameDatabase";
-import type { CardRecord } from "./domain/types";
+import type {
+  CardContextLinkRecord,
+  CardRecord,
+  DossierRecord,
+} from "./domain/types";
 import {
   chooseOption,
   createInitialGameState,
   getCurrentCard,
+  getOptionAvailability,
+  getOptionsForCard,
   getRole,
   scoreOutcome,
   type GameState,
@@ -27,15 +33,20 @@ function App() {
     return storage && loadGame(storage) ? "play" : "role-select";
   });
   const [showAftermath, setShowAftermath] = useState(false);
+  const [selectedDossierId, setSelectedDossierId] = useState<string | null>(null);
 
   const role = getRole(gameDatabase, state.roleId);
   const card = getCurrentCard(gameDatabase, state);
   const outcome = state.completed ? scoreOutcome(gameDatabase, state) : null;
   const latestEntry = state.log.at(-1);
+  const selectedDossier = gameDatabase.dossiers.find(
+    (dossier) => dossier.id === selectedDossierId,
+  );
 
   function commitChoice(cardId: string, optionId: string) {
     const next = chooseOption(gameDatabase, state, cardId, optionId);
     setState(next);
+    setSelectedDossierId(null);
     const storage = getBrowserStorage();
     if (storage) {
       saveGame(storage, next);
@@ -48,6 +59,7 @@ function App() {
     setState(next);
     setScreen("role-select");
     setShowAftermath(false);
+    setSelectedDossierId(null);
     const storage = getBrowserStorage();
     if (storage) {
       clearGame(storage);
@@ -59,6 +71,7 @@ function App() {
     setState(next);
     setScreen("play");
     setShowAftermath(false);
+    setSelectedDossierId(null);
     const storage = getBrowserStorage();
     if (storage) {
       clearGame(storage);
@@ -91,6 +104,7 @@ function App() {
         <section className="desk-grid" aria-label="Political desk">
           <aside className="side-panel">
             <PressurePanel state={state} />
+            {selectedDossier ? <DossierPanel dossier={selectedDossier} /> : null}
           </aside>
 
           <section className="main-panel">
@@ -100,7 +114,12 @@ function App() {
                 onContinue={() => setShowAftermath(false)}
               />
             ) : card ? (
-              <EventCard card={card} onChoose={commitChoice} />
+              <EventCard
+                card={card}
+                state={state}
+                onChoose={commitChoice}
+                onSelectDossier={setSelectedDossierId}
+              />
             ) : (
               <OutcomePanel state={state} outcome={outcome} onRestart={restart} />
             )}
@@ -203,34 +222,132 @@ function PressurePanel({ state }: { state: GameState }) {
 
 function EventCard({
   card,
+  state,
   onChoose,
+  onSelectDossier,
 }: {
   card: CardRecord;
+  state: GameState;
   onChoose: (cardId: string, optionId: string) => void;
+  onSelectDossier: (dossierId: string) => void;
 }) {
+  const options = getOptionsForCard(card, state);
+
   return (
     <article className="event-card">
       <div className="date-ribbon">{card.date_label}</div>
       <h2>{card.title}</h2>
       <section className="historical-brief">
-        <p>{card.briefing}</p>
-        <p>{card.situation}</p>
+        <LinkedParagraph
+          text={card.briefing}
+          links={card.context_links}
+          onSelectDossier={onSelectDossier}
+        />
+        <LinkedParagraph
+          text={card.situation}
+          links={card.context_links}
+          onSelectDossier={onSelectDossier}
+        />
       </section>
 
       <div className="choices" aria-label="Choices">
-        {card.options.map((option) => (
-          <button
-            className="choice-button"
-            key={option.id}
-            type="button"
-            onClick={() => onChoose(card.id, option.id)}
-          >
-            <span>{option.historical_option ? "Historical path" : "Option"}</span>
-            {option.label}
-          </button>
-        ))}
+        {options.map((option) => {
+          const availability = getOptionAvailability(option, state);
+          return (
+            <button
+              className="choice-button"
+              disabled={!availability.available}
+              key={option.id}
+              type="button"
+              title={availability.reason}
+              onClick={() => onChoose(card.id, option.id)}
+            >
+              <span>
+                {availability.available
+                  ? option.historical_option
+                    ? "Historical path"
+                    : "Option"
+                  : "Unavailable"}
+              </span>
+              {availability.available ? option.label : availability.reason}
+            </button>
+          );
+        })}
       </div>
     </article>
+  );
+}
+
+function LinkedParagraph({
+  text,
+  links = [],
+  onSelectDossier,
+}: {
+  text: string;
+  links?: CardContextLinkRecord[];
+  onSelectDossier: (dossierId: string) => void;
+}) {
+  if (links.length === 0) {
+    return <p>{text}</p>;
+  }
+
+  const activeLinks = [...links].sort((a, b) => b.term.length - a.term.length);
+  const parts: Array<string | { link: CardContextLinkRecord; text: string }> = [];
+  let cursor = 0;
+
+  while (cursor < text.length) {
+    const match = activeLinks
+      .map((link) => ({
+        link,
+        index: text.toLowerCase().indexOf(link.term.toLowerCase(), cursor),
+      }))
+      .filter((item) => item.index >= 0)
+      .sort((a, b) => a.index - b.index || b.link.term.length - a.link.term.length)[0];
+
+    if (!match) {
+      parts.push(text.slice(cursor));
+      break;
+    }
+    if (match.index > cursor) {
+      parts.push(text.slice(cursor, match.index));
+    }
+    parts.push({
+      link: match.link,
+      text: text.slice(match.index, match.index + match.link.term.length),
+    });
+    cursor = match.index + match.link.term.length;
+  }
+
+  return (
+    <p>
+      {parts.map((part, index) =>
+        typeof part === "string" ? (
+          <span key={`${part}-${index}`}>{part}</span>
+        ) : (
+          <button
+            className="context-link"
+            key={`${part.link.dossier_id}-${index}`}
+            type="button"
+            onClick={() => onSelectDossier(part.link.dossier_id)}
+          >
+            {part.text}
+          </button>
+        ),
+      )}
+    </p>
+  );
+}
+
+function DossierPanel({ dossier }: { dossier: DossierRecord }) {
+  return (
+    <aside className="dossier-panel" aria-label="Dossier">
+      <div className="panel-title">Dossier</div>
+      <h3>{dossier.title}</h3>
+      <p className="dossier-type">{dossier.dossier_type}</p>
+      <p>{dossier.summary}</p>
+      <strong>Why it matters</strong>
+      <p>{dossier.why_it_matters}</p>
+    </aside>
   );
 }
 

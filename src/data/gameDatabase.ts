@@ -2,6 +2,7 @@ import actors from "../../data/actors/actors.json";
 import cards from "../../data/cards/cards.json";
 import causalClaims from "../../data/causal_claims/causal_claims.json";
 import decisionPoints from "../../data/decision_points/decision_points.json";
+import dossiers from "../../data/dossiers/dossiers.json";
 import gameVariables from "../../data/game_variables/game_variables.json";
 import phases from "../../data/phases/phases.json";
 import playableRoles from "../../data/playable_roles/playable_roles.json";
@@ -20,5 +21,6 @@ export const gameDatabase = validateGameDatabase({
   playable_roles: playableRoles,
   causal_claims: causalClaims,
   decision_points: decisionPoints,
+  dossiers,
   cards,
 });
