@@ -1,7 +1,7 @@
 import { RotateCcw, ScrollText, ShieldAlert } from "lucide-react";
 import { useState } from "react";
 import { gameDatabase } from "./data/gameDatabase";
-import type { CardRecord, PressureKey } from "./domain/types";
+import type { CardRecord } from "./domain/types";
 import {
   chooseOption,
   createInitialGameState,
@@ -212,11 +212,10 @@ function EventCard({
     <article className="event-card">
       <div className="date-ribbon">{card.date_label}</div>
       <h2>{card.title}</h2>
-      <section className="briefing-box">
-        <div className="panel-title">How we got here</div>
+      <section className="historical-brief">
         <p>{card.briefing}</p>
+        <p>{card.situation}</p>
       </section>
-      <p className="situation">{card.situation}</p>
 
       <div className="choices" aria-label="Choices">
         {card.options.map((option) => (
@@ -247,32 +246,11 @@ function AftermathPanel({
       <div className="panel-title">Aftermath</div>
       <strong>{entry.choice}</strong>
       <p>{entry.consequence}</p>
-      <EffectList effects={entry.pressure_delta} />
       <button className="choice-button continue-button" type="button" onClick={onContinue}>
         <span>Continue</span>
         Proceed to the next decision
       </button>
     </section>
-  );
-}
-
-function EffectList({ effects }: { effects: Partial<Record<PressureKey, number>> }) {
-  const entries = Object.entries(effects);
-  if (entries.length === 0) {
-    return null;
-  }
-  return (
-    <div className="effect-list">
-      {entries.map(([key, value]) => {
-        const variable = gameDatabase.game_variables.find((item) => item.id === key);
-        return (
-          <span key={key} className={value >= 0 ? "up" : "down"}>
-            {variable?.name ?? key} {value >= 0 ? "+" : ""}
-            {value}
-          </span>
-        );
-      })}
-    </div>
   );
 }
 

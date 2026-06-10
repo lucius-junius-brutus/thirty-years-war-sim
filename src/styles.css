@@ -294,36 +294,18 @@ h1 {
   font-size: clamp(1.65rem, 5vw, 3rem);
 }
 
-.briefing-box {
+.historical-brief {
   position: relative;
   z-index: 1;
   max-width: 780px;
   margin: 18px 0;
-  padding: 14px 16px;
   color: #efe1bd;
-  background:
-    linear-gradient(90deg, rgba(214, 180, 92, 0.12), transparent),
-    rgba(18, 15, 20, 0.48);
-  border: 2px solid rgba(214, 180, 92, 0.24);
-  border-left: 8px solid var(--gold);
-}
-
-.briefing-box .panel-title {
-  margin-bottom: 8px;
-}
-
-.briefing-box p {
-  margin: 0;
-  line-height: 1.55;
-}
-
-.situation {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-  color: #e5d8b8;
   font-size: 1.15rem;
-  line-height: 1.72;
+  line-height: 1.7;
+}
+
+.historical-brief p {
+  margin: 0 0 14px;
 }
 
 .choices {
@@ -391,27 +373,6 @@ h1 {
   margin: 8px 0 0;
   color: #eadfc3;
   line-height: 1.55;
-}
-
-.effect-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.effect-list span {
-  color: #d9e6d5;
-  background: rgba(98, 118, 92, 0.22);
-  border: 1px solid rgba(98, 118, 92, 0.42);
-  padding: 3px 7px;
-  font-size: 0.82rem;
-}
-
-.effect-list .down {
-  color: #ffd8d8;
-  background: rgba(156, 34, 41, 0.22);
-  border-color: rgba(156, 34, 41, 0.5);
 }
 
 .outcome-columns {

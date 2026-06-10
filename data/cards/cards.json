@@ -6,17 +6,17 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1555",
     "title": "The Settlement With Gaps",
-    "briefing": "Long before Prague, the Empire learned to survive by turning religious conflict into law. The Peace of Augsburg did not solve every question. It made coexistence possible while leaving enough ambiguity for later rulers, courts, estates, and churches to fight over what the settlement meant.",
-    "situation": "You do not choose Augsburg; you inherit it. The campaign begins by deciding which part of that inheritance will shape Ferdinand's political instincts: enforcement, compromise, or postponement. Each interpretation makes later Bohemian choices feel different.",
-    "historian_note": "Wilson treats Augsburg as part of the Empire's constitutional settlement rather than a simple pause in religious war. The important game point is not that Augsburg caused the Thirty Years' War, but that its unresolved legal-confessional questions became usable political weapons.",
+    "briefing": "The Religious Peace of Augsburg was intended to preserve the public peace of the Empire by securing Catholics and adherents of the Augsburg Confession in their estates, worship, jurisdictions, and privileges. It did not create a general liberty of conscience. It excluded other confessions and left difficult questions over ecclesiastical lands, mediate subjects, church revenues, and the authority to judge disputed rights.",
+    "situation": "By Ferdinand's generation, imperial courts and estates had inherited a settlement that could be read in more than one lawful way. A strict reading promised order and Catholic recovery; a conciliatory reading promised quiet and confidence among Lutheran estates; delay preserved the forms of peace while leaving every contested article ready for future quarrel.",
+    "historian_note": "Wilson treats Augsburg as part of the Empire's constitutional settlement rather than a simple pause in religious war. Its unresolved legal-confessional questions became usable political weapons once rulers and estates ceased trusting one another's interpretation.",
     "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_primary_augsburg_peace_1555_reference_translation"],
     "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines", "claim_legalism_reassures_estates"],
     "review_status": "needs_review",
     "options": [
       {
         "id": "opt_augsburg_enforcement_inheritance",
-        "label": "Read the settlement as a legal order whose gaps must be enforced before they spread.",
-        "consequence": "Authority feels clearer when ambiguity is treated as a problem to close. Estates who live inside those ambiguities hear danger in the word enforcement.",
+        "label": "Assert the strict clauses of the settlement and prepare to close disputed usages.",
+        "consequence": "The imperial court speaks with greater certainty and Catholic petitioners find a firmer hearing. Lutheran and mixed estates answer that long practice has become part of the peace, and that enforcement against custom may itself disturb the public order.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 5,
@@ -27,8 +27,8 @@
       },
       {
         "id": "opt_augsburg_compromise_inheritance",
-        "label": "Treat Augsburg as a fragile compromise that must be preserved through consultation.",
-        "consequence": "Moderate estates hear continuity, not threat. Catholic restorers hear a settlement being protected even where they believe it has been abused.",
+        "label": "Preserve Augsburg as a living compact, to be clarified only by consultation.",
+        "consequence": "The court appears as guardian of the settlement rather than master of its ambiguities. Moderate estates gain room to remain obedient, while Catholic reformers complain that abuses are being protected under the name of peace.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -4,
@@ -39,8 +39,8 @@
       },
       {
         "id": "opt_augsburg_deferred_inheritance",
-        "label": "Leave the hardest questions deferred and rely on local practice to keep the peace.",
-        "consequence": "Nothing breaks today. The unresolved parts of the settlement remain available for every later actor who needs a legal argument.",
+        "label": "Let disputed usages stand until a concrete complaint forces judgment.",
+        "consequence": "The old forms of peace continue without an open breach. The price is that every monastery, parish, city, and lordship touched by the disputed articles may later become a test case for imperial authority.",
         "effects": {
           "estate_trust": 3,
           "imperial_authority": -3,
@@ -57,8 +57,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1608-1609",
     "title": "Leagues of Protection",
-    "briefing": "The Empire's estates do not only argue. They organize. The Protestant Union and Catholic Liga promise defense and constitutional loyalty, but they also give frightened princes machinery, treasuries, leaders, and expectations.",
-    "situation": "Ferdinand will later need allies, and the strongest Catholic machinery will not be neutral. The prewar question is how the Empire should understand these leagues: as temporary insurance, illegal faction, or necessary confessional organization.",
+    "briefing": "The Donauworth affair and the failure of ordinary imperial remedies persuaded many estates that law alone no longer gave certain protection. The Protestant Union presented itself as a defensive association for the public peace and the imperial constitution. The Catholic League answered in the same language of defence, peace, and lawful order, while placing direction in Bavarian hands.",
+    "situation": "Neither league was merely an army waiting for war. Each was a promise of counsel, money, intelligence, transit, compensation, and mutual aid. Each also taught its members to look beyond the ordinary institutions of the Empire when danger seemed urgent.",
     "historian_note": "Wilson stresses that the Union and Liga did not make war inevitable. They mattered because they turned insecurity into institutions and gave ambitious directors ways to spread costs, claim legitimacy, and mobilize support.",
     "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"],
     "causal_claim_ids": ["claim_union_liga_security_dilemma", "claim_legalism_reassures_estates"],
@@ -66,8 +66,8 @@
     "options": [
       {
         "id": "opt_leagues_constitutional_insurance",
-        "label": "Recognize the leagues as temporary insurance, but insist they remain inside imperial law.",
-        "consequence": "Fear has a legal container. The container still proves that estates trust leagues more than imperial calm.",
+        "label": "Tolerate the leagues as temporary instruments, bound to imperial law.",
+        "consequence": "The estates may keep their defensive assurances without openly defying the emperor. Yet the very toleration confirms that many princes trust private association more readily than the ordinary guardians of the peace.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -3,
@@ -78,8 +78,8 @@
       },
       {
         "id": "opt_leagues_suppress_faction",
-        "label": "Condemn confessional leagues as factional threats to the public peace.",
-        "consequence": "The imperial constitution sounds stronger. Princes who joined for protection hear that their insurance may be treated as rebellion.",
+        "label": "Condemn the leagues as unlawful factions against the public peace.",
+        "consequence": "Imperial authority speaks in the old language of the Landfrieden. The members answer that they armed only because lawful remedies failed, and some begin to fear that obedience will leave them undefended.",
         "effects": {
           "imperial_authority": 6,
           "estate_trust": -8,
@@ -90,8 +90,8 @@
       },
       {
         "id": "opt_leagues_catholic_counterweight",
-        "label": "Accept Catholic organization as the practical counterweight to Protestant coordination.",
-        "consequence": "Catholic allies see realism. The future emperor's emergency toolkit begins to look Bavarian and League-shaped.",
+        "label": "Treat Catholic association as the necessary answer to Protestant coordination.",
+        "consequence": "Catholic ecclesiastical princes receive a clearer shield, and Bavaria becomes the natural broker of armed Catholic aid. The imperial court gains a ready instrument but risks finding that the instrument has its own master.",
         "effects": {
           "confessional_legitimacy": 8,
           "military_dependence": 8,
@@ -109,17 +109,17 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1609",
     "title": "A Royal Promise in Bohemia",
-    "briefing": "Rudolf II's Letter of Majesty gives Bohemian Protestant estates more than a memory. It gives them a document, offices, defenders, churches, schools, and a language of recorded liberties.",
-    "situation": "Ferdinand will inherit a crown whose estates believe their religious and political standing has royal paper behind it. Later Catholic enforcement can be presented as lawful correction by one side and charter-breaking by the other.",
-    "historian_note": "The Letter of Majesty is why the Bohemian crisis should not be modeled as Catholic versus Protestant alone. It is also a fight over how a crown handles recorded estate privileges.",
+    "briefing": "Rudolf II's Letter of Majesty gave the Bohemian Protestant estates a written guarantee for worship, schools, churches, and defenders. It was not merely a religious concession. It became part of the language by which the estates described their privileges, their corporate rights, and the limits of royal officials.",
+    "situation": "The crown and the estates could both claim law. Catholic councillors could argue for a narrow construction of the charter, especially on royal or ecclesiastical lands. Protestant estates could answer that a royal grant once entered among the kingdom's liberties could not be narrowed by officials without endangering the obedience owed to the king.",
+    "historian_note": "The Letter of Majesty makes the Bohemian crisis a dispute over recorded estate privileges as well as confession. Later enforcement could be presented as lawful correction by one side and charter-breaking by the other.",
     "source_refs": ["src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_wilson_sourcebook"],
     "causal_claim_ids": ["claim_letter_majesty_bohemian_liberties", "claim_ferdinand_legalistic_bohemia_escalates"],
     "review_status": "needs_review",
     "options": [
       {
         "id": "opt_majesty_broad_charter",
-        "label": "Treat the Letter as a broad charter of estate and religious protection.",
-        "consequence": "Bohemian Protestants can imagine loyalty without surrender. Catholic restoration now has a chartered ceiling.",
+        "label": "Uphold the Letter as a broad charter of Bohemian estate liberty.",
+        "consequence": "The Protestant estates receive reason to separate loyalty from surrender. Catholic councillors and clergy see the crown accepting a written limit on restoration within one of its most important kingdoms.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -4,
@@ -130,8 +130,8 @@
       },
       {
         "id": "opt_majesty_narrow_reading",
-        "label": "Read the Letter narrowly and reserve disputed churches and lands to crown and Catholic claims.",
-        "consequence": "The court can call this legal precision. The estates can call it the beginning of betrayal.",
+        "label": "Read the Letter narrowly where royal and ecclesiastical rights are disputed.",
+        "consequence": "The court can defend its position as legal precision. The estates see the same act as an attempt to empty a royal promise while preserving its seal and language.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 9,
@@ -142,8 +142,8 @@
       },
       {
         "id": "opt_majesty_avoid_clarification",
-        "label": "Avoid clarifying the charter while keeping royal claims formally intact.",
-        "consequence": "The paper keeps the peace only as long as nobody tests it too hard. Every parish dispute becomes a possible constitutional argument.",
+        "label": "Avoid a formal ruling and leave local practice to bear the strain.",
+        "consequence": "No party is forced into immediate retreat. But each unresolved church, school, and parish dispute becomes a place where royal authority and estate privilege can collide.",
         "effects": {
           "estate_trust": 2,
           "imperial_authority": -2,
@@ -161,17 +161,17 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1617-1618",
     "title": "Before the Window",
-    "briefing": "Ferdinand is accepted as Bohemian king before the revolt. The disputed churches and the Letter of Majesty are already live issues. The court can make a narrow legal case for enforcement, but Bohemian Protestants hear something larger: the future king may be testing whether their charter means anything.",
-    "situation": "You can back the stricter line, suspend enforcement for clarification, or let moderates search for a settlement. This is the first true Ferdinand decision in the campaign: not how to answer the Defenestration, but whether to press the policy that helps make it possible.",
-    "historian_note": "Wilson's reading is especially useful here: the Habsburg position was not simply lawless aggression, but its technical legalism was politically dangerous. That is exactly the kind of tradeoff the game should surface.",
+    "briefing": "Ferdinand was accepted as Bohemian king before the revolt, but the kingdom was not quiet. Disputes over Protestant churches at Braunau and Klostergrab, the authority of royal officials, and the meaning of the Letter of Majesty had already made the charter a living political question.",
+    "situation": "A strict line could be defended as obedience to law and protection of Catholic rights. It also made many Bohemian Protestants suspect that the future king intended to reduce their privileges by procedure rather than open revocation. A pause for clarification might preserve obedience, but it would disappoint those who expected a Catholic prince to restore what they considered lost.",
+    "historian_note": "Wilson's reading is especially useful here: the Habsburg position was technically legalistic rather than simply lawless, but its political handling was dangerous. That is the central historical tradeoff for this card.",
     "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_public_letter_of_majesty_1609_cz_wikisource"],
     "causal_claim_ids": ["claim_ferdinand_legalistic_bohemia_escalates", "claim_letter_majesty_bohemian_liberties", "claim_legalism_reassures_estates"],
     "review_status": "needs_review",
     "options": [
       {
         "id": "opt_1617_strict_enforcement",
-        "label": "Confirm the strict legal line and back closures, arrests, and royal judges.",
-        "consequence": "Catholic confidence rises because the crown does not flinch. Bohemian estate trust falls because law now looks like a blade aimed at their charter.",
+        "label": "Confirm the strict legal line and support closures, arrests, and royal judges.",
+        "consequence": "Catholic officials and clergy see that the new king will not retreat from enforcement. Bohemian Protestants see the crown using law to narrow the very charter by which they claim obedience remains possible.",
         "effects": {
           "imperial_authority": 7,
           "confessional_legitimacy": 10,
@@ -184,8 +184,8 @@
       },
       {
         "id": "opt_1617_controlled_clarification",
-        "label": "Suspend disputed-site enforcement and convene a controlled legal clarification.",
-        "consequence": "The estates hear that the charter still has procedure behind it. Catholic allies hear delay where they expected restoration.",
+        "label": "Suspend disputed-site enforcement and call for controlled legal clarification.",
+        "consequence": "The estates can still believe that petition and procedure have force. Catholic allies hear hesitation at the moment when they expected the crown to vindicate its rights.",
         "effects": {
           "estate_trust": 13,
           "foreign_intervention_risk": -5,
@@ -197,8 +197,8 @@
       },
       {
         "id": "opt_1617_klesl_moderation",
-        "label": "Let Klesl and moderates seek a face-saving settlement while preserving royal claims.",
-        "consequence": "A channel remains open, but Ferdinand's harder supporters see the court drifting while Bohemian radicals keep organizing.",
+        "label": "Allow Klesl and moderates to seek settlement while reserving royal claims.",
+        "consequence": "A channel remains open between crown and estates, and neither side must yet confess defeat. Ferdinand's harder supporters see delay, while the more radical Bohemian directors gain time to prepare their own answer.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -3,
