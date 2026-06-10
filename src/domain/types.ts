@@ -1,6 +1,10 @@
 export type ReviewStatus = "draft" | "needs_review" | "reviewed" | "inferred";
 export type Confidence = "low" | "medium" | "high";
 export type EvidenceLayer = "primary" | "scholarly" | "reference";
+export type CounterfactualSourceStatus =
+  | "wilson_direct"
+  | "wilson_inference"
+  | "game_inference";
 export type AccessStatus =
   | "downloaded"
   | "reference_only"
@@ -167,6 +171,8 @@ export interface CardOptionRecord {
   causal_claim_ids: string[];
   historical_option?: boolean;
   memory_tags?: string[];
+  research_tags?: string[];
+  counterfactual_source_status?: CounterfactualSourceStatus;
 }
 
 export interface CardMemoryVariantRecord {

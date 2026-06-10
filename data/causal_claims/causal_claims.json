@@ -9,7 +9,11 @@
     "mechanical_effect": "Narrow enforcement raises imperial_authority or confessional_legitimacy while lowering estate_trust; compromise readings raise estate_trust and lower intervention risk while constraining restoration.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_primary_augsburg_peace_1555_reference_translation"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook",
+      "src_primary_augsburg_peace_1555_reference_translation"
+    ]
   },
   {
     "id": "claim_union_liga_security_dilemma",
@@ -21,7 +25,10 @@
     "mechanical_effect": "League cooperation can raise military_dependence and confessional_legitimacy; legal containment can raise estate_trust but reduce immediate force.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook"
+    ]
   },
   {
     "id": "claim_ferdinand_legalistic_bohemia_escalates",
@@ -33,7 +40,11 @@
     "mechanical_effect": "Strict enforcement raises confessional_legitimacy and imperial_authority, but lowers estate_trust and raises foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_public_letter_of_majesty_1609_cz_wikisource"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook",
+      "src_public_letter_of_majesty_1609_cz_wikisource"
+    ]
   },
   {
     "id": "claim_bavarian_help_leverage",
@@ -45,7 +56,11 @@
     "mechanical_effect": "Increase military_dependence; often increase imperial_authority or dynastic_security while creating later costs.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_vales_munich_treaty_1619", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+    "source_refs": [
+      "src_vales_munich_treaty_1619",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ]
   },
   {
     "id": "claim_munich_treaty_restricts_ferdinand_policy",
@@ -57,7 +72,10 @@
     "mechanical_effect": "Raise dynastic_security and military_dependence; lower fiscal_capacity and estate_trust; make later peace or Palatine settlement choices more constrained.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen"]
+    "source_refs": [
+      "src_vales_munich_treaty_1619",
+      "src_burgdorf_wahlkapitulationen"
+    ]
   },
   {
     "id": "claim_harsh_bohemian_punishment_alarm",
@@ -69,7 +87,10 @@
     "mechanical_effect": "Raise dynastic_security and confessional_legitimacy; lower estate_trust; raise foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ]
   },
   {
     "id": "claim_legalism_reassures_estates",
@@ -81,7 +102,11 @@
     "mechanical_effect": "Raise estate_trust; lower foreign_intervention_risk; sometimes lower confessional_legitimacy or imperial_authority.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_burgdorf_wahlkapitulationen", "src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"]
+    "source_refs": [
+      "src_burgdorf_wahlkapitulationen",
+      "src_primary_apologia_1618_bsb11213319",
+      "src_primary_augsburg_peace_1555_reference_translation"
+    ]
   },
   {
     "id": "claim_letter_majesty_bohemian_liberties",
@@ -93,7 +118,9 @@
     "mechanical_effect": "Acknowledgment raises estate_trust and lowers foreign_intervention_risk while lowering confessional_legitimacy or slowing dynastic consolidation; rejection raises imperial_authority and confessional_legitimacy while lowering estate_trust.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_letter_of_majesty_1609_cz_wikisource"]
+    "source_refs": [
+      "src_public_letter_of_majesty_1609_cz_wikisource"
+    ]
   },
   {
     "id": "claim_wahlkapitulation_limits_imperial_freedom",
@@ -105,7 +132,9 @@
     "mechanical_effect": "Legal consultation raises estate_trust and can lower foreign_intervention_risk; bypassing consultation can raise imperial_authority or military_capacity in the short term while lowering estate_trust.",
     "confidence": "high",
     "review_status": "needs_review",
-    "source_refs": ["src_burgdorf_wahlkapitulationen"]
+    "source_refs": [
+      "src_burgdorf_wahlkapitulationen"
+    ]
   },
   {
     "id": "claim_frankfurt_coronation_oath_legitimacy",
@@ -117,7 +146,10 @@
     "mechanical_effect": "Raise imperial_authority and dynastic_security; legal reassurance options raise estate_trust, while using the crown as pure command lowers estate_trust and can raise foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_relation_ferdinand_election_coronation_1620", "src_burgdorf_wahlkapitulationen"]
+    "source_refs": [
+      "src_public_relation_ferdinand_election_coronation_1620",
+      "src_burgdorf_wahlkapitulationen"
+    ]
   },
   {
     "id": "claim_spanish_corridor_widens_war",
@@ -129,7 +161,11 @@
     "mechanical_effect": "Raise dynastic_security and fiscal_capacity; raise foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_parker_thirty_years_war"]
+    "source_refs": [
+      "src_burgdorf_wahlkapitulationen",
+      "src_wilson_europes_tragedy",
+      "src_parker_thirty_years_war"
+    ]
   },
   {
     "id": "claim_army_finance_devastation",
@@ -141,7 +177,10 @@
     "mechanical_effect": "Raise imperial_authority or dynastic_security; lower fiscal_capacity; raise devastation.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_parker_thirty_years_war"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_parker_thirty_years_war"
+    ]
   },
   {
     "id": "claim_palatinate_electorate_overreach",
@@ -153,7 +192,12 @@
     "mechanical_effect": "Raise confessional_legitimacy and military_dependence; lower estate_trust; raise foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_vales_munich_treaty_1619", "src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"]
+    "source_refs": [
+      "src_vales_munich_treaty_1619",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war",
+      "src_parker_thirty_years_war"
+    ]
   },
   {
     "id": "claim_bohemian_rejection_legitimacy_crisis",
@@ -165,7 +209,11 @@
     "mechanical_effect": "Legal answers raise estate_trust and may lower confessional_legitimacy; coercive answers raise imperial_authority and dynastic_security while increasing foreign_intervention_risk.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_bohemian_reasons_reject_ferdinand_1619", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+    "source_refs": [
+      "src_public_bohemian_reasons_reject_ferdinand_1619",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ]
   },
   {
     "id": "claim_reichsacht_isolates_frederick",
@@ -177,7 +225,10 @@
     "mechanical_effect": "Raise imperial_authority and dynastic_security; lower estate_trust; raise foreign_intervention_risk if paired with broad enforcement or territorial transfer.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_reichsacht_frederick_1621", "src_burgdorf_wahlkapitulationen"]
+    "source_refs": [
+      "src_public_reichsacht_frederick_1621",
+      "src_burgdorf_wahlkapitulationen"
+    ]
   },
   {
     "id": "claim_restitution_edict_overreach",
@@ -189,6 +240,106 @@
     "mechanical_effect": "Raise imperial_authority and confessional_legitimacy; lower estate_trust; raise foreign_intervention_risk; may increase devastation if enforced through military occupation.",
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_restitutionsedikt_1629"]
+    "source_refs": [
+      "src_public_restitutionsedikt_1629"
+    ]
+  },
+  {
+    "id": "claim_klesl_removal_militarizes_bohemian_response",
+    "historical_fact": "Klesl was removed from power in July 1618 after pursuing conciliatory offers during the Bohemian revolt.",
+    "source_backed_interpretation": "Wilson presents Klesl as the principal high-level mediator whose removal cleared space for a more forceful Habsburg response, while noting that rebels had already rejected generous terms.",
+    "causal_claim": "Removing Klesl reduces negotiation capacity and strengthens court control, but pushes the crisis toward military solution.",
+    "game_abstraction": "A moderating adviser can be retained, sidelined, or removed; each choice changes later mediation and hardline pressure.",
+    "player_facing_text": "With Klesl gone, Vienna gains a freer hand but loses the man most associated with settlement.",
+    "mechanical_effect": "Adds Klesl state tags, alters mediation cards, and changes estate trust, fiscal capacity, and dynastic security.",
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_mediation_channel_preserves_compromise_path",
+    "historical_fact": "Wilson notes that conciliatory offers existed after the revolt but were rejected, while force was already being considered.",
+    "source_backed_interpretation": "A retained mediation channel could plausibly keep settlement language alive, but Wilson does not claim it would have prevented war.",
+    "causal_claim": "Keeping mediation alive lowers immediate escalation but strains Catholic hardliners and does not guarantee rebel demobilization.",
+    "game_abstraction": "A mediation branch can delay or soften later cards without erasing the crisis.",
+    "player_facing_text": "Negotiation remains possible, but neither Prague nor Vienna trusts the other enough to disarm easily.",
+    "mechanical_effect": "Can suppress the Stormy Petition card and add a mediation card; lowers foreign intervention risk while reducing confessional legitimacy.",
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_stormy_petition_split_estates",
+    "historical_fact": "During the Stormy Petition crisis, Ferdinand held firm and later split Lower Austrian Protestant opposition through individual privilege protection tied to homage.",
+    "source_backed_interpretation": "Wilson treats the moment as a dynastic danger that became an opportunity to expose radicals and separate moderates.",
+    "causal_claim": "Firmness can preserve dynastic authority, while concessions can protect estate trust but encourage wider corporate pressure.",
+    "game_abstraction": "Lower Austrian pressure creates a branching choice between authority, selective reassurance, and broad concession.",
+    "player_facing_text": "The petitioners withdraw, but the question of who may demand guarantees from the ruler has not disappeared.",
+    "mechanical_effect": "Changes estate trust, dynastic security, and later Protestant coordination tags.",
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_saxon_union_neutrality_isolates_bohemia",
+    "historical_fact": "Ferdinand commissioned Saxony in Lusatia with Lutheran safeguards while a July 1620 Union-Liga truce left Maximilian free to move into Bohemia.",
+    "source_backed_interpretation": "Wilson gives major causal weight to Saxon cooperation and Union neutrality in isolating Bohemia before White Mountain.",
+    "causal_claim": "Legal reassurance to Lutheran Saxony lowers Protestant unity and isolates Bohemia; a purely Catholic/Bavarian campaign risks broader Protestant alarm.",
+    "game_abstraction": "Saxony and Union status should condition the White Mountain path and later Lutheran trust.",
+    "player_facing_text": "Saxony acts under legal cover, and Frederick's expected Protestant rescue remains divided.",
+    "mechanical_effect": "Adds Saxony and Union memory tags and changes foreign intervention risk, estate trust, and military dependence.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_direct_prague_march_creates_decisive_collapse",
+    "historical_fact": "Ferdinand accepted the direct Prague strategy associated with Tilly and Maximilian rather than Bucquoy's slower Moravian preference.",
+    "source_backed_interpretation": "Wilson emphasizes that White Mountain became decisive because the field defeat triggered political and morale collapse.",
+    "causal_claim": "Marching on Prague increases the chance of decisive victory but raises operational risk and Bavarian influence.",
+    "game_abstraction": "The campaign path can change whether White Mountain happens as a swift decision or becomes a prolonged war.",
+    "player_facing_text": "The army turns toward Prague, where a military victory may become a political collapse.",
+    "mechanical_effect": "Adds White Mountain path tags and changes military dependence, devastation, and dynastic security.",
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_blood_court_alienates_bohemia",
+    "historical_fact": "After the Prague Blood Court, Ferdinand signed twenty-eight death warrants; twenty-seven men were executed.",
+    "source_backed_interpretation": "Wilson says the executions were understandable within Ferdinand's rebellion framework but unnecessary and a mistake.",
+    "causal_claim": "Executing rebel leaders creates deterrence and hardline satisfaction but turns victory into lasting martyr memory and exile hatred.",
+    "game_abstraction": "Punishment can deter, reconcile, or radicalize defeated elites depending on severity.",
+    "player_facing_text": "Prague is made to witness obedience, but fear does not become reconciliation.",
+    "mechanical_effect": "Adds punishment state tags and changes estate trust, confessional legitimacy, dynastic security, and foreign intervention risk.",
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_palatine_settlement_opening_constrained_by_bavaria",
+    "historical_fact": "Wilson describes Regensburg, Liga meetings, and peace talks sponsored by James and Isabella after the Palatine victories, while Mansfeld and Christian of Brunswick remained in the field.",
+    "source_backed_interpretation": "Ferdinand was prepared to be magnanimous toward some opponents, but the Palatine title, mercenary armies, Frederick's stance, and Bavarian expectations kept settlement unstable.",
+    "causal_claim": "A conditional Palatine settlement can reduce foreign grievance but threatens Bavarian compensation and may leave armed exile networks unresolved.",
+    "game_abstraction": "The Palatine question becomes a settlement branch rather than a second ban card.",
+    "player_facing_text": "The Palatinate is beaten, but men still ride in Frederick's name and every settlement names a disappointed claimant.",
+    "mechanical_effect": "Adds Palatine policy tags and changes later electoral-transfer wording.",
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

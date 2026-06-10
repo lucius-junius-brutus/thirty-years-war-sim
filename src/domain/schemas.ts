@@ -13,6 +13,11 @@ const reviewStatusSchema = z.enum([
 ]);
 const confidenceSchema = z.enum(["low", "medium", "high"]);
 const evidenceLayerSchema = z.enum(["primary", "scholarly", "reference"]);
+const counterfactualSourceStatusSchema = z.enum([
+  "wilson_direct",
+  "wilson_inference",
+  "game_inference",
+]);
 const accessStatusSchema = z.enum([
   "downloaded",
   "reference_only",
@@ -186,6 +191,8 @@ const cardOptionRecordSchema = z.object({
   causal_claim_ids: z.array(z.string().min(1)).min(1),
   historical_option: z.boolean().optional(),
   memory_tags: z.array(z.string().min(1)).optional(),
+  research_tags: z.array(z.string().min(1)).optional(),
+  counterfactual_source_status: counterfactualSourceStatusSchema.optional(),
 });
 
 const cardMemoryVariantRecordSchema = z.object({
@@ -314,6 +321,17 @@ export function validateGameDatabase(database: unknown): GameDatabase {
       }
     });
     card.options.forEach((option) => {
+      if (option.historical_option !== true) {
+        if (
+          !option.counterfactual_source_status ||
+          !option.research_tags ||
+          option.research_tags.length === 0
+        ) {
+          throw new Error(
+            `Option ${option.id} is missing backend counterfactual tracking`,
+          );
+        }
+      }
       option.causal_claim_ids.forEach((claimId) => {
         if (!causalClaimIds.has(claimId)) {
           throw new Error(

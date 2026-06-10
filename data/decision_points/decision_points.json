@@ -16,10 +16,17 @@
       "Avoid clarifying the gaps and let local rulers, courts, and estates keep testing them"
     ],
     "stakes": "How the player understands the Empire before Prague: as a confessional settlement to enforce, a constitutional compromise to preserve, or an ambiguity that has been deferred too long.",
-    "causal_claim_ids": ["claim_augsburg_ambiguities_fault_lines", "claim_legalism_reassures_estates"],
+    "causal_claim_ids": [
+      "claim_augsburg_ambiguities_fault_lines",
+      "claim_legalism_reassures_estates"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_primary_augsburg_peace_1555_reference_translation"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook",
+      "src_primary_augsburg_peace_1555_reference_translation"
+    ]
   },
   {
     "id": "dp_1608_security_blocs",
@@ -38,10 +45,16 @@
       "Lean into Catholic organization as the only reliable answer to Protestant coordination"
     ],
     "stakes": "Whether defensive organization reassures frightened estates or creates ready-made machinery for a wider war.",
-    "causal_claim_ids": ["claim_union_liga_security_dilemma", "claim_legalism_reassures_estates"],
+    "causal_claim_ids": [
+      "claim_union_liga_security_dilemma",
+      "claim_legalism_reassures_estates"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook"
+    ]
   },
   {
     "id": "dp_1609_letter_majesty_inheritance",
@@ -60,10 +73,17 @@
       "Delay clarification and hope the ambiguity remains manageable"
     ],
     "stakes": "Whether Bohemia's religious settlement remains a bridge between crown and estates or becomes the proof text for rebellion.",
-    "causal_claim_ids": ["claim_letter_majesty_bohemian_liberties", "claim_ferdinand_legalistic_bohemia_escalates"],
+    "causal_claim_ids": [
+      "claim_letter_majesty_bohemian_liberties",
+      "claim_ferdinand_legalistic_bohemia_escalates"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_wilson_sourcebook"]
+    "source_refs": [
+      "src_public_letter_of_majesty_1609_cz_wikisource",
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook"
+    ]
   },
   {
     "id": "dp_1617_bohemian_crown_enforcement",
@@ -83,10 +103,18 @@
       "Let Klesl and moderates explore a face-saving settlement while preserving royal claims"
     ],
     "stakes": "Whether Ferdinand enters the Bohemian crisis with Catholic confidence and collapsing estate trust, or with more room for compromise but less hardline support.",
-    "causal_claim_ids": ["claim_ferdinand_legalistic_bohemia_escalates", "claim_letter_majesty_bohemian_liberties", "claim_legalism_reassures_estates"],
+    "causal_claim_ids": [
+      "claim_ferdinand_legalistic_bohemia_escalates",
+      "claim_letter_majesty_bohemian_liberties",
+      "claim_legalism_reassures_estates"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_wilson_europes_tragedy", "src_wilson_sourcebook", "src_public_letter_of_majesty_1609_cz_wikisource"]
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_wilson_sourcebook",
+      "src_public_letter_of_majesty_1609_cz_wikisource"
+    ]
   },
   {
     "id": "dp_1618_defenestration_response",
@@ -105,10 +133,18 @@
       "Negotiated confirmation of selected Letter-of-Majesty protections"
     ],
     "stakes": "Whether the crisis remains Bohemian or becomes an imperial alarm bell about the safety of estate liberties.",
-    "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_harsh_bohemian_punishment_alarm", "claim_letter_majesty_bohemian_liberties"],
+    "causal_claim_ids": [
+      "claim_legalism_reassures_estates",
+      "claim_harsh_bohemian_punishment_alarm",
+      "claim_letter_majesty_bohemian_liberties"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_primary_augsburg_peace_1555_reference_translation", "src_primary_apologia_1618_bsb11213319", "src_public_letter_of_majesty_1609_cz_wikisource"]
+    "source_refs": [
+      "src_primary_augsburg_peace_1555_reference_translation",
+      "src_primary_apologia_1618_bsb11213319",
+      "src_public_letter_of_majesty_1609_cz_wikisource"
+    ]
   },
   {
     "id": "dp_1619_frankfurt_coronation_crisis",
@@ -129,10 +165,18 @@
       "Keep the imperial ceremony separate from the Bohemian dispute and avoid making the revolt a test of the new crown"
     ],
     "stakes": "Whether the new imperial crown becomes a stabilizing source of law-bound authority or a symbol that Ferdinand will use imperial office to overwhelm contested estate liberties.",
-    "causal_claim_ids": ["claim_frankfurt_coronation_oath_legitimacy", "claim_bohemian_rejection_legitimacy_crisis", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "causal_claim_ids": [
+      "claim_frankfurt_coronation_oath_legitimacy",
+      "claim_bohemian_rejection_legitimacy_crisis",
+      "claim_wahlkapitulation_limits_imperial_freedom"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_relation_ferdinand_election_coronation_1620", "src_burgdorf_wahlkapitulationen", "src_public_bohemian_reasons_reject_ferdinand_1619"]
+    "source_refs": [
+      "src_public_relation_ferdinand_election_coronation_1620",
+      "src_burgdorf_wahlkapitulationen",
+      "src_public_bohemian_reasons_reject_ferdinand_1619"
+    ]
   },
   {
     "id": "dp_1620_bavarian_assistance",
@@ -154,10 +198,19 @@
       "Reject the separate-peace limits and delay while building a more independent imperial force"
     ],
     "stakes": "Victory may come at the price of Bavarian leverage over command, compensation, and peace policy.",
-    "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "causal_claim_ids": [
+      "claim_bavarian_help_leverage",
+      "claim_munich_treaty_restricts_ferdinand_policy",
+      "claim_wahlkapitulation_limits_imperial_freedom"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+    "source_refs": [
+      "src_vales_munich_treaty_1619",
+      "src_burgdorf_wahlkapitulationen",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ]
   },
   {
     "id": "dp_1623_electoral_transfer",
@@ -179,10 +232,21 @@
       "Punish Frederick while preserving the electoral balance for now"
     ],
     "stakes": "The reward that secures Bavaria can also teach every elector that defeat may rewrite the constitutional order.",
-    "causal_claim_ids": ["claim_palatinate_electorate_overreach", "claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "causal_claim_ids": [
+      "claim_palatinate_electorate_overreach",
+      "claim_bavarian_help_leverage",
+      "claim_munich_treaty_restricts_ferdinand_policy",
+      "claim_wahlkapitulation_limits_imperial_freedom"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"]
+    "source_refs": [
+      "src_vales_munich_treaty_1619",
+      "src_burgdorf_wahlkapitulationen",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war",
+      "src_parker_thirty_years_war"
+    ]
   },
   {
     "id": "dp_1619_bohemian_rejection_legitimacy",
@@ -202,10 +266,19 @@
       "Denounce the Letter-of-Majesty argument as treasonous cover and rally Catholic allies"
     ],
     "stakes": "Whether Ferdinand can make the conflict look like a lawful restoration of order rather than a dynastic-confessional conquest.",
-    "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"],
+    "causal_claim_ids": [
+      "claim_bohemian_rejection_legitimacy_crisis",
+      "claim_legalism_reassures_estates",
+      "claim_letter_majesty_bohemian_liberties"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_bohemian_reasons_reject_ferdinand_1619", "src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+    "source_refs": [
+      "src_public_bohemian_reasons_reject_ferdinand_1619",
+      "src_public_letter_of_majesty_1609_cz_wikisource",
+      "src_wilson_europes_tragedy",
+      "src_asch_thirty_years_war"
+    ]
   },
   {
     "id": "dp_1621_reichsacht_frederick",
@@ -227,10 +300,17 @@
       "Aim the ban at Frederick while publicly reassuring neutral estates and Palatine subjects"
     ],
     "stakes": "Whether Ferdinand converts victory into lawful isolation of Frederick or into a precedent that makes imperial punishment look open-ended.",
-    "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "causal_claim_ids": [
+      "claim_reichsacht_isolates_frederick",
+      "claim_legalism_reassures_estates",
+      "claim_wahlkapitulation_limits_imperial_freedom"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_reichsacht_frederick_1621", "src_burgdorf_wahlkapitulationen"]
+    "source_refs": [
+      "src_public_reichsacht_frederick_1621",
+      "src_burgdorf_wahlkapitulationen"
+    ]
   },
   {
     "id": "dp_1629_restitution_edict",
@@ -251,9 +331,166 @@
       "Trade partial restitution concessions for a broader imperial peace"
     ],
     "stakes": "Whether Ferdinand converts military success into a legal-confessional settlement, or creates the impression that imperial law now means unlimited Habsburg-Catholic enforcement.",
-    "causal_claim_ids": ["claim_restitution_edict_overreach", "claim_legalism_reassures_estates"],
+    "causal_claim_ids": [
+      "claim_restitution_edict_overreach",
+      "claim_legalism_reassures_estates"
+    ],
     "confidence": "medium",
     "review_status": "needs_review",
-    "source_refs": ["src_public_restitutionsedikt_1629"]
+    "source_refs": [
+      "src_public_restitutionsedikt_1629"
+    ]
+  },
+  {
+    "id": "dp_1618_remove_klesl",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "July 1618",
+    "situation": "Klesl remains the most visible advocate of negotiated settlement after Prague, while Ferdinand and harder Habsburg advisers see him as an obstacle to decisive action.",
+    "known_constraints": [
+      "The Bohemian directors have already armed and rejected generous offers.",
+      "The Habsburg court lacks money and reliable military force.",
+      "Removing Klesl strengthens Ferdinand's freedom of action but weakens a settlement channel."
+    ],
+    "plausible_options": [
+      "Keep Klesl negotiating and insist that the rebels disarm before concessions deepen",
+      "Remove Klesl decisively and prepare the court for a military answer",
+      "Sideline Klesl publicly while using his contacts to keep a last channel open"
+    ],
+    "stakes": "The choice determines whether the next phase still has a credible mediation channel or moves quickly toward hardline mobilization.",
+    "causal_claim_ids": [
+      "claim_klesl_removal_militarizes_bohemian_response",
+      "claim_mediation_channel_preserves_compromise_path"
+    ],
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1619_stormy_petition",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "June 1619",
+    "situation": "Thurn approaches Vienna while Lower Austrian Protestants press Ferdinand for guarantees at a moment of dynastic danger.",
+    "known_constraints": [
+      "Ferdinand's military support is uncertain until loyal cavalry arrive.",
+      "Corporate concessions could embolden Bohemia and other estates.",
+      "Selective reassurance can split moderates from radicals but does not resolve the wider revolt."
+    ],
+    "plausible_options": [
+      "Hold firm and wait out the petitioners",
+      "Confirm individual noble privileges in exchange for homage",
+      "Grant a broader corporate guarantee to calm Lower Austria"
+    ],
+    "stakes": "The Lower Austrian crisis can either reinforce Ferdinand's authority or show other estates that pressure works.",
+    "causal_claim_ids": [
+      "claim_stormy_petition_split_estates"
+    ],
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1620_saxon_union_neutrality",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1620",
+    "situation": "Ferdinand needs to isolate Frederick without turning Bohemia into a united Protestant imperial war.",
+    "known_constraints": [
+      "Saxony will not act as a Catholic client but may act under constitutional and Lutheran safeguards.",
+      "The Union is divided and wary of Palatine leadership.",
+      "Maximilian can move only if the wider Protestant front stays neutral or divided."
+    ],
+    "plausible_options": [
+      "Reassure Saxony with Lutheran safeguards and legal commission",
+      "Offer wider guarantees to keep the Union neutral",
+      "Press ahead with Bavaria and Spain without major Protestant reassurance"
+    ],
+    "stakes": "Saxon and Union behavior decides whether Bohemia is isolated before the decisive campaign.",
+    "causal_claim_ids": [
+      "claim_saxon_union_neutrality_isolates_bohemia"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1620_direct_march_prague",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "Autumn 1620",
+    "situation": "The allied commanders must decide whether to press directly toward Prague or take a slower Moravian approach.",
+    "known_constraints": [
+      "A direct march may force a political decision before winter.",
+      "Prague could be difficult to besiege if the army stalls.",
+      "Following Tilly and Maximilian increases Bavarian operational leverage."
+    ],
+    "plausible_options": [
+      "Follow the direct march on Prague",
+      "Take Bucquoy's slower Moravian approach",
+      "Pause for winter and consolidate allied positions"
+    ],
+    "stakes": "The campaign path affects whether White Mountain becomes a rapid political collapse or a longer war.",
+    "causal_claim_ids": [
+      "claim_direct_prague_march_creates_decisive_collapse"
+    ],
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1621_blood_court",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "May-June 1621",
+    "situation": "The Prague Blood Court has sentenced leading rebels, and Ferdinand must decide how much blood his victory requires.",
+    "known_constraints": [
+      "The rebellion framework makes harsh punishment legally intelligible.",
+      "Some advisers oppose the death sentences.",
+      "Confiscation and officeholding changes can punish rebels without so many executions."
+    ],
+    "plausible_options": [
+      "Sign the exemplary death warrants",
+      "Commute most sentences and reserve death for the most prominent cases",
+      "Use public humiliation, exile, and confiscation instead of executions"
+    ],
+    "stakes": "The punishment settlement shapes whether Prague remembers order restored or martyrs made.",
+    "causal_claim_ids": [
+      "claim_blood_court_alienates_bohemia"
+    ],
+    "confidence": "high",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dp_1622_palatine_settlement",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1622-1623",
+    "situation": "The Palatinate is militarily broken, but Mansfeld, Christian of Brunswick, English mediation, Spanish interests, and Bavarian compensation demands keep the settlement unstable.",
+    "known_constraints": [
+      "Frederick's punishment cannot be separated easily from Maximilian's reward.",
+      "Mansfeld and Christian of Brunswick can continue war even after Palatine defeats.",
+      "Magnanimity toward some opponents may reduce grievance but disappoint loyal allies."
+    ],
+    "plausible_options": [
+      "Offer conditional restoration if Frederick renounces Bohemia and commanders disband",
+      "Keep the ban and pursue military settlement",
+      "Separate Frederick's punishment from amnesty for lesser Palatine supporters",
+      "Use Spanish and Bavarian pressure to force a Habsburg-favorable settlement"
+    ],
+    "stakes": "The Palatine settlement determines whether the war narrows after victory or leaves a grievance ready for foreign patrons.",
+    "causal_claim_ids": [
+      "claim_palatine_settlement_opening_constrained_by_bavaria"
+    ],
+    "confidence": "medium",
+    "review_status": "inferred",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]
