@@ -180,7 +180,7 @@ describe("game engine", () => {
     expect(notes.join(" ")).not.toMatch(/estate_trust|imperial_authority/i);
   });
 
-  it("composes the aftermath as integrated prose while retaining backend notes", () => {
+  it("keeps aftermath consequences as attached bullets while retaining backend notes", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const card = getCurrentCard(gameDatabase, state)!;
     const next = chooseOption(
@@ -192,12 +192,18 @@ describe("game engine", () => {
     const entry = next.log.at(-1)!;
 
     expect(entry.aftermath).toContain("The court appears as guardian");
-    expect(entry.aftermath).toMatch(/Moderate estates|Doubtful estates|Petitioners/i);
     expect(entry.aftermath).not.toMatch(/Consequences carried forward|[+-]\d/);
+    expect(entry.aftermath_bullets.length).toBeGreaterThanOrEqual(3);
+    expect(entry.aftermath_bullets.join(" ")).toMatch(
+      /Moderate estates|Doubtful estates|Petitioners/i,
+    );
+    expect(entry.aftermath_bullets.join(" ")).not.toMatch(
+      /Consequences carried forward|[+-]\d|estate_trust|imperial_authority/i,
+    );
     expect(entry.impact_notes.length).toBeGreaterThan(0);
   });
 
-  it("folds consequence notes into a flowing paragraph instead of stacking short sentences", () => {
+  it("keeps the main aftermath paragraph from repeating the attached bullets", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const card = getCurrentCard(gameDatabase, state)!;
     const next = chooseOption(
@@ -206,14 +212,17 @@ describe("game engine", () => {
       card.id,
       "opt_augsburg_compromise_inheritance",
     );
-    const aftermath = next.log.at(-1)!.aftermath;
+    const entry = next.log.at(-1)!;
+    const aftermath = entry.aftermath;
     const sentenceCount = aftermath
       .split(/[.!?]\s+/)
       .filter((sentence) => sentence.trim().length > 0).length;
 
-    expect(sentenceCount).toBeLessThanOrEqual(3);
-    expect(aftermath).toMatch(/while|;| and /i);
+    expect(sentenceCount).toBeLessThanOrEqual(2);
     expect(aftermath).not.toMatch(/submission\. Catholic reformers/i);
+    entry.aftermath_bullets.forEach((bullet) => {
+      expect(aftermath).not.toContain(bullet);
+    });
   });
 
   it("varies consequence prose across different choices with similar effects", () => {
@@ -267,8 +276,8 @@ describe("game engine", () => {
     expect(afterFirst.log.at(-1)?.impact_notes.join(" ")).not.toBe(
       afterSecond.log.at(-1)?.impact_notes.join(" "),
     );
-    expect(afterFirst.log.at(-1)?.aftermath).not.toBe(
-      afterSecond.log.at(-1)?.aftermath,
+    expect(afterFirst.log.at(-1)?.aftermath_bullets.join(" ")).not.toBe(
+      afterSecond.log.at(-1)?.aftermath_bullets.join(" "),
     );
   });
 

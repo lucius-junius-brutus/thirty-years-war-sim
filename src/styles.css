@@ -541,6 +541,17 @@ h1 {
   line-height: 1.55;
 }
 
+.aftermath-bullets {
+  margin: 14px 0 0;
+  padding-left: 22px;
+  color: #eadfc3;
+  line-height: 1.45;
+}
+
+.aftermath-bullets li + li {
+  margin-top: 7px;
+}
+
 .outcome-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;

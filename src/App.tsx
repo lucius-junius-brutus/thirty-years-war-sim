@@ -447,6 +447,13 @@ function AftermathPanel({
       <div className="panel-title">Aftermath</div>
       <strong>{entry.choice}</strong>
       <p>{entry.aftermath ?? entry.consequence}</p>
+      {entry.aftermath_bullets?.length ? (
+        <ul className="aftermath-bullets">
+          {entry.aftermath_bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      ) : null}
       <button className="choice-button continue-button" type="button" onClick={onContinue}>
         <span>Continue</span>
         Proceed to the next decision

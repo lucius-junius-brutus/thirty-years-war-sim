@@ -15,6 +15,7 @@ export interface GameLogEntry {
   choice: string;
   consequence: string;
   aftermath: string;
+  aftermath_bullets: string[];
   impact_notes: string[];
   docket_changes: DocketChange[];
   causal_claim_ids: string[];
@@ -163,6 +164,7 @@ export function chooseOption(
   const cards = getCardsForRole(database, nextState);
   const impactNotes = describeImmediateEffects(option);
   const docketChanges = getDocketChanges(previousCards, cards, currentCard.id);
+  const aftermathBullets = composeAftermathBullets(impactNotes, docketChanges);
 
   return {
     ...state,
@@ -179,7 +181,8 @@ export function chooseOption(
         title: currentCard.title,
         choice: option.label,
         consequence: option.consequence,
-        aftermath: composeAftermath(option.consequence, impactNotes, docketChanges),
+        aftermath: option.consequence,
+        aftermath_bullets: aftermathBullets,
         impact_notes: impactNotes,
         docket_changes: docketChanges,
         causal_claim_ids: option.causal_claim_ids,
@@ -393,78 +396,42 @@ function describeImmediateEffects(option: CardOptionRecord) {
   return [...new Set([...tagNotes, ...pressureNotes])].slice(0, 4);
 }
 
-function composeAftermath(
-  consequence: string,
+function composeAftermathBullets(
   impactNotes: string[],
   docketChanges: DocketChange[],
 ) {
-  const impactSentence = composeImpactSentence(impactNotes);
-  const docketSentence = describeDocketChanges(docketChanges);
-  const additions = [impactSentence, docketSentence].filter(Boolean);
-
-  if (additions.length === 0) {
-    return consequence;
-  }
-
-  return [consequence, ...additions].join(" ");
+  return [
+    ...impactNotes.slice(0, 3),
+    ...describeDocketChangeBullets(docketChanges),
+  ].slice(0, 4);
 }
 
-function composeImpactSentence(impactNotes: string[]) {
-  const clauses = impactNotes.slice(0, 3).map(toClause).filter(Boolean);
-
-  if (clauses.length === 0) {
-    return "";
-  }
-  if (clauses.length === 1) {
-    return `${clauses[0]}.`;
-  }
-  if (clauses.length === 2) {
-    return `${clauses[0]}, while ${lowercaseFirst(clauses[1])}.`;
-  }
-
-  return `${clauses[0]}, while ${lowercaseFirst(clauses[1])}; ${lowercaseFirst(
-    clauses[2],
-  )}.`;
-}
-
-function toClause(sentence: string) {
-  return sentence.trim().replace(/[.!?]+$/, "");
-}
-
-function lowercaseFirst(value: string) {
-  return value.length === 0 ? value : `${value[0].toLowerCase()}${value.slice(1)}`;
-}
-
-function describeDocketChanges(changes: DocketChange[]) {
-  if (changes.length === 0) {
-    return "";
-  }
-
+function describeDocketChangeBullets(changes: DocketChange[]) {
   const added = changes.filter((change) => change.kind === "added");
   const removed = changes.filter((change) => change.kind === "removed");
-  const sentences: string[] = [];
+  const bullets: string[] = [];
 
   if (added.length === 1) {
-    sentences.push(
+    bullets.push(
       `A new paper now reaches the council: ${added[0].date_label}, ${added[0].title}.`,
     );
   } else if (added.length > 1) {
-    sentences.push(
+    bullets.push(
       `New papers now reach the council, beginning with ${added[0].date_label}, ${added[0].title}.`,
     );
   }
 
   if (removed.length === 1) {
-    sentences.push(
+    bullets.push(
       `${removed[0].date_label}, ${removed[0].title}, no longer comes forward in the same form.`,
     );
   } else if (removed.length > 1) {
-    sentences.push(
+    bullets.push(
       `Several expected papers fall away from the docket, including ${removed[0].date_label}, ${removed[0].title}.`,
     );
   }
 
-  return sentences.join(" ");
+  return bullets;
 }
 
 function describeMemoryTags(tags: string[] = [], seed: string) {
