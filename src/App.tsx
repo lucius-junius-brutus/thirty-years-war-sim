@@ -74,7 +74,7 @@ function App() {
         </button>
         <img
           className="seal"
-          src="/assets/imperial-seal.svg"
+          src={`${import.meta.env.BASE_URL}assets/imperial-seal.svg`}
           alt="Imperial chancery seal"
         />
         <p className="eyebrow">A Thirty Years' War Political Simulator</p>
