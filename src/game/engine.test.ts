@@ -163,6 +163,23 @@ describe("game engine", () => {
     });
   });
 
+  it("turns pressure movement into historical aftermath notes without exposing numbers", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const card = getCurrentCard(gameDatabase, state)!;
+    const next = chooseOption(
+      gameDatabase,
+      state,
+      card.id,
+      "opt_augsburg_compromise_inheritance",
+    );
+    const notes = next.log.at(-1)?.impact_notes ?? [];
+
+    expect(notes.length).toBeGreaterThanOrEqual(3);
+    expect(notes.join(" ")).toMatch(/Moderate estates gain room/i);
+    expect(notes.join(" ")).not.toMatch(/[+-]\d/);
+    expect(notes.join(" ")).not.toMatch(/estate_trust|imperial_authority/i);
+  });
+
   it("carries prior choices into later dispatch wording", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const firstCard = getCurrentCard(gameDatabase, state)!;
@@ -285,6 +302,27 @@ describe("game engine", () => {
     expect(
       getCardsForRole(gameDatabase, afterRemovingKlesl).map((card) => card.id),
     ).toContain("card_1619_stormy_petition");
+  });
+
+  it("records when a choice adds later dispatches to the docket", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const kleslCardIndex = getCardsForRole(gameDatabase, state).findIndex(
+      (card) => card.id === "card_1618_remove_klesl",
+    );
+    const kleslCard = getCardsForRole(gameDatabase, state)[kleslCardIndex];
+    const afterRetainingKlesl = chooseOption(
+      gameDatabase,
+      { ...state, cardIndex: kleslCardIndex },
+      kleslCard.id,
+      "opt_keep_klesl_negotiating",
+    );
+
+    expect(afterRetainingKlesl.log.at(-1)?.docket_changes).toContainEqual(
+      expect.objectContaining({
+        kind: "added",
+        title: "Terms Carried Between Courts",
+      }),
+    );
   });
 
   it("lets pressure levels open or close later options", () => {

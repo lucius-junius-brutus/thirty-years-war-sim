@@ -14,9 +14,17 @@ export interface GameLogEntry {
   title: string;
   choice: string;
   consequence: string;
+  impact_notes: string[];
+  docket_changes: DocketChange[];
   causal_claim_ids: string[];
   pressure_delta: Partial<PressureMap>;
   memory_tags_added?: string[];
+}
+
+export interface DocketChange {
+  kind: "added" | "removed";
+  title: string;
+  date_label: string;
 }
 
 export interface GameState {
@@ -143,6 +151,7 @@ export function chooseOption(
 
   const pressures = applyEffects(state.pressures, option.effects);
   const memoryTags = mergeMemoryTags(state.memory_tags, option.memory_tags);
+  const previousCards = getCardsForRole(database, state);
   const nextIndex = state.cardIndex + 1;
   const nextState = {
     ...state,
@@ -167,6 +176,8 @@ export function chooseOption(
         title: currentCard.title,
         choice: option.label,
         consequence: option.consequence,
+        impact_notes: describeImmediateEffects(option),
+        docket_changes: getDocketChanges(previousCards, cards, currentCard.id),
         causal_claim_ids: option.causal_claim_ids,
         pressure_delta: option.effects,
         memory_tags_added: option.memory_tags,
@@ -364,6 +375,111 @@ export function scoreOutcome(
 
 function clamp(value: number) {
   return Math.max(0, Math.min(100, Math.round(value)));
+}
+
+function describeImmediateEffects(option: CardOptionRecord) {
+  const tagNotes = describeMemoryTags(option.memory_tags);
+  const pressureNotes = Object.entries(option.effects)
+    .filter(([, delta]) => Math.abs(delta) >= 2)
+    .sort(([, a], [, b]) => Math.abs(b) - Math.abs(a))
+    .map(([key, delta]) =>
+      describePressureMovement(key as keyof PressureMap, delta),
+    );
+
+  return [...new Set([...tagNotes, ...pressureNotes])].slice(0, 4);
+}
+
+function describeMemoryTags(tags: string[] = []) {
+  const notesByTag: Record<string, string> = {
+    klesl_retained:
+      "A channel to moderate estates remains open, though Catholic councillors suspect delay.",
+    klesl_removed:
+      "The court speaks with a harder voice, and Prague expects less mercy from Vienna.",
+    bavarian_dependence_high:
+      "Bavaria becomes the necessary broker of armed Catholic assistance.",
+    bavarian_dependence_medium:
+      "Bavarian help remains close enough to demand reward and consultation.",
+    bavarian_dependence_low:
+      "The court keeps more direction in its own hands, but with fewer certain swords.",
+    electoral_transfer_transferred:
+      "Maximilian's reward becomes a constitutional fact other electors must now measure.",
+    wallenstein_empowered:
+      "Military command begins to gather around a servant whose credit may outrun ordinary obedience.",
+    restitution_edict_issued:
+      "Ecclesiastical restitution is no longer a petition at court but an imperial command.",
+    prague_amnesty_broad:
+      "Men who might otherwise remain enemies are given reason to seek terms under imperial authority.",
+    blood_court_executions:
+      "The punishments in Prague teach obedience by terror as much as by law.",
+  };
+
+  return tags.flatMap((tag) => notesByTag[tag] ?? []);
+}
+
+function describePressureMovement(pressure: keyof PressureMap, delta: number) {
+  const rising = delta > 0;
+  const notes: Record<keyof PressureMap, { rising: string; falling: string }> = {
+    imperial_authority: {
+      rising: "Imperial command is easier to present as lawful remedy.",
+      falling: "More estates can say the crown governs by bargain rather than command.",
+    },
+    confessional_legitimacy: {
+      rising: "Catholic reformers hear firmer warrant for recovery of churches, schools, and revenues.",
+      falling: "Catholic reformers hear caution where they expected recovery.",
+    },
+    estate_trust: {
+      rising: "Moderate estates gain room to remain obedient without surrendering every privilege.",
+      falling: "Estate petitions speak more readily of fear, privilege, and precedent.",
+    },
+    fiscal_capacity: {
+      rising: "Creditors and contributors see firmer means behind the court's orders.",
+      falling: "The treasury must buy time with arrears, pledges, or new concessions.",
+    },
+    military_dependence: {
+      rising: "Armed allies and military contractors gain a larger claim on the court.",
+      falling: "The court carries more of its cause without surrendering direction to armed partners.",
+    },
+    foreign_intervention_risk: {
+      rising: "Foreign courts receive a clearer pretext to watch, bargain, or intervene.",
+      falling: "Outsiders find fewer openings to present intervention as protection.",
+    },
+    dynastic_security: {
+      rising: "Habsburg succession and hereditary right look less exposed.",
+      falling: "The dynasty's claim appears more dependent on consent and military fortune.",
+    },
+    devastation: {
+      rising: "Billeting, contributions, and reprisals fall more heavily on the lands.",
+      falling: "More districts escape the immediate weight of soldiers and contribution.",
+    },
+  };
+
+  return rising ? notes[pressure].rising : notes[pressure].falling;
+}
+
+function getDocketChanges(
+  previousCards: CardRecord[],
+  nextCards: CardRecord[],
+  currentCardId: string,
+): DocketChange[] {
+  const previousIds = new Set(previousCards.map((card) => card.id));
+  const nextIds = new Set(nextCards.map((card) => card.id));
+  const added = nextCards
+    .filter((card) => !previousIds.has(card.id))
+    .map((card) => ({
+      kind: "added" as const,
+      title: card.title,
+      date_label: card.date_label,
+    }));
+  const removed = previousCards
+    .filter((card) => card.id !== currentCardId)
+    .filter((card) => !nextIds.has(card.id))
+    .map((card) => ({
+      kind: "removed" as const,
+      title: card.title,
+      date_label: card.date_label,
+    }));
+
+  return [...added, ...removed].slice(0, 6);
 }
 
 function cardMatchesMemory(card: CardRecord, memoryTags: string[]) {

@@ -447,6 +447,30 @@ function AftermathPanel({
       <div className="panel-title">Aftermath</div>
       <strong>{entry.choice}</strong>
       <p>{entry.consequence}</p>
+      {entry.impact_notes?.length ? (
+        <section className="consequence-docket">
+          <h3>Consequences carried forward</h3>
+          <ul>
+            {entry.impact_notes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {entry.docket_changes?.length ? (
+        <section className="consequence-docket">
+          <h3>Papers now before the court</h3>
+          <ul>
+            {entry.docket_changes.map((change) => (
+              <li key={`${change.kind}-${change.date_label}-${change.title}`}>
+                {change.kind === "added"
+                  ? `${change.date_label}: ${change.title} enters the docket.`
+                  : `${change.date_label}: ${change.title} no longer reaches the council in this form.`}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       <button className="choice-button continue-button" type="button" onClick={onContinue}>
         <span>Continue</span>
         Proceed to the next decision
