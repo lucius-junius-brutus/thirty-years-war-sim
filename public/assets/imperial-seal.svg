@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">Imperial chancery seal</title>
+  <desc id="desc">A stylized early modern seal for the Empire in Ashes game interface.</desc>
+  <defs>
+    <radialGradient id="wax" cx="48%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#b83232"/>
+      <stop offset="0.58" stop-color="#7d151c"/>
+      <stop offset="1" stop-color="#3b0b12"/>
+    </radialGradient>
+    <filter id="rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="24"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.5"/>
+    </filter>
+  </defs>
+  <circle cx="110" cy="110" r="96" fill="url(#wax)" filter="url(#rough)"/>
+  <circle cx="110" cy="110" r="79" fill="none" stroke="#d8b45a" stroke-width="5"/>
+  <circle cx="110" cy="110" r="58" fill="none" stroke="#2d0b12" stroke-width="3" opacity="0.7"/>
+  <path d="M110 48l14 31 34-6-19 29 24 25-35 4-8 34-20-29-30 18 5-35-31-17 33-13z" fill="#d8b45a" opacity="0.92"/>
+  <path d="M110 68l7 18 19-2-12 15 14 14-20 2-8 18-10-17-20 8 8-19-15-13 20-3z" fill="#2d0b12" opacity="0.9"/>
+  <text x="110" y="198" text-anchor="middle" font-family="serif" font-size="14" fill="#d8b45a" letter-spacing="3">1618</text>
+</svg>

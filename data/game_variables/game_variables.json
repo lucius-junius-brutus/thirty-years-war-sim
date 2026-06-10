@@ -1,0 +1,66 @@
+[
+  {
+    "id": "imperial_authority",
+    "name": "Imperial Authority",
+    "description": "How strongly Ferdinand can act as emperor and enforce settlement across the Empire.",
+    "low_label": "Contested",
+    "high_label": "Commanding",
+    "high_is_dangerous": false
+  },
+  {
+    "id": "confessional_legitimacy",
+    "name": "Confessional Legitimacy",
+    "description": "Catholic confidence that Ferdinand is defending the faith and restoring order.",
+    "low_label": "Suspect",
+    "high_label": "Zealous",
+    "high_is_dangerous": false
+  },
+  {
+    "id": "estate_trust",
+    "name": "Estate Trust",
+    "description": "How much imperial and territorial estates believe their liberties and legal standing remain safe.",
+    "low_label": "Alarmed",
+    "high_label": "Reassured",
+    "high_is_dangerous": false
+  },
+  {
+    "id": "fiscal_capacity",
+    "name": "Fiscal Capacity",
+    "description": "The crown's ability to pay, borrow, reward allies, and keep armies functioning.",
+    "low_label": "Exhausted",
+    "high_label": "Solvent",
+    "high_is_dangerous": false
+  },
+  {
+    "id": "military_dependence",
+    "name": "Military Dependence",
+    "description": "Reliance on Bavaria, the League, Spain, and military entrepreneurs to solve force problems.",
+    "low_label": "Autonomous",
+    "high_label": "Dependent",
+    "high_is_dangerous": true
+  },
+  {
+    "id": "foreign_intervention_risk",
+    "name": "Foreign Intervention Risk",
+    "description": "How likely outside powers are to see imperial policy as a reason to intervene.",
+    "low_label": "Contained",
+    "high_label": "Inviting Intervention",
+    "high_is_dangerous": true
+  },
+  {
+    "id": "dynastic_security",
+    "name": "Dynastic Security",
+    "description": "The security of Habsburg rule in hereditary lands and the imperial succession.",
+    "low_label": "Threatened",
+    "high_label": "Secured",
+    "high_is_dangerous": false
+  },
+  {
+    "id": "devastation",
+    "name": "Devastation",
+    "description": "The social and material damage caused by armies, confiscation, quartering, and prolonged war.",
+    "low_label": "Contained",
+    "high_label": "Ravaged",
+    "high_is_dangerous": true
+  }
+]

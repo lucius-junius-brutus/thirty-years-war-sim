@@ -1,0 +1,358 @@
+[
+  {
+    "id": "src_primary_apologia_1618_bsb11213319",
+    "title": "Apologia, Oder entschuldigungs Schrifft ... alle drey Stände des Königreichs Böheimb",
+    "author": "Peter Milner von Milhausen / Bohemian Estates",
+    "year": 1618,
+    "source_type": "primary_printed_pamphlet",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "public_domain_era_digitization_rights_review",
+    "use_policy": "Use downloaded IIIF manifest and OCR as the source layer; check OCR against page images before turning into mechanics.",
+    "url": "https://www.digitale-sammlungen.de/en/details/bsb11213319",
+    "local_paths": [
+      "sources/primary/manifests/bohemian_estates_apologia_1618_bsb11213319.json",
+      "sources/primary/text/bohemian_estates_apologia_1618_bsb11213319.ocr.txt"
+    ],
+    "notes_path": "sources/primary/notes/ferdinand-decision-extraction-protocol.md",
+    "notes": "Downloaded locally via sources/primary/corpus.json; direct estate justification for the Defenestration and early Bohemian resistance."
+  },
+  {
+    "id": "src_primary_augsburg_peace_1555_reference_translation",
+    "title": "The Religious Peace of Augsburg",
+    "author": "Ferdinand I and imperial estates; modern GHDI translation",
+    "year": 1555,
+    "source_type": "primary_settlement_reference_translation",
+    "evidence_layer": "reference",
+    "access_status": "reference_only",
+    "reading_status": "not_started",
+    "copyright_status": "modern_translation_rights_review",
+    "use_policy": "Use as a finding aid and reference-only text until original/public-domain edition is downloaded.",
+    "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:document-4386",
+    "notes": "Primary legal-confessional baseline; not a secondary work, but the online translation is modern."
+  },
+  {
+    "id": "src_primary_bohemian_religious_peace_1609_reference_translation",
+    "title": "The Bohemian Religious Peace / Letter of Majesty",
+    "author": "Rudolf II and Bohemian estates; modern GHDI translation",
+    "year": 1609,
+    "source_type": "primary_charter_reference_translation",
+    "evidence_layer": "reference",
+    "access_status": "reference_only",
+    "reading_status": "not_started",
+    "copyright_status": "modern_translation_rights_review",
+    "use_policy": "Use as a finding aid and reference-only text until original/public-domain edition is downloaded.",
+    "url": "https://ghdi.ghi-dc.org/pdf/eng/75.BohemianToleration_en.pdf",
+    "notes": "Primary charter baseline for Bohemian estate claims; the online translation is modern."
+  },
+  {
+    "id": "src_primary_defenestration_1618_reference_translation",
+    "title": "The War Begins - The Defenestration of Prague",
+    "author": "Contemporary account excerpt; modern GHDI translation",
+    "year": 1618,
+    "source_type": "primary_narrative_reference_translation",
+    "evidence_layer": "reference",
+    "access_status": "reference_only",
+    "reading_status": "not_started",
+    "copyright_status": "modern_translation_rights_review",
+    "use_policy": "Use as a finding aid and reference-only text until rights and original source are reviewed.",
+    "url": "https://germanhistorydocs.ghi-dc.org/sub_document.cfm?document_id=4394",
+    "notes": "Useful control text for event sequence; not a substitute for the downloaded Apologia scan."
+  },
+  {
+    "id": "src_public_restitutionsedikt_1629",
+    "title": "Restitutionsedikt",
+    "author": "Ferdinand II",
+    "year": 1629,
+    "source_type": "primary_imperial_edict",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "in_progress",
+    "copyright_status": "public_domain_era_original_cc_by_sa_wikisource_transcription",
+    "use_policy": "Use as a proofread public transcription for raw extraction; cite Wikisource and verify against a scan before reviewed mechanics.",
+    "url": "https://de.wikisource.org/wiki/Restitutionsedikt",
+    "local_paths": [
+      "sources/public_domain/text/public_restitutionsedikt_1629_wikisource.txt"
+    ],
+    "notes_path": "sources/public_domain/notes/public_restitutionsedikt_1629_wikisource.md",
+    "notes": "Ferdinand's 6 March 1629 Edict of Restitution; directly relevant to imperial interpretation of the Peace of Augsburg, Catholic restoration, use of commissioners, and threats of ban/execution for noncompliance."
+  },
+  {
+    "id": "src_wilson_europes_tragedy",
+    "title": "The Thirty Years War: Europe's Tragedy",
+    "author": "Peter H. Wilson",
+    "year": 2009,
+    "source_type": "scholarly_monograph",
+    "evidence_layer": "scholarly",
+    "access_status": "official_ebook_or_library_access",
+    "reading_status": "notes_recorded",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use by reading the book directly and recording page-specific notes; do not rely on reviews or summaries as substitutes.",
+    "url": "https://www.degruyterbrill.com/document/doi/10.4159/9780674246249/html?lang=en",
+    "local_paths": [
+      "sources/scholarly/downloads/thirty_years_document_user_provided.pdf",
+      "sources/scholarly/downloads/thirty_years_document_user_provided.txt",
+      "sources/scholarly/downloads/thirty_years_document_user_provided.metadata.json"
+    ],
+    "notes_path": "sources/scholarly/notes/src_wilson_europes_tragedy.md",
+    "notes": "Core scholarly synthesis for imperial constitution, war causation, Ferdinand's constraints, military finance, and the war's phases. First whole-book decision spine recorded at sources/scholarly/notes/src_wilson_europes_tragedy_decision_spine.md."
+  },
+  {
+    "id": "src_asch_thirty_years_war",
+    "title": "The Thirty Years War: The Holy Roman Empire and Europe 1618-48",
+    "author": "Ronald G. Asch",
+    "year": 1997,
+    "source_type": "scholarly_monograph",
+    "evidence_layer": "scholarly",
+    "access_status": "official_ebook_or_library_access",
+    "reading_status": "needs_direct_reading",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use by reading the book directly and recording page-specific notes.",
+    "url": "https://www.bloomsbury.com/us/thirty-years-war-9780333626955/",
+    "notes_path": "sources/scholarly/notes/src_asch_thirty_years_war.md",
+    "notes": "Useful corrective focus on the Holy Roman Empire, constitutional struggle, and European context."
+  },
+  {
+    "id": "src_parker_thirty_years_war",
+    "title": "The Thirty Years' War",
+    "author": "Geoffrey Parker, editor",
+    "year": 1997,
+    "source_type": "scholarly_edited_volume",
+    "evidence_layer": "scholarly",
+    "access_status": "official_ebook_or_library_access",
+    "reading_status": "needs_direct_reading",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use by reading chapters directly and recording chapter/page-specific notes.",
+    "url": "https://www.routledge.com/The-Thirty-Years-War/Parker/p/book/9780415154581",
+    "notes_path": "sources/scholarly/notes/src_parker_thirty_years_war.md",
+    "notes": "Edited survey with a useful phase structure and thematic framing across Europe."
+  },
+  {
+    "id": "src_bireley_jesuits_thirty_years_war",
+    "title": "The Jesuits and the Thirty Years War: Kings, Courts, and Confessors",
+    "author": "Robert Bireley",
+    "year": 2003,
+    "source_type": "scholarly_monograph",
+    "evidence_layer": "scholarly",
+    "access_status": "sample_only",
+    "reading_status": "needs_direct_reading",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use by reading the book directly and recording page-specific notes.",
+    "url": "https://assets.cambridge.org/052182/0170/sample/0521820170WS.pdf",
+    "notes_path": "sources/scholarly/notes/src_bireley_jesuits_thirty_years_war.md",
+    "notes": "Important for Ferdinand's court, confessors, Catholic restoration networks, and decision influence."
+  },
+  {
+    "id": "src_helfferich_documentary",
+    "title": "The Thirty Years War: A Documentary History",
+    "author": "Tryntje Helfferich, editor and translator",
+    "year": 2009,
+    "source_type": "scholarly_documentary_sourcebook",
+    "evidence_layer": "scholarly",
+    "access_status": "official_ebook_or_library_access",
+    "reading_status": "needs_direct_reading",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use as a scholarly guide to primary documents; record document/page notes and avoid copying long translated passages.",
+    "url": "https://history.osu.edu/publications/thirty-years-war-documentary-history",
+    "notes_path": "sources/scholarly/notes/src_helfferich_documentary.md",
+    "notes": "Best for locating and interpreting primary documents in translation while keeping the primary-source boundary visible."
+  },
+  {
+    "id": "src_wilson_sourcebook",
+    "title": "The Thirty Years War: A Sourcebook",
+    "author": "Peter H. Wilson, editor",
+    "year": 2010,
+    "source_type": "scholarly_documentary_sourcebook",
+    "evidence_layer": "scholarly",
+    "access_status": "official_ebook_or_library_access",
+    "reading_status": "notes_recorded",
+    "copyright_status": "copyrighted_modern",
+    "use_policy": "Use as a scholarly guide to primary documents; record document/page notes and avoid copying long translated passages.",
+    "url": "https://www.bloomsbury.com/uk/thirty-years-war-9780230242067/",
+    "local_paths": [
+      "sources/scholarly/downloads/wilson_thirty_years_war_sourcebook_user_provided.pdf",
+      "sources/scholarly/downloads/wilson_thirty_years_war_sourcebook_user_provided.txt",
+      "sources/scholarly/downloads/wilson_thirty_years_war_sourcebook_user_provided.metadata.json"
+    ],
+    "notes_path": "sources/scholarly/notes/src_wilson_sourcebook.md",
+    "notes": "Useful for identifying primary documents around Augsburg, Bohemia, restitution, Magdeburg, Swedish intervention, Prague, and Westphalia. User-provided PDF copied into sources/scholarly/downloads and extracted to page-marked text; targeted Ferdinand decision pass recorded."
+  },
+  {
+    "id": "src_burgdorf_wahlkapitulationen",
+    "title": "Die Wahlkapitulationen der römisch-deutschen Könige und Kaiser 1519-1792",
+    "author": "Wolfgang Burgdorf, editor",
+    "year": 2015,
+    "source_type": "scholarly_edited_primary_source",
+    "evidence_layer": "scholarly",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "open_access_pdf_historische_kommission_muenchen",
+    "use_policy": "Use the open scholarly edition for page-specific notes on Ferdinand II's election capitulation; avoid long quotation and preserve distinction between edited source text and game interpretation.",
+    "url": "https://www.historischekommission-muenchen.de/fileadmin/user_upload/dateien/sonstige/Burgdorf_Wahlkapitulationen_ebook_16.9.2015.pdf",
+    "local_paths": [
+      "sources/scholarly/downloads/src_burgdorf_wahlkapitulationen_ferdinand_ii_open_pdf.pdf",
+      "sources/scholarly/downloads/src_burgdorf_wahlkapitulationen_ferdinand_ii_open_pdf.txt",
+      "sources/scholarly/downloads/src_burgdorf_wahlkapitulationen_ferdinand_ii_section.txt"
+    ],
+    "notes_path": "sources/scholarly/notes/src_burgdorf_wahlkapitulationen.md",
+    "notes": "Open scholarly edition containing Ferdinand II's 28 August 1619 Wahlkapitulation; directly relevant to imperial constitutional constraints, elector consultation, estate privileges, religious peace, foreign alliances, foreign troops, imperial ban procedure, and limits on dynastic monarchy."
+  },
+  {
+    "id": "src_vales_munich_treaty_1619",
+    "title": "Mnichovská dohoda z roku 1619",
+    "author": "Václav Valeš",
+    "year": 2019,
+    "source_type": "scholarly_article_legal_history",
+    "evidence_layer": "scholarly",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "cc_by_4_0_karolinum",
+    "use_policy": "Use the open-access article for page-specific notes on the Munich Treaty; avoid long quotation and distinguish Valeš's analysis from the still-undownloaded treaty text.",
+    "url": "https://karolinum.cz/casopis/pravnehistoricke-studie/rocnik-49/cislo-1/clanek-6964",
+    "local_paths": [
+      "sources/scholarly/downloads/src_vales_munich_treaty_1619_open_pdf.pdf",
+      "sources/scholarly/downloads/src_vales_munich_treaty_1619_open_pdf.txt"
+    ],
+    "notes_path": "sources/scholarly/notes/src_vales_munich_treaty_1619.md",
+    "notes": "Open CC BY legal-history article on the 8 October 1619 Munich Treaty between Ferdinand II and Maximilian I of Bavaria; useful for the treaty's official clauses, secret oral promises, League command, compensation, separate-peace limits, and later Palatine/electoral settlement."
+  },
+  {
+    "id": "src_public_schiller_thirty_years_war",
+    "title": "The Thirty Years War -- Complete",
+    "author": "Friedrich Schiller; translated by A. J. W. Morrison",
+    "year": 1800,
+    "source_type": "public_domain_older_history",
+    "evidence_layer": "reference",
+    "access_status": "downloaded",
+    "reading_status": "not_started",
+    "copyright_status": "public_domain_us_project_gutenberg",
+    "use_policy": "Use as older public-domain orientation and extraction-pipeline test material; do not treat as current scholarship.",
+    "url": "https://www.gutenberg.org/ebooks/6775",
+    "local_paths": [
+      "sources/public_domain/text/public_schiller_thirty_years_war_gutenberg_6775.txt"
+    ],
+    "notes": "Project Gutenberg public-domain text with broad Thirty Years' War narrative; useful for keyword discovery but historiographically outdated."
+  },
+  {
+    "id": "src_public_gardiner_thirty_years_war",
+    "title": "The Thirty Years' War, 1618-1648",
+    "author": "Samuel Rawson Gardiner",
+    "year": 1889,
+    "source_type": "public_domain_older_history",
+    "evidence_layer": "reference",
+    "access_status": "downloaded",
+    "reading_status": "not_started",
+    "copyright_status": "public_domain_us_library_of_congress",
+    "use_policy": "Use as older public-domain orientation and extraction-pipeline test material; do not treat as current scholarship.",
+    "url": "https://www.loc.gov/item/04018658/",
+    "local_paths": [
+      "sources/public_domain/text/public_gardiner_thirty_years_war_loc_1889.txt"
+    ],
+    "notes": "Library of Congress marks this collection public domain and free to use and reuse; older account useful for comparative orientation."
+  },
+  {
+    "id": "src_public_bohemian_reasons_reject_ferdinand_1619",
+    "title": "The Reasons which compelled the states of Bohemia to reject the Archduke Ferdinand",
+    "author": "Bohemian estates; English translation from French copies",
+    "year": 1619,
+    "source_type": "primary_polemical_translation",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "in_progress",
+    "copyright_status": "cc0_1_0_universal_oxford_text_archive",
+    "use_policy": "Use as a raw primary/translated polemical source; verify transcription before using player-facing text and avoid overquoting.",
+    "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A68953",
+    "local_paths": [
+      "sources/public_domain/text/public_bohemian_reasons_reject_ferdinand_1619_oxford.txt"
+    ],
+    "notes": "Direct early-war text on the Bohemian estates' rejection of Ferdinand and election of a new king; high relevance for 1619 decision modeling."
+  },
+  {
+    "id": "src_public_relation_ferdinand_election_coronation_1620",
+    "title": "A relation containing the manner of the solemnities at the election and coronation of Ferdinand the Emperour",
+    "author": "Anonymous English news pamphlet; Text Creation Partnership transcription",
+    "year": 1620,
+    "source_type": "primary_news_pamphlet",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "cc0_1_0_universal_oxford_text_archive_with_mirror_notice",
+    "use_policy": "Use as a raw contemporary news-pamphlet source for Ferdinand's imperial election/coronation and neighboring events; Oxford marks the item CC0, but the mirror XML contains older EEBO-TCP restriction language, so verify rights before broad redistribution or long quotation.",
+    "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A00682",
+    "local_paths": [
+      "sources/public_domain/text/public_relation_ferdinand_election_coronation_1620_ota.txt"
+    ],
+    "notes_path": "sources/public_domain/notes/public_relation_ferdinand_election_coronation_1620_ota.md",
+    "notes": "Reports the 1619 Frankfurt election/coronation and related events in Bohemia, Moravia, and the Palatinate; useful for election-legitimacy and timing constraints. Oxford catalog page confirms public availability and CC0 status; local text was retrieved from the Distant Reader EarlyPrint XML mirror after Oxford bitstreams timed out."
+  },
+  {
+    "id": "src_public_letter_of_majesty_1609_cz_wikisource",
+    "title": "Majestát Rudolfa II. na náboženské svobody",
+    "author": "Rudolf II and the Bohemian estates; Czech Wikisource transcription",
+    "year": 1609,
+    "source_type": "primary_charter_transcription",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "public_domain_era_original_wikisource_transcription",
+    "use_policy": "Use as an openly available primary-source transcription for Bohemian religious-liberty claims; translate and verify against a scan or scholarly edition before reviewed mechanics.",
+    "url": "https://cs.wikisource.org/wiki/Majest%C3%A1t_Rudolfa_II._na_n%C3%A1bo%C5%BEensk%C3%A9_svobody",
+    "local_paths": [
+      "sources/public_domain/text/public_letter_of_majesty_1609_cz_wikisource.txt"
+    ],
+    "notes_path": "sources/public_domain/notes/public_letter_of_majesty_1609_cz_wikisource.md",
+    "notes": "Open Czech Wikisource transcription of Rudolf II's 1609 Letter of Majesty, central to Bohemian religious-liberty claims and Ferdinand's legitimacy problem."
+  },
+  {
+    "id": "src_public_ferdinand_manifesto_catholic_princes_1619",
+    "title": "Le manifeste de Ferdinand, Dvc de Baviere, Roy des Romains",
+    "author": "Ferdinand II; French printed pamphlet",
+    "year": 1619,
+    "source_type": "primary_manifesto",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "in_progress",
+    "copyright_status": "public_domain_mark_internet_archive_wikimedia",
+    "use_policy": "Use as Ferdinand-aligned public argumentation; OCR and French wording need review before player-facing text or game mechanics.",
+    "url": "https://archive.org/details/lemanifestedefer00ferd",
+    "local_paths": [
+      "sources/public_domain/text/public_ferdinand_manifesto_catholic_princes_1619_ia.txt"
+    ],
+    "notes_path": "sources/public_domain/notes/public_ferdinand_manifesto_catholic_princes_1619_ia.md",
+    "notes": "Ferdinand-aligned 1619 manifesto to Catholic rulers and republics; useful for Catholic-rights framing and Protestant-designs rhetoric."
+  },
+  {
+    "id": "src_public_reichsacht_frederick_1621",
+    "title": "Copia, Kayserl: Aachts Erklerung / wider Pfaltzgraff Friderich Churfürst",
+    "author": "Ferdinand II; German Wikisource transcription from UB Augsburg / VD17",
+    "year": 1621,
+    "source_type": "primary_imperial_ban",
+    "evidence_layer": "primary",
+    "access_status": "downloaded",
+    "reading_status": "notes_recorded",
+    "copyright_status": "public_domain_era_original_cc_by_sa_wikisource_transcription",
+    "use_policy": "Use as a proofread public transcription for raw extraction; cite Wikisource/UB Augsburg and verify against the scan before reviewed mechanics.",
+    "url": "https://de.wikisource.org/wiki/Achterkl%C3%A4rung_%C3%BCber_Friedrich_von_der_Pfalz",
+    "local_paths": [
+      "sources/public_domain/text/public_reichsacht_frederick_1621_wikisource.txt"
+    ],
+    "notes_path": "sources/public_domain/notes/public_reichsacht_frederick_1621_wikisource.md",
+    "notes": "Ferdinand's 22 January 1621 imperial-ban declaration against Frederick V; close-reading notes now capture printed-page and local-line evidence for legal escalation, Palatinate punishment, obedience commands, and threats against those aiding Frederick."
+  },
+  {
+    "id": "src_primary_munich_treaty_1619_bhsta_target",
+    "title": "Münchner Vertrag zwischen Ferdinand II. und Maximilian I. von Bayern",
+    "author": "Ferdinand II and Maximilian I of Bavaria",
+    "year": 1619,
+    "source_type": "primary_alliance_treaty_archive_target",
+    "evidence_layer": "primary",
+    "access_status": "pending_download",
+    "reading_status": "not_started",
+    "copyright_status": "public_domain_era_original_archive_access_needed",
+    "use_policy": "Use only as an acquisition target until a full transcript, scan set, or scholarly edition is obtained; do not promote claims from exhibition summaries alone.",
+    "url": "https://www.gda.bayern.de/de/aktuelles/10/03/2026/23-07-2019-bayerns-weg-zum-kurfuerstentum-vom-muenchner-vertrag-1619-zum-westfaelischen-frieden-1648/",
+    "notes_path": "sources/primary/notes/munich_treaty_1619_access_target.md",
+    "notes": "Official Bavarian archive exhibition page identifies the 8 October 1619 Munich Treaty and cites the archival item as Bayerisches Hauptstaatsarchiv, Dreißigjähriger Krieg Akten, 11. Full diplomatic text not yet located."
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "role_ferdinand_ii",
+    "actor_id": "actor_ferdinand_ii",
+    "name": "Ferdinand II",
+    "office": "King of Bohemia; later Holy Roman Emperor",
+    "why_playable": "Ferdinand sits at the point where dynastic survival, imperial law, Catholic restoration, estate liberties, allied dependence, and war finance collide.",
+    "player_wants": [
+      "Secure Habsburg rule in Bohemia and the hereditary lands",
+      "Preserve or expand imperial authority",
+      "Satisfy Catholic allies without making them too powerful",
+      "Prevent the revolt from becoming a wider European war"
+    ],
+    "constraints": [
+      "Weak immediate military capacity",
+      "Need for Bavaria and the Catholic League",
+      "Imperial legality and elector opinion",
+      "Fiscal strain",
+      "Protestant and foreign alarm"
+    ],
+    "resources": [
+      "Dynastic claims",
+      "Imperial title after 1619",
+      "Catholic networks",
+      "Bavarian and League military support",
+      "Spanish Habsburg alignment"
+    ],
+    "success_conditions": [
+      "Dynastic security remains high",
+      "Imperial authority recovers without unbearable foreign intervention",
+      "Devastation and dependence stay manageable"
+    ],
+    "failure_conditions": [
+      "Estate trust collapses into wider resistance",
+      "Military dependence becomes political captivity",
+      "Fiscal exhaustion and devastation make victory self-defeating",
+      "Foreign intervention risk spirals"
+    ],
+    "mvp_suitable": true,
+    "initial_pressures": {
+      "imperial_authority": 62,
+      "confessional_legitimacy": 70,
+      "estate_trust": 35,
+      "fiscal_capacity": 42,
+      "military_dependence": 30,
+      "foreign_intervention_risk": 25,
+      "dynastic_security": 58,
+      "devastation": 20
+    },
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "needs_review"
+  }
+]

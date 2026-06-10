@@ -1,0 +1,74 @@
+[
+  {
+    "id": "pc_austrian_habsburg_court",
+    "name": "Austrian Habsburg court",
+    "power_center_type": "dynastic_court",
+    "summary": "The dynastic center around Ferdinand II, concerned with hereditary lands, imperial title, Catholic restoration, and family security.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_spanish_habsburg_monarchy",
+    "name": "Spanish Habsburg monarchy",
+    "power_center_type": "foreign_power",
+    "summary": "Catholic Habsburg partner whose strategic concerns included the Dutch war and the route between Italy, the Rhine, and the Low Countries.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_parker_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_catholic_league",
+    "name": "Catholic League",
+    "power_center_type": "military_confessional_league",
+    "summary": "A Catholic princely alliance led by Bavaria that supplied military capacity while creating dependence and leverage.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_bavaria",
+    "name": "Bavaria",
+    "power_center_type": "territorial_principality",
+    "summary": "A powerful Catholic principality led by Maximilian, useful to Ferdinand but not simply subordinate to him.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_bohemian_estates",
+    "name": "Bohemian estates",
+    "power_center_type": "estate_body",
+    "summary": "Noble and estate interests defending privileges, religious concessions, and political participation in Bohemia.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_palatinate",
+    "name": "Electoral Palatinate",
+    "power_center_type": "territorial_principality",
+    "summary": "Calvinist electoral principality whose leader Frederick V accepted the Bohemian crown and became the focus of imperial punishment.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_defenestration_1618_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_saxony",
+    "name": "Saxony",
+    "power_center_type": "territorial_principality",
+    "summary": "A leading Lutheran electorate balancing legal order, Protestant caution, imperial cooperation, and territorial security.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_imperial_constitution",
+    "name": "Imperial Diet and imperial constitution",
+    "power_center_type": "institutional_constraint",
+    "summary": "The legal-political order that limited imperial action and made legitimacy matter even when military victory was available.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "pc_mercenary_officer_corps",
+    "name": "Mercenary officer corps",
+    "power_center_type": "military_network",
+    "summary": "Military entrepreneurs and officers whose armies solved immediate force problems while creating fiscal and social devastation.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_parker_thirty_years_war"],
+    "review_status": "needs_review"
+  }
+]

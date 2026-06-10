@@ -1,0 +1,62 @@
+[
+  {
+    "id": "actor_ferdinand_ii",
+    "name": "Ferdinand II",
+    "lifespan": "1578-1637",
+    "actor_type": "person",
+    "confession": "Catholic",
+    "summary": "Habsburg ruler and Holy Roman Emperor whose goals included dynastic security, Catholic restoration, and stronger imperial authority.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_defenestration_1618_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "actor_maximilian_bavaria",
+    "name": "Maximilian I of Bavaria",
+    "lifespan": "1573-1651",
+    "actor_type": "person",
+    "confession": "Catholic",
+    "summary": "Duke of Bavaria and leading Catholic League power whose military support was crucial but increased Bavarian leverage over imperial policy.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "actor_frederick_v",
+    "name": "Frederick V of the Palatinate",
+    "lifespan": "1596-1632",
+    "actor_type": "person",
+    "confession": "Calvinist",
+    "summary": "Elector Palatine who accepted the Bohemian crown, turning a Bohemian crisis into an imperial and international problem.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_wilson_europes_tragedy"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "actor_john_george_saxony",
+    "name": "John George I of Saxony",
+    "lifespan": "1585-1656",
+    "actor_type": "person",
+    "confession": "Lutheran",
+    "summary": "Elector of Saxony whose Lutheran, legalist, and territorial interests made him a pivotal but wary imperial partner.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "actor_spanish_habsburg_representative",
+    "name": "Spanish Habsburg representative",
+    "lifespan": "not stated",
+    "actor_type": "office",
+    "confession": "Catholic",
+    "summary": "A placeholder for Spanish Habsburg diplomatic and military interests, especially the Rhine corridor and Dutch war context.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_parker_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "actor_bohemian_estate_leader",
+    "name": "Bohemian estate leader",
+    "lifespan": "not stated",
+    "actor_type": "composite_role",
+    "confession": "mixed Protestant",
+    "summary": "A composite for the Bohemian estate opposition defending religious privileges and estate liberties against Habsburg authority.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "inferred"
+  }
+]

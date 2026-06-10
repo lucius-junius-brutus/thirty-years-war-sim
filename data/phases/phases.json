@@ -1,0 +1,38 @@
+[
+  {
+    "id": "phase_prewar_settlement",
+    "name": "Pre-war imperial and confessional settlement",
+    "start_year": 1555,
+    "end_year": 1618,
+    "summary": "The Peace of Augsburg, imperial institutions, and estate liberties create a legal order that manages confession but leaves unresolved disputes over Calvinism, church lands, dynastic authority, and who may interpret imperial law.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "phase_bohemian_revolt",
+    "name": "Bohemian Revolt",
+    "start_year": 1618,
+    "end_year": 1620,
+    "summary": "A constitutional and confessional confrontation in Bohemia escalates into a direct challenge to Habsburg dynastic security and imperial authority.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "phase_palatinate_consolidation",
+    "name": "Palatinate and imperial consolidation",
+    "start_year": 1620,
+    "end_year": 1623,
+    "summary": "After White Mountain, victory creates new problems: punishment, confiscation, Bavarian leverage, the Palatine electoral question, Spanish interests, and Protestant alarm.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "phase_restitution_overreach",
+    "name": "Edict of Restitution and imperial overreach",
+    "start_year": 1629,
+    "end_year": 1630,
+    "summary": "After imperial victories and the Danish withdrawal, Ferdinand can push a binding interpretation of the religious peace. The same action that promises legal and Catholic restoration risks making imperial authority look unlimited.",
+    "source_refs": ["src_public_restitutionsedikt_1629", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "rel_ferdinand_maximilian",
+    "from_id": "actor_ferdinand_ii",
+    "to_id": "actor_maximilian_bavaria",
+    "dimensions": {
+      "confessional_alignment": 90,
+      "dynastic_interest": 55,
+      "constitutional_alignment": 60,
+      "military_dependence": 82,
+      "financial_dependence": 68,
+      "territorial_ambition": 74,
+      "foreign_policy_pressure": 35,
+      "personal_trust": 58,
+      "strategic_dependence": 86,
+      "fear_of_overreach": 62
+    },
+    "summary": "Allied Catholic rulers, but Ferdinand's military need gives Bavaria leverage and makes later rewards politically costly.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "rel_ferdinand_bohemian_estates",
+    "from_id": "actor_ferdinand_ii",
+    "to_id": "pc_bohemian_estates",
+    "dimensions": {
+      "confessional_alignment": 15,
+      "dynastic_interest": 10,
+      "constitutional_alignment": 20,
+      "military_dependence": 5,
+      "financial_dependence": 20,
+      "territorial_ambition": 35,
+      "foreign_policy_pressure": 30,
+      "personal_trust": 10,
+      "strategic_dependence": 45,
+      "fear_of_overreach": 90
+    },
+    "summary": "The crisis is both confessional and constitutional: estate liberties and royal authority collide.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "rel_ferdinand_saxony",
+    "from_id": "actor_ferdinand_ii",
+    "to_id": "actor_john_george_saxony",
+    "dimensions": {
+      "confessional_alignment": 30,
+      "dynastic_interest": 45,
+      "constitutional_alignment": 72,
+      "military_dependence": 40,
+      "financial_dependence": 20,
+      "territorial_ambition": 52,
+      "foreign_policy_pressure": 30,
+      "personal_trust": 45,
+      "strategic_dependence": 58,
+      "fear_of_overreach": 70
+    },
+    "summary": "Saxony may support imperial legality while fearing Catholic overreach and damage to Lutheran security.",
+    "source_refs": ["src_primary_apologia_1618_bsb11213319"],
+    "review_status": "needs_review"
+  },
+  {
+    "id": "rel_ferdinand_spanish_habsburgs",
+    "from_id": "actor_ferdinand_ii",
+    "to_id": "pc_spanish_habsburg_monarchy",
+    "dimensions": {
+      "confessional_alignment": 88,
+      "dynastic_interest": 85,
+      "constitutional_alignment": 50,
+      "military_dependence": 50,
+      "financial_dependence": 45,
+      "territorial_ambition": 65,
+      "foreign_policy_pressure": 72,
+      "personal_trust": 55,
+      "strategic_dependence": 66,
+      "fear_of_overreach": 40
+    },
+    "summary": "Dynastic partnership helps Ferdinand but pulls imperial politics into wider Habsburg and Dutch-war strategy.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_parker_thirty_years_war"],
+    "review_status": "needs_review"
+  }
+]

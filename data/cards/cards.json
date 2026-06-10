@@ -1,0 +1,815 @@
+[
+  {
+    "id": "card_1618_prague_defenestration",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1618_defenestration_response",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "May 1618",
+    "title": "Windows in Prague",
+    "briefing": "Prague's Protestant estates had spent years treating the Letter of Majesty as a shield for their churches, schools, and political standing. Catholic royal officials narrowed that protection, arrests and closures followed, and a radical group decided to force the crisis into the open.",
+    "situation": "Royal officials have been thrown from the windows of Prague Castle. The rebels frame the act as defense of estate liberties, religious privilege, and the older royal promises recorded in the Letter of Majesty. Your first response will teach the Empire whether this is a local rebellion, a legal dispute, or the start of a reckoning.",
+    "historian_note": "The 1609 Letter of Majesty matters here because it turns Bohemian religious claims into a chartered estate-liberty problem: religion, schools, churches, defenders, and recorded royal protection all sit behind the rebels' language of privilege.",
+    "source_refs": ["src_primary_augsburg_peace_1555_reference_translation", "src_primary_apologia_1618_bsb11213319", "src_public_letter_of_majesty_1609_cz_wikisource"],
+    "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_harsh_bohemian_punishment_alarm", "claim_letter_majesty_bohemian_liberties"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_legal_commission",
+        "label": "Frame the revolt as a legal breach while reserving chartered Bohemian liberties for review.",
+        "consequence": "The legal line gives cautious estates a reason to stay loyal. Catholic hardliners hear you preserving the very paper they wanted buried.",
+        "effects": {
+          "imperial_authority": -2,
+          "confessional_legitimacy": -7,
+          "estate_trust": 13,
+          "foreign_intervention_risk": -5,
+          "dynastic_security": 2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"]
+      },
+      {
+        "id": "opt_public_punishment",
+        "label": "Declare the rebels traitors and reject their privilege claims as cover for revolt.",
+        "consequence": "Catholic allies applaud the clarity. Protestant and estate observers hear that a recorded royal promise may not protect them once obedience fails.",
+        "effects": {
+          "imperial_authority": 8,
+          "confessional_legitimacy": 10,
+          "estate_trust": -13,
+          "foreign_intervention_risk": 7,
+          "dynastic_security": 4
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm", "claim_letter_majesty_bohemian_liberties"]
+      },
+      {
+        "id": "opt_offer_conference",
+        "label": "Offer a conference on the Letter of Majesty if the rebels reaffirm Habsburg kingship.",
+        "consequence": "Moderates have a bridge back, but the bridge limits how far victory can later carry Catholic restoration.",
+        "effects": {
+          "imperial_authority": -8,
+          "confessional_legitimacy": -8,
+          "estate_trust": 16,
+          "dynastic_security": -4,
+          "foreign_intervention_risk": -5
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"]
+      }
+    ]
+  },
+  {
+    "id": "card_1619_imperial_election",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1619_bohemian_rejection_legitimacy",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "August 1619",
+    "title": "The Crown and the Electors",
+    "briefing": "The Bohemian revolt has survived long enough to become a constitutional challenge. Ferdinand must secure the imperial crown while Prague argues that his Bohemian kingship was conditional, unlawful, or forfeited.",
+    "situation": "Bohemian estates circulate arguments that you were not freely elected, that your promises were conditional, and that Spanish-Habsburg designs threaten their privileges. Their claims draw strength from an older royal settlement: the Letter of Majesty made religious liberty, schools, churches, and estate defenders part of Bohemia's recorded political order.",
+    "historian_note": "A 1619 Bohemian estates text frames Ferdinand's problem as legal, confessional, and dynastic, not merely military. The 1609 Letter of Majesty explains why the dispute could be presented as defense of recorded liberties rather than simple disobedience. The likely effects of each response still need direct review in Wilson and Asch.",
+    "source_refs": ["src_public_bohemian_reasons_reject_ferdinand_1619", "src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_prioritize_electors",
+        "label": "Court the electors and make the imperial title the first answer to Prague.",
+        "consequence": "The imperial crown steadies your hand. The estates' charter language still circulates, but you now speak from a higher desk.",
+        "effects": {
+          "imperial_authority": 12,
+          "estate_trust": 2,
+          "confessional_legitimacy": -2,
+          "dynastic_security": 5
+        },
+        "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"]
+      },
+      {
+        "id": "opt_denounce_frederick",
+        "label": "Denounce the estates' reasons as rebellion dressed in charter language.",
+        "consequence": "You refuse to let Prague define the law. Cautious estates hear that old liberties may be judged after obedience, not before it.",
+        "effects": {
+          "imperial_authority": 8,
+          "confessional_legitimacy": 8,
+          "estate_trust": -12,
+          "foreign_intervention_risk": 6
+        },
+        "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_harsh_bohemian_punishment_alarm", "claim_letter_majesty_bohemian_liberties"]
+      },
+      {
+        "id": "opt_seek_compromise",
+        "label": "Publish a legal rebuttal and promise a controlled review of Letter-of-Majesty protections.",
+        "consequence": "You answer the estates on their chosen ground. Zealous allies dislike giving rebels the dignity of an argument, and the review may bind your later settlement.",
+        "effects": {
+          "imperial_authority": -3,
+          "confessional_legitimacy": -7,
+          "estate_trust": 13,
+          "foreign_intervention_risk": -5
+        },
+        "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"]
+      }
+    ]
+  },
+  {
+    "id": "card_1619_frankfurt_coronation",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1619_frankfurt_coronation_crisis",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "August-September 1619",
+    "title": "Frankfurt's Oath",
+    "briefing": "Ferdinand has chosen the imperial election as the lever that can turn a dynastic crisis into an imperial-legal crisis. The ceremony gives him authority, but the coronation oath also gives the electors and Estates standards to invoke against him.",
+    "situation": "Frankfurt gives you ceremony, regalia, electors, ambassadors, acclamation, and oath. The same pamphlet that reports the coronation also carries the noise of Bohemian and Austrian crisis: armed pressure, failed Protestant-Catholic agreement, and demands that privileges be secured. The crown can answer Prague, but it can also give Prague and every elector an oath to measure you by.",
+    "historian_note": "The English news pamphlet is useful because it places the coronation beside active crisis reporting and describes the public machinery of legitimacy: elector and ambassador roles, Golden Bull offices, regalia, acclamation, and oaths. It proves contemporary framing and ceremony, not the deeper causal weight of the coronation; that still needs direct comparison with modern scholarship.",
+    "source_refs": ["src_public_relation_ferdinand_election_coronation_1620", "src_burgdorf_wahlkapitulationen", "src_public_bohemian_reasons_reject_ferdinand_1619"],
+    "causal_claim_ids": ["claim_frankfurt_coronation_oath_legitimacy", "claim_bohemian_rejection_legitimacy_crisis", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_crown_as_mandate",
+        "label": "Use Frankfurt as proof that Prague now defies the lawful emperor.",
+        "consequence": "The crown raises your voice above the Bohemian estates. It also makes every coercive move sound like an imperial precedent, not merely a dynastic quarrel.",
+        "effects": {
+          "imperial_authority": 12,
+          "dynastic_security": 6,
+          "estate_trust": -8,
+          "foreign_intervention_risk": 4
+        },
+        "causal_claim_ids": ["claim_frankfurt_coronation_oath_legitimacy", "claim_bohemian_rejection_legitimacy_crisis"]
+      },
+      {
+        "id": "opt_crown_as_reassurance",
+        "label": "Publish the coronation as a promise of law, consultation, and protected privilege.",
+        "consequence": "Moderate estates gain language for loyalty without surrendering every fear. Catholic allies hear the new emperor tying his own hands before the fight is won.",
+        "effects": {
+          "imperial_authority": 4,
+          "estate_trust": 12,
+          "foreign_intervention_risk": -5,
+          "confessional_legitimacy": -6,
+          "dynastic_security": 2
+        },
+        "causal_claim_ids": ["claim_frankfurt_coronation_oath_legitimacy", "claim_wahlkapitulation_limits_imperial_freedom", "claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_keep_ceremony_apart",
+        "label": "Keep the imperial ceremony separate from Bohemia and avoid turning the revolt into an imperial test case.",
+        "consequence": "You reduce the sense that the new crown is aimed straight at Prague. You also leave your opponents more room to argue that the Bohemian dispute stands on its own law.",
+        "effects": {
+          "estate_trust": 5,
+          "foreign_intervention_risk": -2,
+          "imperial_authority": -4,
+          "dynastic_security": -3
+        },
+        "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1620_bavarian_army",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1620_bavarian_assistance",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1619-1620",
+    "title": "The Bavarian Bargain",
+    "briefing": "The imperial title has not produced an army. Bohemia, Transylvania, and Frederick's supporters create an immediate force problem, and Maximilian of Bavaria is the Catholic prince most able to solve it quickly.",
+    "situation": "You need an army before Bohemia's revolt hardens into a new order. Maximilian of Bavaria and the Catholic League can provide force, but the Munich Treaty terms would give Bavaria a hand in command, compensation, and any later settlement.",
+    "historian_note": "Valeš's legal-history article reads the 1619 Munich Treaty as an emergency bargain: Maximilian receives direction of Catholic defense preparations, Ferdinand accepts compensation obligations, and Article II restricts separate negotiation, peace, or truces with Protestants without Bavarian knowledge and cooperation. The treaty text itself is still an acquisition target, while Ferdinand's 1619 election capitulation adds the constitutional pressure that war, burdens, alliances, and legitimacy must still look lawful.",
+    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_bavarian_military_assistance",
+        "label": "Accept Maximilian's Munich terms for League command and compensation.",
+        "consequence": "Bavarian columns give your cause teeth. Maximilian now has a claim on command, compensation, and any peace table.",
+        "effects": {
+          "imperial_authority": 10,
+          "dynastic_security": 12,
+          "military_dependence": 20,
+          "fiscal_capacity": -10,
+          "estate_trust": -6,
+          "confessional_legitimacy": 4
+        },
+        "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_army_finance_devastation", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_broader_catholic_subscription",
+        "label": "Seek broader elector and Catholic-estate subscription first.",
+        "consequence": "Dependence is spread more widely and looks more constitutional, but Maximilian's army is slower to move and ready money remains scarce.",
+        "effects": {
+          "imperial_authority": 5,
+          "dynastic_security": 4,
+          "military_dependence": 8,
+          "fiscal_capacity": -5,
+          "confessional_legitimacy": 5,
+          "estate_trust": 4
+        },
+        "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_delay_for_imperial_levies",
+        "label": "Refuse separate-peace limits and build an imperial force.",
+        "consequence": "You preserve more imperial freedom, but the Bohemian and Transylvanian emergencies do not wait for a cleaner army.",
+        "effects": {
+          "imperial_authority": -7,
+          "estate_trust": 10,
+          "military_dependence": -8,
+          "dynastic_security": -12,
+          "foreign_intervention_risk": -2
+        },
+        "causal_claim_ids": ["claim_munich_treaty_restricts_ferdinand_policy", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"]
+      }
+    ]
+  },
+  {
+    "id": "card_1620_saxon_question",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "The Lutheran Elector",
+    "briefing": "Ferdinand cannot afford to let the Bohemian conflict become a unified Protestant cause. Saxony's elector dislikes Calvinist radicalism and values imperial order, but he also needs visible protection for Lutheran rights.",
+    "situation": "John George of Saxony is Lutheran, but he fears disorder and values imperial legality. He may help isolate Frederick if you make this a question of law rather than a Catholic crusade.",
+    "historian_note": "Saxony is modeled as a legalist Protestant power, not as a simple confessional enemy. The election capitulation gives Ferdinand a direct vocabulary for reassurance: religious peace, Landfrieden, estate rights, and due process.",
+    "source_refs": ["src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_reassure_saxony",
+        "label": "Promise Saxony that the religious peace and estate rights will be respected.",
+        "consequence": "Saxon cooperation becomes easier. Catholic hardliners mutter that the emperor bargains with heresy.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -4,
+          "confessional_legitimacy": -5,
+          "imperial_authority": 4
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_pressure_saxony",
+        "label": "Pressure Saxony to prove loyalty before debating legal assurances.",
+        "consequence": "You assert imperial command, but Saxony hears obedience being placed before the law you swore to uphold.",
+        "effects": {
+          "imperial_authority": 6,
+          "estate_trust": -7,
+          "foreign_intervention_risk": 3,
+          "dynastic_security": 3
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_ignore_saxony",
+        "label": "Let Bavaria and Catholic allies carry the matter; Saxony can follow or stand aside.",
+        "consequence": "Catholic unity is cleaner. Protestant reassurance is not, and the electoral-constitutional language that could isolate Frederick goes unused.",
+        "effects": {
+          "confessional_legitimacy": 8,
+          "military_dependence": 7,
+          "estate_trust": -8,
+          "foreign_intervention_risk": 4
+        },
+        "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_wahlkapitulation_limits_imperial_freedom"]
+      }
+    ]
+  },
+  {
+    "id": "card_1620_white_mountain_aftermath",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "November 1620",
+    "title": "After White Mountain",
+    "briefing": "Bavarian and imperial force has broken the rebel army outside Prague. Frederick has fled, but the victory now has to be translated into law, punishment, property, and obedience.",
+    "situation": "The rebel army has been broken outside Prague. Victory is real, but its meaning is undecided. Punishment, mercy, confiscation, and restoration all point toward different futures.",
+    "historian_note": "The card does not assume victory automatically produces stability. It asks what kind of victory Ferdinand makes.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm", "claim_legalism_reassures_estates"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_exemplary_punishment",
+        "label": "Make examples of leading rebels and restructure Bohemia decisively.",
+        "consequence": "Habsburg command tightens. The lesson travels farther than Prague.",
+        "effects": {
+          "imperial_authority": 12,
+          "confessional_legitimacy": 10,
+          "dynastic_security": 12,
+          "estate_trust": -14,
+          "foreign_intervention_risk": 7
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm"]
+      },
+      {
+        "id": "opt_selective_punishment",
+        "label": "Punish leaders but preserve enough law to separate rebels from estates.",
+        "consequence": "Your settlement is severe but legible. It leaves less fuel for moderates to panic.",
+        "effects": {
+          "imperial_authority": 7,
+          "confessional_legitimacy": 4,
+          "dynastic_security": 8,
+          "estate_trust": -4,
+          "foreign_intervention_risk": 2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_harsh_bohemian_punishment_alarm"]
+      },
+      {
+        "id": "opt_amnesty_for_oaths",
+        "label": "Offer broad amnesty to estates that swear renewed obedience.",
+        "consequence": "Fear recedes, but Catholic allies see a chance for restoration slipping away.",
+        "effects": {
+          "estate_trust": 14,
+          "foreign_intervention_risk": -5,
+          "confessional_legitimacy": -9,
+          "imperial_authority": -4,
+          "dynastic_security": 3
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1621_confiscations",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1621",
+    "title": "Lands for Loyalty",
+    "briefing": "The crown has defeated the revolt, but it still owes soldiers, allies, and loyal nobles. Rebel property offers money and reward, while every confiscation teaches the defeated what Habsburg victory means.",
+    "situation": "Confiscated rebel property can pay debts, reward loyalists, and remake Bohemia's ruling class. It can also convince every estate that defeat means social death.",
+    "historian_note": "Confiscation is modeled as fiscal policy, social transformation, and a fear signal at once.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_large_confiscations",
+        "label": "Use large confiscations to reward loyal Catholics and fund the settlement.",
+        "consequence": "Money and loyalty flow through confiscated land. So does terror of imperial victory.",
+        "effects": {
+          "fiscal_capacity": 10,
+          "confessional_legitimacy": 10,
+          "dynastic_security": 8,
+          "estate_trust": -13,
+          "devastation": 5
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm"]
+      },
+      {
+        "id": "opt_limited_confiscations",
+        "label": "Confiscate selectively and keep a public legal record of each case.",
+        "consequence": "The settlement pays less quickly, but it looks less like appetite wearing a crown.",
+        "effects": {
+          "fiscal_capacity": 4,
+          "confessional_legitimacy": 4,
+          "dynastic_security": 5,
+          "estate_trust": -3
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_commute_to_fines",
+        "label": "Commute many confiscations to fines and renewed oaths.",
+        "consequence": "You collect less and transform less, but you leave more people with something to lose by rebelling again.",
+        "effects": {
+          "fiscal_capacity": -4,
+          "estate_trust": 10,
+          "confessional_legitimacy": -6,
+          "dynastic_security": 2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1621_spanish_rhine",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1621",
+    "title": "The Spanish Road",
+    "briefing": "The Palatine question pulls the war toward the Rhine, where Spanish Habsburg interests and the Dutch war matter. Ferdinand's family can help, but their help makes the imperial crisis look European.",
+    "situation": "Spanish Habsburg interests align with yours against Frederick, but their Rhine concerns are tied to the Dutch war. Help from Madrid can make the Palatinate a European hinge.",
+    "historian_note": "The card abstracts Spanish Habsburg strategic interest without pretending the Empire and Spain had identical goals. Ferdinand's capitulation makes foreign alliances and foreign troops a constitutional sensitivity, not merely a diplomatic preference.",
+    "source_refs": ["src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_parker_thirty_years_war"],
+    "causal_claim_ids": ["claim_spanish_corridor_widens_war", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_coordinate_with_spain",
+        "label": "Coordinate closely with Spain in the Palatinate and along the Rhine.",
+        "consequence": "Dynastic power gathers. So do the anxieties of every power watching the Rhine.",
+        "effects": {
+          "dynastic_security": 10,
+          "fiscal_capacity": 5,
+          "foreign_intervention_risk": 12,
+          "estate_trust": -4
+        },
+        "causal_claim_ids": ["claim_spanish_corridor_widens_war", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_keep_spanish_distance",
+        "label": "Accept Spanish help quietly but keep imperial policy visibly separate.",
+        "consequence": "You gain some help without making the Empire look like Madrid's instrument.",
+        "effects": {
+          "dynastic_security": 5,
+          "fiscal_capacity": 2,
+          "foreign_intervention_risk": 4,
+          "estate_trust": 2
+        },
+        "causal_claim_ids": ["claim_spanish_corridor_widens_war", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_decline_spanish_role",
+        "label": "Keep Spain at arm's length and frame the matter as purely imperial.",
+        "consequence": "The legal story is cleaner. The practical resources are thinner.",
+        "effects": {
+          "estate_trust": 7,
+          "foreign_intervention_risk": -6,
+          "fiscal_capacity": -5,
+          "dynastic_security": -4
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1622_league_finance",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1622",
+    "title": "Who Pays the League?",
+    "briefing": "Victory has not ended the bills. The League, imperial officers, creditors, and occupied territories all press on the same fragile fiscal system.",
+    "situation": "Armies do not live on legitimacy. The Catholic League expects support, officers expect pay, and territories under contribution feel the war in barns and town halls.",
+    "historian_note": "This card makes finance a central political constraint rather than a background number.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"],
+    "causal_claim_ids": ["claim_army_finance_devastation", "claim_bavarian_help_leverage"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_contribution_system",
+        "label": "Authorize heavier contributions from occupied and loyal territories alike.",
+        "consequence": "The army stays fed. The countryside learns that loyalty is not immunity.",
+        "effects": {
+          "imperial_authority": 8,
+          "fiscal_capacity": 5,
+          "devastation": 12,
+          "estate_trust": -8
+        },
+        "causal_claim_ids": ["claim_army_finance_devastation"]
+      },
+      {
+        "id": "opt_court_borrowing",
+        "label": "Borrow against future confiscations and dynastic credit.",
+        "consequence": "You spare some immediate suffering, but the court's future narrows around debt.",
+        "effects": {
+          "fiscal_capacity": -6,
+          "devastation": 2,
+          "military_dependence": 4,
+          "dynastic_security": 4
+        },
+        "causal_claim_ids": ["claim_army_finance_devastation"]
+      },
+      {
+        "id": "opt_reduce_campaign_scope",
+        "label": "Limit campaign aims until finance catches up with ambition.",
+        "consequence": "The war breathes. Your allies ask why they fought to stop short.",
+        "effects": {
+          "devastation": -6,
+          "fiscal_capacity": 5,
+          "confessional_legitimacy": -5,
+          "imperial_authority": -4,
+          "foreign_intervention_risk": -2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1622_frederick_ban",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1622",
+    "title": "The Winter King's Sentence",
+    "briefing": "Frederick's Bohemian kingship has collapsed, but his dynastic and confessional networks remain useful to Ferdinand's enemies. Punishing him can deter rebellion or turn him into a durable cause.",
+    "situation": "Frederick is beaten but not irrelevant. The question is whether to treat him as a rebel prince to be legally punished, a heretic usurper to be ruined, or a bargaining piece.",
+    "historian_note": "This card follows the enforcement logic of Ferdinand's imperial-ban declaration: Frederick is not only condemned, but cut off from service, money, provisions, munitions, obedience, and covert or open aid. That primary source proves Ferdinand's command structure; the wider political reaction still needs modern scholarship before review.",
+    "source_refs": ["src_public_reichsacht_frederick_1621", "src_burgdorf_wahlkapitulationen", "src_primary_apologia_1618_bsb11213319", "src_primary_augsburg_peace_1555_reference_translation"],
+    "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_palatinate_electorate_overreach", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_total_ban",
+        "label": "Press the full ban and cut off Frederick's helpers.",
+        "consequence": "The emperor's justice is unmistakable. Service, money, provisions, and obedience now become tests of loyalty to you.",
+        "effects": {
+          "imperial_authority": 11,
+          "confessional_legitimacy": 7,
+          "estate_trust": -10,
+          "foreign_intervention_risk": 8
+        },
+        "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_palatinate_electorate_overreach", "claim_wahlkapitulation_limits_imperial_freedom"]
+      },
+      {
+        "id": "opt_conditional_sentence",
+        "label": "Delay execution if Frederick renounces Bohemia and disarms.",
+        "consequence": "Frederick is humbled without making every Protestant prince imagine his own ruin.",
+        "effects": {
+          "imperial_authority": 5,
+          "estate_trust": 4,
+          "confessional_legitimacy": -2,
+          "foreign_intervention_risk": -2
+        },
+        "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_use_as_bargaining_piece",
+        "label": "Use Frederick's status as pressure for a broader peace.",
+        "consequence": "The door to peace stays open. Your allies smell softness, and Frederick's networks keep breathing.",
+        "effects": {
+          "foreign_intervention_risk": -5,
+          "estate_trust": 7,
+          "imperial_authority": -6,
+          "confessional_legitimacy": -7,
+          "military_dependence": 2
+        },
+        "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1622_catholic_restoration",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1622",
+    "title": "Restoration or Pacification",
+    "briefing": "Catholic allies expect the victories in Bohemia and the Palatinate to mean more than military order. Ferdinand must decide whether restoration should follow victory immediately or wait behind political consolidation.",
+    "situation": "Catholic restoration networks see providence in victory. Lutheran princes and imperial cities see the possibility that Bohemia is a rehearsal for them.",
+    "historian_note": "This card previews later overreach dynamics without jumping ahead to the Edict of Restitution.",
+    "source_refs": ["src_primary_augsburg_peace_1555_reference_translation", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"],
+    "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm", "claim_legalism_reassures_estates"],
+    "review_status": "inferred",
+    "options": [
+      {
+        "id": "opt_push_restoration",
+        "label": "Encourage visible Catholic restoration in recovered lands.",
+        "consequence": "Catholic confidence surges. Protestant alarm learns to organize itself.",
+        "effects": {
+          "confessional_legitimacy": 13,
+          "imperial_authority": 5,
+          "estate_trust": -12,
+          "foreign_intervention_risk": 8
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm"]
+      },
+      {
+        "id": "opt_sequence_restoration",
+        "label": "Sequence restoration slowly, after oaths and fiscal order.",
+        "consequence": "The settlement advances, but not fast enough for the most zealous allies.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 3,
+          "fiscal_capacity": 4,
+          "foreign_intervention_risk": 1
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_suspend_restoration",
+        "label": "Suspend major restoration measures to calm Lutheran and city opinion.",
+        "consequence": "Moderates breathe easier. Catholic allies wonder what victory was for.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -6,
+          "confessional_legitimacy": -11,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  },
+  {
+    "id": "card_1621_ban_of_frederick",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1621_reichsacht_frederick",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "January 1621",
+    "title": "The Ban of Frederick",
+    "briefing": "White Mountain has made Frederick vulnerable, but legal punishment of an elector is not ordinary discipline. Ferdinand must make the ban look like lawful imperial defense rather than raw Habsburg revenge.",
+    "situation": "Frederick has fled, but not vanished. His claim still gathers money, men, and sympathy. Your chancery can name him an outlaw of the Empire and command every subject, estate, officer, and vassal to deny him aid.",
+    "historian_note": "This card is grounded in Ferdinand's 22 January 1621 imperial-ban declaration, read against the 1619 capitulation's due-process promise. The decree says Frederick had incurred the Landfrieden penalties ipso facto, yet Ferdinand still issues a confirming declaration; that is exactly where legal force and process anxiety meet. The documents prove Ferdinand's legal framing and constitutional constraint, not by themselves how every estate interpreted the ban.",
+    "source_refs": ["src_public_reichsacht_frederick_1621", "src_burgdorf_wahlkapitulationen"],
+    "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_issue_upper_ban",
+        "label": "Declare Frederick under the imperial and upper ban.",
+        "consequence": "Your victory gains legal teeth. But every estate now studies whether cause, hearing, and process can bend under pressure.",
+        "effects": {
+          "imperial_authority": 12,
+          "dynastic_security": 9,
+          "estate_trust": -8,
+          "foreign_intervention_risk": 5
+        },
+        "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_wahlkapitulation_limits_imperial_freedom"],
+        "historical_option": true
+      },
+      {
+        "id": "opt_conditional_pardon",
+        "label": "Offer pardon if Frederick renounces Bohemia and disarms.",
+        "consequence": "Moderates see an exit from the crisis. Catholic allies see a rebel king being given one more door.",
+        "effects": {
+          "imperial_authority": -5,
+          "confessional_legitimacy": -6,
+          "estate_trust": 10,
+          "foreign_intervention_risk": -4,
+          "dynastic_security": 2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_narrow_ban_reassurance",
+        "label": "Outlaw Frederick, but publicly reassure neutral princes and Palatine subjects.",
+        "consequence": "The decree isolates one man instead of threatening every estate. This restraint will need allies willing to obey the legal boundary.",
+        "effects": {
+          "imperial_authority": 7,
+          "dynastic_security": 6,
+          "estate_trust": 4,
+          "foreign_intervention_risk": -2,
+          "military_dependence": 3
+        },
+        "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"]
+      }
+    ]
+  },
+  {
+    "id": "card_1623_electoral_transfer",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1623_electoral_transfer",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1623",
+    "title": "Maximilian's Price",
+    "briefing": "Bavaria helped save Ferdinand when his own resources were thin. The earlier bargain now comes due in the Palatinate, where rewarding Maximilian means altering the electoral balance of the Empire.",
+    "situation": "Maximilian did not save your cause as an act of poetry. The secret promise behind the Bavarian bargain now presses forward: Palatine lands and Frederick's electoral dignity can reward Bavaria, punish rebellion, and remake the balance among electors.",
+    "historian_note": "Valeš connects the 1623 settlement to an earlier secret oral promise attached to the 1619 Munich Treaty: Ferdinand offered Maximilian the Palatine electoral dignity and conquered Palatine territories, while knowing the promise exceeded his legal competence and would alarm German princes. The transfer option follows the historical direction; alternatives are plausible game abstractions, not asserted certainties.",
+    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"],
+    "causal_claim_ids": ["claim_palatinate_electorate_overreach", "claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_transfer_to_bavaria",
+        "label": "Fulfill the promise and transfer the electoral dignity to Maximilian.",
+        "consequence": "Bavaria is rewarded and Catholic victory is crowned. The electors see that an emergency bargain can become a new constitutional fact.",
+        "effects": {
+          "confessional_legitimacy": 12,
+          "imperial_authority": 8,
+          "military_dependence": 12,
+          "estate_trust": -14,
+          "foreign_intervention_risk": 10
+        },
+        "causal_claim_ids": ["claim_palatinate_electorate_overreach", "claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+        "historical_option": true
+      },
+      {
+        "id": "opt_delay_transfer",
+        "label": "Delay the dignity while granting Bavaria security and revenues.",
+        "consequence": "The constitutional shock is softened, but Maximilian's patience becomes another debt with interest.",
+        "effects": {
+          "estate_trust": 5,
+          "foreign_intervention_risk": -2,
+          "military_dependence": 6,
+          "fiscal_capacity": -6,
+          "confessional_legitimacy": -3
+        },
+        "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_preserve_electoral_balance",
+        "label": "Punish Frederick but preserve the electoral balance for now.",
+        "consequence": "Electors are reassured by restraint, and Bavaria is not. A disappointed ally is still an armed ally.",
+        "effects": {
+          "estate_trust": 12,
+          "foreign_intervention_risk": -5,
+          "confessional_legitimacy": -8,
+          "military_dependence": 8,
+          "imperial_authority": -4
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_bavarian_help_leverage", "claim_wahlkapitulation_limits_imperial_freedom"]
+      }
+    ]
+  },
+  {
+    "id": "card_1623_peace_feelers",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "Late 1623",
+    "title": "A Victory That Will Not End",
+    "briefing": "By 1623, Ferdinand has survived the opening crisis and punished the Bohemian-Palatine challenge. Yet the settlement leaves debts, displaced elites, anxious princes, and allies who expect rewards.",
+    "situation": "Bohemia is subdued and Frederick is broken, yet the Empire is not calm. Every settlement creates a constituency: rewarded allies, frightened estates, ruined towns, unpaid soldiers, and watching foreign powers.",
+    "historian_note": "This closing MVP card asks whether the player has made consolidation or escalation more likely.",
+    "source_refs": ["src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"],
+    "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_army_finance_devastation"],
+    "review_status": "inferred",
+    "options": [
+      {
+        "id": "opt_call_imperial_settlement",
+        "label": "Call for a formal imperial settlement to lock in obedience and reassure moderates.",
+        "consequence": "You try to turn victory back into law. It is slower than command but less combustible.",
+        "effects": {
+          "imperial_authority": 4,
+          "estate_trust": 10,
+          "foreign_intervention_risk": -7,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_continue_pressure",
+        "label": "Keep pressure on remaining opposition until no prince doubts imperial reach.",
+        "consequence": "Authority looks grand from Vienna. From Protestant courts, it looks like a forecast.",
+        "effects": {
+          "imperial_authority": 10,
+          "confessional_legitimacy": 6,
+          "estate_trust": -10,
+          "foreign_intervention_risk": 10,
+          "devastation": 6
+        },
+        "causal_claim_ids": ["claim_harsh_bohemian_punishment_alarm", "claim_army_finance_devastation"]
+      },
+      {
+        "id": "opt_demobilize_and_rebuild",
+        "label": "Demobilize what you can and spend political capital on fiscal repair.",
+        "consequence": "The war machine cools, but allies and officers who profited from motion resist stillness.",
+        "effects": {
+          "fiscal_capacity": 10,
+          "devastation": -8,
+          "military_dependence": -5,
+          "imperial_authority": -5,
+          "confessional_legitimacy": -3
+        },
+        "causal_claim_ids": ["claim_army_finance_devastation"]
+      }
+    ]
+  },
+  {
+    "id": "card_1629_restitution_edict",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1629_restitution_edict",
+    "phase_id": "phase_restitution_overreach",
+    "date_label": "March 1629",
+    "title": "The Edict of Restitution",
+    "briefing": "Imperial victories over Bohemia, the Palatinate, and Denmark make a definitive religious settlement look possible. The danger is that a legal triumph may frighten the very Lutheran princes needed for peace.",
+    "situation": "Victory has made the old religious settlement look enforceable again. Your jurists say the Peace of Augsburg, the imperial records, and your election oath give you enough ground to restore ecclesiastical goods through commissioners.",
+    "historian_note": "This card is grounded in Ferdinand's Edict of Restitution. The source gives the official legal-confessional case; the wider causal consequences still need direct review in modern scholarship.",
+    "source_refs": ["src_public_restitutionsedikt_1629"],
+    "causal_claim_ids": ["claim_restitution_edict_overreach", "claim_legalism_reassures_estates"],
+    "review_status": "needs_review",
+    "options": [
+      {
+        "id": "opt_issue_restitution_edict",
+        "label": "Issue the edict and send commissioners to enforce restitution.",
+        "consequence": "Catholic restoration gains the force of imperial office. Protestant estates hear the settlement being rewritten from Vienna.",
+        "effects": {
+          "imperial_authority": 14,
+          "confessional_legitimacy": 16,
+          "estate_trust": -18,
+          "foreign_intervention_risk": 14,
+          "devastation": 6
+        },
+        "causal_claim_ids": ["claim_restitution_edict_overreach"],
+        "historical_option": true
+      },
+      {
+        "id": "opt_seek_diet_interpretation",
+        "label": "Seek elector or Diet-backed interpretation before execution.",
+        "consequence": "The law remains more shared, but restoration slows and Catholic allies see victory losing its nerve.",
+        "effects": {
+          "imperial_authority": -4,
+          "confessional_legitimacy": -8,
+          "estate_trust": 13,
+          "foreign_intervention_risk": -7,
+          "military_dependence": -2
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_narrow_restitution_cases",
+        "label": "Enforce only the clearest restitution cases for now.",
+        "consequence": "The edict has teeth, but not yet jaws. Everyone presses you to define what comes next.",
+        "effects": {
+          "imperial_authority": 6,
+          "confessional_legitimacy": 5,
+          "estate_trust": -3,
+          "foreign_intervention_risk": 3,
+          "fiscal_capacity": -2
+        },
+        "causal_claim_ids": ["claim_restitution_edict_overreach", "claim_legalism_reassures_estates"]
+      },
+      {
+        "id": "opt_trade_restitution_for_peace",
+        "label": "Use restitution claims as bargaining material for a wider peace.",
+        "consequence": "The Empire may breathe. The most committed Catholic restorers will remember what you left on the table.",
+        "effects": {
+          "imperial_authority": -8,
+          "confessional_legitimacy": -12,
+          "estate_trust": 16,
+          "foreign_intervention_risk": -10,
+          "devastation": -4
+        },
+        "causal_claim_ids": ["claim_legalism_reassures_estates"]
+      }
+    ]
+  }
+]

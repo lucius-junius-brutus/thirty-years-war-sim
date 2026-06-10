@@ -1,0 +1,170 @@
+[
+  {
+    "id": "dp_1618_defenestration_response",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "May-June 1618",
+    "situation": "The Defenestration of Prague turns a constitutional-confessional confrontation into an open revolt.",
+    "known_constraints": [
+      "Limited immediate military means",
+      "Need to defend dynastic rights",
+      "Risk of frightening estates beyond Bohemia",
+      "Bohemian Protestants can point to the 1609 Letter of Majesty as a recorded royal promise about religion, schools, churches, and estate defenders"
+    ],
+    "plausible_options": [
+      "Punitive mobilization",
+      "Legal isolation of rebels while acknowledging recorded privileges",
+      "Negotiated confirmation of selected Letter-of-Majesty protections"
+    ],
+    "stakes": "Whether the crisis remains Bohemian or becomes an imperial alarm bell about the safety of estate liberties.",
+    "causal_claim_ids": ["claim_legalism_reassures_estates", "claim_harsh_bohemian_punishment_alarm", "claim_letter_majesty_bohemian_liberties"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_primary_augsburg_peace_1555_reference_translation", "src_primary_apologia_1618_bsb11213319", "src_public_letter_of_majesty_1609_cz_wikisource"]
+  },
+  {
+    "id": "dp_1619_frankfurt_coronation_crisis",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "August-September 1619",
+    "situation": "Ferdinand's imperial election and coronation at Frankfurt take place while Bohemian, Austrian, and confessional negotiations are already under military and legal pressure.",
+    "known_constraints": [
+      "A contemporary pamphlet frames the coronation together with Bohemian and German crisis news rather than as a calm imperial transition",
+      "Bohemian and Lower Austrian military pressure is active, including Thurn's movement and demands around Protestant/Catholic equality and privilege",
+      "The ceremony depends on elector and ambassador participation, imperial regalia, public acclamation, and Golden Bull offices",
+      "The coronation oath publicly presents Ferdinand as a ruler bound to justice, the church, the Empire, and the duties of a good emperor",
+      "Ferdinand's election capitulation adds a concrete legal text behind the ceremonial oath language",
+      "Using the imperial title as a pure command tool may strengthen authority while making estate observers more attentive to oath and procedure"
+    ],
+    "plausible_options": [
+      "Use the Frankfurt coronation to claim a higher imperial mandate against Prague",
+      "Pair the coronation with public reassurance that lawful privileges and elector consultation will be honored",
+      "Keep the imperial ceremony separate from the Bohemian dispute and avoid making the revolt a test of the new crown"
+    ],
+    "stakes": "Whether the new imperial crown becomes a stabilizing source of law-bound authority or a symbol that Ferdinand will use imperial office to overwhelm contested estate liberties.",
+    "causal_claim_ids": ["claim_frankfurt_coronation_oath_legitimacy", "claim_bohemian_rejection_legitimacy_crisis", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_public_relation_ferdinand_election_coronation_1620", "src_burgdorf_wahlkapitulationen", "src_public_bohemian_reasons_reject_ferdinand_1619"]
+  },
+  {
+    "id": "dp_1620_bavarian_assistance",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1619-1620",
+    "situation": "Ferdinand needs military help against the Bohemian Confederation and Frederick V while Bethlen's pressure makes delay dangerous.",
+    "known_constraints": [
+      "Maximilian and the Catholic League can supply ready military organization, but Munich terms give Bavaria direction of Catholic defense preparations",
+      "The Munich Treaty bars Ferdinand from separate negotiations, correspondence, peace, or truces with Protestants without Bavarian knowledge, will, and cooperation",
+      "Compensation obligations may be secured against Habsburg lands and later claims",
+      "Secret Palatine and electoral promises may bind the immediate military bargain to a later constitutional crisis",
+      "Command coordination between imperial officers and Maximilian remains politically sensitive",
+      "Ferdinand's election capitulation makes law, elector consultation, fiscal burdens, and foreign troops sensitive",
+      "Imperial legitimacy matters as much as battlefield capacity"
+    ],
+    "plausible_options": [
+      "Accept Maximilian's Munich terms for League command, compensation, and Bavarian participation in settlement",
+      "Seek broader elector and Catholic-estate subscription before giving Bavaria so much leverage",
+      "Reject the separate-peace limits and delay while building a more independent imperial force"
+    ],
+    "stakes": "Victory may come at the price of Bavarian leverage over command, compensation, and peace policy.",
+    "causal_claim_ids": ["claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+  },
+  {
+    "id": "dp_1623_electoral_transfer",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "1623",
+    "situation": "The Palatine defeat opens the question of Frederick's electoral dignity, Maximilian's reward, and whether an emergency promise made in 1619 can be turned into imperial law.",
+    "known_constraints": [
+      "Maximilian expects compensation for Bavarian and Catholic League support",
+      "Valeš identifies a secret oral promise in which Ferdinand offered Maximilian the Palatine electoral dignity and conquered Palatine territories",
+      "Ferdinand knew this promise exceeded his legal competence and would provoke German princes across confessional lines",
+      "Electors fear precedent",
+      "Catholic allies expect punishment",
+      "Ferdinand's election capitulation promises estate rights, due process, and the electors' free constitutional role",
+      "The transfer can satisfy Bavaria while making victory look like a change in the Empire's constitutional balance"
+    ],
+    "plausible_options": [
+      "Transfer the dignity to Maximilian and present it as lawful punishment and compensation",
+      "Grant Bavaria security and revenues while delaying or narrowing the electoral transfer",
+      "Punish Frederick while preserving the electoral balance for now"
+    ],
+    "stakes": "The reward that secures Bavaria can also teach every elector that defeat may rewrite the constitutional order.",
+    "causal_claim_ids": ["claim_palatinate_electorate_overreach", "claim_bavarian_help_leverage", "claim_munich_treaty_restricts_ferdinand_policy", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy", "src_asch_thirty_years_war", "src_parker_thirty_years_war"]
+  },
+  {
+    "id": "dp_1619_bohemian_rejection_legitimacy",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "August 1619",
+    "situation": "The Bohemian estates publish a case rejecting Ferdinand and justifying the election of another king.",
+    "known_constraints": [
+      "The estates claim ancient elective privileges and conditional acceptance",
+      "The Letter of Majesty gives the estates a prior royal-charter language for religion, institutions, and recorded liberties",
+      "The same moment overlaps with Ferdinand's imperial election",
+      "Answering the argument may slow coercive response",
+      "Ignoring the argument lets opponents define the legitimacy crisis"
+    ],
+    "plausible_options": [
+      "Answer the estates' legal case point by point and distinguish rebellion from chartered liberties",
+      "Prioritize imperial election and treat Bohemian arguments as subordinate",
+      "Denounce the Letter-of-Majesty argument as treasonous cover and rally Catholic allies"
+    ],
+    "stakes": "Whether Ferdinand can make the conflict look like a lawful restoration of order rather than a dynastic-confessional conquest.",
+    "causal_claim_ids": ["claim_bohemian_rejection_legitimacy_crisis", "claim_legalism_reassures_estates", "claim_letter_majesty_bohemian_liberties"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_public_bohemian_reasons_reject_ferdinand_1619", "src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy", "src_asch_thirty_years_war"]
+  },
+  {
+    "id": "dp_1621_reichsacht_frederick",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "January 1621",
+    "situation": "After White Mountain, Frederick V has fled but still claims titles, seeks help, and remains the legal-political center of the Palatine and Bohemian challenge. Ferdinand can turn battlefield victory into an imperial-law judgment.",
+    "known_constraints": [
+      "Frederick accepted the Bohemian crown and is framed by Ferdinand's declaration as head of the rebellion",
+      "Imperial law, the Golden Bull, and the Landfrieden provide a legal language for punishment",
+      "The decree says Frederick had incurred Landfrieden penalties ipso facto but still issues a confirming imperial declaration",
+      "Ferdinand's election capitulation requires cause, hearing, and established process before the imperial ban",
+      "Helping Frederick with service, money, provisions, munitions, obedience, or covert/open aid can be threatened with the same imperial ban",
+      "The decree releases Palatine subjects and vassals from obedience to Frederick, which helps isolate him but makes imperial authority feel capable of dissolving local bonds",
+      "Broad enforcement risks alarming other estates and depends on allies to execute"
+    ],
+    "plausible_options": [
+      "Declare Frederick under the imperial and upper ban",
+      "Offer conditional pardon for renunciation and disarmament",
+      "Aim the ban at Frederick while publicly reassuring neutral estates and Palatine subjects"
+    ],
+    "stakes": "Whether Ferdinand converts victory into lawful isolation of Frederick or into a precedent that makes imperial punishment look open-ended.",
+    "causal_claim_ids": ["claim_reichsacht_isolates_frederick", "claim_legalism_reassures_estates", "claim_wahlkapitulation_limits_imperial_freedom"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_public_reichsacht_frederick_1621", "src_burgdorf_wahlkapitulationen"]
+  },
+  {
+    "id": "dp_1629_restitution_edict",
+    "actor_or_power_center_id": "actor_ferdinand_ii",
+    "date_label": "March 1629",
+    "situation": "Imperial arms have created a rare opening. Ferdinand can declare a binding interpretation of the religious peace and send commissioners to restore ecclesiastical goods, or he can seek a slower constitutional settlement.",
+    "known_constraints": [
+      "The edict frames action as obedience to the Peace of Augsburg and Ferdinand's election capitulation",
+      "Catholic actors expect restoration of ecclesiastical institutions and goods",
+      "Protestant estates and cities may see unilateral interpretation as imperial overreach",
+      "Commissioners and execution require cooperation, intimidation, or force across many territories",
+      "The religious peace is explicitly limited to Catholics and adherents of the unaltered Augsburg Confession"
+    ],
+    "plausible_options": [
+      "Issue the edict and enforce restitution through imperial commissioners",
+      "Seek Diet or elector-backed interpretation before broad enforcement",
+      "Enforce only the clearest cases while postponing the wider program",
+      "Trade partial restitution concessions for a broader imperial peace"
+    ],
+    "stakes": "Whether Ferdinand converts military success into a legal-confessional settlement, or creates the impression that imperial law now means unlimited Habsburg-Catholic enforcement.",
+    "causal_claim_ids": ["claim_restitution_edict_overreach", "claim_legalism_reassures_estates"],
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": ["src_public_restitutionsedikt_1629"]
+  }
+]

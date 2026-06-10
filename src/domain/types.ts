@@ -1,0 +1,198 @@
+export type ReviewStatus = "draft" | "needs_review" | "reviewed" | "inferred";
+export type Confidence = "low" | "medium" | "high";
+export type EvidenceLayer = "primary" | "scholarly" | "reference";
+export type AccessStatus =
+  | "downloaded"
+  | "reference_only"
+  | "official_ebook_or_library_access"
+  | "local_copy_needed"
+  | "user_provided_file_needed"
+  | "pending_download"
+  | "sample_only";
+export type ReadingStatus =
+  | "not_started"
+  | "needs_direct_reading"
+  | "in_progress"
+  | "notes_recorded"
+  | "extraction_ready";
+
+export type PressureKey =
+  | "imperial_authority"
+  | "confessional_legitimacy"
+  | "estate_trust"
+  | "fiscal_capacity"
+  | "military_dependence"
+  | "foreign_intervention_risk"
+  | "dynastic_security"
+  | "devastation";
+
+export type PressureMap = Record<PressureKey, number>;
+
+export interface SourceRecord {
+  id: string;
+  title: string;
+  author: string;
+  year: number;
+  source_type: string;
+  evidence_layer: EvidenceLayer;
+  access_status: AccessStatus;
+  reading_status: ReadingStatus;
+  copyright_status: string;
+  use_policy: string;
+  url: string;
+  local_paths?: string[];
+  notes_path?: string;
+  notes: string;
+}
+
+export interface ScholarlyReadingQueueItem {
+  source_id: string;
+  priority: number;
+  read_for: string[];
+  status: ReadingStatus;
+  access_notes: string;
+  notes_path?: string;
+}
+
+export interface PhaseRecord {
+  id: string;
+  name: string;
+  start_year: number;
+  end_year: number;
+  summary: string;
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
+export interface ActorRecord {
+  id: string;
+  name: string;
+  lifespan: string;
+  actor_type: string;
+  confession: string;
+  summary: string;
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
+export interface PowerCenterRecord {
+  id: string;
+  name: string;
+  power_center_type: string;
+  summary: string;
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
+export interface RelationshipRecord {
+  id: string;
+  from_id: string;
+  to_id: string;
+  dimensions: Record<
+    | "confessional_alignment"
+    | "dynastic_interest"
+    | "constitutional_alignment"
+    | "military_dependence"
+    | "financial_dependence"
+    | "territorial_ambition"
+    | "foreign_policy_pressure"
+    | "personal_trust"
+    | "strategic_dependence"
+    | "fear_of_overreach",
+    number
+  >;
+  summary: string;
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
+export interface GameVariableRecord {
+  id: PressureKey;
+  name: string;
+  description: string;
+  low_label: string;
+  high_label: string;
+  high_is_dangerous: boolean;
+}
+
+export interface PlayableRoleRecord {
+  id: string;
+  actor_id: string;
+  name: string;
+  office: string;
+  why_playable: string;
+  player_wants: string[];
+  constraints: string[];
+  resources: string[];
+  success_conditions: string[];
+  failure_conditions: string[];
+  mvp_suitable: boolean;
+  initial_pressures: PressureMap;
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
+export interface CausalClaimRecord {
+  id: string;
+  historical_fact: string;
+  source_backed_interpretation: string;
+  causal_claim: string;
+  game_abstraction: string;
+  player_facing_text: string;
+  mechanical_effect: string;
+  confidence: Confidence;
+  review_status: ReviewStatus;
+  source_refs: string[];
+}
+
+export interface DecisionPointRecord {
+  id: string;
+  actor_or_power_center_id: string;
+  date_label: string;
+  situation: string;
+  known_constraints: string[];
+  plausible_options: string[];
+  stakes: string;
+  causal_claim_ids: string[];
+  confidence: Confidence;
+  review_status: ReviewStatus;
+  source_refs: string[];
+}
+
+export interface CardOptionRecord {
+  id: string;
+  label: string;
+  consequence: string;
+  effects: Partial<PressureMap>;
+  causal_claim_ids: string[];
+  historical_option?: boolean;
+}
+
+export interface CardRecord {
+  id: string;
+  role_id: string;
+  decision_point_id?: string;
+  phase_id: string;
+  date_label: string;
+  title: string;
+  briefing: string;
+  situation: string;
+  historian_note: string;
+  source_refs: string[];
+  causal_claim_ids: string[];
+  review_status: ReviewStatus;
+  options: CardOptionRecord[];
+}
+
+export interface GameDatabase {
+  sources: SourceRecord[];
+  phases: PhaseRecord[];
+  actors: ActorRecord[];
+  power_centers: PowerCenterRecord[];
+  relationships: RelationshipRecord[];
+  game_variables: GameVariableRecord[];
+  playable_roles: PlayableRoleRecord[];
+  causal_claims: CausalClaimRecord[];
+  decision_points: DecisionPointRecord[];
+  cards: CardRecord[];
+}
