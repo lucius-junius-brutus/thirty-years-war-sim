@@ -17,7 +17,11 @@ export function loadGame(storage: StorageAdapter): GameState | null {
   if (!value) {
     return null;
   }
-  return JSON.parse(value) as GameState;
+  const state = JSON.parse(value) as GameState;
+  return {
+    ...state,
+    memory_tags: Array.isArray(state.memory_tags) ? state.memory_tags : [],
+  };
 }
 
 export function clearGame(storage: StorageAdapter) {
