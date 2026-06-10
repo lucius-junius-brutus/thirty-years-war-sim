@@ -180,6 +180,23 @@ describe("game engine", () => {
     expect(notes.join(" ")).not.toMatch(/estate_trust|imperial_authority/i);
   });
 
+  it("composes the aftermath as integrated prose while retaining backend notes", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const card = getCurrentCard(gameDatabase, state)!;
+    const next = chooseOption(
+      gameDatabase,
+      state,
+      card.id,
+      "opt_augsburg_compromise_inheritance",
+    );
+    const entry = next.log.at(-1)!;
+
+    expect(entry.aftermath).toContain("The court appears as guardian");
+    expect(entry.aftermath).toContain("Moderate estates gain room");
+    expect(entry.aftermath).not.toMatch(/Consequences carried forward|[+-]\d/);
+    expect(entry.impact_notes.length).toBeGreaterThan(0);
+  });
+
   it("carries prior choices into later dispatch wording", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const firstCard = getCurrentCard(gameDatabase, state)!;

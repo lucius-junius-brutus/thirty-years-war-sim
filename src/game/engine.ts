@@ -14,6 +14,7 @@ export interface GameLogEntry {
   title: string;
   choice: string;
   consequence: string;
+  aftermath: string;
   impact_notes: string[];
   docket_changes: DocketChange[];
   causal_claim_ids: string[];
@@ -160,6 +161,8 @@ export function chooseOption(
     memory_tags: memoryTags,
   };
   const cards = getCardsForRole(database, nextState);
+  const impactNotes = describeImmediateEffects(option);
+  const docketChanges = getDocketChanges(previousCards, cards, currentCard.id);
 
   return {
     ...state,
@@ -176,8 +179,9 @@ export function chooseOption(
         title: currentCard.title,
         choice: option.label,
         consequence: option.consequence,
-        impact_notes: describeImmediateEffects(option),
-        docket_changes: getDocketChanges(previousCards, cards, currentCard.id),
+        aftermath: composeAftermath(option.consequence, impactNotes, docketChanges),
+        impact_notes: impactNotes,
+        docket_changes: docketChanges,
         causal_claim_ids: option.causal_claim_ids,
         pressure_delta: option.effects,
         memory_tags_added: option.memory_tags,
@@ -387,6 +391,54 @@ function describeImmediateEffects(option: CardOptionRecord) {
     );
 
   return [...new Set([...tagNotes, ...pressureNotes])].slice(0, 4);
+}
+
+function composeAftermath(
+  consequence: string,
+  impactNotes: string[],
+  docketChanges: DocketChange[],
+) {
+  const selectedNotes = impactNotes.slice(0, 3);
+  const docketSentence = describeDocketChanges(docketChanges);
+  const additions = [...selectedNotes, docketSentence].filter(Boolean);
+
+  if (additions.length === 0) {
+    return consequence;
+  }
+
+  return [consequence, ...additions].join(" ");
+}
+
+function describeDocketChanges(changes: DocketChange[]) {
+  if (changes.length === 0) {
+    return "";
+  }
+
+  const added = changes.filter((change) => change.kind === "added");
+  const removed = changes.filter((change) => change.kind === "removed");
+  const sentences: string[] = [];
+
+  if (added.length === 1) {
+    sentences.push(
+      `A new paper now reaches the council: ${added[0].date_label}, ${added[0].title}.`,
+    );
+  } else if (added.length > 1) {
+    sentences.push(
+      `New papers now reach the council, beginning with ${added[0].date_label}, ${added[0].title}.`,
+    );
+  }
+
+  if (removed.length === 1) {
+    sentences.push(
+      `${removed[0].date_label}, ${removed[0].title}, no longer comes forward in the same form.`,
+    );
+  } else if (removed.length > 1) {
+    sentences.push(
+      `Several expected papers fall away from the docket, including ${removed[0].date_label}, ${removed[0].title}.`,
+    );
+  }
+
+  return sentences.join(" ");
 }
 
 function describeMemoryTags(tags: string[] = []) {
