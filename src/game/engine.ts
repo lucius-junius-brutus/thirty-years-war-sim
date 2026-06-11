@@ -5,6 +5,7 @@ import type {
   PlayableRoleRecord,
   PressureConditionRecord,
   PressureMap,
+  PressureThresholdRecord,
 } from "../domain/types";
 
 export interface GameLogEntry {
@@ -52,12 +53,20 @@ export interface DesignerOptionReport {
   reason?: string;
 }
 
+export interface DesignerThresholdReport {
+  threshold_id: string;
+  label: string;
+  kind: PressureThresholdRecord["kind"];
+  pressure: keyof PressureMap;
+}
+
 export interface DesignerReport {
   current_card_id: string | null;
   visible_card_ids: string[];
   remaining_cards: DesignerCardReport[];
   skipped_cards: DesignerCardReport[];
   current_options: DesignerOptionReport[];
+  active_thresholds: DesignerThresholdReport[];
   memory_tags: string[];
   pressures: PressureMap;
 }
@@ -110,12 +119,16 @@ export function getCardsForRole(
     typeof roleOrState === "string"
       ? getRole(database, roleOrState).initial_pressures
       : roleOrState.pressures;
+  const effectiveMemoryTags =
+    typeof roleOrState === "string"
+      ? memoryTags
+      : getEffectiveMemoryTags(database, roleOrState);
 
   return database.cards
     .filter((card) => card.role_id === roleId)
-    .filter((card) => cardMatchesMemory(card, memoryTags))
+    .filter((card) => cardMatchesMemory(card, effectiveMemoryTags))
     .filter((card) => matchesPressureConditions(card.requires_pressures, pressures))
-    .map((card) => applyMemoryVariant(card, memoryTags))
+    .map((card) => applyMemoryVariant(card, effectiveMemoryTags))
     .map((card) => applyPressureVariant(card, pressures));
 }
 
@@ -249,9 +262,26 @@ export function getDesignerReport(
           };
         })
       : [],
+    active_thresholds: getActivePressureThresholds(database, state).map(
+      (threshold) => ({
+        threshold_id: threshold.id,
+        label: threshold.label,
+        kind: threshold.kind,
+        pressure: threshold.pressure,
+      }),
+    ),
     memory_tags: [...state.memory_tags],
     pressures: { ...state.pressures },
   };
+}
+
+export function getActivePressureThresholds(
+  database: GameDatabase,
+  state: GameState,
+): PressureThresholdRecord[] {
+  return database.pressure_thresholds.filter((threshold) =>
+    matchesPressureConditions([threshold.condition], state.pressures),
+  );
 }
 
 export function applyEffects(
@@ -652,6 +682,15 @@ function cardMatchesMemory(card: CardRecord, memoryTags: string[]) {
   );
 
   return hasAllRequired && !hasExcluded;
+}
+
+function getEffectiveMemoryTags(database: GameDatabase, state: GameState) {
+  return mergeMemoryTags(
+    state.memory_tags,
+    getActivePressureThresholds(database, state).flatMap(
+      (threshold) => threshold.memory_tags,
+    ),
+  );
 }
 
 function getCardAvailabilityReasons(card: CardRecord, state: GameState) {

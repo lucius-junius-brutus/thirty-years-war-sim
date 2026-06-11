@@ -3976,6 +3976,600 @@
     ]
   },
   {
+    "id": "card_threshold_estates_offer_credit",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "When estate trust is high",
+    "title": "Credit Still Offered by the Estates",
+    "briefing": "Several moderate estates answer that imperial terms can still be carried into their diets, provided old liberties are named rather than swallowed in silence.",
+    "situation": "This credit is not affection. It is a usable belief that obedience may still preserve privilege, confession, and local jurisdiction better than armed refusal.",
+    "historian_note": "Wilson repeatedly emphasizes that imperial government depended on cooperation by estates and princes, not command alone.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_legalism_reassures_estates"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_estate_trust_high"
+    ],
+    "context_links": [
+      {
+        "term": "estates",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_use_estate_credit_for_settlement",
+        "label": "Use the opening to put disputed claims before a controlled diet.",
+        "consequence": "The court spends trust on procedure. More estates remain reachable, though zealous councillors complain that law is being made slow just when victory should speak clearly.",
+        "effects": {
+          "estate_trust": -4,
+          "imperial_authority": 4,
+          "foreign_intervention_risk": -5,
+          "confessional_legitimacy": -2
+        },
+        "causal_claim_ids": [
+          "claim_legalism_reassures_estates"
+        ],
+        "memory_tags": [
+          "threshold_estate_credit_spent"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_bank_estate_credit",
+        "label": "Preserve the opening for a later settlement rather than spend it at once.",
+        "consequence": "The court avoids a quarrel today. The estates' confidence remains useful, but petitioners who expected action begin counting delay as policy.",
+        "effects": {
+          "estate_trust": 2,
+          "imperial_authority": -2,
+          "confessional_legitimacy": -2
+        },
+        "causal_claim_ids": [
+          "claim_legalism_reassures_estates"
+        ],
+        "memory_tags": [
+          "threshold_estate_credit_reserved"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_estate_guarantees",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "When estate trust collapses",
+    "title": "Guarantees Before Obedience",
+    "briefing": "Petitions arrive asking not for favor but for written security. Estates that once disputed policy now ask what prevents any privilege from being narrowed after submission.",
+    "situation": "Every concession now looks like admission of weakness, and every refusal strengthens the argument that only armed guarantees can preserve liberties.",
+    "historian_note": "The game abstracts Wilson's wider constitutional point: fear of overreach made settlement harder even after imperial victories.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_restitution_edict_overreach"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_estate_trust_crisis"
+    ],
+    "context_links": [
+      {
+        "term": "privilege",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_issue_estate_guarantees",
+        "label": "Offer written guarantees while preserving obedience in form.",
+        "consequence": "Some moderates receive language they can carry home. Catholic hardliners and victorious officers hear that rebellion has taught the court to bargain.",
+        "effects": {
+          "estate_trust": 8,
+          "imperial_authority": -5,
+          "confessional_legitimacy": -4,
+          "foreign_intervention_risk": -4
+        },
+        "causal_claim_ids": [
+          "claim_restitution_edict_overreach"
+        ],
+        "memory_tags": [
+          "threshold_estate_guarantees_offered"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_refuse_estate_guarantees",
+        "label": "Refuse guarantees and insist that obedience precede every privilege.",
+        "consequence": "The court keeps the order of authority intact. The petitions leave unanswered, and foreign patrons gain another file of grievances.",
+        "effects": {
+          "imperial_authority": 5,
+          "estate_trust": -7,
+          "foreign_intervention_risk": 6
+        },
+        "causal_claim_ids": [
+          "claim_restitution_edict_overreach"
+        ],
+        "memory_tags": [
+          "threshold_estate_guarantees_refused"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_army_arrears",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "When army finance breaks",
+    "title": "Arrears on Every Table",
+    "briefing": "Paymasters, colonels, creditors, and allied agents arrive with the same account in different hands. Soldiers can be promised discipline, but not fed by paper.",
+    "situation": "The question before council is no longer how to finance policy. It is which policy survives the arrears.",
+    "historian_note": "Wilson treats war finance and contribution systems as central to the war's political escalation.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_army_finance_devastation"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_fiscal_capacity_crisis"
+    ],
+    "context_links": [
+      {
+        "term": "contribution",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_shift_arrears_to_contributions",
+        "label": "Authorize heavier contributions until pay can be restored.",
+        "consequence": "The army stays in being by pressing the lands harder. Every requisition makes the emperor's war visible in barns, cellars, and town accounts.",
+        "effects": {
+          "fiscal_capacity": 10,
+          "devastation": 10,
+          "estate_trust": -7,
+          "military_dependence": 4
+        },
+        "causal_claim_ids": [
+          "claim_army_finance_devastation"
+        ],
+        "memory_tags": [
+          "threshold_contributions_deepened"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_reduce_commands_to_save_credit",
+        "label": "Disband unreliable companies and save credit for the core army.",
+        "consequence": "The treasury breathes a little. Commanders protest, allies doubt the army's reach, and the crown accepts a smaller instrument.",
+        "effects": {
+          "fiscal_capacity": 7,
+          "military_dependence": -4,
+          "dynastic_security": -5,
+          "devastation": -4
+        },
+        "causal_claim_ids": [
+          "claim_army_finance_devastation"
+        ],
+        "memory_tags": [
+          "threshold_army_reduced_for_credit"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_treasury_bargain",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "When the treasury has credit",
+    "title": "Ready Money, Rare Freedom",
+    "briefing": "The treasury is not rich, but it can still answer a demand without granting land, title, or command in place of coin.",
+    "situation": "Money gives the court a kind of liberty that victory alone does not: the ability to refuse some dangerous bargains.",
+    "historian_note": "This is a game abstraction from Wilson's emphasis on the political power created by fiscal scarcity.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_army_solves_capacity_creates_autonomy"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_fiscal_capacity_high"
+    ],
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_pay_to_keep_command_free",
+        "label": "Use ready credit to keep military rewards within ordinary grants.",
+        "consequence": "Officers grumble less when paid, and fewer servants need to be made princes. The treasury buys constitutional quiet at real cost.",
+        "effects": {
+          "fiscal_capacity": -8,
+          "military_dependence": -7,
+          "estate_trust": 4
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_army_solves_capacity_creates_autonomy"
+        ],
+        "memory_tags": [
+          "threshold_credit_used_for_command"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_hold_treasury_for_succession",
+        "label": "Reserve credit for succession and diplomacy.",
+        "consequence": "The court keeps money for the next bargain. Commanders notice that their accounts remain second to dynastic business.",
+        "effects": {
+          "dynastic_security": 5,
+          "fiscal_capacity": -2,
+          "military_dependence": 3
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "threshold_credit_reserved_for_succession"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_military_creditors",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "When military dependence is extreme",
+    "title": "The Price of Armed Servants",
+    "briefing": "The men who keep armies in the field now send counsel as well as accounts. They ask whether policy will follow the soldiers who make policy possible.",
+    "situation": "To refuse them risks the instrument of survival. To satisfy them teaches every prince that imperial necessity can be made to pay.",
+    "historian_note": "This abstracts the recurring Bavarian and Wallenstein problem: military capacity could become leverage over imperial policy.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_wallenstein_army_solves_capacity_creates_autonomy"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_military_dependence_crisis"
+    ],
+    "context_links": [
+      {
+        "term": "Wallenstein",
+        "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "Bavarian",
+        "dossier_id": "dossier_maximilian_bavaria"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_pay_military_creditors",
+        "label": "Satisfy the armed creditors before they become rivals.",
+        "consequence": "The army remains usable, but obedience is purchased in public view. The price of survival becomes a precedent.",
+        "effects": {
+          "military_dependence": 6,
+          "fiscal_capacity": -8,
+          "imperial_authority": -3,
+          "dynastic_security": 4
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_army_solves_capacity_creates_autonomy"
+        ],
+        "memory_tags": [
+          "threshold_military_creditors_paid"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_reassert_command_over_creditors",
+        "label": "Reassert command and risk a break with military creditors.",
+        "consequence": "The court reminds servants that credit is not sovereignty. The reminder is lawful, dangerous, and expensive if the army hesitates.",
+        "effects": {
+          "imperial_authority": 6,
+          "military_dependence": -5,
+          "dynastic_security": -6,
+          "estate_trust": 2
+        },
+        "causal_claim_ids": [
+          "claim_wallenstein_liquidation_restores_control_stains_legality"
+        ],
+        "memory_tags": [
+          "threshold_command_reasserted_over_creditors"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_foreign_courts",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "When foreign intervention risk is extreme",
+    "title": "Foreign Courts Find Their Cause",
+    "briefing": "Envoys report that imperial quarrels are being translated abroad into the language of balance, protection, recovery, and religion.",
+    "situation": "The court may still claim domestic law. Other crowns now answer that domestic law has become a European danger.",
+    "historian_note": "Wilson frames the widening war as a fusion of imperial settlement, dynastic security, and foreign-policy calculation.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_leipzig_rejection_drives_saxony_to_sweden"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_foreign_intervention_crisis"
+    ],
+    "context_links": [
+      {
+        "term": "Sweden",
+        "dossier_id": "dossier_swedish_crown"
+      },
+      {
+        "term": "France",
+        "dossier_id": "dossier_french_crown"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_send_public_reassurances_abroad",
+        "label": "Send public reassurances to deny foreign courts their pretext.",
+        "consequence": "The papers make intervention harder to justify, but they also bind the emperor to words that allies and estates will quote back at him.",
+        "effects": {
+          "foreign_intervention_risk": -8,
+          "estate_trust": 4,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "threshold_foreign_reassurances_sent"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_answer_foreign_pressure_with_victory",
+        "label": "Answer foreign pressure by seeking a decisive military demonstration.",
+        "consequence": "Victory might silence patrons and clients together. Failure would prove that the Empire has become Europe's battlefield.",
+        "effects": {
+          "imperial_authority": 5,
+          "foreign_intervention_risk": 5,
+          "devastation": 7,
+          "dynastic_security": -4
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "threshold_foreign_pressure_answered_by_arms"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_succession_breathing_space",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_prague_succession",
+    "date_label": "When succession is secure",
+    "title": "A Crown Not Yet in Panic",
+    "briefing": "Councillors note that succession no longer has to be bought in the same breath as every military demand. The dynasty has room to choose its concessions.",
+    "situation": "Security can make moderation easier, but it can also tempt the court to spend less on settlement because the house itself is safe.",
+    "historian_note": "This is the reward side of Ferdinand's dynastic problem: security changes what concessions are politically bearable.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_dynastic_security_high"
+    ],
+    "context_links": [
+      {
+        "term": "succession",
+        "dossier_id": "dossier_ferdinand_ii"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_use_security_for_moderation",
+        "label": "Use dynastic security to offer wider settlement terms.",
+        "consequence": "The court can concede without sounding desperate. Catholic allies complain, but some estates hear strength rather than retreat.",
+        "effects": {
+          "estate_trust": 8,
+          "foreign_intervention_risk": -6,
+          "confessional_legitimacy": -5,
+          "dynastic_security": -3
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "threshold_security_spent_on_settlement"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_guard_security_for_house",
+        "label": "Guard dynastic security and make fewer settlement promises.",
+        "consequence": "The house remains safer, but the Empire hears less of reconciliation and more of continuity.",
+        "effects": {
+          "dynastic_security": 4,
+          "estate_trust": -4,
+          "foreign_intervention_risk": 3
+        },
+        "causal_claim_ids": [
+          "claim_ferdinand_iii_election_secures_dynasty_with_limits"
+        ],
+        "memory_tags": [
+          "threshold_security_guarded"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_threshold_devastation_petitions",
+    "role_id": "role_ferdinand_ii",
+    "phase_id": "phase_prague_succession",
+    "date_label": "When devastation is extreme",
+    "title": "The Lands Petition Against Ruin",
+    "briefing": "Town councils, territorial officers, and ecclesiastical administrators send reports that no longer separate war policy from hunger, flight, billeting, and unpaid contribution.",
+    "situation": "Devastation has become an argument in council. Even loyal men ask what obedience can mean if the lands that obey are consumed.",
+    "historian_note": "Wilson treats wartime devastation and material exhaustion as political facts, not merely background suffering.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_army_finance_devastation"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "threshold_devastation_crisis"
+    ],
+    "context_links": [
+      {
+        "term": "contribution",
+        "dossier_id": "dossier_wallenstein"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_threshold_relieve_devastated_lands",
+        "label": "Order relief and contribution limits in the worst-hit lands.",
+        "consequence": "The order gives loyal estates words to defend obedience. Commanders answer that armies cannot march on mercy alone.",
+        "effects": {
+          "devastation": -9,
+          "estate_trust": 7,
+          "fiscal_capacity": -6,
+          "military_dependence": 3
+        },
+        "causal_claim_ids": [
+          "claim_army_finance_devastation"
+        ],
+        "memory_tags": [
+          "threshold_devastation_relief_ordered"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      },
+      {
+        "id": "opt_threshold_keep_contributions_flowing",
+        "label": "Keep contributions flowing until peace is closer.",
+        "consequence": "The army remains supplied, and the petitions grow darker. Peace itself begins to look like the only relief still credible.",
+        "effects": {
+          "fiscal_capacity": 5,
+          "devastation": 7,
+          "estate_trust": -6,
+          "foreign_intervention_risk": 3
+        },
+        "causal_claim_ids": [
+          "claim_army_finance_devastation"
+        ],
+        "memory_tags": [
+          "threshold_contributions_kept_flowing"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "pressure_threshold_system"
+        ]
+      }
+    ]
+  },
+  {
     "id": "card_1637_ferdinand_death",
     "role_id": "role_ferdinand_ii",
     "phase_id": "phase_prague_succession",

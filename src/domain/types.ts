@@ -192,6 +192,18 @@ export interface PressureConditionRecord {
   max?: number;
 }
 
+export interface PressureThresholdRecord {
+  id: string;
+  pressure: PressureKey;
+  kind: "reward" | "warning" | "crisis";
+  condition: PressureConditionRecord;
+  label: string;
+  summary: string;
+  memory_tags: string[];
+  source_refs: string[];
+  review_status: ReviewStatus;
+}
+
 export interface CardPressureVariantRecord {
   conditions: PressureConditionRecord[];
   title?: string;
@@ -250,6 +262,7 @@ export interface GameDatabase {
   power_centers: PowerCenterRecord[];
   relationships: RelationshipRecord[];
   game_variables: GameVariableRecord[];
+  pressure_thresholds: PressureThresholdRecord[];
   playable_roles: PlayableRoleRecord[];
   causal_claims: CausalClaimRecord[];
   decision_points: DecisionPointRecord[];

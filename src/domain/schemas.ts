@@ -147,6 +147,18 @@ const pressureConditionRecordSchema = z
     message: "pressure condition requires min or max",
   });
 
+const pressureThresholdRecordSchema = z.object({
+  id: z.string().min(1),
+  pressure: pressureKeySchema,
+  kind: z.enum(["reward", "warning", "crisis"]),
+  condition: pressureConditionRecordSchema,
+  label: z.string().min(1),
+  summary: z.string().min(1),
+  memory_tags: z.array(z.string().min(1)).min(1),
+  source_refs: sourceRefsSchema,
+  review_status: reviewStatusSchema,
+});
+
 const playableRoleRecordSchema = z.object({
   id: z.string().min(1),
   actor_id: z.string().min(1),
@@ -275,6 +287,7 @@ const gameDatabaseSchema = z.object({
   power_centers: z.array(powerCenterRecordSchema).min(1),
   relationships: z.array(relationshipRecordSchema).min(1),
   game_variables: z.array(gameVariableRecordSchema).min(1),
+  pressure_thresholds: z.array(pressureThresholdRecordSchema).min(1),
   playable_roles: z.array(playableRoleRecordSchema).min(1),
   causal_claims: z.array(causalClaimRecordSchema).min(1),
   decision_points: z.array(decisionPointRecordSchema).min(1),
@@ -293,6 +306,10 @@ export function validateGameDatabase(database: unknown): GameDatabase {
   assertUnique(parsed.dossiers.map((item) => item.id), "dossier");
   assertUnique(parsed.cards.map((item) => item.id), "card");
   assertUnique(parsed.game_variables.map((item) => item.id), "game variable");
+  assertUnique(
+    parsed.pressure_thresholds.map((item) => item.id),
+    "pressure threshold",
+  );
 
   const sourceIds = new Set(parsed.sources.map((item) => item.id));
   const phaseIds = new Set(parsed.phases.map((item) => item.id));
@@ -308,6 +325,7 @@ export function validateGameDatabase(database: unknown): GameDatabase {
     ...parsed.actors,
     ...parsed.power_centers,
     ...parsed.relationships,
+    ...parsed.pressure_thresholds,
     ...parsed.playable_roles,
     ...parsed.causal_claims,
     ...parsed.decision_points,

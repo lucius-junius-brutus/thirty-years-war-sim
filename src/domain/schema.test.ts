@@ -87,6 +87,33 @@ describe("historical database validation", () => {
     ).toBeGreaterThanOrEqual(8);
   });
 
+  it("requires pressure thresholds to be sourced and useful", () => {
+    expect(gameDatabase.pressure_thresholds.length).toBeGreaterThanOrEqual(12);
+    expect(
+      gameDatabase.pressure_thresholds.map((threshold) => threshold.pressure),
+    ).toEqual(
+      expect.arrayContaining(gameDatabase.game_variables.map((variable) => variable.id)),
+    );
+    expect(
+      gameDatabase.pressure_thresholds.some(
+        (threshold) => threshold.kind === "reward",
+      ),
+    ).toBe(true);
+    expect(
+      gameDatabase.pressure_thresholds.some(
+        (threshold) => threshold.kind === "crisis",
+      ),
+    ).toBe(true);
+
+    const broken = structuredClone(gameDatabase);
+    broken.pressure_thresholds[0] = {
+      ...broken.pressure_thresholds[0],
+      source_refs: ["missing_source"],
+    };
+
+    expect(() => validateGameDatabase(broken)).toThrow(/Unknown source reference/i);
+  });
+
   it("rejects reviewed records that cite unread scholarly books", () => {
     const broken = structuredClone(gameDatabase);
     broken.sources = broken.sources.map((source) =>

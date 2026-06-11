@@ -7,6 +7,7 @@ import gameVariables from "../../data/game_variables/game_variables.json";
 import phases from "../../data/phases/phases.json";
 import playableRoles from "../../data/playable_roles/playable_roles.json";
 import powerCenters from "../../data/power_centers/power_centers.json";
+import pressureThresholds from "../../data/pressure_thresholds/pressure_thresholds.json";
 import relationships from "../../data/relationships/relationships.json";
 import sources from "../../data/sources/sources.json";
 import { validateGameDatabase } from "../domain/schemas";
@@ -18,6 +19,7 @@ export const gameDatabase = validateGameDatabase({
   power_centers: powerCenters,
   relationships,
   game_variables: gameVariables,
+  pressure_thresholds: pressureThresholds,
   playable_roles: playableRoles,
   causal_claims: causalClaims,
   decision_points: decisionPoints,

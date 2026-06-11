@@ -5,6 +5,7 @@ import {
   createInitialGameState,
   getCardsForRole,
   getCurrentCard,
+  getActivePressureThresholds,
   getDesignerReport,
   getOptionAvailability,
   getOptionsForCard,
@@ -551,6 +552,73 @@ describe("game engine", () => {
 
     expect(calmDeck).not.toContain("card_1631_intervention_crisis");
     expect(interventionDeck).toContain("card_1631_intervention_crisis");
+  });
+
+  it("derives active threshold tags from pressure levels without storing them as choices", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const thresholdState = {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        estate_trust: 72,
+        fiscal_capacity: 18,
+        foreign_intervention_risk: 81,
+      },
+    };
+    const activeThresholds = getActivePressureThresholds(
+      gameDatabase,
+      thresholdState,
+    );
+    const tags = activeThresholds.flatMap((threshold) => threshold.memory_tags);
+
+    expect(tags).toContain("threshold_estate_trust_high");
+    expect(tags).toContain("threshold_fiscal_capacity_crisis");
+    expect(tags).toContain("threshold_foreign_intervention_crisis");
+    expect(thresholdState.memory_tags).not.toContain(
+      "threshold_fiscal_capacity_crisis",
+    );
+  });
+
+  it("uses threshold tags to add pressure consequence and reward dispatches", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const visibleCardIds = getCardsForRole(gameDatabase, {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        estate_trust: 72,
+        fiscal_capacity: 18,
+        foreign_intervention_risk: 81,
+      },
+    }).map((card) => card.id);
+
+    expect(visibleCardIds).toContain("card_threshold_estates_offer_credit");
+    expect(visibleCardIds).toContain("card_threshold_army_arrears");
+    expect(visibleCardIds).toContain("card_threshold_foreign_courts");
+  });
+
+  it("shows active pressure thresholds only in the private designer report", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const report = getDesignerReport(gameDatabase, {
+      ...state,
+      pressures: {
+        ...state.pressures,
+        dynastic_security: 78,
+        devastation: 82,
+      },
+    });
+
+    expect(report.active_thresholds).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          threshold_id: "threshold_dynastic_security_high",
+          label: expect.stringMatching(/succession/i),
+        }),
+        expect.objectContaining({
+          threshold_id: "threshold_devastation_crisis",
+          label: expect.stringMatching(/devastation/i),
+        }),
+      ]),
+    );
   });
 
   it("explains hidden cards and locked options for the private designer view", () => {

@@ -77,5 +77,6 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/current dispatch/i)).toBeInTheDocument();
     expect(screen.getAllByText(/card_1555_augsburg_settlement/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/remaining dispatches/i)).toBeInTheDocument();
+    expect(screen.getByText(/active thresholds/i)).toBeInTheDocument();
   });
 });

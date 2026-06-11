@@ -410,6 +410,15 @@ function DesignerPanel({ state }: { state: GameState }) {
         ))}
       </div>
       <div className="designer-group">
+        <strong>Active thresholds</strong>
+        {report.active_thresholds.map((threshold) => (
+          <p key={threshold.threshold_id}>
+            <b>{threshold.kind}</b> {threshold.label}
+          </p>
+        ))}
+        {report.active_thresholds.length === 0 ? <p>None at this point.</p> : null}
+      </div>
+      <div className="designer-group">
         <strong>Skipped or gated</strong>
         {report.skipped_cards.slice(0, 8).map((card) => (
           <p key={card.card_id}>
