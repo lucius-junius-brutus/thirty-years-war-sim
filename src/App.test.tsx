@@ -16,11 +16,13 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
-    expect(screen.getByText(/ferdinand's inheritance/i)).toBeInTheDocument();
+    expect(screen.getByText(/your inheritance/i)).toBeInTheDocument();
+    expect(screen.getByText(/you enter these papers/i)).toBeInTheDocument();
     expect(screen.getByText(/archduke of inner austria/i)).toBeInTheDocument();
     expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
     expect(screen.queryByText(/the settlement with gaps/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/briefing for ferdinand/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/ferdinand enters these papers/i)).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
 
@@ -57,7 +59,8 @@ describe("Empire in Ashes app", () => {
     fireEvent.click(screen.getByRole("button", { name: /proceed to the next decision/i }));
 
     expect(screen.getByText(/leagues of protection/i)).toBeInTheDocument();
-    expect(screen.getByText(/chosen consultation over immediate enforcement/i)).toBeInTheDocument();
+    expect(screen.getByText(/your earlier caution/i)).toBeInTheDocument();
+    expect(screen.queryByText(/because the court has chosen/i)).not.toBeInTheDocument();
     expect(screen.getByText(/Tolerate the leagues as temporary instruments/i)).toBeInTheDocument();
     expect(screen.queryByText(/aftermath/i)).not.toBeInTheDocument();
   });

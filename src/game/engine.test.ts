@@ -49,6 +49,20 @@ describe("game engine", () => {
     );
   });
 
+  it("gives the opening Augsburg dispatch enough footing before asking for a course", () => {
+    const card = gameDatabase.cards.find(
+      (item) => item.id === "card_1555_augsburg_settlement",
+    );
+    const text = `${card?.briefing} ${card?.situation}`;
+
+    expect(text).toMatch(/Catholic and Lutheran/i);
+    expect(text).toMatch(/prince|territorial ruler/i);
+    expect(text).toMatch(/emigrate|leave/i);
+    expect(text).toMatch(/ecclesiastical/i);
+    expect(text).toMatch(/Calvinist|Reformed|outside the two recognized confessions/i);
+    expect(text).toMatch(/public peace/i);
+  });
+
   it("makes a useful decision create new problems", () => {
     const initial = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const state = {
@@ -298,8 +312,12 @@ describe("game engine", () => {
     const nextCard = getCurrentCard(gameDatabase, afterCompromise);
 
     expect(afterCompromise.memory_tags).toContain("augsburg_consultation");
-    expect(nextCard?.briefing).toContain("Because the court has chosen consultation");
-    expect(nextCard?.situation).toContain("that earlier posture");
+    expect(nextCard?.briefing).toMatch(/Auhausen/i);
+    expect(nextCard?.briefing).toMatch(/Protestant Union/i);
+    expect(nextCard?.briefing).toMatch(/Munich/i);
+    expect(nextCard?.briefing).toMatch(/Catholic League|League/i);
+    expect(nextCard?.briefing).not.toMatch(/^Because|Because the court has chosen/i);
+    expect(nextCard?.situation).toMatch(/your earlier caution/i);
   });
 
   it("can create or suppress future dispatches from prior choices", () => {

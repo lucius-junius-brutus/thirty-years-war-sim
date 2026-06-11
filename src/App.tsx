@@ -159,21 +159,21 @@ function FerdinandPrelude({
   onContinue: () => void;
 }) {
   return (
-    <section className="prelude-screen" aria-label="Ferdinand's inheritance">
+    <section className="prelude-screen" aria-label="Your inheritance">
       <article className="prelude-card">
         <div className="dispatch-meta">
           <span>Opening papers</span>
           <span>Before the first report</span>
         </div>
         <div className="date-ribbon">Before 1617</div>
-        <h2>Ferdinand's Inheritance</h2>
+        <h2>Your Inheritance</h2>
         <p className="office">{role.office}</p>
         <section className="historical-brief prelude-brief">
           <p>
-            Ferdinand enters these papers as archduke of Inner Austria, heir to a
-            hard Catholic restoration in his own lands and claimant to crowns
-            whose estates still speak in the language of privilege, confession,
-            and sworn liberties.
+            You enter these papers as archduke of Inner Austria, heir to a hard
+            Catholic restoration in your own lands and claimant to crowns whose
+            estates still speak in the language of privilege, confession, and
+            sworn liberties.
           </p>
           <p>
             The Holy Roman Empire is not a single kingdom waiting for command. It

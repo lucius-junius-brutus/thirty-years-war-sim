@@ -6,8 +6,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1555",
     "title": "The Settlement With Gaps",
-    "briefing": "The articles of the Religious Peace of Augsburg lie in every imperial dispute. Catholic and Lutheran estates are to be left in their lands, rites, jurisdictions, rents, and privileges; violence on account of confession is forbidden; those outside the two recognized confessions are excluded from the peace.",
-    "situation": "Memorials before the court point to the same articles for opposite purposes. Catholic petitioners ask when alienated ecclesiastical lands and revenues will be restored. Lutheran estates answer that long possession, schools, churches, and local practice now stand under the peace. Each disputed monastery, parish, city, and mediate lordship waits for judgment.",
+    "briefing": "Reports on the Religious Peace of Augsburg set out the bargain by which the Empire tried to turn confessional conflict into law. Catholic and Lutheran imperial estates are recognized under the public peace. A territorial ruler may order the confession of his lands, while dissenting subjects are to have room to leave rather than be punished by violence. Calvinists and other Reformed believers are not named in the settlement.",
+    "situation": "The same papers show how much was left exposed. The Ecclesiastical Reservation says a bishop or abbot who converts should surrender his office, yet Protestant estates point to long possession, schools, churches, chapters, and local practice now standing under the peace. Catholic petitioners ask when alienated ecclesiastical lands and revenues will be restored. Each disputed monastery, parish, city, and mediate lordship waits for judgment.",
     "historian_note": "Wilson treats Augsburg as part of the Empire's constitutional settlement rather than a simple pause in religious war. Its unresolved legal-confessional questions became usable political weapons once rulers and estates ceased trusting one another's interpretation.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -111,8 +111,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1608-1609",
     "title": "Leagues of Protection",
-    "briefing": "Reports arrive from Auhausen and Munich. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
-    "situation": "Both associations send assurances that they act for the public peace, not against the emperor. Their articles speak of counsel, compensation, lawful process, and assistance only in danger. Yet each letter also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people.",
+    "briefing": "Reports arrive under two seals. At Auhausen, Palatine councillors and Protestant estates have formed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence for members who say ordinary imperial remedies no longer protect them. From Munich comes the Catholic answer: ecclesiastical princes bind themselves to a League under Maximilian of Bavaria.",
+    "situation": "Both associations write in the language of protection and the public peace, not open defiance. Their articles speak of counsel, compensation, lawful process, and assistance only in danger. Yet each letter also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people.",
     "historian_note": "Wilson stresses that the Union and Liga did not make war inevitable. They mattered because they turned insecurity into institutions and gave ambitious directors ways to spread costs, claim legitimacy, and mobilize support.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -128,22 +128,22 @@
         "required_memory_tags": [
           "augsburg_strict"
         ],
-        "briefing": "Because the court has chosen stricter enforcement of the Augsburg settlement, the reports from Auhausen and Munich arrive as warnings of organized resistance. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
-        "situation": "That earlier posture gives Catholic petitioners confidence that old rights may be pressed, but it also sharpens Protestant claims that ordinary remedies have become unsafe. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The report from Auhausen reads like an answer to every strict reading of Augsburg: Palatine councillors and Protestant estates now promise one another correspondence, transit, contribution, and aid before ordinary courts can decide their danger. The Munich papers answer from the Catholic side, placing a League of ecclesiastical princes under Maximilian of Bavaria.",
+        "situation": "Your stricter line gives Catholic petitioners confidence that old rights may be pressed, but it also sharpens Protestant claims that ordinary remedies have become unsafe. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
       },
       {
         "required_memory_tags": [
           "augsburg_consultation"
         ],
-        "briefing": "Because the court has chosen consultation over immediate enforcement, the reports from Auhausen and Munich arrive as warnings rather than summons. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
-        "situation": "The reports add that earlier posture gives Ferdinand a language of restraint, but it also makes both leagues harder to condemn at once. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The Auhausen and Munich reports arrive as warnings that consultation alone no longer holds confessional fear inside ordinary institutions. Palatine councillors and Protestant estates have sealed a Protestant Union for correspondence, transit, contribution, and defence. Catholic ecclesiastical princes answer from Munich by binding themselves to a League under Maximilian of Bavaria.",
+        "situation": "Your earlier caution keeps a language of restraint available, but it also makes both leagues harder to condemn at once. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
       },
       {
         "required_memory_tags": [
           "augsburg_deferred"
         ],
-        "briefing": "Because the court has left disputed usages to stand until complaint forces judgment, the reports from Auhausen and Munich arrive beside a growing file of unanswered petitions. Palatine councillors have sealed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence of estates who claim the ordinary courts no longer protect them. Catholic ecclesiastical princes answer by binding themselves to a League under Maximilian of Bavaria.",
-        "situation": "That earlier posture avoids a single imperial provocation, but it leaves each estate to judge danger for itself. Each association sends assurances that it acts for the public peace, not against the emperor; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The Auhausen and Munich reports arrive beside a growing file of unanswered petitions. Palatine councillors and Protestant estates have sealed a Protestant Union for correspondence, transit, contribution, and defence. Catholic ecclesiastical princes answer from Munich by binding themselves to a League under Maximilian of Bavaria.",
+        "situation": "Your refusal to force every disputed usage into immediate judgment avoids a single imperial provocation, but it leaves each estate to judge danger for itself. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
       }
     ],
     "options": [
