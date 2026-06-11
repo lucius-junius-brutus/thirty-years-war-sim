@@ -443,11 +443,11 @@ function describeDocketChangeBullets(changes: DocketChange[]) {
 
   if (added.length === 1) {
     bullets.push(
-      `A new paper now reaches the council: ${added[0].date_label}, ${added[0].title}.`,
+      `A new report now enters the file: ${added[0].date_label}, ${added[0].title}.`,
     );
   } else if (added.length > 1) {
     bullets.push(
-      `New papers now reach the council, beginning with ${added[0].date_label}, ${added[0].title}.`,
+      `New reports now enter the file, beginning with ${added[0].date_label}, ${added[0].title}.`,
     );
   }
 
@@ -617,7 +617,7 @@ function describePressureMovement(
     devastation: {
       rising: [
         "Billeting, contributions, and reprisals fall more heavily on the lands.",
-        "Subjects far from the council feel the decision in quarters, levies, and requisitions.",
+        "Subjects far from Vienna feel the decision in quarters, levies, and requisitions.",
         "The war's necessities move from paper into barns, roads, and town accounts.",
       ],
       falling: [

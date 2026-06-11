@@ -16,16 +16,19 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
-    expect(screen.getByText(/briefing for ferdinand/i)).toBeInTheDocument();
+    expect(screen.getByText(/ferdinand's inheritance/i)).toBeInTheDocument();
     expect(screen.getByText(/archduke of inner austria/i)).toBeInTheDocument();
     expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
     expect(screen.queryByText(/the settlement with gaps/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/briefing for ferdinand/i)).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
+    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
 
     expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
-    expect(screen.getByText(/received at council/i)).toBeInTheDocument();
-    expect(screen.getByText(/memorial before the council/i)).toBeInTheDocument();
+    expect(screen.getByText(/report received/i)).toBeInTheDocument();
+    expect(screen.getByText(/dated:/i)).toBeInTheDocument();
+    expect(screen.queryByText(/received at council/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/memorial before the council/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/how we got here/i)).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Religious Peace of Augsburg/i })).toBeInTheDocument();
     expect(screen.getAllByText(/course proposed/i).length).toBeGreaterThan(0);
@@ -63,7 +66,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
-    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
+    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
     fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
     expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
@@ -76,7 +79,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
-    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
+    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
 
     expect(screen.queryByText(/designer docket/i)).not.toBeInTheDocument();
 

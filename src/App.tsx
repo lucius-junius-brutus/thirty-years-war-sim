@@ -29,7 +29,7 @@ function App() {
     }
     return loadGame(storage) ?? createInitialGameState(gameDatabase, defaultRoleId);
   });
-  const [screen, setScreen] = useState<"role-select" | "briefing" | "play">(() => {
+  const [screen, setScreen] = useState<"role-select" | "prelude" | "play">(() => {
     const storage = getBrowserStorage();
     return storage && loadGame(storage) ? "play" : "role-select";
   });
@@ -72,7 +72,7 @@ function App() {
   function startRole() {
     const next = createInitialGameState(gameDatabase, defaultRoleId);
     setState(next);
-    setScreen("briefing");
+    setScreen("prelude");
     setShowAftermath(false);
     setSelectedDossierId(null);
     const storage = getBrowserStorage();
@@ -81,7 +81,7 @@ function App() {
     }
   }
 
-  function acceptBriefing() {
+  function enterFirstReport() {
     setScreen("play");
     setSelectedDossierId(null);
   }
@@ -108,8 +108,8 @@ function App() {
 
       {screen === "role-select" ? (
         <RoleSelect role={role} onStart={startRole} />
-      ) : screen === "briefing" ? (
-        <FerdinandBriefing role={role} onContinue={acceptBriefing} />
+      ) : screen === "prelude" ? (
+        <FerdinandPrelude role={role} onContinue={enterFirstReport} />
       ) : (
         <section className="desk-grid" aria-label="Political desk">
           <aside className="side-panel">
@@ -151,7 +151,7 @@ function App() {
   );
 }
 
-function FerdinandBriefing({
+function FerdinandPrelude({
   role,
   onContinue,
 }: {
@@ -159,14 +159,14 @@ function FerdinandBriefing({
   onContinue: () => void;
 }) {
   return (
-    <section className="prelude-screen" aria-label="Briefing for Ferdinand">
+    <section className="prelude-screen" aria-label="Ferdinand's inheritance">
       <article className="prelude-card">
         <div className="dispatch-meta">
-          <span>Private instruction</span>
-          <span>Before the first memorial</span>
+          <span>Opening papers</span>
+          <span>Before the first report</span>
         </div>
         <div className="date-ribbon">Before 1617</div>
-        <h2>Briefing for Ferdinand</h2>
+        <h2>Ferdinand's Inheritance</h2>
         <p className="office">{role.office}</p>
         <section className="historical-brief prelude-brief">
           <p>
@@ -184,8 +184,8 @@ function FerdinandBriefing({
           <p>
             In Bohemia, Hungary, and the hereditary lands, dynastic security,
             Catholic recovery, estate privilege, imperial legality, money, and
-            armed help already press against one another. Each paper that reaches
-            council asks which danger may be endured in order to answer another.
+            armed help already press against one another. Each report asks which
+            danger may be endured in order to answer another.
           </p>
         </section>
         <div className="prelude-ledger" aria-label="Initial situation">
@@ -203,8 +203,8 @@ function FerdinandBriefing({
           </div>
         </div>
         <button className="choice-button start-role" type="button" onClick={onContinue}>
-          <span>Enter council</span>
-          Receive the first memorial
+          <span>Begin</span>
+          Open the first report
         </button>
       </article>
     </section>
@@ -324,8 +324,8 @@ function EventCard({
   return (
     <article className="event-card">
       <div className="dispatch-meta">
-        <span>Memorial before the council</span>
-        <span>Received at council: {card.date_label}</span>
+        <span>Report received</span>
+        <span>Dated: {card.date_label}</span>
       </div>
       <div className="date-ribbon">{card.date_label}</div>
       <h2>{card.title}</h2>
@@ -359,7 +359,7 @@ function EventCard({
                   ? option.historical_option
                     ? "Recorded course"
                     : "Course proposed"
-                  : "Not credible before council"}
+                  : "Not credible in this situation"}
               </span>
               {availability.available ? option.label : availability.reason}
             </button>
