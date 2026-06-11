@@ -16,6 +16,13 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
+    expect(screen.getByText(/briefing for ferdinand/i)).toBeInTheDocument();
+    expect(screen.getByText(/archduke of inner austria/i)).toBeInTheDocument();
+    expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
+    expect(screen.queryByText(/the settlement with gaps/i)).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
+
     expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
     expect(screen.getByText(/received at council/i)).toBeInTheDocument();
     expect(screen.getByText(/memorial before the council/i)).toBeInTheDocument();
@@ -56,6 +63,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
     fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
     expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
@@ -68,6 +76,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+    fireEvent.click(screen.getByRole("button", { name: /receive the first memorial/i }));
 
     expect(screen.queryByText(/designer docket/i)).not.toBeInTheDocument();
 

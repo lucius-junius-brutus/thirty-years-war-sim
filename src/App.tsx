@@ -29,7 +29,7 @@ function App() {
     }
     return loadGame(storage) ?? createInitialGameState(gameDatabase, defaultRoleId);
   });
-  const [screen, setScreen] = useState<"role-select" | "play">(() => {
+  const [screen, setScreen] = useState<"role-select" | "briefing" | "play">(() => {
     const storage = getBrowserStorage();
     return storage && loadGame(storage) ? "play" : "role-select";
   });
@@ -72,13 +72,18 @@ function App() {
   function startRole() {
     const next = createInitialGameState(gameDatabase, defaultRoleId);
     setState(next);
-    setScreen("play");
+    setScreen("briefing");
     setShowAftermath(false);
     setSelectedDossierId(null);
     const storage = getBrowserStorage();
     if (storage) {
       clearGame(storage);
     }
+  }
+
+  function acceptBriefing() {
+    setScreen("play");
+    setSelectedDossierId(null);
   }
 
   return (
@@ -103,6 +108,8 @@ function App() {
 
       {screen === "role-select" ? (
         <RoleSelect role={role} onStart={startRole} />
+      ) : screen === "briefing" ? (
+        <FerdinandBriefing role={role} onContinue={acceptBriefing} />
       ) : (
         <section className="desk-grid" aria-label="Political desk">
           <aside className="side-panel">
@@ -141,6 +148,66 @@ function App() {
         </section>
       )}
     </main>
+  );
+}
+
+function FerdinandBriefing({
+  role,
+  onContinue,
+}: {
+  role: ReturnType<typeof getRole>;
+  onContinue: () => void;
+}) {
+  return (
+    <section className="prelude-screen" aria-label="Briefing for Ferdinand">
+      <article className="prelude-card">
+        <div className="dispatch-meta">
+          <span>Private instruction</span>
+          <span>Before the first memorial</span>
+        </div>
+        <div className="date-ribbon">Before 1617</div>
+        <h2>Briefing for Ferdinand</h2>
+        <p className="office">{role.office}</p>
+        <section className="historical-brief prelude-brief">
+          <p>
+            Ferdinand enters these papers as archduke of Inner Austria, heir to a
+            hard Catholic restoration in his own lands and claimant to crowns
+            whose estates still speak in the language of privilege, confession,
+            and sworn liberties.
+          </p>
+          <p>
+            The Holy Roman Empire is not a single kingdom waiting for command. It
+            is a legal order of electors, princes, cities, circles, courts, and
+            estates, held together by the public peace and by habits of
+            consultation that war can break faster than law can mend.
+          </p>
+          <p>
+            In Bohemia, Hungary, and the hereditary lands, dynastic security,
+            Catholic recovery, estate privilege, imperial legality, money, and
+            armed help already press against one another. Each paper that reaches
+            council asks which danger may be endured in order to answer another.
+          </p>
+        </section>
+        <div className="prelude-ledger" aria-label="Initial situation">
+          <div>
+            <strong>Office</strong>
+            <span>Habsburg prince, Bohemian king-elect, imperial claimant</span>
+          </div>
+          <div>
+            <strong>World</strong>
+            <span>Empire of estates, jurisdictions, confessions, and negotiated obedience</span>
+          </div>
+          <div>
+            <strong>Pressure</strong>
+            <span>Authority must be recovered without making cooperation impossible</span>
+          </div>
+        </div>
+        <button className="choice-button start-role" type="button" onClick={onContinue}>
+          <span>Enter council</span>
+          Receive the first memorial
+        </button>
+      </article>
+    </section>
   );
 }
 
