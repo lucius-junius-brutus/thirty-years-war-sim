@@ -463,6 +463,81 @@ describe("game engine", () => {
     );
   });
 
+  it("makes early league policy change the later Bavarian bargain wording", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const leagueIndex = getCardsForRole(gameDatabase, state).findIndex(
+      (card) => card.id === "card_1608_security_blocs",
+    );
+    const leagueCard = getCardsForRole(gameDatabase, state)[leagueIndex];
+    const afterCatholicLeague = chooseOption(
+      gameDatabase,
+      { ...state, cardIndex: leagueIndex },
+      leagueCard.id,
+      "opt_leagues_catholic_counterweight",
+    );
+    const bavarianCard = getCardsForRole(gameDatabase, afterCatholicLeague).find(
+      (card) => card.id === "card_1620_bavarian_army",
+    );
+
+    expect(afterCatholicLeague.memory_tags).toContain("catholic_league_encouraged");
+    expect(bavarianCard?.briefing).toMatch(/Munich|League/i);
+    expect(bavarianCard?.situation).toMatch(/price|Bavarian|Maximilian/i);
+  });
+
+  it("lets hard restitution and rejected Leipzig terms add a Saxon rupture dispatch", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const restrainedDeck = getCardsForRole(gameDatabase, {
+      ...state,
+      memory_tags: ["restitution_narrow_cases", "leipzig_compromise"],
+    }).map((card) => card.id);
+    const ruptureDeck = getCardsForRole(gameDatabase, {
+      ...state,
+      memory_tags: ["restitution_edict_issued", "leipzig_rejected"],
+      pressures: {
+        ...state.pressures,
+        foreign_intervention_risk: 82,
+      },
+    }).map((card) => card.id);
+
+    expect(restrainedDeck).not.toContain("card_1631_saxon_break");
+    expect(ruptureDeck).toContain("card_1631_saxon_break");
+    expect(ruptureDeck.indexOf("card_1631_saxon_break")).toBeGreaterThan(
+      ruptureDeck.indexOf("card_1631_intervention_crisis"),
+    );
+  });
+
+  it("lets fiscal pressure close the least credible Wallenstein reward alternative", () => {
+    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const card = gameDatabase.cards.find(
+      (item) => item.id === "card_1628_mecklenburg_reward",
+    )!;
+    const payWithoutLand = card.options.find(
+      (option) => option.id === "opt_pay_wallenstein_without_land",
+    )!;
+
+    expect(
+      getOptionAvailability(payWithoutLand, {
+        ...state,
+        pressures: {
+          ...state.pressures,
+          fiscal_capacity: 31,
+        },
+      }),
+    ).toMatchObject({
+      available: false,
+      reason: expect.stringContaining("treasury"),
+    });
+    expect(
+      getOptionAvailability(payWithoutLand, {
+        ...state,
+        pressures: {
+          ...state.pressures,
+          fiscal_capacity: 58,
+        },
+      }),
+    ).toMatchObject({ available: true });
+  });
+
   it("uses pressure levels to add crisis dispatches to the deck", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const calmDeck = getCardsForRole(gameDatabase, state).map((card) => card.id);

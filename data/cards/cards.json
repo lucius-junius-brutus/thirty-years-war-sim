@@ -221,6 +221,20 @@
           "option:opt_leagues_catholic_counterweight"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Protestant Union",
+        "dossier_id": "dossier_protestant_union"
+      },
+      {
+        "term": "Catholic League",
+        "dossier_id": "dossier_catholic_league"
+      },
+      {
+        "term": "Maximilian",
+        "dossier_id": "dossier_maximilian_bavaria"
+      }
     ]
   },
   {
@@ -1196,6 +1210,33 @@
       {
         "term": "Munich",
         "dossier_id": "dossier_munich_treaty"
+      },
+      {
+        "term": "Catholic League",
+        "dossier_id": "dossier_catholic_league"
+      }
+    ],
+    "memory_variants": [
+      {
+        "required_memory_tags": [
+          "catholic_league_encouraged"
+        ],
+        "briefing": "Munich's hand is already strengthened. Since the court treated Catholic association as the necessary answer to Protestant coordination, Maximilian and the League now appear less as petitioners than as the instrument already chosen for rescue.",
+        "situation": "Bohemia, Transylvania, and Frederick's supporters still create an immediate force problem. The price is sharper: Bavarian command, compensation, and a voice in settlement now follow from an earlier policy as well as from present necessity."
+      },
+      {
+        "required_memory_tags": [
+          "leagues_tolerated"
+        ],
+        "briefing": "Because the leagues were tolerated as emergency instruments under imperial law, Munich can offer aid in the same guarded language. Maximilian and the Catholic League promise rescue while professing obedience to the public peace.",
+        "situation": "The offer is useful because it looks lawful; it is dangerous because the army that saves Bohemia will also carry claims for command, compensation, and consultation."
+      },
+      {
+        "required_memory_tags": [
+          "leagues_suppressed"
+        ],
+        "briefing": "The earlier condemnation of the leagues now returns as difficulty. Maximilian can still help, but the court must explain why Catholic armed association is unlawful in principle and indispensable in practice.",
+        "situation": "Bohemia requires force before ordinary imperial levies can answer. Accepting Bavarian aid under these conditions risks making necessity stronger than the very law invoked against faction."
       }
     ]
   },
@@ -2336,6 +2377,10 @@
       {
         "term": "Lower Saxony",
         "dossier_id": "dossier_john_george_saxony"
+      },
+      {
+        "term": "Danish",
+        "dossier_id": "dossier_danish_crown"
       }
     ],
     "options": [
@@ -2422,6 +2467,14 @@
       {
         "term": "Wallenstein",
         "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "Bavaria",
+        "dossier_id": "dossier_maximilian_bavaria"
+      },
+      {
+        "term": "League",
+        "dossier_id": "dossier_catholic_league"
       }
     ],
     "pressure_variants": [
@@ -2762,7 +2815,15 @@
         "research_tags": [
           "game_inference"
         ],
-        "counterfactual_source_status": "game_inference"
+        "counterfactual_source_status": "game_inference",
+        "requires_pressures": [
+          {
+            "pressure": "fiscal_capacity",
+            "min": 50
+          }
+        ],
+        "unavailable_text": "The treasury cannot credibly satisfy Wallenstein's arrears without using land, offices, or future contributions.",
+        "hidden_when_unavailable": false
       }
     ]
   },
@@ -2848,7 +2909,19 @@
         "research_tags": [
           "wilson_inference"
         ],
-        "counterfactual_source_status": "wilson_inference"
+        "counterfactual_source_status": "wilson_inference",
+        "requires_pressures": [
+          {
+            "pressure": "foreign_intervention_risk",
+            "max": 62
+          },
+          {
+            "pressure": "estate_trust",
+            "min": 38
+          }
+        ],
+        "unavailable_text": "Too much alarm has gathered for a general settlement to be credible without first quieting Protestant security fears.",
+        "hidden_when_unavailable": false
       }
     ]
   },
@@ -2964,7 +3037,19 @@
           "needs_cross_source_check",
           "card:card_1629_restitution_edict",
           "option:opt_trade_restitution_for_peace"
-        ]
+        ],
+        "requires_pressures": [
+          {
+            "pressure": "estate_trust",
+            "min": 42
+          },
+          {
+            "pressure": "foreign_intervention_risk",
+            "max": 68
+          }
+        ],
+        "unavailable_text": "Trust has fallen too low, or foreign danger has risen too far, for restitution to buy peace by bargain alone.",
+        "hidden_when_unavailable": false
       }
     ],
     "context_links": [
@@ -2975,6 +3060,33 @@
       {
         "term": "Peace of Augsburg",
         "dossier_id": "dossier_peace_of_augsburg"
+      },
+      {
+        "term": "Lutheran",
+        "dossier_id": "dossier_peace_of_augsburg"
+      }
+    ],
+    "memory_variants": [
+      {
+        "required_memory_tags": [
+          "lubeck_generous_peace"
+        ],
+        "briefing": "The generous peace at Lubeck has removed Denmark without opening a general settlement. Catholic petitioners now press that victory and peace together should permit the old church claims to be made good.",
+        "situation": "A decree can satisfy those claims, but the same paper may tell Lutheran princes that moderation toward Denmark was only preparation for enforcement inside the Empire."
+      },
+      {
+        "required_memory_tags": [
+          "restoration_pushed"
+        ],
+        "briefing": "Mandates in the hereditary lands have already made Catholic restoration visible in churches, schools, offices, and noble houses. The question now arrives in imperial form.",
+        "situation": "To issue an Edict is to carry the hereditary method into the wider Empire; to delay is to disappoint those who believed victory had proved the method lawful."
+      },
+      {
+        "required_memory_tags": [
+          "palatine_proxy_settlement"
+        ],
+        "briefing": "The earlier willingness to accept proxy submission in the Palatine matter has preserved a language of settlement. The restitution petitions now test whether that restraint can survive Catholic victory.",
+        "situation": "A broad Edict would reverse the tone of compromise. A narrower interpretation may keep wavering Lutheran estates from treating every imperial paper as threat."
       }
     ]
   },
@@ -3003,6 +3115,14 @@
       {
         "term": "Wallenstein",
         "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "Mecklenburg",
+        "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "electors",
+        "dossier_id": "dossier_regensburg_congress"
       }
     ],
     "options": [
@@ -3095,6 +3215,18 @@
       {
         "term": "Saxony",
         "dossier_id": "dossier_john_george_saxony"
+      },
+      {
+        "term": "Swedish king",
+        "dossier_id": "dossier_swedish_crown"
+      },
+      {
+        "term": "Protestant estates",
+        "dossier_id": "dossier_protestant_union"
+      },
+      {
+        "term": "Edict",
+        "dossier_id": "dossier_edict_of_restitution"
       }
     ],
     "options": [
@@ -3157,6 +3289,107 @@
         ],
         "counterfactual_source_status": "wilson_inference"
       }
+    ],
+    "memory_variants": [
+      {
+        "required_memory_tags": [
+          "restitution_edict_issued"
+        ],
+        "briefing": "The Edict now travels ahead of every imperial envoy. Reports from Saxony and the Protestant estates no longer ask only for delay; they ask whether obedience can coexist with armed security.",
+        "situation": "The Swedish king is already on imperial soil. If Ferdinand offers no public settlement, the middle party may cease to be middle; if he yields too much, Catholic allies ask what victory and law were for."
+      },
+      {
+        "required_memory_tags": [
+          "restitution_peace_bargain"
+        ],
+        "briefing": "Because restitution was treated as peace business rather than command alone, Saxon envoys still have language enough to ask for public terms before they choose arms.",
+        "situation": "The Swedish king is already on imperial soil, but the Lutheran middle has not yet lost every reason to bargain with the emperor."
+      }
+    ]
+  },
+  {
+    "id": "card_1631_saxon_break",
+    "role_id": "role_ferdinand_ii",
+    "decision_point_id": "dp_1631_leipzig_off_ramp",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1631",
+    "title": "Saxony Crosses the Line",
+    "briefing": "New dispatches report that Saxon counsel no longer trusts suspension by private word. The Edict remains public, Leipzig has been refused, and Swedish arms now offer the security that imperial law no longer seems to provide.",
+    "situation": "John George's step does not make Saxony a natural rebel. It shows that a loyal Lutheran elector can be driven from guarded obedience into armed partnership when the terms of obedience look unsafe.",
+    "historian_note": "Wilson links Ferdinand's refusal of the Leipzig off-ramp to Saxony's movement toward Sweden after the Edict of Restitution had already frightened Lutheran moderates.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_leipzig_rejection_drives_saxony_to_sweden"
+    ],
+    "review_status": "needs_review",
+    "requires_memory_tags": [
+      "restitution_edict_issued",
+      "leipzig_rejected"
+    ],
+    "requires_pressures": [
+      {
+        "pressure": "foreign_intervention_risk",
+        "min": 75
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Saxony",
+        "dossier_id": "dossier_john_george_saxony"
+      },
+      {
+        "term": "Edict",
+        "dossier_id": "dossier_edict_of_restitution"
+      },
+      {
+        "term": "Swedish",
+        "dossier_id": "dossier_swedish_crown"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_accept_saxon_break_as_war",
+        "label": "Treat the Saxon alignment as rebellion and prepare for a wider imperial war.",
+        "consequence": "The court preserves the language of command. The price is that one more elector's obedience must now be recovered by arms.",
+        "effects": {
+          "imperial_authority": 4,
+          "foreign_intervention_risk": 8,
+          "devastation": 8,
+          "estate_trust": -8
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "saxony_alarm_confirmed"
+        ],
+        "historical_option": true
+      },
+      {
+        "id": "opt_reopen_saxon_terms_after_break",
+        "label": "Send public suspension terms to separate Saxony from Sweden.",
+        "consequence": "Envoys carry a late offer that may loosen Saxon commitment but cannot erase the proof that armed pressure forced the paper.",
+        "effects": {
+          "estate_trust": 6,
+          "foreign_intervention_risk": -4,
+          "confessional_legitimacy": -5,
+          "imperial_authority": -3
+        },
+        "causal_claim_ids": [
+          "claim_leipzig_rejection_drives_saxony_to_sweden"
+        ],
+        "memory_tags": [
+          "saxon_terms_reopened"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "branch_impact_pass"
+        ]
+      }
     ]
   },
   {
@@ -3180,6 +3413,10 @@
       {
         "term": "Wallenstein",
         "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "Bavaria",
+        "dossier_id": "dossier_maximilian_bavaria"
       }
     ],
     "options": [
@@ -3268,6 +3505,10 @@
       {
         "term": "Wallenstein",
         "dossier_id": "dossier_wallenstein"
+      },
+      {
+        "term": "settlement",
+        "dossier_id": "dossier_peace_of_prague"
       }
     ],
     "options": [
@@ -3444,6 +3685,18 @@
       {
         "term": "Edict",
         "dossier_id": "dossier_edict_of_restitution"
+      },
+      {
+        "term": "France",
+        "dossier_id": "dossier_french_crown"
+      },
+      {
+        "term": "Sweden",
+        "dossier_id": "dossier_swedish_crown"
+      },
+      {
+        "term": "Saxon",
+        "dossier_id": "dossier_john_george_saxony"
       }
     ],
     "options": [
@@ -3514,6 +3767,22 @@
           "game_inference"
         ],
         "counterfactual_source_status": "game_inference"
+      }
+    ],
+    "memory_variants": [
+      {
+        "required_memory_tags": [
+          "wallenstein_removed_by_force"
+        ],
+        "briefing": "After Wallenstein's violent removal and Nordlingen's victory, Saxon articles come within reach. The court can speak again of imperial order, but officers and princes remember how command was recovered.",
+        "situation": "The Edict can be quieted, armies joined under emperor and Empire, and many Lutheran estates brought home. The danger lies in the names left outside the pardon."
+      },
+      {
+        "required_memory_tags": [
+          "restitution_peace_bargain"
+        ],
+        "briefing": "Because restitution was already treated as negotiable peace business, the Saxon articles now arrive less as surrender than as a form the court has made possible.",
+        "situation": "The settlement can restore obedience widely, but every excluded prince, exile, and army remains useful to France or Sweden."
       }
     ]
   },
@@ -3598,6 +3867,16 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
+    ],
+    "context_links": [
+      {
+        "term": "France",
+        "dossier_id": "dossier_french_crown"
+      },
+      {
+        "term": "Prague",
+        "dossier_id": "dossier_peace_of_prague"
+      }
     ]
   },
   {
@@ -3624,6 +3903,14 @@
       },
       {
         "term": "Ferdinand",
+        "dossier_id": "dossier_ferdinand_ii"
+      },
+      {
+        "term": "electors",
+        "dossier_id": "dossier_regensburg_congress"
+      },
+      {
+        "term": "Ferdinand's son",
         "dossier_id": "dossier_ferdinand_ii"
       }
     ],

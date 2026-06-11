@@ -59,6 +59,34 @@ describe("historical database validation", () => {
     expect(() => validateGameDatabase(broken)).toThrow(/Unknown dossier/i);
   });
 
+  it("keeps late-reign dispatches connected to in-game dossiers", () => {
+    const lateStartIndex = gameDatabase.cards.findIndex(
+      (card) => card.id === "card_1629_lubeck_peace",
+    );
+    const linkedLateCards = gameDatabase.cards.filter(
+      (card, index) => index >= lateStartIndex && (card.context_links ?? []).length > 0,
+    );
+    const lateCardIds = linkedLateCards.map((card) => card.id);
+
+    expect(lateCardIds).toEqual(
+      expect.arrayContaining([
+        "card_1629_restitution_edict",
+        "card_1630_regensburg_wallenstein",
+        "card_1631_intervention_crisis",
+        "card_1632_recall_wallenstein",
+        "card_1635_prague_peace",
+        "card_1637_ferdinand_iii_election",
+      ]),
+    );
+    expect(
+      new Set(
+        linkedLateCards
+          .flatMap((card) => card.context_links ?? [])
+          .map((link) => link.dossier_id),
+      ).size,
+    ).toBeGreaterThanOrEqual(8);
+  });
+
   it("rejects reviewed records that cite unread scholarly books", () => {
     const broken = structuredClone(gameDatabase);
     broken.sources = broken.sources.map((source) =>
