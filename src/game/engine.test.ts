@@ -9,6 +9,7 @@ import {
   getDesignerReport,
   getOptionAvailability,
   getOptionsForCard,
+  getPressureWarnings,
   scoreOutcome,
   type GameState,
 } from "./engine";
@@ -746,6 +747,23 @@ describe("game engine", () => {
     expect(endedWith({ military_dependence: 60, devastation: 50 }).title).toBe(
       "Dynasty Secured, Peace Deferred",
     );
+  });
+
+  it("warns as a pressure approaches its collapse threshold, not before", () => {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+
+    // The opening position is nowhere near any collapse ending.
+    expect(getPressureWarnings(base.pressures)).toHaveLength(0);
+
+    const strained = getPressureWarnings({
+      ...base.pressures,
+      military_dependence: 80,
+      estate_trust: 20,
+    });
+    const flagged = strained.map((warning) => warning.pressure);
+    expect(flagged).toContain("military_dependence");
+    expect(flagged).toContain("estate_trust");
+    expect(flagged).not.toContain("imperial_authority");
   });
 
   it("locks an option once an excluded memory tag is present", () => {

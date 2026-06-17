@@ -317,6 +317,34 @@ export function applyEffects(
   return next;
 }
 
+export interface PressureWarning {
+  pressure: keyof PressureMap;
+  message: string;
+}
+
+// Each band foreshadows a failure ending: when a pressure crosses into the band
+// it is approaching the extreme that triggers a collapse verdict.
+const FAILURE_WARNING_BANDS: ReadonlyArray<{
+  pressure: keyof PressureMap;
+  direction: "high" | "low";
+  warnAt: number;
+  message: string;
+}> = [
+  { pressure: "dynastic_security", direction: "low", warnAt: 32, message: "the dynasty's grip is failing" },
+  { pressure: "military_dependence", direction: "high", warnAt: 78, message: "the army's commanders are eclipsing the crown" },
+  { pressure: "devastation", direction: "high", warnAt: 73, message: "the lands approach ruin" },
+  { pressure: "fiscal_capacity", direction: "low", warnAt: 24, message: "the treasury nears insolvency" },
+  { pressure: "estate_trust", direction: "low", warnAt: 24, message: "the estates near open resistance" },
+];
+
+export function getPressureWarnings(pressures: PressureMap): PressureWarning[] {
+  return FAILURE_WARNING_BANDS.filter((band) =>
+    band.direction === "low"
+      ? pressures[band.pressure] <= band.warnAt
+      : pressures[band.pressure] >= band.warnAt,
+  ).map((band) => ({ pressure: band.pressure, message: band.message }));
+}
+
 // Failure / divergence endings, reached when a single pressure runs to its
 // extreme. Checked in order of severity; the first match wins.
 function scoreFailureEnding(

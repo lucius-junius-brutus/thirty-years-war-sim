@@ -14,6 +14,7 @@ import {
   getDesignerReport,
   getOptionAvailability,
   getOptionsForCard,
+  getPressureWarnings,
   getRole,
   scoreOutcome,
   type GameState,
@@ -315,6 +316,13 @@ function PressurePanel({
   state: GameState;
   delta?: Partial<Record<string, number>>;
 }) {
+  const warnings = new Map(
+    getPressureWarnings(state.pressures).map((warning) => [
+      warning.pressure,
+      warning.message,
+    ]),
+  );
+
   return (
     <section className="pressure-panel">
       <div className="panel-title">
@@ -325,8 +333,12 @@ function PressurePanel({
         const value = state.pressures[variable.id];
         const danger = variable.high_is_dangerous ? value >= 65 : value < 35;
         const change = delta?.[variable.id] ?? 0;
+        const warning = warnings.get(variable.id);
         return (
-          <div className={change ? "pressure changed" : "pressure"} key={variable.id}>
+          <div
+            className={`pressure${change ? " changed" : ""}${warning ? " at-risk" : ""}`}
+            key={variable.id}
+          >
             <div className="pressure-row">
               <span>{variable.name}</span>
               <span className="pressure-amount">
@@ -346,7 +358,11 @@ function PressurePanel({
                 style={{ width: `${value}%` }}
               />
             </div>
-            <small>{value >= 50 ? variable.high_label : variable.low_label}</small>
+            {warning ? (
+              <small className="pressure-alarm">⚠ {warning}</small>
+            ) : (
+              <small>{value >= 50 ? variable.high_label : variable.low_label}</small>
+            )}
           </div>
         );
       })}

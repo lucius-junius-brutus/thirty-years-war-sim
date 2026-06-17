@@ -337,6 +337,15 @@ h3 {
   box-shadow: inset 3px 0 0 var(--gold);
 }
 
+.pressure.at-risk {
+  box-shadow: inset 3px 0 0 var(--red-bright);
+}
+
+.pressure-alarm {
+  color: var(--red-bright);
+  font-style: italic;
+}
+
 .pressure-row {
   display: flex;
   justify-content: space-between;
