@@ -13,6 +13,12 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByRole("heading", { name: /empire in ashes/i })).toBeInTheDocument();
     expect(screen.getByText(/choose your office/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /play ferdinand ii/i })).toBeInTheDocument();
+    // The select screen surfaces the win/lose model, including the late-game
+    // failure modes that were previously truncated off.
+    expect(screen.getByText(/what victory looks like/i)).toBeInTheDocument();
+    expect(screen.getByText(/how a reign falls/i)).toBeInTheDocument();
+    expect(screen.getByText(/political captivity/i)).toBeInTheDocument();
+    expect(screen.getByText(/wider european war/i)).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
@@ -22,8 +28,8 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/three unsettled questions/i)).toBeInTheDocument();
     expect(screen.getByText(/reform commission/i)).toBeInTheDocument();
     expect(screen.getByText(/Bohemia is not Inner Austria/i)).toBeInTheDocument();
-    expect(screen.getByText(/what to watch in play/i)).toBeInTheDocument();
-    expect(screen.getByText(/which promise can still be called lawful/i)).toBeInTheDocument();
+    expect(screen.getByText(/what every choice costs/i)).toBeInTheDocument();
+    expect(screen.getByText(/no safe extreme/i)).toBeInTheDocument();
     expect(screen.getByText(/archduke of inner austria/i)).toBeInTheDocument();
     expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
     expect(screen.queryByText(/Wilson/i)).not.toBeInTheDocument();

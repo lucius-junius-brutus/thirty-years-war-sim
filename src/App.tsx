@@ -261,16 +261,16 @@ function FerdinandPrelude({
         </section>
         <div className="prelude-ledger" aria-label="What to watch in play">
           <div>
-            <strong>What to watch in play</strong>
-            <span>Ask who gains leverage, who loses trust, and which promise can still be called lawful.</span>
+            <strong>What every choice costs</strong>
+            <span>Imperial command and Catholic confidence are bought against estate trust, a solvent treasury, and the patience of foreign courts. Each measure moves several at once.</span>
           </div>
           <div>
-            <strong>Augsburg&apos;s burden</strong>
-            <span>The settlement works because it is legal, but its disputed clauses invite rival legal readings.</span>
+            <strong>The price of borrowed arms</strong>
+            <span>Bavaria, the League, and a Wallenstein win battles the crown cannot — but armies on loan set their own terms, and every visible victory gives Sweden or France a reason to enter.</span>
           </div>
           <div>
-            <strong>Ferdinand&apos;s habit</strong>
-            <span>Restoration advances through law, patronage, preparation, and force, but each tool can harden opposition.</span>
+            <strong>No safe extreme</strong>
+            <span>Rule by force alone and the estates and Europe turn against you; rule by concession alone and Catholic confidence and the dynasty fall away. A reign survives only between the two.</span>
           </div>
         </div>
         <button className="choice-button start-role" type="button" onClick={onContinue}>
@@ -326,7 +326,7 @@ function RoleSelect({
           <div className="compact-list">
             <strong>Wants</strong>
             <ul>
-              {role.player_wants.slice(0, 3).map((item) => (
+              {role.player_wants.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -334,7 +334,25 @@ function RoleSelect({
           <div className="compact-list">
             <strong>Constraints</strong>
             <ul>
-              {role.constraints.slice(0, 3).map((item) => (
+              {role.constraints.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="role-columns">
+          <div className="compact-list">
+            <strong>What victory looks like</strong>
+            <ul>
+              {role.success_conditions.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="compact-list">
+            <strong>How a reign falls</strong>
+            <ul>
+              {role.failure_conditions.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
