@@ -33,16 +33,19 @@ describe("Empire in Ashes app", () => {
     expect(screen.queryByText(/your inheritance/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/you enter these papers/i)).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
+    fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
 
     expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
-    expect(screen.getByText(/report received/i)).toBeInTheDocument();
-    expect(screen.getByText(/dated:/i)).toBeInTheDocument();
+    // The advisor-council conceit is gone: no "report received" or "course proposed".
+    expect(screen.queryByText(/report received/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/course proposed/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/received at council/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/memorial before the council/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/how we got here/i)).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Peace of Augsburg/i })).toBeInTheDocument();
-    expect(screen.getAllByText(/course proposed/i).length).toBeGreaterThan(0);
+    expect(
+      screen.getByRole("button", { name: /strict letter of the Reservation/i }),
+    ).toBeInTheDocument();
     expect(screen.queryByText(/historical path/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/campaign begins/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/historian note/i)).not.toBeInTheDocument();
@@ -76,7 +79,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
-    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
+    fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
     fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
     const dossier = screen.getByRole("dialog", { name: /dossier/i });
@@ -94,7 +97,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
-    fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
+    fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
 
     expect(screen.queryByText(/designer docket/i)).not.toBeInTheDocument();
 

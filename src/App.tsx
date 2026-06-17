@@ -275,7 +275,7 @@ function FerdinandPrelude({
         </div>
         <button className="choice-button start-role" type="button" onClick={onContinue}>
           <span>Begin</span>
-          Open the first report
+          Enter the first decision
         </button>
       </article>
     </section>
@@ -433,10 +433,6 @@ function EventCard({
         alt=""
         aria-hidden="true"
       />
-      <div className="dispatch-meta">
-        <span>Report received</span>
-        <span>Dated: {card.date_label}</span>
-      </div>
       <div className="date-ribbon">{card.date_label}</div>
       <h2>{card.title}</h2>
       <section className="historical-brief">
@@ -470,11 +466,9 @@ function EventCard({
               title={availability.reason}
               onClick={() => onChoose(card.id, option.id)}
             >
-              <span>
-                {availability.available
-                  ? "Course proposed"
-                  : "Not credible in this situation"}
-              </span>
+              {availability.available ? null : (
+                <span>Not credible in this situation</span>
+              )}
               {availability.available ? option.label : availability.reason}
             </button>
           );
