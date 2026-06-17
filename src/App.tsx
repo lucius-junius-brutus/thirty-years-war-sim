@@ -574,17 +574,33 @@ function AftermathPanel({
   entry: GameState["log"][number];
   onContinue: () => void;
 }) {
+  const deltas = Object.entries(entry.pressure_delta ?? {})
+    .filter(([, value]) => value)
+    .sort(([, a], [, b]) => Math.abs(b) - Math.abs(a))
+    .map(([key, value]) => {
+      const variable = gameDatabase.game_variables.find((item) => item.id === key);
+      const rising = (value as number) > 0;
+      // A shift "helps" Ferdinand when a good pressure rises or a dangerous one falls.
+      const beneficial = variable?.high_is_dangerous ? !rising : rising;
+      return { key, name: variable?.name ?? key, value: value as number, beneficial };
+    });
+
   return (
     <section className="aftermath-panel" aria-label="Aftermath">
       <div className="panel-title">Aftermath</div>
       <strong>{entry.choice}</strong>
       <p>{entry.aftermath ?? entry.consequence}</p>
-      {entry.aftermath_bullets?.length ? (
-        <ul className="aftermath-bullets">
-          {entry.aftermath_bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
+      {deltas.length ? (
+        <div className="aftermath-deltas" aria-label="Pressure shifts">
+          {deltas.map((delta) => (
+            <span
+              className={delta.beneficial ? "delta-chip up" : "delta-chip down"}
+              key={delta.key}
+            >
+              {delta.name} {delta.value > 0 ? `+${delta.value}` : delta.value}
+            </span>
           ))}
-        </ul>
+        </div>
       ) : null}
       {entry.docket_changes?.map((change) => (
         <p
