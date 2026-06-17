@@ -473,7 +473,7 @@ describe("game engine", () => {
     expect(afterRetainingKlesl.log.at(-1)?.docket_changes).toContainEqual(
       expect.objectContaining({
         kind: "added",
-        title: "Terms Carried Between Courts",
+        title: "The Last Channel",
       }),
     );
   });

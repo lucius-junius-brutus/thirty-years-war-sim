@@ -28,14 +28,14 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
     expect(screen.queryByText(/Wilson/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/ferdinand ii enters the game/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/the settlement with gaps/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/a peace built on silence/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/briefing for ferdinand/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/your inheritance/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/you enter these papers/i)).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
 
-    expect(screen.getByText(/the settlement with gaps/i)).toBeInTheDocument();
+    expect(screen.getByText(/a peace built on silence/i)).toBeInTheDocument();
     // The advisor-council conceit is gone: no "report received" or "course proposed".
     expect(screen.queryByText(/report received/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/course proposed/i)).not.toBeInTheDocument();
@@ -57,7 +57,7 @@ describe("Empire in Ashes app", () => {
     );
 
     expect(screen.getByText(/aftermath/i)).toBeInTheDocument();
-    expect(screen.queryByText(/leagues of protection/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/two armed camps/i)).not.toBeInTheDocument();
     expect(screen.getAllByText(/guardian of the settlement/i).length).toBeGreaterThan(0);
     const aftermathDeltas = container.querySelector(".aftermath-deltas");
     expect(aftermathDeltas).toBeInTheDocument();
@@ -68,7 +68,7 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /proceed to the next decision/i }));
 
-    expect(screen.getByText(/leagues of protection/i)).toBeInTheDocument();
+    expect(screen.getByText(/two armed camps/i)).toBeInTheDocument();
     expect(screen.getByText(/earlier restraint/i)).toBeInTheDocument();
     expect(screen.queryByText(/because the court has chosen/i)).not.toBeInTheDocument();
     expect(screen.getByText(/Tolerate the leagues as lawful insurance/i)).toBeInTheDocument();
