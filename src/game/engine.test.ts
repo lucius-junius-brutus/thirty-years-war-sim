@@ -670,7 +670,9 @@ describe("game engine", () => {
       ...seekTo(gameDatabase, state, "card_1623_electoral_transfer"),
       pressures: {
         ...state.pressures,
-        military_dependence: 82,
+        // estate trust below the option's floor locks the course; military kept
+        // out of crisis so no crisis card interrupts the electoral-transfer card.
+        military_dependence: 60,
         estate_trust: 28,
       },
     };
@@ -942,6 +944,47 @@ describe("game engine", () => {
     expect(state.log.at(-1)?.deferred_notes).toContain(
       "The bill for the army comes due.",
     );
+  });
+
+  it("forces a crisis card to the front when a pressure is in crisis", () => {
+    const database = syntheticDeck([
+      { ...baseCardFields(), id: "card_normal", title: "Normal", options: [mkOption("opt_n1"), mkOption("opt_n2")] },
+      {
+        ...baseCardFields(),
+        id: "card_crisis",
+        title: "Crisis",
+        requires_memory_tags: ["threshold_fiscal_capacity_crisis"],
+        options: [mkOption("opt_x1"), mkOption("opt_x2")],
+      },
+      { ...baseCardFields(), id: "card_after", title: "After", options: [mkOption("opt_a1"), mkOption("opt_a2")] },
+    ]);
+    const base = createInitialGameState(database, gameDatabase.playable_roles[0].id);
+
+    // No crisis: the normal card comes first in deck order.
+    expect(getCurrentCard(database, base)?.id).toBe("card_normal");
+
+    // Fiscal in crisis makes the crisis card eligible; it jumps the queue.
+    const inCrisis = { ...base, pressures: { ...base.pressures, fiscal_capacity: 20 } };
+    expect(getCurrentCard(database, inCrisis)?.id).toBe("card_crisis");
+  });
+
+  it("deepens an unaddressed crisis each turn", () => {
+    const database = syntheticDeck([
+      { ...baseCardFields(), id: "card_a", title: "A", options: [mkOption("opt_a"), mkOption("opt_a2")] },
+      { ...baseCardFields(), id: "card_b", title: "B", options: [mkOption("opt_b"), mkOption("opt_b2")] },
+    ]);
+    let state = {
+      ...createInitialGameState(database, gameDatabase.playable_roles[0].id),
+      pressures: {
+        ...createInitialGameState(database, gameDatabase.playable_roles[0].id).pressures,
+        fiscal_capacity: 20,
+      },
+    };
+
+    state = chooseOption(database, state, "card_a", "opt_a");
+
+    // The choice did not touch fiscal capacity, but the crisis has deepened.
+    expect(state.pressures.fiscal_capacity).toBeLessThan(20);
   });
 
   it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {

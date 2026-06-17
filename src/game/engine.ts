@@ -155,10 +155,29 @@ export function getCurrentCard(
     return null;
   }
   const resolved = new Set(state.resolved_card_ids);
+  const eligible = getCardsForRole(database, state).filter(
+    (card) => !resolved.has(card.id),
+  );
+  // A card unlocked by a pressure entering crisis interrupts the normal
+  // sequence: it is forced to the front instead of waiting its turn in the deck.
+  const crisisTags = crisisCardTags(database.pressure_thresholds);
   return (
-    getCardsForRole(database, state).find((card) => !resolved.has(card.id)) ??
+    eligible.find((card) => isCrisisCard(card, crisisTags)) ??
+    eligible[0] ??
     null
   );
+}
+
+function crisisCardTags(thresholds: PressureThresholdRecord[]) {
+  return new Set(
+    thresholds
+      .filter((threshold) => threshold.kind === "crisis")
+      .flatMap((threshold) => threshold.memory_tags),
+  );
+}
+
+function isCrisisCard(card: CardRecord, crisisTags: Set<string>) {
+  return (card.requires_memory_tags ?? []).some((tag) => crisisTags.has(tag));
 }
 
 export function chooseOption(
@@ -192,11 +211,19 @@ export function chooseOption(
   const due = ticked.filter((item) => item.remaining <= 0);
   const stillPending = ticked.filter((item) => item.remaining > 0);
 
-  const combinedEffects = mergeEffects(
+  const choiceEffects = mergeEffects(
     option.effects,
     ...due.map((item) => item.effects ?? {}),
   );
-  const pressures = applyEffects(state.pressures, combinedEffects);
+  const pressuresAfterChoice = applyEffects(state.pressures, choiceEffects);
+  // An unaddressed crisis deepens: every pressure still past its crisis line
+  // worsens a step further this turn, compounding toward collapse if ignored.
+  const escalation = computeCrisisEscalation(
+    pressuresAfterChoice,
+    database.pressure_thresholds,
+  );
+  const combinedEffects = mergeEffects(choiceEffects, escalation);
+  const pressures = applyEffects(pressuresAfterChoice, escalation);
   const memoryTags = mergeMemoryTags(state.memory_tags, [
     ...(option.memory_tags ?? []),
     ...due.flatMap((item) => item.memory_tags ?? []),
@@ -376,6 +403,28 @@ function mergeEffects(
     }
   }
   return merged;
+}
+
+// How far a pressure worsens for each turn it remains past its crisis line.
+const CRISIS_ESCALATION_STEP = 4;
+
+function computeCrisisEscalation(
+  pressures: PressureMap,
+  thresholds: PressureThresholdRecord[],
+): Partial<PressureMap> {
+  const delta: Partial<PressureMap> = {};
+  for (const threshold of thresholds) {
+    if (threshold.kind !== "crisis") continue;
+    if (!matchesPressureConditions([threshold.condition], pressures)) continue;
+    // Worsen away from safety: down for a "max" (low-is-bad) crisis, up for a
+    // "min" (high-is-bad) one.
+    const worsen =
+      threshold.condition.max !== undefined
+        ? -CRISIS_ESCALATION_STEP
+        : CRISIS_ESCALATION_STEP;
+    delta[threshold.pressure] = (delta[threshold.pressure] ?? 0) + worsen;
+  }
+  return delta;
 }
 
 export interface PressureWarning {
