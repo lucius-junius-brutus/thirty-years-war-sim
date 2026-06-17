@@ -170,36 +170,69 @@ function FerdinandPrelude({
         <p className="office">{role.office}</p>
         <section className="historical-brief prelude-brief">
           <p>
-            Ferdinand II enters the game as archduke of Inner Austria, heir to a
-            hard Catholic restoration in his own lands, and claimant to crowns
-            whose estates still speak in the language of privilege, confession,
-            and sworn liberties.
+            Wilson frame: Ferdinand&apos;s story begins inside the Holy Roman Empire,
+            an imperial order that had learned to contain religious division by
+            turning it into law. The Peace of Augsburg was not merely a truce
+            between Catholics and Lutherans. It belonged to a wider reform
+            settlement concerned with public peace, imperial courts, tax quotas,
+            currency, policing, and the Reichskammergericht. It kept violence
+            inside legal channels, but it also left important terms deliberately
+            broad enough for both sides to claim them.
           </p>
           <p>
-            The Holy Roman Empire is not a single kingdom waiting for command. It
-            is a legal order of electors, princes, cities, circles, courts, and
-            estates, held together by the public peace and by habits of
-            consultation that war can break faster than law can mend.
+            The difficulty for Ferdinand is that the settlement&apos;s strength and
+            weakness are the same thing. It preserved imperial peace for decades,
+            yet it left three unsettled questions at the center of imperial
+            politics: the fate of Catholic ecclesiastical territories under
+            Protestant administrators, church property lying inside Lutheran
+            lands, and the rights of subjects who did not share their ruler&apos;s
+            confession. The emperor is expected to judge within the constitution,
+            not simply command it from above.
           </p>
           <p>
-            The game begins before Prague because Ferdinand's later crisis is
-            already being prepared by older settlements: Augsburg's confessional
-            compromise, Bohemian estate privileges, Habsburg dynastic ambitions,
-            Catholic restoration, weak finance, and dependence on armed allies.
+            Ferdinand&apos;s own political schooling comes from his years as
+            archduke of Inner Austria, where Wilson describes a more systematic
+            link between Catholic restoration and political loyalty. Earlier
+            concessions were read narrowly rather than openly revoked. Catholic
+            nobles and officials were favored. Jesuit education and
+            better-trained clergy supplied personnel. A reform commission,
+            guarded by troops, moved through towns closing Protestant schools,
+            changing councils, installing priests, and pressing resistance back
+            into obedience.
+          </p>
+          <p>
+            Bohemia is not Inner Austria. Its crown was claimed by the Habsburgs
+            as hereditary, but its estates preserved older language of election,
+            charter, privilege, and consent. Its religious settlement did not
+            descend from Augsburg alone; it carried Hussite and Utraquist
+            traditions, the Bohemian Confession, and later the Letter of Majesty.
+            The Bohemian estates were also not ornamental. They represented the
+            country&apos;s corporate powers, controlled much local government, and
+            could treat religious policy as a question of sworn liberty.
+          </p>
+          <p>
+            The opening problem, then, is not whether Ferdinand wants Catholic
+            restoration. Wilson presents him as devout and legalistic, cautious
+            enough to consult widely, but convinced that rightful authority and
+            Catholic reform belong together. The question is whether methods
+            that succeeded in Inner Austria can survive contact with Bohemian
+            privileges, imperial legal ambiguity, weak Habsburg finance,
+            Bavarian leverage, Spanish dynastic interest, and foreign courts
+            watching for a pretext.
           </p>
         </section>
         <div className="prelude-ledger" aria-label="What to watch in play">
           <div>
             <strong>What to watch in play</strong>
-            <span>Most useful choices will buy time or authority while creating a debt elsewhere.</span>
+            <span>Ask who gains leverage, who loses trust, and which institution can still call the chosen course lawful.</span>
           </div>
           <div>
-            <strong>Core tension</strong>
-            <span>Religious enforcement can strengthen Catholic legitimacy while weakening estate trust.</span>
+            <strong>Augsburg&apos;s burden</strong>
+            <span>The settlement works because it is legal, but its disputed clauses invite rival legal readings.</span>
           </div>
           <div>
-            <strong>Strategic danger</strong>
-            <span>Military rescue often comes through partners who become harder to control.</span>
+            <strong>Ferdinand&apos;s habit</strong>
+            <span>Restoration advances through law, patronage, preparation, and force, but each tool can harden opposition.</span>
           </div>
         </div>
         <button className="choice-button start-role" type="button" onClick={onContinue}>
