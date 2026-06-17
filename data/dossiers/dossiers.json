@@ -3,69 +3,70 @@
     "id": "dossier_peace_of_augsburg",
     "title": "Peace of Augsburg",
     "dossier_type": "treaty",
-    "summary": "Religious and constitutional settlement of 1555 that recognized Catholic and Lutheran estates within imperial law while leaving several disputed questions unresolved.",
-    "why_it_matters": "Ferdinand inherits its language as both shield and weapon: enforcing one clause may reassure Catholic petitioners while frightening estates that depend on long local practice.",
+    "summary": "A settlement reached at the imperial Diet of Augsburg in 1555 that ended the first phase of armed conflict between Catholic and Lutheran estates in the Holy Roman Empire. It recognized Lutheranism alongside Catholicism and established that each territorial ruler could determine the religion of his own lands, with dissenting subjects granted only the right to emigrate. Calvinism and other Reformed confessions were left unrecognized.",
+    "why_it_matters": "Augsburg held the Empire's confessional peace for two generations, but it left explosive questions open: the status of church lands held by Protestants, the rights of Protestant subjects under Catholic prince-bishops, and the exclusion of the Reformed. Above all the disputed Ecclesiastical Reservation became a legal fault line along which the Empire fractured after 1600.",
     "source_refs": [
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_primary_augsburg_peace_1555_reference_translation"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_letter_of_majesty",
     "title": "Letter of Majesty",
     "dossier_type": "document",
-    "summary": "Rudolf II's 1609 Bohemian charter confirming Protestant rights claimed by the Bohemian estates.",
-    "why_it_matters": "The charter gives Bohemian Protestants a legal language for grievance, while Ferdinand's court can still dispute how far those protections extend.",
+    "summary": "A charter signed by Emperor Rudolf II on 9 July 1609, forced from him by the Protestant Bohemian estates during his succession struggle with his brother Matthias. It granted the lords, knights, and royal towns the free choice of their Christian confession and the right to build churches and schools, and let each group elect ten 'Defensors' to safeguard these rights — in effect a parallel government beside the Habsburg administration. The Bohemian Catholics, led by Chancellor Lobkowitz, refused to sign it.",
+    "why_it_matters": "The Letter of Majesty was the legal foundation of Protestant liberty in Bohemia and the document the rebels of 1618 claimed to be defending. Disputes over its scope — above all whether it protected Protestant worship on Catholic-owned land — triggered the Defenestration of Prague and the Bohemian Revolt.",
     "source_refs": [
-      "src_public_letter_of_majesty_1609_cz_wikisource",
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_public_letter_of_majesty_1609_cz_wikisource"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_ferdinand_ii",
     "title": "Ferdinand II",
     "dossier_type": "person",
-    "summary": "Habsburg ruler of Inner Austria, later king of Bohemia, king of Hungary, and emperor.",
-    "why_it_matters": "The role is built around Ferdinand's attempt to secure dynasty, law, and Catholic restoration without losing the Empire's political cooperation.",
+    "summary": "Ferdinand II (1578–1637) was a Habsburg prince educated by the Jesuits who ruled Inner Austria as archduke from 1596, was elected King of Bohemia in 1617 and of Hungary in 1618, and became Holy Roman Emperor in 1619. A devout Catholic convinced that his authority rested on defending the faith, he pursued a vigorous Counter-Reformation and the recovery of imperial power.",
+    "why_it_matters": "Ferdinand's election in Bohemia and his determination to roll back Protestant gains precipitated the Bohemian Revolt of 1618 and the wider Thirty Years War. His reign saw the Habsburg cause win repeated victories that nonetheless kept widening the war, drawing in Denmark, Sweden, and finally France.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_inner_austria",
     "title": "Inner Austria",
     "dossier_type": "place",
-    "summary": "The Styrian Habsburg lands of Styria, Carinthia, Krain, Gorz, and Gradisca, lying near the Ottoman frontier and governed by Ferdinand before his imperial rise.",
-    "why_it_matters": "Ferdinand's successful reform commission in Inner Austria taught him that careful preparation, legal narrowness, Catholic officeholding, and force could restore dynastic authority without immediate general revolt.",
+    "summary": "A group of five Habsburg provinces in the south-eastern Empire — Styria, Carinthia, Carniola, Gorizia, and the Adriatic lands — governed from Graz and named after Styria, the most populous. Bordering the Ottoman frontier, Inner Austria became a separate Habsburg branch under Archduke Charles II in the 1564 partition of the dynasty's lands. By the 1570s the great majority of its nobility and towns had adopted Lutheranism; only five of Styria's 135 noble families remained Catholic.",
+    "why_it_matters": "Inner Austria was the political schooling of Ferdinand II, who ruled it as archduke from 1596. His systematic Counter-Reformation there — reform commissions, the expulsion of Protestant clergy and teachers, and the backing of troops — became the model he later tried to extend to Bohemia and the wider Empire.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_khlesl",
     "title": "Cardinal Klesl",
     "dossier_type": "person",
-    "summary": "Matthias's chief minister and a figure associated with negotiation and dynastic caution during the first Bohemian crisis.",
-    "why_it_matters": "Keeping or removing him changes whether Ferdinand still has a high-level channel for compromise after Prague.",
+    "summary": "Melchior Klesl (1552–1630) was a cardinal and the chief minister of Emperor Matthias. The son of a Protestant Viennese baker, he converted to Catholicism and rose through the Church to direct Habsburg policy, favouring a cautious, conciliatory line toward the Protestant estates in the hope of preserving imperial authority by negotiation.",
+    "why_it_matters": "Klesl's policy of moderation set him against the hardline archdukes led by Ferdinand. In July 1618, soon after the Bohemian Revolt began, Ferdinand and Archduke Maximilian had Klesl arrested and imprisoned, removing the last powerful advocate of compromise and clearing the way for a harder answer to the revolt.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_maximilian_bavaria",
     "title": "Maximilian of Bavaria",
     "dossier_type": "person",
-    "summary": "Duke of Bavaria and leader of the Catholic League, indispensable to Ferdinand's early military survival.",
-    "why_it_matters": "Bavarian help defeats Bohemia, but the price becomes leverage over money, military command, and the Palatine electorate.",
+    "summary": "Maximilian I of Bavaria (1573–1651) was Duke and, from 1623, Elector of Bavaria, and the foremost Catholic prince of the Empire after the emperor. Jesuit-educated and a formidable administrator, he made Bavaria a solvent, well-armed state and led the Catholic League from its founding in 1609.",
+    "why_it_matters": "Maximilian's army won the Battle of White Mountain in 1620 and rescued Ferdinand II's cause, making Bavaria indispensable. In return he obtained the Upper Palatinate and Frederick V's electoral title in 1623 — a reward that punished rebellion but also unsettled the imperial constitution and left the emperor dependent on an over-mighty ally.",
     "source_refs": [
       "src_wilson_europes_tragedy",
       "src_vales_munich_treaty_1619"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_munich_treaty",
@@ -174,37 +175,35 @@
     "id": "dossier_bohemian_estates",
     "title": "Bohemian Estates",
     "dossier_type": "institution",
-    "summary": "Corporate political bodies of the Bohemian crown lands that claimed privileges, religious protections, and a role in guarding the kingdom's liberties.",
-    "why_it_matters": "Ferdinand's conflict with them is legal, confessional, dynastic, and constitutional at once; reducing them to rebels or Protestants misses the pressure of the crisis.",
+    "summary": "The representative assembly of the Kingdom of Bohemia, composed of the lords (high nobility), the knights (lesser nobility), and the royal towns. The Estates claimed the right to elect or confirm the king and to consent to taxation, and after 1609 a Protestant majority used the Letter of Majesty to assert broad religious and political liberties.",
+    "why_it_matters": "The Estates' insistence that the Bohemian crown was elective and conditional, and that royal promises bound the king, set them against Ferdinand II's belief in hereditary Habsburg right. Their revolt in 1618 and their offer of the crown to Frederick V in 1619 opened the Thirty Years War.",
     "source_refs": [
-      "src_primary_apologia_1618_bsb11213319",
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_public_bohemian_reasons_reject_ferdinand_1619"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_protestant_union",
     "title": "Protestant Union",
     "dossier_type": "institution",
-    "summary": "Defensive association formed around Palatine leadership after confidence in ordinary imperial remedies weakened.",
-    "why_it_matters": "The Union made insecurity organizational. Even when it avoided open war, it gave Protestant estates correspondence, money, and a language of lawful defence.",
+    "summary": "A defensive alliance of Protestant princes and imperial cities formed at Auhausen on 14 May 1608, days after the imperial Diet broke up without agreement. Led by the Palatinate under Christian of Anhalt, it merged earlier south-west German defence groups but never enrolled more than about half the Empire's Protestant territories; the Lutheran elector of Saxony refused to join, keeping the north-east away. To avoid being condemned as illegal, the Union presented itself as an adjunct of the imperial public peace.",
+    "why_it_matters": "The Union was the first standing confessional alliance of the pre-war crisis and provoked the rival Catholic League a year later. Weak, factional, and dependent on the Palatine network, it nonetheless hardened the Empire's division into two armed camps.",
     "source_refs": [
-      "src_wilson_europes_tragedy",
-      "src_wilson_sourcebook"
+      "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_catholic_league",
     "title": "Catholic League",
     "dossier_type": "institution",
-    "summary": "Association of Catholic estates under Bavarian direction, created as a confessional and security answer to Protestant coordination.",
-    "why_it_matters": "The League gave Ferdinand soldiers when his own means were thin, but it also made Maximilian's interests part of every later settlement.",
+    "summary": "An alliance of Catholic imperial estates formed in 1609, about a year after the Protestant Union, under the leadership of Duke Maximilian I of Bavaria. It grew out of the ecclesiastical electors' wish to defend the Catholic reading of the Peace of Augsburg. The name 'League' (Liga) was popularized by Protestant propaganda likening it to the militant French Catholic Ligue.",
+    "why_it_matters": "The League gave the Catholic estates an army and treasury of their own under Bavarian command. When Ferdinand II had no forces of his own in 1619–20, it was Maximilian and the League who supplied the troops that crushed the Bohemian Revolt — at the price of Bavarian claims on command, compensation, and ultimately the Palatine electorate.",
     "source_refs": [
-      "src_wilson_europes_tragedy",
-      "src_vales_munich_treaty_1619"
+      "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_swedish_crown",
@@ -238,5 +237,39 @@
       "src_wilson_europes_tragedy"
     ],
     "review_status": "needs_review"
+  },
+  {
+    "id": "dossier_ecclesiastical_reservation",
+    "review_status": "reviewed",
+    "title": "Ecclesiastical Reservation",
+    "dossier_type": "concept",
+    "summary": "A clause of the 1555 Peace of Augsburg (the reservatum ecclesiasticum) providing that any Catholic prelate — a bishop, abbot, or other church ruler — who converted to Protestantism must surrender his office and its lands, so that the territory remained Catholic. Lutherans had objected to the clause and argued it was not truly part of the Peace; a separate declaration by Emperor Ferdinand I further allowed nobles in such ecclesiastical territories to remain Lutheran.",
+    "why_it_matters": "The Reservation was meant to stop the imperial Church from being secularized piece by piece. In practice Protestant nobles continued to take over church lands as 'administrators,' and after 1582 the growing number of ecclesiastical territories under Protestant control threatened the Catholic majority in the imperial Diet. Whether the Reservation bound Protestants who had never accepted it became one of the most dangerous disputes in imperial law.",
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_primary_augsburg_peace_1555_reference_translation"
+    ]
+  },
+  {
+    "id": "dossier_defensors",
+    "review_status": "reviewed",
+    "title": "The Defensors",
+    "dossier_type": "institution",
+    "summary": "A committee created by the Bohemian Letter of Majesty of 1609 to safeguard Protestant religious rights. Each of the three estates — lords, knights, and royal towns — elected ten Defensors, forming a standing Protestant body that operated alongside, and often against, the Catholic-led royal administration under Chancellor Lobkowitz.",
+    "why_it_matters": "The Defensors gave Bohemian Protestants an institutional base independent of the crown. It was through the Defensors that Count Thurn organized the resistance of 1618, summoning the assemblies that led directly to the Defenestration of Prague.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_thurn",
+    "review_status": "reviewed",
+    "title": "Count Thurn",
+    "dossier_type": "person",
+    "summary": "Count Heinrich Matthias von Thurn (1567–1640) was a Bohemian nobleman of north-Italian descent and a leading Protestant militant. A commander in the Long Turkish War, he was named a commander of the Protestant militia under the Letter of Majesty and given the post of Castellan of Karlstein, keeper of the Bohemian crown jewels. In 1617 Ferdinand had that post taken from him, sharpening his hostility.",
+    "why_it_matters": "Thurn organized and led the Defenestration of Prague in May 1618 and became the chief military leader of the early Bohemian Revolt, even threatening Vienna in 1619. Most accounts judge him an inept strategist driven more by ambition and grievance than by religious conviction.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

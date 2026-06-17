@@ -55,7 +55,7 @@ describe("game engine", () => {
     );
     const text = `${card?.briefing} ${card?.situation}`;
 
-    expect(text).toMatch(/Catholic and Lutheran/i);
+    expect(text).toMatch(/Catholics? and Lutherans?/i);
     expect(text).toMatch(/prince|territorial ruler/i);
     expect(text).toMatch(/emigrate|leave/i);
     expect(text).toMatch(/ecclesiastical/i);

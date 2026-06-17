@@ -41,7 +41,7 @@ describe("Empire in Ashes app", () => {
     expect(screen.queryByText(/received at council/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/memorial before the council/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/how we got here/i)).not.toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Religious Peace of Augsburg/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Peace of Augsburg/i })).toBeInTheDocument();
     expect(screen.getAllByText(/course proposed/i).length).toBeGreaterThan(0);
     expect(screen.queryByText(/historical path/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/campaign begins/i)).not.toBeInTheDocument();
@@ -50,7 +50,7 @@ describe("Empire in Ashes app", () => {
     expect(screen.queryByRole("button", { name: /designer view/i })).not.toBeInTheDocument();
 
     fireEvent.click(
-      screen.getByRole("button", { name: /Keep Augsburg a living compact/i }),
+      screen.getByRole("button", { name: /Augsburg as a living compact/i }),
     );
 
     expect(screen.getByText(/aftermath/i)).toBeInTheDocument();
@@ -70,7 +70,7 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByText(/leagues of protection/i)).toBeInTheDocument();
     expect(screen.getByText(/earlier restraint/i)).toBeInTheDocument();
     expect(screen.queryByText(/because the court has chosen/i)).not.toBeInTheDocument();
-    expect(screen.getByText(/Suffer the leagues as passing instruments/i)).toBeInTheDocument();
+    expect(screen.getByText(/Tolerate the leagues as lawful insurance/i)).toBeInTheDocument();
     expect(screen.queryByText(/aftermath/i)).not.toBeInTheDocument();
   });
 
@@ -79,10 +79,10 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
     fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
-    fireEvent.click(screen.getByRole("button", { name: /Religious Peace of Augsburg/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
     expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
-    expect(screen.getByText(/Religious and constitutional settlement/i)).toBeInTheDocument();
+    expect(screen.getByText(/Lutheranism alongside Catholicism/i)).toBeInTheDocument();
     expect(screen.getByText(/Why it matters/i)).toBeInTheDocument();
   });
 
