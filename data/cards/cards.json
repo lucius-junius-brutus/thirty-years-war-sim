@@ -1287,22 +1287,22 @@
         "required_memory_tags": [
           "catholic_league_encouraged"
         ],
-        "briefing": "Munich's hand was already strengthened. The court having treated the Catholic association as the needful answer to Protestant union, Maximilian and the League appeared now less as petitioners than as the instrument already chosen for the rescue.",
-        "situation": "Bohemia, Transylvania, and Frederick's adherents made still a present problem of force. The price was the sharper: Bavarian command, compensation, and a voice in the settlement followed now from an earlier policy as much as from present necessity."
+        "briefing": "Munich's hand was already strong, for the court had earlier embraced the Catholic League as the necessary answer to Protestant union. Maximilian and the League now appeared not as petitioners but as the instrument already chosen for the rescue — and the veteran Tilly with them.",
+        "situation": "Bohemia, Transylvania, and Frederick's adherents still made a present problem of force. But the price by the Treaty of Munich was the sharper now: Bavarian command, full compensation, and a voice in the settlement followed from an earlier policy as much as from present necessity."
       },
       {
         "required_memory_tags": [
           "leagues_tolerated"
         ],
-        "briefing": "The leagues having been suffered as emergency instruments under imperial law, Munich could offer its aid in the same guarded language. Maximilian and the Catholic League promised rescue while professing obedience to the public peace.",
-        "situation": "The offer was useful because it wore the face of law; it was dangerous because the army that saved Bohemia would carry also its claims for command, compensation, and consultation."
+        "briefing": "Because the leagues had earlier been suffered as lawful instruments of the public peace, Munich could offer its aid in the same guarded language. Maximilian and the Catholic League promised rescue while professing obedience — Tilly's veterans at their command.",
+        "situation": "The offer was useful because it wore the face of law; it was dangerous because the army that saved Bohemia would carry, by the Treaty of Munich, its claims for command, compensation, and consultation."
       },
       {
         "required_memory_tags": [
           "leagues_suppressed"
         ],
-        "briefing": "The earlier condemnation of the leagues returned now as a difficulty. Maximilian might still help, but the court must explain why a Catholic armed association was unlawful in principle and indispensable in practice.",
-        "situation": "Bohemia required force before the ordinary imperial levies could answer. To accept Bavarian aid on these terms was to risk making necessity stronger than the very law that had been invoked against faction."
+        "briefing": "The court's earlier condemnation of the leagues returned now as an awkwardness. Maximilian could still help — with Tilly and the Catholic League — but Vienna had to explain why a Catholic armed association was unlawful in principle yet indispensable in practice.",
+        "situation": "Bohemia required force before any imperial levy could answer. To accept Bavarian aid by the Treaty of Munich, on these terms, was to make necessity stronger than the very law once invoked against faction."
       }
     ]
   },
@@ -2362,8 +2362,8 @@
           "palatine_conditional_settlement"
         ],
         "title": "Maximilian's Claim",
-        "briefing": "Regensburg had not ended Bavaria's claim. Maximilian's soldiers and credit had helped recover the emperor's position, and Munich's promise stood still over every Palatine compromise.",
-        "situation": "A softer Palatine settlement left Ferdinand a different danger: if Frederick were not utterly stripped, Bavaria must yet be satisfied without making the electoral college look a thing disposable."
+        "briefing": "Regensburg had not ended Bavaria's claim. Maximilian's soldiers and credit had recovered the emperor's position, and the promise of the Treaty of Munich still hung over every Palatine compromise — Frederick's electoral dignity its unpaid price.",
+        "situation": "A softer Palatine settlement left Ferdinand a sharper danger: if Frederick were not wholly stripped, Maximilian must still be satisfied without making the electoral college look a thing the emperor could give and take at will."
       }
     ],
     "context_links": [
@@ -3218,22 +3218,22 @@
         "required_memory_tags": [
           "lubeck_generous_peace"
         ],
-        "briefing": "The generous peace at Lubeck had removed Denmark without opening a general settlement. The Catholic petitioners now pressed that victory and peace together should permit the old claims of the Church to be made good.",
-        "situation": "A decree might satisfy those claims; but the same paper might tell the Lutheran princes that moderation toward Denmark had been only a preparation for enforcement within the Empire."
+        "briefing": "The lenient Peace of Lübeck had removed Denmark without opening a general settlement, and the Catholic petitioners now pressed that victory and peace together should let the old church claims be made good at last.",
+        "situation": "A decree could satisfy them — but the same paper, the Edict of Restitution, might tell the Lutheran princes that moderation toward Denmark had been only the prelude to enforcement at home."
       },
       {
         "required_memory_tags": [
           "restoration_pushed"
         ],
-        "briefing": "The mandates in the hereditary lands had already made the Catholic restoration visible in churches, schools, offices, and noble houses. The question now arrived in imperial form.",
-        "situation": "To issue an Edict was to carry the hereditary method into the wider Empire; to delay was to disappoint those who had believed the victory had proved the method lawful."
+        "briefing": "The mandates in the hereditary lands had already made the Catholic restoration visible in churches, schools, and offices. Now the same question arrived in imperial form, resting on the disputed reach of the Peace of Augsburg.",
+        "situation": "To issue the Edict of Restitution was to carry the hereditary method into the whole Empire; to delay was to disappoint those who believed victory had already proved the method lawful."
       },
       {
         "required_memory_tags": [
           "palatine_proxy_settlement"
         ],
-        "briefing": "The earlier willingness to accept submission by proxy in the Palatine matter had preserved a language of settlement. The restitution petitions now tried whether that restraint might survive a Catholic victory.",
-        "situation": "A broad Edict would reverse the tone of compromise. A narrower interpretation might keep the wavering Lutheran estates from treating every imperial paper as a threat."
+        "briefing": "The earlier willingness to settle the Palatine matter by proxy had kept a language of compromise alive. The restitution petitions, grounded on the Peace of Augsburg, now tested whether that restraint could survive a Catholic victory.",
+        "situation": "A broad Edict of Restitution would reverse the tone of compromise at a stroke. A narrower reading might keep the wavering Lutheran estates from treating every imperial paper as a threat."
       }
     ]
   },
@@ -3438,15 +3438,15 @@
         "required_memory_tags": [
           "restitution_edict_issued"
         ],
-        "briefing": "The Edict now travelled ahead of every imperial envoy. The reports out of Saxony and from the Protestant estates no longer asked for delay alone; they asked whether obedience could live beside armed security.",
-        "situation": "The Swedish king was already upon imperial soil. Should Ferdinand offer no public settlement, the middle party might cease to be middle; should he yield too much, the Catholic allies would ask what victory and law had been for."
+        "briefing": "The Edict now travelled ahead of every imperial envoy, and Gustavus Adolphus had landed besides. Saxony and the Protestant estates no longer asked merely for delay; they asked whether obedience could live beside the security only an army could give.",
+        "situation": "Driven by the Edict, the Leipzig assembly leaned toward armed self-defence. Offer no public settlement and the middle falls to Sweden; concede too much and the Catholic allies ask what the Edict was for."
       },
       {
         "required_memory_tags": [
           "restitution_peace_bargain"
         ],
-        "briefing": "Restitution having been treated as a matter of peace and not of command alone, the Saxon envoys had language enough still to ask for public terms before they should choose arms.",
-        "situation": "The Swedish king was already upon imperial soil; yet the Lutheran middle had not yet lost every reason to bargain with the emperor."
+        "briefing": "Because restitution had been treated as a matter for bargaining rather than command alone, the Saxon envoys still had language enough to ask for public terms before they chose Gustavus Adolphus and his arms.",
+        "situation": "Sweden was on German soil, but the Lutheran middle had not yet lost every reason to deal with the emperor — if the Edict could be seen to bend."
       }
     ]
   },
@@ -3917,15 +3917,15 @@
         "required_memory_tags": [
           "wallenstein_removed_by_force"
         ],
-        "briefing": "After Wallenstein's violent removal and the victory at Nordlingen, the Saxon articles came within reach. The court could speak again of imperial order, though officers and princes remembered how the command had been recovered.",
-        "situation": "The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home. The danger lay in the names left outside the pardon."
+        "briefing": "With Wallenstein cut down at Eger and the Swedes broken at Nördlingen, the Saxon articles came within reach. The court could speak again of imperial order — though officers and princes remembered how that order had been recovered.",
+        "situation": "The Edict could be suspended, the armies joined under the emperor, the Lutheran estates brought home. The danger, as ever, lay in the names left outside the pardon, ready for France or Sweden."
       },
       {
         "required_memory_tags": [
           "restitution_peace_bargain"
         ],
-        "briefing": "Restitution having already been treated as negotiable peace business, the Saxon articles arrived now less as a surrender than as a form the court itself had made possible.",
-        "situation": "The settlement might restore obedience widely; but every excluded prince, exile, and army remained useful to France or to Sweden."
+        "briefing": "Because restitution had already been treated as negotiable peace business, the Saxon articles after Nördlingen arrived less as a surrender than as a form the court itself had made possible.",
+        "situation": "The settlement could restore obedience widely — but every prince and exile excluded from it remained useful to France or to Sweden."
       }
     ]
   },
