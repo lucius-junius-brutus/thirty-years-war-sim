@@ -106,35 +106,35 @@
     "id": "dossier_wallenstein",
     "title": "Albrecht von Wallenstein",
     "dossier_type": "person",
-    "summary": "Imperial commander and military entrepreneur whose credit, officers, and contribution system gave Ferdinand an army beyond ordinary treasury capacity.",
-    "why_it_matters": "Wallenstein solves force and finance while creating a power center that can frighten princes, allies, and Vienna itself.",
+    "summary": "Albrecht von Wallenstein (1583–1634) was a Bohemian nobleman who converted to Catholicism, married into wealth, and grew immensely rich on the confiscated estates of the Bohemian rebels. In 1625 he offered to raise and largely finance a great army for Ferdinand II, becoming the emperor's generalissimo and the most powerful military entrepreneur of the war.",
+    "why_it_matters": "Wallenstein gave Ferdinand an imperial army independent of Bavaria and the League — funded by levying 'contributions' on the lands his troops occupied, the system that let war feed war. His power, wealth, and ambition grew so great that the princes forced his dismissal in 1630; recalled in crisis, he was assassinated in 1634 on suspicion of treating with the enemy.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_edict_of_restitution",
     "title": "Edict of Restitution",
     "dossier_type": "document",
-    "summary": "Ferdinand's 1629 decree demanding restoration of many ecclesiastical properties and excluding Calvinists from the protection of the religious peace.",
-    "why_it_matters": "Wilson treats it as a grave overreach: legally framed, confessionally attractive, and politically disastrous among moderate Lutherans.",
+    "summary": "An imperial edict issued by Ferdinand II on 6 March 1629, at the height of his power. It ordered the restoration of all ecclesiastical lands secularized by Protestants since the 1552 Treaty of Passau — two archbishoprics, twelve bishoprics, and scores of monasteries — recognized only Catholics and adherents of the unaltered Augsburg Confession (excluding Calvinists), and empowered imperial commissioners to enforce it.",
+    "why_it_matters": "The Edict was the most sweeping assertion of imperial and Catholic authority of the war. Issued by decree rather than agreed in the Diet, it frightened Lutheran and Catholic princes alike about the reach of imperial power, undid the basis for compromise, and helped provoke the Swedish intervention. It was effectively suspended by the Peace of Prague in 1635.",
     "source_refs": [
-      "src_public_restitutionsedikt_1629",
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_public_restitutionsedikt_1629"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_peace_of_lubeck",
-    "title": "Peace of Lubeck",
+    "title": "Peace of Lübeck",
     "dossier_type": "treaty",
-    "summary": "The 1629 settlement that removed Denmark from the war on comparatively generous terms.",
-    "why_it_matters": "It offers Ferdinand a chance to convert military success into wider peace, a chance later damaged by restitution politics.",
+    "summary": "The treaty signed at Lübeck in May 1629 ending the war between Ferdinand II and Christian IV of Denmark. On surprisingly lenient terms — urged in part by Wallenstein — Christian recovered his German duchies in return for renouncing his interventions in the Empire and abandoning the north German Protestants he had led.",
+    "why_it_matters": "Lübeck removed Denmark from the war and left the emperor's armies dominant on the Baltic. But its lenient terms toward Denmark, set beside the harsh Edict of Restitution issued the same year, taught the Protestant estates that imperial moderation abroad masked enforcement at home — and the imperial reach to the Baltic was precisely what drew Sweden in.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_regensburg_congress",
@@ -228,14 +228,14 @@
   },
   {
     "id": "dossier_danish_crown",
-    "title": "Danish Crown",
+    "title": "The Danish Crown",
     "dossier_type": "institution",
-    "summary": "The Danish monarchy under Christian IV entered the German war through Lower Saxon leadership, Protestant security claims, and Baltic interests.",
-    "why_it_matters": "Denmark's intervention widened Ferdinand's problem from Bohemian and Palatine punishment into northern imperial order, bishoprics, and foreign kings acting inside the Empire.",
+    "summary": "The Danish Crown under Christian IV (1577–1648), King of Denmark-Norway and also Duke of Holstein — and thus himself a prince of the Lower Saxon imperial circle. Wealthy from the Sound tolls and ambitious for secularized north German bishoprics for his sons, Christian intervened in the Empire in 1625 as the elected colonel of the Lower Saxon Circle, backed by English and Dutch subsidies, to halt the Catholic and imperial advance toward the Baltic.",
+    "why_it_matters": "Christian's intervention opened the war's Danish phase and carried it into northern Germany. His defeat by Tilly and Wallenstein led to the Peace of Lübeck in 1629 and left the imperial armies dominant on the Baltic coast — a dominance that in turn alarmed Sweden into the intervention that would nearly undo Ferdinand.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_ecclesiastical_reservation",
@@ -356,6 +356,28 @@
     "dossier_type": "person",
     "summary": "Christian of Brunswick-Wolfenbüttel (1599–1626), Protestant administrator of Halberstadt, was a young, reckless cavalry commander who fought for Frederick V's cause as a freebooting ally of Mansfeld. Known as 'the mad Halberstadter,' he paid his troops by plundering church lands and struck coins inscribed 'God's friend, priests' enemy.'",
     "why_it_matters": "Christian's campaigns in Westphalia and the Lower Saxon lands kept the Palatine war alive after White Mountain and helped widen it toward the north German circle, where it would soon draw in Denmark.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_contributions",
+    "review_status": "reviewed",
+    "title": "Contributions",
+    "dossier_type": "concept",
+    "summary": "Regular payments in money and supplies extracted by armies from the territories they occupied or threatened, in place of pay from their own government. Systematized by Wallenstein in the 1620s, the method let commanders maintain huge forces the imperial treasury could never have funded directly — making war, in effect, pay for itself.",
+    "why_it_matters": "The contribution system freed Ferdinand from the cost of his own army but loosed it upon the population: friend and foe alike were taxed at sword-point to feed the soldiers. It let the war grow far larger and longer than any state's finances could otherwise sustain, and it spread the devastation that defines the conflict's memory.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_imperial_circles",
+    "review_status": "reviewed",
+    "title": "The Imperial Circles",
+    "dossier_type": "institution",
+    "summary": "The imperial circles (Reichskreise) were ten regional groupings of territories in the Holy Roman Empire, created to organize defence, taxation, coinage, and the keeping of the public peace. Each circle had its own assembly and could raise troops; the Lower Saxon Circle, in the north, counted the Danish king among its members in his capacity as Duke of Holstein.",
+    "why_it_matters": "The circles let a region act collectively, blurring the line between local self-defence and resistance to the emperor. When the Lower Saxon Circle elected Christian IV of Denmark its colonel and raised an army in 1625, an imperial institution became the vehicle for a foreign king's war against the emperor.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]

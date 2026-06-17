@@ -37,6 +37,14 @@ not re-explained.)
 - Ernst von Mansfeld — dossier_mansfeld — card_1622_palatine_settlement
 - Christian of Brunswick — dossier_christian_brunswick — card_1622_palatine_settlement
 
+## Introduced in Phase 4 (Danish/Wallenstein + Restitution)
+- Albrecht von Wallenstein — dossier_wallenstein — card_1625_wallenstein_army
+- Contributions ("war feeds war") — dossier_contributions — card_threshold_army_arrears
+- The Danish Crown (Christian IV) — dossier_danish_crown — card_1625_lower_saxon_neutrality
+- The Imperial Circles — dossier_imperial_circles — card_1625_lower_saxon_neutrality
+- Edict of Restitution — dossier_edict_of_restitution — card_1629_restitution_edict
+- Peace of Lübeck — dossier_peace_of_lubeck — card_1629_lubeck_peace
+
 ## Already-named entities with dossiers, to LINK (not re-explain) in later phases
 - Ferdinand II — dossier_ferdinand_ii (the player; rarely linked)
 - Bohemian Estates — dossier_bohemian_estates

@@ -100,3 +100,28 @@ transfer "for Maximilian's lifetime." Introduces the electoral college as consti
 **peace_feelers** — The 1623 crossroads (settle / press / demobilize); sets up why the
 Edict and the next escalations happen instead of peace.
 **threshold_estates_offer_credit** — Threshold reward card; goodwill as a wasting asset.
+
+---
+
+## Phase 4 — Danish war, Wallenstein, the Edict
+
+Theme: the instruments of total victory (a private army, a sweeping decree) are the
+same instruments that overreach and summon the next, larger enemy.
+
+**lower_saxon_neutrality** — Explains how an imperial circle + a foreign king (Christian
+IV as Duke of Holstein) turn self-defence into intervention. Introduces the circles.
+**wallenstein_army** — The pivot of the whole war: the contribution system that frees
+Ferdinand from Bavaria but loosens an army on the land. Introduces Wallenstein +
+contributions; recorded course grounded in the June 1625 recruiting.
+**palatine_peace_opening** — The peace that didn't happen because of *form* (personal vs
+proxy submission) — a sharp lesson in how pride prolongs war.
+**restoration_mandates** — Calls back the Styrian method (linked, not re-explained) now
+applied as imperial policy; the cost is exile of skill and capital.
+**mecklenburg_reward** — Wallenstein made an imperial prince; grounds the 1628 grant and
+the alarm it spread among the old houses (the seed of his 1630 dismissal).
+**lubeck_peace** — Lenient Denmark beside the harsh Edict: moderation abroad, enforcement
+at home — and the Baltic reach that draws in Sweden.
+**restitution_edict** — The overreach. Grounded in 6 March 1629; the decree that did more
+than any battle to make the Swedish intervention possible.
+**threshold_army_arrears / treasury_bargain** — The fiscal underside: arrears force the
+contribution system; ready money buys the rare freedom not to make servants into princes.

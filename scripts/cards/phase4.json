@@ -1,0 +1,263 @@
+{
+  "dossiers": {
+    "dossier_wallenstein": {
+      "title": "Albrecht von Wallenstein",
+      "dossier_type": "person",
+      "summary": "Albrecht von Wallenstein (1583–1634) was a Bohemian nobleman who converted to Catholicism, married into wealth, and grew immensely rich on the confiscated estates of the Bohemian rebels. In 1625 he offered to raise and largely finance a great army for Ferdinand II, becoming the emperor's generalissimo and the most powerful military entrepreneur of the war.",
+      "why_it_matters": "Wallenstein gave Ferdinand an imperial army independent of Bavaria and the League — funded by levying 'contributions' on the lands his troops occupied, the system that let war feed war. His power, wealth, and ambition grew so great that the princes forced his dismissal in 1630; recalled in crisis, he was assassinated in 1634 on suspicion of treating with the enemy.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_contributions": {
+      "title": "Contributions",
+      "dossier_type": "concept",
+      "summary": "Regular payments in money and supplies extracted by armies from the territories they occupied or threatened, in place of pay from their own government. Systematized by Wallenstein in the 1620s, the method let commanders maintain huge forces the imperial treasury could never have funded directly — making war, in effect, pay for itself.",
+      "why_it_matters": "The contribution system freed Ferdinand from the cost of his own army but loosed it upon the population: friend and foe alike were taxed at sword-point to feed the soldiers. It let the war grow far larger and longer than any state's finances could otherwise sustain, and it spread the devastation that defines the conflict's memory.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_danish_crown": {
+      "title": "The Danish Crown",
+      "dossier_type": "institution",
+      "summary": "The Danish Crown under Christian IV (1577–1648), King of Denmark-Norway and also Duke of Holstein — and thus himself a prince of the Lower Saxon imperial circle. Wealthy from the Sound tolls and ambitious for secularized north German bishoprics for his sons, Christian intervened in the Empire in 1625 as the elected colonel of the Lower Saxon Circle, backed by English and Dutch subsidies, to halt the Catholic and imperial advance toward the Baltic.",
+      "why_it_matters": "Christian's intervention opened the war's Danish phase and carried it into northern Germany. His defeat by Tilly and Wallenstein led to the Peace of Lübeck in 1629 and left the imperial armies dominant on the Baltic coast — a dominance that in turn alarmed Sweden into the intervention that would nearly undo Ferdinand.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_edict_of_restitution": {
+      "title": "Edict of Restitution",
+      "dossier_type": "document",
+      "summary": "An imperial edict issued by Ferdinand II on 6 March 1629, at the height of his power. It ordered the restoration of all ecclesiastical lands secularized by Protestants since the 1552 Treaty of Passau — two archbishoprics, twelve bishoprics, and scores of monasteries — recognized only Catholics and adherents of the unaltered Augsburg Confession (excluding Calvinists), and empowered imperial commissioners to enforce it.",
+      "why_it_matters": "The Edict was the most sweeping assertion of imperial and Catholic authority of the war. Issued by decree rather than agreed in the Diet, it frightened Lutheran and Catholic princes alike about the reach of imperial power, undid the basis for compromise, and helped provoke the Swedish intervention. It was effectively suspended by the Peace of Prague in 1635.",
+      "source_refs": ["src_wilson_europes_tragedy", "src_public_restitutionsedikt_1629"],
+      "review_status": "reviewed"
+    },
+    "dossier_peace_of_lubeck": {
+      "title": "Peace of Lübeck",
+      "dossier_type": "treaty",
+      "summary": "The treaty signed at Lübeck in May 1629 ending the war between Ferdinand II and Christian IV of Denmark. On surprisingly lenient terms — urged in part by Wallenstein — Christian recovered his German duchies in return for renouncing his interventions in the Empire and abandoning the north German Protestants he had led.",
+      "why_it_matters": "Lübeck removed Denmark from the war and left the emperor's armies dominant on the Baltic. But its lenient terms toward Denmark, set beside the harsh Edict of Restitution issued the same year, taught the Protestant estates that imperial moderation abroad masked enforcement at home — and the imperial reach to the Baltic was precisely what drew Sweden in.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_imperial_circles": {
+      "title": "The Imperial Circles",
+      "dossier_type": "institution",
+      "summary": "The imperial circles (Reichskreise) were ten regional groupings of territories in the Holy Roman Empire, created to organize defence, taxation, coinage, and the keeping of the public peace. Each circle had its own assembly and could raise troops; the Lower Saxon Circle, in the north, counted the Danish king among its members in his capacity as Duke of Holstein.",
+      "why_it_matters": "The circles let a region act collectively, blurring the line between local self-defence and resistance to the emperor. When the Lower Saxon Circle elected Christian IV of Denmark its colonel and raised an army in 1625, an imperial institution became the vehicle for a foreign king's war against the emperor.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    }
+  },
+  "cards": {
+    "card_1625_lower_saxon_neutrality": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "The war had reached the northern edge of the Empire. The Lower Saxon Circle — the league of north German territories that organized their own defence — grew alarmed as Catholic and imperial armies pressed toward the Baltic and its rich secularized bishoprics. At its head sat a formidable outsider: Christian IV of Denmark, who as Duke of Holstein was himself a prince of the circle, and who eyed those bishoprics for his own sons.",
+      "situation": "The circle claimed only neutrality and self-defence. But to let an imperial circle decide for itself when imperial law applied was to concede a dangerous principle — and behind its assemblies stood Danish gold, English subsidies, and an army. Accept the neutrality unconditionally, and the north slips beyond the emperor's reach; refuse it, and Christian enters the war not as a distant king but as the armed protector of a threatened frontier.",
+      "context_links": [
+        { "term": "Lower Saxon Circle", "dossier_id": "dossier_imperial_circles" },
+        { "term": "Christian IV of Denmark", "dossier_id": "dossier_danish_crown" }
+      ],
+      "options": {
+        "opt_refuse_lower_saxon_neutrality": {
+          "label": "Refuse a neutrality that merely shelters the Danish cause.",
+          "consequence": "In the event, Ferdinand pressed the issue, and in 1625 Christian IV took the field as the Lower Saxon Circle's elected colonel. Imperial firmness was heard in the north as a threat — and Denmark heard it as an invitation to lead the Protestant war."
+        },
+        "opt_recognize_temporary_neutrality": {
+          "label": "Recognize a temporary circle neutrality, subject to imperial review.",
+          "consequence": "The north buys a season's quiet — but Catholic petitioners ask whether imperial law now waits upon every circle's convenience, and the precedent sits uneasily."
+        },
+        "opt_force_lower_saxony_by_league": {
+          "label": "Let the League's armies compel the wavering territories.",
+          "consequence": "The language of law arrives with soldiers behind it. The warning is unmistakable — and so is the risk that armed pressure is exactly what tips the circle into Christian's arms."
+        }
+      }
+    },
+    "card_1625_wallenstein_army": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Every victory so far had been won with another prince's army. Bavaria and the Catholic League had crushed Bohemia and the Palatinate — and Maximilian never let Ferdinand forget who held the sword. Then a Bohemian magnate made the emperor an extraordinary offer. Albrecht von Wallenstein, grown vastly rich on confiscated rebel estates, proposed to raise a great imperial army at his own credit and the country's expense.",
+      "situation": "Wallenstein's secret was the contribution system: his colonels would feed, clothe, and pay their men by levying the lands they occupied, sparing the empty imperial treasury almost entirely. For the first time Ferdinand could have an army that answered to him and not to Munich. But such an army's purse lay in the territories it ravaged, and its officers looked upward not to the emperor but to Wallenstein.",
+      "context_links": [
+        { "term": "Wallenstein", "dossier_id": "dossier_wallenstein" },
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" },
+        { "term": "Catholic League", "dossier_id": "dossier_catholic_league" }
+      ],
+      "options": {
+        "opt_contract_wallenstein_army": {
+          "label": "Accept Wallenstein's contribution army.",
+          "consequence": "In the event, Wallenstein began recruiting in June 1625 and within months commanded a host larger than the League's — funded by squeezing the occupied lands. Ferdinand gained an army of his own; the country gained a machine that made war feed war, and a servant whose power would soon rival his master's."
+        },
+        "opt_limit_wallenstein_powers": {
+          "label": "Authorize a smaller army under tighter warrants.",
+          "consequence": "The court keeps the commander on a shorter leash — and receives a smaller, slower instrument that leans it back toward Bavaria for the heavy work."
+        },
+        "opt_remain_league_dependent": {
+          "label": "Rely on the League and Spain rather than build a new system.",
+          "consequence": "Ferdinand avoids one dangerous servant by leaning harder on another. Maximilian's value rises again, and with it his price."
+        }
+      }
+    },
+    "card_1627_palatine_peace_opening": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "By 1627 the Danish war was going Ferdinand's way, and the exiled Frederick — landless, outlawed, his cause fading — let it be known he might yield at last. He would renounce Bohemia, accept Maximilian's hold on the Palatinate for life, and submit to the emperor, if only by proxy. After nine years, a negotiated end to the Palatine grievance was within reach.",
+      "situation": "The sticking point was not whether Frederick would lose, but how visibly. A submission in person would humble him before all Europe and satisfy the Catholic party; a submission by proxy would spare him the humiliation and close the wound faster. Ferdinand could demand the full ceremony of defeat — or take the substance and let the form go.",
+      "context_links": [
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" },
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" }
+      ],
+      "options": {
+        "opt_require_frederick_personal_submission": {
+          "label": "Require Frederick's submission in person to imperial authority.",
+          "consequence": "In the event, Ferdinand and his allies held out for the full humiliation, and the settlement slipped away on the question of form. The Palatine grievance stayed open — a standing invitation to every foreign power that wished the emperor ill."
+        },
+        "opt_accept_proxy_submission": {
+          "label": "Accept submission by proxy and secure the renunciations.",
+          "consequence": "A humiliating journey is spared and the wound nearly closes — but Bavaria asks what certainty remains when rebellion can be settled by parchment, and the Catholic zealots feel cheated of their reckoning."
+        },
+        "opt_restore_palatine_security_terms": {
+          "label": "Trade a limited restoration for security and reparations.",
+          "consequence": "The Palatine cause is split from the mercenary war — but every clause must pass through Bavarian suspicion, and Maximilian guards his prize."
+        }
+      }
+    },
+    "card_1627_restoration_mandates": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "In the Habsburg hereditary lands — Bohemia, Moravia, Austria — victory was being made permanent in the only way Ferdinand wholly trusted: by faith. Pastors were expelled, churches inspected, offices closed to Protestants, and noble houses pressed to convert or sell up and leave. The Styrian method Ferdinand had perfected as an archduke was now the policy of an emperor at the height of his power.",
+      "situation": "His Catholic loyalists pressed him to make the victory visible everywhere at once — in worship, schooling, marriage, office, and landholding. Others warned that sudden, total uniformity would drive property, skilled labour, and undying hatred abroad with the exiles. The pace of restoration was itself a decision.",
+      "context_links": [
+        { "term": "Styrian method", "dossier_id": "dossier_inner_austria" }
+      ],
+      "options": {
+        "opt_push_restoration": {
+          "label": "Press a visible Catholic restoration across the recovered lands.",
+          "consequence": "Catholic confidence surges and the hereditary lands are remade within a generation. But Protestant alarm learns to organize, and thousands carry their skills, their capital, and their grievance into exile."
+        },
+        "opt_sequence_restoration": {
+          "label": "Sequence the restoration slowly, after oaths and fiscal order.",
+          "consequence": "The settlement advances on firmer ground — but not fast enough for the most zealous allies, who suspect every delay of weakness."
+        },
+        "opt_suspend_restoration": {
+          "label": "Suspend the major measures to calm Lutheran and city opinion.",
+          "consequence": "The moderates breathe easier and the towns stay productive — but the Catholic allies wonder aloud what the victory was even for."
+        }
+      }
+    },
+    "card_1628_mecklenburg_reward": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Wallenstein had made the emperor an army and now expected to be paid — not in arrears the treasury could not meet, but in land and title worthy of a victorious general. The dukes of Mecklenburg, who had backed the Danish invasion, lay under imperial displeasure and could be deposed. Their duchy would more than settle the account.",
+      "situation": "To pay a servant with a prince's lands was easier than finding the money. But it would also tell every old house in the Empire that victory could move them out and set new men in — and would raise a Bohemian parvenu to the rank of imperial prince, a peer of families that had ruled for centuries.",
+      "context_links": [
+        { "term": "Wallenstein", "dossier_id": "dossier_wallenstein" }
+      ],
+      "options": {
+        "opt_grant_mecklenburg_wallenstein": {
+          "label": "Grant Mecklenburg to Wallenstein, dukedom and all.",
+          "consequence": "In the event, Ferdinand made his general Duke of Mecklenburg in 1628, deposing its ancient line. The army's maker is paid in princely coin — but the whole Empire studies the precedent in fear, and the old princes begin to see in Wallenstein a threat to them all."
+        },
+        "opt_mecklenburg_temporary_administration": {
+          "label": "Grant the administration without a hereditary title.",
+          "consequence": "Wallenstein receives the substance without the full shock of a ducal transfer. The distinction satisfies few — but alarms slightly fewer."
+        },
+        "opt_pay_wallenstein_without_land": {
+          "label": "Find cash and movable confiscations instead.",
+          "consequence": "The old dynastic order is spared a warning — but the treasury groans, and an unpaid general is a more dangerous creditor than a rewarded one."
+        }
+      }
+    },
+    "card_1629_lubeck_peace": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Christian IV had lost his war. Tilly and Wallenstein had beaten the Danes out of Germany and driven them back onto their islands, and the imperial armies stood triumphant on the Baltic shore. Now the king sued for terms, and Ferdinand had to decide what victory over a foreign crown was worth.",
+      "situation": "A harsh peace — stripping Denmark, demanding compensation — would please the allies who hungered for spoils, but might keep Christian in the field when Sweden was already stirring behind him. A lenient peace would remove one enemy cleanly, at the cost of looking like weakness to friends who had bled for more. Wallenstein himself, with an eye on Sweden, urged moderation as terms took shape at Lübeck.",
+      "context_links": [
+        { "term": "Lübeck", "dossier_id": "dossier_peace_of_lubeck" },
+        { "term": "Wallenstein", "dossier_id": "dossier_wallenstein" }
+      ],
+      "options": {
+        "opt_lubeck_generous_peace": {
+          "label": "Restore Denmark's lands if Christian abandons the north German cause.",
+          "consequence": "In the event, the Peace of Lübeck (1629) let Christian keep his duchies in return for quitting the Empire's wars. Denmark left the field — but the north German Protestants he abandoned learned what an imperial peace cost them, and Sweden noted how far the emperor's reach now ran along the Baltic."
+        },
+        "opt_lubeck_punitive_terms": {
+          "label": "Demand compensation and harder guarantees from Denmark.",
+          "consequence": "The war party applauds a sterner peace — but Christian hesitates to sign, and every month he lingers improves the Swedish king's calculations."
+        },
+        "opt_lubeck_general_settlement": {
+          "label": "Use Lübeck to open a wider imperial settlement.",
+          "consequence": "The hardliners protest that victory is being spent too cheaply — but the moderates glimpse, for the first time in years, a door toward a general peace."
+        }
+      }
+    },
+    "card_1629_restitution_edict": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy", "src_public_restitutionsedikt_1629"],
+      "briefing": "At the summit of his power, Ferdinand reached for a final settlement of the religious question that had started it all. His jurists held that the Peace of Augsburg, rightly read, entitled the Church to recover every ecclesiastical land the Protestants had taken since 1552 — two archbishoprics, a dozen bishoprics, scores of monasteries. What two generations of negotiation had left ambiguous, an emperor with an army could now simply declare.",
+      "situation": "Issued as an edict rather than agreed in the Diet, and enforced by imperial commissioners, the Edict of Restitution would be the greatest Catholic gain of the war. It would also tell every Protestant prince — and not a few Catholic ones — that the emperor could rewrite the constitution by his own pen. The very completeness that made it possible was what made it dangerous.",
+      "context_links": [
+        { "term": "Edict of Restitution", "dossier_id": "dossier_edict_of_restitution" },
+        { "term": "Peace of Augsburg", "dossier_id": "dossier_peace_of_augsburg" }
+      ],
+      "options": {
+        "opt_issue_restitution_edict": {
+          "label": "Issue the Edict and send commissioners to enforce restitution.",
+          "consequence": "In the event, Ferdinand issued the Edict of Restitution on 6 March 1629. Catholic restoration gained the force of imperial command — and the Protestant estates heard the religious settlement being rewritten from Vienna by decree. It did more than any battle to drive them, in time, into Swedish arms."
+        },
+        "opt_seek_diet_interpretation": {
+          "label": "Seek an elector- or Diet-backed interpretation before enforcing.",
+          "consequence": "The law stays more shared and less explosive — but restoration slows, and the Catholic allies see victory losing its nerve at the decisive moment."
+        },
+        "opt_narrow_restitution_cases": {
+          "label": "Enforce only the clearest cases of restitution for now.",
+          "consequence": "The Edict has teeth but not yet jaws. Every party presses Ferdinand to say what comes next, and the uncertainty satisfies no one."
+        },
+        "opt_trade_restitution_for_peace": {
+          "label": "Hold the restitution claims back as material for a wider peace.",
+          "consequence": "The Empire might yet breathe — but the most committed Catholic restorers will long remember what was left on the table when it could have been taken."
+        }
+      }
+    },
+    "card_threshold_army_arrears": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "The armies that won the war could not be paid for it. Pay fell into arrears across every command — colonels, creditors, and allied agents arriving with the same unmet accounts in different hands. Soldiers could be promised discipline, but not fed on promises; and an unpaid army was a danger to friend and foe alike.",
+      "situation": "The question before the council was no longer how to finance a policy, but which policy could survive the arrears. Ferdinand could lean harder on the contribution system — making the occupied lands pay — or shrink the army to save its core and its credit.",
+      "context_links": [
+        { "term": "contribution", "dossier_id": "dossier_contributions" }
+      ],
+      "options": {
+        "opt_threshold_shift_arrears_to_contributions": {
+          "label": "Lean on contributions until pay can be restored.",
+          "consequence": "The army keeps the field by squeezing the lands harder. Every requisition makes the emperor's war visible in barn, cellar, and town account — and turns more subjects into enemies."
+        },
+        "opt_threshold_reduce_commands_to_save_credit": {
+          "label": "Disband the unreliable companies and save credit for the core army.",
+          "consequence": "The treasury breathes a little. The commanders protest, the allies doubt the army's reach, and the crown accepts a smaller instrument for a steadier one."
+        }
+      }
+    },
+    "card_threshold_treasury_bargain": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "For once the treasury could answer a demand without surrendering land, title, or command in place of coin. It was not rich — but it had ready money, and ready money bought something victory alone did not: the freedom to say no.",
+      "situation": "A crown that could pay its servants need not make them princes. Ferdinand could spend the credit to keep military rewards within ordinary bounds — sparing the constitution another Mecklenburg — or hoard it for the succession and the diplomacy ahead, and let the commanders wait their turn behind dynastic business.",
+      "context_links": [
+        { "term": "Mecklenburg", "dossier_id": "dossier_wallenstein" }
+      ],
+      "options": {
+        "opt_threshold_pay_to_keep_command_free": {
+          "label": "Spend ready credit to keep rewards within ordinary grants.",
+          "consequence": "Officers grumble less when paid, and fewer servants need to be made princes. The treasury buys constitutional quiet at a real and recurring cost."
+        },
+        "opt_threshold_hold_treasury_for_succession": {
+          "label": "Reserve the credit for the succession and diplomacy.",
+          "consequence": "The court keeps its money for the next great bargain — and the commanders note that their accounts stand second to the business of the dynasty."
+        }
+      }
+    }
+  }
+}
