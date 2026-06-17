@@ -156,3 +156,30 @@ death card's aftermath states the verdict plainly (he died believing the worst w
 _space, devastation_petitions)** — The structural undercurrents surfaced as reward/crisis
 cards: guarantees vs obedience, the army-as-creditor, the war going European, the
 breathing space security buys, and devastation finally entering the council as an argument.
+
+---
+
+## Package A mechanics + present-tense voice (later pass)
+
+**Voice.** All 48 cards' briefing + situation are now present tense — a live situation
+Ferdinand faces now, impersonal third-person. The "In the event..." beat in each
+recorded-course consequence stays past (it is the historical record revealed after the
+choice); a just-happened event stays simple past ("Thurn led an armed assembly... this
+morning").
+
+**Mechanics (so choices bite).**
+- Deck is id-based (resolved_card_ids), not positional — newly-unlocked cards are never
+  skipped. Foundation for heavier branching.
+- Failure / divergence endings (scoreFailureEnding) when a pressure hits an extreme:
+  House Brought Low (dynastic <=20), Captive of the Sword (military >=90), Realm Laid
+  Waste (devastation >=85), Bankrupt Crown (fiscal <=12), Empire Ungovernable (estate <=12).
+- getPressureWarnings + pressure-panel "at-risk" rail foreshadow those endings.
+- Option gating (requires/excludes_memory_tags + requires_pressures). Moderate, history-
+  grounded set authored: empty treasury forecloses raising your own army (forces Bavaria/
+  Wallenstein); no credit to borrow when insolvent; can't demobilize an over-mighty army;
+  Catholic zeal (high confessional legitimacy) vetoes suspending the restoration or the
+  Edict; the Blood Court forecloses restoring Frederick; spent legitimacy forecloses hard
+  Catholic terms at Prague. Pre-existing pressure gates left intact.
+
+Open follow-ups: early-exit (mid-game) failure states; data-driving the failure thresholds
+off the crisis pressure_thresholds rather than hardcoded numbers.
