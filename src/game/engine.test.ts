@@ -713,6 +713,41 @@ describe("game engine", () => {
     expect(hardLine.legacy).toMatch(/punishment|Edict/i);
   });
 
+  function endedWith(
+    pressures: Partial<GameState["pressures"]>,
+    tags: string[] = [],
+  ) {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    return scoreOutcome(gameDatabase, {
+      ...base,
+      completed: true,
+      memory_tags: tags,
+      pressures: { ...base.pressures, ...pressures },
+    });
+  }
+
+  it("ends as Captive of the Sword when military dependence runs to the extreme", () => {
+    expect(endedWith({ military_dependence: 92 }).title).toBe(
+      "Captive of the Sword",
+    );
+  });
+
+  it("lets a dynastic collapse override a lesser failure", () => {
+    expect(
+      endedWith({ military_dependence: 92, dynastic_security: 12 }).title,
+    ).toBe("The House Brought Low");
+  });
+
+  it("reaches a devastation failure ending at the extreme", () => {
+    expect(endedWith({ devastation: 88 }).title).toBe("A Realm Laid Waste");
+  });
+
+  it("does not trigger a failure ending from a merely middling run", () => {
+    expect(endedWith({ military_dependence: 60, devastation: 50 }).title).toBe(
+      "Dynasty Secured, Peace Deferred",
+    );
+  });
+
   it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {
     const role = gameDatabase.playable_roles[0];
     const baseCard = {

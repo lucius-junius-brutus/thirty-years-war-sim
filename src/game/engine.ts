@@ -308,6 +308,74 @@ export function applyEffects(
   return next;
 }
 
+// Failure / divergence endings, reached when a single pressure runs to its
+// extreme. Checked in order of severity; the first match wins.
+function scoreFailureEnding(
+  pressures: PressureMap,
+): Omit<OutcomeScore, "strengths" | "dangers"> | null {
+  if (pressures.dynastic_security <= 20) {
+    return {
+      title: "The House Brought Low",
+      legacy:
+        "Habsburg authority has cracked at its foundation: the hereditary lands waver, rivals scent weakness, and the dynasty's grip on its own crowns is no longer assured.",
+      inheritance:
+        "Ferdinand III inherits a name worth less than it was — a claim that must be defended before it can be exercised.",
+      comparison:
+        "This is the counterfactual Ferdinand always feared and never suffered: the dynasty itself, not merely its policy, brought into question.",
+      path_signals: ["Dynastic security collapsed"],
+    };
+  }
+  if (pressures.military_dependence >= 90) {
+    return {
+      title: "Captive of the Sword",
+      legacy:
+        "The emperor has won his wars and lost his freedom: the army that saved him now sets the terms, and imperial policy moves at the pace of the men who command the troops.",
+      inheritance:
+        "Ferdinand III inherits a crown that must ask its generals' leave — the Wallenstein problem made permanent.",
+      comparison:
+        "This carries to its end the danger Wilson draws from the contractor armies: the instrument of survival become the master of the state.",
+      path_signals: ["The army's commanders outweigh the emperor"],
+    };
+  }
+  if (pressures.devastation >= 85) {
+    return {
+      title: "A Realm Laid Waste",
+      legacy:
+        "Victory has come to rule over ruin. Fields lie unsown, towns stand empty, and the contributions that fed the war have eaten the country that owed obedience.",
+      inheritance:
+        "Ferdinand III inherits authority over a depopulated, exhausted land that will take generations to recover.",
+      comparison:
+        "This is the war's true face that the histories remember: a settlement bought at the price of the Empire's own substance.",
+      path_signals: ["The lands consumed by the war"],
+    };
+  }
+  if (pressures.fiscal_capacity <= 12) {
+    return {
+      title: "A Bankrupt Crown",
+      legacy:
+        "The treasury is spent past recovery. Unpaid armies mutter, creditors close in, and the crown's orders travel without the coin to make them obeyed.",
+      inheritance:
+        "Ferdinand III inherits debts that outrun the revenues, and an army that serves only as long as it is fed.",
+      comparison:
+        "This follows the fiscal logic Wilson stresses: that arrears and insolvency, not battles, dictated what an emperor could actually do.",
+      path_signals: ["The crown spent into insolvency"],
+    };
+  }
+  if (pressures.estate_trust <= 12) {
+    return {
+      title: "An Empire Ungovernable",
+      legacy:
+        "The estates no longer believe the emperor's word protects them, and an authority that must be enforced everywhere can be exercised nowhere.",
+      inheritance:
+        "Ferdinand III inherits a constitution emptied of trust, where every command must be backed by an army to be obeyed.",
+      comparison:
+        "This is the constitutional failure beneath the confessional one: obedience withdrawn not by heresy but by fear of the crown itself.",
+      path_signals: ["Estate trust collapsed into open resistance"],
+    };
+  }
+  return null;
+}
+
 export function scoreOutcome(
   database: GameDatabase,
   state: GameState,
@@ -323,6 +391,17 @@ export function scoreOutcome(
     const variable = variableById.get(key as keyof PressureMap);
     return variable?.high_is_dangerous ? value >= 65 : value < 35;
   });
+
+  // A pressure run to its extreme overrides the nuanced ending with a failure
+  // verdict: the reign reaches its close in a state of collapse.
+  const failure = scoreFailureEnding(state.pressures);
+  if (failure) {
+    return {
+      ...failure,
+      strengths: strengths.map(([key]) => key),
+      dangers: dangers.map(([key]) => key),
+    };
+  }
 
   const tags = new Set(state.memory_tags);
   const hasAny = (...items: string[]) => items.some((item) => tags.has(item));
