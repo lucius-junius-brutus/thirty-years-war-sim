@@ -159,21 +159,21 @@ function FerdinandPrelude({
   onContinue: () => void;
 }) {
   return (
-    <section className="prelude-screen" aria-label="Your inheritance">
+    <section className="prelude-screen" aria-label="Ferdinand II's position">
       <article className="prelude-card">
         <div className="dispatch-meta">
-          <span>Opening papers</span>
-          <span>Before the first report</span>
+          <span>Historical position</span>
+          <span>Before play begins</span>
         </div>
         <div className="date-ribbon">Before 1617</div>
-        <h2>Your Inheritance</h2>
+        <h2>Ferdinand II's Position</h2>
         <p className="office">{role.office}</p>
         <section className="historical-brief prelude-brief">
           <p>
-            You enter these papers as archduke of Inner Austria, heir to a hard
-            Catholic restoration in your own lands and claimant to crowns whose
-            estates still speak in the language of privilege, confession, and
-            sworn liberties.
+            Ferdinand II enters the game as archduke of Inner Austria, heir to a
+            hard Catholic restoration in his own lands, and claimant to crowns
+            whose estates still speak in the language of privilege, confession,
+            and sworn liberties.
           </p>
           <p>
             The Holy Roman Empire is not a single kingdom waiting for command. It
@@ -182,24 +182,24 @@ function FerdinandPrelude({
             consultation that war can break faster than law can mend.
           </p>
           <p>
-            In Bohemia, Hungary, and the hereditary lands, dynastic security,
-            Catholic recovery, estate privilege, imperial legality, money, and
-            armed help already press against one another. Each report asks which
-            danger may be endured in order to answer another.
+            The game begins before Prague because Ferdinand's later crisis is
+            already being prepared by older settlements: Augsburg's confessional
+            compromise, Bohemian estate privileges, Habsburg dynastic ambitions,
+            Catholic restoration, weak finance, and dependence on armed allies.
           </p>
         </section>
-        <div className="prelude-ledger" aria-label="Initial situation">
+        <div className="prelude-ledger" aria-label="What to watch in play">
           <div>
-            <strong>Office</strong>
-            <span>Habsburg prince, Bohemian king-elect, imperial claimant</span>
+            <strong>What to watch in play</strong>
+            <span>Most useful choices will buy time or authority while creating a debt elsewhere.</span>
           </div>
           <div>
-            <strong>World</strong>
-            <span>Empire of estates, jurisdictions, confessions, and negotiated obedience</span>
+            <strong>Core tension</strong>
+            <span>Religious enforcement can strengthen Catholic legitimacy while weakening estate trust.</span>
           </div>
           <div>
-            <strong>Pressure</strong>
-            <span>Authority must be recovered without making cooperation impossible</span>
+            <strong>Strategic danger</strong>
+            <span>Military rescue often comes through partners who become harder to control.</span>
           </div>
         </div>
         <button className="choice-button start-role" type="button" onClick={onContinue}>

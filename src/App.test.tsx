@@ -16,13 +16,16 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
 
-    expect(screen.getByText(/your inheritance/i)).toBeInTheDocument();
-    expect(screen.getByText(/you enter these papers/i)).toBeInTheDocument();
+    expect(screen.getByText(/ferdinand ii's position/i)).toBeInTheDocument();
+    expect(screen.getByText(/ferdinand ii enters the game/i)).toBeInTheDocument();
+    expect(screen.getByText(/what to watch in play/i)).toBeInTheDocument();
+    expect(screen.getByText(/most useful choices will buy time/i)).toBeInTheDocument();
     expect(screen.getByText(/archduke of inner austria/i)).toBeInTheDocument();
     expect(screen.getByText(/holy roman empire/i)).toBeInTheDocument();
     expect(screen.queryByText(/the settlement with gaps/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/briefing for ferdinand/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/ferdinand enters these papers/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/your inheritance/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/you enter these papers/i)).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
 
