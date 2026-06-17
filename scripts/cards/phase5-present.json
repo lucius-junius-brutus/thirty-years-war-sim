@@ -1,0 +1,96 @@
+{
+  "cards": {
+    "card_1630_regensburg_wallenstein": {
+      "briefing": "Ferdinand has summoned the electors to Regensburg at the summit of his power, wanting two things: their consent to elect his son King of the Romans, securing the succession, and their help against his enemies. He arrives to find the mood transformed. The Edict, the contributions, Mecklenburg, and above all Wallenstein's looming army have convinced even Catholic electors that the emperor has grown too strong.",
+      "situation": "The electors will consider nothing until Ferdinand sacrifices his generalissimo. To dismiss Wallenstein would buy their goodwill and quiet the constitutional alarm — but it would also disarm the emperor at the very moment a new danger lands: for as the congress sits, Gustavus Adolphus of Sweden comes ashore in Pomerania. Several advisers fear the slighted general might turn his army on Vienna itself."
+    },
+    "card_1631_intervention_crisis": {
+      "briefing": "Gustavus Adolphus has landed, and the Protestant estates are no longer asking merely for delay. With the Edict being enforced by imperial commissioners and a Swedish army on German soil, Saxony and the Lutheran princes meet at Leipzig and speak openly of armed self-defence — a third force, neither imperial nor Swedish, to protect their rights.",
+      "situation": "The Leipzig assembly is not yet rebellion, but it is the door to it. If Ferdinand offers no public settlement — above all on the Edict — the wavering middle may cease to be middle and fall in with Sweden. If he concedes too much, his Catholic allies will ask what the years of victory and the Edict were for. The choice is whether to command the Lutherans or to bargain with them.",
+      "options": {
+        "opt_suspend_edict_for_saxony": {
+          "requires_pressures": [{ "pressure": "confessional_legitimacy", "max": 82 }],
+          "unavailable_text": "The Catholic party will not suffer the Edict suspended while its zeal runs so high; to try would be to lose Munich and Madrid at a stroke."
+        }
+      },
+      "memory_variants": [
+        {
+          "briefing": "The Edict now travels ahead of every imperial envoy, and Gustavus Adolphus has landed besides. Saxony and the Protestant estates no longer ask merely for delay; they ask whether obedience can live beside the security only an army can give.",
+          "situation": "Driven by the Edict, the Leipzig assembly leans toward armed self-defence. Offer no public settlement and the middle falls to Sweden; concede too much and the Catholic allies ask what the Edict was for."
+        },
+        {
+          "briefing": "Because restitution has been treated as a matter for bargaining rather than command alone, the Saxon envoys still have language enough to ask for public terms before they choose Gustavus Adolphus and his arms.",
+          "situation": "Sweden is on German soil, but the Lutheran middle has not yet lost every reason to deal with the emperor — if the Edict can be seen to bend."
+        }
+      ]
+    },
+    "card_1631_saxon_break": {
+      "briefing": "It has come to the thing Ferdinand most feared. John George of Saxony — the cautious Lutheran who once invaded Lusatia for the emperor — will no longer trust a suspension of the Edict given by private word. The decree still stands in public; Leipzig has been rebuffed; and a Swedish army now offers the security that imperial law no longer seems to provide.",
+      "situation": "John George is no natural rebel; his defection shows something worse for Ferdinand — that even a loyal Lutheran elector can be driven from guarded obedience into armed alliance with a foreign king, once the terms of obedience look unsafe. The emperor can treat the break as rebellion and prepare for a wider war, or send public terms at last to pull Saxony back before the bond with Sweden hardens."
+    },
+    "card_1632_recall_wallenstein": {
+      "briefing": "Breitenfeld has been a catastrophe. Tilly is beaten and soon dead, the Swedes have overrun the south, and Bavaria itself is invaded. The army Ferdinand dismissed to please the electors is precisely what he now needs — and only one man can rebuild it at speed. The disgraced Wallenstein receives the emperor's envoys again.",
+      "situation": "But Wallenstein will not return as a servant to be corrected at every ally's complaint. The price of his recall is near-sovereign authority over the army — the powers he means to extract at Gollersdorf. Without him, Ferdinand is left to Bavaria and a patchwork of scattered commands against the finest soldier in Europe."
+    },
+    "card_1633_wallenstein_peace": {
+      "briefing": "Gustavus Adolphus has fallen at Lützen, and the Swedish thunderbolt is spent — yet the war does not end, because the man who could end it now seems to be playing his own game. Through this year Wallenstein holds his great army nearly idle, opens secret talks with the Swedes, the Saxons, and the exiles, and lets no one be sure whether he seeks peace for the emperor or for himself.",
+      "situation": "His letters and his silences can be read two ways. To tolerate his diplomacy might split the enemy coalition; to supervise it might provoke him; to prepare a replacement might turn suspicion into open rupture. And behind every reading lies the question no one in Vienna can answer with certainty: where does the loyalty of the army's officers finally lie?"
+    },
+    "card_1634_remove_wallenstein": {
+      "briefing": "Vienna is convinced its generalissimo means treason. Wallenstein has bound his colonels to himself by oath, opened unmistakable contacts with the enemy, and ignored imperial orders. Patents are being drawn to release the officers from their obedience — but they will be lawful only if the army first ceases to be his.",
+      "situation": "An arrest means a trial, and a trial means delay and exposure while the army wavers. A removal by force would settle the matter at a stroke and recover the command — but the chancery would inherit the stain of a murder done in the emperor's name. Either way, the question is whether the officers will obey Vienna or Wallenstein when the moment comes."
+    },
+    "card_1635_prague_peace": {
+      "briefing": "The victory at Nördlingen has changed everything. With the main Swedish army broken and his own son the hero of the hour, Ferdinand can at last negotiate from strength. He reaches for a general peace with the German estates: he would suspend the hated Edict, draw Saxony and the Lutherans back to obedience, and unite all their armies under imperial command to drive the foreigners out.",
+      "situation": "The opportunity is real, and the danger lies in the fine print. A broad amnesty would heal the Empire but disappoint the men who fought for a reckoning; a narrow one would reward loyalists but leave the excluded — princes, exiles, and armies — with nothing to lose and France and Sweden glad to employ them. Every name left outside the pardon is a future enemy.",
+      "options": {
+        "opt_prague_hard_catholic_terms": {
+          "requires_pressures": [{ "pressure": "confessional_legitimacy", "min": 45 }],
+          "unavailable_text": "Catholic credibility is too spent to demand a harder confessional settlement; the emperor must take the peace he can get."
+        }
+      },
+      "memory_variants": [
+        {
+          "briefing": "With Wallenstein cut down at Eger and the Swedes broken at Nördlingen, the Saxon articles come within reach. The court can speak again of imperial order — though officers and princes remember how that order was recovered.",
+          "situation": "The Edict can be suspended, the armies joined under the emperor, the Lutheran estates brought home. The danger, as ever, lies in the names left outside the pardon, ready for France or Sweden."
+        },
+        {
+          "briefing": "Because restitution has already been treated as negotiable peace business, the Saxon articles after Nördlingen arrive less as a surrender than as a form the court itself has made possible.",
+          "situation": "The settlement can restore obedience widely — but every prince and exile excluded from it remains useful to France or to Sweden."
+        }
+      ]
+    },
+    "card_1636_hessen_amnesty": {
+      "briefing": "The Peace of Prague has drawn most of the Empire back to the emperor, but a few hold out — and chief among them is Hessen-Kassel, which still has an army, foreign paymasters, and grievances. Its provisional acceptance of Prague will never become real obedience unless the terms are made real, and that means deciding how far to bend.",
+      "situation": "To press hard — demanding the Westphalian bishoprics, conceding little — would satisfy the Catholic claimants and Ferdinand's friends, but might reopen the war in the west. To concede enough would strike one armed enemy from the list, at the cost of teaching every holdout that defiance pays. It is the exclusion problem of Prague in miniature."
+    },
+    "card_1637_ferdinand_iii_election": {
+      "briefing": "The succession Ferdinand failed to secure at Regensburg in 1630 can wait no longer: the emperor's health is failing. With Nördlingen won and Prague signed, the electors are at last in a mood to oblige — but the price of their consent is a fresh set of restraints written into the bargain, the leverage they have guarded for seven years.",
+      "situation": "To delay is to gamble the dynasty's future on the emperor's failing body. To press ahead is to accept that his son will inherit not only the crown but the conditions fastened to it. Every concession buys a smoother election; every restraint narrows the throne his heir will sit on."
+    },
+    "card_1637_ferdinand_death": {
+      "briefing": "On the fifteenth of February 1637, in his bed in Vienna, the old emperor's reign comes to its end, the succession secured and his faith triumphant in the hereditary lands. Ferdinand has taken a provincial archduke's crown and made himself master of a recatholicized Austria and Bohemia, broken the Bohemian and Palatine revolts, and outlived the Swedish thunderbolt. By the measure of his own beginnings, he has won.",
+      "situation": "And yet the war he did so much to start, and to widen, does not end with him. Every unsettled question passes to his son, Ferdinand III: the half-kept amnesty, the unpaid armies, the foreign crowns now lodged in the Empire, the devastated lands, and the deepest question of all — how much imperial authority the Empire can bear before cooperation breaks for good. The memorial of the reign must now be closed."
+    },
+    "card_threshold_estate_guarantees": {
+      "briefing": "The petitions arriving now ask not for favour but for security in writing. Estates that once merely disputed policy want to know what, after submission, will stop any privilege from being narrowed away — as the Letter of Majesty was, as the Edict now threatens. They have learned to trust guarantees, not goodwill.",
+      "situation": "In the climate the war has made, every concession looks like an admission of weakness, and every refusal strengthens the argument that only guarantees backed by arms can protect a liberty. Ferdinand can offer written security while preserving obedience in form, or insist that obedience must come first and privilege after."
+    },
+    "card_threshold_military_creditors": {
+      "briefing": "The men who keep armies in the field now send counsel along with their accounts. Contractors, colonels, and allied commanders — the Wallensteins and the Bavarians on whom the war depends — want to know whether policy will follow the soldiers who make policy possible. An army raised on credit and contribution answers, in the end, to whoever pays it.",
+      "situation": "To refuse these creditors risks the very instrument of survival; to satisfy them teaches every prince that imperial necessity can be made to pay. The emperor can buy their loyalty before it curdles into rivalry, or reassert that credit is not sovereignty and dare the consequences."
+    },
+    "card_threshold_foreign_courts": {
+      "briefing": "The reports from abroad carry a new and ominous note. Imperial quarrels are being translated, in Stockholm and Paris, into the language of the European balance — of protection owed, of recovery deserved, of religion in danger. What Vienna calls domestic law, other crowns are beginning to call a continental threat.",
+      "situation": "Ferdinand can still insist the war is an internal matter of the Empire. But Sweden is in Germany and France is edging toward it, and every assertion of imperial power abroad reads as a reason to intervene. He can answer with public reassurances that deny the foreign courts their pretext, or with a decisive blow that might silence them — or prove them right."
+    },
+    "card_threshold_succession_breathing_space": {
+      "briefing": "For a rare interval, the succession does not have to be bought in the same breath as every military demand. With his son's position more secure, Ferdinand has room — a thing war seldom allows — to choose which concessions to make and which to keep.",
+      "situation": "Security can make moderation easier, freeing the court to settle from confidence rather than fear. It can as easily tempt it to spend less on settlement, the dynasty itself being safe. The breathing space is an asset that can be invested in peace or hoarded for the house."
+    },
+    "card_threshold_devastation_petitions": {
+      "briefing": "The petitions no longer separate grand strategy from hunger. Town councils, district officers, and church administrators write of fields unsown, villages emptied, soldiers quartered without end, and contributions that cannot be paid because there is nothing left to take. The war's cost has moved from the ledger into the body of the land.",
+      "situation": "Devastation has become an argument in council itself: even loyal men now ask what obedience can mean if the lands that obey are consumed. Ferdinand can order relief and cap contributions in the worst-hit regions, or keep the contributions flowing until peace is nearer and trust the land to endure."
+    }
+  }
+}

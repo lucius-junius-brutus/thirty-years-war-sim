@@ -1,0 +1,68 @@
+{
+  "cards": {
+    "card_1620_white_mountain_aftermath": {
+      "briefing": "White Mountain is more than a victory; it is an annihilation. In barely an hour the Bohemian army has broken, Frederick has fled Prague with his court, and the kingdom that defied the Habsburgs for two years lies open and undefended. Ferdinand now holds something rare in the Empire: a rebellion entirely at his mercy.",
+      "situation": "The question is what to make of such completeness. He can treat the revolt as treason and punish its leaders to terrify a generation; he can punish narrowly and keep law enough to part ringleaders from frightened followers; or he can offer broad pardon and bind Bohemia by gratitude rather than fear. Each road writes a different future into the conquered kingdom."
+    },
+    "card_1621_blood_court": {
+      "briefing": "The tribunals in Prague have done their work, and the sentences lie on Ferdinand's desk: death for the leaders of the revolt. Even Slavata and Martinitz — the regents thrown from the window — counsel mercy, and the vice-chancellor urges the galleys instead of the axe. But to Ferdinand the revolt is treason, and treason has its price.",
+      "situation": "He can make the punishment a public spectacle, teaching obedience by terror; he can commute most sentences and reserve death for a prominent few; or he can spare lives entirely and strike instead at names and lands through exile and confiscation. The Old Town Square waits on his answer."
+    },
+    "card_1621_confiscations": {
+      "briefing": "Victory has to be paid for. Ferdinand owes his soldiers, his Bavarian and Spanish allies, and the loyal nobles who stood by him — and the defeated rebels own half of Bohemia. Their estates can be confiscated to fund the settlement, reward friends, and remake the kingdom's ruling class in Catholic and loyal hands.",
+      "situation": "But confiscation on a grand scale would tell every estate in the Empire that defeat means not merely punishment but extinction — the loss of land, status, and posterity. The crown can seize boldly and transform Bohemia at a stroke, confiscate with restraint and a public record, or commute seizures to fines and oaths and leave the defeated something to lose."
+    },
+    "card_1621_spanish_rhine": {
+      "briefing": "The war has reached the Rhine, and there it touches a Spanish nerve. Frederick's Palatine homeland straddles the Spanish Road — the corridor by which Spain marches men and silver from Italy to its war against the Dutch. With the Dutch truce expiring, Madrid has every reason to hold the Rhenish Palatinate, and Spinola's army has already occupied it.",
+      "situation": "Spanish help against Frederick is real and close at hand — but it comes tangled in Spain's own war, and it makes the imperial quarrel look like a Habsburg family enterprise spanning Europe. Ferdinand can embrace the coordination openly, take the help quietly while keeping imperial policy separate, or hold Spain at arm's length and insist the matter is purely German."
+    },
+    "card_1622_league_finance": {
+      "briefing": "The victories have not stopped the bills. The Catholic League's army — the instrument that won White Mountain — has to be paid, and Maximilian expects the emperor to find the money. Imperial officers, creditors, and the occupied territories all press on the same exhausted treasury.",
+      "situation": "Armies do not live on legitimacy. Ferdinand can squeeze the occupied and even loyal lands harder through war contributions, borrow against future confiscations and dynastic credit, or trim the war's aims until his finances can bear them. Each choice decides who pays for victory, and how much resentment comes with the bill.",
+      "options": {
+        "opt_court_borrowing": {
+          "requires_pressures": [{ "pressure": "fiscal_capacity", "min": 22 }],
+          "unavailable_text": "The crown's credit is exhausted; no lender will advance against revenues already pledged."
+        }
+      }
+    },
+    "card_1621_ban_of_frederick": {
+      "briefing": "Frederick has fled, but his claim has not. As an elector of the Empire he can still gather money, men, and sympathy across Protestant Europe. Ferdinand can end that by placing him under the imperial ban — the Empire's highest sanction, making him an outlaw whom every subject is bound to deny aid. But to outlaw an elector is no ordinary act of discipline.",
+      "situation": "The ban would give the victory the force of law and brand Frederick a rebel beyond the pale. Yet to impose it on an elector without the full Diet's hearing would teach every prince in the Empire that their rights, too, might be swept away by imperial decree. Ferdinand can issue the ban in its widest form, offer Frederick a conditional pardon, or proclaim the ban while reassuring the neutral princes that it touches one man alone."
+    },
+    "card_1622_palatine_settlement": {
+      "briefing": "Heidelberg and Mannheim have fallen, yet the Palatine cause will not die. Two freebooting generals keep it alive: Ernst von Mansfeld, the mercenary who lives off the land, and Christian of Brunswick, the 'mad Halberstadter' who coins plundered church silver under the motto 'God's friend, priests' enemy.' English and Spanish envoys, meanwhile, hunt for terms each can call a peace.",
+      "situation": "Ferdinand can punish Frederick to the end, bargain over a conditional restoration, or split the lesser Palatine supporters from the elector's ruin. But every course brushes against Maximilian, who has been promised the Palatinate's lands and electoral title as the price of his army — and who will read any leniency to Frederick as a theft from himself.",
+      "options": {
+        "opt_palatine_conditional_restoration": {
+          "excludes_memory_tags": ["blood_court_executions"],
+          "unavailable_text": "After the scaffolds in Prague, no offer to restore the rebels' own figurehead would be believed."
+        }
+      }
+    },
+    "card_1623_electoral_transfer": {
+      "briefing": "The bill from Munich now falls due. Maximilian has saved Ferdinand's cause, and the secret price was always Frederick's electoral dignity — the vote that makes the Palatinate one of the seven powers entitled to choose the emperor. To hand it to Bavaria would reward loyalty and crown the Catholic victory; it would also remake the electoral college by imperial will.",
+      "situation": "The electors guard their number jealously, and Protestant Saxony and Brandenburg will read the transfer as a warning: that an emergency bargain can permanently alter the constitution. Ferdinand can fulfil the promise outright, delay it while compensating Bavaria with lands and revenues, or punish Frederick yet preserve the electoral balance for now — and risk turning a disappointed Maximilian into a dangerous one.",
+      "memory_variants": [
+        {
+          "briefing": "Regensburg has not ended Bavaria's claim. Maximilian's soldiers and credit have recovered the emperor's position, and the promise of the Treaty of Munich still hangs over every Palatine compromise — Frederick's electoral dignity its unpaid price.",
+          "situation": "A softer Palatine settlement leaves Ferdinand a sharper danger: if Frederick is not wholly stripped, Maximilian must still be satisfied without making the electoral college look a thing the emperor can give and take at will."
+        }
+      ]
+    },
+    "card_1623_peace_feelers": {
+      "briefing": "By now Ferdinand has won. Bohemia is crushed, Frederick outlawed and stripped, the Palatinate occupied, the electoral title passed to Bavaria. And yet the Empire will not settle. The victory has bred its own enemies: ruined exiles, frightened Protestant princes, unpaid soldiers, rewarded allies who want more, and foreign powers newly alarmed by Habsburg success.",
+      "situation": "Ferdinand stands at a crossroads few conquerors reach. He can try to turn victory back into law — calling a formal settlement to fix obedience and reassure the moderates — or press his advantage until no prince dares doubt imperial power, or bank the winnings, demobilize, and repair his exhausted finances. The first is slow, the second combustible, the third resented by the men who profited from the war.",
+      "options": {
+        "opt_demobilize_and_rebuild": {
+          "requires_pressures": [{ "pressure": "military_dependence", "max": 75 }],
+          "unavailable_text": "The army has grown too strong, and is owed too much, to be stood down at the emperor's word."
+        }
+      }
+    },
+    "card_threshold_estates_offer_credit": {
+      "briefing": "Even amid the war, some moderate estates signal that they can still be worked with. Their message is conditional: imperial terms can be carried into their diets and assemblies — provided the old liberties are named and respected, not quietly swallowed.",
+      "situation": "This is not affection but calculation: a belief, still alive, that obedience may protect privilege and confession better than armed resistance. Such credit is a wasting asset. Spent on a controlled settlement, it can keep more estates within reach; hoarded, it may be there later — or may curdle into the conviction that only force secures rights."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "cards": {
+    "card_1618_prague_defenestration": {
+      "briefing": "For nine years an uneasy peace has held in Bohemia on the strength of a single document — the Letter of Majesty, which guarantees the Protestant estates their churches, their schools, and their worship. In 1617 those same estates accepted Ferdinand, a Styrian archduke famous for stamping out Protestantism in his own duchy, as their next king; only two delegates voted no. Ferdinand confirmed their privileges and believes he is keeping them. Then his officials closed one Protestant church and pulled another down, arrested the men who complained, and set royal judges over parish funds. To Count Thurn and the Defensors, the charter is being dismantled clause by clause.",
+      "situation": "This morning, the twenty-third of May 1618, Thurn led an armed assembly up the narrow stair of the Hradschin and threw two Catholic regents and their secretary from a high window. The act — already called the Defenestration of Prague, after a Hussite revolt two centuries ago — should have killed them; instead all three, astonishingly, have survived the fall. The rebels insist they have struck not at the dynasty but at the 'evil advisers' who turned the king against his subjects; their cause, they say, is the Letter of Majesty itself. The first answer from Vienna will decide what this becomes: a riot to be punished, a lawsuit to be heard, or a war."
+    },
+    "card_1618_remove_klesl": {
+      "briefing": "At the centre of the emperor Matthias's government stands Cardinal Klesl, the architect of a policy of patience: hold the Protestants by negotiation, and preserve imperial authority by never forcing a confrontation. With Prague in open revolt, that patience looks to Ferdinand and the hardline archdukes like paralysis. Klesl's letters still promise that Bohemia can be talked down; meanwhile the rebels seize offices, raise men, and empty the treasury.",
+      "situation": "Ferdinand's circle wants a free hand, and Klesl stands in the way of it. The cardinal can still reach the moderate estates, and to remove him would breach every form — he is Matthias's minister, not Ferdinand's to dismiss. Yet every week of negotiation leaves the revolt in possession of the kingdom and the war chest unfilled."
+    },
+    "card_1618_mediation_channel": {
+      "briefing": "Even after the rising, lines of negotiation still run between Vienna and Prague — carried by Klesl's old agents, by doubtful nobles, and by men who insist they fight for their privileges and not against the dynasty. Neither the Protestant directors nor the emperor's moderates have yet despaired of a settlement.",
+      "situation": "But the terms on offer are narrower than Prague wants and slower than the Catholic party will bear. A paper settlement is still possible — if either side will accept less than it has publicly sworn to win."
+    },
+    "card_1619_stormy_petition": {
+      "briefing": "The revolt has spilled out of Bohemia. Count Thurn has crossed the Austrian frontier with ten thousand men and is marching on Vienna itself, gambling that a blow at the Habsburg capital will bring the wavering Moravians and Austrians off the fence. Inside the city, the Protestant nobles of Lower Austria press into Ferdinand's presence to demand guarantees for their religion before they will swear obedience.",
+      "situation": "The palace waits on cavalry that may not arrive in time. One deputy, it is said, has seized Ferdinand by the buttons; the emperor kneels before a crucifix and prays for deliverance, even as the petitioners press their demands. To yield now, under armed pressure, would be heard in Prague as surrender; to refuse, with Thurn at the gates, might be heard as folly."
+    },
+    "card_1619_imperial_election": {
+      "briefing": "While Thurn besieges Vienna, the throne of the Holy Roman Empire falls vacant: Matthias is dead, and the seven electors gather at Frankfurt to choose his successor. Ferdinand, as king of Bohemia, holds an electoral vote himself — but the rebel estates argue that his Bohemian kingship is forfeit, that he was never freely elected, and that they are entitled to choose another. Their reasoning draws on the Letter of Majesty, which made religious liberty part of Bohemia's fundamental law.",
+      "situation": "The two crowns now hang together. If Ferdinand can secure the imperial title, he will answer the rebels from the highest seat in Christendom; if the Bohemians make their case first, they may depose him and bestow their crown elsewhere — and they are already turning to Frederick of the Palatinate. Everything turns on whether this is treated as a question of law, to be argued, or of authority, to be asserted."
+    },
+    "card_1619_frankfurt_coronation": {
+      "briefing": "On the twenty-eighth of August 1619 the electors choose Ferdinand Holy Roman Emperor — unanimously, for even the Bohemian vote is cast in his favour, on the very day the rebels in Prague declare him deposed and elect Frederick in his place. The ceremony gives Ferdinand the regalia, the acclamation, and the coronation oath of the highest office in Christendom.",
+      "situation": "But that oath cuts both ways. The same imperial dignity that lets Ferdinand answer Prague as a rebellion against the whole Empire also gives the electors and estates a written standard by which to measure him. He can present every act of force as the lawful defence of imperial order — or be seen to have bound his own hands before the war is even won."
+    },
+    "card_1620_bavarian_army": {
+      "briefing": "The imperial title has not produced an army. Bohemia, Transylvania under Bethlen Gabor, and Frederick's supporters press on every side, and Ferdinand's own treasury is empty. The one prince who can put a disciplined Catholic army into the field at once is Maximilian of Bavaria, master of the Catholic League and patron of its veteran commander, Tilly.",
+      "situation": "But Maximilian's help comes on Maximilian's terms. By the Treaty of Munich he would march as the emperor's auxiliary — and be repaid in full, with part of Austria pledged as security and a tacit claim on the Palatinate's lands and electoral title should the war be won. Ferdinand calls it taking the Bavarian devil to drive out the Bohemian Beelzebub. The alternative is to wait for an imperial army that does not exist while the rebellion hardens into a new order.",
+      "options": {
+        "opt_delay_for_imperial_levies": {
+          "requires_pressures": [{ "pressure": "fiscal_capacity", "min": 40 }],
+          "unavailable_text": "The treasury is too empty to raise and pay an imperial army of its own; Bavaria's offer is the only force at hand."
+        }
+      },
+      "memory_variants": [
+        {
+          "briefing": "Munich's hand is already strong, for the court has earlier embraced the Catholic League as the necessary answer to Protestant union. Maximilian and the League appear now not as petitioners but as the instrument already chosen for the rescue — and the veteran Tilly with them.",
+          "situation": "Bohemia, Transylvania, and Frederick's adherents still make a present problem of force. But the price by the Treaty of Munich is the sharper now: Bavarian command, full compensation, and a voice in the settlement follow from an earlier policy as much as from present necessity."
+        },
+        {
+          "briefing": "The leagues having earlier been suffered as lawful instruments of the public peace, Munich can offer its aid in the same guarded language. Maximilian and the Catholic League promise rescue while professing obedience — Tilly's veterans at their command.",
+          "situation": "The offer is useful because it wears the face of law; it is dangerous because the army that saves Bohemia will carry, by the Treaty of Munich, its claims for command, compensation, and consultation."
+        },
+        {
+          "briefing": "The court's earlier condemnation of the leagues returns now as an awkwardness. Maximilian can still help — with Tilly and the Catholic League — but Vienna must explain why a Catholic armed association is unlawful in principle yet indispensable in practice.",
+          "situation": "Bohemia requires force before any imperial levy can answer. To accept Bavarian aid by the Treaty of Munich, on these terms, is to make necessity stronger than the very law once invoked against faction."
+        }
+      ]
+    },
+    "card_1620_saxon_question": {
+      "briefing": "Ferdinand's deepest fear is that the revolt will fuse into a single Protestant cause. The one man who can prevent it is John George of Saxony — the senior Lutheran prince of the Empire, who despises the Calvinist Palatinate, distrusts Frederick's adventure, and values imperial order above confessional solidarity. But he needs to be seen protecting Lutheran rights, not serving a Catholic crusade.",
+      "situation": "Handled as a question of law and loyalty, Saxony may be brought to act against Prague — and John George has his price, the Lusatian lands he can occupy in the emperor's name. Handled as a holy war, he will stand aside, and the Protestant estates may close ranks behind Frederick. The framing of the appeal will decide which Saxony answers."
+    },
+    "card_1620_march_on_prague": {
+      "briefing": "The allied armies have driven the revolt back toward its heart. Maximilian and the imperial forces stand in Bohemia, but the commanders disagree: the cautious Bucquoy wants to consolidate, while Tilly urges a swift march on Prague before winter closes the campaign and gives Frederick a reprieve.",
+      "situation": "Ferdinand has overruled his own general and placed him under Maximilian's command. A direct thrust at Prague might bring down the rebel crown in a single battle — or strand the army before a hard city in a bad season. The road leads toward a chalk ridge just west of the capital, the White Mountain."
+    }
+  }
+}

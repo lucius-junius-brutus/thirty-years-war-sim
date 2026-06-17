@@ -1,0 +1,72 @@
+{
+  "cards": {
+    "card_1625_lower_saxon_neutrality": {
+      "briefing": "The war has reached the northern edge of the Empire. The Lower Saxon Circle — the league of north German territories that organize their own defence — grows alarmed as Catholic and imperial armies press toward the Baltic and its rich secularized bishoprics. At its head sits a formidable outsider: Christian IV of Denmark, who as Duke of Holstein is himself a prince of the circle, and who eyes those bishoprics for his own sons.",
+      "situation": "The circle claims only neutrality and self-defence. But to let an imperial circle decide for itself when imperial law applies is to concede a dangerous principle — and behind its assemblies stand Danish gold, English subsidies, and an army. Accept the neutrality unconditionally, and the north slips beyond the emperor's reach; refuse it, and Christian enters the war not as a distant king but as the armed protector of a threatened frontier."
+    },
+    "card_1625_wallenstein_army": {
+      "briefing": "Every victory so far has been won with another prince's army. Bavaria and the Catholic League crushed Bohemia and the Palatinate — and Maximilian never lets Ferdinand forget who holds the sword. Now a Bohemian magnate makes the emperor an extraordinary offer. Albrecht von Wallenstein, grown vastly rich on confiscated rebel estates, proposes to raise a great imperial army at his own credit and the country's expense.",
+      "situation": "Wallenstein's secret is the contribution system: his colonels will feed, clothe, and pay their men by levying the lands they occupy, sparing the empty imperial treasury almost entirely. For the first time Ferdinand could have an army that answers to him and not to Munich. But such an army's purse lies in the territories it ravages, and its officers look upward not to the emperor but to Wallenstein."
+    },
+    "card_1627_palatine_peace_opening": {
+      "briefing": "The Danish war is going Ferdinand's way, and the exiled Frederick — landless, outlawed, his cause fading — lets it be known he might yield at last. He will renounce Bohemia, accept Maximilian's hold on the Palatinate for life, and submit to the emperor, if only by proxy. After nine years, a negotiated end to the Palatine grievance is within reach.",
+      "situation": "The sticking point is not whether Frederick will lose, but how visibly. A submission in person would humble him before all Europe and satisfy the Catholic party; a submission by proxy would spare him the humiliation and close the wound faster. Ferdinand can demand the full ceremony of defeat — or take the substance and let the form go."
+    },
+    "card_1627_restoration_mandates": {
+      "briefing": "In the Habsburg hereditary lands — Bohemia, Moravia, Austria — victory is being made permanent in the only way Ferdinand wholly trusts: by faith. Pastors are expelled, churches inspected, offices closed to Protestants, and noble houses pressed to convert or sell up and leave. The Styrian method Ferdinand perfected as an archduke is now the policy of an emperor at the height of his power.",
+      "situation": "His Catholic loyalists press him to make the victory visible everywhere at once — in worship, schooling, marriage, office, and landholding. Others warn that a sudden, total uniformity will drive property, skilled labour, and undying hatred abroad with the exiles. The pace of restoration is itself a decision.",
+      "options": {
+        "opt_suspend_restoration": {
+          "requires_pressures": [{ "pressure": "confessional_legitimacy", "max": 80 }],
+          "unavailable_text": "The Catholic party at court — Lamormaini and the Jesuits foremost — is too ardent to suffer the restoration suspended now."
+        }
+      }
+    },
+    "card_1628_mecklenburg_reward": {
+      "briefing": "Wallenstein has made the emperor an army and now expects to be paid — not in arrears the treasury cannot meet, but in land and title worthy of a victorious general. The dukes of Mecklenburg, who backed the Danish invasion, lie under imperial displeasure and can be deposed. Their duchy would more than settle the account.",
+      "situation": "To pay a servant with a prince's lands is easier than finding the money. But it would also tell every old house in the Empire that victory can move them out and set new men in — and would raise a Bohemian parvenu to the rank of imperial prince, a peer of families that have ruled for centuries.",
+      "options": {
+        "opt_pay_wallenstein_without_land": {
+          "requires_pressures": [{ "pressure": "fiscal_capacity", "min": 50 }],
+          "unavailable_text": "The treasury cannot credibly satisfy Wallenstein's arrears without using land, offices, or future contributions."
+        }
+      }
+    },
+    "card_1629_lubeck_peace": {
+      "briefing": "Christian IV has lost his war. Tilly and Wallenstein have beaten the Danes out of Germany and driven them back onto their islands, and the imperial armies stand triumphant on the Baltic shore. Now the king sues for terms, and Ferdinand must decide what victory over a foreign crown is worth.",
+      "situation": "A harsh peace — stripping Denmark, demanding compensation — would please the allies who hunger for spoils, but might keep Christian in the field when Sweden is already stirring behind him. A lenient peace would remove one enemy cleanly, at the cost of looking like weakness to friends who bled for more. Wallenstein himself, with an eye on Sweden, urges moderation as terms take shape at Lübeck."
+    },
+    "card_1629_restitution_edict": {
+      "briefing": "At the summit of his power, Ferdinand reaches for a final settlement of the religious question that started it all. His jurists hold that the Peace of Augsburg, rightly read, entitles the Church to recover every ecclesiastical land the Protestants have taken since 1552 — two archbishoprics, a dozen bishoprics, scores of monasteries. What two generations of negotiation left ambiguous, an emperor with an army can now simply declare.",
+      "situation": "Issued as an edict rather than agreed in the Diet, and enforced by imperial commissioners, the Edict of Restitution would be the greatest Catholic gain of the war. It would also tell every Protestant prince — and not a few Catholic ones — that the emperor can rewrite the constitution by his own pen. The very completeness that makes it possible is what makes it dangerous.",
+      "options": {
+        "opt_trade_restitution_for_peace": {
+          "requires_pressures": [{ "pressure": "estate_trust", "min": 42 }, { "pressure": "foreign_intervention_risk", "max": 68 }],
+          "unavailable_text": "Trust has fallen too low, or foreign danger has risen too far, for restitution to buy peace by bargain alone."
+        }
+      },
+      "memory_variants": [
+        {
+          "briefing": "The lenient Peace of Lübeck has removed Denmark without opening a general settlement, and the Catholic petitioners now press that victory and peace together should let the old church claims be made good at last.",
+          "situation": "A decree could satisfy them — but the same paper, the Edict of Restitution, might tell the Lutheran princes that moderation toward Denmark was only the prelude to enforcement at home."
+        },
+        {
+          "briefing": "The mandates in the hereditary lands have already made the Catholic restoration visible in churches, schools, and offices. Now the same question arrives in imperial form, resting on the disputed reach of the Peace of Augsburg.",
+          "situation": "To issue the Edict of Restitution is to carry the hereditary method into the whole Empire; to delay is to disappoint those who believe victory has already proved the method lawful."
+        },
+        {
+          "briefing": "The earlier willingness to settle the Palatine matter by proxy has kept a language of compromise alive. The restitution petitions, grounded on the Peace of Augsburg, now test whether that restraint can survive a Catholic victory.",
+          "situation": "A broad Edict of Restitution would reverse the tone of compromise at a stroke. A narrower reading might keep the wavering Lutheran estates from treating every imperial paper as a threat."
+        }
+      ]
+    },
+    "card_threshold_army_arrears": {
+      "briefing": "The armies that won the war cannot be paid for it. Pay falls into arrears across every command — colonels, creditors, and allied agents arriving with the same unmet accounts in different hands. Soldiers can be promised discipline, but not fed on promises; and an unpaid army is a danger to friend and foe alike.",
+      "situation": "The question before the council is no longer how to finance a policy, but which policy can survive the arrears. Ferdinand can lean harder on the contribution system — making the occupied lands pay — or shrink the army to save its core and its credit."
+    },
+    "card_threshold_treasury_bargain": {
+      "briefing": "For once the treasury can answer a demand without surrendering land, title, or command in place of coin. It is not rich — but it has ready money, and ready money buys something victory alone does not: the freedom to say no.",
+      "situation": "A crown that can pay its servants need not make them princes. Ferdinand can spend the credit to keep military rewards within ordinary bounds — sparing the constitution another Mecklenburg — or hoard it for the succession and the diplomacy ahead, and let the commanders wait their turn behind dynastic business."
+    }
+  }
+}
