@@ -181,5 +181,12 @@ morning").
   Edict; the Blood Court forecloses restoring Frederick; spent legitimacy forecloses hard
   Catholic terms at Prague. Pre-existing pressure gates left intact.
 
-Open follow-ups: early-exit (mid-game) failure states; data-driving the failure thresholds
-off the crisis pressure_thresholds rather than hardcoded numbers.
+Both earlier follow-ups are now done:
+- Failure thresholds are data-driven off the crisis pressure_thresholds. Two tiers from one
+  source of truth: crossing a crisis line warns (getPressureWarnings, message = threshold
+  label); running COLLAPSE_MARGIN (10) past it triggers the failure ending (scoreFailureEnding).
+  All seven crisis pressures now have a collapse ending (added Europe Decides the Empire's
+  Fate for foreign-intervention, Imperial Command Dissolved for imperial-authority).
+- Mid-game early exit: chooseOption sets completed when isCollapsed(), so a choice that drives
+  a pressure past its crisis line ends the reign at once with the failure verdict, instead of
+  only at the end of the deck.

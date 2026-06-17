@@ -317,10 +317,9 @@ function PressurePanel({
   delta?: Partial<Record<string, number>>;
 }) {
   const warnings = new Map(
-    getPressureWarnings(state.pressures).map((warning) => [
-      warning.pressure,
-      warning.message,
-    ]),
+    getPressureWarnings(state.pressures, gameDatabase.pressure_thresholds).map(
+      (warning) => [warning.pressure, warning.message],
+    ),
   );
 
   return (

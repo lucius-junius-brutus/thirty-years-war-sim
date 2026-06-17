@@ -193,7 +193,11 @@ export function chooseOption(
     resolved_card_ids: resolvedCardIds,
     pressures,
     memory_tags: memoryTags,
-    completed: remaining.length === 0,
+    // The run ends when the deck is exhausted, or at once if this choice has
+    // driven a pressure past its crisis line into collapse.
+    completed:
+      remaining.length === 0 ||
+      isCollapsed(pressures, database.pressure_thresholds),
     log: [
       ...state.log,
       {
@@ -322,95 +326,156 @@ export interface PressureWarning {
   message: string;
 }
 
-// Each band foreshadows a failure ending: when a pressure crosses into the band
-// it is approaching the extreme that triggers a collapse verdict.
-const FAILURE_WARNING_BANDS: ReadonlyArray<{
-  pressure: keyof PressureMap;
-  direction: "high" | "low";
-  warnAt: number;
-  message: string;
-}> = [
-  { pressure: "dynastic_security", direction: "low", warnAt: 32, message: "the dynasty's grip is failing" },
-  { pressure: "military_dependence", direction: "high", warnAt: 78, message: "the army's commanders are eclipsing the crown" },
-  { pressure: "devastation", direction: "high", warnAt: 73, message: "the lands approach ruin" },
-  { pressure: "fiscal_capacity", direction: "low", warnAt: 24, message: "the treasury nears insolvency" },
-  { pressure: "estate_trust", direction: "low", warnAt: 24, message: "the estates near open resistance" },
+// How far past the crisis line a pressure must run before the reign collapses.
+// Keeps a single source of truth: the crisis pressure_thresholds mark the warning
+// zone; this margin beyond them marks the failure ending.
+const COLLAPSE_MARGIN = 10;
+
+// Priority order (most fatal first) when more than one pressure has collapsed.
+const FAILURE_PRIORITY: ReadonlyArray<keyof PressureMap> = [
+  "dynastic_security",
+  "military_dependence",
+  "foreign_intervention_risk",
+  "devastation",
+  "fiscal_capacity",
+  "estate_trust",
+  "imperial_authority",
 ];
 
-export function getPressureWarnings(pressures: PressureMap): PressureWarning[] {
-  return FAILURE_WARNING_BANDS.filter((band) =>
-    band.direction === "low"
-      ? pressures[band.pressure] <= band.warnAt
-      : pressures[band.pressure] >= band.warnAt,
-  ).map((band) => ({ pressure: band.pressure, message: band.message }));
+type FailureEndingProse = Omit<OutcomeScore, "strengths" | "dangers">;
+
+// Authored prose for each collapse, keyed by the pressure that triggers it.
+const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse>> = {
+  dynastic_security: {
+    title: "The House Brought Low",
+    legacy:
+      "Habsburg authority has cracked at its foundation: the hereditary lands waver, rivals scent weakness, and the dynasty's grip on its own crowns is no longer assured.",
+    inheritance:
+      "Ferdinand III inherits a name worth less than it was — a claim that must be defended before it can be exercised.",
+    comparison:
+      "This is the counterfactual Ferdinand always feared and never suffered: the dynasty itself, not merely its policy, brought into question.",
+    path_signals: ["Dynastic security collapsed"],
+  },
+  military_dependence: {
+    title: "Captive of the Sword",
+    legacy:
+      "The emperor has won his wars and lost his freedom: the army that saved him now sets the terms, and imperial policy moves at the pace of the men who command the troops.",
+    inheritance:
+      "Ferdinand III inherits a crown that must ask its generals' leave — the Wallenstein problem made permanent.",
+    comparison:
+      "This carries to its end the danger Wilson draws from the contractor armies: the instrument of survival become the master of the state.",
+    path_signals: ["The army's commanders outweigh the emperor"],
+  },
+  foreign_intervention_risk: {
+    title: "Europe Decides the Empire's Fate",
+    legacy:
+      "The imperial quarrel has become a European war. Foreign crowns now treat the Empire as a board for their own ambitions, and no settlement Vienna writes will hold without their leave.",
+    inheritance:
+      "Ferdinand III inherits a war that is no longer his to end — its terms will be dictated in Paris and Stockholm as much as in Vienna.",
+    comparison:
+      "This is the war's historical widening carried to its limit: a domestic constitutional dispute drowned in a contest among the great powers.",
+    path_signals: ["Foreign intervention beyond the emperor's control"],
+  },
+  devastation: {
+    title: "A Realm Laid Waste",
+    legacy:
+      "Victory has come to rule over ruin. Fields lie unsown, towns stand empty, and the contributions that fed the war have eaten the country that owed obedience.",
+    inheritance:
+      "Ferdinand III inherits authority over a depopulated, exhausted land that will take generations to recover.",
+    comparison:
+      "This is the war's true face that the histories remember: a settlement bought at the price of the Empire's own substance.",
+    path_signals: ["The lands consumed by the war"],
+  },
+  fiscal_capacity: {
+    title: "A Bankrupt Crown",
+    legacy:
+      "The treasury is spent past recovery. Unpaid armies mutter, creditors close in, and the crown's orders travel without the coin to make them obeyed.",
+    inheritance:
+      "Ferdinand III inherits debts that outrun the revenues, and an army that serves only as long as it is fed.",
+    comparison:
+      "This follows the fiscal logic Wilson stresses: that arrears and insolvency, not battles, dictated what an emperor could actually do.",
+    path_signals: ["The crown spent into insolvency"],
+  },
+  estate_trust: {
+    title: "An Empire Ungovernable",
+    legacy:
+      "The estates no longer believe the emperor's word protects them, and an authority that must be enforced everywhere can be exercised nowhere.",
+    inheritance:
+      "Ferdinand III inherits a constitution emptied of trust, where every command must be backed by an army to be obeyed.",
+    comparison:
+      "This is the constitutional failure beneath the confessional one: obedience withdrawn not by heresy but by fear of the crown itself.",
+    path_signals: ["Estate trust collapsed into open resistance"],
+  },
+  imperial_authority: {
+    title: "Imperial Command Dissolved",
+    legacy:
+      "The emperor's word no longer carries the force of law. Princes, estates, and cities act as if Vienna's commands were suggestions, and the imperial dignity has become a title without a writ.",
+    inheritance:
+      "Ferdinand III inherits the form of empire without its substance — an authority that must be rebuilt before it can be exercised.",
+    comparison:
+      "This is the constitutional nightmare the Habsburgs always feared: imperial authority so doubted that the Empire governs itself in spite of its head.",
+    path_signals: ["Imperial command no longer obeyed"],
+  },
+};
+
+function crisisThreshold(
+  thresholds: PressureThresholdRecord[],
+  pressure: keyof PressureMap,
+) {
+  return thresholds.find(
+    (threshold) => threshold.kind === "crisis" && threshold.pressure === pressure,
+  );
 }
 
-// Failure / divergence endings, reached when a single pressure runs to its
-// extreme. Checked in order of severity; the first match wins.
+// Has the pressure run COLLAPSE_MARGIN past its crisis line?
+function pastCollapse(pressures: PressureMap, threshold: PressureThresholdRecord) {
+  const value = pressures[threshold.pressure];
+  if (threshold.condition.max !== undefined) {
+    return value <= threshold.condition.max - COLLAPSE_MARGIN;
+  }
+  if (threshold.condition.min !== undefined) {
+    return value >= threshold.condition.min + COLLAPSE_MARGIN;
+  }
+  return false;
+}
+
+// The crisis thresholds are the warning zone: a pressure that has crossed its
+// crisis line is foreshadowing the matching failure ending.
+export function getPressureWarnings(
+  pressures: PressureMap,
+  thresholds: PressureThresholdRecord[],
+): PressureWarning[] {
+  return thresholds
+    .filter(
+      (threshold) =>
+        threshold.kind === "crisis" &&
+        matchesPressureConditions([threshold.condition], pressures),
+    )
+    .map((threshold) => ({ pressure: threshold.pressure, message: threshold.label }));
+}
+
+// Failure / divergence endings, reached when a pressure runs past its crisis
+// line into collapse. The trigger is data-driven from the crisis thresholds;
+// only the prose is authored here. Checked by severity; the first match wins.
 function scoreFailureEnding(
   pressures: PressureMap,
-): Omit<OutcomeScore, "strengths" | "dangers"> | null {
-  if (pressures.dynastic_security <= 20) {
-    return {
-      title: "The House Brought Low",
-      legacy:
-        "Habsburg authority has cracked at its foundation: the hereditary lands waver, rivals scent weakness, and the dynasty's grip on its own crowns is no longer assured.",
-      inheritance:
-        "Ferdinand III inherits a name worth less than it was — a claim that must be defended before it can be exercised.",
-      comparison:
-        "This is the counterfactual Ferdinand always feared and never suffered: the dynasty itself, not merely its policy, brought into question.",
-      path_signals: ["Dynastic security collapsed"],
-    };
-  }
-  if (pressures.military_dependence >= 90) {
-    return {
-      title: "Captive of the Sword",
-      legacy:
-        "The emperor has won his wars and lost his freedom: the army that saved him now sets the terms, and imperial policy moves at the pace of the men who command the troops.",
-      inheritance:
-        "Ferdinand III inherits a crown that must ask its generals' leave — the Wallenstein problem made permanent.",
-      comparison:
-        "This carries to its end the danger Wilson draws from the contractor armies: the instrument of survival become the master of the state.",
-      path_signals: ["The army's commanders outweigh the emperor"],
-    };
-  }
-  if (pressures.devastation >= 85) {
-    return {
-      title: "A Realm Laid Waste",
-      legacy:
-        "Victory has come to rule over ruin. Fields lie unsown, towns stand empty, and the contributions that fed the war have eaten the country that owed obedience.",
-      inheritance:
-        "Ferdinand III inherits authority over a depopulated, exhausted land that will take generations to recover.",
-      comparison:
-        "This is the war's true face that the histories remember: a settlement bought at the price of the Empire's own substance.",
-      path_signals: ["The lands consumed by the war"],
-    };
-  }
-  if (pressures.fiscal_capacity <= 12) {
-    return {
-      title: "A Bankrupt Crown",
-      legacy:
-        "The treasury is spent past recovery. Unpaid armies mutter, creditors close in, and the crown's orders travel without the coin to make them obeyed.",
-      inheritance:
-        "Ferdinand III inherits debts that outrun the revenues, and an army that serves only as long as it is fed.",
-      comparison:
-        "This follows the fiscal logic Wilson stresses: that arrears and insolvency, not battles, dictated what an emperor could actually do.",
-      path_signals: ["The crown spent into insolvency"],
-    };
-  }
-  if (pressures.estate_trust <= 12) {
-    return {
-      title: "An Empire Ungovernable",
-      legacy:
-        "The estates no longer believe the emperor's word protects them, and an authority that must be enforced everywhere can be exercised nowhere.",
-      inheritance:
-        "Ferdinand III inherits a constitution emptied of trust, where every command must be backed by an army to be obeyed.",
-      comparison:
-        "This is the constitutional failure beneath the confessional one: obedience withdrawn not by heresy but by fear of the crown itself.",
-      path_signals: ["Estate trust collapsed into open resistance"],
-    };
+  thresholds: PressureThresholdRecord[],
+): FailureEndingProse | null {
+  for (const pressure of FAILURE_PRIORITY) {
+    const prose = FAILURE_ENDING_PROSE[pressure];
+    const threshold = crisisThreshold(thresholds, pressure);
+    if (prose && threshold && pastCollapse(pressures, threshold)) {
+      return prose;
+    }
   }
   return null;
+}
+
+export function isCollapsed(
+  pressures: PressureMap,
+  thresholds: PressureThresholdRecord[],
+) {
+  return scoreFailureEnding(pressures, thresholds) !== null;
 }
 
 export function scoreOutcome(
@@ -431,7 +496,7 @@ export function scoreOutcome(
 
   // A pressure run to its extreme overrides the nuanced ending with a failure
   // verdict: the reign reaches its close in a state of collapse.
-  const failure = scoreFailureEnding(state.pressures);
+  const failure = scoreFailureEnding(state.pressures, database.pressure_thresholds);
   if (failure) {
     return {
       ...failure,

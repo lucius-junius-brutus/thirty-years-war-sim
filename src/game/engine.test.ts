@@ -749,17 +749,92 @@ describe("game engine", () => {
     );
   });
 
+  it("derives each failure ending's trigger from the crisis pressure thresholds", () => {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    // Lower the military-dependence crisis line in a custom database; the collapse
+    // point follows it, so a high-but-not-extreme dependence now ends the reign.
+    const database = {
+      ...gameDatabase,
+      pressure_thresholds: gameDatabase.pressure_thresholds.map((threshold) =>
+        threshold.kind === "crisis" &&
+        threshold.pressure === "military_dependence"
+          ? {
+              ...threshold,
+              condition: { pressure: "military_dependence" as const, min: 40 },
+            }
+          : threshold,
+      ),
+    };
+    const outcome = scoreOutcome(database, {
+      ...base,
+      completed: true,
+      pressures: { ...base.pressures, military_dependence: 55 },
+    });
+    expect(outcome.title).toBe("Captive of the Sword");
+  });
+
+  it("ends the run at once when a choice drives a pressure to collapse", () => {
+    const role = gameDatabase.playable_roles[0];
+    const baseCard = {
+      role_id: role.id,
+      phase_id: "phase_prewar_settlement",
+      date_label: "test",
+      historian_note: "n",
+      source_refs: ["src_wilson_europes_tragedy"],
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      review_status: "reviewed" as const,
+      briefing: "b",
+      situation: "s",
+    };
+    const opt = (id: string, extra = {}) => ({
+      id,
+      label: id,
+      consequence: "c",
+      effects: {},
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      ...extra,
+    });
+    const database = {
+      ...gameDatabase,
+      cards: [
+        {
+          ...baseCard,
+          id: "card_spike",
+          title: "Spike",
+          options: [
+            opt("opt_spike", { effects: { military_dependence: 70 } }),
+            opt("opt_calm"),
+          ],
+        },
+        { ...baseCard, id: "card_next", title: "Next", options: [opt("opt_a"), opt("opt_b")] },
+        { ...baseCard, id: "card_last", title: "Last", options: [opt("opt_c"), opt("opt_d")] },
+      ],
+    } as typeof gameDatabase;
+
+    let state = createInitialGameState(database, role.id);
+    expect(getCurrentCard(database, state)?.id).toBe("card_spike");
+
+    state = chooseOption(database, state, "card_spike", "opt_spike");
+
+    // Two cards remain, but military dependence has collapsed: the run is over.
+    expect(state.completed).toBe(true);
+    expect(getCurrentCard(database, state)).toBeNull();
+  });
+
   it("warns as a pressure approaches its collapse threshold, not before", () => {
     const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
 
     // The opening position is nowhere near any collapse ending.
-    expect(getPressureWarnings(base.pressures)).toHaveLength(0);
+    expect(getPressureWarnings(base.pressures, gameDatabase.pressure_thresholds)).toHaveLength(0);
 
-    const strained = getPressureWarnings({
-      ...base.pressures,
-      military_dependence: 80,
-      estate_trust: 20,
-    });
+    const strained = getPressureWarnings(
+      {
+        ...base.pressures,
+        military_dependence: 80,
+        estate_trust: 20,
+      },
+      gameDatabase.pressure_thresholds,
+    );
     const flagged = strained.map((warning) => warning.pressure);
     expect(flagged).toContain("military_dependence");
     expect(flagged).toContain("estate_trust");
