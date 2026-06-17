@@ -26,6 +26,7 @@ export function loadGame(storage: StorageAdapter): GameState | null {
     resolved_card_ids: Array.isArray(state.resolved_card_ids)
       ? state.resolved_card_ids
       : (state.log ?? []).map((entry) => entry.card_id),
+    scheduled: Array.isArray(state.scheduled) ? state.scheduled : [],
   };
 }
 

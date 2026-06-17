@@ -617,6 +617,11 @@ function AftermathPanel({
           ))}
         </div>
       ) : null}
+      {entry.deferred_notes?.map((note) => (
+        <p className="deferred-line" key={note}>
+          {note}
+        </p>
+      ))}
       {entry.docket_changes?.map((change) => (
         <p
           className={change.kind === "added" ? "fork-line opens" : "fork-line closes"}

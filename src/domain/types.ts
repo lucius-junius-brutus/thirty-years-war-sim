@@ -163,12 +163,20 @@ export interface DecisionPointRecord {
   source_refs: string[];
 }
 
+export interface ScheduledEffectRecord {
+  after: number;
+  effects?: Partial<PressureMap>;
+  memory_tags?: string[];
+  note: string;
+}
+
 export interface CardOptionRecord {
   id: string;
   label: string;
   consequence: string;
   effects: Partial<PressureMap>;
   causal_claim_ids: string[];
+  scheduled_effects?: ScheduledEffectRecord[];
   historical_option?: boolean;
   memory_tags?: string[];
   research_tags?: string[];

@@ -98,7 +98,7 @@ for (const arg of args) {
         for (const f of ["label", "consequence", "unavailable_text"]) {
           if (typeof optPatch[f] === "string" && optPatch[f].trim()) option[f] = optPatch[f];
         }
-        for (const f of ["requires_memory_tags", "excludes_memory_tags", "requires_pressures"]) {
+        for (const f of ["requires_memory_tags", "excludes_memory_tags", "requires_pressures", "scheduled_effects"]) {
           if (Array.isArray(optPatch[f])) option[f] = optPatch[f];
         }
         if (typeof optPatch.hidden_when_unavailable === "boolean") {

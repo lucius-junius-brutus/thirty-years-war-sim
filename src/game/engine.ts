@@ -22,6 +22,15 @@ export interface GameLogEntry {
   causal_claim_ids: string[];
   pressure_delta: Partial<PressureMap>;
   memory_tags_added?: string[];
+  // Notes for scheduled consequences of earlier choices that fired this turn.
+  deferred_notes: string[];
+}
+
+export interface ScheduledItem {
+  remaining: number;
+  effects?: Partial<PressureMap>;
+  memory_tags?: string[];
+  note: string;
 }
 
 export interface DocketChange {
@@ -39,6 +48,8 @@ export interface GameState {
   pressures: PressureMap;
   memory_tags: string[];
   log: GameLogEntry[];
+  // Deferred consequences awaiting their turn to fire.
+  scheduled: ScheduledItem[];
   completed: boolean;
 }
 
@@ -95,6 +106,7 @@ export function createInitialGameState(
     pressures: { ...role.initial_pressures },
     memory_tags: [],
     log: [],
+    scheduled: [],
     completed: false,
   };
 }
@@ -171,8 +183,37 @@ export function chooseOption(
     throw new Error(availability.reason ?? `Option ${optionId} is unavailable`);
   }
 
-  const pressures = applyEffects(state.pressures, option.effects);
-  const memoryTags = mergeMemoryTags(state.memory_tags, option.memory_tags);
+  // Tick deferred consequences scheduled by earlier choices; the ones now due
+  // fire this turn alongside the option's own immediate effects.
+  const ticked = state.scheduled.map((item) => ({
+    ...item,
+    remaining: item.remaining - 1,
+  }));
+  const due = ticked.filter((item) => item.remaining <= 0);
+  const stillPending = ticked.filter((item) => item.remaining > 0);
+
+  const combinedEffects = mergeEffects(
+    option.effects,
+    ...due.map((item) => item.effects ?? {}),
+  );
+  const pressures = applyEffects(state.pressures, combinedEffects);
+  const memoryTags = mergeMemoryTags(state.memory_tags, [
+    ...(option.memory_tags ?? []),
+    ...due.flatMap((item) => item.memory_tags ?? []),
+  ]);
+  const deferredNotes = due.map((item) => item.note);
+
+  // Schedule this option's own deferred consequences for a later turn.
+  const scheduled = [
+    ...stillPending,
+    ...(option.scheduled_effects ?? []).map((effect) => ({
+      remaining: effect.after,
+      effects: effect.effects,
+      memory_tags: effect.memory_tags,
+      note: effect.note,
+    })),
+  ];
+
   const previousCards = getCardsForRole(database, state);
   const resolvedCardIds = [...state.resolved_card_ids, currentCard.id];
   const nextState = {
@@ -180,6 +221,7 @@ export function chooseOption(
     resolved_card_ids: resolvedCardIds,
     pressures,
     memory_tags: memoryTags,
+    scheduled,
   };
   const cards = getCardsForRole(database, nextState);
   const resolved = new Set(resolvedCardIds);
@@ -193,6 +235,7 @@ export function chooseOption(
     resolved_card_ids: resolvedCardIds,
     pressures,
     memory_tags: memoryTags,
+    scheduled,
     // The run ends when the deck is exhausted, or at once if this choice has
     // driven a pressure past its crisis line into collapse.
     completed:
@@ -212,8 +255,9 @@ export function chooseOption(
         impact_notes: impactNotes,
         docket_changes: docketChanges,
         causal_claim_ids: option.causal_claim_ids,
-        pressure_delta: option.effects,
+        pressure_delta: combinedEffects,
         memory_tags_added: option.memory_tags,
+        deferred_notes: deferredNotes,
       },
     ],
   };
@@ -319,6 +363,19 @@ export function applyEffects(
     next[pressureKey] = clamp(next[pressureKey] + delta);
   });
   return next;
+}
+
+function mergeEffects(
+  ...effectsList: Partial<PressureMap>[]
+): Partial<PressureMap> {
+  const merged: Partial<PressureMap> = {};
+  for (const effects of effectsList) {
+    for (const [key, delta] of Object.entries(effects)) {
+      const pressureKey = key as keyof PressureMap;
+      merged[pressureKey] = (merged[pressureKey] ?? 0) + delta;
+    }
+  }
+  return merged;
 }
 
 export interface PressureWarning {

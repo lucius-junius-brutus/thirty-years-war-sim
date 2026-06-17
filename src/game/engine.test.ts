@@ -885,6 +885,65 @@ describe("game engine", () => {
     ).toBe(true);
   });
 
+  function syntheticDeck(cards: unknown[]) {
+    return { ...gameDatabase, cards } as typeof gameDatabase;
+  }
+  const baseCardFields = () => ({
+    role_id: gameDatabase.playable_roles[0].id,
+    phase_id: "phase_prewar_settlement",
+    date_label: "test",
+    historian_note: "n",
+    source_refs: ["src_wilson_europes_tragedy"],
+    causal_claim_ids: [gameDatabase.causal_claims[0].id],
+    review_status: "reviewed" as const,
+    briefing: "b",
+    situation: "s",
+  });
+  const mkOption = (id: string, extra = {}) => ({
+    id,
+    label: id,
+    consequence: "c",
+    effects: {},
+    causal_claim_ids: [gameDatabase.causal_claims[0].id],
+    ...extra,
+  });
+
+  it("applies an option's scheduled effects only after the given delay", () => {
+    const database = syntheticDeck([
+      {
+        ...baseCardFields(),
+        id: "card_a",
+        title: "A",
+        options: [
+          mkOption("opt_a_schedule", {
+            scheduled_effects: [
+              {
+                after: 1,
+                effects: { military_dependence: 30 },
+                note: "The bill for the army comes due.",
+              },
+            ],
+          }),
+          mkOption("opt_a_other"),
+        ],
+      },
+      { ...baseCardFields(), id: "card_b", title: "B", options: [mkOption("opt_b"), mkOption("opt_b2")] },
+      { ...baseCardFields(), id: "card_c", title: "C", options: [mkOption("opt_c"), mkOption("opt_c2")] },
+    ]);
+
+    let state = createInitialGameState(database, gameDatabase.playable_roles[0].id);
+    const m0 = state.pressures.military_dependence;
+
+    state = chooseOption(database, state, "card_a", "opt_a_schedule");
+    expect(state.pressures.military_dependence).toBe(m0); // not yet
+
+    state = chooseOption(database, state, "card_b", "opt_b");
+    expect(state.pressures.military_dependence).toBe(m0 + 30); // fires after the delay
+    expect(state.log.at(-1)?.deferred_notes).toContain(
+      "The bill for the army comes due.",
+    );
+  });
+
   it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {
     const role = gameDatabase.playable_roles[0];
     const baseCard = {

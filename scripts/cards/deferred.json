@@ -1,0 +1,56 @@
+{
+  "cards": {
+    "card_1620_bavarian_army": {
+      "options": {
+        "opt_bavarian_military_assistance": {
+          "scheduled_effects": [
+            {
+              "after": 4,
+              "effects": { "military_dependence": 6 },
+              "note": "The bill from Munich falls due: Bavaria's claim on command, compensation, and the Palatine electorate hardens into a debt the crown cannot refuse."
+            }
+          ]
+        }
+      }
+    },
+    "card_1625_wallenstein_army": {
+      "options": {
+        "opt_contract_wallenstein_army": {
+          "scheduled_effects": [
+            {
+              "after": 3,
+              "effects": { "military_dependence": 8, "devastation": 6 },
+              "note": "Wallenstein's army, raised so easily, now feeds itself off the land without waiting for the emperor's leave — and grows a power beside the throne."
+            }
+          ]
+        }
+      }
+    },
+    "card_1621_blood_court": {
+      "options": {
+        "opt_sign_blood_warrants": {
+          "scheduled_effects": [
+            {
+              "after": 3,
+              "effects": { "estate_trust": -6 },
+              "note": "The heads left on the Charles Bridge become a Protestant memory that no later mercy can wash away."
+            }
+          ]
+        }
+      }
+    },
+    "card_1629_restitution_edict": {
+      "options": {
+        "opt_issue_restitution_edict": {
+          "scheduled_effects": [
+            {
+              "after": 2,
+              "effects": { "estate_trust": -8, "foreign_intervention_risk": 6 },
+              "note": "The Edict's commissioners reach the Protestant north; the alarm they raise becomes the recruiting-sergeant of the Swedish war."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

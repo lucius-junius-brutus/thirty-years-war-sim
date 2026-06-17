@@ -218,6 +218,16 @@ const cardOptionRecordSchema = z.object({
   requires_pressures: z.array(pressureConditionRecordSchema).optional(),
   requires_memory_tags: z.array(z.string().min(1)).optional(),
   excludes_memory_tags: z.array(z.string().min(1)).optional(),
+  scheduled_effects: z
+    .array(
+      z.object({
+        after: z.number().int().positive(),
+        effects: z.partialRecord(pressureKeySchema, z.number()).optional(),
+        memory_tags: z.array(z.string().min(1)).optional(),
+        note: z.string().min(1),
+      }),
+    )
+    .optional(),
   unavailable_text: z.string().min(1).optional(),
   hidden_when_unavailable: z.boolean().optional(),
 });

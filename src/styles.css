@@ -614,6 +614,26 @@ h3 {
   color: var(--red-deep);
 }
 
+.deferred-line {
+  margin: 14px 0 0;
+  padding: 9px 12px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  background: rgba(156, 34, 41, 0.1);
+  border-left: 5px solid var(--gold);
+}
+
+.deferred-line::before {
+  content: "A reckoning long deferred — ";
+  font-style: normal;
+  font-family: var(--font-pixel);
+  font-size: 0.56rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--red-deep);
+}
+
 .fork-line.opens {
   border-left-color: var(--green);
   color: #3e5238;
