@@ -680,14 +680,6 @@ h3 {
   color: var(--red-deep);
 }
 
-.choice-button.recorded {
-  border-left-color: var(--green);
-}
-
-.choice-button.recorded span {
-  color: #3e5238;
-}
-
 .choice-button:disabled {
   color: var(--ink-dim);
   cursor: not-allowed;

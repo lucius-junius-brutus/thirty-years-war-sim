@@ -463,11 +463,7 @@ function EventCard({
           const availability = getOptionAvailability(option, state);
           return (
             <button
-              className={
-                option.historical_option
-                  ? "choice-button recorded"
-                  : "choice-button"
-              }
+              className="choice-button"
               disabled={!availability.available}
               key={option.id}
               type="button"
@@ -476,9 +472,7 @@ function EventCard({
             >
               <span>
                 {availability.available
-                  ? option.historical_option
-                    ? "Recorded course"
-                    : "Course proposed"
+                  ? "Course proposed"
                   : "Not credible in this situation"}
               </span>
               {availability.available ? option.label : availability.reason}
