@@ -39,6 +39,23 @@ function woodcutFor(phaseId: string) {
   return `${import.meta.env.BASE_URL}assets/${file}`;
 }
 
+function useMediaQuery(query: string) {
+  const supported =
+    typeof window !== "undefined" && typeof window.matchMedia === "function";
+  const [matches, setMatches] = useState(
+    () => supported && window.matchMedia(query).matches,
+  );
+  useEffect(() => {
+    if (!supported) return;
+    const media = window.matchMedia(query);
+    const onChange = () => setMatches(media.matches);
+    onChange();
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, [query, supported]);
+  return matches;
+}
+
 function App() {
   const [state, setState] = useState<GameState>(() => {
     const storage = getBrowserStorage();
@@ -59,6 +76,7 @@ function App() {
   const [showDesigner, setShowDesigner] = useState(false);
   const designerEnabled = isDesignerMode();
 
+  const isNarrow = useMediaQuery("(max-width: 860px)");
   const role = getRole(gameDatabase, state.roleId);
   const card = getCurrentCard(gameDatabase, state);
   const outcome = state.completed ? scoreOutcome(gameDatabase, state) : null;
@@ -156,6 +174,13 @@ function App() {
           </aside>
 
           <section className="main-panel">
+            {isNarrow ? (
+              <PressurePanel
+                state={state}
+                delta={showAftermath ? latestEntry?.pressure_delta : undefined}
+                compact
+              />
+            ) : null}
             {showAftermath && latestEntry ? (
               <AftermathPanel
                 entry={latestEntry}
@@ -327,9 +352,11 @@ function RoleSelect({
 function PressurePanel({
   state,
   delta,
+  compact = false,
 }: {
   state: GameState;
   delta?: Partial<Record<string, number>>;
+  compact?: boolean;
 }) {
   const warnings = new Map(
     getPressureWarnings(state.pressures, gameDatabase.pressure_thresholds).map(
@@ -338,7 +365,7 @@ function PressurePanel({
   );
 
   return (
-    <section className="pressure-panel">
+    <section className={compact ? "pressure-panel pressure-panel--compact" : "pressure-panel"}>
       <div className="panel-title">
         <ScrollText size={17} />
         Pressures
