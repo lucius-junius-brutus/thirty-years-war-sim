@@ -1,0 +1,188 @@
+{
+  "card_1620_white_mountain_aftermath": {
+    "briefing": "The Bavarian and imperial force had broken the rebel army before the walls of Prague. Frederick was fled; but the victory had still to be translated into law, into punishment, into property, and into obedience.",
+    "situation": "The rebel army lay broken outside Prague. The victory was real, its meaning yet undecided. Punishment and mercy, confiscation and restoration, each pointed toward a different future.",
+    "options": {
+      "opt_exemplary_punishment": {
+        "label": "Name the leading rebels for exemplary punishment, while reserving pardon for the lesser estates.",
+        "consequence": "The Habsburg command tightened its grip. The lesson travelled farther than Prague."
+      },
+      "opt_selective_punishment": {
+        "label": "Punish the leaders, yet keep law enough to part the rebels from the estates.",
+        "consequence": "The settlement was severe but legible. It left the less fuel for the moderates' panic."
+      },
+      "opt_amnesty_for_oaths": {
+        "label": "Offer broad amnesty to the estates that would swear renewed obedience.",
+        "consequence": "The fear receded; but the Catholic allies saw a chance of restoration slipping from their hands."
+      }
+    }
+  },
+  "card_1621_blood_court": {
+    "briefing": "The court at Prague had named the traitors and pronounced its sentences of death. Petitions and counsel reached Ferdinand before ever the warrants left Vienna.",
+    "situation": "The revolt might be taught by spectacle, or punished by property, exile, and oath. The square at Prague waited upon the form of obedience the emperor would command.",
+    "options": {
+      "opt_sign_blood_warrants": {
+        "label": "Sign the exemplary warrants of death.",
+        "consequence": "The punishment was made visible before Prague. Fear entered into the settlement, and the memory of exile hardened about the scaffold."
+      },
+      "opt_commute_most_sentences": {
+        "label": "Commute the most of the sentences, reserving death for the most prominent.",
+        "consequence": "The court marked treason still, yet Prague saw that obedience need not end upon the scaffold for every condemned man."
+      },
+      "opt_punish_without_executions": {
+        "label": "Use humiliation, exile, and confiscation in the place of execution.",
+        "consequence": "Lives were spared while names and lands were struck. The hardliners called it weakness; but fewer households were left a martyr."
+      }
+    }
+  },
+  "card_1621_confiscations": {
+    "briefing": "The crown had subdued the revolt, yet it owed still its soldiers, its allies, and its loyal nobles. The property of the rebels offered money and reward together; and every confiscation taught the defeated what a Habsburg victory might mean.",
+    "situation": "The confiscated lands could discharge debts, reward the loyal, and remake the ruling class of Bohemia. They could as readily persuade every estate that defeat was a kind of social death.",
+    "options": {
+      "opt_large_confiscations": {
+        "label": "Make large confiscations to reward the loyal Catholics and fund the settlement.",
+        "consequence": "Money and loyalty flowed through the confiscated land. So did the terror of the imperial victory."
+      },
+      "opt_limited_confiscations": {
+        "label": "Confiscate with selection, and keep a public record in law of every case.",
+        "consequence": "The settlement paid the slower for it, but it wore less the look of appetite crowned."
+      },
+      "opt_commute_to_fines": {
+        "label": "Commute many confiscations to fines and renewed oaths.",
+        "consequence": "Less was gathered and less transformed; but the more men were left with something to lose by rebelling anew."
+      }
+    }
+  },
+  "card_1621_spanish_rhine": {
+    "briefing": "The Palatine question drew the war toward the Rhine, where the interests of Spanish Habsburg and the Dutch war lay close. The emperor's kin could lend their aid, but their aid made the imperial crisis look European.",
+    "situation": "The Spanish Habsburg interest stood with the emperor's against Frederick, yet its Rhenish cares were bound up with the Dutch war. Help out of Madrid might make the Palatinate a hinge of Europe.",
+    "options": {
+      "opt_coordinate_with_spain": {
+        "label": "Coordinate closely with Spain in the Palatinate and along the Rhine.",
+        "consequence": "The dynastic power gathered. So did the anxieties of every state that watched the Rhine."
+      },
+      "opt_keep_spanish_distance": {
+        "label": "Take the Spanish help quietly, yet keep imperial policy visibly apart.",
+        "consequence": "Some help was gained without making the Empire look the instrument of Madrid."
+      },
+      "opt_decline_spanish_role": {
+        "label": "Hold Spain at arm's length and frame the matter as purely imperial.",
+        "consequence": "The story in law was the cleaner; the resources in fact were the thinner."
+      }
+    }
+  },
+  "card_1622_league_finance": {
+    "briefing": "The victory had not ended the reckonings. The League, the imperial officers, the creditors, and the occupied territories all pressed upon the same frail system of finance.",
+    "situation": "Armies do not live upon legitimacy. The Catholic League looked for support, the officers for pay, and the territories under contribution felt the war in their barns and town halls.",
+    "options": {
+      "opt_contribution_system": {
+        "label": "Authorize heavier contributions from occupied and loyal territory alike.",
+        "consequence": "The army was kept fed. The countryside learned that loyalty was no immunity."
+      },
+      "opt_court_borrowing": {
+        "label": "Borrow against future confiscations and the credit of the dynasty.",
+        "consequence": "Some present suffering was spared; but the court's future narrowed about its debt."
+      },
+      "opt_reduce_campaign_scope": {
+        "label": "Limit the aims of the campaign until finance should catch the ambition.",
+        "consequence": "The war drew breath. The allies asked why they had fought to stop short."
+      }
+    }
+  },
+  "card_1621_ban_of_frederick": {
+    "briefing": "White Mountain had made Frederick vulnerable; but the legal punishment of an elector was no ordinary discipline. Ferdinand must make the ban appear a lawful defence of the Empire rather than naked Habsburg revenge.",
+    "situation": "Frederick was fled, but not vanished, and his claim gathered still its money, its men, its sympathy. The chancery might name him an outlaw of the Empire and command every subject, estate, officer, and vassal to deny him aid.",
+    "options": {
+      "opt_issue_upper_ban": {
+        "label": "Declare Frederick under the imperial and the upper ban.",
+        "consequence": "The victory gained its teeth in law. Yet every estate now studied whether cause, hearing, and process might bend under pressure."
+      },
+      "opt_conditional_pardon": {
+        "label": "Offer pardon, should Frederick renounce Bohemia and disarm.",
+        "consequence": "The moderates saw an exit from the crisis; the Catholic allies saw a rebel king given one more door."
+      },
+      "opt_narrow_ban_reassurance": {
+        "label": "Outlaw Frederick, yet reassure in public the neutral princes and the Palatine subjects.",
+        "consequence": "The decree isolated one man rather than threaten every estate. Such restraint would want allies willing to obey the legal boundary."
+      }
+    }
+  },
+  "card_1622_palatine_settlement": {
+    "briefing": "Heidelberg and Mannheim were fallen, yet the Palatine cause had not laid down its arms. Mansfeld and Christian of Brunswick carried war still through the Empire, while the English and Spanish envoys sought after terms they might call a peace.",
+    "situation": "Ferdinand might punish Frederick, or bargain over restoration, or part the lesser supporters from the elector's ruin. Every course touched upon Maximilian's expected reward.",
+    "options": {
+      "opt_palatine_conditional_restoration": {
+        "label": "Offer conditional restoration, should Frederick renounce Bohemia and his commanders disband.",
+        "consequence": "The Palatine grievance was given a road back into law; but Maximilian heard that victory might not bring the full price promised at Munich."
+      },
+      "opt_palatine_keep_ban": {
+        "label": "Keep the ban in force and pursue a settlement by arms.",
+        "consequence": "No prince mistook Ferdinand's victory for weakness; but the Palatine name remained useful to every foreign patron in want of an imperial grievance."
+      },
+      "opt_palatine_separate_amnesty": {
+        "label": "Part Frederick's punishment from amnesty for the lesser Palatine supporters.",
+        "consequence": "The elector remained marked, while the lesser men were offered a way home. The network of exiles lost some of its breadth without contenting Frederick's nearest allies."
+      },
+      "opt_palatine_spanish_bavarian_pressure": {
+        "label": "Use the pressure of Spain and Bavaria to force a settlement favourable to the Habsburgs.",
+        "consequence": "Allied force drove the settlement forward; but the Empire saw that Palatine law now moved in the shadow of Madrid and Munich."
+      }
+    }
+  },
+  "card_1623_electoral_transfer": {
+    "briefing": "Bavaria had helped to save Ferdinand when his own resources ran thin. The earlier bargain now fell due in the Palatinate, where to reward Maximilian was to alter the electoral balance of the Empire.",
+    "situation": "Maximilian had not saved the cause for poetry's sake. The secret promise behind the Bavarian bargain now pressed forward: the Palatine lands and Frederick's electoral dignity might reward Bavaria, punish rebellion, and remake the balance among the electors.",
+    "options": {
+      "opt_transfer_to_bavaria": {
+        "label": "Fulfil the promise and transfer the electoral dignity to Maximilian.",
+        "consequence": "Bavaria was rewarded, and the Catholic victory crowned. The electors saw that a bargain of emergency might become a new fact of the constitution."
+      },
+      "opt_delay_transfer": {
+        "label": "Delay the dignity, granting Bavaria security and revenues in its stead.",
+        "consequence": "The constitutional shock was softened; but Maximilian's patience became another debt, and one bearing interest."
+      },
+      "opt_preserve_electoral_balance": {
+        "label": "Punish Frederick, yet preserve the electoral balance for the present.",
+        "consequence": "The electors were reassured by the restraint, and Bavaria was not. A disappointed ally was an armed ally still."
+      }
+    },
+    "memory_variants": [
+      {
+        "briefing": "Regensburg had not ended Bavaria's claim. Maximilian's soldiers and credit had helped recover the emperor's position, and Munich's promise stood still over every Palatine compromise.",
+        "situation": "A softer Palatine settlement left Ferdinand a different danger: if Frederick were not utterly stripped, Bavaria must yet be satisfied without making the electoral college look a thing disposable."
+      }
+    ]
+  },
+  "card_1623_peace_feelers": {
+    "briefing": "By the year 1623 Ferdinand had outlived the opening crisis and chastised the Bohemian and Palatine challenge. Yet the settlement left behind it debts, displaced elites, anxious princes, and allies who looked for their rewards.",
+    "situation": "Bohemia was subdued and Frederick broken, and still the Empire was not calm. Every settlement made its own constituency: the rewarded ally, the frightened estate, the ruined town, the unpaid soldier, and the foreign power that watched.",
+    "options": {
+      "opt_call_imperial_settlement": {
+        "label": "Call a formal imperial settlement to fix obedience and reassure the moderates.",
+        "consequence": "The crown sought to turn victory back into law. It was slower than command, and less apt to take fire."
+      },
+      "opt_continue_pressure": {
+        "label": "Keep the pressure upon the remaining opposition until no prince should doubt the imperial reach.",
+        "consequence": "From Vienna the authority looked grand. From the Protestant courts it looked a forecast."
+      },
+      "opt_demobilize_and_rebuild": {
+        "label": "Demobilize what may be spared, and spend the crown's credit upon fiscal repair.",
+        "consequence": "The engine of war cooled; but the allies and officers who had profited by its motion resisted the stillness."
+      }
+    }
+  },
+  "card_threshold_estates_offer_credit": {
+    "briefing": "Several of the moderate estates answered that the imperial terms might yet be carried into their diets, provided the old liberties were named and not swallowed in silence.",
+    "situation": "This credit was no affection. It was a usable belief that obedience might preserve privilege, confession, and local jurisdiction better than refusal in arms.",
+    "options": {
+      "opt_threshold_use_estate_credit_for_settlement": {
+        "label": "Use the opening to lay the disputed claims before a controlled diet.",
+        "consequence": "The court spent its trust upon procedure. More estates remained within reach, though the zealous councillors complained that law was made slow just when victory should have spoken plainly."
+      },
+      "opt_threshold_bank_estate_credit": {
+        "label": "Keep the opening for a later settlement rather than spend it at once.",
+        "consequence": "The court avoided a quarrel that day. The estates' confidence remained useful; but the petitioners who had looked for action began to count the delay as policy."
+      }
+    }
+  }
+}

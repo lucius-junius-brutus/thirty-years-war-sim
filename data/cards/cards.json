@@ -6,8 +6,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1555",
     "title": "The Settlement With Gaps",
-    "briefing": "Reports on the Religious Peace of Augsburg set out the bargain by which the Empire tried to turn confessional conflict into law. Catholic and Lutheran imperial estates are recognized under the public peace. A territorial ruler may order the confession of his lands, while dissenting subjects are to have room to leave rather than be punished by violence. Calvinists and other Reformed believers are not named in the settlement.",
-    "situation": "The same papers show how much was left exposed. The Ecclesiastical Reservation says a bishop or abbot who converts should surrender his office, yet Protestant estates point to long possession, schools, churches, chapters, and local practice now standing under the peace. Catholic petitioners ask when alienated ecclesiastical lands and revenues will be restored. Each disputed monastery, parish, city, and mediate lordship waits for judgment.",
+    "briefing": "In the year 1555 the estates of the Empire bound themselves at Augsburg to a peace meant to contain the confessional quarrel within the law rather than to end it. The Religious Peace of Augsburg granted recognition to Catholic and Lutheran estates alike beneath the public peace; it left to each territorial prince the ordering of religion in his own lands, and to the subject who could not conform the cold mercy of leave to depart rather than the sword. Of the Calvinists and the other Reformed the Peace of Augsburg said nothing at all.",
+    "situation": "Yet the same instrument left much exposed. By the Ecclesiastical Reservation a prelate who turned Protestant was to surrender his office and its lands; but the Protestant estates pointed to long possession — to schools, churches, chapters, and the settled practice of a generation now standing under the peace. The Catholic petitioners asked, year upon year, when the alienated lands and revenues of the Church would be restored to them. And so every disputed monastery, parish, free city, and mediate lordship waited upon a judgment that none dared to give.",
     "historian_note": "Wilson treats Augsburg as part of the Empire's constitutional settlement rather than a simple pause in religious war. Its unresolved legal-confessional questions became usable political weapons once rulers and estates ceased trusting one another's interpretation.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -22,8 +22,8 @@
     "options": [
       {
         "id": "opt_augsburg_enforcement_inheritance",
-        "label": "Assert the strict clauses of the settlement and prepare to close disputed usages.",
-        "consequence": "Catholic petitioners leave court with stronger expectation that old rights will be heard. Lutheran and mixed estates begin preparing memorials of their own, warning that enforcement against settled practice will disturb the public peace it claims to defend.",
+        "label": "Press the strict letter of the settlement and move to close the disputed usages.",
+        "consequence": "The Catholic petitioners departed the court in the firmer hope that ancient rights would at last be heard. The Lutheran and mixed estates set their clerks to memorials of their own, warning that enforcement against settled custom would unsettle the very peace it claimed to guard.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 5,
@@ -46,8 +46,8 @@
       },
       {
         "id": "opt_augsburg_compromise_inheritance",
-        "label": "Preserve Augsburg as a living compact, to be clarified only by consultation.",
-        "consequence": "The court appears as guardian of the settlement rather than master of its ambiguities. Moderate estates remain at the table, while Catholic reformers complain that churches, revenues, and privileges are being withheld under the name of peace.",
+        "label": "Keep Augsburg a living compact, its gaps closed only by common consultation.",
+        "consequence": "The crown stood forth as guardian of the settlement rather than as master of its silences. The moderate estates kept their place at the table, while the Catholic reformers murmured that churches, revenues, and privileges were being withheld under the name of peace.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -4,
@@ -71,8 +71,8 @@
       },
       {
         "id": "opt_augsburg_deferred_inheritance",
-        "label": "Let disputed usages stand until a concrete complaint forces judgment.",
-        "consequence": "The files remain open and no estate is forced to retreat today. Local officers, consistories, chapters, and councils continue to gather proofs for the next quarrel.",
+        "label": "Let the disputed usages stand until a true complaint forces a ruling.",
+        "consequence": "No estate was made to yield that day, and the files lay open. In parish and consistory, in chapter and council, the local officers went on gathering their proofs against the next quarrel.",
         "effects": {
           "estate_trust": 3,
           "imperial_authority": -3,
@@ -111,8 +111,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1608-1609",
     "title": "Leagues of Protection",
-    "briefing": "Reports arrive under two seals. At Auhausen, Palatine councillors and Protestant estates have formed a Protestant Union, promising correspondence, mutual aid, transit, contributions, and defence for members who say ordinary imperial remedies no longer protect them. From Munich comes the Catholic answer: ecclesiastical princes bind themselves to a League under Maximilian of Bavaria.",
-    "situation": "Both associations write in the language of protection and the public peace, not open defiance. Their articles speak of counsel, compensation, lawful process, and assistance only in danger. Yet each letter also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people.",
+    "briefing": "Two sealed reports came to the court within the year. From Auhausen word arrived that the Palatine councillors and the Protestant estates had sworn a Protestant Union — a bond of correspondence, mutual aid, free transit, and contribution for members who held that the ordinary remedies of the Empire no longer kept them safe. From Munich came the Catholic answer: the ecclesiastical princes had bound themselves into a Catholic League beneath Maximilian of Bavaria.",
+    "situation": "Each association wrote in the language of protection and the public peace, not of open defiance. Their articles spoke of counsel, of compensation, of lawful process, of aid only in the hour of danger. Yet each letter named also its commanders, its treasuries, its quotas and its warnings, and claimed the right to march when delay should threaten land and people.",
     "historian_note": "Wilson stresses that the Union and Liga did not make war inevitable. They mattered because they turned insecurity into institutions and gave ambitious directors ways to spread costs, claim legitimacy, and mobilize support.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -128,29 +128,29 @@
         "required_memory_tags": [
           "augsburg_strict"
         ],
-        "briefing": "The report from Auhausen reads like an answer to every strict reading of Augsburg: Palatine councillors and Protestant estates now promise one another correspondence, transit, contribution, and aid before ordinary courts can decide their danger. The Munich papers answer from the Catholic side, placing a League of ecclesiastical princes under Maximilian of Bavaria.",
-        "situation": "Your stricter line gives Catholic petitioners confidence that old rights may be pressed, but it also sharpens Protestant claims that ordinary remedies have become unsafe. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The report from Auhausen read as a direct answer to every strict construction of Augsburg: the Palatine councillors and the Protestant estates now promised one another correspondence, transit, contribution, and aid before any court could weigh their danger. The Munich papers answered from the Catholic side, setting a League of ecclesiastical princes beneath Maximilian of Bavaria.",
+        "situation": "The strict line lately taken at court gave the Catholic petitioners confidence that old rights might be pressed; it sharpened, too, the Protestant claim that the ordinary remedies had grown unsafe. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
       },
       {
         "required_memory_tags": [
           "augsburg_consultation"
         ],
-        "briefing": "The Auhausen and Munich reports arrive as warnings that consultation alone no longer holds confessional fear inside ordinary institutions. Palatine councillors and Protestant estates have sealed a Protestant Union for correspondence, transit, contribution, and defence. Catholic ecclesiastical princes answer from Munich by binding themselves to a League under Maximilian of Bavaria.",
-        "situation": "Your earlier caution keeps a language of restraint available, but it also makes both leagues harder to condemn at once. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The reports from Auhausen and Munich came as warnings that consultation alone could no longer hold confessional fear within the ordinary institutions. The Palatine councillors and Protestant estates had sealed a Protestant Union for correspondence, transit, contribution, and defence. The Catholic ecclesiastical princes answered from Munich, binding themselves to a League beneath Maximilian of Bavaria.",
+        "situation": "The court's earlier restraint kept a language of moderation within reach, yet it also made the two leagues the harder to condemn together. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
       },
       {
         "required_memory_tags": [
           "augsburg_deferred"
         ],
-        "briefing": "The Auhausen and Munich reports arrive beside a growing file of unanswered petitions. Palatine councillors and Protestant estates have sealed a Protestant Union for correspondence, transit, contribution, and defence. Catholic ecclesiastical princes answer from Munich by binding themselves to a League under Maximilian of Bavaria.",
-        "situation": "Your refusal to force every disputed usage into immediate judgment avoids a single imperial provocation, but it leaves each estate to judge danger for itself. Each association professes service to the public peace; each also names commanders, treasuries, quotas, warnings, and the right to move when delay threatens land and people."
+        "briefing": "The reports from Auhausen and Munich arrived beside a swelling file of unanswered petitions. The Palatine councillors and Protestant estates had sealed a Protestant Union for correspondence, transit, contribution, and defence. The Catholic ecclesiastical princes answered from Munich, binding themselves to a League beneath Maximilian of Bavaria.",
+        "situation": "The refusal to force every disputed usage to an immediate judgment spared the Empire a single provocation, but it left each estate to measure its own danger. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
       }
     ],
     "options": [
       {
         "id": "opt_leagues_constitutional_insurance",
-        "label": "Tolerate the leagues as temporary instruments, bound to imperial law.",
-        "consequence": "The associations remain careful in their language and continue to profess obedience. Their members also keep their correspondence, treasuries, and pledges of aid, as if imperial justice may arrive too late.",
+        "label": "Suffer the leagues as passing instruments, held within imperial law.",
+        "consequence": "The associations kept their language careful and went on professing obedience. They kept also their correspondence, their treasuries, and their pledges of aid — as men who reckoned that imperial justice might come too late.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -3,
@@ -175,7 +175,7 @@
       {
         "id": "opt_leagues_suppress_faction",
         "label": "Condemn the leagues as unlawful factions against the public peace.",
-        "consequence": "The court speaks in the old language of the Landfrieden. Union and League members send replies insisting that their oaths were made for defence, and that delay by imperial institutions left their lands exposed.",
+        "consequence": "The court spoke again in the old language of the Landfrieden. Union and League alike returned answer that their oaths were sworn for defence, and that the slowness of the imperial courts had left their lands exposed.",
         "effects": {
           "imperial_authority": 6,
           "estate_trust": -8,
@@ -199,8 +199,8 @@
       },
       {
         "id": "opt_leagues_catholic_counterweight",
-        "label": "Treat Catholic association as the necessary answer to Protestant coordination.",
-        "consequence": "Catholic ecclesiastical princes send more confidently to Munich, and Bavarian direction becomes the obvious channel for armed Catholic aid. The emperor gains a shield, but one held in another prince's hand.",
+        "label": "Treat the Catholic League as the needful answer to Protestant union.",
+        "consequence": "The Catholic prelates wrote to Munich with the greater confidence, and Bavarian direction became the natural channel of armed Catholic aid. The emperor gained a shield, but one held in another prince's hand.",
         "effects": {
           "confessional_legitimacy": 8,
           "military_dependence": 8,
@@ -244,8 +244,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1609",
     "title": "A Royal Promise in Bohemia",
-    "briefing": "Copies of Rudolf's Letter of Majesty circulate through Prague and the provincial diets. Protestant estates point to its words when they speak of churches, schools, consistories, defenders, and the free exercise granted to them under royal seal.",
-    "situation": "Royal councillors answer with distinctions over crown lands, ecclesiastical lordships, and the limits of the charter. The estates reply that a promise entered among the kingdom's liberties cannot be narrowed by officials without shaking the obedience owed to the crown.",
+    "briefing": "Copies of Rudolf's Letter of Majesty passed through Prague and the provincial diets. The Protestant estates held up its very words whenever they spoke of their churches and schools, their consistories and defenders, and the free exercise of religion granted them beneath the royal seal.",
+    "situation": "The royal councillors answered with distinctions — over crown lands, over ecclesiastical lordships, over the proper bounds of the charter. The Bohemian estates replied that a promise once entered among the kingdom's liberties could not be pared away by officials without loosening the obedience owed to the crown itself.",
     "historian_note": "The Letter of Majesty makes the Bohemian crisis a dispute over recorded estate privileges as well as confession. Later enforcement could be presented as lawful correction by one side and charter-breaking by the other.",
     "source_refs": [
       "src_public_letter_of_majesty_1609_cz_wikisource",
@@ -261,7 +261,7 @@
       {
         "id": "opt_majesty_broad_charter",
         "label": "Uphold the Letter as a broad charter of Bohemian estate liberty.",
-        "consequence": "The Protestant estates read the crown's answer as confirmation that obedience and chartered worship can stand together. Catholic councillors and clergy see a written barrier placed before restoration in one of the Habsburgs' principal kingdoms.",
+        "consequence": "The Protestant estates took the royal answer as proof that obedience and chartered worship might stand together. The Catholic councillors and clergy saw instead a written wall raised before any restoration in one of the chief kingdoms of the house of Habsburg.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -4,
@@ -285,8 +285,8 @@
       },
       {
         "id": "opt_majesty_narrow_reading",
-        "label": "Read the Letter narrowly where royal and ecclesiastical rights are disputed.",
-        "consequence": "Royal officials proceed with a defensible legal distinction. Protestant directors copy the same order into their grievance papers as proof that the charter is being emptied while its seal remains on display.",
+        "label": "Read the Letter narrowly wherever royal and ecclesiastical rights are touched.",
+        "consequence": "The royal officials went forward upon a defensible distinction in law. The Protestant directors copied the same order into their book of grievances, as proof that the charter was being emptied while its seal still hung in view.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 9,
@@ -310,8 +310,8 @@
       },
       {
         "id": "opt_majesty_avoid_clarification",
-        "label": "Avoid a formal ruling and leave local practice to bear the strain.",
-        "consequence": "No order forces an immediate retreat. Parish officers, noble patrons, royal judges, and defenders continue to act under rival readings of the same royal paper.",
+        "label": "Give no formal ruling, and leave local practice to bear the strain.",
+        "consequence": "No order compelled a retreat that season. Parish officers and noble patrons, royal judges and appointed defenders, all went on acting upon rival readings of one and the same royal paper.",
         "effects": {
           "estate_trust": 2,
           "imperial_authority": -2,
@@ -351,8 +351,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1598-1605",
     "title": "The Styrian Lesson",
-    "briefing": "From Graz come the papers of an earlier victory. In Inner Austria, Ferdinand has seen Protestant schools closed, pastors expelled, town councils altered, and Catholic officeholding rebuilt under the cover of princely right.",
-    "situation": "The Estates did not vanish. They withheld taxes, petitioned, threatened emigration, and then mostly remained. The lesson carried forward is dangerous because it appears to have worked: prepare carefully, divide provinces, keep within a narrow reading of law, and act once conscience and counsel are aligned.",
+    "briefing": "Out of Graz came the papers of an earlier victory. In Inner Austria the Archduke Ferdinand had seen Protestant schools shut, their preachers driven out, the town councils remade, and Catholic men set once more in every office — all beneath the cover of the prince's acknowledged right.",
+    "situation": "The Estates had not thereby vanished. They withheld their taxes, sent up petitions, threatened to emigrate, and in the end for the most part remained. The lesson carried forward was the more dangerous because it seemed to have answered: prepare in patience, divide the provinces, keep within a narrow reading of the law, and strike only when conscience and counsel stood agreed.",
     "historian_note": "Wilson treats Inner Austria as the formative setting for Ferdinand's legalistic Catholic restoration before the Bohemian crisis.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -374,8 +374,8 @@
     "options": [
       {
         "id": "opt_styrian_reform_commission",
-        "label": "Trust the Styrian method: legal commissions, Catholic officeholding, and force when needed.",
-        "consequence": "The archduke's confidence hardens. Restoration can be imagined as obedience to law rather than innovation.",
+        "label": "Trust the Styrian method — legal commissions, Catholic office, and force at need.",
+        "consequence": "The archduke's confidence hardened into doctrine. Restoration might now be imagined as obedience to the law rather than as innovation against it.",
         "effects": {
           "confessional_legitimacy": 8,
           "dynastic_security": 8,
@@ -392,8 +392,8 @@
       },
       {
         "id": "opt_styrian_slow_patronage",
-        "label": "Use patronage and Catholic appointments, but avoid spectacular expulsions.",
-        "consequence": "Catholic recovery continues more quietly. Zealous advisers ask whether caution has become surrender.",
+        "label": "Work by patronage and Catholic appointment, sparing the spectacle of expulsion.",
+        "consequence": "The Catholic recovery went forward more quietly. The zealous among the counsellors asked whether such caution had not become surrender.",
         "effects": {
           "confessional_legitimacy": 3,
           "dynastic_security": 4,
@@ -413,8 +413,8 @@
       },
       {
         "id": "opt_styrian_estate_compact",
-        "label": "Seek a new compact with the estates before renewing the commission.",
-        "consequence": "The Estates gain a language of consent. Ferdinand gains fewer enemies and a less certain conscience.",
+        "label": "Seek a fresh compact with the estates before renewing the commission.",
+        "consequence": "The Estates gained a language of consent. The archduke gained fewer enemies, and a conscience less certain of itself.",
         "effects": {
           "estate_trust": 8,
           "confessional_legitimacy": -6,
@@ -441,8 +441,8 @@
     "phase_id": "phase_prewar_settlement",
     "date_label": "1617-1618",
     "title": "Before the Window",
-    "briefing": "Petitions from Bohemia name Braunau and Klostergrab. Protestant worshippers complain of closed or destroyed churches; royal officials answer that the Letter of Majesty does not protect every disputed site. The matter is carried from local lordship into the language of crown, estate, and privilege.",
-    "situation": "Ferdinand has been accepted as Bohemian king, and every answer now bears on the future reign. Catholic councillors urge enforcement and the vindication of royal and ecclesiastical rights. Protestant defenders warn that arrests, closures, and royal judges will show that the charter can be reduced by procedure without ever being revoked.",
+    "briefing": "Petitions out of Bohemia named Braunau and Klostergrab. Protestant worshippers complained that their churches there had been closed and pulled down; the royal officials answered that the Letter of Majesty did not shelter every disputed site. What had begun as a quarrel of local lordship was carried now into the high language of crown, estate, and privilege.",
+    "situation": "Ferdinand had by this time been received as king of Bohemia, and every answer bore upon the reign to come. The Catholic councillors pressed for enforcement and the vindication of royal and ecclesiastical right. The Protestant defenders warned that arrests and closures and royal judges would prove that the charter could be narrowed by procedure though it were never once revoked.",
     "historian_note": "Wilson's reading is especially useful here: the Habsburg position was technically legalistic rather than simply lawless, but its political handling was dangerous. That is the central historical tradeoff for this card.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -458,8 +458,8 @@
     "options": [
       {
         "id": "opt_1617_strict_enforcement",
-        "label": "Confirm the strict legal line and support closures, arrests, and royal judges.",
-        "consequence": "Catholic officials and clergy report that the new king will not retreat from enforcement. Bohemian Protestants carry the orders into their assemblies as evidence that law is being used to narrow the charter by which they still claim obedience.",
+        "label": "Confirm the strict legal line; uphold the closures, the arrests, the royal judges.",
+        "consequence": "The Catholic officials and clergy reported that the new king would not draw back from enforcement. The Bohemian Protestants bore the orders into their assemblies as evidence that the law itself was being turned to narrow the charter by which they still professed obedience.",
         "effects": {
           "imperial_authority": 7,
           "confessional_legitimacy": 10,
@@ -478,8 +478,8 @@
       },
       {
         "id": "opt_1617_controlled_clarification",
-        "label": "Suspend disputed-site enforcement and call for controlled legal clarification.",
-        "consequence": "The petitioners can still tell their assemblies that procedure has force. Catholic allies hear hesitation from a prince whose reputation rests on restoring rights they believe have been usurped.",
+        "label": "Suspend enforcement at the disputed sites and call for an ordered clarification in law.",
+        "consequence": "The petitioners could still tell their assemblies that procedure carried force. The Catholic allies heard hesitation in a prince whose whole reputation rested upon restoring the rights they held usurped.",
         "effects": {
           "estate_trust": 13,
           "foreign_intervention_risk": -5,
@@ -504,8 +504,8 @@
       },
       {
         "id": "opt_1617_klesl_moderation",
-        "label": "Allow Klesl and moderates to seek settlement while reserving royal claims.",
-        "consequence": "Envoys and councillors keep a channel open, and neither side must yet confess defeat. Ferdinand's harder supporters see delay; the more radical Bohemian directors gain time to assemble their own answer.",
+        "label": "Let Klesl and the moderates seek a settlement, the royal claims reserved.",
+        "consequence": "Envoys and councillors kept a channel open, and neither side was yet made to confess defeat. Ferdinand's harder friends saw only delay; the more radical of the Bohemian directors gained the time to ready their own answer.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -3,
@@ -537,8 +537,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "May 1618",
     "title": "Windows in Prague",
-    "briefing": "Prague's Protestant estates had spent years treating the Letter of Majesty as a shield for their churches, schools, and political standing. Catholic royal officials narrowed that protection, arrests and closures followed, and a radical group decided to force the crisis into the open.",
-    "situation": "Royal officials have been thrown from the windows of Prague Castle. The rebels frame the act as defense of estate liberties, religious privilege, and the older royal promises recorded in the Letter of Majesty. Your first response will teach the Empire whether this is a local rebellion, a legal dispute, or the start of a reckoning.",
+    "briefing": "The Protestant estates of Prague had for years held the Letter of Majesty as a shield about their churches, their schools, and their place in the kingdom. When the Catholic royal officials narrowed that protection, and arrests and closures followed, a band of the bolder men resolved to force the quarrel into the open.",
+    "situation": "On the three-and-twentieth of May the royal officials were flung from the windows of the Hradschin. The rebels named the deed a defence of estate liberty, of religious privilege, and of the old royal promises set down in the Letter of Majesty. The first answer returned from Vienna would teach the Empire whether this was a local rising, a suit at law, or the opening of a reckoning.",
     "historian_note": "The 1609 Letter of Majesty matters here because it turns Bohemian religious claims into a chartered estate-liberty problem: religion, schools, churches, defenders, and recorded royal protection all sit behind the rebels' language of privilege.",
     "source_refs": [
       "src_primary_augsburg_peace_1555_reference_translation",
@@ -554,8 +554,8 @@
     "options": [
       {
         "id": "opt_legal_commission",
-        "label": "Frame the revolt as a legal breach while reserving chartered Bohemian liberties for review.",
-        "consequence": "The legal line gives cautious estates a reason to stay loyal. Catholic hardliners hear you preserving the very paper they wanted buried.",
+        "label": "Treat the rising as a breach of law, the chartered Bohemian liberties reserved for review.",
+        "consequence": "The legal line gave the cautious estates a reason to hold to their loyalty. The Catholic hardliners heard in it the preserving of the very paper they had wished buried.",
         "effects": {
           "imperial_authority": -2,
           "confessional_legitimacy": -7,
@@ -580,8 +580,8 @@
       },
       {
         "id": "opt_public_punishment",
-        "label": "Declare the rebels traitors and reject their privilege claims as cover for revolt.",
-        "consequence": "Catholic allies applaud the clarity. Protestant and estate observers hear that a recorded royal promise may not protect them once obedience fails.",
+        "label": "Declare the rebels traitors and cast their plea of privilege as a cover for revolt.",
+        "consequence": "The Catholic allies applauded the plainness of it. The Protestant and estate observers heard that a recorded royal promise might not shelter them once obedience had failed.",
         "effects": {
           "imperial_authority": 8,
           "confessional_legitimacy": 10,
@@ -606,8 +606,8 @@
       },
       {
         "id": "opt_offer_conference",
-        "label": "Offer a conference on the Letter of Majesty if the rebels reaffirm Habsburg kingship.",
-        "consequence": "Moderates have a bridge back, but the bridge limits how far victory can later carry Catholic restoration.",
+        "label": "Offer a conference upon the Letter of Majesty, should the rebels reaffirm Habsburg kingship.",
+        "consequence": "The moderates were given a bridge back to obedience — but a bridge that narrowed how far any later victory might carry the Catholic restoration.",
         "effects": {
           "imperial_authority": -8,
           "confessional_legitimacy": -8,
@@ -639,8 +639,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "July 1618",
     "title": "The Cardinal in the Way",
-    "briefing": "Reports from Vienna name Cardinal Klesl as the man still pressing for accommodation. His letters and envoys promise obedience if Prague will lay down arms, but the court hears only delay while the directors gather men and money.",
-    "situation": "Ferdinand's allies demand a clearer hand. Klesl can still speak to moderates, yet every day spent negotiating leaves the revolt in possession of Bohemian offices and presses the Habsburg treasury harder.",
+    "briefing": "Reports from Vienna named Cardinal Klesl as the man yet pressing for accommodation. His letters and his envoys promised obedience if Prague would but lay down its arms; the court, however, heard only delay, while the directors gathered their men and their money.",
+    "situation": "Ferdinand's friends demanded a firmer hand. Klesl could still speak to the moderates, yet every day given to negotiation left the revolt in possession of the Bohemian offices and pressed the harder upon the Habsburg treasury.",
     "historian_note": "Backend note: Wilson treats Klesl's removal as a real inflection, but the peace alternative remains inferred and requires later source checking.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -653,8 +653,8 @@
     "options": [
       {
         "id": "opt_keep_klesl_negotiating",
-        "label": "Keep Klesl negotiating and demand that Prague disarm before any further grace.",
-        "consequence": "The court still has a channel to moderate estates, but Catholic advisers complain that time is being granted to men already in arms.",
+        "label": "Keep Klesl at his negotiation, and demand that Prague disarm before any further grace.",
+        "consequence": "The court kept thereby a channel to the moderate estates, though the Catholic counsellors complained that time was being granted to men already in arms.",
         "effects": {
           "estate_trust": 5,
           "confessional_legitimacy": -4,
@@ -678,8 +678,8 @@
       },
       {
         "id": "opt_remove_klesl_decisively",
-        "label": "Remove Klesl from the center of power and prepare a harder answer.",
-        "consequence": "The chancery moves with fewer scruples. The war chest improves, but Prague sees fewer reasons to expect settlement from Vienna.",
+        "label": "Remove Klesl from the seat of power and make ready a harder answer.",
+        "consequence": "The chancery moved thereafter with fewer scruples, and the war chest mended; but Prague saw fewer reasons to look for settlement out of Vienna.",
         "effects": {
           "imperial_authority": 5,
           "dynastic_security": 4,
@@ -697,8 +697,8 @@
       },
       {
         "id": "opt_sideline_klesl_keep_channel",
-        "label": "Sideline Klesl publicly but use his contacts to keep one door open.",
-        "consequence": "Hardliners hear that Ferdinand is no longer ruled by a cardinal's caution, while Prague receives enough signals to keep bargaining alive.",
+        "label": "Set Klesl aside in public, yet use his contacts to keep one door ajar.",
+        "consequence": "The hardliners heard that Ferdinand was no longer governed by a cardinal's caution, while Prague received signals enough to keep the bargaining alive.",
         "effects": {
           "imperial_authority": 2,
           "estate_trust": 2,
@@ -736,8 +736,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "Late 1618",
     "title": "Terms Carried Between Courts",
-    "briefing": "Klesl's agents keep moving between doubtful nobles, Catholic councillors, and men who still say they fight for privileges rather than against the dynasty.",
-    "situation": "The offers are narrower than Prague wants and slower than the Catholic party will bear. A settlement may still be written, but only if one side accepts less than it has proclaimed.",
+    "briefing": "Klesl's agents went still between the doubtful nobles, the Catholic councillors, and the men who professed to fight for their privileges and not against the dynasty.",
+    "situation": "The offers were narrower than Prague desired, and slower than the Catholic party would endure. A settlement might yet be written, but only if one side would take less than it had proclaimed.",
     "historian_note": "Backend note: this is a Wilson-inferred alternate branch from Klesl's conciliatory role, not a claim that peace would certainly have followed.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -752,8 +752,8 @@
     "options": [
       {
         "id": "opt_accept_narrow_mediation",
-        "label": "Accept a narrow settlement if the directors disarm and preserve royal authority.",
-        "consequence": "Moderates gain words they can carry home, but neither the directors nor the Catholic party receive the victory they promised their friends.",
+        "label": "Accept a narrow settlement, the directors disarmed and the royal authority preserved.",
+        "consequence": "The moderates gained words to carry home; yet neither the directors nor the Catholic party received the victory each had promised its friends.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -5,
@@ -776,8 +776,8 @@
       },
       {
         "id": "opt_let_mediation_fail",
-        "label": "Let the talks fail rather than concede the crown's disputed rights.",
-        "consequence": "The language of negotiation is exhausted. Those who warned that Vienna only meant delay now find easier listeners.",
+        "label": "Suffer the talks to fail rather than concede the crown's disputed rights.",
+        "consequence": "The language of negotiation was spent. Those who had warned that Vienna meant only delay now found the readier listeners.",
         "effects": {
           "imperial_authority": 3,
           "confessional_legitimacy": 3,
@@ -808,8 +808,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "June 1619",
     "title": "The Storm at Vienna",
-    "briefing": "Thurn has crossed the frontier, and Protestant nobles in Lower Austria press into Ferdinand's presence with demands for security before they will stand obedient.",
-    "situation": "The palace waits for cavalry that may or may not arrive in time. If Ferdinand yields under pressure, Prague will hear it; if he refuses, Vienna may see how narrow his obedience has become.",
+    "briefing": "Thurn had crossed the frontier, and the Protestant nobles of Lower Austria pressed into Ferdinand's very presence, demanding security before they would stand obedient.",
+    "situation": "The palace waited upon cavalry that might or might not come in time. Should Ferdinand yield under pressure, Prague would hear of it; should he refuse, Vienna might see how narrow his obedience had become.",
     "historian_note": "Backend note: Wilson supports the actual pattern of firmness followed by selective reassurance; broader alternatives are inferred from the pressure field.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -824,8 +824,8 @@
     "options": [
       {
         "id": "opt_petition_hold_firm",
-        "label": "Hold firm until loyal horsemen enter the city.",
-        "consequence": "The petitioners withdraw without a corporate triumph. The danger passes, and their boldest men stand more exposed than before.",
+        "label": "Stand firm until the loyal horse should enter the city.",
+        "consequence": "The petitioners withdrew without a corporate triumph. The danger passed, and their boldest men stood the more exposed for it.",
         "effects": {
           "dynastic_security": 7,
           "imperial_authority": 5,
@@ -842,8 +842,8 @@
       },
       {
         "id": "opt_petition_individual_privileges",
-        "label": "Confirm individual noble privileges in return for homage.",
-        "consequence": "Moderates receive something they can accept without joining Prague. Corporate unity weakens, though the crown admits it must bargain with anxious estates.",
+        "label": "Confirm the several noble privileges in return for homage.",
+        "consequence": "The moderates received something they could accept without joining Prague. The corporate union weakened, though the crown confessed it must bargain with anxious estates.",
         "effects": {
           "estate_trust": 5,
           "dynastic_security": 4,
@@ -867,7 +867,7 @@
       {
         "id": "opt_petition_broad_concession",
         "label": "Grant a broader corporate guarantee to quiet Lower Austria.",
-        "consequence": "The immediate danger eases, but Prague learns that armed pressure can draw written security from Ferdinand.",
+        "consequence": "The immediate danger eased; but Prague learned that armed pressure could draw written security out of Ferdinand.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -3,
@@ -897,8 +897,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "August 1619",
     "title": "The Crown and the Electors",
-    "briefing": "The Bohemian revolt has survived long enough to become a constitutional challenge. Ferdinand must secure the imperial crown while Prague argues that his Bohemian kingship was conditional, unlawful, or forfeited.",
-    "situation": "Bohemian estates circulate arguments that you were not freely elected, that your promises were conditional, and that Spanish-Habsburg designs threaten their privileges. Their claims draw strength from an older royal settlement: the Letter of Majesty made religious liberty, schools, churches, and estate defenders part of Bohemia's recorded political order.",
+    "briefing": "The Bohemian revolt had endured long enough to grow into a challenge of the constitution. Ferdinand must secure the imperial crown while Prague argued that his Bohemian kingship had been conditional, or unlawful, or forfeit.",
+    "situation": "The Bohemian estates set abroad their reasons: that the king had not been freely elected, that his promises had been conditional, that Spanish-Habsburg designs threatened their privileges. Their claims drew strength from an older royal settlement, for the Letter of Majesty had made religious liberty, schools, churches, and estate defenders a part of Bohemia's recorded political order.",
     "historian_note": "A 1619 Bohemian estates text frames Ferdinand's problem as legal, confessional, and dynastic, not merely military. The 1609 Letter of Majesty explains why the dispute could be presented as defense of recorded liberties rather than simple disobedience. The likely effects of each response still need direct review in Wilson and Asch.",
     "source_refs": [
       "src_public_bohemian_reasons_reject_ferdinand_1619",
@@ -916,7 +916,7 @@
       {
         "id": "opt_prioritize_electors",
         "label": "Court the electors and make the imperial title the first answer to Prague.",
-        "consequence": "The imperial crown steadies your hand. The estates' charter language still circulates, but you now speak from a higher desk.",
+        "consequence": "The imperial crown steadied the royal hand. The estates' charter language circulated still, but the emperor now spoke from a higher desk.",
         "effects": {
           "imperial_authority": 12,
           "estate_trust": 2,
@@ -941,8 +941,8 @@
       },
       {
         "id": "opt_denounce_frederick",
-        "label": "Denounce the estates' reasons as rebellion dressed in charter language.",
-        "consequence": "You refuse to let Prague define the law. Cautious estates hear that old liberties may be judged after obedience, not before it.",
+        "label": "Denounce the estates' reasons as rebellion dressed in the language of charter.",
+        "consequence": "The crown refused to let Prague define the law. The cautious estates heard that old liberties might be judged after obedience, and not before it.",
         "effects": {
           "imperial_authority": 8,
           "confessional_legitimacy": 8,
@@ -967,8 +967,8 @@
       },
       {
         "id": "opt_seek_compromise",
-        "label": "Publish a legal rebuttal and promise a controlled review of Letter-of-Majesty protections.",
-        "consequence": "You answer the estates on their chosen ground. Zealous allies dislike giving rebels the dignity of an argument, and the review may bind your later settlement.",
+        "label": "Publish a rebuttal in law and promise a controlled review of the Letter's protections.",
+        "consequence": "The crown answered the estates upon their chosen ground. The zealous allies misliked granting rebels the dignity of an argument, and the promised review might bind the later settlement.",
         "effects": {
           "imperial_authority": -3,
           "confessional_legitimacy": -7,
@@ -1000,8 +1000,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "August-September 1619",
     "title": "Frankfurt's Oath",
-    "briefing": "Ferdinand has chosen the imperial election as the lever that can turn a dynastic crisis into an imperial-legal crisis. The ceremony gives him authority, but the coronation oath also gives the electors and Estates standards to invoke against him.",
-    "situation": "Frankfurt gives you ceremony, regalia, electors, ambassadors, acclamation, and oath. The same pamphlet that reports the coronation also carries the noise of Bohemian and Austrian crisis: armed pressure, failed Protestant-Catholic agreement, and demands that privileges be secured. The crown can answer Prague, but it can also give Prague and every elector an oath to measure you by.",
+    "briefing": "Ferdinand had chosen the imperial election as the lever by which a dynastic crisis might be turned into a crisis of imperial law. The ceremony lent him authority; yet the coronation oath lent the electors and the Estates a standard to invoke against him.",
+    "situation": "Frankfurt gave ceremony and regalia, electors and ambassadors, acclamation and oath. The same pamphlet that reported the crowning carried also the din of the Bohemian and Austrian crisis — armed pressure, the failure of Protestant and Catholic to agree, the demand that privileges be secured. The crown could answer Prague; it could as easily give Prague, and every elector, an oath by which to measure the new emperor.",
     "historian_note": "The English news pamphlet is useful because it places the coronation beside active crisis reporting and describes the public machinery of legitimacy: elector and ambassador roles, Golden Bull offices, regalia, acclamation, and oaths. It proves contemporary framing and ceremony, not the deeper causal weight of the coronation; that still needs direct comparison with modern scholarship.",
     "source_refs": [
       "src_public_relation_ferdinand_election_coronation_1620",
@@ -1017,8 +1017,8 @@
     "options": [
       {
         "id": "opt_crown_as_mandate",
-        "label": "Use Frankfurt as proof that Prague now defies the lawful emperor.",
-        "consequence": "The crown raises your voice above the Bohemian estates. It also makes every coercive move sound like an imperial precedent, not merely a dynastic quarrel.",
+        "label": "Make Frankfurt the proof that Prague now defies the lawful emperor.",
+        "consequence": "The crown raised the imperial voice above the Bohemian estates. It made, too, every act of coercion sound an imperial precedent and no mere dynastic quarrel.",
         "effects": {
           "imperial_authority": 12,
           "dynastic_security": 6,
@@ -1042,8 +1042,8 @@
       },
       {
         "id": "opt_crown_as_reassurance",
-        "label": "Publish the coronation as a promise of law, consultation, and protected privilege.",
-        "consequence": "Moderate estates gain language for loyalty without surrendering every fear. Catholic allies hear the new emperor tying his own hands before the fight is won.",
+        "label": "Publish the coronation as a promise of law, of consultation, of protected privilege.",
+        "consequence": "The moderate estates gained a language for loyalty without surrendering every fear. The Catholic allies heard the new emperor binding his own hands before the fight was won.",
         "effects": {
           "imperial_authority": 4,
           "estate_trust": 12,
@@ -1069,8 +1069,8 @@
       },
       {
         "id": "opt_keep_ceremony_apart",
-        "label": "Keep the imperial ceremony separate from Bohemia and avoid turning the revolt into an imperial test case.",
-        "consequence": "You reduce the sense that the new crown is aimed straight at Prague. You also leave your opponents more room to argue that the Bohemian dispute stands on its own law.",
+        "label": "Hold the imperial ceremony apart from Bohemia, and make not the revolt an imperial test.",
+        "consequence": "The sense that the new crown was aimed straight at Prague was lessened. So too was left to the adversaries more room to argue that the Bohemian dispute stood upon its own law.",
         "effects": {
           "estate_trust": 5,
           "foreign_intervention_risk": -2,
@@ -1101,8 +1101,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "1619-1620",
     "title": "The Bavarian Bargain",
-    "briefing": "The imperial title has not produced an army. Bohemia, Transylvania, and Frederick's supporters create an immediate force problem, and Maximilian of Bavaria is the Catholic prince most able to solve it quickly.",
-    "situation": "You need an army before Bohemia's revolt hardens into a new order. Maximilian of Bavaria and the Catholic League can provide force, but the Munich Treaty terms would give Bavaria a hand in command, compensation, and any later settlement.",
+    "briefing": "The imperial title had not conjured an army. Bohemia, Transylvania, and Frederick's adherents made a present problem of force, and Maximilian of Bavaria was the Catholic prince most able to answer it quickly.",
+    "situation": "An army was wanted before the Bohemian revolt should harden into a new order. Maximilian of Bavaria and the Catholic League could furnish force; but the terms of the Munich Treaty would give Bavaria a hand in the command, in the compensation, and in any later settlement.",
     "historian_note": "Valeš's legal-history article reads the 1619 Munich Treaty as an emergency bargain: Maximilian receives direction of Catholic defense preparations, Ferdinand accepts compensation obligations, and Article II restricts separate negotiation, peace, or truces with Protestants without Bavarian knowledge and cooperation. The treaty text itself is still an acquisition target, while Ferdinand's 1619 election capitulation adds the constitutional pressure that war, burdens, alliances, and legitimacy must still look lawful.",
     "source_refs": [
       "src_vales_munich_treaty_1619",
@@ -1120,7 +1120,7 @@
       {
         "id": "opt_bavarian_military_assistance",
         "label": "Accept Maximilian's Munich terms for League command and compensation.",
-        "consequence": "Bavarian columns give your cause teeth. Maximilian now has a claim on command, compensation, and any peace table.",
+        "consequence": "The Bavarian columns gave the cause its teeth. Maximilian held thereafter a claim upon the command, the compensation, and any table of peace.",
         "effects": {
           "imperial_authority": 10,
           "dynastic_security": 12,
@@ -1148,8 +1148,8 @@
       },
       {
         "id": "opt_broader_catholic_subscription",
-        "label": "Seek broader elector and Catholic-estate subscription first.",
-        "consequence": "Dependence is spread more widely and looks more constitutional, but Maximilian's army is slower to move and ready money remains scarce.",
+        "label": "Seek first a broader subscription of electors and Catholic estates.",
+        "consequence": "The dependence was spread the wider and wore a more constitutional face; yet Maximilian's army was the slower to move, and ready money remained scarce.",
         "effects": {
           "imperial_authority": 5,
           "dynastic_security": 4,
@@ -1176,8 +1176,8 @@
       },
       {
         "id": "opt_delay_for_imperial_levies",
-        "label": "Refuse separate-peace limits and build an imperial force.",
-        "consequence": "You preserve more imperial freedom, but the Bohemian and Transylvanian emergencies do not wait for a cleaner army.",
+        "label": "Refuse the bonds of separate peace and raise an imperial force instead.",
+        "consequence": "More of the imperial freedom was preserved; but the Bohemian and Transylvanian emergencies would not wait upon a cleaner army.",
         "effects": {
           "imperial_authority": -7,
           "estate_trust": 10,
@@ -1221,22 +1221,22 @@
         "required_memory_tags": [
           "catholic_league_encouraged"
         ],
-        "briefing": "Munich's hand is already strengthened. Since the court treated Catholic association as the necessary answer to Protestant coordination, Maximilian and the League now appear less as petitioners than as the instrument already chosen for rescue.",
-        "situation": "Bohemia, Transylvania, and Frederick's supporters still create an immediate force problem. The price is sharper: Bavarian command, compensation, and a voice in settlement now follow from an earlier policy as well as from present necessity."
+        "briefing": "Munich's hand was already strengthened. The court having treated the Catholic association as the needful answer to Protestant union, Maximilian and the League appeared now less as petitioners than as the instrument already chosen for the rescue.",
+        "situation": "Bohemia, Transylvania, and Frederick's adherents made still a present problem of force. The price was the sharper: Bavarian command, compensation, and a voice in the settlement followed now from an earlier policy as much as from present necessity."
       },
       {
         "required_memory_tags": [
           "leagues_tolerated"
         ],
-        "briefing": "Because the leagues were tolerated as emergency instruments under imperial law, Munich can offer aid in the same guarded language. Maximilian and the Catholic League promise rescue while professing obedience to the public peace.",
-        "situation": "The offer is useful because it looks lawful; it is dangerous because the army that saves Bohemia will also carry claims for command, compensation, and consultation."
+        "briefing": "The leagues having been suffered as emergency instruments under imperial law, Munich could offer its aid in the same guarded language. Maximilian and the Catholic League promised rescue while professing obedience to the public peace.",
+        "situation": "The offer was useful because it wore the face of law; it was dangerous because the army that saved Bohemia would carry also its claims for command, compensation, and consultation."
       },
       {
         "required_memory_tags": [
           "leagues_suppressed"
         ],
-        "briefing": "The earlier condemnation of the leagues now returns as difficulty. Maximilian can still help, but the court must explain why Catholic armed association is unlawful in principle and indispensable in practice.",
-        "situation": "Bohemia requires force before ordinary imperial levies can answer. Accepting Bavarian aid under these conditions risks making necessity stronger than the very law invoked against faction."
+        "briefing": "The earlier condemnation of the leagues returned now as a difficulty. Maximilian might still help, but the court must explain why a Catholic armed association was unlawful in principle and indispensable in practice.",
+        "situation": "Bohemia required force before the ordinary imperial levies could answer. To accept Bavarian aid on these terms was to risk making necessity stronger than the very law that had been invoked against faction."
       }
     ]
   },
@@ -1246,8 +1246,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "1620",
     "title": "Saxony and the Union",
-    "briefing": "Ferdinand cannot afford to let the Bohemian conflict become a unified Protestant cause. Saxony's elector dislikes Calvinist radicalism and values imperial order, but he also needs visible protection for Lutheran rights.",
-    "situation": "John George of Saxony is Lutheran, but he fears disorder and values imperial legality. He may help isolate Frederick if you make this a question of law rather than a Catholic crusade.",
+    "briefing": "Ferdinand could not suffer the Bohemian conflict to become one united Protestant cause. The elector of Saxony misliked Calvinist radicalism and prized imperial order; yet he needed also a visible protection for the Lutheran rights.",
+    "situation": "John George of Saxony was Lutheran, but he feared disorder and valued the legality of the Empire. He might serve to isolate Frederick, were the matter made a question of law rather than a Catholic crusade.",
     "historian_note": "Saxony is modeled as a legalist Protestant power, not as a simple confessional enemy. The election capitulation gives Ferdinand a direct vocabulary for reassurance: religious peace, Landfrieden, estate rights, and due process.",
     "source_refs": [
       "src_burgdorf_wahlkapitulationen",
@@ -1261,8 +1261,8 @@
     "options": [
       {
         "id": "opt_reassure_saxony",
-        "label": "Promise Saxony that the religious peace and estate rights will be respected.",
-        "consequence": "Saxon cooperation becomes easier. Catholic hardliners mutter that the emperor bargains with heresy.",
+        "label": "Promise Saxony that the religious peace and the rights of estates would be respected.",
+        "consequence": "The Saxon cooperation grew the easier. The Catholic hardliners muttered that the emperor bargained with heresy.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -4,
@@ -1287,8 +1287,8 @@
       },
       {
         "id": "opt_pressure_saxony",
-        "label": "Pressure Saxony to prove loyalty before debating legal assurances.",
-        "consequence": "You assert imperial command, but Saxony hears obedience being placed before the law you swore to uphold.",
+        "label": "Press Saxony to prove its loyalty before any debating of assurances in law.",
+        "consequence": "The crown asserted its command; but Saxony heard obedience set before the law the emperor had sworn to uphold.",
         "effects": {
           "imperial_authority": 6,
           "estate_trust": -7,
@@ -1312,8 +1312,8 @@
       },
       {
         "id": "opt_ignore_saxony",
-        "label": "Let Bavaria and Catholic allies carry the matter; Saxony can follow or stand aside.",
-        "consequence": "Catholic unity is cleaner. Protestant reassurance is not, and the electoral-constitutional language that could isolate Frederick goes unused.",
+        "label": "Leave the matter to Bavaria and the Catholic allies; Saxony may follow or stand aside.",
+        "consequence": "The Catholic union was the cleaner for it; the Protestant reassurance was not, and the electoral and constitutional language that might have isolated Frederick went unused.",
         "effects": {
           "confessional_legitimacy": 8,
           "military_dependence": 7,
@@ -1346,8 +1346,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "Autumn 1620",
     "title": "The Road to Prague",
-    "briefing": "The allied armies have forced the revolt backward, but the commanders disagree over the next stroke. Bucquoy looks toward Moravia; Tilly and Maximilian press the road to Prague.",
-    "situation": "Winter approaches. A direct march may make the Bohemian crown fall in one blow, or leave the army before a hard city in bad season.",
+    "briefing": "The allied armies had forced the revolt backward, but the commanders fell out over the next stroke. Bucquoy looked toward Moravia; Tilly and Maximilian pressed the road to Prague.",
+    "situation": "Winter drew on. A direct march might bring the Bohemian crown down at a single blow, or leave the army stranded before a hard city in a bad season.",
     "historian_note": "Backend note: Wilson supports the actual direct march and political collapse; alternate campaign outcomes remain inferred.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -1359,8 +1359,8 @@
     "options": [
       {
         "id": "opt_march_direct_prague",
-        "label": "Follow Tilly and Maximilian toward Prague.",
-        "consequence": "The army moves where court and crown can be broken together. Success will make the field battle a political judgment.",
+        "label": "Follow Tilly and Maximilian upon the road to Prague.",
+        "consequence": "The army moved where court and crown might be broken together. Should it succeed, the battle in the field would stand for a judgment in politics.",
         "effects": {
           "dynastic_security": 8,
           "military_dependence": 4,
@@ -1377,8 +1377,8 @@
       },
       {
         "id": "opt_moravian_approach",
-        "label": "Follow Bucquoy's slower Moravian approach.",
-        "consequence": "The campaign promises firmer ground and fewer winter hazards, but Prague is given more time to gather courage, coin, and allies.",
+        "label": "Follow Bucquoy's slower approach through Moravia.",
+        "consequence": "The campaign promised firmer ground and fewer hazards of winter; but Prague was granted more time to gather courage, coin, and allies.",
         "effects": {
           "military_dependence": -2,
           "devastation": 4,
@@ -1401,8 +1401,8 @@
       },
       {
         "id": "opt_winter_pause",
-        "label": "Pause for winter and consolidate allied positions.",
-        "consequence": "The army is spared a hazardous finish, but victory loses its terror and the confederates keep a court around Frederick.",
+        "label": "Pause for the winter and make the allied positions sure.",
+        "consequence": "The army was spared a perilous finish; but the victory lost its terror, and the confederates kept a court about Frederick.",
         "effects": {
           "fiscal_capacity": -6,
           "devastation": 5,
@@ -1431,8 +1431,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "November 1620",
     "title": "After White Mountain",
-    "briefing": "Bavarian and imperial force has broken the rebel army outside Prague. Frederick has fled, but the victory now has to be translated into law, punishment, property, and obedience.",
-    "situation": "The rebel army has been broken outside Prague. Victory is real, but its meaning is undecided. Punishment, mercy, confiscation, and restoration all point toward different futures.",
+    "briefing": "The Bavarian and imperial force had broken the rebel army before the walls of Prague. Frederick was fled; but the victory had still to be translated into law, into punishment, into property, and into obedience.",
+    "situation": "The rebel army lay broken outside Prague. The victory was real, its meaning yet undecided. Punishment and mercy, confiscation and restoration, each pointed toward a different future.",
     "historian_note": "The card does not assume victory automatically produces stability. It asks what kind of victory Ferdinand makes.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -1446,8 +1446,8 @@
     "options": [
       {
         "id": "opt_exemplary_punishment",
-        "label": "Name leading rebels for exemplary punishment while preserving pardon for lesser estates.",
-        "consequence": "Habsburg command tightens. The lesson travels farther than Prague.",
+        "label": "Name the leading rebels for exemplary punishment, while reserving pardon for the lesser estates.",
+        "consequence": "The Habsburg command tightened its grip. The lesson travelled farther than Prague.",
         "effects": {
           "imperial_authority": 12,
           "confessional_legitimacy": 10,
@@ -1471,8 +1471,8 @@
       },
       {
         "id": "opt_selective_punishment",
-        "label": "Punish leaders but preserve enough law to separate rebels from estates.",
-        "consequence": "Your settlement is severe but legible. It leaves less fuel for moderates to panic.",
+        "label": "Punish the leaders, yet keep law enough to part the rebels from the estates.",
+        "consequence": "The settlement was severe but legible. It left the less fuel for the moderates' panic.",
         "effects": {
           "imperial_authority": 7,
           "confessional_legitimacy": 4,
@@ -1497,8 +1497,8 @@
       },
       {
         "id": "opt_amnesty_for_oaths",
-        "label": "Offer broad amnesty to estates that swear renewed obedience.",
-        "consequence": "Fear recedes, but Catholic allies see a chance for restoration slipping away.",
+        "label": "Offer broad amnesty to the estates that would swear renewed obedience.",
+        "consequence": "The fear receded; but the Catholic allies saw a chance of restoration slipping from their hands.",
         "effects": {
           "estate_trust": 14,
           "foreign_intervention_risk": -5,
@@ -1529,8 +1529,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "May-June 1621",
     "title": "The Blood Court",
-    "briefing": "The Prague court has named traitors and delivered death sentences. Petitions and advisers reach Ferdinand before the warrants leave Vienna.",
-    "situation": "The revolt may be taught by spectacle, or punished by property, exile, and oath. The square in Prague waits for the form of obedience the emperor will command.",
+    "briefing": "The court at Prague had named the traitors and pronounced its sentences of death. Petitions and counsel reached Ferdinand before ever the warrants left Vienna.",
+    "situation": "The revolt might be taught by spectacle, or punished by property, exile, and oath. The square at Prague waited upon the form of obedience the emperor would command.",
     "historian_note": "Backend note: Wilson explicitly calls the executions unnecessary and a mistake, making this a high-confidence alternate branch.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -1545,8 +1545,8 @@
     "options": [
       {
         "id": "opt_sign_blood_warrants",
-        "label": "Sign the exemplary death warrants.",
-        "consequence": "The punishment is made visible before Prague. Fear enters the settlement, and exile memory hardens around the scaffold.",
+        "label": "Sign the exemplary warrants of death.",
+        "consequence": "The punishment was made visible before Prague. Fear entered into the settlement, and the memory of exile hardened about the scaffold.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 4,
@@ -1563,8 +1563,8 @@
       },
       {
         "id": "opt_commute_most_sentences",
-        "label": "Commute most sentences and reserve death for the most prominent cases.",
-        "consequence": "The court still marks treason, but Prague sees that obedience need not end on the scaffold for every condemned man.",
+        "label": "Commute the most of the sentences, reserving death for the most prominent.",
+        "consequence": "The court marked treason still, yet Prague saw that obedience need not end upon the scaffold for every condemned man.",
         "effects": {
           "imperial_authority": 3,
           "estate_trust": 4,
@@ -1587,8 +1587,8 @@
       },
       {
         "id": "opt_punish_without_executions",
-        "label": "Use humiliation, exile, and confiscation instead of executions.",
-        "consequence": "Lives are spared while names and lands are struck. Hardliners call it weakness, but fewer households receive martyrs.",
+        "label": "Use humiliation, exile, and confiscation in the place of execution.",
+        "consequence": "Lives were spared while names and lands were struck. The hardliners called it weakness; but fewer households were left a martyr.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -5,
@@ -1617,8 +1617,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "1621",
     "title": "Lands for Loyalty",
-    "briefing": "The crown has defeated the revolt, but it still owes soldiers, allies, and loyal nobles. Rebel property offers money and reward, while every confiscation teaches the defeated what Habsburg victory means.",
-    "situation": "Confiscated rebel property can pay debts, reward loyalists, and remake Bohemia's ruling class. It can also convince every estate that defeat means social death.",
+    "briefing": "The crown had subdued the revolt, yet it owed still its soldiers, its allies, and its loyal nobles. The property of the rebels offered money and reward together; and every confiscation taught the defeated what a Habsburg victory might mean.",
+    "situation": "The confiscated lands could discharge debts, reward the loyal, and remake the ruling class of Bohemia. They could as readily persuade every estate that defeat was a kind of social death.",
     "historian_note": "Confiscation is modeled as fiscal policy, social transformation, and a fear signal at once.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -1631,8 +1631,8 @@
     "options": [
       {
         "id": "opt_large_confiscations",
-        "label": "Use large confiscations to reward loyal Catholics and fund the settlement.",
-        "consequence": "Money and loyalty flow through confiscated land. So does terror of imperial victory.",
+        "label": "Make large confiscations to reward the loyal Catholics and fund the settlement.",
+        "consequence": "Money and loyalty flowed through the confiscated land. So did the terror of the imperial victory.",
         "effects": {
           "fiscal_capacity": 10,
           "confessional_legitimacy": 10,
@@ -1656,8 +1656,8 @@
       },
       {
         "id": "opt_limited_confiscations",
-        "label": "Confiscate selectively and keep a public legal record of each case.",
-        "consequence": "The settlement pays less quickly, but it looks less like appetite wearing a crown.",
+        "label": "Confiscate with selection, and keep a public record in law of every case.",
+        "consequence": "The settlement paid the slower for it, but it wore less the look of appetite crowned.",
         "effects": {
           "fiscal_capacity": 4,
           "confessional_legitimacy": 4,
@@ -1681,7 +1681,7 @@
       {
         "id": "opt_commute_to_fines",
         "label": "Commute many confiscations to fines and renewed oaths.",
-        "consequence": "You collect less and transform less, but you leave more people with something to lose by rebelling again.",
+        "consequence": "Less was gathered and less transformed; but the more men were left with something to lose by rebelling anew.",
         "effects": {
           "fiscal_capacity": -4,
           "estate_trust": 10,
@@ -1710,8 +1710,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "1621",
     "title": "The Spanish Road",
-    "briefing": "The Palatine question pulls the war toward the Rhine, where Spanish Habsburg interests and the Dutch war matter. Ferdinand's family can help, but their help makes the imperial crisis look European.",
-    "situation": "Spanish Habsburg interests align with yours against Frederick, but their Rhine concerns are tied to the Dutch war. Help from Madrid can make the Palatinate a European hinge.",
+    "briefing": "The Palatine question drew the war toward the Rhine, where the interests of Spanish Habsburg and the Dutch war lay close. The emperor's kin could lend their aid, but their aid made the imperial crisis look European.",
+    "situation": "The Spanish Habsburg interest stood with the emperor's against Frederick, yet its Rhenish cares were bound up with the Dutch war. Help out of Madrid might make the Palatinate a hinge of Europe.",
     "historian_note": "The card abstracts Spanish Habsburg strategic interest without pretending the Empire and Spain had identical goals. Ferdinand's capitulation makes foreign alliances and foreign troops a constitutional sensitivity, not merely a diplomatic preference.",
     "source_refs": [
       "src_burgdorf_wahlkapitulationen",
@@ -1727,7 +1727,7 @@
       {
         "id": "opt_coordinate_with_spain",
         "label": "Coordinate closely with Spain in the Palatinate and along the Rhine.",
-        "consequence": "Dynastic power gathers. So do the anxieties of every power watching the Rhine.",
+        "consequence": "The dynastic power gathered. So did the anxieties of every state that watched the Rhine.",
         "effects": {
           "dynastic_security": 10,
           "fiscal_capacity": 5,
@@ -1751,8 +1751,8 @@
       },
       {
         "id": "opt_keep_spanish_distance",
-        "label": "Accept Spanish help quietly but keep imperial policy visibly separate.",
-        "consequence": "You gain some help without making the Empire look like Madrid's instrument.",
+        "label": "Take the Spanish help quietly, yet keep imperial policy visibly apart.",
+        "consequence": "Some help was gained without making the Empire look the instrument of Madrid.",
         "effects": {
           "dynastic_security": 5,
           "fiscal_capacity": 2,
@@ -1777,8 +1777,8 @@
       },
       {
         "id": "opt_decline_spanish_role",
-        "label": "Keep Spain at arm's length and frame the matter as purely imperial.",
-        "consequence": "The legal story is cleaner. The practical resources are thinner.",
+        "label": "Hold Spain at arm's length and frame the matter as purely imperial.",
+        "consequence": "The story in law was the cleaner; the resources in fact were the thinner.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -6,
@@ -1807,8 +1807,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "1622",
     "title": "Who Pays the League?",
-    "briefing": "Victory has not ended the bills. The League, imperial officers, creditors, and occupied territories all press on the same fragile fiscal system.",
-    "situation": "Armies do not live on legitimacy. The Catholic League expects support, officers expect pay, and territories under contribution feel the war in barns and town halls.",
+    "briefing": "The victory had not ended the reckonings. The League, the imperial officers, the creditors, and the occupied territories all pressed upon the same frail system of finance.",
+    "situation": "Armies do not live upon legitimacy. The Catholic League looked for support, the officers for pay, and the territories under contribution felt the war in their barns and town halls.",
     "historian_note": "This card makes finance a central political constraint rather than a background number.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -1823,8 +1823,8 @@
     "options": [
       {
         "id": "opt_contribution_system",
-        "label": "Authorize heavier contributions from occupied and loyal territories alike.",
-        "consequence": "The army stays fed. The countryside learns that loyalty is not immunity.",
+        "label": "Authorize heavier contributions from occupied and loyal territory alike.",
+        "consequence": "The army was kept fed. The countryside learned that loyalty was no immunity.",
         "effects": {
           "imperial_authority": 8,
           "fiscal_capacity": 5,
@@ -1847,8 +1847,8 @@
       },
       {
         "id": "opt_court_borrowing",
-        "label": "Borrow against future confiscations and dynastic credit.",
-        "consequence": "You spare some immediate suffering, but the court's future narrows around debt.",
+        "label": "Borrow against future confiscations and the credit of the dynasty.",
+        "consequence": "Some present suffering was spared; but the court's future narrowed about its debt.",
         "effects": {
           "fiscal_capacity": -6,
           "devastation": 2,
@@ -1871,8 +1871,8 @@
       },
       {
         "id": "opt_reduce_campaign_scope",
-        "label": "Limit campaign aims until finance catches up with ambition.",
-        "consequence": "The war breathes. Your allies ask why they fought to stop short.",
+        "label": "Limit the aims of the campaign until finance should catch the ambition.",
+        "consequence": "The war drew breath. The allies asked why they had fought to stop short.",
         "effects": {
           "devastation": -6,
           "fiscal_capacity": 5,
@@ -1903,8 +1903,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "January 1621",
     "title": "The Ban of Frederick",
-    "briefing": "White Mountain has made Frederick vulnerable, but legal punishment of an elector is not ordinary discipline. Ferdinand must make the ban look like lawful imperial defense rather than raw Habsburg revenge.",
-    "situation": "Frederick has fled, but not vanished. His claim still gathers money, men, and sympathy. Your chancery can name him an outlaw of the Empire and command every subject, estate, officer, and vassal to deny him aid.",
+    "briefing": "White Mountain had made Frederick vulnerable; but the legal punishment of an elector was no ordinary discipline. Ferdinand must make the ban appear a lawful defence of the Empire rather than naked Habsburg revenge.",
+    "situation": "Frederick was fled, but not vanished, and his claim gathered still its money, its men, its sympathy. The chancery might name him an outlaw of the Empire and command every subject, estate, officer, and vassal to deny him aid.",
     "historian_note": "This card is grounded in Ferdinand's 22 January 1621 imperial-ban declaration, read against the 1619 capitulation's due-process promise. The decree says Frederick had incurred the Landfrieden penalties ipso facto, yet Ferdinand still issues a confirming declaration; that is exactly where legal force and process anxiety meet. The documents prove Ferdinand's legal framing and constitutional constraint, not by themselves how every estate interpreted the ban.",
     "source_refs": [
       "src_public_reichsacht_frederick_1621",
@@ -1919,8 +1919,8 @@
     "options": [
       {
         "id": "opt_issue_upper_ban",
-        "label": "Declare Frederick under the imperial and upper ban.",
-        "consequence": "Your victory gains legal teeth. But every estate now studies whether cause, hearing, and process can bend under pressure.",
+        "label": "Declare Frederick under the imperial and the upper ban.",
+        "consequence": "The victory gained its teeth in law. Yet every estate now studied whether cause, hearing, and process might bend under pressure.",
         "effects": {
           "imperial_authority": 12,
           "dynastic_security": 9,
@@ -1938,8 +1938,8 @@
       },
       {
         "id": "opt_conditional_pardon",
-        "label": "Offer pardon if Frederick renounces Bohemia and disarms.",
-        "consequence": "Moderates see an exit from the crisis. Catholic allies see a rebel king being given one more door.",
+        "label": "Offer pardon, should Frederick renounce Bohemia and disarm.",
+        "consequence": "The moderates saw an exit from the crisis; the Catholic allies saw a rebel king given one more door.",
         "effects": {
           "imperial_authority": -5,
           "confessional_legitimacy": -6,
@@ -1963,8 +1963,8 @@
       },
       {
         "id": "opt_narrow_ban_reassurance",
-        "label": "Outlaw Frederick, but publicly reassure neutral princes and Palatine subjects.",
-        "consequence": "The decree isolates one man instead of threatening every estate. This restraint will need allies willing to obey the legal boundary.",
+        "label": "Outlaw Frederick, yet reassure in public the neutral princes and the Palatine subjects.",
+        "consequence": "The decree isolated one man rather than threaten every estate. Such restraint would want allies willing to obey the legal boundary.",
         "effects": {
           "imperial_authority": 7,
           "dynastic_security": 6,
@@ -2007,8 +2007,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "1622-1623",
     "title": "The Paladins Remain in the Field",
-    "briefing": "Heidelberg and Mannheim have fallen, yet the Palatine cause has not laid down its arms. Mansfeld and Christian of Brunswick still carry war through the Empire, while English and Spanish envoys look for terms they can call peace.",
-    "situation": "Ferdinand may punish Frederick, bargain over restoration, or separate lesser supporters from the elector's ruin. Every course touches Maximilian's expected reward.",
+    "briefing": "Heidelberg and Mannheim were fallen, yet the Palatine cause had not laid down its arms. Mansfeld and Christian of Brunswick carried war still through the Empire, while the English and Spanish envoys sought after terms they might call a peace.",
+    "situation": "Ferdinand might punish Frederick, or bargain over restoration, or part the lesser supporters from the elector's ruin. Every course touched upon Maximilian's expected reward.",
     "historian_note": "Backend note: replaces the duplicate 1622 Frederick-ban card with Wilson's Regensburg and Palatine settlement problem.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -2021,8 +2021,8 @@
     "options": [
       {
         "id": "opt_palatine_conditional_restoration",
-        "label": "Offer conditional restoration if Frederick renounces Bohemia and his commanders disband.",
-        "consequence": "The Palatine grievance is given a road back into law, but Maximilian hears that victory may not bring the full price promised at Munich.",
+        "label": "Offer conditional restoration, should Frederick renounce Bohemia and his commanders disband.",
+        "consequence": "The Palatine grievance was given a road back into law; but Maximilian heard that victory might not bring the full price promised at Munich.",
         "effects": {
           "estate_trust": 6,
           "foreign_intervention_risk": -6,
@@ -2045,8 +2045,8 @@
       },
       {
         "id": "opt_palatine_keep_ban",
-        "label": "Keep the ban in force and pursue military settlement.",
-        "consequence": "No prince mistakes Ferdinand's victory for weakness, but the Palatine name remains useful to every foreign patron seeking an imperial grievance.",
+        "label": "Keep the ban in force and pursue a settlement by arms.",
+        "consequence": "No prince mistook Ferdinand's victory for weakness; but the Palatine name remained useful to every foreign patron in want of an imperial grievance.",
         "effects": {
           "imperial_authority": 5,
           "dynastic_security": 4,
@@ -2063,8 +2063,8 @@
       },
       {
         "id": "opt_palatine_separate_amnesty",
-        "label": "Separate Frederick's punishment from amnesty for lesser Palatine supporters.",
-        "consequence": "The elector remains marked, but lesser men are offered a way home. The exile network loses some breadth without satisfying Frederick's closest allies.",
+        "label": "Part Frederick's punishment from amnesty for the lesser Palatine supporters.",
+        "consequence": "The elector remained marked, while the lesser men were offered a way home. The network of exiles lost some of its breadth without contenting Frederick's nearest allies.",
         "effects": {
           "estate_trust": 5,
           "foreign_intervention_risk": -2,
@@ -2087,8 +2087,8 @@
       },
       {
         "id": "opt_palatine_spanish_bavarian_pressure",
-        "label": "Use Spanish and Bavarian pressure to force a settlement favorable to the Habsburgs.",
-        "consequence": "Allied force drives the settlement forward, but the Empire sees that Palatine law now moves in the shadow of Madrid and Munich.",
+        "label": "Use the pressure of Spain and Bavaria to force a settlement favourable to the Habsburgs.",
+        "consequence": "Allied force drove the settlement forward; but the Empire saw that Palatine law now moved in the shadow of Madrid and Munich.",
         "effects": {
           "military_dependence": 6,
           "dynastic_security": 4,
@@ -2119,8 +2119,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "1623",
     "title": "Maximilian's Price",
-    "briefing": "Bavaria helped save Ferdinand when his own resources were thin. The earlier bargain now comes due in the Palatinate, where rewarding Maximilian means altering the electoral balance of the Empire.",
-    "situation": "Maximilian did not save your cause as an act of poetry. The secret promise behind the Bavarian bargain now presses forward: Palatine lands and Frederick's electoral dignity can reward Bavaria, punish rebellion, and remake the balance among electors.",
+    "briefing": "Bavaria had helped to save Ferdinand when his own resources ran thin. The earlier bargain now fell due in the Palatinate, where to reward Maximilian was to alter the electoral balance of the Empire.",
+    "situation": "Maximilian had not saved the cause for poetry's sake. The secret promise behind the Bavarian bargain now pressed forward: the Palatine lands and Frederick's electoral dignity might reward Bavaria, punish rebellion, and remake the balance among the electors.",
     "historian_note": "Valeš connects the 1623 settlement to an earlier secret oral promise attached to the 1619 Munich Treaty: Ferdinand offered Maximilian the Palatine electoral dignity and conquered Palatine territories, while knowing the promise exceeded his legal competence and would alarm German princes. The transfer option follows the historical direction; alternatives are plausible game abstractions, not asserted certainties.",
     "source_refs": [
       "src_vales_munich_treaty_1619",
@@ -2139,8 +2139,8 @@
     "options": [
       {
         "id": "opt_transfer_to_bavaria",
-        "label": "Fulfill the promise and transfer the electoral dignity to Maximilian.",
-        "consequence": "Bavaria is rewarded and Catholic victory is crowned. The electors see that an emergency bargain can become a new constitutional fact.",
+        "label": "Fulfil the promise and transfer the electoral dignity to Maximilian.",
+        "consequence": "Bavaria was rewarded, and the Catholic victory crowned. The electors saw that a bargain of emergency might become a new fact of the constitution.",
         "effects": {
           "confessional_legitimacy": 12,
           "imperial_authority": 8,
@@ -2161,8 +2161,8 @@
       },
       {
         "id": "opt_delay_transfer",
-        "label": "Delay the dignity while granting Bavaria security and revenues.",
-        "consequence": "The constitutional shock is softened, but Maximilian's patience becomes another debt with interest.",
+        "label": "Delay the dignity, granting Bavaria security and revenues in its stead.",
+        "consequence": "The constitutional shock was softened; but Maximilian's patience became another debt, and one bearing interest.",
         "effects": {
           "estate_trust": 5,
           "foreign_intervention_risk": -2,
@@ -2188,8 +2188,8 @@
       },
       {
         "id": "opt_preserve_electoral_balance",
-        "label": "Punish Frederick but preserve the electoral balance for now.",
-        "consequence": "Electors are reassured by restraint, and Bavaria is not. A disappointed ally is still an armed ally.",
+        "label": "Punish Frederick, yet preserve the electoral balance for the present.",
+        "consequence": "The electors were reassured by the restraint, and Bavaria was not. A disappointed ally was an armed ally still.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -5,
@@ -2232,8 +2232,8 @@
           "palatine_conditional_settlement"
         ],
         "title": "Maximilian's Claim",
-        "briefing": "Regensburg has not ended Bavaria's claim. Maximilian's soldiers and credit helped recover the emperor's position, and Munich's promise still stands over every Palatine compromise.",
-        "situation": "A softer Palatine settlement leaves Ferdinand with a different danger: if Frederick is not utterly stripped, Bavaria must still be satisfied without making the electoral college look disposable."
+        "briefing": "Regensburg had not ended Bavaria's claim. Maximilian's soldiers and credit had helped recover the emperor's position, and Munich's promise stood still over every Palatine compromise.",
+        "situation": "A softer Palatine settlement left Ferdinand a different danger: if Frederick were not utterly stripped, Bavaria must yet be satisfied without making the electoral college look a thing disposable."
       }
     ],
     "context_links": [
@@ -2265,8 +2265,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "Late 1623",
     "title": "A Victory That Will Not End",
-    "briefing": "By 1623, Ferdinand has survived the opening crisis and punished the Bohemian-Palatine challenge. Yet the settlement leaves debts, displaced elites, anxious princes, and allies who expect rewards.",
-    "situation": "Bohemia is subdued and Frederick is broken, yet the Empire is not calm. Every settlement creates a constituency: rewarded allies, frightened estates, ruined towns, unpaid soldiers, and watching foreign powers.",
+    "briefing": "By the year 1623 Ferdinand had outlived the opening crisis and chastised the Bohemian and Palatine challenge. Yet the settlement left behind it debts, displaced elites, anxious princes, and allies who looked for their rewards.",
+    "situation": "Bohemia was subdued and Frederick broken, and still the Empire was not calm. Every settlement made its own constituency: the rewarded ally, the frightened estate, the ruined town, the unpaid soldier, and the foreign power that watched.",
     "historian_note": "This closing MVP card asks whether the player has made consolidation or escalation more likely.",
     "source_refs": [
       "src_wilson_europes_tragedy",
@@ -2281,8 +2281,8 @@
     "options": [
       {
         "id": "opt_call_imperial_settlement",
-        "label": "Call for a formal imperial settlement to lock in obedience and reassure moderates.",
-        "consequence": "You try to turn victory back into law. It is slower than command but less combustible.",
+        "label": "Call a formal imperial settlement to fix obedience and reassure the moderates.",
+        "consequence": "The crown sought to turn victory back into law. It was slower than command, and less apt to take fire.",
         "effects": {
           "imperial_authority": 4,
           "estate_trust": 10,
@@ -2305,8 +2305,8 @@
       },
       {
         "id": "opt_continue_pressure",
-        "label": "Keep pressure on remaining opposition until no prince doubts imperial reach.",
-        "consequence": "Authority looks grand from Vienna. From Protestant courts, it looks like a forecast.",
+        "label": "Keep the pressure upon the remaining opposition until no prince should doubt the imperial reach.",
+        "consequence": "From Vienna the authority looked grand. From the Protestant courts it looked a forecast.",
         "effects": {
           "imperial_authority": 10,
           "confessional_legitimacy": 6,
@@ -2331,8 +2331,8 @@
       },
       {
         "id": "opt_demobilize_and_rebuild",
-        "label": "Demobilize what you can and spend political capital on fiscal repair.",
-        "consequence": "The war machine cools, but allies and officers who profited from motion resist stillness.",
+        "label": "Demobilize what may be spared, and spend the crown's credit upon fiscal repair.",
+        "consequence": "The engine of war cooled; but the allies and officers who had profited by its motion resisted the stillness.",
         "effects": {
           "fiscal_capacity": 10,
           "devastation": -8,
@@ -2363,8 +2363,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1625",
     "title": "Lower Saxony Will Not Stay Quiet",
-    "briefing": "Letters from the north report assemblies claiming neutrality while Danish agents speak of protection, bishoprics, and the defence of endangered estates.",
-    "situation": "If neutrality is accepted without condition, an imperial circle may decide when imperial law binds it. If it is refused, Denmark may enter not as a distant king but as armed guardian of a threatened frontier.",
+    "briefing": "Letters out of the north reported assemblies that claimed a neutrality, while the Danish agents spoke of protection, of bishoprics, and of the defence of endangered estates.",
+    "situation": "Were the neutrality accepted without condition, an imperial circle might come to decide for itself when imperial law should bind it. Were it refused, Denmark might enter not as a distant king but as the armed guardian of a threatened frontier.",
     "historian_note": "Wilson frames the Danish-Lower Saxon phase around neutrality, bishoprics, circle politics, and imperial authority.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -2386,8 +2386,8 @@
     "options": [
       {
         "id": "opt_refuse_lower_saxon_neutrality",
-        "label": "Refuse a neutrality that shelters Denmark's cause.",
-        "consequence": "Imperial orders speak of common liberty and obedience. Northern estates hear command; Denmark hears invitation.",
+        "label": "Refuse a neutrality that would shelter the Danish cause.",
+        "consequence": "The imperial orders spoke of common liberty and obedience. The northern estates heard command; Denmark heard invitation.",
         "effects": {
           "imperial_authority": 8,
           "foreign_intervention_risk": 8,
@@ -2404,8 +2404,8 @@
       },
       {
         "id": "opt_recognize_temporary_neutrality",
-        "label": "Recognize a temporary Kreis neutrality under imperial review.",
-        "consequence": "The north breathes for a season, but Catholic petitioners ask whether imperial law now waits upon every circle's convenience.",
+        "label": "Recognize a temporary neutrality of the circle, under imperial review.",
+        "consequence": "The north drew breath for a season; but the Catholic petitioners asked whether imperial law now waited upon every circle's convenience.",
         "effects": {
           "estate_trust": 8,
           "foreign_intervention_risk": -5,
@@ -2425,8 +2425,8 @@
       },
       {
         "id": "opt_force_lower_saxony_by_league",
-        "label": "Let League pressure compel the wavering estates.",
-        "consequence": "The language of law arrives with soldiers behind it. The warning is clear, and so is the danger.",
+        "label": "Let the pressure of the League compel the wavering estates.",
+        "consequence": "The language of law arrived with soldiers at its back. The warning was plain, and so was the danger.",
         "effects": {
           "military_dependence": 8,
           "foreign_intervention_risk": 10,
@@ -2453,8 +2453,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1625",
     "title": "A Field Army of Ferdinand's Own",
-    "briefing": "A proposal reaches court promising men faster than the treasury can pay them. Credit, commissions, contributions, and the commander's name will do what ordinary revenue cannot.",
-    "situation": "The emperor can remain dependent on Bavaria and the League, or he can accept an army whose purse lies in the lands it occupies and whose officers look upward through Wallenstein.",
+    "briefing": "A proposal reached the court that promised men faster than the treasury could pay them. Credit, commissions, contributions, and the commander's own name would do what ordinary revenue could not.",
+    "situation": "The emperor might remain dependent upon Bavaria and the League, or accept an army whose purse lay in the lands it occupied and whose officers looked upward through Wallenstein.",
     "historian_note": "Wilson treats Wallenstein's system as both capacity solution and autonomous military-fiscal network.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -2491,8 +2491,8 @@
     "options": [
       {
         "id": "opt_contract_wallenstein_army",
-        "label": "Accept Wallenstein's contribution army.",
-        "consequence": "Recruiting begins with astonishing speed. So do complaints from the lands asked to feed it.",
+        "label": "Accept Wallenstein's army of contribution.",
+        "consequence": "The recruiting began with an astonishing speed. So did the complaints from the lands required to feed it.",
         "effects": {
           "fiscal_capacity": 8,
           "military_dependence": 15,
@@ -2510,7 +2510,7 @@
       {
         "id": "opt_limit_wallenstein_powers",
         "label": "Authorize a smaller army under tighter warrants.",
-        "consequence": "The court keeps the commander on a shorter leash, and receives a smaller instrument in return.",
+        "consequence": "The court kept the commander upon a shorter leash, and received a smaller instrument in return.",
         "effects": {
           "military_dependence": 5,
           "devastation": 3,
@@ -2530,8 +2530,8 @@
       },
       {
         "id": "opt_remain_league_dependent",
-        "label": "Remain with League and Spanish support rather than build a new system.",
-        "consequence": "Maximilian's value rises again. The emperor avoids one dangerous servant by leaning harder on another ally.",
+        "label": "Hold to League and Spanish support rather than build a new system.",
+        "consequence": "Maximilian's value rose again. The emperor avoided one dangerous servant by leaning the harder upon another ally.",
         "effects": {
           "military_dependence": 10,
           "fiscal_capacity": -4,
@@ -2558,8 +2558,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1627",
     "title": "Frederick Nearly Bends",
-    "briefing": "After Danish reverses, word arrives that Frederick will yield more than before: Bohemia renounced, Maximilian accepted for life, submission offered by proxy.",
-    "situation": "The remaining question is not whether Frederick loses face, but how much face the emperor requires him to lose in public before peace can be made.",
+    "briefing": "After the Danish reverses, word arrived that Frederick would yield more than before: Bohemia renounced, Maximilian accepted for his life, submission offered by proxy.",
+    "situation": "The remaining question was not whether Frederick should lose face, but how much face the emperor would require him to lose in public before a peace might be made.",
     "historian_note": "Wilson notes that agreement was close, but Ferdinand's demand for personal submission helped close the opening.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -2577,8 +2577,8 @@
     "options": [
       {
         "id": "opt_require_frederick_personal_submission",
-        "label": "Require Frederick's personal submission to imperial authority.",
-        "consequence": "The dignity of punishment is preserved. The settlement slips away on the form of obedience.",
+        "label": "Require Frederick's submission in person to the imperial authority.",
+        "consequence": "The dignity of punishment was preserved. The settlement slipped away upon the form of obedience.",
         "effects": {
           "imperial_authority": 5,
           "foreign_intervention_risk": 6,
@@ -2594,8 +2594,8 @@
       },
       {
         "id": "opt_accept_proxy_submission",
-        "label": "Accept proxy submission and secure the renunciations.",
-        "consequence": "A humiliating journey is spared. Bavaria asks what certainty remains when rebellion can be softened by parchment.",
+        "label": "Accept submission by proxy and secure the renunciations.",
+        "consequence": "A humiliating journey was spared. Bavaria asked what certainty remained, when rebellion might be softened by parchment.",
         "effects": {
           "foreign_intervention_risk": -8,
           "estate_trust": 6,
@@ -2615,8 +2615,8 @@
       },
       {
         "id": "opt_restore_palatine_security_terms",
-        "label": "Trade limited restoration for security and reparations.",
-        "consequence": "The Palatine cause is divided from the mercenary war, but every clause must pass through Bavarian suspicion.",
+        "label": "Trade a limited restoration for security and reparations.",
+        "consequence": "The Palatine cause was parted from the mercenary war; but every clause had to pass through Bavarian suspicion.",
         "effects": {
           "fiscal_capacity": 3,
           "estate_trust": 4,
@@ -2642,8 +2642,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1627-1628",
     "title": "Mandates in the Hereditary Lands",
-    "briefing": "Reports from Bohemia, Moravia, and Austria list pastors removed, churches inspected, offices watched, and noble houses pressed toward conformity.",
-    "situation": "Catholic loyalists ask that victory now be made visible in worship, schooling, marriage, office, and landholding. Other advisers warn that sudden uniformity will send property, labor, and hatred abroad with the exiles.",
+    "briefing": "Reports out of Bohemia, Moravia, and Austria told of pastors removed, churches inspected, offices watched, and noble houses pressed toward conformity.",
+    "situation": "The Catholic loyalists asked that the victory be made visible now in worship, in schooling, in marriage, in office, and in the holding of land. Other counsellors warned that a sudden uniformity would send property, labour, and hatred abroad together with the exiles.",
     "historian_note": "This card previews later overreach dynamics without jumping ahead to the Edict of Restitution.",
     "source_refs": [
       "src_primary_augsburg_peace_1555_reference_translation",
@@ -2658,8 +2658,8 @@
     "options": [
       {
         "id": "opt_push_restoration",
-        "label": "Encourage visible Catholic restoration in recovered lands.",
-        "consequence": "Catholic confidence surges. Protestant alarm learns to organize itself.",
+        "label": "Encourage a visible Catholic restoration in the recovered lands.",
+        "consequence": "The Catholic confidence surged. The Protestant alarm learned to organize itself.",
         "effects": {
           "confessional_legitimacy": 13,
           "imperial_authority": 5,
@@ -2682,8 +2682,8 @@
       },
       {
         "id": "opt_sequence_restoration",
-        "label": "Sequence restoration slowly, after oaths and fiscal order.",
-        "consequence": "The settlement advances, but not fast enough for the most zealous allies.",
+        "label": "Sequence the restoration slowly, after oaths and fiscal order.",
+        "consequence": "The settlement advanced, but not fast enough for the most zealous of the allies.",
         "effects": {
           "confessional_legitimacy": 4,
           "estate_trust": 3,
@@ -2706,8 +2706,8 @@
       },
       {
         "id": "opt_suspend_restoration",
-        "label": "Suspend major restoration measures to calm Lutheran and city opinion.",
-        "consequence": "Moderates breathe easier. Catholic allies wonder what victory was for.",
+        "label": "Suspend the major measures of restoration to calm Lutheran and city opinion.",
+        "consequence": "The moderates breathed the easier. The Catholic allies wondered what the victory had been for.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -6,
@@ -2737,8 +2737,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1627-1628",
     "title": "Mecklenburg as Payment",
-    "briefing": "The commander who raised the army now seeks a reward large enough to satisfy credit, honor, and arrears. Mecklenburg lies under imperial displeasure.",
-    "situation": "To pay with land is easier than paying with money. It also tells every prince that victory may move old houses out and new servants in.",
+    "briefing": "The commander who had raised the army now sought a reward large enough to answer credit, honour, and arrears together. Mecklenburg lay under the imperial displeasure.",
+    "situation": "To pay with land was easier than to pay with money. It told also every prince that victory might move the old houses out and set new servants in.",
     "historian_note": "Wilson presents Wallenstein's elevation in Mecklenburg as a key overreach signal.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -2760,7 +2760,7 @@
       {
         "id": "opt_grant_mecklenburg_wallenstein",
         "label": "Grant Mecklenburg to Wallenstein.",
-        "consequence": "The army's maker is paid in princely coin. The Empire studies the precedent with fear.",
+        "consequence": "The army's maker was paid in princely coin. The Empire studied the precedent with fear.",
         "effects": {
           "fiscal_capacity": 8,
           "military_dependence": 9,
@@ -2777,8 +2777,8 @@
       },
       {
         "id": "opt_mecklenburg_temporary_administration",
-        "label": "Grant administration without hereditary title.",
-        "consequence": "Wallenstein receives substance without the full shock of a ducal transfer. The distinction satisfies few, but alarms fewer.",
+        "label": "Grant the administration without hereditary title.",
+        "consequence": "Wallenstein received the substance without the full shock of a ducal transfer. The distinction contented few, but alarmed the fewer.",
         "effects": {
           "fiscal_capacity": 3,
           "military_dependence": 5,
@@ -2798,8 +2798,8 @@
       },
       {
         "id": "opt_pay_wallenstein_without_land",
-        "label": "Seek cash and movable confiscations instead.",
-        "consequence": "The old dynastic order is spared a warning, but the treasury groans and the army waits.",
+        "label": "Seek cash and movable confiscations in its stead.",
+        "consequence": "The old dynastic order was spared a warning; but the treasury groaned, and the army waited.",
         "effects": {
           "fiscal_capacity": -10,
           "military_dependence": 3,
@@ -2834,8 +2834,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "1629",
     "title": "Peace at Lubeck",
-    "briefing": "Christian of Denmark has lost the mainland war but not his kingdom. Negotiators ask whether the emperor wants vengeance, compensation, or one enemy removed before Sweden moves.",
-    "situation": "A generous peace can look like weakness to friends expecting spoils. A punitive peace can keep Denmark in the field when the north is already too open.",
+    "briefing": "Christian of Denmark had lost the war upon the mainland, but not his kingdom. The negotiators asked whether the emperor sought vengeance, or compensation, or one enemy removed before Sweden should move.",
+    "situation": "A generous peace might look like weakness to friends who expected spoils. A punitive peace might keep Denmark in the field when the north lay already too open.",
     "historian_note": "Wilson emphasizes the generosity and strategic logic of Lubeck, especially the wish to remove Denmark.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -2853,8 +2853,8 @@
     "options": [
       {
         "id": "opt_lubeck_generous_peace",
-        "label": "Return Danish provinces if Christian abandons the Lower Saxons.",
-        "consequence": "Denmark leaves the war. The abandoned estates learn what imperial peace costs them.",
+        "label": "Return the Danish provinces, should Christian abandon the Lower Saxons.",
+        "consequence": "Denmark left the war. The abandoned estates learned what an imperial peace would cost them.",
         "effects": {
           "foreign_intervention_risk": -5,
           "devastation": -4,
@@ -2872,7 +2872,7 @@
       {
         "id": "opt_lubeck_punitive_terms",
         "label": "Demand compensation and sharper guarantees.",
-        "consequence": "Friends applaud a harder peace. Denmark hesitates, and Swedish calculations improve.",
+        "consequence": "The friends applauded a harder peace. Denmark hesitated, and the Swedish calculations improved.",
         "effects": {
           "fiscal_capacity": 5,
           "foreign_intervention_risk": 8,
@@ -2893,7 +2893,7 @@
       {
         "id": "opt_lubeck_general_settlement",
         "label": "Use Lubeck to open a general imperial settlement.",
-        "consequence": "The war party complains that victory is being spent too cheaply; moderates see the first real door in years.",
+        "consequence": "The war party complained that victory was being spent too cheaply; the moderates saw the first true door in years.",
         "effects": {
           "estate_trust": 8,
           "foreign_intervention_risk": -8,
@@ -2932,8 +2932,8 @@
     "phase_id": "phase_restitution_overreach",
     "date_label": "March 1629",
     "title": "The Edict of Restitution",
-    "briefing": "Imperial victories over Bohemia, the Palatinate, and Denmark make a definitive religious settlement look possible. The danger is that a legal triumph may frighten the very Lutheran princes needed for peace.",
-    "situation": "Victory has made the old religious settlement look enforceable again. Your jurists say the Peace of Augsburg, the imperial records, and your election oath give you enough ground to restore ecclesiastical goods through commissioners.",
+    "briefing": "The imperial victories over Bohemia, the Palatinate, and Denmark made a definitive religious settlement look possible. The danger was that a triumph in law might frighten the very Lutheran princes whom peace required.",
+    "situation": "The victory had made the old religious settlement look enforceable once more. The imperial jurists held that the Peace of Augsburg, the imperial records, and the election oath gave ground enough to restore the goods of the Church by commissioners.",
     "historian_note": "This card is grounded in Ferdinand's Edict of Restitution. The source gives the official legal-confessional case; the wider causal consequences still need direct review in modern scholarship.",
     "source_refs": [
       "src_public_restitutionsedikt_1629"
@@ -2946,8 +2946,8 @@
     "options": [
       {
         "id": "opt_issue_restitution_edict",
-        "label": "Issue the edict and send commissioners to enforce restitution.",
-        "consequence": "Catholic restoration gains the force of imperial office. Protestant estates hear the settlement being rewritten from Vienna.",
+        "label": "Issue the edict and send commissioners to enforce the restitution.",
+        "consequence": "The Catholic restoration gained the force of imperial office. The Protestant estates heard the settlement being rewritten out of Vienna.",
         "effects": {
           "imperial_authority": 14,
           "confessional_legitimacy": 16,
@@ -2965,8 +2965,8 @@
       },
       {
         "id": "opt_seek_diet_interpretation",
-        "label": "Seek elector or Diet-backed interpretation before execution.",
-        "consequence": "The law remains more shared, but restoration slows and Catholic allies see victory losing its nerve.",
+        "label": "Seek an interpretation backed by elector or Diet before any execution.",
+        "consequence": "The law remained the more shared; but restoration slowed, and the Catholic allies saw victory lose its nerve.",
         "effects": {
           "imperial_authority": -4,
           "confessional_legitimacy": -8,
@@ -2990,8 +2990,8 @@
       },
       {
         "id": "opt_narrow_restitution_cases",
-        "label": "Enforce only the clearest restitution cases for now.",
-        "consequence": "The edict has teeth, but not yet jaws. Everyone presses you to define what comes next.",
+        "label": "Enforce only the clearest cases of restitution for the present.",
+        "consequence": "The edict had teeth, though not yet jaws. Every party pressed for a definition of what should come next.",
         "effects": {
           "imperial_authority": 6,
           "confessional_legitimacy": 5,
@@ -3016,8 +3016,8 @@
       },
       {
         "id": "opt_trade_restitution_for_peace",
-        "label": "Use restitution claims as bargaining material for a wider peace.",
-        "consequence": "The Empire may breathe. The most committed Catholic restorers will remember what you left on the table.",
+        "label": "Hold the restitution claims as matter to bargain for a wider peace.",
+        "consequence": "The Empire might breathe. The most committed of the Catholic restorers would remember what had been left upon the table.",
         "effects": {
           "imperial_authority": -8,
           "confessional_legitimacy": -12,
@@ -3071,22 +3071,22 @@
         "required_memory_tags": [
           "lubeck_generous_peace"
         ],
-        "briefing": "The generous peace at Lubeck has removed Denmark without opening a general settlement. Catholic petitioners now press that victory and peace together should permit the old church claims to be made good.",
-        "situation": "A decree can satisfy those claims, but the same paper may tell Lutheran princes that moderation toward Denmark was only preparation for enforcement inside the Empire."
+        "briefing": "The generous peace at Lubeck had removed Denmark without opening a general settlement. The Catholic petitioners now pressed that victory and peace together should permit the old claims of the Church to be made good.",
+        "situation": "A decree might satisfy those claims; but the same paper might tell the Lutheran princes that moderation toward Denmark had been only a preparation for enforcement within the Empire."
       },
       {
         "required_memory_tags": [
           "restoration_pushed"
         ],
-        "briefing": "Mandates in the hereditary lands have already made Catholic restoration visible in churches, schools, offices, and noble houses. The question now arrives in imperial form.",
-        "situation": "To issue an Edict is to carry the hereditary method into the wider Empire; to delay is to disappoint those who believed victory had proved the method lawful."
+        "briefing": "The mandates in the hereditary lands had already made the Catholic restoration visible in churches, schools, offices, and noble houses. The question now arrived in imperial form.",
+        "situation": "To issue an Edict was to carry the hereditary method into the wider Empire; to delay was to disappoint those who had believed the victory had proved the method lawful."
       },
       {
         "required_memory_tags": [
           "palatine_proxy_settlement"
         ],
-        "briefing": "The earlier willingness to accept proxy submission in the Palatine matter has preserved a language of settlement. The restitution petitions now test whether that restraint can survive Catholic victory.",
-        "situation": "A broad Edict would reverse the tone of compromise. A narrower interpretation may keep wavering Lutheran estates from treating every imperial paper as threat."
+        "briefing": "The earlier willingness to accept submission by proxy in the Palatine matter had preserved a language of settlement. The restitution petitions now tried whether that restraint might survive a Catholic victory.",
+        "situation": "A broad Edict would reverse the tone of compromise. A narrower interpretation might keep the wavering Lutheran estates from treating every imperial paper as a threat."
       }
     ]
   },
@@ -3097,8 +3097,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1630",
     "title": "Regensburg: The Price of Consent",
-    "briefing": "Electoral complaints arrive in a single chorus: contributions, Mecklenburg, the army, the Edict, and Wallenstein's shadow over imperial liberties.",
-    "situation": "Ferdinand seeks consent and dynastic advantage. The electors answer that consent begins with the dismissal of the man who made imperial victory so frightening.",
+    "briefing": "The electoral complaints came in a single chorus: the contributions, Mecklenburg, the army, the Edict, and Wallenstein's shadow lying across the liberties of the Empire.",
+    "situation": "Ferdinand sought consent and dynastic advantage together. The electors answered that consent began with the dismissal of the man who had made the imperial victory so fearful.",
     "historian_note": "Wilson treats Regensburg as collective imperial politics checking Ferdinand's overreach.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3128,8 +3128,8 @@
     "options": [
       {
         "id": "opt_dismiss_wallenstein_regensburg",
-        "label": "Dismiss Wallenstein to recover electoral consent.",
-        "consequence": "The electors receive the sacrifice. Sweden receives a less ready enemy.",
+        "label": "Dismiss Wallenstein to recover the electors' consent.",
+        "consequence": "The electors received their sacrifice. Sweden received a less ready enemy.",
         "effects": {
           "estate_trust": 7,
           "military_dependence": -8,
@@ -3146,8 +3146,8 @@
       },
       {
         "id": "opt_keep_wallenstein_regensburg",
-        "label": "Keep Wallenstein with reduced powers.",
-        "consequence": "The army remains; consent thins. The congress begins to look less like settlement than warning.",
+        "label": "Keep Wallenstein, his powers reduced.",
+        "consequence": "The army remained; the consent thinned. The congress began to look less a settlement than a warning.",
         "effects": {
           "military_dependence": 6,
           "estate_trust": -10,
@@ -3167,8 +3167,8 @@
       },
       {
         "id": "opt_trade_army_reform_succession",
-        "label": "Offer army reform in exchange for succession support.",
-        "consequence": "The bargain protects the dynasty more than the field army. It buys time, not peace.",
+        "label": "Offer reform of the army in exchange for support of the succession.",
+        "consequence": "The bargain guarded the dynasty more than the field army. It bought time, and not peace.",
         "effects": {
           "dynastic_security": 8,
           "military_dependence": -3,
@@ -3195,8 +3195,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1631",
     "title": "The Door Stands Open",
-    "briefing": "Reports from Saxony and the Protestant estates no longer ask only for delay. They speak of armed security, lawful defence, and the Swedish king already on imperial soil.",
-    "situation": "If Ferdinand offers no public settlement, the middle party may cease to be middle. If he yields too much, Catholic allies ask what victory and law were for.",
+    "briefing": "The reports out of Saxony and from the Protestant estates no longer asked for delay alone. They spoke of armed security, of lawful defence, and of the Swedish king already set upon imperial soil.",
+    "situation": "Should Ferdinand offer no public settlement, the middle party might cease to be middle. Should he yield too much, the Catholic allies would ask what the victory and the law had been for.",
     "historian_note": "Wilson says Ferdinand's refusal of the Leipzig off-ramp compounded the Edict error and helped drive Saxony toward Sweden.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3232,8 +3232,8 @@
     "options": [
       {
         "id": "opt_reject_leipzig",
-        "label": "Reject Leipzig and command disarmament.",
-        "consequence": "Saxon neutrality breaks under the weight of command. Sweden gains the ally it needed.",
+        "label": "Reject the Leipzig convention and command disarmament.",
+        "consequence": "The Saxon neutrality broke beneath the weight of command. Sweden gained the ally it had needed.",
         "effects": {
           "imperial_authority": 4,
           "estate_trust": -12,
@@ -3250,8 +3250,8 @@
       },
       {
         "id": "opt_suspend_edict_for_saxony",
-        "label": "Suspend the Edict and accept Saxon mediation.",
-        "consequence": "The Catholic party murmurs, but the Lutheran elector remains reachable.",
+        "label": "Suspend the Edict and accept the Saxon mediation.",
+        "consequence": "The Catholic party murmured; but the Lutheran elector remained within reach.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -10,
@@ -3271,8 +3271,8 @@
       },
       {
         "id": "opt_private_saxon_concessions",
-        "label": "Offer private concessions while refusing a public bloc.",
-        "consequence": "The court tries to buy trust without admitting necessity. The answer depends on how much trust remains.",
+        "label": "Offer concessions in private while refusing a public bloc.",
+        "consequence": "The court sought to buy trust without confessing necessity. The answer turned upon how much trust remained.",
         "effects": {
           "estate_trust": 4,
           "foreign_intervention_risk": -3,
@@ -3295,15 +3295,15 @@
         "required_memory_tags": [
           "restitution_edict_issued"
         ],
-        "briefing": "The Edict now travels ahead of every imperial envoy. Reports from Saxony and the Protestant estates no longer ask only for delay; they ask whether obedience can coexist with armed security.",
-        "situation": "The Swedish king is already on imperial soil. If Ferdinand offers no public settlement, the middle party may cease to be middle; if he yields too much, Catholic allies ask what victory and law were for."
+        "briefing": "The Edict now travelled ahead of every imperial envoy. The reports out of Saxony and from the Protestant estates no longer asked for delay alone; they asked whether obedience could live beside armed security.",
+        "situation": "The Swedish king was already upon imperial soil. Should Ferdinand offer no public settlement, the middle party might cease to be middle; should he yield too much, the Catholic allies would ask what victory and law had been for."
       },
       {
         "required_memory_tags": [
           "restitution_peace_bargain"
         ],
-        "briefing": "Because restitution was treated as peace business rather than command alone, Saxon envoys still have language enough to ask for public terms before they choose arms.",
-        "situation": "The Swedish king is already on imperial soil, but the Lutheran middle has not yet lost every reason to bargain with the emperor."
+        "briefing": "Restitution having been treated as a matter of peace and not of command alone, the Saxon envoys had language enough still to ask for public terms before they should choose arms.",
+        "situation": "The Swedish king was already upon imperial soil; yet the Lutheran middle had not yet lost every reason to bargain with the emperor."
       }
     ]
   },
@@ -3314,8 +3314,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1631",
     "title": "Saxony Crosses the Line",
-    "briefing": "New dispatches report that Saxon counsel no longer trusts suspension by private word. The Edict remains public, Leipzig has been refused, and Swedish arms now offer the security that imperial law no longer seems to provide.",
-    "situation": "John George's step does not make Saxony a natural rebel. It shows that a loyal Lutheran elector can be driven from guarded obedience into armed partnership when the terms of obedience look unsafe.",
+    "briefing": "New dispatches reported that the Saxon counsel no longer trusted a suspension given by private word. The Edict stood public still, Leipzig had been refused, and Swedish arms now offered the security that imperial law seemed no longer to provide.",
+    "situation": "John George's step did not make Saxony a natural rebel. It showed that a loyal Lutheran elector might be driven from a guarded obedience into armed partnership, once the terms of obedience looked unsafe.",
     "historian_note": "Wilson links Ferdinand's refusal of the Leipzig off-ramp to Saxony's movement toward Sweden after the Edict of Restitution had already frightened Lutheran moderates.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3351,8 +3351,8 @@
     "options": [
       {
         "id": "opt_accept_saxon_break_as_war",
-        "label": "Treat the Saxon alignment as rebellion and prepare for a wider imperial war.",
-        "consequence": "The court preserves the language of command. The price is that one more elector's obedience must now be recovered by arms.",
+        "label": "Treat the Saxon alignment as rebellion and make ready for a wider imperial war.",
+        "consequence": "The court preserved the language of command. The price was that one more elector's obedience must now be recovered by arms.",
         "effects": {
           "imperial_authority": 4,
           "foreign_intervention_risk": 8,
@@ -3369,8 +3369,8 @@
       },
       {
         "id": "opt_reopen_saxon_terms_after_break",
-        "label": "Send public suspension terms to separate Saxony from Sweden.",
-        "consequence": "Envoys carry a late offer that may loosen Saxon commitment but cannot erase the proof that armed pressure forced the paper.",
+        "label": "Send public terms of suspension to part Saxony from Sweden.",
+        "consequence": "The envoys carried a late offer that might loosen the Saxon commitment, yet could not erase the proof that armed pressure had forced the paper.",
         "effects": {
           "estate_trust": 6,
           "foreign_intervention_risk": -4,
@@ -3399,8 +3399,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1632",
     "title": "Gollersdorf",
-    "briefing": "After Swedish victories, the dismissed general receives visitors again. He will not return as a mere servant who can be corrected by every ally's complaint.",
-    "situation": "The army can be restored quickly only by granting powers that make the court uneasy. Without him, Bavaria and scattered commands must carry the war.",
+    "briefing": "After the Swedish victories, the dismissed general received his visitors again. He would not return as a mere servant to be corrected at every ally's complaint.",
+    "situation": "The army might be restored quickly only by granting powers that made the court uneasy. Without him, Bavaria and the scattered commands must carry the war.",
     "historian_note": "Wilson presents Wallenstein's recall as necessity joined to broad delegation.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3422,8 +3422,8 @@
     "options": [
       {
         "id": "opt_recall_wallenstein_broad",
-        "label": "Recall Wallenstein with broad Gollersdorf powers.",
-        "consequence": "The imperial army gathers around its old magnet. So do old fears.",
+        "label": "Recall Wallenstein with the broad powers of Gollersdorf.",
+        "consequence": "The imperial army gathered again about its old magnet. So did the old fears.",
         "effects": {
           "military_dependence": 14,
           "dynastic_security": 8,
@@ -3441,7 +3441,7 @@
       {
         "id": "opt_recall_wallenstein_limited",
         "label": "Recall him under written limits.",
-        "consequence": "The court asks for a safer miracle. Wallenstein weighs whether such a command is worth taking.",
+        "consequence": "The court asked for a safer miracle. Wallenstein weighed whether such a command was worth the taking.",
         "effects": {
           "military_dependence": 7,
           "dynastic_security": 4,
@@ -3461,7 +3461,7 @@
       {
         "id": "opt_bavarian_coalition_command",
         "label": "Build a coalition command without him.",
-        "consequence": "The old dependency returns under worse circumstances. Maximilian is necessary again.",
+        "consequence": "The old dependency returned, and under worse circumstances. Maximilian was necessary once more.",
         "effects": {
           "military_dependence": 8,
           "dynastic_security": -8,
@@ -3488,8 +3488,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1633",
     "title": "The General Makes His Own Peace",
-    "briefing": "Wallenstein's letters and silences grow harder to read. Some reports say he seeks settlement; others say he seeks command of the settlement itself.",
-    "situation": "To tolerate his diplomacy may split the enemy. To supervise it may provoke him. To prepare alternatives may turn suspicion into rupture.",
+    "briefing": "Wallenstein's letters and his silences grew the harder to read. Some reports said he sought a settlement; others, that he sought the command of the settlement itself.",
+    "situation": "To suffer his diplomacy might divide the enemy. To oversee it might provoke him. To prepare alternatives might turn suspicion into rupture.",
     "historian_note": "Wilson treats Wallenstein's opaque diplomacy as a real source of mistrust even if outright treason remains difficult to prove cleanly.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3515,7 +3515,7 @@
       {
         "id": "opt_prepare_wallenstein_alternatives",
         "label": "Build Spanish and Bavarian alternatives to Wallenstein.",
-        "consequence": "Trust becomes a military plan. The general reads the plan as accusation.",
+        "consequence": "Trust became a plan of arms. The general read the plan as an accusation.",
         "effects": {
           "military_dependence": -2,
           "estate_trust": -3,
@@ -3531,8 +3531,8 @@
       },
       {
         "id": "opt_authorize_wallenstein_talks",
-        "label": "Authorize his peace soundings under explicit warrant.",
-        "consequence": "The court turns danger into instrument, but every ally fears what the instrument may sign.",
+        "label": "Authorize his soundings for peace under an explicit warrant.",
+        "consequence": "The court turned a danger into an instrument; but every ally feared what the instrument might sign.",
         "effects": {
           "foreign_intervention_risk": -4,
           "estate_trust": 4,
@@ -3552,8 +3552,8 @@
       },
       {
         "id": "opt_confront_wallenstein_directly",
-        "label": "Confront and renegotiate his powers.",
-        "consequence": "The wound is opened before the army chooses sides.",
+        "label": "Confront him and renegotiate his powers.",
+        "consequence": "The wound was opened before ever the army had chosen its side.",
         "effects": {
           "imperial_authority": 4,
           "military_dependence": -5,
@@ -3579,8 +3579,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "January-February 1634",
     "title": "Dead or Alive",
-    "briefing": "Patents are drafted releasing officers from obedience. The matter can be made legal in form only if the army first ceases to be his.",
-    "situation": "An arrest risks delay, trial, and exposure. A removal by force recovers command swiftly, but the chancery will inherit the stain.",
+    "briefing": "Patents were drawn releasing the officers from their obedience. The matter could be made lawful in form only if the army should first cease to be his.",
+    "situation": "An arrest risked delay, trial, and exposure. A removal by force would recover the command swiftly, but the chancery would inherit the stain.",
     "historian_note": "Wilson describes Ferdinand's patents and the political burial after Eger.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3601,8 +3601,8 @@
     "options": [
       {
         "id": "opt_wallenstein_dead_or_alive",
-        "label": "Release the officers and authorize dead-or-alive removal.",
-        "consequence": "Wallenstein falls at Eger. The army returns to obedience; the papers do not return to innocence.",
+        "label": "Release the officers and authorize a removal, dead or alive.",
+        "consequence": "Wallenstein fell at Eger. The army returned to obedience; the papers did not return to innocence.",
         "effects": {
           "military_dependence": -14,
           "imperial_authority": 7,
@@ -3619,8 +3619,8 @@
       },
       {
         "id": "opt_wallenstein_arrest_trial",
-        "label": "Arrest him for trial before imperial authority.",
-        "consequence": "The legal road is cleaner and slower. Every day gives the army time to ask whom it serves.",
+        "label": "Arrest him for trial before the imperial authority.",
+        "consequence": "The road in law was the cleaner and the slower. Every day gave the army time to ask whom it served.",
         "effects": {
           "imperial_authority": 3,
           "military_dependence": -7,
@@ -3640,8 +3640,8 @@
       },
       {
         "id": "opt_wallenstein_reconcile_narrow",
-        "label": "Reconcile and narrow his command.",
-        "consequence": "The crisis is postponed inside a smaller circle. Bavaria and Spain do not mistake postponement for safety.",
+        "label": "Reconcile with him and narrow his command.",
+        "consequence": "The crisis was postponed within a smaller circle. Bavaria and Spain did not mistake postponement for safety.",
         "effects": {
           "military_dependence": 6,
           "foreign_intervention_risk": 3,
@@ -3667,8 +3667,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1635",
     "title": "The Peace of Prague",
-    "briefing": "After Nordlingen, Saxon articles come within reach. The Edict can be quieted, armies joined under emperor and Empire, and many Lutheran estates brought home.",
-    "situation": "The danger lies in the names left outside the pardon. Every excluded prince, exile, and army becomes useful to France or Sweden.",
+    "briefing": "After Nordlingen the Saxon articles came within reach. The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home.",
+    "situation": "The danger lay in the names left outside the pardon. Every excluded prince, exile, and army became useful to France or to Sweden.",
     "historian_note": "Wilson calls Prague a broad settlement undermined by exclusions.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3702,8 +3702,8 @@
     "options": [
       {
         "id": "opt_prague_historical_exclusions",
-        "label": "Make the elector peace and exclude the hard cases.",
-        "consequence": "Saxony returns. The excluded learn that foreign protection is now their last court of appeal.",
+        "label": "Make the elector's peace and leave the hard cases excluded.",
+        "consequence": "Saxony returned. The excluded learned that foreign protection was now their last court of appeal.",
         "effects": {
           "estate_trust": 8,
           "imperial_authority": 8,
@@ -3720,8 +3720,8 @@
       },
       {
         "id": "opt_prague_broad_amnesty",
-        "label": "Broaden the amnesty while protecting core loyalist rewards.",
-        "consequence": "The settlement cuts deeper into the enemy's German support, but loyal beneficiaries ask which promises still hold.",
+        "label": "Broaden the amnesty while protecting the core loyalist rewards.",
+        "consequence": "The settlement cut the deeper into the enemy's German support; but the loyal beneficiaries asked which promises still held.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -10,
@@ -3750,7 +3750,7 @@
       {
         "id": "opt_prague_hard_catholic_terms",
         "label": "Use Nordlingen to demand a harder Catholic settlement.",
-        "consequence": "Victory is spent like a confession of strength. The peace party thins; foreign patrons gain clients.",
+        "consequence": "The victory was spent like a confession of strength. The peace party thinned; the foreign patrons gained clients.",
         "effects": {
           "confessional_legitimacy": 8,
           "estate_trust": -12,
@@ -3774,15 +3774,15 @@
         "required_memory_tags": [
           "wallenstein_removed_by_force"
         ],
-        "briefing": "After Wallenstein's violent removal and Nordlingen's victory, Saxon articles come within reach. The court can speak again of imperial order, but officers and princes remember how command was recovered.",
-        "situation": "The Edict can be quieted, armies joined under emperor and Empire, and many Lutheran estates brought home. The danger lies in the names left outside the pardon."
+        "briefing": "After Wallenstein's violent removal and the victory at Nordlingen, the Saxon articles came within reach. The court could speak again of imperial order, though officers and princes remembered how the command had been recovered.",
+        "situation": "The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home. The danger lay in the names left outside the pardon."
       },
       {
         "required_memory_tags": [
           "restitution_peace_bargain"
         ],
-        "briefing": "Because restitution was already treated as negotiable peace business, the Saxon articles now arrive less as surrender than as a form the court has made possible.",
-        "situation": "The settlement can restore obedience widely, but every excluded prince, exile, and army remains useful to France or Sweden."
+        "briefing": "Restitution having already been treated as negotiable peace business, the Saxon articles arrived now less as a surrender than as a form the court itself had made possible.",
+        "situation": "The settlement might restore obedience widely; but every excluded prince, exile, and army remained useful to France or to Sweden."
       }
     ]
   },
@@ -3793,8 +3793,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1635-1636",
     "title": "The Amnesty Question",
-    "briefing": "Hessen-Kassel still has soldiers, claims, and foreign suitors. Provisional acceptance of Prague will not become obedience unless terms are made real.",
-    "situation": "To press Westphalian bishoprics may satisfy friends and reopen war. To concede enough may remove an armed enemy while teaching every holdout to bargain.",
+    "briefing": "Hessen-Kassel had still its soldiers, its claims, and its foreign suitors. A provisional acceptance of Prague would not become obedience unless the terms were made real.",
+    "situation": "To press the Westphalian bishoprics might content friends and reopen the war. To concede enough might remove an armed enemy, yet teach every holdout to bargain.",
     "historian_note": "Wilson treats Hessen-Kassel as a missed chance after Prague.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3809,8 +3809,8 @@
     "options": [
       {
         "id": "opt_hessen_deal_fails",
-        "label": "Hold the line and let the deal fail if Wilhelm will not yield enough.",
-        "consequence": "The ban follows. Hessen returns to the anti-imperial war with a sharper grievance.",
+        "label": "Hold the line, and let the deal fail if Wilhelm will not yield enough.",
+        "consequence": "The ban followed. Hessen returned to the war against the emperor with a sharpened grievance.",
         "effects": {
           "imperial_authority": 4,
           "foreign_intervention_risk": 6,
@@ -3827,8 +3827,8 @@
       },
       {
         "id": "opt_hessen_security_concessions",
-        "label": "Offer security concessions to close the Hessen deal.",
-        "consequence": "One dangerous army may be removed from the enemy list. Friends with claims in the region count the cost.",
+        "label": "Offer concessions of security to close the Hessen deal.",
+        "consequence": "One dangerous army might be struck from the enemy's list. The friends with claims in the region counted the cost.",
         "effects": {
           "foreign_intervention_risk": -6,
           "estate_trust": 6,
@@ -3849,7 +3849,7 @@
       {
         "id": "opt_hessen_military_pressure",
         "label": "Use military pressure to compel obedience.",
-        "consequence": "The settlement speaks with cannon behind it. The war in the west hardens.",
+        "consequence": "The settlement spoke with cannon at its back. The war in the west hardened.",
         "effects": {
           "imperial_authority": 3,
           "devastation": 8,
@@ -3886,8 +3886,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1636-1637",
     "title": "Regensburg Again",
-    "briefing": "The emperor's health is no longer a private matter. The electors can secure Ferdinand's son, but they can also write new restraints into the price of continuity.",
-    "situation": "To delay is to gamble with succession. To press forward is to accept that the next emperor will inherit both the crown and the conditions attached to it.",
+    "briefing": "The emperor's health was no longer a private matter. The electors might secure Ferdinand's son; but they might also write new restraints into the price of continuity.",
+    "situation": "To delay was to gamble with the succession. To press forward was to accept that the next emperor would inherit both the crown and the conditions fastened to it.",
     "historian_note": "Wilson treats Ferdinand III's election as dynastic success bound by consultation limits and unresolved war.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3918,7 +3918,7 @@
       {
         "id": "opt_secure_ferdinand_iii",
         "label": "Secure Ferdinand III's election as king of the Romans.",
-        "consequence": "The dynasty survives the emperor's body. The war survives the dynasty's success.",
+        "consequence": "The dynasty outlived the emperor's body. The war outlived the dynasty's success.",
         "effects": {
           "dynastic_security": 16,
           "imperial_authority": 3,
@@ -3934,8 +3934,8 @@
       },
       {
         "id": "opt_buy_unanimous_succession",
-        "label": "Buy warmer consent with broader procedural guarantees.",
-        "consequence": "The election becomes less brittle and the crown less free.",
+        "label": "Buy a warmer consent with broader procedural guarantees.",
+        "consequence": "The election grew less brittle, and the crown less free.",
         "effects": {
           "dynastic_security": 12,
           "estate_trust": 8,
@@ -3955,8 +3955,8 @@
       },
       {
         "id": "opt_delay_succession_for_war",
-        "label": "Delay the election until military fortunes improve.",
-        "consequence": "The chancery gains negotiating room and loses sleep. Every fever now has constitutional meaning.",
+        "label": "Delay the election until the military fortunes should improve.",
+        "consequence": "The chancery gained room to negotiate and lost its sleep. Every fever now carried a constitutional meaning.",
         "effects": {
           "dynastic_security": -14,
           "imperial_authority": 2,
@@ -3981,8 +3981,8 @@
     "phase_id": "phase_palatinate_consolidation",
     "date_label": "When estate trust is high",
     "title": "Credit Still Offered by the Estates",
-    "briefing": "Several moderate estates answer that imperial terms can still be carried into their diets, provided old liberties are named rather than swallowed in silence.",
-    "situation": "This credit is not affection. It is a usable belief that obedience may still preserve privilege, confession, and local jurisdiction better than armed refusal.",
+    "briefing": "Several of the moderate estates answered that the imperial terms might yet be carried into their diets, provided the old liberties were named and not swallowed in silence.",
+    "situation": "This credit was no affection. It was a usable belief that obedience might preserve privilege, confession, and local jurisdiction better than refusal in arms.",
     "historian_note": "Wilson repeatedly emphasizes that imperial government depended on cooperation by estates and princes, not command alone.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4003,8 +4003,8 @@
     "options": [
       {
         "id": "opt_threshold_use_estate_credit_for_settlement",
-        "label": "Use the opening to put disputed claims before a controlled diet.",
-        "consequence": "The court spends trust on procedure. More estates remain reachable, though zealous councillors complain that law is being made slow just when victory should speak clearly.",
+        "label": "Use the opening to lay the disputed claims before a controlled diet.",
+        "consequence": "The court spent its trust upon procedure. More estates remained within reach, though the zealous councillors complained that law was made slow just when victory should have spoken plainly.",
         "effects": {
           "estate_trust": -4,
           "imperial_authority": 4,
@@ -4026,8 +4026,8 @@
       },
       {
         "id": "opt_threshold_bank_estate_credit",
-        "label": "Preserve the opening for a later settlement rather than spend it at once.",
-        "consequence": "The court avoids a quarrel today. The estates' confidence remains useful, but petitioners who expected action begin counting delay as policy.",
+        "label": "Keep the opening for a later settlement rather than spend it at once.",
+        "consequence": "The court avoided a quarrel that day. The estates' confidence remained useful; but the petitioners who had looked for action began to count the delay as policy.",
         "effects": {
           "estate_trust": 2,
           "imperial_authority": -2,
@@ -4054,8 +4054,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When estate trust collapses",
     "title": "Guarantees Before Obedience",
-    "briefing": "Petitions arrive asking not for favor but for written security. Estates that once disputed policy now ask what prevents any privilege from being narrowed after submission.",
-    "situation": "Every concession now looks like admission of weakness, and every refusal strengthens the argument that only armed guarantees can preserve liberties.",
+    "briefing": "Petitions arrived that asked not for favour but for written security. The estates that once disputed policy now asked what should prevent any privilege from being narrowed after submission.",
+    "situation": "Every concession now looked an admission of weakness, and every refusal strengthened the argument that only guarantees in arms could preserve the liberties.",
     "historian_note": "The game abstracts Wilson's wider constitutional point: fear of overreach made settlement harder even after imperial victories.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4077,7 +4077,7 @@
       {
         "id": "opt_threshold_issue_estate_guarantees",
         "label": "Offer written guarantees while preserving obedience in form.",
-        "consequence": "Some moderates receive language they can carry home. Catholic hardliners and victorious officers hear that rebellion has taught the court to bargain.",
+        "consequence": "Some moderates received language to carry home. The Catholic hardliners and the victorious officers heard that rebellion had taught the court to bargain.",
         "effects": {
           "estate_trust": 8,
           "imperial_authority": -5,
@@ -4099,8 +4099,8 @@
       },
       {
         "id": "opt_threshold_refuse_estate_guarantees",
-        "label": "Refuse guarantees and insist that obedience precede every privilege.",
-        "consequence": "The court keeps the order of authority intact. The petitions leave unanswered, and foreign patrons gain another file of grievances.",
+        "label": "Refuse the guarantees and insist that obedience precede every privilege.",
+        "consequence": "The court kept the order of authority intact. The petitions departed unanswered, and the foreign patrons gained another file of grievances.",
         "effects": {
           "imperial_authority": 5,
           "estate_trust": -7,
@@ -4127,8 +4127,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "When army finance breaks",
     "title": "Arrears on Every Table",
-    "briefing": "Paymasters, colonels, creditors, and allied agents arrive with the same account in different hands. Soldiers can be promised discipline, but not fed by paper.",
-    "situation": "The question before council is no longer how to finance policy. It is which policy survives the arrears.",
+    "briefing": "Paymasters and colonels, creditors and allied agents, arrived with the same account in different hands. Soldiers might be promised discipline, but they could not be fed upon paper.",
+    "situation": "The question before the council was no longer how to finance a policy. It was which policy might survive the arrears.",
     "historian_note": "Wilson treats war finance and contribution systems as central to the war's political escalation.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4149,8 +4149,8 @@
     "options": [
       {
         "id": "opt_threshold_shift_arrears_to_contributions",
-        "label": "Authorize heavier contributions until pay can be restored.",
-        "consequence": "The army stays in being by pressing the lands harder. Every requisition makes the emperor's war visible in barns, cellars, and town accounts.",
+        "label": "Authorize heavier contributions until the pay can be restored.",
+        "consequence": "The army kept its being by pressing the lands the harder. Every requisition made the emperor's war visible in barn, cellar, and town account.",
         "effects": {
           "fiscal_capacity": 10,
           "devastation": 10,
@@ -4172,8 +4172,8 @@
       },
       {
         "id": "opt_threshold_reduce_commands_to_save_credit",
-        "label": "Disband unreliable companies and save credit for the core army.",
-        "consequence": "The treasury breathes a little. Commanders protest, allies doubt the army's reach, and the crown accepts a smaller instrument.",
+        "label": "Disband the unreliable companies and save the credit for the core army.",
+        "consequence": "The treasury breathed a little. The commanders protested, the allies doubted the army's reach, and the crown accepted a smaller instrument.",
         "effects": {
           "fiscal_capacity": 7,
           "military_dependence": -4,
@@ -4201,8 +4201,8 @@
     "phase_id": "phase_danish_wallenstein",
     "date_label": "When the treasury has credit",
     "title": "Ready Money, Rare Freedom",
-    "briefing": "The treasury is not rich, but it can still answer a demand without granting land, title, or command in place of coin.",
-    "situation": "Money gives the court a kind of liberty that victory alone does not: the ability to refuse some dangerous bargains.",
+    "briefing": "The treasury was not rich, yet it could still answer a demand without granting land, or title, or command in the place of coin.",
+    "situation": "Money gave the court a kind of liberty that victory alone did not: the power to refuse some dangerous bargains.",
     "historian_note": "This is a game abstraction from Wilson's emphasis on the political power created by fiscal scarcity.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4223,8 +4223,8 @@
     "options": [
       {
         "id": "opt_threshold_pay_to_keep_command_free",
-        "label": "Use ready credit to keep military rewards within ordinary grants.",
-        "consequence": "Officers grumble less when paid, and fewer servants need to be made princes. The treasury buys constitutional quiet at real cost.",
+        "label": "Use the ready credit to keep the military rewards within ordinary grants.",
+        "consequence": "The officers grumbled less when they were paid, and fewer servants needed to be made princes. The treasury bought a constitutional quiet at a real cost.",
         "effects": {
           "fiscal_capacity": -8,
           "military_dependence": -7,
@@ -4245,8 +4245,8 @@
       },
       {
         "id": "opt_threshold_hold_treasury_for_succession",
-        "label": "Reserve credit for succession and diplomacy.",
-        "consequence": "The court keeps money for the next bargain. Commanders notice that their accounts remain second to dynastic business.",
+        "label": "Reserve the credit for the succession and for diplomacy.",
+        "consequence": "The court kept its money for the next bargain. The commanders marked that their accounts stood second to the business of the dynasty.",
         "effects": {
           "dynastic_security": 5,
           "fiscal_capacity": -2,
@@ -4273,8 +4273,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When military dependence is extreme",
     "title": "The Price of Armed Servants",
-    "briefing": "The men who keep armies in the field now send counsel as well as accounts. They ask whether policy will follow the soldiers who make policy possible.",
-    "situation": "To refuse them risks the instrument of survival. To satisfy them teaches every prince that imperial necessity can be made to pay.",
+    "briefing": "The men who kept the armies in the field now sent their counsel as well as their accounts. They asked whether policy would follow the soldiers who made policy possible.",
+    "situation": "To refuse them risked the very instrument of survival. To satisfy them taught every prince that imperial necessity might be made to pay.",
     "historian_note": "This abstracts the recurring Bavarian and Wallenstein problem: military capacity could become leverage over imperial policy.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4300,7 +4300,7 @@
       {
         "id": "opt_threshold_pay_military_creditors",
         "label": "Satisfy the armed creditors before they become rivals.",
-        "consequence": "The army remains usable, but obedience is purchased in public view. The price of survival becomes a precedent.",
+        "consequence": "The army remained usable; but the obedience was purchased in open view. The price of survival became a precedent.",
         "effects": {
           "military_dependence": 6,
           "fiscal_capacity": -8,
@@ -4322,8 +4322,8 @@
       },
       {
         "id": "opt_threshold_reassert_command_over_creditors",
-        "label": "Reassert command and risk a break with military creditors.",
-        "consequence": "The court reminds servants that credit is not sovereignty. The reminder is lawful, dangerous, and expensive if the army hesitates.",
+        "label": "Reassert command, and risk a breach with the military creditors.",
+        "consequence": "The court reminded its servants that credit was not sovereignty. The reminder was lawful, dangerous, and costly should the army hesitate.",
         "effects": {
           "imperial_authority": 6,
           "military_dependence": -5,
@@ -4351,8 +4351,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When foreign intervention risk is extreme",
     "title": "Foreign Courts Find Their Cause",
-    "briefing": "Envoys report that imperial quarrels are being translated abroad into the language of balance, protection, recovery, and religion.",
-    "situation": "The court may still claim domestic law. Other crowns now answer that domestic law has become a European danger.",
+    "briefing": "Envoys reported that the imperial quarrels were being translated abroad into the language of balance, of protection, of recovery, and of religion.",
+    "situation": "The court might still plead its domestic law. The other crowns now answered that domestic law had become a danger to Europe.",
     "historian_note": "Wilson frames the widening war as a fusion of imperial settlement, dynastic security, and foreign-policy calculation.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4377,8 +4377,8 @@
     "options": [
       {
         "id": "opt_threshold_send_public_reassurances_abroad",
-        "label": "Send public reassurances to deny foreign courts their pretext.",
-        "consequence": "The papers make intervention harder to justify, but they also bind the emperor to words that allies and estates will quote back at him.",
+        "label": "Send public reassurances to deny the foreign courts their pretext.",
+        "consequence": "The papers made intervention the harder to justify; but they bound the emperor also to words that allies and estates would quote back at him.",
         "effects": {
           "foreign_intervention_risk": -8,
           "estate_trust": 4,
@@ -4399,8 +4399,8 @@
       },
       {
         "id": "opt_threshold_answer_foreign_pressure_with_victory",
-        "label": "Answer foreign pressure by seeking a decisive military demonstration.",
-        "consequence": "Victory might silence patrons and clients together. Failure would prove that the Empire has become Europe's battlefield.",
+        "label": "Answer the foreign pressure by seeking a decisive demonstration of arms.",
+        "consequence": "A victory might silence patrons and clients together. A failure would prove that the Empire had become the battlefield of Europe.",
         "effects": {
           "imperial_authority": 5,
           "foreign_intervention_risk": 5,
@@ -4428,8 +4428,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "When succession is secure",
     "title": "A Crown Not Yet in Panic",
-    "briefing": "Councillors note that succession no longer has to be bought in the same breath as every military demand. The dynasty has room to choose its concessions.",
-    "situation": "Security can make moderation easier, but it can also tempt the court to spend less on settlement because the house itself is safe.",
+    "briefing": "The councillors observed that the succession need no longer be bought in the same breath as every military demand. The dynasty had room to choose its concessions.",
+    "situation": "Security might make moderation the easier; but it might also tempt the court to spend less upon settlement, the house itself being safe.",
     "historian_note": "This is the reward side of Ferdinand's dynastic problem: security changes what concessions are politically bearable.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4450,8 +4450,8 @@
     "options": [
       {
         "id": "opt_threshold_use_security_for_moderation",
-        "label": "Use dynastic security to offer wider settlement terms.",
-        "consequence": "The court can concede without sounding desperate. Catholic allies complain, but some estates hear strength rather than retreat.",
+        "label": "Use the dynastic security to offer wider terms of settlement.",
+        "consequence": "The court could concede without sounding desperate. The Catholic allies complained; but some estates heard strength rather than retreat.",
         "effects": {
           "estate_trust": 8,
           "foreign_intervention_risk": -6,
@@ -4473,8 +4473,8 @@
       },
       {
         "id": "opt_threshold_guard_security_for_house",
-        "label": "Guard dynastic security and make fewer settlement promises.",
-        "consequence": "The house remains safer, but the Empire hears less of reconciliation and more of continuity.",
+        "label": "Guard the dynastic security and make the fewer promises of settlement.",
+        "consequence": "The house remained the safer; but the Empire heard less of reconciliation and more of continuity.",
         "effects": {
           "dynastic_security": 4,
           "estate_trust": -4,
@@ -4501,8 +4501,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "When devastation is extreme",
     "title": "The Lands Petition Against Ruin",
-    "briefing": "Town councils, territorial officers, and ecclesiastical administrators send reports that no longer separate war policy from hunger, flight, billeting, and unpaid contribution.",
-    "situation": "Devastation has become an argument in council. Even loyal men ask what obedience can mean if the lands that obey are consumed.",
+    "briefing": "Town councils, territorial officers, and ecclesiastical administrators sent reports that no longer parted war policy from hunger, flight, billeting, and unpaid contribution.",
+    "situation": "Devastation had become an argument in council. Even the loyal asked what obedience could mean, if the lands that obeyed were consumed.",
     "historian_note": "Wilson treats wartime devastation and material exhaustion as political facts, not merely background suffering.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4523,8 +4523,8 @@
     "options": [
       {
         "id": "opt_threshold_relieve_devastated_lands",
-        "label": "Order relief and contribution limits in the worst-hit lands.",
-        "consequence": "The order gives loyal estates words to defend obedience. Commanders answer that armies cannot march on mercy alone.",
+        "label": "Order relief and limits on contribution in the worst-hit lands.",
+        "consequence": "The order gave the loyal estates words to defend obedience. The commanders answered that armies could not march on mercy alone.",
         "effects": {
           "devastation": -9,
           "estate_trust": 7,
@@ -4546,8 +4546,8 @@
       },
       {
         "id": "opt_threshold_keep_contributions_flowing",
-        "label": "Keep contributions flowing until peace is closer.",
-        "consequence": "The army remains supplied, and the petitions grow darker. Peace itself begins to look like the only relief still credible.",
+        "label": "Keep the contributions flowing until peace should be nearer.",
+        "consequence": "The army remained supplied, and the petitions grew the darker. Peace itself began to look the only relief still credible.",
         "effects": {
           "fiscal_capacity": 5,
           "devastation": 7,
@@ -4575,8 +4575,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "February 1637",
     "title": "The Emperor Dies",
-    "briefing": "Ferdinand dies with Bohemia held, the dynasty continued, and Catholic restoration rooted deeply in the hereditary lands.",
-    "situation": "The Empire is not at peace. Every unresolved file passes to Ferdinand III: amnesty, armies, foreign crowns, devastated lands, and the question of how much imperial authority can bear before it breaks cooperation.",
+    "briefing": "Ferdinand died with Bohemia held, the dynasty continued, and the Catholic restoration rooted deep in the hereditary lands.",
+    "situation": "The Empire was not at peace. Every unsettled file passed to Ferdinand III: the amnesty, the armies, the foreign crowns, the devastated lands, and the question of how much imperial authority might bear before it should break cooperation altogether.",
     "historian_note": "Wilson marks Ferdinand II's death as dynastic continuity amid unresolved amnesty, fiscal, foreign, and military problems.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4589,7 +4589,7 @@
       {
         "id": "opt_receive_final_memorial",
         "label": "Receive the final memorial of the reign.",
-        "consequence": "The record is sealed for the next emperor. Ferdinand's victories remain real; so do the wars they did not end.",
+        "consequence": "The record was sealed for the next emperor. Ferdinand's victories remained real; so did the wars they had not ended.",
         "effects": {},
         "causal_claim_ids": [
           "claim_ferdinand_iii_election_secures_dynasty_with_limits"
@@ -4601,8 +4601,8 @@
       },
       {
         "id": "opt_order_final_settlement_summary",
-        "label": "Order a final settlement summary for Ferdinand III.",
-        "consequence": "The clerks gather the unsettled questions into one inheritance: authority, confession, debt, armies, and peace.",
+        "label": "Order a final summary of the settlement for Ferdinand III.",
+        "consequence": "The clerks gathered the unsettled questions into one inheritance: authority, confession, debt, armies, and peace.",
         "effects": {},
         "causal_claim_ids": [
           "claim_ferdinand_iii_election_secures_dynasty_with_limits"

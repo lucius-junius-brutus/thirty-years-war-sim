@@ -1,0 +1,264 @@
+{
+  "card_1630_regensburg_wallenstein": {
+    "briefing": "The electoral complaints came in a single chorus: the contributions, Mecklenburg, the army, the Edict, and Wallenstein's shadow lying across the liberties of the Empire.",
+    "situation": "Ferdinand sought consent and dynastic advantage together. The electors answered that consent began with the dismissal of the man who had made the imperial victory so fearful.",
+    "options": {
+      "opt_dismiss_wallenstein_regensburg": {
+        "label": "Dismiss Wallenstein to recover the electors' consent.",
+        "consequence": "The electors received their sacrifice. Sweden received a less ready enemy."
+      },
+      "opt_keep_wallenstein_regensburg": {
+        "label": "Keep Wallenstein, his powers reduced.",
+        "consequence": "The army remained; the consent thinned. The congress began to look less a settlement than a warning."
+      },
+      "opt_trade_army_reform_succession": {
+        "label": "Offer reform of the army in exchange for support of the succession.",
+        "consequence": "The bargain guarded the dynasty more than the field army. It bought time, and not peace."
+      }
+    }
+  },
+  "card_1631_intervention_crisis": {
+    "briefing": "The reports out of Saxony and from the Protestant estates no longer asked for delay alone. They spoke of armed security, of lawful defence, and of the Swedish king already set upon imperial soil.",
+    "situation": "Should Ferdinand offer no public settlement, the middle party might cease to be middle. Should he yield too much, the Catholic allies would ask what the victory and the law had been for.",
+    "options": {
+      "opt_reject_leipzig": {
+        "label": "Reject the Leipzig convention and command disarmament.",
+        "consequence": "The Saxon neutrality broke beneath the weight of command. Sweden gained the ally it had needed."
+      },
+      "opt_suspend_edict_for_saxony": {
+        "label": "Suspend the Edict and accept the Saxon mediation.",
+        "consequence": "The Catholic party murmured; but the Lutheran elector remained within reach."
+      },
+      "opt_private_saxon_concessions": {
+        "label": "Offer concessions in private while refusing a public bloc.",
+        "consequence": "The court sought to buy trust without confessing necessity. The answer turned upon how much trust remained."
+      }
+    },
+    "memory_variants": [
+      {
+        "briefing": "The Edict now travelled ahead of every imperial envoy. The reports out of Saxony and from the Protestant estates no longer asked for delay alone; they asked whether obedience could live beside armed security.",
+        "situation": "The Swedish king was already upon imperial soil. Should Ferdinand offer no public settlement, the middle party might cease to be middle; should he yield too much, the Catholic allies would ask what victory and law had been for."
+      },
+      {
+        "briefing": "Restitution having been treated as a matter of peace and not of command alone, the Saxon envoys had language enough still to ask for public terms before they should choose arms.",
+        "situation": "The Swedish king was already upon imperial soil; yet the Lutheran middle had not yet lost every reason to bargain with the emperor."
+      }
+    ]
+  },
+  "card_1631_saxon_break": {
+    "briefing": "New dispatches reported that the Saxon counsel no longer trusted a suspension given by private word. The Edict stood public still, Leipzig had been refused, and Swedish arms now offered the security that imperial law seemed no longer to provide.",
+    "situation": "John George's step did not make Saxony a natural rebel. It showed that a loyal Lutheran elector might be driven from a guarded obedience into armed partnership, once the terms of obedience looked unsafe.",
+    "options": {
+      "opt_accept_saxon_break_as_war": {
+        "label": "Treat the Saxon alignment as rebellion and make ready for a wider imperial war.",
+        "consequence": "The court preserved the language of command. The price was that one more elector's obedience must now be recovered by arms."
+      },
+      "opt_reopen_saxon_terms_after_break": {
+        "label": "Send public terms of suspension to part Saxony from Sweden.",
+        "consequence": "The envoys carried a late offer that might loosen the Saxon commitment, yet could not erase the proof that armed pressure had forced the paper."
+      }
+    }
+  },
+  "card_1632_recall_wallenstein": {
+    "briefing": "After the Swedish victories, the dismissed general received his visitors again. He would not return as a mere servant to be corrected at every ally's complaint.",
+    "situation": "The army might be restored quickly only by granting powers that made the court uneasy. Without him, Bavaria and the scattered commands must carry the war.",
+    "options": {
+      "opt_recall_wallenstein_broad": {
+        "label": "Recall Wallenstein with the broad powers of Gollersdorf.",
+        "consequence": "The imperial army gathered again about its old magnet. So did the old fears."
+      },
+      "opt_recall_wallenstein_limited": {
+        "label": "Recall him under written limits.",
+        "consequence": "The court asked for a safer miracle. Wallenstein weighed whether such a command was worth the taking."
+      },
+      "opt_bavarian_coalition_command": {
+        "label": "Build a coalition command without him.",
+        "consequence": "The old dependency returned, and under worse circumstances. Maximilian was necessary once more."
+      }
+    }
+  },
+  "card_1633_wallenstein_peace": {
+    "briefing": "Wallenstein's letters and his silences grew the harder to read. Some reports said he sought a settlement; others, that he sought the command of the settlement itself.",
+    "situation": "To suffer his diplomacy might divide the enemy. To oversee it might provoke him. To prepare alternatives might turn suspicion into rupture.",
+    "options": {
+      "opt_prepare_wallenstein_alternatives": {
+        "label": "Build Spanish and Bavarian alternatives to Wallenstein.",
+        "consequence": "Trust became a plan of arms. The general read the plan as an accusation."
+      },
+      "opt_authorize_wallenstein_talks": {
+        "label": "Authorize his soundings for peace under an explicit warrant.",
+        "consequence": "The court turned a danger into an instrument; but every ally feared what the instrument might sign."
+      },
+      "opt_confront_wallenstein_directly": {
+        "label": "Confront him and renegotiate his powers.",
+        "consequence": "The wound was opened before ever the army had chosen its side."
+      }
+    }
+  },
+  "card_1634_remove_wallenstein": {
+    "briefing": "Patents were drawn releasing the officers from their obedience. The matter could be made lawful in form only if the army should first cease to be his.",
+    "situation": "An arrest risked delay, trial, and exposure. A removal by force would recover the command swiftly, but the chancery would inherit the stain.",
+    "options": {
+      "opt_wallenstein_dead_or_alive": {
+        "label": "Release the officers and authorize a removal, dead or alive.",
+        "consequence": "Wallenstein fell at Eger. The army returned to obedience; the papers did not return to innocence."
+      },
+      "opt_wallenstein_arrest_trial": {
+        "label": "Arrest him for trial before the imperial authority.",
+        "consequence": "The road in law was the cleaner and the slower. Every day gave the army time to ask whom it served."
+      },
+      "opt_wallenstein_reconcile_narrow": {
+        "label": "Reconcile with him and narrow his command.",
+        "consequence": "The crisis was postponed within a smaller circle. Bavaria and Spain did not mistake postponement for safety."
+      }
+    }
+  },
+  "card_1635_prague_peace": {
+    "briefing": "After Nordlingen the Saxon articles came within reach. The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home.",
+    "situation": "The danger lay in the names left outside the pardon. Every excluded prince, exile, and army became useful to France or to Sweden.",
+    "options": {
+      "opt_prague_historical_exclusions": {
+        "label": "Make the elector's peace and leave the hard cases excluded.",
+        "consequence": "Saxony returned. The excluded learned that foreign protection was now their last court of appeal."
+      },
+      "opt_prague_broad_amnesty": {
+        "label": "Broaden the amnesty while protecting the core loyalist rewards.",
+        "consequence": "The settlement cut the deeper into the enemy's German support; but the loyal beneficiaries asked which promises still held."
+      },
+      "opt_prague_hard_catholic_terms": {
+        "label": "Use Nordlingen to demand a harder Catholic settlement.",
+        "consequence": "The victory was spent like a confession of strength. The peace party thinned; the foreign patrons gained clients."
+      }
+    },
+    "memory_variants": [
+      {
+        "briefing": "After Wallenstein's violent removal and the victory at Nordlingen, the Saxon articles came within reach. The court could speak again of imperial order, though officers and princes remembered how the command had been recovered.",
+        "situation": "The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home. The danger lay in the names left outside the pardon."
+      },
+      {
+        "briefing": "Restitution having already been treated as negotiable peace business, the Saxon articles arrived now less as a surrender than as a form the court itself had made possible.",
+        "situation": "The settlement might restore obedience widely; but every excluded prince, exile, and army remained useful to France or to Sweden."
+      }
+    ]
+  },
+  "card_1636_hessen_amnesty": {
+    "briefing": "Hessen-Kassel had still its soldiers, its claims, and its foreign suitors. A provisional acceptance of Prague would not become obedience unless the terms were made real.",
+    "situation": "To press the Westphalian bishoprics might content friends and reopen the war. To concede enough might remove an armed enemy, yet teach every holdout to bargain.",
+    "options": {
+      "opt_hessen_deal_fails": {
+        "label": "Hold the line, and let the deal fail if Wilhelm will not yield enough.",
+        "consequence": "The ban followed. Hessen returned to the war against the emperor with a sharpened grievance."
+      },
+      "opt_hessen_security_concessions": {
+        "label": "Offer concessions of security to close the Hessen deal.",
+        "consequence": "One dangerous army might be struck from the enemy's list. The friends with claims in the region counted the cost."
+      },
+      "opt_hessen_military_pressure": {
+        "label": "Use military pressure to compel obedience.",
+        "consequence": "The settlement spoke with cannon at its back. The war in the west hardened."
+      }
+    }
+  },
+  "card_1637_ferdinand_iii_election": {
+    "briefing": "The emperor's health was no longer a private matter. The electors might secure Ferdinand's son; but they might also write new restraints into the price of continuity.",
+    "situation": "To delay was to gamble with the succession. To press forward was to accept that the next emperor would inherit both the crown and the conditions fastened to it.",
+    "options": {
+      "opt_secure_ferdinand_iii": {
+        "label": "Secure Ferdinand III's election as king of the Romans.",
+        "consequence": "The dynasty outlived the emperor's body. The war outlived the dynasty's success."
+      },
+      "opt_buy_unanimous_succession": {
+        "label": "Buy a warmer consent with broader procedural guarantees.",
+        "consequence": "The election grew less brittle, and the crown less free."
+      },
+      "opt_delay_succession_for_war": {
+        "label": "Delay the election until the military fortunes should improve.",
+        "consequence": "The chancery gained room to negotiate and lost its sleep. Every fever now carried a constitutional meaning."
+      }
+    }
+  },
+  "card_threshold_estate_guarantees": {
+    "briefing": "Petitions arrived that asked not for favour but for written security. The estates that once disputed policy now asked what should prevent any privilege from being narrowed after submission.",
+    "situation": "Every concession now looked an admission of weakness, and every refusal strengthened the argument that only guarantees in arms could preserve the liberties.",
+    "options": {
+      "opt_threshold_issue_estate_guarantees": {
+        "label": "Offer written guarantees while preserving obedience in form.",
+        "consequence": "Some moderates received language to carry home. The Catholic hardliners and the victorious officers heard that rebellion had taught the court to bargain."
+      },
+      "opt_threshold_refuse_estate_guarantees": {
+        "label": "Refuse the guarantees and insist that obedience precede every privilege.",
+        "consequence": "The court kept the order of authority intact. The petitions departed unanswered, and the foreign patrons gained another file of grievances."
+      }
+    }
+  },
+  "card_threshold_military_creditors": {
+    "briefing": "The men who kept the armies in the field now sent their counsel as well as their accounts. They asked whether policy would follow the soldiers who made policy possible.",
+    "situation": "To refuse them risked the very instrument of survival. To satisfy them taught every prince that imperial necessity might be made to pay.",
+    "options": {
+      "opt_threshold_pay_military_creditors": {
+        "label": "Satisfy the armed creditors before they become rivals.",
+        "consequence": "The army remained usable; but the obedience was purchased in open view. The price of survival became a precedent."
+      },
+      "opt_threshold_reassert_command_over_creditors": {
+        "label": "Reassert command, and risk a breach with the military creditors.",
+        "consequence": "The court reminded its servants that credit was not sovereignty. The reminder was lawful, dangerous, and costly should the army hesitate."
+      }
+    }
+  },
+  "card_threshold_foreign_courts": {
+    "briefing": "Envoys reported that the imperial quarrels were being translated abroad into the language of balance, of protection, of recovery, and of religion.",
+    "situation": "The court might still plead its domestic law. The other crowns now answered that domestic law had become a danger to Europe.",
+    "options": {
+      "opt_threshold_send_public_reassurances_abroad": {
+        "label": "Send public reassurances to deny the foreign courts their pretext.",
+        "consequence": "The papers made intervention the harder to justify; but they bound the emperor also to words that allies and estates would quote back at him."
+      },
+      "opt_threshold_answer_foreign_pressure_with_victory": {
+        "label": "Answer the foreign pressure by seeking a decisive demonstration of arms.",
+        "consequence": "A victory might silence patrons and clients together. A failure would prove that the Empire had become the battlefield of Europe."
+      }
+    }
+  },
+  "card_threshold_succession_breathing_space": {
+    "briefing": "The councillors observed that the succession need no longer be bought in the same breath as every military demand. The dynasty had room to choose its concessions.",
+    "situation": "Security might make moderation the easier; but it might also tempt the court to spend less upon settlement, the house itself being safe.",
+    "options": {
+      "opt_threshold_use_security_for_moderation": {
+        "label": "Use the dynastic security to offer wider terms of settlement.",
+        "consequence": "The court could concede without sounding desperate. The Catholic allies complained; but some estates heard strength rather than retreat."
+      },
+      "opt_threshold_guard_security_for_house": {
+        "label": "Guard the dynastic security and make the fewer promises of settlement.",
+        "consequence": "The house remained the safer; but the Empire heard less of reconciliation and more of continuity."
+      }
+    }
+  },
+  "card_threshold_devastation_petitions": {
+    "briefing": "Town councils, territorial officers, and ecclesiastical administrators sent reports that no longer parted war policy from hunger, flight, billeting, and unpaid contribution.",
+    "situation": "Devastation had become an argument in council. Even the loyal asked what obedience could mean, if the lands that obeyed were consumed.",
+    "options": {
+      "opt_threshold_relieve_devastated_lands": {
+        "label": "Order relief and limits on contribution in the worst-hit lands.",
+        "consequence": "The order gave the loyal estates words to defend obedience. The commanders answered that armies could not march on mercy alone."
+      },
+      "opt_threshold_keep_contributions_flowing": {
+        "label": "Keep the contributions flowing until peace should be nearer.",
+        "consequence": "The army remained supplied, and the petitions grew the darker. Peace itself began to look the only relief still credible."
+      }
+    }
+  },
+  "card_1637_ferdinand_death": {
+    "briefing": "Ferdinand died with Bohemia held, the dynasty continued, and the Catholic restoration rooted deep in the hereditary lands.",
+    "situation": "The Empire was not at peace. Every unsettled file passed to Ferdinand III: the amnesty, the armies, the foreign crowns, the devastated lands, and the question of how much imperial authority might bear before it should break cooperation altogether.",
+    "options": {
+      "opt_receive_final_memorial": {
+        "label": "Receive the final memorial of the reign.",
+        "consequence": "The record was sealed for the next emperor. Ferdinand's victories remained real; so did the wars they had not ended."
+      },
+      "opt_order_final_settlement_summary": {
+        "label": "Order a final summary of the settlement for Ferdinand III.",
+        "consequence": "The clerks gathered the unsettled questions into one inheritance: authority, confession, debt, armies, and peace."
+      }
+    }
+  }
+}

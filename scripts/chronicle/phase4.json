@@ -1,0 +1,174 @@
+{
+  "card_1625_lower_saxon_neutrality": {
+    "briefing": "Letters out of the north reported assemblies that claimed a neutrality, while the Danish agents spoke of protection, of bishoprics, and of the defence of endangered estates.",
+    "situation": "Were the neutrality accepted without condition, an imperial circle might come to decide for itself when imperial law should bind it. Were it refused, Denmark might enter not as a distant king but as the armed guardian of a threatened frontier.",
+    "options": {
+      "opt_refuse_lower_saxon_neutrality": {
+        "label": "Refuse a neutrality that would shelter the Danish cause.",
+        "consequence": "The imperial orders spoke of common liberty and obedience. The northern estates heard command; Denmark heard invitation."
+      },
+      "opt_recognize_temporary_neutrality": {
+        "label": "Recognize a temporary neutrality of the circle, under imperial review.",
+        "consequence": "The north drew breath for a season; but the Catholic petitioners asked whether imperial law now waited upon every circle's convenience."
+      },
+      "opt_force_lower_saxony_by_league": {
+        "label": "Let the pressure of the League compel the wavering estates.",
+        "consequence": "The language of law arrived with soldiers at its back. The warning was plain, and so was the danger."
+      }
+    }
+  },
+  "card_1625_wallenstein_army": {
+    "briefing": "A proposal reached the court that promised men faster than the treasury could pay them. Credit, commissions, contributions, and the commander's own name would do what ordinary revenue could not.",
+    "situation": "The emperor might remain dependent upon Bavaria and the League, or accept an army whose purse lay in the lands it occupied and whose officers looked upward through Wallenstein.",
+    "options": {
+      "opt_contract_wallenstein_army": {
+        "label": "Accept Wallenstein's army of contribution.",
+        "consequence": "The recruiting began with an astonishing speed. So did the complaints from the lands required to feed it."
+      },
+      "opt_limit_wallenstein_powers": {
+        "label": "Authorize a smaller army under tighter warrants.",
+        "consequence": "The court kept the commander upon a shorter leash, and received a smaller instrument in return."
+      },
+      "opt_remain_league_dependent": {
+        "label": "Hold to League and Spanish support rather than build a new system.",
+        "consequence": "Maximilian's value rose again. The emperor avoided one dangerous servant by leaning the harder upon another ally."
+      }
+    }
+  },
+  "card_1627_palatine_peace_opening": {
+    "briefing": "After the Danish reverses, word arrived that Frederick would yield more than before: Bohemia renounced, Maximilian accepted for his life, submission offered by proxy.",
+    "situation": "The remaining question was not whether Frederick should lose face, but how much face the emperor would require him to lose in public before a peace might be made.",
+    "options": {
+      "opt_require_frederick_personal_submission": {
+        "label": "Require Frederick's submission in person to the imperial authority.",
+        "consequence": "The dignity of punishment was preserved. The settlement slipped away upon the form of obedience."
+      },
+      "opt_accept_proxy_submission": {
+        "label": "Accept submission by proxy and secure the renunciations.",
+        "consequence": "A humiliating journey was spared. Bavaria asked what certainty remained, when rebellion might be softened by parchment."
+      },
+      "opt_restore_palatine_security_terms": {
+        "label": "Trade a limited restoration for security and reparations.",
+        "consequence": "The Palatine cause was parted from the mercenary war; but every clause had to pass through Bavarian suspicion."
+      }
+    }
+  },
+  "card_1627_restoration_mandates": {
+    "briefing": "Reports out of Bohemia, Moravia, and Austria told of pastors removed, churches inspected, offices watched, and noble houses pressed toward conformity.",
+    "situation": "The Catholic loyalists asked that the victory be made visible now in worship, in schooling, in marriage, in office, and in the holding of land. Other counsellors warned that a sudden uniformity would send property, labour, and hatred abroad together with the exiles.",
+    "options": {
+      "opt_push_restoration": {
+        "label": "Encourage a visible Catholic restoration in the recovered lands.",
+        "consequence": "The Catholic confidence surged. The Protestant alarm learned to organize itself."
+      },
+      "opt_sequence_restoration": {
+        "label": "Sequence the restoration slowly, after oaths and fiscal order.",
+        "consequence": "The settlement advanced, but not fast enough for the most zealous of the allies."
+      },
+      "opt_suspend_restoration": {
+        "label": "Suspend the major measures of restoration to calm Lutheran and city opinion.",
+        "consequence": "The moderates breathed the easier. The Catholic allies wondered what the victory had been for."
+      }
+    }
+  },
+  "card_1628_mecklenburg_reward": {
+    "briefing": "The commander who had raised the army now sought a reward large enough to answer credit, honour, and arrears together. Mecklenburg lay under the imperial displeasure.",
+    "situation": "To pay with land was easier than to pay with money. It told also every prince that victory might move the old houses out and set new servants in.",
+    "options": {
+      "opt_grant_mecklenburg_wallenstein": {
+        "label": "Grant Mecklenburg to Wallenstein.",
+        "consequence": "The army's maker was paid in princely coin. The Empire studied the precedent with fear."
+      },
+      "opt_mecklenburg_temporary_administration": {
+        "label": "Grant the administration without hereditary title.",
+        "consequence": "Wallenstein received the substance without the full shock of a ducal transfer. The distinction contented few, but alarmed the fewer."
+      },
+      "opt_pay_wallenstein_without_land": {
+        "label": "Seek cash and movable confiscations in its stead.",
+        "consequence": "The old dynastic order was spared a warning; but the treasury groaned, and the army waited."
+      }
+    }
+  },
+  "card_1629_lubeck_peace": {
+    "briefing": "Christian of Denmark had lost the war upon the mainland, but not his kingdom. The negotiators asked whether the emperor sought vengeance, or compensation, or one enemy removed before Sweden should move.",
+    "situation": "A generous peace might look like weakness to friends who expected spoils. A punitive peace might keep Denmark in the field when the north lay already too open.",
+    "options": {
+      "opt_lubeck_generous_peace": {
+        "label": "Return the Danish provinces, should Christian abandon the Lower Saxons.",
+        "consequence": "Denmark left the war. The abandoned estates learned what an imperial peace would cost them."
+      },
+      "opt_lubeck_punitive_terms": {
+        "label": "Demand compensation and sharper guarantees.",
+        "consequence": "The friends applauded a harder peace. Denmark hesitated, and the Swedish calculations improved."
+      },
+      "opt_lubeck_general_settlement": {
+        "label": "Use Lubeck to open a general imperial settlement.",
+        "consequence": "The war party complained that victory was being spent too cheaply; the moderates saw the first true door in years."
+      }
+    }
+  },
+  "card_1629_restitution_edict": {
+    "briefing": "The imperial victories over Bohemia, the Palatinate, and Denmark made a definitive religious settlement look possible. The danger was that a triumph in law might frighten the very Lutheran princes whom peace required.",
+    "situation": "The victory had made the old religious settlement look enforceable once more. The imperial jurists held that the Peace of Augsburg, the imperial records, and the election oath gave ground enough to restore the goods of the Church by commissioners.",
+    "options": {
+      "opt_issue_restitution_edict": {
+        "label": "Issue the edict and send commissioners to enforce the restitution.",
+        "consequence": "The Catholic restoration gained the force of imperial office. The Protestant estates heard the settlement being rewritten out of Vienna."
+      },
+      "opt_seek_diet_interpretation": {
+        "label": "Seek an interpretation backed by elector or Diet before any execution.",
+        "consequence": "The law remained the more shared; but restoration slowed, and the Catholic allies saw victory lose its nerve."
+      },
+      "opt_narrow_restitution_cases": {
+        "label": "Enforce only the clearest cases of restitution for the present.",
+        "consequence": "The edict had teeth, though not yet jaws. Every party pressed for a definition of what should come next."
+      },
+      "opt_trade_restitution_for_peace": {
+        "label": "Hold the restitution claims as matter to bargain for a wider peace.",
+        "consequence": "The Empire might breathe. The most committed of the Catholic restorers would remember what had been left upon the table."
+      }
+    },
+    "memory_variants": [
+      {
+        "briefing": "The generous peace at Lubeck had removed Denmark without opening a general settlement. The Catholic petitioners now pressed that victory and peace together should permit the old claims of the Church to be made good.",
+        "situation": "A decree might satisfy those claims; but the same paper might tell the Lutheran princes that moderation toward Denmark had been only a preparation for enforcement within the Empire."
+      },
+      {
+        "briefing": "The mandates in the hereditary lands had already made the Catholic restoration visible in churches, schools, offices, and noble houses. The question now arrived in imperial form.",
+        "situation": "To issue an Edict was to carry the hereditary method into the wider Empire; to delay was to disappoint those who had believed the victory had proved the method lawful."
+      },
+      {
+        "briefing": "The earlier willingness to accept submission by proxy in the Palatine matter had preserved a language of settlement. The restitution petitions now tried whether that restraint might survive a Catholic victory.",
+        "situation": "A broad Edict would reverse the tone of compromise. A narrower interpretation might keep the wavering Lutheran estates from treating every imperial paper as a threat."
+      }
+    ]
+  },
+  "card_threshold_army_arrears": {
+    "briefing": "Paymasters and colonels, creditors and allied agents, arrived with the same account in different hands. Soldiers might be promised discipline, but they could not be fed upon paper.",
+    "situation": "The question before the council was no longer how to finance a policy. It was which policy might survive the arrears.",
+    "options": {
+      "opt_threshold_shift_arrears_to_contributions": {
+        "label": "Authorize heavier contributions until the pay can be restored.",
+        "consequence": "The army kept its being by pressing the lands the harder. Every requisition made the emperor's war visible in barn, cellar, and town account."
+      },
+      "opt_threshold_reduce_commands_to_save_credit": {
+        "label": "Disband the unreliable companies and save the credit for the core army.",
+        "consequence": "The treasury breathed a little. The commanders protested, the allies doubted the army's reach, and the crown accepted a smaller instrument."
+      }
+    }
+  },
+  "card_threshold_treasury_bargain": {
+    "briefing": "The treasury was not rich, yet it could still answer a demand without granting land, or title, or command in the place of coin.",
+    "situation": "Money gave the court a kind of liberty that victory alone did not: the power to refuse some dangerous bargains.",
+    "options": {
+      "opt_threshold_pay_to_keep_command_free": {
+        "label": "Use the ready credit to keep the military rewards within ordinary grants.",
+        "consequence": "The officers grumbled less when they were paid, and fewer servants needed to be made princes. The treasury bought a constitutional quiet at a real cost."
+      },
+      "opt_threshold_hold_treasury_for_succession": {
+        "label": "Reserve the credit for the succession and for diplomacy.",
+        "consequence": "The court kept its money for the next bargain. The commanders marked that their accounts stood second to the business of the dynasty."
+      }
+    }
+  }
+}

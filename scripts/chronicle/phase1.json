@@ -1,0 +1,106 @@
+{
+  "card_1555_augsburg_settlement": {
+    "briefing": "In the year 1555 the estates of the Empire bound themselves at Augsburg to a peace meant to contain the confessional quarrel within the law rather than to end it. The Religious Peace of Augsburg granted recognition to Catholic and Lutheran estates alike beneath the public peace; it left to each territorial prince the ordering of religion in his own lands, and to the subject who could not conform the cold mercy of leave to depart rather than the sword. Of the Calvinists and the other Reformed the Peace of Augsburg said nothing at all.",
+    "situation": "Yet the same instrument left much exposed. By the Ecclesiastical Reservation a prelate who turned Protestant was to surrender his office and its lands; but the Protestant estates pointed to long possession — to schools, churches, chapters, and the settled practice of a generation now standing under the peace. The Catholic petitioners asked, year upon year, when the alienated lands and revenues of the Church would be restored to them. And so every disputed monastery, parish, free city, and mediate lordship waited upon a judgment that none dared to give.",
+    "options": {
+      "opt_augsburg_enforcement_inheritance": {
+        "label": "Press the strict letter of the settlement and move to close the disputed usages.",
+        "consequence": "The Catholic petitioners departed the court in the firmer hope that ancient rights would at last be heard. The Lutheran and mixed estates set their clerks to memorials of their own, warning that enforcement against settled custom would unsettle the very peace it claimed to guard."
+      },
+      "opt_augsburg_compromise_inheritance": {
+        "label": "Keep Augsburg a living compact, its gaps closed only by common consultation.",
+        "consequence": "The crown stood forth as guardian of the settlement rather than as master of its silences. The moderate estates kept their place at the table, while the Catholic reformers murmured that churches, revenues, and privileges were being withheld under the name of peace."
+      },
+      "opt_augsburg_deferred_inheritance": {
+        "label": "Let the disputed usages stand until a true complaint forces a ruling.",
+        "consequence": "No estate was made to yield that day, and the files lay open. In parish and consistory, in chapter and council, the local officers went on gathering their proofs against the next quarrel."
+      }
+    }
+  },
+  "card_1608_security_blocs": {
+    "briefing": "Two sealed reports came to the court within the year. From Auhausen word arrived that the Palatine councillors and the Protestant estates had sworn a Protestant Union — a bond of correspondence, mutual aid, free transit, and contribution for members who held that the ordinary remedies of the Empire no longer kept them safe. From Munich came the Catholic answer: the ecclesiastical princes had bound themselves into a Catholic League beneath Maximilian of Bavaria.",
+    "situation": "Each association wrote in the language of protection and the public peace, not of open defiance. Their articles spoke of counsel, of compensation, of lawful process, of aid only in the hour of danger. Yet each letter named also its commanders, its treasuries, its quotas and its warnings, and claimed the right to march when delay should threaten land and people.",
+    "options": {
+      "opt_leagues_constitutional_insurance": {
+        "label": "Suffer the leagues as passing instruments, held within imperial law.",
+        "consequence": "The associations kept their language careful and went on professing obedience. They kept also their correspondence, their treasuries, and their pledges of aid — as men who reckoned that imperial justice might come too late."
+      },
+      "opt_leagues_suppress_faction": {
+        "label": "Condemn the leagues as unlawful factions against the public peace.",
+        "consequence": "The court spoke again in the old language of the Landfrieden. Union and League alike returned answer that their oaths were sworn for defence, and that the slowness of the imperial courts had left their lands exposed."
+      },
+      "opt_leagues_catholic_counterweight": {
+        "label": "Treat the Catholic League as the needful answer to Protestant union.",
+        "consequence": "The Catholic prelates wrote to Munich with the greater confidence, and Bavarian direction became the natural channel of armed Catholic aid. The emperor gained a shield, but one held in another prince's hand."
+      }
+    },
+    "memory_variants": [
+      {
+        "briefing": "The report from Auhausen read as a direct answer to every strict construction of Augsburg: the Palatine councillors and the Protestant estates now promised one another correspondence, transit, contribution, and aid before any court could weigh their danger. The Munich papers answered from the Catholic side, setting a League of ecclesiastical princes beneath Maximilian of Bavaria.",
+        "situation": "The strict line lately taken at court gave the Catholic petitioners confidence that old rights might be pressed; it sharpened, too, the Protestant claim that the ordinary remedies had grown unsafe. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
+      },
+      {
+        "briefing": "The reports from Auhausen and Munich came as warnings that consultation alone could no longer hold confessional fear within the ordinary institutions. The Palatine councillors and Protestant estates had sealed a Protestant Union for correspondence, transit, contribution, and defence. The Catholic ecclesiastical princes answered from Munich, binding themselves to a League beneath Maximilian of Bavaria.",
+        "situation": "The court's earlier restraint kept a language of moderation within reach, yet it also made the two leagues the harder to condemn together. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
+      },
+      {
+        "briefing": "The reports from Auhausen and Munich arrived beside a swelling file of unanswered petitions. The Palatine councillors and Protestant estates had sealed a Protestant Union for correspondence, transit, contribution, and defence. The Catholic ecclesiastical princes answered from Munich, binding themselves to a League beneath Maximilian of Bavaria.",
+        "situation": "The refusal to force every disputed usage to an immediate judgment spared the Empire a single provocation, but it left each estate to measure its own danger. Each association professed service to the public peace; each named also its commanders, treasuries, quotas, and warnings, and the right to move when delay threatened land and people."
+      }
+    ]
+  },
+  "card_1609_letter_of_majesty": {
+    "briefing": "Copies of Rudolf's Letter of Majesty passed through Prague and the provincial diets. The Protestant estates held up its very words whenever they spoke of their churches and schools, their consistories and defenders, and the free exercise of religion granted them beneath the royal seal.",
+    "situation": "The royal councillors answered with distinctions — over crown lands, over ecclesiastical lordships, over the proper bounds of the charter. The Bohemian estates replied that a promise once entered among the kingdom's liberties could not be pared away by officials without loosening the obedience owed to the crown itself.",
+    "options": {
+      "opt_majesty_broad_charter": {
+        "label": "Uphold the Letter as a broad charter of Bohemian estate liberty.",
+        "consequence": "The Protestant estates took the royal answer as proof that obedience and chartered worship might stand together. The Catholic councillors and clergy saw instead a written wall raised before any restoration in one of the chief kingdoms of the house of Habsburg."
+      },
+      "opt_majesty_narrow_reading": {
+        "label": "Read the Letter narrowly wherever royal and ecclesiastical rights are touched.",
+        "consequence": "The royal officials went forward upon a defensible distinction in law. The Protestant directors copied the same order into their book of grievances, as proof that the charter was being emptied while its seal still hung in view."
+      },
+      "opt_majesty_avoid_clarification": {
+        "label": "Give no formal ruling, and leave local practice to bear the strain.",
+        "consequence": "No order compelled a retreat that season. Parish officers and noble patrons, royal judges and appointed defenders, all went on acting upon rival readings of one and the same royal paper."
+      }
+    }
+  },
+  "card_1598_styrian_reform": {
+    "briefing": "Out of Graz came the papers of an earlier victory. In Inner Austria the Archduke Ferdinand had seen Protestant schools shut, their preachers driven out, the town councils remade, and Catholic men set once more in every office — all beneath the cover of the prince's acknowledged right.",
+    "situation": "The Estates had not thereby vanished. They withheld their taxes, sent up petitions, threatened to emigrate, and in the end for the most part remained. The lesson carried forward was the more dangerous because it seemed to have answered: prepare in patience, divide the provinces, keep within a narrow reading of the law, and strike only when conscience and counsel stood agreed.",
+    "options": {
+      "opt_styrian_reform_commission": {
+        "label": "Trust the Styrian method — legal commissions, Catholic office, and force at need.",
+        "consequence": "The archduke's confidence hardened into doctrine. Restoration might now be imagined as obedience to the law rather than as innovation against it."
+      },
+      "opt_styrian_slow_patronage": {
+        "label": "Work by patronage and Catholic appointment, sparing the spectacle of expulsion.",
+        "consequence": "The Catholic recovery went forward more quietly. The zealous among the counsellors asked whether such caution had not become surrender."
+      },
+      "opt_styrian_estate_compact": {
+        "label": "Seek a fresh compact with the estates before renewing the commission.",
+        "consequence": "The Estates gained a language of consent. The archduke gained fewer enemies, and a conscience less certain of itself."
+      }
+    }
+  },
+  "card_1617_bohemian_enforcement": {
+    "briefing": "Petitions out of Bohemia named Braunau and Klostergrab. Protestant worshippers complained that their churches there had been closed and pulled down; the royal officials answered that the Letter of Majesty did not shelter every disputed site. What had begun as a quarrel of local lordship was carried now into the high language of crown, estate, and privilege.",
+    "situation": "Ferdinand had by this time been received as king of Bohemia, and every answer bore upon the reign to come. The Catholic councillors pressed for enforcement and the vindication of royal and ecclesiastical right. The Protestant defenders warned that arrests and closures and royal judges would prove that the charter could be narrowed by procedure though it were never once revoked.",
+    "options": {
+      "opt_1617_strict_enforcement": {
+        "label": "Confirm the strict legal line; uphold the closures, the arrests, the royal judges.",
+        "consequence": "The Catholic officials and clergy reported that the new king would not draw back from enforcement. The Bohemian Protestants bore the orders into their assemblies as evidence that the law itself was being turned to narrow the charter by which they still professed obedience."
+      },
+      "opt_1617_controlled_clarification": {
+        "label": "Suspend enforcement at the disputed sites and call for an ordered clarification in law.",
+        "consequence": "The petitioners could still tell their assemblies that procedure carried force. The Catholic allies heard hesitation in a prince whose whole reputation rested upon restoring the rights they held usurped."
+      },
+      "opt_1617_klesl_moderation": {
+        "label": "Let Klesl and the moderates seek a settlement, the royal claims reserved.",
+        "consequence": "Envoys and councillors kept a channel open, and neither side was yet made to confess defeat. Ferdinand's harder friends saw only delay; the more radical of the Bohemian directors gained the time to ready their own answer."
+      }
+    }
+  }
+}

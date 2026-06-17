@@ -206,7 +206,7 @@ describe("game engine", () => {
     );
     const entry = next.log.at(-1)!;
 
-    expect(entry.aftermath).toContain("The court appears as guardian");
+    expect(entry.aftermath).toContain("guardian of the settlement");
     expect(entry.aftermath).not.toMatch(/Consequences carried forward|[+-]\d/);
     expect(entry.aftermath_bullets.length).toBeGreaterThanOrEqual(3);
     expect(entry.aftermath_bullets.join(" ")).toMatch(
@@ -317,7 +317,7 @@ describe("game engine", () => {
     expect(nextCard?.briefing).toMatch(/Munich/i);
     expect(nextCard?.briefing).toMatch(/Catholic League|League/i);
     expect(nextCard?.briefing).not.toMatch(/^Because|Because the court has chosen/i);
-    expect(nextCard?.situation).toMatch(/your earlier caution/i);
+    expect(nextCard?.situation).toMatch(/earlier restraint/i);
   });
 
   it("can create or suppress future dispatches from prior choices", () => {

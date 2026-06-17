@@ -50,12 +50,12 @@ describe("Empire in Ashes app", () => {
     expect(screen.queryByRole("button", { name: /designer view/i })).not.toBeInTheDocument();
 
     fireEvent.click(
-      screen.getByRole("button", { name: /preserve Augsburg as a living compact/i }),
+      screen.getByRole("button", { name: /Keep Augsburg a living compact/i }),
     );
 
     expect(screen.getByText(/aftermath/i)).toBeInTheDocument();
     expect(screen.queryByText(/leagues of protection/i)).not.toBeInTheDocument();
-    expect(screen.getAllByText(/The court appears as guardian/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/guardian of the settlement/i).length).toBeGreaterThan(0);
     const aftermathBullets = container.querySelector(".aftermath-bullets");
     expect(aftermathBullets).toBeInTheDocument();
     expect(aftermathBullets?.textContent).toMatch(
@@ -68,9 +68,9 @@ describe("Empire in Ashes app", () => {
     fireEvent.click(screen.getByRole("button", { name: /proceed to the next decision/i }));
 
     expect(screen.getByText(/leagues of protection/i)).toBeInTheDocument();
-    expect(screen.getByText(/your earlier caution/i)).toBeInTheDocument();
+    expect(screen.getByText(/earlier restraint/i)).toBeInTheDocument();
     expect(screen.queryByText(/because the court has chosen/i)).not.toBeInTheDocument();
-    expect(screen.getByText(/Tolerate the leagues as temporary instruments/i)).toBeInTheDocument();
+    expect(screen.getByText(/Suffer the leagues as passing instruments/i)).toBeInTheDocument();
     expect(screen.queryByText(/aftermath/i)).not.toBeInTheDocument();
   });
 
@@ -79,7 +79,7 @@ describe("Empire in Ashes app", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
     fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
-    fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Religious Peace of Augsburg/i }));
 
     expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
     expect(screen.getByText(/Religious and constitutional settlement/i)).toBeInTheDocument();
