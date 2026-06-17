@@ -95,8 +95,14 @@ for (const arg of args) {
           errors.push(`option ${optId} not in card ${id} (in ${arg})`);
           continue;
         }
-        for (const f of ["label", "consequence"]) {
+        for (const f of ["label", "consequence", "unavailable_text"]) {
           if (typeof optPatch[f] === "string" && optPatch[f].trim()) option[f] = optPatch[f];
+        }
+        for (const f of ["requires_memory_tags", "excludes_memory_tags", "requires_pressures"]) {
+          if (Array.isArray(optPatch[f])) option[f] = optPatch[f];
+        }
+        if (typeof optPatch.hidden_when_unavailable === "boolean") {
+          option.hidden_when_unavailable = optPatch.hidden_when_unavailable;
         }
       }
     }

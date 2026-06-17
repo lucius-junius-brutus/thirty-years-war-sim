@@ -1,0 +1,38 @@
+{
+  "cards": {
+    "card_1555_augsburg_settlement": {
+      "briefing": "The estates of the Holy Roman Empire have agreed to disagree by law. The Peace of Augsburg, sworn in 1555, brings Catholics and Lutherans together under one public peace and leaves each prince to set the religion of his own territory; subjects who will not conform are free only to sell their goods and leave. It is a settlement built to freeze a quarrel in place rather than to resolve it — and it says nothing at all about the Calvinists, whose numbers are quietly growing.",
+      "situation": "The danger lies in the gaps. One clause, the Ecclesiastical Reservation, requires that any bishop or abbot who turns Protestant surrender his lands so that they stay Catholic — but the Lutherans have never accepted it, and go on installing Protestant administrators over church territories regardless. So many of these lands have now slipped into Protestant hands that the Catholic majority in the imperial Diet itself is at risk. Each disputed abbey and bishopric is a lawsuit waiting to turn into a war."
+    },
+    "card_1598_styrian_reform": {
+      "briefing": "Styria comes first. As archduke of Inner Austria, Ferdinand rules five provinces whose nobility and towns are overwhelmingly Lutheran — in Styria itself, only five noble families in 135 have stayed Catholic. Jesuit-educated and newly back from a pilgrimage to Rome, he means to win them all back.",
+      "situation": "His method is patience, not the mob. He has revived the reform commission, summoned the three Estates separately so they cannot combine, and forced a Catholic onto each governing committee. Where law will not serve, force does: officials tortured into surrendering the school at Graz, an 800-man garrison at the commissioners' backs, and Bishop Brenner — the 'hammer of heretics' — touring the towns to expel pastors, close schools, and pull down churches, one of them blown up with gunpowder at Eisenerz. The Estates withhold their taxes and threaten to emigrate; most, in the end, stay and conform. The lesson is dangerous precisely because it works."
+    },
+    "card_1608_security_blocs": {
+      "briefing": "The machinery for keeping the imperial peace has seized up: this year's Diet has broken up without agreement for the first time in living memory, and the high court has stopped functioning. Despairing of the old institutions, the Protestant princes act alone. Days after the Diet collapses, a group led by the Palatinate meets at Auhausen and swears a Protestant Union — a standing alliance of mutual defence, contribution, and aid. From Munich the Catholic princes answer with a League of their own under Maximilian of Bavaria.",
+      "situation": "Both alliances speak the careful language of self-defence, not rebellion. Their charters promise only counsel, compensation, and aid in the hour of danger — yet each also names commanders, treasuries, and quotas, and claims the right to march when the law moves too slowly. Neither will enrol more than half its confession; the great Lutheran elector of Saxony, distrusting the Calvinist Palatinate, stands aloof from both. For the first time the Empire is arming itself in two camps under cover of the public peace.",
+      "memory_variants": [
+        {
+          "briefing": "Coming so soon after the crown has pressed the strict letter of Augsburg, the news from Auhausen reads like a direct reply: the Palatinate and the Protestant estates now bind themselves to mutual aid before any court can weigh their danger. From Munich the Catholic princes answer with a League under Maximilian of Bavaria.",
+          "situation": "The strict line lately taken at court gives the Catholic side confidence — and gives the Protestants their argument that the ordinary remedies are no longer safe. Each alliance professes service to the public peace; each also names its commanders, treasuries, and quotas, and claims the right to march when delay threatens land and people."
+        },
+        {
+          "briefing": "The reports from Auhausen and Munich arrive as proof that consultation alone can no longer hold confessional fear inside the old institutions. The Palatinate and the Protestant estates have sealed a Protestant Union for mutual defence; from Munich the Catholic princes answer with a League under Maximilian of Bavaria.",
+          "situation": "The court's earlier restraint keeps a language of moderation within reach, but it also makes the two leagues harder to condemn together. Each alliance professes service to the public peace; each also names its commanders, treasuries, and quotas, and claims the right to march when delay threatens land and people."
+        },
+        {
+          "briefing": "The reports from Auhausen and Munich arrive atop a growing file of unanswered petitions. The Palatinate and the Protestant estates have sealed a Protestant Union for mutual defence; from Munich the Catholic princes answer with a League under Maximilian of Bavaria.",
+          "situation": "Leaving the disputed lands unjudged spares the Empire a single provocation, but it leaves every estate to measure its own danger. Each alliance professes service to the public peace; each also names its commanders, treasuries, and quotas, and claims the right to march when delay threatens land and people."
+        }
+      ]
+    },
+    "card_1609_letter_of_majesty": {
+      "briefing": "In Bohemia the crown's weakness is the Protestants' opportunity. With the ageing Emperor Rudolf locked in a ruinous struggle against his brother Matthias, the Protestant estates have forced their way into his palace and wrung from him the Letter of Majesty — a charter granting the lords, knights, and royal towns the free choice of religion, the right to build churches and schools, and a standing committee of Defensors to guard these liberties. Among the militants who extract it is Count Thurn, rewarded with the keepership of the crown jewels.",
+      "situation": "The charter has created, in effect, a Protestant government beside the Catholic one. Royal councillors already read it narrowly — drawing distinctions over crown land, over church lordships, over the exact reach of its words. The estates answer that a promise entered among the kingdom's fundamental liberties cannot be whittled away by officials without dissolving the obedience owed to the crown itself. Every clause is now a frontier."
+    },
+    "card_1617_bohemian_enforcement": {
+      "briefing": "Ferdinand has been accepted as king of Bohemia — only two delegates voted against him — and he has confirmed the Letter of Majesty, believing he is keeping it. His officials think otherwise. They have closed a Protestant church at Braunau and pulled another down at Klostergrab, arguing that the charter does not cover worship on Catholic-owned land; they have arrested the petitioners who complained, and set royal judges over the parishes' funds.",
+      "situation": "To Count Thurn and the Defensors, these are not isolated cases but the charter being dismantled clause by clause — and Thurn has a grievance of his own, for Ferdinand has stripped him of the keepership of the crown jewels. Every royal answer now bears on the reign to come. The Catholic councillors urge firmness and the vindication of royal rights; the Protestant defenders warn that arrests and demolitions and royal judges will prove the Letter of Majesty can be hollowed out by procedure without ever being revoked."
+    }
+  }
+}
