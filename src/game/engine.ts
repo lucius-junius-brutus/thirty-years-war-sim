@@ -428,40 +428,40 @@ function describeImmediateEffects(option: CardOptionRecord) {
 
 function composeAftermathBullets(
   impactNotes: string[],
-  docketChanges: DocketChange[],
+  _docketChanges: DocketChange[],
 ) {
-  return [
-    ...impactNotes.slice(0, 3),
-    ...describeDocketChangeBullets(docketChanges),
-  ].slice(0, 4);
+  // Docket changes are surfaced separately as "fork" lines in the UI, so the
+  // aftermath bullets stay focused on the immediate consequences of the choice.
+  return impactNotes.slice(0, 4);
 }
 
-function describeDocketChangeBullets(changes: DocketChange[]) {
-  const added = changes.filter((change) => change.kind === "added");
-  const removed = changes.filter((change) => change.kind === "removed");
-  const bullets: string[] = [];
+export interface CounterfactualLedgerEntry {
+  date_label: string;
+  title: string;
+  chosen_label: string;
+  historical_label: string | null;
+  diverged: boolean;
+}
 
-  if (added.length === 1) {
-    bullets.push(
-      `A new report now enters the file: ${added[0].date_label}, ${added[0].title}.`,
-    );
-  } else if (added.length > 1) {
-    bullets.push(
-      `New reports now enter the file, beginning with ${added[0].date_label}, ${added[0].title}.`,
-    );
-  }
+export function buildCounterfactualLedger(
+  database: GameDatabase,
+  state: GameState,
+): CounterfactualLedgerEntry[] {
+  return state.log.map((entry) => {
+    const card = database.cards.find((item) => item.id === entry.card_id);
+    const options = card?.options ?? [];
+    const chosen = options.find((option) => option.id === entry.option_id);
+    const historical = options.find((option) => option.historical_option === true);
+    const chosenIsHistorical = chosen?.historical_option === true;
 
-  if (removed.length === 1) {
-    bullets.push(
-      `${removed[0].date_label}, ${removed[0].title}, no longer comes forward in the same form.`,
-    );
-  } else if (removed.length > 1) {
-    bullets.push(
-      `Several expected papers fall away from the docket, including ${removed[0].date_label}, ${removed[0].title}.`,
-    );
-  }
-
-  return bullets;
+    return {
+      date_label: entry.date_label,
+      title: entry.title,
+      chosen_label: entry.choice,
+      historical_label: historical ? historical.label : null,
+      diverged: Boolean(historical) && !chosenIsHistorical,
+    };
+  });
 }
 
 function describeMemoryTags(tags: string[] = [], seed: string) {

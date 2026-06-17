@@ -7,6 +7,7 @@ import type {
   DossierRecord,
 } from "./domain/types";
 import {
+  buildCounterfactualLedger,
   chooseOption,
   createInitialGameState,
   getCurrentCard,
@@ -20,6 +21,21 @@ import {
 import { clearGame, loadGame, saveGame } from "./game/save";
 
 const defaultRoleId = "role_ferdinand_ii";
+
+const woodcutByPhase: Record<string, string> = {
+  phase_prewar_settlement: "woodcut-eagle.svg",
+  phase_prague_succession: "woodcut-eagle.svg",
+  phase_bohemian_revolt: "woodcut-town.svg",
+  phase_palatinate_consolidation: "woodcut-town.svg",
+  phase_restitution_overreach: "woodcut-town.svg",
+  phase_danish_wallenstein: "woodcut-host.svg",
+  phase_swedish_wallenstein_crisis: "woodcut-host.svg",
+};
+
+function woodcutFor(phaseId: string) {
+  const file = woodcutByPhase[phaseId] ?? "woodcut-town.svg";
+  return `${import.meta.env.BASE_URL}assets/${file}`;
+}
 
 function App() {
   const [state, setState] = useState<GameState>(() => {
@@ -113,7 +129,10 @@ function App() {
       ) : (
         <section className="desk-grid" aria-label="Political desk">
           <aside className="side-panel">
-            <PressurePanel state={state} />
+            <PressurePanel
+              state={state}
+              delta={showAftermath ? latestEntry?.pressure_delta : undefined}
+            />
             {designerEnabled ? (
               <button
                 className="quiet-button side-toggle"
@@ -161,6 +180,12 @@ function FerdinandPrelude({
   return (
     <section className="prelude-screen" aria-label="Ferdinand II's position">
       <article className="prelude-card">
+        <img
+          className="woodcut-band"
+          src={`${import.meta.env.BASE_URL}assets/woodcut-eagle.svg`}
+          alt=""
+          aria-hidden="true"
+        />
         <div className="dispatch-meta">
           <span>Historical position</span>
           <span>Before play begins</span>
@@ -283,7 +308,13 @@ function RoleSelect({
   );
 }
 
-function PressurePanel({ state }: { state: GameState }) {
+function PressurePanel({
+  state,
+  delta,
+}: {
+  state: GameState;
+  delta?: Partial<Record<string, number>>;
+}) {
   return (
     <section className="pressure-panel">
       <div className="panel-title">
@@ -293,11 +324,21 @@ function PressurePanel({ state }: { state: GameState }) {
       {gameDatabase.game_variables.map((variable) => {
         const value = state.pressures[variable.id];
         const danger = variable.high_is_dangerous ? value >= 65 : value < 35;
+        const change = delta?.[variable.id] ?? 0;
         return (
-          <div className="pressure" key={variable.id}>
+          <div className={change ? "pressure changed" : "pressure"} key={variable.id}>
             <div className="pressure-row">
               <span>{variable.name}</span>
-              <b className={danger ? "danger" : ""}>{value}</b>
+              <span className="pressure-amount">
+                {change ? (
+                  <span
+                    className={`pressure-delta show ${change > 0 ? "up" : "down"}`}
+                  >
+                    {change > 0 ? `+${change}` : change}
+                  </span>
+                ) : null}
+                <b className={danger ? "danger" : ""}>{value}</b>
+              </span>
             </div>
             <div className="meter" aria-hidden="true">
               <div
@@ -328,6 +369,12 @@ function EventCard({
 
   return (
     <article className="event-card">
+      <img
+        className="woodcut-band"
+        src={woodcutFor(card.phase_id)}
+        alt=""
+        aria-hidden="true"
+      />
       <div className="dispatch-meta">
         <span>Report received</span>
         <span>Dated: {card.date_label}</span>
@@ -352,7 +399,11 @@ function EventCard({
           const availability = getOptionAvailability(option, state);
           return (
             <button
-              className="choice-button"
+              className={
+                option.historical_option
+                  ? "choice-button recorded"
+                  : "choice-button"
+              }
               disabled={!availability.available}
               key={option.id}
               type="button"
@@ -535,6 +586,16 @@ function AftermathPanel({
           ))}
         </ul>
       ) : null}
+      {entry.docket_changes?.map((change) => (
+        <p
+          className={change.kind === "added" ? "fork-line opens" : "fork-line closes"}
+          key={`${change.kind}-${change.date_label}-${change.title}`}
+        >
+          {change.kind === "added"
+            ? `A door opens — ${change.date_label}, ${change.title} now enters the record.`
+            : `A door closes — ${change.date_label}, ${change.title} will not come forward in the same form.`}
+        </p>
+      ))}
       <button className="choice-button continue-button" type="button" onClick={onContinue}>
         <span>Continue</span>
         Proceed to the next decision
@@ -573,6 +634,7 @@ function OutcomePanel({
           </ul>
         </div>
       ) : null}
+      <CounterfactualLedger state={state} />
       <p className="situation">
         The reign closes with {state.log.length} recorded acts in the docket.
       </p>
@@ -591,6 +653,62 @@ function OutcomePanel({
         Begin again from Augsburg
       </button>
     </article>
+  );
+}
+
+function CounterfactualLedger({ state }: { state: GameState }) {
+  const ledger = buildCounterfactualLedger(gameDatabase, state);
+  if (ledger.length === 0) {
+    return null;
+  }
+  const divergences = ledger.filter((row) => row.diverged).length;
+
+  return (
+    <section className="outcome-path" aria-label="The road taken against the record">
+      <h3>The road taken against the record</h3>
+      <p className="situation">
+        {divergences === 0
+          ? "At every recorded fork, the reign held to the course history attests."
+          : `At ${divergences} ${divergences === 1 ? "turn" : "turns"}, the reign departed from the course history attests — proof that it could have run otherwise.`}
+      </p>
+      <div className="outcome-ledger">
+        {ledger.map((row) => (
+          <div
+            className={row.diverged ? "ledger-row diverged" : "ledger-row"}
+            key={`${row.date_label}-${row.title}`}
+          >
+            <div className="ledger-head">
+              <span>
+                {row.date_label} — {row.title}
+              </span>
+              <span>
+                {row.historical_label
+                  ? row.diverged
+                    ? "Departed from the record"
+                    : "As it happened"
+                  : "No recorded course"}
+              </span>
+            </div>
+            <div className="ledger-cols">
+              <div className={row.diverged ? "ledger-col" : "ledger-col kept"}>
+                <strong>The course taken</strong>
+                <span>{row.chosen_label}</span>
+              </div>
+              <div className="ledger-col">
+                <strong>What history records</strong>
+                <span>
+                  {row.historical_label
+                    ? row.diverged
+                      ? row.historical_label
+                      : "The same course."
+                    : "The field was open; no single course was forced."}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

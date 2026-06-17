@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 132" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a burning town beneath a smoke-darkened sky">
+  <rect width="400" height="132" fill="#cdbb92"/>
+  <g stroke="#18110e" stroke-width="1.1" opacity="0.4">
+    <line x1="8" y1="6" x2="44" y2="22"/><line x1="56" y1="4" x2="92" y2="24"/>
+    <line x1="110" y1="8" x2="146" y2="26"/><line x1="250" y1="4" x2="286" y2="24"/>
+    <line x1="300" y1="8" x2="336" y2="26"/><line x1="350" y1="4" x2="392" y2="22"/>
+  </g>
+  <path d="M168 30 q9 -18 22 -11 q-2 -16 16 -13 q16 -11 24 7 q18 -2 11 18 q15 9 -5 18 q3 18 -20 11 q-11 13 -24 0 q-18 4 -13 -16 q-13 -9 0 -20z" fill="#3a322a" stroke="#18110e" stroke-width="1.4"/>
+  <path d="M214 22 q7 -13 17 -8 q-2 -11 12 -9 q12 -8 18 5 q13 -1 8 13 q11 6 -4 13" fill="#4a4036" stroke="#18110e" stroke-width="1.1"/>
+  <g fill="#18110e">
+    <rect x="36" y="80" width="38" height="34"/><polygon points="34,80 55,62 76,80"/>
+    <rect x="86" y="68" width="30" height="46"/><polygon points="84,68 101,50 118,68"/>
+    <rect x="126" y="76" width="34" height="38"/><polygon points="124,76 143,58 162,76"/>
+    <rect x="250" y="72" width="32" height="42"/><polygon points="248,72 266,54 284,72"/>
+    <rect x="292" y="82" width="46" height="32"/><polygon points="290,82 315,64 340,82"/>
+    <rect x="348" y="78" width="38" height="36"/><polygon points="346,78 367,60 388,78"/>
+    <rect x="192" y="44" width="22" height="70"/><polygon points="190,44 203,24 216,44"/>
+    <rect x="201" y="16" width="4" height="12"/><rect x="199" y="20" width="8" height="3"/>
+  </g>
+  <g stroke="#cdbb92" stroke-width="2">
+    <line x1="48" y1="92" x2="64" y2="92"/><line x1="48" y1="100" x2="64" y2="100"/>
+    <line x1="94" y1="80" x2="108" y2="80"/><line x1="94" y1="92" x2="108" y2="92"/>
+    <line x1="134" y1="86" x2="150" y2="86"/><line x1="258" y1="84" x2="272" y2="84"/>
+    <line x1="302" y1="94" x2="320" y2="94"/><line x1="358" y1="90" x2="374" y2="90"/>
+    <line x1="198" y1="60" x2="208" y2="60"/><line x1="198" y1="74" x2="208" y2="74"/>
+  </g>
+  <line x1="0" y1="114" x2="400" y2="114" stroke="#18110e" stroke-width="3"/>
+  <g stroke="#18110e" stroke-width="1" opacity="0.55">
+    <line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="126" x2="400" y2="126"/>
+  </g>
+  <g stroke="#18110e" stroke-width="2.4">
+    <line x1="346" y1="114" x2="346" y2="66"/><line x1="356" y1="114" x2="356" y2="60"/>
+    <line x1="366" y1="114" x2="366" y2="68"/><line x1="376" y1="114" x2="376" y2="62"/>
+  </g>
+</svg>
