@@ -32,7 +32,10 @@ export interface DocketChange {
 
 export interface GameState {
   roleId: string;
-  cardIndex: number;
+  // Ids of cards already resolved (chosen on). The "current" card is the first
+  // eligible card not in this set, so newly-unlocked cards are never skipped by
+  // a stale positional index.
+  resolved_card_ids: string[];
   pressures: PressureMap;
   memory_tags: string[];
   log: GameLogEntry[];
@@ -88,7 +91,7 @@ export function createInitialGameState(
   const role = getRole(database, roleId);
   return {
     roleId,
-    cardIndex: 0,
+    resolved_card_ids: [],
     pressures: { ...role.initial_pressures },
     memory_tags: [],
     log: [],
@@ -139,7 +142,11 @@ export function getCurrentCard(
   if (state.completed) {
     return null;
   }
-  return getCardsForRole(database, state)[state.cardIndex] ?? null;
+  const resolved = new Set(state.resolved_card_ids);
+  return (
+    getCardsForRole(database, state).find((card) => !resolved.has(card.id)) ??
+    null
+  );
 }
 
 export function chooseOption(
@@ -167,24 +174,26 @@ export function chooseOption(
   const pressures = applyEffects(state.pressures, option.effects);
   const memoryTags = mergeMemoryTags(state.memory_tags, option.memory_tags);
   const previousCards = getCardsForRole(database, state);
-  const nextIndex = state.cardIndex + 1;
+  const resolvedCardIds = [...state.resolved_card_ids, currentCard.id];
   const nextState = {
     ...state,
-    cardIndex: nextIndex,
+    resolved_card_ids: resolvedCardIds,
     pressures,
     memory_tags: memoryTags,
   };
   const cards = getCardsForRole(database, nextState);
+  const resolved = new Set(resolvedCardIds);
+  const remaining = cards.filter((card) => !resolved.has(card.id));
   const impactNotes = describeImmediateEffects(option);
   const docketChanges = getDocketChanges(previousCards, cards, currentCard.id);
   const aftermathBullets = composeAftermathBullets(impactNotes, docketChanges);
 
   return {
     ...state,
-    cardIndex: nextIndex,
+    resolved_card_ids: resolvedCardIds,
     pressures,
     memory_tags: memoryTags,
-    completed: nextIndex >= cards.length,
+    completed: remaining.length === 0,
     log: [
       ...state.log,
       {
@@ -238,12 +247,15 @@ export function getDesignerReport(
   const visibleCards = getCardsForRole(database, state);
   const currentCard = getCurrentCard(database, state);
   const visibleIds = new Set(visibleCards.map((card) => card.id));
+  const resolved = new Set(state.resolved_card_ids);
   const roleCards = database.cards.filter((card) => card.role_id === state.roleId);
 
   return {
     current_card_id: currentCard?.id ?? null,
     visible_card_ids: visibleCards.map((card) => card.id),
-    remaining_cards: visibleCards.slice(state.cardIndex).map(toDesignerCard),
+    remaining_cards: visibleCards
+      .filter((card) => !resolved.has(card.id))
+      .map(toDesignerCard),
     skipped_cards: roleCards
       .filter((card) => !visibleIds.has(card.id))
       .map((card) => ({

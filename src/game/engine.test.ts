@@ -10,7 +10,21 @@ import {
   getOptionAvailability,
   getOptionsForCard,
   scoreOutcome,
+  type GameState,
 } from "./engine";
+
+function seekTo(
+  database: typeof gameDatabase,
+  state: GameState,
+  cardId: string,
+): GameState {
+  const deck = getCardsForRole(database, state);
+  const index = deck.findIndex((card) => card.id === cardId);
+  return {
+    ...state,
+    resolved_card_ids: deck.slice(0, index).map((card) => card.id),
+  };
+}
 
 describe("game engine", () => {
   it("starts Ferdinand II with Wilson's prewar settlement frame before Prague", () => {
@@ -65,12 +79,7 @@ describe("game engine", () => {
 
   it("makes a useful decision create new problems", () => {
     const initial = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const state = {
-      ...initial,
-      cardIndex: getCardsForRole(gameDatabase, initial).findIndex(
-        (card) => card.id === "card_1620_bavarian_army",
-      ),
-    };
+    const state = seekTo(gameDatabase, initial, "card_1620_bavarian_army");
     const card = getCurrentCard(gameDatabase, state);
     expect(card).toBeTruthy();
 
@@ -390,15 +399,13 @@ describe("game engine", () => {
 
   it("lets Wilson-backed alternatives rewrite the later sequence", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const kleslCardIndex = getCardsForRole(gameDatabase, state).findIndex(
-      (card) => card.id === "card_1618_remove_klesl",
-    );
-    const kleslCard = getCardsForRole(gameDatabase, state)[kleslCardIndex];
+    const kleslState = seekTo(gameDatabase, state, "card_1618_remove_klesl");
+    const kleslCard = getCurrentCard(gameDatabase, kleslState)!;
     expect(kleslCard).toBeTruthy();
 
     const afterRetainingKlesl = chooseOption(
       gameDatabase,
-      { ...state, cardIndex: kleslCardIndex },
+      kleslState,
       kleslCard.id,
       "opt_keep_klesl_negotiating",
     );
@@ -413,7 +420,7 @@ describe("game engine", () => {
 
     const afterRemovingKlesl = chooseOption(
       gameDatabase,
-      { ...state, cardIndex: kleslCardIndex },
+      kleslState,
       kleslCard.id,
       "opt_remove_klesl_decisively",
     );
@@ -426,13 +433,11 @@ describe("game engine", () => {
 
   it("records when a choice adds later dispatches to the docket", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const kleslCardIndex = getCardsForRole(gameDatabase, state).findIndex(
-      (card) => card.id === "card_1618_remove_klesl",
-    );
-    const kleslCard = getCardsForRole(gameDatabase, state)[kleslCardIndex];
+    const kleslState = seekTo(gameDatabase, state, "card_1618_remove_klesl");
+    const kleslCard = getCurrentCard(gameDatabase, kleslState)!;
     const afterRetainingKlesl = chooseOption(
       gameDatabase,
-      { ...state, cardIndex: kleslCardIndex },
+      kleslState,
       kleslCard.id,
       "opt_keep_klesl_negotiating",
     );
@@ -484,13 +489,11 @@ describe("game engine", () => {
 
   it("makes early league policy change the later Bavarian bargain wording", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const leagueIndex = getCardsForRole(gameDatabase, state).findIndex(
-      (card) => card.id === "card_1608_security_blocs",
-    );
-    const leagueCard = getCardsForRole(gameDatabase, state)[leagueIndex];
+    const leagueState = seekTo(gameDatabase, state, "card_1608_security_blocs");
+    const leagueCard = getCurrentCard(gameDatabase, leagueState)!;
     const afterCatholicLeague = chooseOption(
       gameDatabase,
-      { ...state, cardIndex: leagueIndex },
+      leagueState,
       leagueCard.id,
       "opt_leagues_catholic_counterweight",
     );
@@ -641,13 +644,11 @@ describe("game engine", () => {
 
   it("explains hidden cards and locked options for the private designer view", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const kleslCardIndex = getCardsForRole(gameDatabase, state).findIndex(
-      (card) => card.id === "card_1618_remove_klesl",
-    );
-    const kleslCard = getCardsForRole(gameDatabase, state)[kleslCardIndex];
+    const kleslState = seekTo(gameDatabase, state, "card_1618_remove_klesl");
+    const kleslCard = getCurrentCard(gameDatabase, kleslState)!;
     const afterRetainingKlesl = chooseOption(
       gameDatabase,
-      { ...state, cardIndex: kleslCardIndex },
+      kleslState,
       kleslCard.id,
       "opt_keep_klesl_negotiating",
     );
@@ -664,12 +665,8 @@ describe("game engine", () => {
       }),
     );
 
-    const electoralTransferIndex = getCardsForRole(gameDatabase, state).findIndex(
-      (card) => card.id === "card_1623_electoral_transfer",
-    );
     const dependentState = {
-      ...state,
-      cardIndex: electoralTransferIndex,
+      ...seekTo(gameDatabase, state, "card_1623_electoral_transfer"),
       pressures: {
         ...state.pressures,
         military_dependence: 82,
@@ -714,5 +711,65 @@ describe("game engine", () => {
     expect(restrained.legacy).toMatch(/concession/i);
     expect(hardLine.title).toBe("Hard Victory, Unquiet Empire");
     expect(hardLine.legacy).toMatch(/punishment|Edict/i);
+  });
+
+  it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {
+    const role = gameDatabase.playable_roles[0];
+    const baseCard = {
+      role_id: role.id,
+      phase_id: "phase_prewar_settlement",
+      date_label: "test",
+      historian_note: "n",
+      source_refs: ["src_wilson_europes_tragedy"],
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      review_status: "reviewed" as const,
+      briefing: "b",
+      situation: "s",
+    };
+    const opt = (id: string, extra = {}) => ({
+      id,
+      label: id,
+      consequence: "c",
+      effects: {},
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      ...extra,
+    });
+    const database = {
+      ...gameDatabase,
+      cards: [
+        {
+          ...baseCard,
+          id: "card_unlocked",
+          title: "Unlocked",
+          requires_memory_tags: ["unlock_me"],
+          options: [opt("opt_unlocked_a"), opt("opt_unlocked_b")],
+        },
+        {
+          ...baseCard,
+          id: "card_trigger",
+          title: "Trigger",
+          options: [
+            opt("opt_trigger", { memory_tags: ["unlock_me"] }),
+            opt("opt_trigger_b"),
+          ],
+        },
+        {
+          ...baseCard,
+          id: "card_last",
+          title: "Last",
+          options: [opt("opt_last_a"), opt("opt_last_b")],
+        },
+      ],
+    } as typeof gameDatabase;
+
+    let state = createInitialGameState(database, role.id);
+    // card_unlocked is gated out, so the trigger card comes first.
+    expect(getCurrentCard(database, state)?.id).toBe("card_trigger");
+
+    state = chooseOption(database, state, "card_trigger", "opt_trigger");
+
+    // Choosing opt_trigger grants "unlock_me", making card_unlocked eligible.
+    // It sits earlier in the deck, but must still be shown next, not skipped.
+    expect(getCurrentCard(database, state)?.id).toBe("card_unlocked");
   });
 });

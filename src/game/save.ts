@@ -21,6 +21,11 @@ export function loadGame(storage: StorageAdapter): GameState | null {
   return {
     ...state,
     memory_tags: Array.isArray(state.memory_tags) ? state.memory_tags : [],
+    // Migrate older saves that tracked progress by position: derive the set of
+    // resolved cards from the log of choices already made.
+    resolved_card_ids: Array.isArray(state.resolved_card_ids)
+      ? state.resolved_card_ids
+      : (state.log ?? []).map((entry) => entry.card_id),
   };
 }
 
