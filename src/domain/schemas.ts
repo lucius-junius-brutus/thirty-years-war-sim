@@ -155,8 +155,17 @@ const pressureThresholdRecordSchema = z.object({
   label: z.string().min(1),
   summary: z.string().min(1),
   memory_tags: z.array(z.string().min(1)).min(1),
+  collapse_tier: z.enum(["terminal", "severe"]).optional(),
   source_refs: sourceRefsSchema,
   review_status: reviewStatusSchema,
+}).superRefine((threshold, ctx) => {
+  if (threshold.kind === "crisis" && threshold.collapse_tier === undefined) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: `crisis threshold ${threshold.id} must declare a collapse_tier`,
+      path: ["collapse_tier"],
+    });
+  }
 });
 
 const playableRoleRecordSchema = z.object({

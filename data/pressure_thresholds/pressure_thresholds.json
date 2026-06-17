@@ -3,176 +3,295 @@
     "id": "threshold_imperial_authority_high",
     "pressure": "imperial_authority",
     "kind": "reward",
-    "condition": { "pressure": "imperial_authority", "min": 75 },
+    "condition": {
+      "pressure": "imperial_authority",
+      "min": 75
+    },
     "label": "Imperial commands carry unusual weight",
     "summary": "The emperor can issue orders that more estates treat as lawful business rather than naked pressure.",
-    "memory_tags": ["threshold_imperial_authority_high"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_imperial_authority_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_imperial_authority_low",
     "pressure": "imperial_authority",
     "kind": "crisis",
-    "condition": { "pressure": "imperial_authority", "max": 25 },
+    "condition": {
+      "pressure": "imperial_authority",
+      "max": 25
+    },
     "label": "Imperial command is doubted",
     "summary": "Orders from court arrive as claims to be bargained over rather than commands to be obeyed.",
-    "memory_tags": ["threshold_imperial_authority_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_imperial_authority_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "severe"
   },
   {
     "id": "threshold_confessional_legitimacy_high",
     "pressure": "confessional_legitimacy",
     "kind": "reward",
-    "condition": { "pressure": "confessional_legitimacy", "min": 78 },
+    "condition": {
+      "pressure": "confessional_legitimacy",
+      "min": 78
+    },
     "label": "Catholic networks answer readily",
     "summary": "Catholic petitioners, clergy, and allied courts are more willing to supply counsel, money, and legitimacy.",
-    "memory_tags": ["threshold_confessional_legitimacy_high"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_confessional_legitimacy_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_confessional_legitimacy_low",
     "pressure": "confessional_legitimacy",
     "kind": "warning",
-    "condition": { "pressure": "confessional_legitimacy", "max": 28 },
+    "condition": {
+      "pressure": "confessional_legitimacy",
+      "max": 28
+    },
     "label": "Catholic confidence thins",
     "summary": "Allies who expected visible restoration begin asking whether victory is being spent too cautiously.",
-    "memory_tags": ["threshold_confessional_legitimacy_low"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_confessional_legitimacy_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_estate_trust_high",
     "pressure": "estate_trust",
     "kind": "reward",
-    "condition": { "pressure": "estate_trust", "min": 70 },
+    "condition": {
+      "pressure": "estate_trust",
+      "min": 70
+    },
     "label": "Estates will still lend credit to settlement",
     "summary": "Moderate estates can carry imperial terms home without appearing to surrender every privilege.",
-    "memory_tags": ["threshold_estate_trust_high"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_estate_trust_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_estate_trust_low",
     "pressure": "estate_trust",
     "kind": "crisis",
-    "condition": { "pressure": "estate_trust", "max": 24 },
+    "condition": {
+      "pressure": "estate_trust",
+      "max": 24
+    },
     "label": "Estate confidence is breaking",
     "summary": "Petitions demand written guarantees before obedience can be trusted again.",
-    "memory_tags": ["threshold_estate_trust_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_estate_trust_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "severe"
   },
   {
     "id": "threshold_fiscal_capacity_high",
     "pressure": "fiscal_capacity",
     "kind": "reward",
-    "condition": { "pressure": "fiscal_capacity", "min": 65 },
+    "condition": {
+      "pressure": "fiscal_capacity",
+      "min": 65
+    },
     "label": "The treasury can still bargain",
     "summary": "Ready money and credit let the crown refuse some demands that would otherwise be unavoidable.",
-    "memory_tags": ["threshold_fiscal_capacity_high"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_fiscal_capacity_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_fiscal_capacity_crisis",
     "pressure": "fiscal_capacity",
     "kind": "crisis",
-    "condition": { "pressure": "fiscal_capacity", "max": 22 },
+    "condition": {
+      "pressure": "fiscal_capacity",
+      "max": 22
+    },
     "label": "Army finance is in crisis",
     "summary": "Arrears, contributions, and creditor claims narrow the court's choices before policy is even debated.",
-    "memory_tags": ["threshold_fiscal_capacity_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_fiscal_capacity_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "terminal"
   },
   {
     "id": "threshold_military_dependence_low",
     "pressure": "military_dependence",
     "kind": "reward",
-    "condition": { "pressure": "military_dependence", "max": 35 },
+    "condition": {
+      "pressure": "military_dependence",
+      "max": 35
+    },
     "label": "Command remains comparatively free",
     "summary": "The court has more room to bargain without immediately satisfying Bavaria, Wallenstein, or another military creditor.",
-    "memory_tags": ["threshold_military_dependence_low"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_military_dependence_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_military_dependence_crisis",
     "pressure": "military_dependence",
     "kind": "crisis",
-    "condition": { "pressure": "military_dependence", "min": 78 },
+    "condition": {
+      "pressure": "military_dependence",
+      "min": 78
+    },
     "label": "Armed servants can demand their price",
     "summary": "The emperor's military instruments begin to look like power centers with claims of their own.",
-    "memory_tags": ["threshold_military_dependence_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_military_dependence_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "terminal"
   },
   {
     "id": "threshold_foreign_intervention_low",
     "pressure": "foreign_intervention_risk",
     "kind": "reward",
-    "condition": { "pressure": "foreign_intervention_risk", "max": 30 },
+    "condition": {
+      "pressure": "foreign_intervention_risk",
+      "max": 30
+    },
     "label": "Foreign courts lack an easy pretext",
     "summary": "Rebels and exiles find it harder to turn imperial dispute into a European cause.",
-    "memory_tags": ["threshold_foreign_intervention_low"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_foreign_intervention_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_foreign_intervention_crisis",
     "pressure": "foreign_intervention_risk",
     "kind": "crisis",
-    "condition": { "pressure": "foreign_intervention_risk", "min": 78 },
+    "condition": {
+      "pressure": "foreign_intervention_risk",
+      "min": 78
+    },
     "label": "Foreign courts have their opening",
     "summary": "Sweden, France, the Dutch, England, or Denmark can describe intervention as protection, balance, or recovery of right.",
-    "memory_tags": ["threshold_foreign_intervention_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_foreign_intervention_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "severe"
   },
   {
     "id": "threshold_dynastic_security_high",
     "pressure": "dynastic_security",
     "kind": "reward",
-    "condition": { "pressure": "dynastic_security", "min": 75 },
+    "condition": {
+      "pressure": "dynastic_security",
+      "min": 75
+    },
     "label": "The succession has room to breathe",
     "summary": "A more secure dynasty can afford concessions that would otherwise look like weakness.",
-    "memory_tags": ["threshold_dynastic_security_high"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_dynastic_security_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_dynastic_security_low",
     "pressure": "dynastic_security",
     "kind": "crisis",
-    "condition": { "pressure": "dynastic_security", "max": 25 },
+    "condition": {
+      "pressure": "dynastic_security",
+      "max": 25
+    },
     "label": "Dynastic security is endangered",
     "summary": "The crown must treat settlement, election, and inheritance as immediate survival questions.",
-    "memory_tags": ["threshold_dynastic_security_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_dynastic_security_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "terminal"
   },
   {
     "id": "threshold_devastation_low",
     "pressure": "devastation",
     "kind": "reward",
-    "condition": { "pressure": "devastation", "max": 28 },
+    "condition": {
+      "pressure": "devastation",
+      "max": 28
+    },
     "label": "The lands can still bear negotiation",
     "summary": "Towns and estates have not yet been driven so far into ruin that every settlement is a tax grievance.",
-    "memory_tags": ["threshold_devastation_low"],
-    "source_refs": ["src_wilson_europes_tragedy"],
+    "memory_tags": [
+      "threshold_devastation_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
     "review_status": "needs_review"
   },
   {
     "id": "threshold_devastation_crisis",
     "pressure": "devastation",
     "kind": "crisis",
-    "condition": { "pressure": "devastation", "min": 78 },
+    "condition": {
+      "pressure": "devastation",
+      "min": 78
+    },
     "label": "Devastation is becoming a political fact",
     "summary": "Billeting, contribution, flight, and hunger become arguments against the war's continuation.",
-    "memory_tags": ["threshold_devastation_crisis"],
-    "source_refs": ["src_wilson_europes_tragedy"],
-    "review_status": "needs_review"
+    "memory_tags": [
+      "threshold_devastation_crisis"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review",
+    "collapse_tier": "severe"
   }
 ]

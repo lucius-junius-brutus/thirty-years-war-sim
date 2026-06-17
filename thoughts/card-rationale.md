@@ -214,3 +214,46 @@ Both earlier follow-ups are now done:
 
 Engine source of truth for danger is the crisis pressure_thresholds: they unlock crisis
 cards, raise warnings, drive escalation, and (a margin past) trigger collapse endings.
+
+## Equilibrium balance model (the "no easy out" / historical-fidelity pass)
+
+Three forces keep coherent play in a survivable warning band while making extremes
+self-destruct, so neither uniformly hardline nor uniformly conciliatory play is a free pass:
+
+1. **Re-tiered collapse (terminal vs. severe).** Each crisis threshold carries a
+   `collapse_tier`. A **terminal** axis ends the reign on its own when it runs past its
+   margin — `dynastic_security` (lost crowns), `fiscal_capacity` (an insolvent crown),
+   `military_dependence` (captive of the sword). A **severe** axis is ruinous but survivable
+   alone — `estate_trust` (revolt), `devastation` (a wrecked land), `foreign_intervention_risk`
+   (a wider war), `imperial_authority` (eroded command) — and only ends the reign when **two
+   or more collapse at once**. This is the Wilson distinction: a revolt or a Swedish invasion
+   nearly destroyed Ferdinand but did not depose him; he died emperor in 1637.
+2. **Per-tier collapse margin.** Severe axes must run *further* past their crisis line to
+   count as collapsed (`SEVERE_COLLAPSE_MARGIN` 14) than terminal axes (`TERMINAL_COLLAPSE_MARGIN`
+   10), since coherent hard/soft play is expected to live in the severe warning band.
+3. **Soft-cap (diminishing returns).** `applyEffects` tapers a delta to zero within
+   `SOFT_CAP_BAND` (28) of the bound it moves toward, hard-capped so a single shock never
+   overshoots. One-directional play asymptotes toward its danger line rather than pegging
+   past it — a coherent course becomes "unquiet," not automatically dead.
+4. **Bounded escalation.** Passive escalation settles a crisis only `ESCALATION_OVERSHOOT`
+   (4) past its crisis line — held in the danger band, never at the cliff. **Crossing into
+   collapse takes a real choice**, not passive drift.
+
+### Acceptance criteria (locked as tests, `historical-line.test.ts`)
+
+- **Historical line → historical outcome.** Replaying Ferdinand's recorded options (one per
+  base card, marked via `scripts/mark-historical-options.mjs`) runs the full 44-card arc to
+  1637 and does **not** collapse: it lands on **"Army Recovered, Trust Spent"** (the
+  Wallenstein recall-then-break saga) — commanding authority and a secured dynasty bought at
+  the price of strained trust, a ravaged land, and standing foreign intervention.
+- **No easy out.** Uniformly hardline play collapses (estate + foreign, "Europe Decides the
+  Empire's Fate"); uniformly conciliatory play collapses (confessional + dynastic, "The House
+  Brought Low"). Each extreme generates its own failing pressures.
+
+The historical line threads the needle because Ferdinand's real arc *mixes* coercion with
+accommodation (reassuring Saxony, the Lübeck/Prague settlements) and, critically, includes the
+late recovery — the 1635 Peace of Prague reconciled Saxony and the Lutheran estates and drew
+them out of the Swedish alliance (estate recovery + foreign relief). Per-decision axis effects
+are tuned in `scripts/tune-historical-balance.mjs` (each adjustment Wilson-justified inline);
+`scripts/probe-strategies.ts` reports all three archetypal lines for regression. Every base
+option now carries a real tradeoff (no pure-gain or pure-cost choices after axis valence).

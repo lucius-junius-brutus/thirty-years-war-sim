@@ -402,6 +402,32 @@ export function getActivePressureThresholds(
   );
 }
 
+// Within this many points of the bound a pressure is heading toward, effects
+// taper linearly to zero. Beyond it, effects are full strength. This gives
+// near-linear mid-range play while making one-directional pressure asymptote
+// toward its danger line rather than pegging past it: a coherent hard or soft
+// course becomes "unquiet" (in the warning band) without automatically running
+// off the cliff. Crossing into collapse then takes real, sustained pressure.
+const SOFT_CAP_BAND = 28;
+
+// No single step may close more than this fraction of the distance remaining to
+// the bound, so the extreme stays an asymptote even under a large one-off shock.
+const MAX_SINGLE_STEP_FRACTION = 0.85;
+
+// Diminishing-returns effective delta for a raw delta applied at a given value:
+// full strength until within SOFT_CAP_BAND of the bound it moves toward, then a
+// linear taper, hard-capped so it can never overshoot the extreme.
+function softCapDelta(value: number, delta: number): number {
+  const headroom = delta > 0 ? 100 - value : value;
+  const scale = Math.min(1, headroom / SOFT_CAP_BAND);
+  const tapered = delta * scale;
+  const maxStep = headroom * MAX_SINGLE_STEP_FRACTION;
+  if (Math.abs(tapered) > maxStep) {
+    return Math.sign(delta) * maxStep;
+  }
+  return tapered;
+}
+
 export function applyEffects(
   pressures: PressureMap,
   effects: Partial<PressureMap>,
@@ -409,7 +435,8 @@ export function applyEffects(
   const next = { ...pressures };
   Object.entries(effects).forEach(([key, delta]) => {
     const pressureKey = key as keyof PressureMap;
-    next[pressureKey] = clamp(next[pressureKey] + delta);
+    const value = next[pressureKey];
+    next[pressureKey] = clamp(value + softCapDelta(value, delta));
   });
   return next;
 }
@@ -430,6 +457,12 @@ function mergeEffects(
 // How far a pressure worsens for each turn it remains past its crisis line.
 const CRISIS_ESCALATION_STEP = 4;
 
+// How far past its crisis line passive escalation drives a pressure before it
+// settles. This is well short of the collapse margin: an unaddressed crisis is
+// pushed and held in the danger band, keeping the threat live, but passive drift
+// alone never reaches the cliff. Crossing into collapse takes a real choice.
+const ESCALATION_OVERSHOOT = 4;
+
 function computeCrisisEscalation(
   pressures: PressureMap,
   thresholds: PressureThresholdRecord[],
@@ -438,13 +471,19 @@ function computeCrisisEscalation(
   for (const threshold of thresholds) {
     if (threshold.kind !== "crisis") continue;
     if (!matchesPressureConditions([threshold.condition], pressures)) continue;
-    // Worsen away from safety: down for a "max" (low-is-bad) crisis, up for a
-    // "min" (high-is-bad) one.
-    const worsen =
-      threshold.condition.max !== undefined
-        ? -CRISIS_ESCALATION_STEP
-        : CRISIS_ESCALATION_STEP;
-    delta[threshold.pressure] = (delta[threshold.pressure] ?? 0) + worsen;
+    const value = pressures[threshold.pressure];
+    if (threshold.condition.max !== undefined) {
+      // Low-is-bad: worsen downward, settling ESCALATION_OVERSHOOT below the
+      // crisis line — in the danger band, not at the cliff.
+      const settle = threshold.condition.max - ESCALATION_OVERSHOOT;
+      const worsen = Math.min(0, Math.max(-CRISIS_ESCALATION_STEP, settle - value));
+      delta[threshold.pressure] = (delta[threshold.pressure] ?? 0) + worsen;
+    } else if (threshold.condition.min !== undefined) {
+      // High-is-bad: worsen upward, settling ESCALATION_OVERSHOOT above the line.
+      const settle = threshold.condition.min + ESCALATION_OVERSHOOT;
+      const worsen = Math.max(0, Math.min(CRISIS_ESCALATION_STEP, settle - value));
+      delta[threshold.pressure] = (delta[threshold.pressure] ?? 0) + worsen;
+    }
   }
   return delta;
 }
@@ -454,10 +493,19 @@ export interface PressureWarning {
   message: string;
 }
 
-// How far past the crisis line a pressure must run before the reign collapses.
-// Keeps a single source of truth: the crisis pressure_thresholds mark the warning
-// zone; this margin beyond them marks the failure ending.
-const COLLAPSE_MARGIN = 10;
+// How far past the crisis line a pressure must run before it counts as
+// collapsed. The crisis thresholds mark the warning zone; the margin beyond them
+// marks the cliff. A terminal pressure (position-ending) collapses sooner; a
+// severe pressure (ruinous but survivable) must run further, since a coherent
+// hard or soft course is expected to live in its warning band without falling.
+const TERMINAL_COLLAPSE_MARGIN = 10;
+const SEVERE_COLLAPSE_MARGIN = 14;
+
+function collapseMargin(threshold: PressureThresholdRecord) {
+  return threshold.collapse_tier === "severe"
+    ? SEVERE_COLLAPSE_MARGIN
+    : TERMINAL_COLLAPSE_MARGIN;
+}
 
 // Priority order (most fatal first) when more than one pressure has collapsed.
 const FAILURE_PRIORITY: ReadonlyArray<keyof PressureMap> = [
@@ -558,14 +606,15 @@ function crisisThreshold(
   );
 }
 
-// Has the pressure run COLLAPSE_MARGIN past its crisis line?
+// Has the pressure run its tier's margin past its crisis line?
 function pastCollapse(pressures: PressureMap, threshold: PressureThresholdRecord) {
   const value = pressures[threshold.pressure];
+  const margin = collapseMargin(threshold);
   if (threshold.condition.max !== undefined) {
-    return value <= threshold.condition.max - COLLAPSE_MARGIN;
+    return value <= threshold.condition.max - margin;
   }
   if (threshold.condition.min !== undefined) {
-    return value >= threshold.condition.min + COLLAPSE_MARGIN;
+    return value >= threshold.condition.min + margin;
   }
   return false;
 }
@@ -585,17 +634,36 @@ export function getPressureWarnings(
     .map((threshold) => ({ pressure: threshold.pressure, message: threshold.label }));
 }
 
-// Failure / divergence endings, reached when a pressure runs past its crisis
-// line into collapse. The trigger is data-driven from the crisis thresholds;
-// only the prose is authored here. Checked by severity; the first match wins.
+// Failure / divergence endings, reached when the reign comes apart. The trigger
+// is data-driven from the crisis thresholds and their collapse_tier:
+//   - a "terminal" pressure past its collapse line ends the reign on its own
+//     (lost crowns, an insolvent crown, captivity to the sword);
+//   - a "severe" pressure past collapse is ruinous but survivable on its own
+//     (a wrecked land, a revolt, a wider war, eroded command), and only ends
+//     the reign when two or more collapse at once.
+// Only the prose is authored here; the most fatal collapsed axis supplies it.
 function scoreFailureEnding(
   pressures: PressureMap,
   thresholds: PressureThresholdRecord[],
 ): FailureEndingProse | null {
-  for (const pressure of FAILURE_PRIORITY) {
-    const prose = FAILURE_ENDING_PROSE[pressure];
+  const collapsed = FAILURE_PRIORITY.filter((pressure) => {
     const threshold = crisisThreshold(thresholds, pressure);
-    if (prose && threshold && pastCollapse(pressures, threshold)) {
+    return threshold && pastCollapse(pressures, threshold);
+  });
+  const tierOf = (pressure: keyof PressureMap) =>
+    crisisThreshold(thresholds, pressure)?.collapse_tier ?? "terminal";
+  const hasTerminal = collapsed.some((pressure) => tierOf(pressure) === "terminal");
+  const severeCount = collapsed.filter(
+    (pressure) => tierOf(pressure) === "severe",
+  ).length;
+  if (!hasTerminal && severeCount < 2) {
+    return null;
+  }
+  // collapsed is already in FAILURE_PRIORITY order, so the first with authored
+  // prose is the most fatal.
+  for (const pressure of collapsed) {
+    const prose = FAILURE_ENDING_PROSE[pressure];
+    if (prose) {
       return prose;
     }
   }

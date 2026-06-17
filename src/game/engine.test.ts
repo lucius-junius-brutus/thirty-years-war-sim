@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { gameDatabase } from "../data/gameDatabase";
 import {
+  applyEffects,
   chooseOption,
   createInitialGameState,
   getCardsForRole,
@@ -29,6 +30,31 @@ function seekTo(
 }
 
 describe("game engine", () => {
+  it("applies diminishing returns near a pressure's bound", () => {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii").pressures;
+
+    // Far from either bound, effects are unchanged (mid-game stays linear).
+    expect(
+      applyEffects({ ...base, estate_trust: 50 }, { estate_trust: 10 }).estate_trust,
+    ).toBe(60);
+
+    // Approaching the top, a gain is damped and never overshoots 100.
+    const high = applyEffects(
+      { ...base, imperial_authority: 90 },
+      { imperial_authority: 30 },
+    ).imperial_authority;
+    expect(high).toBeGreaterThan(90);
+    expect(high).toBeLessThan(100);
+
+    // Approaching the bottom, a loss is damped and never slams to 0.
+    const low = applyEffects(
+      { ...base, estate_trust: 10 },
+      { estate_trust: -30 },
+    ).estate_trust;
+    expect(low).toBeGreaterThan(0);
+    expect(low).toBeLessThan(10);
+  });
+
   it("starts Ferdinand II with Wilson's prewar settlement frame before Prague", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const ferdinandCards = gameDatabase.cards.filter(
@@ -742,8 +768,44 @@ describe("game engine", () => {
     ).toBe("The House Brought Low");
   });
 
-  it("reaches a devastation failure ending at the extreme", () => {
-    expect(endedWith({ devastation: 88 }).title).toBe("A Realm Laid Waste");
+  it("treats a lone severe collapse as survivable, not reign-ending", () => {
+    // Devastation, estate trust, foreign risk, and imperial authority are
+    // ruinous but survivable: historically a wrecked land, a revolt, a wider
+    // war, or constitutional erosion did not by itself depose the emperor.
+    expect(endedWith({ devastation: 95 }).failure).toBe(false);
+    expect(endedWith({ estate_trust: 5 }).failure).toBe(false);
+    expect(endedWith({ foreign_intervention_risk: 95 }).failure).toBe(false);
+    expect(endedWith({ imperial_authority: 5 }).failure).toBe(false);
+  });
+
+  it("requires severe pressures to run further past their line than terminal ones", () => {
+    // Severe axes are survivable, so they must run deeper before counting as
+    // collapsed. Two severe pressures just past the terminal margin but short of
+    // the wider severe margin do not yet compound into collapse...
+    expect(
+      endedWith({ foreign_intervention_risk: 90, devastation: 90 }).failure,
+    ).toBe(false);
+    // ...but once both clear the wider severe margin, the reign falls.
+    expect(
+      endedWith({ foreign_intervention_risk: 93, devastation: 93 }).failure,
+    ).toBe(true);
+  });
+
+  it("ends the reign when two severe pressures collapse at once", () => {
+    // No single ruinous axis deposes the emperor, but the realm coming apart
+    // from several directions simultaneously does.
+    const out = endedWith({ estate_trust: 5, devastation: 95 });
+    expect(out.failure).toBe(true);
+    // The most fatal collapsed axis supplies the prose.
+    expect(out.title).toBe("A Realm Laid Waste");
+  });
+
+  it("ends the reign on a lone terminal collapse", () => {
+    // Loss of the dynasty's crowns, an insolvent crown that cannot pay its
+    // army, or total captivity to the sword each end a reign on their own.
+    expect(endedWith({ dynastic_security: 12 }).failure).toBe(true);
+    expect(endedWith({ fiscal_capacity: 8 }).failure).toBe(true);
+    expect(endedWith({ military_dependence: 92 }).failure).toBe(true);
   });
 
   it("does not trigger a failure ending from a merely middling run", () => {
@@ -753,12 +815,12 @@ describe("game engine", () => {
   });
 
   it("marks a collapse as a failure and a normal ending as not", () => {
-    expect(endedWith({ estate_trust: 10 }).failure).toBe(true);
+    expect(endedWith({ dynastic_security: 10 }).failure).toBe(true);
     expect(endedWith({ military_dependence: 60 }).failure).toBe(false);
   });
 
   it("frames a collapse as the reign breaking off, not an orderly succession", () => {
-    const out = endedWith({ estate_trust: 10 });
+    const out = endedWith({ dynastic_security: 10 });
     const prose = `${out.legacy} ${out.inheritance} ${out.comparison}`;
     expect(prose).not.toMatch(/Ferdinand III/);
     expect(prose).not.toMatch(/inherits/);
@@ -998,6 +1060,37 @@ describe("game engine", () => {
 
     // The choice did not touch fiscal capacity, but the crisis has deepened.
     expect(state.pressures.fiscal_capacity).toBeLessThan(20);
+  });
+
+  it("escalates a crisis toward the brink but never tips it into collapse on its own", () => {
+    // estate_trust crisis at <=24, collapse at <=14. From inside the warning
+    // band, repeated unrelated choices must not, by passive escalation alone,
+    // drag estate trust into collapse: crossing the brink takes a real choice.
+    const database = syntheticDeck(
+      Array.from({ length: 8 }, (_, i) => ({
+        ...baseCardFields(),
+        id: `card_${i}`,
+        title: `C${i}`,
+        options: [mkOption(`o${i}`), mkOption(`o${i}b`)],
+      })),
+    );
+    let state = {
+      ...createInitialGameState(database, gameDatabase.playable_roles[0].id),
+      pressures: {
+        ...createInitialGameState(database, gameDatabase.playable_roles[0].id).pressures,
+        estate_trust: 20,
+      },
+    };
+
+    for (let i = 0; i < 6; i++) {
+      const card = getCurrentCard(database, state);
+      if (!card) break;
+      state = chooseOption(database, state, card.id, card.options[0].id);
+    }
+
+    expect(scoreOutcome(gameDatabase, state).failure).toBe(false);
+    // Stays above its collapse line: passive worsening reaches the brink, never over.
+    expect(state.pressures.estate_trust).toBeGreaterThan(10);
   });
 
   it("removes all but the forced course when overreliance takes the decision away", () => {

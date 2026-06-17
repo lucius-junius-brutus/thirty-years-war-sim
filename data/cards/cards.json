@@ -90,7 +90,8 @@
           "needs_cross_source_check",
           "card:card_1555_augsburg_settlement",
           "option:opt_augsburg_deferred_inheritance"
-        ]
+        ],
+        "historical_option": true
       }
     ],
     "context_links": [
@@ -170,7 +171,8 @@
           "needs_cross_source_check",
           "card:card_1608_security_blocs",
           "option:opt_leagues_constitutional_insurance"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_leagues_suppress_faction",
@@ -281,7 +283,8 @@
           "needs_cross_source_check",
           "card:card_1609_letter_of_majesty",
           "option:opt_majesty_broad_charter"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_majesty_narrow_reading",
@@ -620,7 +623,8 @@
           "needs_cross_source_check",
           "card:card_1618_prague_defenestration",
           "option:opt_public_punishment"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_offer_conference",
@@ -833,7 +837,8 @@
           "needs_cross_source_check",
           "card:card_1618_mediation_channel",
           "option:opt_let_mediation_fail"
-        ]
+        ],
+        "historical_option": true
       }
     ],
     "context_links": [
@@ -984,7 +989,8 @@
           "needs_cross_source_check",
           "card:card_1619_imperial_election",
           "option:opt_prioritize_electors"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_denounce_frederick",
@@ -1095,7 +1101,8 @@
           "needs_cross_source_check",
           "card:card_1619_frankfurt_coronation",
           "option:opt_crown_as_mandate"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_crown_as_reassurance",
@@ -1186,7 +1193,7 @@
         "effects": {
           "imperial_authority": 10,
           "dynastic_security": 12,
-          "military_dependence": 20,
+          "military_dependence": 12,
           "fiscal_capacity": -10,
           "estate_trust": -6,
           "confessional_legitimacy": 4
@@ -1215,7 +1222,8 @@
             },
             "note": "The bill from Munich falls due: Bavaria's claim on command, compensation, and the Palatine electorate hardens into a debt the crown cannot refuse."
           }
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_broader_catholic_subscription",
@@ -1374,7 +1382,8 @@
           "needs_cross_source_check",
           "card:card_1620_saxon_question",
           "option:opt_reassure_saxony"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_pressure_saxony",
@@ -1464,7 +1473,7 @@
         "consequence": "In the event, the army slipped round the rebel position and raced for the city; on 8 November 1620, at the White Mountain, it shattered the Confederate army in barely an hour. Frederick fled, and Bohemia lay open to whatever Ferdinand chose to make of victory.",
         "effects": {
           "dynastic_security": 8,
-          "military_dependence": 4,
+          "military_dependence": 3,
           "devastation": 3,
           "fiscal_capacity": -2
         },
@@ -1581,7 +1590,8 @@
           "needs_cross_source_check",
           "card:card_1620_white_mountain_aftermath",
           "option:opt_exemplary_punishment"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_selective_punishment",
@@ -1790,7 +1800,8 @@
           "needs_cross_source_check",
           "card:card_1621_confiscations",
           "option:opt_large_confiscations"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_limited_confiscations",
@@ -1884,7 +1895,8 @@
           "needs_cross_source_check",
           "card:card_1621_spanish_rhine",
           "option:opt_coordinate_with_spain"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_keep_spanish_distance",
@@ -1988,7 +2000,8 @@
           "needs_cross_source_check",
           "card:card_1622_league_finance",
           "option:opt_contribution_system"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_court_borrowing",
@@ -2087,7 +2100,7 @@
           "imperial_authority": 12,
           "dynastic_security": 9,
           "estate_trust": -8,
-          "foreign_intervention_risk": 5
+          "foreign_intervention_risk": 3
         },
         "causal_claim_ids": [
           "claim_reichsacht_isolates_frederick",
@@ -2216,7 +2229,7 @@
           "imperial_authority": 5,
           "dynastic_security": 4,
           "estate_trust": -4,
-          "foreign_intervention_risk": 5
+          "foreign_intervention_risk": 3
         },
         "causal_claim_ids": [
           "claim_palatine_settlement_opening_constrained_by_bavaria"
@@ -2320,9 +2333,9 @@
         "effects": {
           "confessional_legitimacy": 12,
           "imperial_authority": 8,
-          "military_dependence": 12,
+          "military_dependence": 7,
           "estate_trust": -14,
-          "foreign_intervention_risk": 10
+          "foreign_intervention_risk": 7
         },
         "causal_claim_ids": [
           "claim_palatinate_electorate_overreach",
@@ -2489,7 +2502,7 @@
           "imperial_authority": 10,
           "confessional_legitimacy": 6,
           "estate_trust": -10,
-          "foreign_intervention_risk": 10,
+          "foreign_intervention_risk": 6,
           "devastation": 6
         },
         "causal_claim_ids": [
@@ -2505,7 +2518,8 @@
           "needs_cross_source_check",
           "card:card_1623_peace_feelers",
           "option:opt_continue_pressure"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_demobilize_and_rebuild",
@@ -2581,7 +2595,7 @@
         "consequence": "In the event, Ferdinand pressed the issue, and in 1625 Christian IV took the field as the Lower Saxon Circle's elected colonel. Imperial firmness was heard in the north as a threat — and Denmark heard it as an invitation to lead the Protestant war.",
         "effects": {
           "imperial_authority": 8,
-          "foreign_intervention_risk": 8,
+          "foreign_intervention_risk": 6,
           "devastation": 5,
           "estate_trust": -5
         },
@@ -2622,7 +2636,8 @@
           "military_dependence": 8,
           "foreign_intervention_risk": 10,
           "estate_trust": -8,
-          "devastation": 6
+          "devastation": 6,
+          "imperial_authority": 6
         },
         "causal_claim_ids": [
           "claim_lower_saxon_neutrality_escalates_danish_phase"
@@ -2686,7 +2701,7 @@
         "consequence": "In the event, Wallenstein began recruiting in June 1625 and within months commanded a host larger than the League's — funded by squeezing the occupied lands. Ferdinand gained an army of his own; the country gained a machine that made war feed war, and a servant whose power would soon rival his master's.",
         "effects": {
           "fiscal_capacity": 8,
-          "military_dependence": 15,
+          "military_dependence": 6,
           "devastation": 10,
           "imperial_authority": 5
         },
@@ -2786,7 +2801,7 @@
         "consequence": "In the event, Ferdinand and his allies held out for the full humiliation, and the settlement slipped away on the question of form. The Palatine grievance stayed open — a standing invitation to every foreign power that wished the emperor ill.",
         "effects": {
           "imperial_authority": 5,
-          "foreign_intervention_risk": 6,
+          "foreign_intervention_risk": 4,
           "estate_trust": -3
         },
         "causal_claim_ids": [
@@ -2867,7 +2882,7 @@
           "confessional_legitimacy": 13,
           "imperial_authority": 5,
           "estate_trust": -12,
-          "foreign_intervention_risk": 8
+          "foreign_intervention_risk": 5
         },
         "causal_claim_ids": [
           "claim_harsh_bohemian_punishment_alarm"
@@ -2881,7 +2896,8 @@
           "needs_cross_source_check",
           "card:card_1622_catholic_restoration",
           "option:opt_push_restoration"
-        ]
+        ],
+        "historical_option": true
       },
       {
         "id": "opt_sequence_restoration",
@@ -2979,8 +2995,8 @@
         "consequence": "In the event, Ferdinand made his general Duke of Mecklenburg in 1628, deposing its ancient line. The army's maker is paid in princely coin — but the whole Empire studies the precedent in fear, and the old princes begin to see in Wallenstein a threat to them all.",
         "effects": {
           "fiscal_capacity": 8,
-          "military_dependence": 9,
-          "foreign_intervention_risk": 9,
+          "military_dependence": 5,
+          "foreign_intervention_risk": 5,
           "estate_trust": -8
         },
         "causal_claim_ids": [
@@ -3173,7 +3189,7 @@
           "imperial_authority": 14,
           "confessional_legitimacy": 16,
           "estate_trust": -18,
-          "foreign_intervention_risk": 14,
+          "foreign_intervention_risk": 8,
           "devastation": 6
         },
         "causal_claim_ids": [
@@ -3460,7 +3476,7 @@
         "effects": {
           "imperial_authority": 4,
           "estate_trust": -12,
-          "foreign_intervention_risk": 12,
+          "foreign_intervention_risk": 2,
           "devastation": 8
         },
         "causal_claim_ids": [
@@ -3585,7 +3601,7 @@
         "consequence": "In the event, Saxony joined Sweden, and at Breitenfeld in September 1631 their armies shattered Tilly's. The court kept the language of command — but now an elector's obedience, and half of Germany, would have to be won back by the sword.",
         "effects": {
           "imperial_authority": 4,
-          "foreign_intervention_risk": 8,
+          "foreign_intervention_risk": 2,
           "devastation": 8,
           "estate_trust": -8
         },
@@ -3655,7 +3671,7 @@
         "label": "Recall Wallenstein with the broad powers of Gollersdorf.",
         "consequence": "In the event, Ferdinand granted his general almost unlimited authority, and Wallenstein rebuilt an imperial army within months. The crown got its instrument back — and handed it to a man whose loyalty it could no longer command, only hope for.",
         "effects": {
-          "military_dependence": 14,
+          "military_dependence": 9,
           "dynastic_security": 8,
           "estate_trust": -5,
           "devastation": 6
@@ -3885,7 +3901,8 @@
         "effects": {
           "military_dependence": 6,
           "foreign_intervention_risk": 3,
-          "dynastic_security": -4
+          "dynastic_security": -4,
+          "imperial_authority": 4
         },
         "causal_claim_ids": [
           "claim_wallenstein_liquidation_restores_control_stains_legality"
@@ -3945,9 +3962,9 @@
         "label": "Make the elector's peace and leave the hard cases excluded.",
         "consequence": "In the event, Saxony, Brandenburg, and most Lutheran estates accepted Ferdinand's terms on 30 May 1635, and the war lost its confessional edge. But Ferdinand's exclusion of certain princes and exiles from the amnesty — Wilson calls it a grave error — kept a dissatisfied minority in arms and gave France and Sweden the clients they needed to fight on for thirteen more years.",
         "effects": {
-          "estate_trust": 8,
+          "estate_trust": 16,
           "imperial_authority": 8,
-          "foreign_intervention_risk": 7,
+          "foreign_intervention_risk": -10,
           "confessional_legitimacy": -3
         },
         "causal_claim_ids": [
@@ -4157,7 +4174,8 @@
         "effects": {
           "dynastic_security": 16,
           "imperial_authority": 3,
-          "estate_trust": 4
+          "estate_trust": 4,
+          "fiscal_capacity": -6
         },
         "causal_claim_ids": [
           "claim_ferdinand_iii_election_secures_dynasty_with_limits"
@@ -4536,7 +4554,7 @@
         "label": "Satisfy the armed creditors before they become rivals.",
         "consequence": "The army stays usable — but obedience bought in open view becomes a precedent, and the price of survival is paid again every campaign.",
         "effects": {
-          "military_dependence": 6,
+          "military_dependence": 4,
           "fiscal_capacity": -8,
           "imperial_authority": -3,
           "dynastic_security": 4

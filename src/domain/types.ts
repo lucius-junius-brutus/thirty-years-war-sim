@@ -210,6 +210,11 @@ export interface PressureThresholdRecord {
   label: string;
   summary: string;
   memory_tags: string[];
+  // For crisis thresholds only: whether running past this line into collapse is
+  // by itself reign-ending ("terminal") or ruinous-but-survivable ("severe").
+  // A reign ends when any terminal pressure collapses, or when two or more
+  // severe pressures collapse at once. Absent on reward/warning thresholds.
+  collapse_tier?: "terminal" | "severe";
   source_refs: string[];
   review_status: ReviewStatus;
 }
