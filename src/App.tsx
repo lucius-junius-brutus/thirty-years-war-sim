@@ -170,61 +170,33 @@ function FerdinandPrelude({
         <p className="office">{role.office}</p>
         <section className="historical-brief prelude-brief">
           <p>
-            Wilson frame: Ferdinand&apos;s story begins inside the Holy Roman Empire,
-            an imperial order that had learned to contain religious division by
-            turning it into law. The Peace of Augsburg was not merely a truce
-            between Catholics and Lutherans. It belonged to a wider reform
-            settlement concerned with public peace, imperial courts, tax quotas,
-            currency, policing, and the Reichskammergericht. It kept violence
-            inside legal channels, but it also left important terms deliberately
-            broad enough for both sides to claim them.
+            Ferdinand&apos;s story begins inside the Holy Roman Empire, where
+            religious division has been contained through public peace and
+            imperial law. The Peace of Augsburg keeps Catholics and Lutherans
+            inside one legal order, but it leaves enough ambiguity for both sides
+            to claim that the settlement favors them.
           </p>
           <p>
-            The difficulty for Ferdinand is that the settlement&apos;s strength and
-            weakness are the same thing. It preserved imperial peace for decades,
-            yet it left three unsettled questions at the center of imperial
-            politics: the fate of Catholic ecclesiastical territories under
-            Protestant administrators, church property lying inside Lutheran
-            lands, and the rights of subjects who did not share their ruler&apos;s
-            confession. The emperor is expected to judge within the constitution,
-            not simply command it from above.
+            Three unsettled questions lie under almost every quarrel:
+            ecclesiastical territories governed by Protestants, church property
+            inside Lutheran lands, and the rights of subjects whose confession
+            differs from their ruler&apos;s. The emperor is expected to judge within
+            the constitution, not simply command it from above.
           </p>
           <p>
             Ferdinand&apos;s own political schooling comes from his years as
-            archduke of Inner Austria, where Wilson describes a more systematic
-            link between Catholic restoration and political loyalty. Earlier
-            concessions were read narrowly rather than openly revoked. Catholic
-            nobles and officials were favored. Jesuit education and
-            better-trained clergy supplied personnel. A reform commission,
-            guarded by troops, moved through towns closing Protestant schools,
-            changing councils, installing priests, and pressing resistance back
-            into obedience.
-          </p>
-          <p>
-            Bohemia is not Inner Austria. Its crown was claimed by the Habsburgs
-            as hereditary, but its estates preserved older language of election,
-            charter, privilege, and consent. Its religious settlement did not
-            descend from Augsburg alone; it carried Hussite and Utraquist
-            traditions, the Bohemian Confession, and later the Letter of Majesty.
-            The Bohemian estates were also not ornamental. They represented the
-            country&apos;s corporate powers, controlled much local government, and
-            could treat religious policy as a question of sworn liberty.
-          </p>
-          <p>
-            The opening problem, then, is not whether Ferdinand wants Catholic
-            restoration. Wilson presents him as devout and legalistic, cautious
-            enough to consult widely, but convinced that rightful authority and
-            Catholic reform belong together. The question is whether methods
-            that succeeded in Inner Austria can survive contact with Bohemian
-            privileges, imperial legal ambiguity, weak Habsburg finance,
-            Bavarian leverage, Spanish dynastic interest, and foreign courts
-            watching for a pretext.
+            archduke of Inner Austria, where Catholic restoration advanced by
+            narrow readings of old concessions, favored appointments, Jesuit
+            personnel, and a reform commission backed by troops. Bohemia is not
+            Inner Austria: its estates preserve older claims of election,
+            charter, privilege, and consent, and they can treat religious policy
+            as a question of sworn liberty.
           </p>
         </section>
         <div className="prelude-ledger" aria-label="What to watch in play">
           <div>
             <strong>What to watch in play</strong>
-            <span>Ask who gains leverage, who loses trust, and which institution can still call the chosen course lawful.</span>
+            <span>Ask who gains leverage, who loses trust, and which promise can still be called lawful.</span>
           </div>
           <div>
             <strong>Augsburg&apos;s burden</strong>
