@@ -752,6 +752,18 @@ describe("game engine", () => {
     );
   });
 
+  it("marks a collapse as a failure and a normal ending as not", () => {
+    expect(endedWith({ estate_trust: 10 }).failure).toBe(true);
+    expect(endedWith({ military_dependence: 60 }).failure).toBe(false);
+  });
+
+  it("frames a collapse as the reign breaking off, not an orderly succession", () => {
+    const out = endedWith({ estate_trust: 10 });
+    const prose = `${out.legacy} ${out.inheritance} ${out.comparison}`;
+    expect(prose).not.toMatch(/Ferdinand III/);
+    expect(prose).not.toMatch(/inherits/);
+  });
+
   it("derives each failure ending's trigger from the crisis pressure thresholds", () => {
     const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     // Lower the military-dependence crisis line in a custom database; the collapse

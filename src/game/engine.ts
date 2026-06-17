@@ -93,6 +93,8 @@ export interface OutcomeScore {
   path_signals: string[];
   strengths: string[];
   dangers: string[];
+  // True when the reign collapsed (a failure ending) rather than running its course.
+  failure: boolean;
 }
 
 export function createInitialGameState(
@@ -468,7 +470,10 @@ const FAILURE_PRIORITY: ReadonlyArray<keyof PressureMap> = [
   "imperial_authority",
 ];
 
-type FailureEndingProse = Omit<OutcomeScore, "strengths" | "dangers">;
+type FailureEndingProse = Omit<
+  OutcomeScore,
+  "strengths" | "dangers" | "failure"
+>;
 
 // Authored prose for each collapse, keyed by the pressure that triggers it.
 const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse>> = {
@@ -477,7 +482,7 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
     legacy:
       "Habsburg authority has cracked at its foundation: the hereditary lands waver, rivals scent weakness, and the dynasty's grip on its own crowns is no longer assured.",
     inheritance:
-      "Ferdinand III inherits a name worth less than it was — a claim that must be defended before it can be exercised.",
+      "What began as a war for the faith has become a question of whether the house of Habsburg will keep its crowns at all. The reign breaks off here, its hold on power itself in doubt.",
     comparison:
       "This is the counterfactual Ferdinand always feared and never suffered: the dynasty itself, not merely its policy, brought into question.",
     path_signals: ["Dynastic security collapsed"],
@@ -485,9 +490,9 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
   military_dependence: {
     title: "Captive of the Sword",
     legacy:
-      "The emperor has won his wars and lost his freedom: the army that saved him now sets the terms, and imperial policy moves at the pace of the men who command the troops.",
+      "The emperor has bought his armies and lost his freedom: the men who command the troops now set the terms, and imperial policy moves only at their pace.",
     inheritance:
-      "Ferdinand III inherits a crown that must ask its generals' leave — the Wallenstein problem made permanent.",
+      "From here the crown moves at the army's sufferance. What the emperor wills and what his commanders permit have become two different things, and the difference is no longer his to decide.",
     comparison:
       "This carries to its end the danger Wilson draws from the contractor armies: the instrument of survival become the master of the state.",
     path_signals: ["The army's commanders outweigh the emperor"],
@@ -497,7 +502,7 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
     legacy:
       "The imperial quarrel has become a European war. Foreign crowns now treat the Empire as a board for their own ambitions, and no settlement Vienna writes will hold without their leave.",
     inheritance:
-      "Ferdinand III inherits a war that is no longer his to end — its terms will be dictated in Paris and Stockholm as much as in Vienna.",
+      "The war is no longer the emperor's to end. Its terms will be dictated in Paris and Stockholm as much as in Vienna, and Ferdinand has become one player at a table he no longer commands.",
     comparison:
       "This is the war's historical widening carried to its limit: a domestic constitutional dispute drowned in a contest among the great powers.",
     path_signals: ["Foreign intervention beyond the emperor's control"],
@@ -505,11 +510,11 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
   devastation: {
     title: "A Realm Laid Waste",
     legacy:
-      "Victory has come to rule over ruin. Fields lie unsown, towns stand empty, and the contributions that fed the war have eaten the country that owed obedience.",
+      "The war has eaten the country it was fought over. Fields lie unsown, towns stand empty, and the contributions that fed the armies have consumed the lands that owed obedience.",
     inheritance:
-      "Ferdinand III inherits authority over a depopulated, exhausted land that will take generations to recover.",
+      "Whatever authority the crown still holds is authority over a depopulated, exhausted land that will take generations to recover — if it recovers at all.",
     comparison:
-      "This is the war's true face that the histories remember: a settlement bought at the price of the Empire's own substance.",
+      "This is the war's true face that the histories remember: dominion bought at the price of the Empire's own substance.",
     path_signals: ["The lands consumed by the war"],
   },
   fiscal_capacity: {
@@ -517,7 +522,7 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
     legacy:
       "The treasury is spent past recovery. Unpaid armies mutter, creditors close in, and the crown's orders travel without the coin to make them obeyed.",
     inheritance:
-      "Ferdinand III inherits debts that outrun the revenues, and an army that serves only as long as it is fed.",
+      "The crown's debts outrun its revenues, and an army that serves only as long as it is fed will not be fed for long. The reign breaks off with the emperor unable to pay for his own commands.",
     comparison:
       "This follows the fiscal logic Wilson stresses: that arrears and insolvency, not battles, dictated what an emperor could actually do.",
     path_signals: ["The crown spent into insolvency"],
@@ -527,7 +532,7 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
     legacy:
       "The estates no longer believe the emperor's word protects them, and an authority that must be enforced everywhere can be exercised nowhere.",
     inheritance:
-      "Ferdinand III inherits a constitution emptied of trust, where every command must be backed by an army to be obeyed.",
+      "The constitution is emptied of trust: every command must now be backed by an army to be obeyed, and there are not armies enough for that. The reign breaks off with the Empire ungoverned beneath its head.",
     comparison:
       "This is the constitutional failure beneath the confessional one: obedience withdrawn not by heresy but by fear of the crown itself.",
     path_signals: ["Estate trust collapsed into open resistance"],
@@ -537,7 +542,7 @@ const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse
     legacy:
       "The emperor's word no longer carries the force of law. Princes, estates, and cities act as if Vienna's commands were suggestions, and the imperial dignity has become a title without a writ.",
     inheritance:
-      "Ferdinand III inherits the form of empire without its substance — an authority that must be rebuilt before it can be exercised.",
+      "What remains is the form of empire without its substance — an authority that would have to be rebuilt from nothing before it could be exercised again. The reign breaks off, the office hollowed out.",
     comparison:
       "This is the constitutional nightmare the Habsburgs always feared: imperial authority so doubted that the Empire governs itself in spite of its head.",
     path_signals: ["Imperial command no longer obeyed"],
@@ -626,6 +631,7 @@ export function scoreOutcome(
   if (failure) {
     return {
       ...failure,
+      failure: true,
       strengths: strengths.map(([key]) => key),
       dangers: dangers.map(([key]) => key),
     };
@@ -726,6 +732,7 @@ export function scoreOutcome(
     path_signals: pathSignals,
     strengths: strengths.map(([key]) => key),
     dangers: dangers.map(([key]) => key),
+    failure: false,
   };
 }
 

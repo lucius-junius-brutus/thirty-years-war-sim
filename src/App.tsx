@@ -657,13 +657,16 @@ function OutcomePanel({
   outcome: ReturnType<typeof scoreOutcome> | null;
   onRestart: () => void;
 }) {
+  const failed = Boolean(outcome?.failure);
+  const endDate = state.log.at(-1)?.date_label ?? "1637";
+
   return (
     <article className="event-card outcome-card">
       <div className="dispatch-meta">
-        <span>Memorial of the reign</span>
-        <span>Filed after Vienna, 1637</span>
+        <span>{failed ? "The reign breaks off" : "Memorial of the reign"}</span>
+        <span>{failed ? `As of ${endDate}` : "Filed after Vienna, 1637"}</span>
       </div>
-      <div className="date-ribbon">1637 assessment</div>
+      <div className="date-ribbon">{failed ? endDate : "1637 assessment"}</div>
       <h2>{outcome?.title ?? "Campaign Complete"}</h2>
       <p className="situation">{outcome?.legacy}</p>
       <p className="situation">{outcome?.inheritance}</p>
@@ -680,7 +683,11 @@ function OutcomePanel({
       ) : null}
       <CounterfactualLedger state={state} />
       <p className="situation">
-        The reign closes with {state.log.length} recorded acts in the docket.
+        {failed
+          ? `The reign breaks off after ${state.log.length} ${
+              state.log.length === 1 ? "decision" : "decisions"
+            }, far short of its close.`
+          : `The reign closes with ${state.log.length} recorded acts in the docket.`}
       </p>
       <div className="outcome-columns">
         <div>
