@@ -125,3 +125,34 @@ at home — and the Baltic reach that draws in Sweden.
 than any battle to make the Swedish intervention possible.
 **threshold_army_arrears / treasury_bargain** — The fiscal underside: arrears force the
 contribution system; ready money buys the rare freedom not to make servants into princes.
+
+---
+
+## Phases 5-6 — Swedish crisis, Peace of Prague, succession & death
+
+Theme: the reckoning of overreach. Power at its height (Regensburg) is forced to
+disarm; the Edict summons Sweden; the indispensable servant (Wallenstein) becomes the
+deadliest threat; victory (Nördlingen) buys a peace (Prague) whose exclusions guarantee
+the war goes on past Ferdinand's death.
+
+**regensburg_wallenstein** — The hinge of the reign: the electors force the dismissal
+just as Gustavus lands. Recorded course grounded; the irony (disarming at the worst
+moment) is the whole point. Introduces Gustavus + the Regensburg congress.
+**intervention_crisis / saxon_break** — The Edict drives even loyal Lutheran Saxony to
+Sweden; both recorded courses pay off in Breitenfeld (1631). Introduce Sweden.
+**recall_wallenstein (Gollersdorf)** — Crisis forces the recall on the general's terms;
+near-sovereign powers. The dependency trap at its sharpest.
+**wallenstein_peace / remove_wallenstein** — The servant-as-threat arc; recorded course
+grounded in the Eger assassination (25 Feb 1634), framed as a stain the crown carries.
+Introduces Lützen.
+**prague_peace** — The best chance at peace; grounded in 30 May 1635 and Wilson's
+"grave error" of the exclusions that kept France/Sweden supplied with clients.
+Introduces Nördlingen, Peace of Prague, the French Crown.
+**hessen_amnesty** — The exclusion problem in miniature; shows why a near-peace failed.
+**ferdinand_iii_election / ferdinand_death** — Closing the reign: succession secured,
+faith triumphant — and the war handed on, to end in 1648 on the enemies' terms. The
+death card's aftermath states the verdict plainly (he died believing the worst was over).
+**thresholds (estate_guarantees, military_creditors, foreign_courts, succession_breathing
+_space, devastation_petitions)** — The structural undercurrents surfaced as reward/crisis
+cards: guarantees vs obedience, the army-as-creditor, the war going European, the
+breathing space security buys, and devastation finally entering the council as an argument.

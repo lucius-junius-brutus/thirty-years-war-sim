@@ -3244,8 +3244,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1630",
     "title": "Regensburg: The Price of Consent",
-    "briefing": "The electoral complaints came in a single chorus: the contributions, Mecklenburg, the army, the Edict, and Wallenstein's shadow lying across the liberties of the Empire.",
-    "situation": "Ferdinand sought consent and dynastic advantage together. The electors answered that consent began with the dismissal of the man who had made the imperial victory so fearful.",
+    "briefing": "In 1630 Ferdinand summoned the electors to Regensburg at the summit of his power, wanting two things: their consent to elect his son King of the Romans, securing the succession, and their help against his enemies. He arrived to find the mood transformed. The Edict, the contributions, Mecklenburg, and above all Wallenstein's looming army had convinced even Catholic electors that the emperor had grown too strong.",
+    "situation": "The electors would consider nothing until Ferdinand sacrificed his generalissimo. To dismiss Wallenstein would buy their goodwill and quiet the constitutional alarm — but it would also disarm the emperor at the very moment a new danger landed: for as the congress sat, Gustavus Adolphus of Sweden came ashore in Pomerania. Several advisers feared the slighted general might turn his army on Vienna itself.",
     "historian_note": "Wilson treats Regensburg as collective imperial politics checking Ferdinand's overreach.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3253,7 +3253,7 @@
     "causal_claim_ids": [
       "claim_regensburg_checks_ferdinand_and_dismisses_wallenstein"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "context_links": [
       {
         "term": "Regensburg",
@@ -3264,19 +3264,19 @@
         "dossier_id": "dossier_wallenstein"
       },
       {
-        "term": "Mecklenburg",
-        "dossier_id": "dossier_wallenstein"
+        "term": "electors",
+        "dossier_id": "dossier_imperial_electors"
       },
       {
-        "term": "electors",
-        "dossier_id": "dossier_regensburg_congress"
+        "term": "Gustavus Adolphus",
+        "dossier_id": "dossier_gustavus_adolphus"
       }
     ],
     "options": [
       {
         "id": "opt_dismiss_wallenstein_regensburg",
         "label": "Dismiss Wallenstein to recover the electors' consent.",
-        "consequence": "The electors received their sacrifice. Sweden received a less ready enemy.",
+        "consequence": "In the event, Ferdinand sacrificed his general in 1630 — and the all-powerful generalissimo went quietly to his estates. The electors got their sacrifice; but the emperor had disarmed himself just as Gustavus Adolphus invaded, and within a year the Swede would overrun half of Germany.",
         "effects": {
           "estate_trust": 7,
           "military_dependence": -8,
@@ -3293,8 +3293,8 @@
       },
       {
         "id": "opt_keep_wallenstein_regensburg",
-        "label": "Keep Wallenstein, his powers reduced.",
-        "consequence": "The army remained; the consent thinned. The congress began to look less a settlement than a warning.",
+        "label": "Keep Wallenstein, with his powers reduced.",
+        "consequence": "The army stays in being, but the electors' consent thins, and the congress turns from a settlement into a warning. Ferdinand keeps his sword and loses the goodwill he came to win.",
         "effects": {
           "military_dependence": 6,
           "estate_trust": -10,
@@ -3314,8 +3314,8 @@
       },
       {
         "id": "opt_trade_army_reform_succession",
-        "label": "Offer reform of the army in exchange for support of the succession.",
-        "consequence": "The bargain guarded the dynasty more than the field army. It bought time, and not peace.",
+        "label": "Offer to reform the army in exchange for his son's election.",
+        "consequence": "The bargain guards the dynasty more than the field army — and the electors, jealous of their last great leverage, are slow to part with the succession for so little.",
         "effects": {
           "dynastic_security": 8,
           "military_dependence": -3,
@@ -3342,8 +3342,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1631",
     "title": "The Door Stands Open",
-    "briefing": "The reports out of Saxony and from the Protestant estates no longer asked for delay alone. They spoke of armed security, of lawful defence, and of the Swedish king already set upon imperial soil.",
-    "situation": "Should Ferdinand offer no public settlement, the middle party might cease to be middle. Should he yield too much, the Catholic allies would ask what the victory and the law had been for.",
+    "briefing": "Gustavus Adolphus had landed, and the Protestant estates were no longer asking merely for delay. With the Edict being enforced by imperial commissioners and a Swedish army on German soil, Saxony and the Lutheran princes met at Leipzig and spoke openly of armed self-defence — a third force, neither imperial nor Swedish, to protect their rights.",
+    "situation": "The Leipzig assembly was not yet rebellion, but it was the door to it. If Ferdinand offered no public settlement — above all on the Edict — the wavering middle might cease to be middle and fall in with Sweden. If he conceded too much, his Catholic allies would ask what the years of victory and the Edict had been for. The choice was whether to command the Lutherans or to bargain with them.",
     "historian_note": "Wilson says Ferdinand's refusal of the Leipzig off-ramp compounded the Edict error and helped drive Saxony toward Sweden.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3351,7 +3351,7 @@
     "causal_claim_ids": [
       "claim_leipzig_rejection_drives_saxony_to_sweden"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_pressures": [
       {
         "pressure": "foreign_intervention_risk",
@@ -3360,16 +3360,12 @@
     ],
     "context_links": [
       {
+        "term": "Gustavus Adolphus",
+        "dossier_id": "dossier_gustavus_adolphus"
+      },
+      {
         "term": "Saxony",
         "dossier_id": "dossier_john_george_saxony"
-      },
-      {
-        "term": "Swedish king",
-        "dossier_id": "dossier_swedish_crown"
-      },
-      {
-        "term": "Protestant estates",
-        "dossier_id": "dossier_protestant_union"
       },
       {
         "term": "Edict",
@@ -3379,8 +3375,8 @@
     "options": [
       {
         "id": "opt_reject_leipzig",
-        "label": "Reject the Leipzig convention and command disarmament.",
-        "consequence": "The Saxon neutrality broke beneath the weight of command. Sweden gained the ally it had needed.",
+        "label": "Reject the Leipzig convention and order the Lutherans to disarm.",
+        "consequence": "In the event, Ferdinand refused to bend, and Saxon neutrality broke under the weight of command. Driven to choose, John George allied with Gustavus — and that autumn their joined armies destroyed Tilly's at Breitenfeld, the first great Protestant victory of the war.",
         "effects": {
           "imperial_authority": 4,
           "estate_trust": -12,
@@ -3397,8 +3393,8 @@
       },
       {
         "id": "opt_suspend_edict_for_saxony",
-        "label": "Suspend the Edict and accept the Saxon mediation.",
-        "consequence": "The Catholic party murmured; but the Lutheran elector remained within reach.",
+        "label": "Suspend the Edict and accept Saxon mediation.",
+        "consequence": "The Catholic party murmurs at the retreat — but the Lutheran elector stays within reach, and the third force may yet be kept from Sweden's arms.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -10,
@@ -3418,8 +3414,8 @@
       },
       {
         "id": "opt_private_saxon_concessions",
-        "label": "Offer concessions in private while refusing a public bloc.",
-        "consequence": "The court sought to buy trust without confessing necessity. The answer turned upon how much trust remained.",
+        "label": "Offer private concessions while refusing any public bloc.",
+        "consequence": "Ferdinand tries to buy trust without confessing necessity. Whether it works depends entirely on how much trust is left — and after the Edict, there is not much.",
         "effects": {
           "estate_trust": 4,
           "foreign_intervention_risk": -3,
@@ -3461,8 +3457,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1631",
     "title": "Saxony Crosses the Line",
-    "briefing": "New dispatches reported that the Saxon counsel no longer trusted a suspension given by private word. The Edict stood public still, Leipzig had been refused, and Swedish arms now offered the security that imperial law seemed no longer to provide.",
-    "situation": "John George's step did not make Saxony a natural rebel. It showed that a loyal Lutheran elector might be driven from a guarded obedience into armed partnership, once the terms of obedience looked unsafe.",
+    "briefing": "It had come to the thing Ferdinand most feared. John George of Saxony — the cautious Lutheran who had once invaded Lusatia for the emperor — would no longer trust a suspension of the Edict given by private word. The decree still stood in public; Leipzig had been rebuffed; and a Swedish army now offered the security that imperial law no longer seemed to provide.",
+    "situation": "John George was no natural rebel; his defection showed something worse for Ferdinand — that even a loyal Lutheran elector could be driven from guarded obedience into armed alliance with a foreign king, once the terms of obedience looked unsafe. The emperor could treat the break as rebellion and prepare for a wider war, or send public terms at last to pull Saxony back before the bond with Sweden hardened.",
     "historian_note": "Wilson links Ferdinand's refusal of the Leipzig off-ramp to Saxony's movement toward Sweden after the Edict of Restitution had already frightened Lutheran moderates.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3470,7 +3466,7 @@
     "causal_claim_ids": [
       "claim_leipzig_rejection_drives_saxony_to_sweden"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "restitution_edict_issued",
       "leipzig_rejected"
@@ -3483,7 +3479,7 @@
     ],
     "context_links": [
       {
-        "term": "Saxony",
+        "term": "John George of Saxony",
         "dossier_id": "dossier_john_george_saxony"
       },
       {
@@ -3491,15 +3487,15 @@
         "dossier_id": "dossier_edict_of_restitution"
       },
       {
-        "term": "Swedish",
+        "term": "Swedish army",
         "dossier_id": "dossier_swedish_crown"
       }
     ],
     "options": [
       {
         "id": "opt_accept_saxon_break_as_war",
-        "label": "Treat the Saxon alignment as rebellion and make ready for a wider imperial war.",
-        "consequence": "The court preserved the language of command. The price was that one more elector's obedience must now be recovered by arms.",
+        "label": "Treat the Saxon alignment as rebellion and prepare for a wider imperial war.",
+        "consequence": "In the event, Saxony joined Sweden, and at Breitenfeld in September 1631 their armies shattered Tilly's. The court kept the language of command — but now an elector's obedience, and half of Germany, would have to be won back by the sword.",
         "effects": {
           "imperial_authority": 4,
           "foreign_intervention_risk": 8,
@@ -3516,8 +3512,8 @@
       },
       {
         "id": "opt_reopen_saxon_terms_after_break",
-        "label": "Send public terms of suspension to part Saxony from Sweden.",
-        "consequence": "The envoys carried a late offer that might loosen the Saxon commitment, yet could not erase the proof that armed pressure had forced the paper.",
+        "label": "Send public suspension terms to part Saxony from Sweden.",
+        "consequence": "Envoys carry a late offer that might loosen the Saxon bond — but cannot erase the proof that it took armed pressure to wring the paper from Vienna.",
         "effects": {
           "estate_trust": 6,
           "foreign_intervention_risk": -4,
@@ -3546,8 +3542,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1632",
     "title": "Gollersdorf",
-    "briefing": "After the Swedish victories, the dismissed general received his visitors again. He would not return as a mere servant to be corrected at every ally's complaint.",
-    "situation": "The army might be restored quickly only by granting powers that made the court uneasy. Without him, Bavaria and the scattered commands must carry the war.",
+    "briefing": "Breitenfeld had been a catastrophe. Tilly was beaten and soon dead, the Swedes had overrun the south, and Bavaria itself was invaded. The army Ferdinand had dismissed to please the electors was precisely what he now needed — and only one man could rebuild it at speed. The disgraced Wallenstein received the emperor's envoys again.",
+    "situation": "But Wallenstein would not return as a servant to be corrected at every ally's complaint. The price of his recall was near-sovereign authority over the army — the powers he would extract at Gollersdorf. Without him, Ferdinand was left to Bavaria and a patchwork of scattered commands against the finest soldier in Europe.",
     "historian_note": "Wilson presents Wallenstein's recall as necessity joined to broad delegation.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3555,7 +3551,7 @@
     "causal_claim_ids": [
       "claim_wallenstein_recall_necessity_recreates_autonomy"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "context_links": [
       {
         "term": "Wallenstein",
@@ -3570,7 +3566,7 @@
       {
         "id": "opt_recall_wallenstein_broad",
         "label": "Recall Wallenstein with the broad powers of Gollersdorf.",
-        "consequence": "The imperial army gathered again about its old magnet. So did the old fears.",
+        "consequence": "In the event, Ferdinand granted his general almost unlimited authority, and Wallenstein rebuilt an imperial army within months. The crown got its instrument back — and handed it to a man whose loyalty it could no longer command, only hope for.",
         "effects": {
           "military_dependence": 14,
           "dynastic_security": 8,
@@ -3588,7 +3584,7 @@
       {
         "id": "opt_recall_wallenstein_limited",
         "label": "Recall him under written limits.",
-        "consequence": "The court asked for a safer miracle. Wallenstein weighed whether such a command was worth the taking.",
+        "consequence": "The court asks for a safer miracle. Wallenstein weighs whether a command hedged with conditions is worth the taking — and the army it might raise is slower and smaller.",
         "effects": {
           "military_dependence": 7,
           "dynastic_security": 4,
@@ -3608,7 +3604,7 @@
       {
         "id": "opt_bavarian_coalition_command",
         "label": "Build a coalition command without him.",
-        "consequence": "The old dependency returned, and under worse circumstances. Maximilian was necessary once more.",
+        "consequence": "The old dependence on Bavaria returns, under worse circumstances. Maximilian is necessary once more — and the Swede does not wait.",
         "effects": {
           "military_dependence": 8,
           "dynastic_security": -8,
@@ -3635,8 +3631,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "1633",
     "title": "The General Makes His Own Peace",
-    "briefing": "Wallenstein's letters and his silences grew the harder to read. Some reports said he sought a settlement; others, that he sought the command of the settlement itself.",
-    "situation": "To suffer his diplomacy might divide the enemy. To oversee it might provoke him. To prepare alternatives might turn suspicion into rupture.",
+    "briefing": "Gustavus Adolphus had fallen at Lützen, and the Swedish thunderbolt was spent — yet the war did not end, because the man who could end it now seemed to be playing his own game. Through 1633 Wallenstein held his great army nearly idle, opened secret talks with the Swedes, the Saxons, and the exiles, and let no one be sure whether he sought peace for the emperor or for himself.",
+    "situation": "His letters and his silences could be read two ways. To tolerate his diplomacy might split the enemy coalition; to supervise it might provoke him; to prepare a replacement might turn suspicion into open rupture. And behind every reading lay the question no one in Vienna could answer with certainty: where did the loyalty of the army's officers finally lie?",
     "historian_note": "Wilson treats Wallenstein's opaque diplomacy as a real source of mistrust even if outright treason remains difficult to prove cleanly.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3644,7 +3640,7 @@
     "causal_claim_ids": [
       "claim_wallenstein_liquidation_restores_control_stains_legality"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "wallenstein_recalled_broad"
     ],
@@ -3654,15 +3650,15 @@
         "dossier_id": "dossier_wallenstein"
       },
       {
-        "term": "settlement",
-        "dossier_id": "dossier_peace_of_prague"
+        "term": "Lützen",
+        "dossier_id": "dossier_lutzen"
       }
     ],
     "options": [
       {
         "id": "opt_prepare_wallenstein_alternatives",
-        "label": "Build Spanish and Bavarian alternatives to Wallenstein.",
-        "consequence": "Trust became a plan of arms. The general read the plan as an accusation.",
+        "label": "Quietly build Spanish and Bavarian alternatives to Wallenstein.",
+        "consequence": "In the event, Ferdinand began preparing to do without his general — and Wallenstein, reading the plan as an accusation, drew closer to his secret contacts. Trust had become a military plan; the breach was now only a matter of time.",
         "effects": {
           "military_dependence": -2,
           "estate_trust": -3,
@@ -3678,8 +3674,8 @@
       },
       {
         "id": "opt_authorize_wallenstein_talks",
-        "label": "Authorize his soundings for peace under an explicit warrant.",
-        "consequence": "The court turned a danger into an instrument; but every ally feared what the instrument might sign.",
+        "label": "Authorize his peace soundings under an explicit warrant.",
+        "consequence": "Ferdinand turns a danger into an instrument — but every ally dreads what the instrument might sign, and the leash is only as strong as the general's word.",
         "effects": {
           "foreign_intervention_risk": -4,
           "estate_trust": 4,
@@ -3699,8 +3695,8 @@
       },
       {
         "id": "opt_confront_wallenstein_directly",
-        "label": "Confront him and renegotiate his powers.",
-        "consequence": "The wound was opened before ever the army had chosen its side.",
+        "label": "Confront him and renegotiate his powers face to face.",
+        "consequence": "The wound is opened before the army has chosen its side — a gamble on whether the officers serve the emperor or the man who pays them.",
         "effects": {
           "imperial_authority": 4,
           "military_dependence": -5,
@@ -3726,8 +3722,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "January-February 1634",
     "title": "Dead or Alive",
-    "briefing": "Patents were drawn releasing the officers from their obedience. The matter could be made lawful in form only if the army should first cease to be his.",
-    "situation": "An arrest risked delay, trial, and exposure. A removal by force would recover the command swiftly, but the chancery would inherit the stain.",
+    "briefing": "By early 1634 Vienna was convinced its generalissimo meant treason. Wallenstein had bound his colonels to himself by oath, opened unmistakable contacts with the enemy, and ignored imperial orders. Patents were being drawn to release the officers from their obedience — but they would be lawful only if the army first ceased to be his.",
+    "situation": "An arrest meant a trial, and a trial meant delay and exposure while the army wavered. A removal by force would settle the matter at a stroke and recover the command — but the chancery would inherit the stain of a murder done in the emperor's name. Either way, the question was whether the officers would obey Vienna or Wallenstein when the moment came.",
     "historian_note": "Wilson describes Ferdinand's patents and the political burial after Eger.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3735,7 +3731,7 @@
     "causal_claim_ids": [
       "claim_wallenstein_liquidation_restores_control_stains_legality"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "wallenstein_rupture_begun"
     ],
@@ -3748,8 +3744,8 @@
     "options": [
       {
         "id": "opt_wallenstein_dead_or_alive",
-        "label": "Release the officers and authorize a removal, dead or alive.",
-        "consequence": "Wallenstein fell at Eger. The army returned to obedience; the papers did not return to innocence.",
+        "label": "Release the officers and authorize his removal, dead or alive.",
+        "consequence": "In the event, Wallenstein was cut down with his closest officers at Eger on 25 February 1634. The army returned at once to obedience — but the manner of it, an assassination by imperial warrant, was a stain the crown would carry, and a warning every great servant would remember.",
         "effects": {
           "military_dependence": -14,
           "imperial_authority": 7,
@@ -3766,8 +3762,8 @@
       },
       {
         "id": "opt_wallenstein_arrest_trial",
-        "label": "Arrest him for trial before the imperial authority.",
-        "consequence": "The road in law was the cleaner and the slower. Every day gave the army time to ask whom it served.",
+        "label": "Arrest him for trial before imperial authority.",
+        "consequence": "The lawful road is cleaner and far slower — and every day of it gives the army time to ask whom it truly serves.",
         "effects": {
           "imperial_authority": 3,
           "military_dependence": -7,
@@ -3788,7 +3784,7 @@
       {
         "id": "opt_wallenstein_reconcile_narrow",
         "label": "Reconcile with him and narrow his command.",
-        "consequence": "The crisis was postponed within a smaller circle. Bavaria and Spain did not mistake postponement for safety.",
+        "consequence": "The crisis is postponed inside a smaller circle — but Bavaria and Spain do not mistake postponement for safety, and the general's grievance only deepens.",
         "effects": {
           "military_dependence": 6,
           "foreign_intervention_risk": 3,
@@ -3814,8 +3810,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1635",
     "title": "The Peace of Prague",
-    "briefing": "After Nordlingen the Saxon articles came within reach. The Edict might be quieted, the armies joined under emperor and Empire, and many of the Lutheran estates brought home.",
-    "situation": "The danger lay in the names left outside the pardon. Every excluded prince, exile, and army became useful to France or to Sweden.",
+    "briefing": "The victory at Nördlingen in 1634 changed everything. With the main Swedish army broken and his own son the hero of the hour, Ferdinand could at last negotiate from strength. He reached for a general peace with the German estates: he would suspend the hated Edict, draw Saxony and the Lutherans back to obedience, and unite all their armies under imperial command to drive the foreigners out.",
+    "situation": "The opportunity was real, and the danger lay in the fine print. A broad amnesty would heal the Empire but disappoint the men who had fought for a reckoning; a narrow one would reward loyalists but leave the excluded — princes, exiles, and armies — with nothing to lose and France and Sweden glad to employ them. Every name left outside the pardon was a future enemy.",
     "historian_note": "Wilson calls Prague a broad settlement undermined by exclusions.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3823,15 +3819,19 @@
     "causal_claim_ids": [
       "claim_prague_peace_settles_too_narrowly"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "context_links": [
       {
-        "term": "Peace of Prague",
-        "dossier_id": "dossier_peace_of_prague"
+        "term": "Nördlingen",
+        "dossier_id": "dossier_nordlingen"
       },
       {
         "term": "Edict",
         "dossier_id": "dossier_edict_of_restitution"
+      },
+      {
+        "term": "Saxony",
+        "dossier_id": "dossier_john_george_saxony"
       },
       {
         "term": "France",
@@ -3840,17 +3840,13 @@
       {
         "term": "Sweden",
         "dossier_id": "dossier_swedish_crown"
-      },
-      {
-        "term": "Saxon",
-        "dossier_id": "dossier_john_george_saxony"
       }
     ],
     "options": [
       {
         "id": "opt_prague_historical_exclusions",
         "label": "Make the elector's peace and leave the hard cases excluded.",
-        "consequence": "Saxony returned. The excluded learned that foreign protection was now their last court of appeal.",
+        "consequence": "In the event, Saxony, Brandenburg, and most Lutheran estates accepted Ferdinand's terms on 30 May 1635, and the war lost its confessional edge. But Ferdinand's exclusion of certain princes and exiles from the amnesty — Wilson calls it a grave error — kept a dissatisfied minority in arms and gave France and Sweden the clients they needed to fight on for thirteen more years.",
         "effects": {
           "estate_trust": 8,
           "imperial_authority": 8,
@@ -3868,7 +3864,7 @@
       {
         "id": "opt_prague_broad_amnesty",
         "label": "Broaden the amnesty while protecting the core loyalist rewards.",
-        "consequence": "The settlement cut the deeper into the enemy's German support; but the loyal beneficiaries asked which promises still held.",
+        "consequence": "The settlement cuts deeper into the enemy's German support — but the loyal beneficiaries ask which of their promised rewards will now be clawed back to buy off rebels.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -10,
@@ -3896,8 +3892,8 @@
       },
       {
         "id": "opt_prague_hard_catholic_terms",
-        "label": "Use Nordlingen to demand a harder Catholic settlement.",
-        "consequence": "The victory was spent like a confession of strength. The peace party thinned; the foreign patrons gained clients.",
+        "label": "Use Nördlingen to demand a harder Catholic settlement.",
+        "consequence": "Victory is spent like a confession of strength. The peace party thins, the excluded multiply, and the foreign crowns gain still more clients for the war that will not end.",
         "effects": {
           "confessional_legitimacy": 8,
           "estate_trust": -12,
@@ -3940,8 +3936,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1635-1636",
     "title": "The Amnesty Question",
-    "briefing": "Hessen-Kassel had still its soldiers, its claims, and its foreign suitors. A provisional acceptance of Prague would not become obedience unless the terms were made real.",
-    "situation": "To press the Westphalian bishoprics might content friends and reopen the war. To concede enough might remove an armed enemy, yet teach every holdout to bargain.",
+    "briefing": "The Peace of Prague had drawn most of the Empire back to the emperor, but a few held out — and chief among them was Hessen-Kassel, which still had an army, foreign paymasters, and grievances. Its provisional acceptance of Prague would never become real obedience unless the terms were made real, and that meant deciding how far to bend.",
+    "situation": "To press hard — demanding the Westphalian bishoprics, conceding little — would satisfy the Catholic claimants and Ferdinand's friends, but might reopen the war in the west. To concede enough would strike one armed enemy from the list, at the cost of teaching every holdout that defiance pays. It was the exclusion problem of Prague in miniature.",
     "historian_note": "Wilson treats Hessen-Kassel as a missed chance after Prague.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -3949,15 +3945,15 @@
     "causal_claim_ids": [
       "claim_prague_peace_settles_too_narrowly"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "prague_exclusions_hardline"
     ],
     "options": [
       {
         "id": "opt_hessen_deal_fails",
-        "label": "Hold the line, and let the deal fail if Wilhelm will not yield enough.",
-        "consequence": "The ban followed. Hessen returned to the war against the emperor with a sharpened grievance.",
+        "label": "Hold the line, and let the deal fail if Hessen will not yield enough.",
+        "consequence": "In the event, the terms could not be agreed, the ban followed, and Hessen-Kassel returned to the anti-imperial war with a sharpened grievance — one more client for France, exactly as the exclusions at Prague had threatened.",
         "effects": {
           "imperial_authority": 4,
           "foreign_intervention_risk": 6,
@@ -3974,8 +3970,8 @@
       },
       {
         "id": "opt_hessen_security_concessions",
-        "label": "Offer concessions of security to close the Hessen deal.",
-        "consequence": "One dangerous army might be struck from the enemy's list. The friends with claims in the region counted the cost.",
+        "label": "Offer security concessions to close the Hessen deal.",
+        "consequence": "One dangerous army may be removed from the enemy's roll — but friends with claims in the region count the cost, and every other holdout notes that bargaining works.",
         "effects": {
           "foreign_intervention_risk": -6,
           "estate_trust": 6,
@@ -3996,7 +3992,7 @@
       {
         "id": "opt_hessen_military_pressure",
         "label": "Use military pressure to compel obedience.",
-        "consequence": "The settlement spoke with cannon at its back. The war in the west hardened.",
+        "consequence": "The settlement speaks with cannon behind it. The war in the west hardens, and the line between pacifying the Empire and conquering it blurs further.",
         "effects": {
           "imperial_authority": 3,
           "devastation": 8,
@@ -4017,12 +4013,12 @@
     ],
     "context_links": [
       {
-        "term": "France",
-        "dossier_id": "dossier_french_crown"
+        "term": "Peace of Prague",
+        "dossier_id": "dossier_peace_of_prague"
       },
       {
-        "term": "Prague",
-        "dossier_id": "dossier_peace_of_prague"
+        "term": "France",
+        "dossier_id": "dossier_french_crown"
       }
     ]
   },
@@ -4033,8 +4029,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "1636-1637",
     "title": "Regensburg Again",
-    "briefing": "The emperor's health was no longer a private matter. The electors might secure Ferdinand's son; but they might also write new restraints into the price of continuity.",
-    "situation": "To delay was to gamble with the succession. To press forward was to accept that the next emperor would inherit both the crown and the conditions fastened to it.",
+    "briefing": "The succession Ferdinand had failed to secure at Regensburg in 1630 could wait no longer: the emperor's health was failing. With Nördlingen won and Prague signed, the electors were at last in a mood to oblige — but the price of their consent was a fresh set of restraints written into the bargain, the leverage they had guarded for seven years.",
+    "situation": "To delay was to gamble the dynasty's future on the emperor's failing body. To press ahead was to accept that his son would inherit not only the crown but the conditions fastened to it. Every concession bought a smoother election; every restraint narrowed the throne his heir would sit on.",
     "historian_note": "Wilson treats Ferdinand III's election as dynastic success bound by consultation limits and unresolved war.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4042,30 +4038,18 @@
     "causal_claim_ids": [
       "claim_ferdinand_iii_election_secures_dynasty_with_limits"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "context_links": [
       {
-        "term": "Regensburg",
-        "dossier_id": "dossier_regensburg_congress"
-      },
-      {
-        "term": "Ferdinand",
-        "dossier_id": "dossier_ferdinand_ii"
-      },
-      {
         "term": "electors",
-        "dossier_id": "dossier_regensburg_congress"
-      },
-      {
-        "term": "Ferdinand's son",
-        "dossier_id": "dossier_ferdinand_ii"
+        "dossier_id": "dossier_imperial_electors"
       }
     ],
     "options": [
       {
         "id": "opt_secure_ferdinand_iii",
-        "label": "Secure Ferdinand III's election as king of the Romans.",
-        "consequence": "The dynasty outlived the emperor's body. The war outlived the dynasty's success.",
+        "label": "Secure Ferdinand III's election as King of the Romans.",
+        "consequence": "In the event, the electors chose Ferdinand's son King of the Romans in 1636, and the dynasty outlived the emperor's body. The Habsburg succession was safe — but the war his son inherited would outlive the dynasty's success by another twelve years.",
         "effects": {
           "dynastic_security": 16,
           "imperial_authority": 3,
@@ -4081,8 +4065,8 @@
       },
       {
         "id": "opt_buy_unanimous_succession",
-        "label": "Buy a warmer consent with broader procedural guarantees.",
-        "consequence": "The election grew less brittle, and the crown less free.",
+        "label": "Buy warmer consent with broader procedural guarantees.",
+        "consequence": "The election grows less brittle — and the crown less free, as the electors write their price into the constitution.",
         "effects": {
           "dynastic_security": 12,
           "estate_trust": 8,
@@ -4102,8 +4086,8 @@
       },
       {
         "id": "opt_delay_succession_for_war",
-        "label": "Delay the election until the military fortunes should improve.",
-        "consequence": "The chancery gained room to negotiate and lost its sleep. Every fever now carried a constitutional meaning.",
+        "label": "Delay the election until the military fortunes improve.",
+        "consequence": "The chancery gains room to bargain and loses its sleep: every fever in the emperor's chamber now carries a constitutional meaning.",
         "effects": {
           "dynastic_security": -14,
           "imperial_authority": 2,
@@ -4196,8 +4180,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When estate trust collapses",
     "title": "Guarantees Before Obedience",
-    "briefing": "Petitions arrived that asked not for favour but for written security. The estates that once disputed policy now asked what should prevent any privilege from being narrowed after submission.",
-    "situation": "Every concession now looked an admission of weakness, and every refusal strengthened the argument that only guarantees in arms could preserve the liberties.",
+    "briefing": "The petitions arriving now asked not for favour but for security in writing. Estates that had once merely disputed policy wanted to know what, after submission, would stop any privilege from being narrowed away — as the Letter of Majesty had been, as the Edict now threatened. They had learned to trust guarantees, not goodwill.",
+    "situation": "In the climate the war had made, every concession looked like an admission of weakness, and every refusal strengthened the argument that only guarantees backed by arms could protect a liberty. Ferdinand could offer written security while preserving obedience in form, or insist that obedience must come first and privilege after.",
     "historian_note": "The game abstracts Wilson's wider constitutional point: fear of overreach made settlement harder even after imperial victories.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4205,21 +4189,25 @@
     "causal_claim_ids": [
       "claim_restitution_edict_overreach"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "threshold_estate_trust_crisis"
     ],
     "context_links": [
       {
-        "term": "privilege",
-        "dossier_id": "dossier_bohemian_estates"
+        "term": "Letter of Majesty",
+        "dossier_id": "dossier_letter_of_majesty"
+      },
+      {
+        "term": "Edict",
+        "dossier_id": "dossier_edict_of_restitution"
       }
     ],
     "options": [
       {
         "id": "opt_threshold_issue_estate_guarantees",
         "label": "Offer written guarantees while preserving obedience in form.",
-        "consequence": "Some moderates received language to carry home. The Catholic hardliners and the victorious officers heard that rebellion had taught the court to bargain.",
+        "consequence": "Some moderates get language they can carry home and defend. The Catholic hardliners and the victorious officers hear that rebellion has taught the court to bargain — and file the lesson away.",
         "effects": {
           "estate_trust": 8,
           "imperial_authority": -5,
@@ -4241,8 +4229,8 @@
       },
       {
         "id": "opt_threshold_refuse_estate_guarantees",
-        "label": "Refuse the guarantees and insist that obedience precede every privilege.",
-        "consequence": "The court kept the order of authority intact. The petitions departed unanswered, and the foreign patrons gained another file of grievances.",
+        "label": "Refuse guarantees; insist obedience precede every privilege.",
+        "consequence": "The court keeps the order of authority intact. The petitions go home unanswered — and the foreign patrons gain one more file of grievances to wave.",
         "effects": {
           "imperial_authority": 5,
           "estate_trust": -7,
@@ -4415,8 +4403,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When military dependence is extreme",
     "title": "The Price of Armed Servants",
-    "briefing": "The men who kept the armies in the field now sent their counsel as well as their accounts. They asked whether policy would follow the soldiers who made policy possible.",
-    "situation": "To refuse them risked the very instrument of survival. To satisfy them taught every prince that imperial necessity might be made to pay.",
+    "briefing": "The men who kept armies in the field now sent counsel along with their accounts. Contractors, colonels, and allied commanders — the Wallensteins and the Bavarians on whom the war depended — wanted to know whether policy would follow the soldiers who made policy possible. An army raised on credit and contribution answered, in the end, to whoever paid it.",
+    "situation": "To refuse these creditors risked the very instrument of survival; to satisfy them taught every prince that imperial necessity could be made to pay. The emperor could buy their loyalty before it curdled into rivalry, or reassert that credit was not sovereignty and dare the consequences.",
     "historian_note": "This abstracts the recurring Bavarian and Wallenstein problem: military capacity could become leverage over imperial policy.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4424,7 +4412,7 @@
     "causal_claim_ids": [
       "claim_wallenstein_army_solves_capacity_creates_autonomy"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "threshold_military_dependence_crisis"
     ],
@@ -4434,15 +4422,15 @@
         "dossier_id": "dossier_wallenstein"
       },
       {
-        "term": "Bavarian",
-        "dossier_id": "dossier_maximilian_bavaria"
+        "term": "contribution",
+        "dossier_id": "dossier_contributions"
       }
     ],
     "options": [
       {
         "id": "opt_threshold_pay_military_creditors",
         "label": "Satisfy the armed creditors before they become rivals.",
-        "consequence": "The army remained usable; but the obedience was purchased in open view. The price of survival became a precedent.",
+        "consequence": "The army stays usable — but obedience bought in open view becomes a precedent, and the price of survival is paid again every campaign.",
         "effects": {
           "military_dependence": 6,
           "fiscal_capacity": -8,
@@ -4464,8 +4452,8 @@
       },
       {
         "id": "opt_threshold_reassert_command_over_creditors",
-        "label": "Reassert command, and risk a breach with the military creditors.",
-        "consequence": "The court reminded its servants that credit was not sovereignty. The reminder was lawful, dangerous, and costly should the army hesitate.",
+        "label": "Reassert command and risk a breach with the military creditors.",
+        "consequence": "The court reminds its servants that credit is not sovereignty. The reminder is lawful, dangerous, and ruinous if the army hesitates at the wrong moment.",
         "effects": {
           "imperial_authority": 6,
           "military_dependence": -5,
@@ -4493,8 +4481,8 @@
     "phase_id": "phase_swedish_wallenstein_crisis",
     "date_label": "When foreign intervention risk is extreme",
     "title": "Foreign Courts Find Their Cause",
-    "briefing": "Envoys reported that the imperial quarrels were being translated abroad into the language of balance, of protection, of recovery, and of religion.",
-    "situation": "The court might still plead its domestic law. The other crowns now answered that domestic law had become a danger to Europe.",
+    "briefing": "The reports from abroad carried a new and ominous note. Imperial quarrels were being translated, in Stockholm and Paris, into the language of the European balance — of protection owed, of recovery deserved, of religion in danger. What Vienna called domestic law, other crowns were beginning to call a continental threat.",
+    "situation": "Ferdinand could still insist the war was an internal matter of the Empire. But Sweden was in Germany and France was edging toward it, and every assertion of imperial power abroad read as a reason to intervene. He could answer with public reassurances that denied the foreign courts their pretext, or with a decisive blow that might silence them — or prove them right.",
     "historian_note": "Wilson frames the widening war as a fusion of imperial settlement, dynastic security, and foreign-policy calculation.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4502,7 +4490,7 @@
     "causal_claim_ids": [
       "claim_leipzig_rejection_drives_saxony_to_sweden"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "threshold_foreign_intervention_crisis"
     ],
@@ -4520,7 +4508,7 @@
       {
         "id": "opt_threshold_send_public_reassurances_abroad",
         "label": "Send public reassurances to deny the foreign courts their pretext.",
-        "consequence": "The papers made intervention the harder to justify; but they bound the emperor also to words that allies and estates would quote back at him.",
+        "consequence": "The papers make intervention harder to justify — but they also bind the emperor to words that allies and estates will quote back at him when he wants to act.",
         "effects": {
           "foreign_intervention_risk": -8,
           "estate_trust": 4,
@@ -4541,8 +4529,8 @@
       },
       {
         "id": "opt_threshold_answer_foreign_pressure_with_victory",
-        "label": "Answer the foreign pressure by seeking a decisive demonstration of arms.",
-        "consequence": "A victory might silence patrons and clients together. A failure would prove that the Empire had become the battlefield of Europe.",
+        "label": "Answer foreign pressure with a decisive military demonstration.",
+        "consequence": "A victory might silence patrons and clients together. A defeat would prove to all Europe that the Empire has become its battlefield — and invite everyone in.",
         "effects": {
           "imperial_authority": 5,
           "foreign_intervention_risk": 5,
@@ -4570,8 +4558,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "When succession is secure",
     "title": "A Crown Not Yet in Panic",
-    "briefing": "The councillors observed that the succession need no longer be bought in the same breath as every military demand. The dynasty had room to choose its concessions.",
-    "situation": "Security might make moderation the easier; but it might also tempt the court to spend less upon settlement, the house itself being safe.",
+    "briefing": "For a rare interval, the succession did not have to be bought in the same breath as every military demand. With his son's position more secure, Ferdinand had room — a thing war seldom allows — to choose which concessions to make and which to keep.",
+    "situation": "Security could make moderation easier, freeing the court to settle from confidence rather than fear. It could as easily tempt it to spend less on settlement, the dynasty itself being safe. The breathing space was an asset that could be invested in peace or hoarded for the house.",
     "historian_note": "This is the reward side of Ferdinand's dynastic problem: security changes what concessions are politically bearable.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4579,21 +4567,16 @@
     "causal_claim_ids": [
       "claim_ferdinand_iii_election_secures_dynasty_with_limits"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "threshold_dynastic_security_high"
     ],
-    "context_links": [
-      {
-        "term": "succession",
-        "dossier_id": "dossier_ferdinand_ii"
-      }
-    ],
+    "context_links": [],
     "options": [
       {
         "id": "opt_threshold_use_security_for_moderation",
-        "label": "Use the dynastic security to offer wider terms of settlement.",
-        "consequence": "The court could concede without sounding desperate. The Catholic allies complained; but some estates heard strength rather than retreat.",
+        "label": "Use the dynasty's security to offer wider settlement terms.",
+        "consequence": "The court can concede without sounding desperate. The Catholic allies complain — but some estates hear strength rather than retreat, and edge back toward obedience.",
         "effects": {
           "estate_trust": 8,
           "foreign_intervention_risk": -6,
@@ -4615,8 +4598,8 @@
       },
       {
         "id": "opt_threshold_guard_security_for_house",
-        "label": "Guard the dynastic security and make the fewer promises of settlement.",
-        "consequence": "The house remained the safer; but the Empire heard less of reconciliation and more of continuity.",
+        "label": "Guard the dynasty's security and make fewer promises.",
+        "consequence": "The house stays safer — but the Empire hears less of reconciliation and more of continuity, and the dissatisfied keep their distance.",
         "effects": {
           "dynastic_security": 4,
           "estate_trust": -4,
@@ -4643,8 +4626,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "When devastation is extreme",
     "title": "The Lands Petition Against Ruin",
-    "briefing": "Town councils, territorial officers, and ecclesiastical administrators sent reports that no longer parted war policy from hunger, flight, billeting, and unpaid contribution.",
-    "situation": "Devastation had become an argument in council. Even the loyal asked what obedience could mean, if the lands that obeyed were consumed.",
+    "briefing": "The petitions no longer separated grand strategy from hunger. Town councils, district officers, and church administrators wrote of fields unsown, villages emptied, soldiers quartered without end, and contributions that could not be paid because there was nothing left to take. The war's cost had moved from the ledger into the body of the land.",
+    "situation": "Devastation had become an argument in council itself: even loyal men now asked what obedience could mean if the lands that obeyed were consumed. Ferdinand could order relief and cap contributions in the worst-hit regions, or keep the contributions flowing until peace was nearer and trust the land to endure.",
     "historian_note": "Wilson treats wartime devastation and material exhaustion as political facts, not merely background suffering.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4652,21 +4635,21 @@
     "causal_claim_ids": [
       "claim_army_finance_devastation"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "threshold_devastation_crisis"
     ],
     "context_links": [
       {
-        "term": "contribution",
-        "dossier_id": "dossier_wallenstein"
+        "term": "contributions",
+        "dossier_id": "dossier_contributions"
       }
     ],
     "options": [
       {
         "id": "opt_threshold_relieve_devastated_lands",
-        "label": "Order relief and limits on contribution in the worst-hit lands.",
-        "consequence": "The order gave the loyal estates words to defend obedience. The commanders answered that armies could not march on mercy alone.",
+        "label": "Order relief and contribution limits in the worst-hit lands.",
+        "consequence": "The order gives loyal estates words to defend obedience with. The commanders answer that armies cannot march on mercy, and that an unfed soldier feeds himself.",
         "effects": {
           "devastation": -9,
           "estate_trust": 7,
@@ -4688,8 +4671,8 @@
       },
       {
         "id": "opt_threshold_keep_contributions_flowing",
-        "label": "Keep the contributions flowing until peace should be nearer.",
-        "consequence": "The army remained supplied, and the petitions grew the darker. Peace itself began to look the only relief still credible.",
+        "label": "Keep contributions flowing until peace is nearer.",
+        "consequence": "The army stays supplied, and the petitions grow darker. Peace itself begins to look like the only relief anyone still believes in.",
         "effects": {
           "fiscal_capacity": 5,
           "devastation": 7,
@@ -4717,8 +4700,8 @@
     "phase_id": "phase_prague_succession",
     "date_label": "February 1637",
     "title": "The Emperor Dies",
-    "briefing": "Ferdinand died with Bohemia held, the dynasty continued, and the Catholic restoration rooted deep in the hereditary lands.",
-    "situation": "The Empire was not at peace. Every unsettled file passed to Ferdinand III: the amnesty, the armies, the foreign crowns, the devastated lands, and the question of how much imperial authority might bear before it should break cooperation altogether.",
+    "briefing": "On 15 February 1637 Ferdinand II died in Vienna, in his bed, the succession secured and his faith triumphant in the hereditary lands. He had taken a provincial archduke's crown and made himself master of a recatholicized Austria and Bohemia, broken the Bohemian and Palatine revolts, and outlived the Swedish thunderbolt. By the measure of his own beginnings, he had won.",
+    "situation": "And yet the war he had done so much to start, and to widen, did not end with him. Every unsettled question passed to his son, Ferdinand III: the half-kept amnesty, the unpaid armies, the foreign crowns now lodged in the Empire, the devastated lands, and the deepest question of all — how much imperial authority the Empire could bear before cooperation broke for good. The memorial of the reign now had to be closed.",
     "historian_note": "Wilson marks Ferdinand II's death as dynastic continuity amid unresolved amnesty, fiscal, foreign, and military problems.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -4726,12 +4709,12 @@
     "causal_claim_ids": [
       "claim_ferdinand_iii_election_secures_dynasty_with_limits"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_receive_final_memorial",
         "label": "Receive the final memorial of the reign.",
-        "consequence": "The record was sealed for the next emperor. Ferdinand's victories remained real; so did the wars they had not ended.",
+        "consequence": "The record is sealed for the next emperor. Ferdinand's victories were real; so were the wars they did not end. He died believing the worst was over. It was not: the war would grind on until 1648, and the Peace of Westphalia would settle it on terms closer to his enemies' than his own.",
         "effects": {},
         "causal_claim_ids": [
           "claim_ferdinand_iii_election_secures_dynasty_with_limits"
@@ -4744,7 +4727,7 @@
       {
         "id": "opt_order_final_settlement_summary",
         "label": "Order a final summary of the settlement for Ferdinand III.",
-        "consequence": "The clerks gathered the unsettled questions into one inheritance: authority, confession, debt, armies, and peace.",
+        "consequence": "The clerks gather the unsettled questions into a single inheritance: authority, confession, debt, armies, and a peace still eleven years away.",
         "effects": {},
         "causal_claim_ids": [
           "claim_ferdinand_iii_election_secures_dynasty_with_limits"
@@ -4757,6 +4740,7 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "context_links": []
   }
 ]

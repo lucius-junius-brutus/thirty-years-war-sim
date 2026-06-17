@@ -45,11 +45,22 @@ not re-explained.)
 - Edict of Restitution — dossier_edict_of_restitution — card_1629_restitution_edict
 - Peace of Lübeck — dossier_peace_of_lubeck — card_1629_lubeck_peace
 
+## Introduced in Phases 5-6 (Swedish crisis, Peace of Prague, succession)
+- Regensburg Electoral Congress (1630) — dossier_regensburg_congress — card_1630_regensburg_wallenstein
+- Gustavus Adolphus — dossier_gustavus_adolphus — card_1630_regensburg_wallenstein
+- The Swedish Crown — dossier_swedish_crown — card_1631_intervention_crisis
+- Battle of Lützen — dossier_lutzen — card_1633_wallenstein_peace
+- Battle of Nördlingen — dossier_nordlingen — card_1635_prague_peace
+- Peace of Prague — dossier_peace_of_prague — card_1635_prague_peace
+- The French Crown — dossier_french_crown — card_1635_prague_peace
+(Wallenstein, Edict, Saxony, electors, Letter of Majesty, contributions all linked.)
+
 ## Already-named entities with dossiers, to LINK (not re-explain) in later phases
 - Ferdinand II — dossier_ferdinand_ii (the player; rarely linked)
 - Bohemian Estates — dossier_bohemian_estates
 
-## Pending dossiers to create in later phases (entities cards name but don't yet link)
+## DONE: all 48 cards rewritten from Wilson; 37 dossiers, all reviewed.
+## (former) Pending dossiers list (now mostly created)
 Defenestration of Prague, Hradschin, Frederick V, John George of Saxony, Wallenstein,
 Tilly, Mansfeld, Christian of Brunswick, White Mountain, Bucquoy, Spanish Road,
 Edict of Restitution, Peace of Lübeck, Regensburg congress, Peace of Prague, imperial

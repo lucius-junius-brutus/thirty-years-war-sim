@@ -140,23 +140,23 @@
     "id": "dossier_regensburg_congress",
     "title": "Regensburg Electoral Congress",
     "dossier_type": "institution",
-    "summary": "Meetings of electors and imperial authority where consent, succession, military command, and constitutional limits could be bargained.",
-    "why_it_matters": "Regensburg shows that Ferdinand's imperial title does not give free command; collective politics can force concessions at moments of apparent strength.",
+    "summary": "An electoral congress held at Regensburg from July to November 1630, attended by Ferdinand II and the prince-electors. Ferdinand sought the election of his son as King of the Romans and aid for the Spanish war; the electors, alarmed at his growing power, refused both and demanded the dismissal of his over-mighty general, Wallenstein.",
+    "why_it_matters": "At Regensburg the electors forced Ferdinand to sacrifice Wallenstein and denied him the succession he wanted — just as Gustavus Adolphus landed in Pomerania. The congress marked the limits of imperial power at its height and, by removing Wallenstein on the eve of the Swedish onslaught, helped open the war's disastrous foreign phase.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_peace_of_prague",
     "title": "Peace of Prague",
     "dossier_type": "treaty",
-    "summary": "The 1635 imperial settlement with Saxony and many Lutheran estates, compromising on the Edict and reorganizing military authority.",
-    "why_it_matters": "It can restore much of the Empire to Ferdinand's side, but exclusions from its amnesty keep important enemies in the war.",
+    "summary": "A settlement reached on 30 May 1635 between Ferdinand II and Elector John George of Saxony, joined by Brandenburg and most Lutheran territories. It suspended the Edict of Restitution for forty years, returned many estates to obedience, and placed their armies under imperial command to expel foreign forces from the Empire.",
+    "why_it_matters": "The Peace of Prague was Ferdinand's bid to end the war by uniting the German estates behind him against France and Sweden, and it largely drained the conflict of its confessional character. But his exclusion of certain princes and exiles from the amnesty kept a dissatisfied minority in arms, and France and Sweden fought on, prolonging the war for thirteen more years.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_imperial_ban",
@@ -206,25 +206,25 @@
   },
   {
     "id": "dossier_swedish_crown",
-    "title": "Swedish Crown",
+    "title": "The Swedish Crown",
     "dossier_type": "institution",
-    "summary": "The Swedish monarchy under Gustavus Adolphus entered the German war as Protestant protector, Baltic power, and opponent of Habsburg consolidation.",
-    "why_it_matters": "Swedish intervention turned unresolved imperial settlement into a European military problem, especially once Saxony and other Lutherans lost confidence in Ferdinand's terms.",
+    "summary": "Under Gustavus Adolphus and his chancellor Axel Oxenstierna, the Swedish Crown rose in the early seventeenth century into a formidable military power seeking security and dominance around the Baltic. Lutheran, well-organized, and reliant on French subsidies, Sweden intervened in the Empire from 1630.",
+    "why_it_matters": "Sweden became the principal foreign sponsor of the anti-imperial cause and stayed at war in Germany until the Peace of Westphalia in 1648. Its intervention turned a German conflict into a European one and ensured that no purely imperial settlement — such as the Peace of Prague — could end the war.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_french_crown",
-    "title": "French Crown",
+    "title": "The French Crown",
     "dossier_type": "institution",
-    "summary": "The Bourbon monarchy watched Habsburg success in the Empire as a dynastic and strategic danger before entering the war directly.",
-    "why_it_matters": "A settlement that excluded too many enemies could still leave France with clients, reasons, and openings to prolong the war.",
+    "summary": "The French Crown under King Louis XIII and his chief minister Cardinal Richelieu pursued raison d'état: the containment of Habsburg power, even at the price of a Catholic kingdom subsidizing and then joining the Protestant enemies of the Catholic emperor. France funded Sweden and the Dutch before declaring open war on Spain in 1635.",
+    "why_it_matters": "France's open entry in 1635, just as the Peace of Prague threatened to end the war on imperial terms, ensured the conflict would continue. By the Peace of Westphalia in 1648, French intervention had checked the Habsburgs and made France the dominant power in western Europe.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_danish_crown",
@@ -378,6 +378,39 @@
     "dossier_type": "institution",
     "summary": "The imperial circles (Reichskreise) were ten regional groupings of territories in the Holy Roman Empire, created to organize defence, taxation, coinage, and the keeping of the public peace. Each circle had its own assembly and could raise troops; the Lower Saxon Circle, in the north, counted the Danish king among its members in his capacity as Duke of Holstein.",
     "why_it_matters": "The circles let a region act collectively, blurring the line between local self-defence and resistance to the emperor. When the Lower Saxon Circle elected Christian IV of Denmark its colonel and raised an army in 1625, an imperial institution became the vehicle for a foreign king's war against the emperor.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_gustavus_adolphus",
+    "review_status": "reviewed",
+    "title": "Gustavus Adolphus",
+    "dossier_type": "person",
+    "summary": "Gustavus Adolphus (1594–1632), King of Sweden, was the most celebrated soldier of the age, a reformer of armies and tactics who had made Sweden a Baltic power. In July 1630 he landed in Pomerania with a disciplined army, partly subsidized by France, to defend the Protestant cause and Swedish security against the victorious emperor.",
+    "why_it_matters": "Gustavus's intervention transformed the war. His victory at Breitenfeld in 1631 shattered the imperial-Catholic ascendancy and carried Swedish armies deep into Germany; his death at Lützen in 1632 removed the one leader who might have imposed a Protestant settlement. The 'foreign period' he opened would last another sixteen years.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_lutzen",
+    "review_status": "reviewed",
+    "title": "Battle of Lützen",
+    "dossier_type": "concept",
+    "summary": "A battle fought on 16 November 1632 near Lützen in Saxony between the Swedish army of Gustavus Adolphus and the imperial army of Wallenstein. The Swedes held the field, but Gustavus Adolphus was killed in the fighting.",
+    "why_it_matters": "Lützen removed the one commander capable of welding the Protestant cause into a coherent whole. Sweden fought on under Oxenstierna and its generals, but without Gustavus the war drifted toward stalemate and the exhausting 'foreign period' that the Peace of Prague would try, and fail, to end.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_nordlingen",
+    "review_status": "reviewed",
+    "title": "Battle of Nördlingen",
+    "dossier_type": "concept",
+    "summary": "A battle fought on 6 September 1634 near the imperial city of Nördlingen, where a combined imperial and Spanish army under Ferdinand's son (the future Ferdinand III) and the Spanish Cardinal-Infante decisively defeated the main Swedish army, reversing the Swedish ascendancy that had followed Breitenfeld.",
+    "why_it_matters": "Nördlingen restored the imperial position in southern Germany, brought Saxony and most Lutheran estates to terms in the Peace of Prague, and let Ferdinand negotiate from strength. But it also alarmed France into open war — so the victory that made an imperial peace possible also guaranteed it would not be the end of the war.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
