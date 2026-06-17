@@ -73,3 +73,30 @@ by framing the war as law not crusade (and by Lusatia as his price). Introduces 
 **card_1620_march_on_prague (The Road to Prague)** — Ferdinand overruling Bucquoy for
 Tilly's bold march; recorded course pays off in White Mountain (8 Nov 1620), which the
 card introduces as the battle the whole revolt turns on.
+
+---
+
+## Phase 3 — Palatinate consolidation
+
+Theme: victory that won't end. Each card shows a different way completeness curdles.
+
+**white_mountain_aftermath** — The strategic punishment choice (terror vs legible
+severity vs amnesty), distinct from the Blood Court card which executes it.
+**blood_court** — Recorded course grounded hard in Wilson's facts (28 warrants on the
+Defenestration's anniversary; 27 dead; heads on the gates to 1631; "unnecessary and a
+mistake"). The most compelling aftermath because it is real and terrible.
+**confiscations** — "Half of Bohemia changed hands"; introduces the land-machine that
+makes Wallenstein (and the war-feeds-war system) possible later.
+**spanish_rhine** — Frames the Rhine via the Spanish Road, showing how a Bohemian
+quarrel fuses with Spain's Dutch war — the war going European.
+**league_finance** — Who pays the victorious army; seeds the contribution/"war feeds
+war" theme that dominates the Wallenstein phases.
+**ban_of_frederick** — Centres the due-process alarm: outlawing an elector by fiat
+frightens even Catholics. Introduces the imperial ban as a constitutional weapon.
+**palatine_settlement** — Mansfeld + Christian keep the war alive; every option brushes
+Maximilian's promised reward, tightening the Bavarian dependency.
+**electoral_transfer** — The Munich bill falls due; grounded in the 1623 Regensburg
+transfer "for Maximilian's lifetime." Introduces the electoral college as constitution.
+**peace_feelers** — The 1623 crossroads (settle / press / demobilize); sets up why the
+Edict and the next escalations happen instead of peace.
+**threshold_estates_offer_credit** — Threshold reward card; goodwill as a wasting asset.

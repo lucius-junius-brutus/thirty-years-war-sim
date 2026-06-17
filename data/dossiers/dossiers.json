@@ -160,15 +160,15 @@
   },
   {
     "id": "dossier_imperial_ban",
-    "title": "Imperial Ban",
+    "title": "The Imperial Ban",
     "dossier_type": "concept",
-    "summary": "A legal punishment placing an offender outside imperial protection and opening the way to confiscation or coercion.",
-    "why_it_matters": "Against Frederick it strengthens Ferdinand's legal position while turning punishment into a durable Palatine and Protestant grievance.",
+    "summary": "The imperial ban (Reichsacht) was the Holy Roman Empire's highest secular sanction, declaring a person an outlaw stripped of rights and lands, whom any subject might lawfully pursue and punish. Its imposition on a prince — let alone an elector — was meant to follow due process and the consent of the imperial estates.",
+    "why_it_matters": "Ferdinand placed Frederick V under the imperial ban in January 1621 with only a few hand-picked electors consulted, not the full Diet. The procedure alarmed even Catholic princes: if an elector could be outlawed by imperial fiat, no estate's rights were secure, and the question of due process shadowed every later imperial act.",
     "source_refs": [
-      "src_public_reichsacht_frederick_1621",
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_public_reichsacht_frederick_1621"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_bohemian_estates",
@@ -301,6 +301,61 @@
     "dossier_type": "concept",
     "summary": "Fought on 8 November 1620 on a chalk ridge about eight kilometres west of Prague, this was the first major battle of the Thirty Years War and the most decisive. The combined imperial and Catholic League army under Maximilian of Bavaria and Tilly routed the Bohemian Confederate forces under Christian of Anhalt in little more than an hour.",
     "why_it_matters": "White Mountain destroyed the Bohemian Revolt at a stroke. Frederick V fled, the estates' rebellion collapsed, and Ferdinand II was left free to remake Bohemia by execution, confiscation, and forced re-Catholicization — a victory so complete that it shaped the kingdom for three centuries.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_imperial_electors",
+    "review_status": "reviewed",
+    "title": "The Prince-Electors",
+    "dossier_type": "institution",
+    "summary": "The seven rulers entitled to elect the Holy Roman Emperor: the archbishops of Mainz, Cologne, and Trier; the King of Bohemia; the Count Palatine of the Rhine; the Duke of Saxony; and the Margrave of Brandenburg. Their college, balanced between Catholic and Protestant members, also claimed a special voice in the gravest affairs of the Empire.",
+    "why_it_matters": "Because the emperor was elected, the electors' votes and goodwill were indispensable, and any change to their number or membership touched the constitution itself. Ferdinand's transfer of the Palatine electoral title to Bavaria in 1623, and his later dealings with Saxony and Brandenburg, repeatedly turned on keeping the electors content.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_blood_court",
+    "review_status": "reviewed",
+    "title": "The Blood Court",
+    "dossier_type": "concept",
+    "summary": "The public execution of twenty-seven leaders of the Bohemian Revolt in Prague's Old Town Square on 21 June 1621. Ferdinand II had signed twenty-eight death warrants on 23 May, the third anniversary of the Defenestration, pardoning five; the condemned were three lords, seven knights, and seventeen burghers. Twelve heads and the rector's tongue were displayed on the town gates, where they remained until the Saxons removed them in 1631.",
+    "why_it_matters": "The Blood Court was the visible face of Ferdinand's treatment of the revolt as treason. Wilson judges it 'undoubtedly unnecessary and a mistake': small in numbers beside other repressions of the age, it nonetheless turned the executed rebels into martyrs and hardened Protestant memory across the Empire for a generation.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_spanish_road",
+    "review_status": "reviewed",
+    "title": "The Spanish Road",
+    "dossier_type": "concept",
+    "summary": "The overland military corridor by which Spain moved troops and silver from its territories in Lombardy, through Savoy, Franche-Comté, and the Rhineland, to the army fighting the Dutch Revolt in the Netherlands. Vulnerable and politically sensitive, it made the Rhine valley a vital Spanish interest.",
+    "why_it_matters": "When the war reached the Rhenish Palatinate, Frederick V's lands lay athwart the Spanish Road. Spanish forces under Spinola occupied the Lower Palatinate in 1620 to secure the corridor, fusing Ferdinand's German war with Spain's war against the Dutch and turning a Bohemian quarrel into a question of European strategy.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_mansfeld",
+    "review_status": "reviewed",
+    "title": "Ernst von Mansfeld",
+    "dossier_type": "person",
+    "summary": "Ernst von Mansfeld (c.1580–1626) was a Catholic-born mercenary general who became the most persistent military entrepreneur of the early war, fighting for the Protestant cause though driven as much by profit and survival. Outlawed after the Bohemian campaign, he kept armies in the field by living off the land.",
+    "why_it_matters": "Mansfeld, with Christian of Brunswick, carried the Palatine war on after White Mountain, denying Ferdinand a clean victory and spreading the conflict across the Empire. His self-financing armies, sustained by plunder and contribution, became the model for the destructive 'war feeds war' system that ravaged Germany.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_christian_brunswick",
+    "review_status": "reviewed",
+    "title": "Christian of Brunswick",
+    "dossier_type": "person",
+    "summary": "Christian of Brunswick-Wolfenbüttel (1599–1626), Protestant administrator of Halberstadt, was a young, reckless cavalry commander who fought for Frederick V's cause as a freebooting ally of Mansfeld. Known as 'the mad Halberstadter,' he paid his troops by plundering church lands and struck coins inscribed 'God's friend, priests' enemy.'",
+    "why_it_matters": "Christian's campaigns in Westphalia and the Lower Saxon lands kept the Palatine war alive after White Mountain and helped widen it toward the north German circle, where it would soon draw in Denmark.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]

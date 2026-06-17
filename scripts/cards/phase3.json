@@ -1,0 +1,288 @@
+{
+  "dossiers": {
+    "dossier_imperial_electors": {
+      "title": "The Prince-Electors",
+      "dossier_type": "institution",
+      "summary": "The seven rulers entitled to elect the Holy Roman Emperor: the archbishops of Mainz, Cologne, and Trier; the King of Bohemia; the Count Palatine of the Rhine; the Duke of Saxony; and the Margrave of Brandenburg. Their college, balanced between Catholic and Protestant members, also claimed a special voice in the gravest affairs of the Empire.",
+      "why_it_matters": "Because the emperor was elected, the electors' votes and goodwill were indispensable, and any change to their number or membership touched the constitution itself. Ferdinand's transfer of the Palatine electoral title to Bavaria in 1623, and his later dealings with Saxony and Brandenburg, repeatedly turned on keeping the electors content.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_blood_court": {
+      "title": "The Blood Court",
+      "dossier_type": "concept",
+      "summary": "The public execution of twenty-seven leaders of the Bohemian Revolt in Prague's Old Town Square on 21 June 1621. Ferdinand II had signed twenty-eight death warrants on 23 May, the third anniversary of the Defenestration, pardoning five; the condemned were three lords, seven knights, and seventeen burghers. Twelve heads and the rector's tongue were displayed on the town gates, where they remained until the Saxons removed them in 1631.",
+      "why_it_matters": "The Blood Court was the visible face of Ferdinand's treatment of the revolt as treason. Wilson judges it 'undoubtedly unnecessary and a mistake': small in numbers beside other repressions of the age, it nonetheless turned the executed rebels into martyrs and hardened Protestant memory across the Empire for a generation.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_imperial_ban": {
+      "title": "The Imperial Ban",
+      "dossier_type": "concept",
+      "summary": "The imperial ban (Reichsacht) was the Holy Roman Empire's highest secular sanction, declaring a person an outlaw stripped of rights and lands, whom any subject might lawfully pursue and punish. Its imposition on a prince — let alone an elector — was meant to follow due process and the consent of the imperial estates.",
+      "why_it_matters": "Ferdinand placed Frederick V under the imperial ban in January 1621 with only a few hand-picked electors consulted, not the full Diet. The procedure alarmed even Catholic princes: if an elector could be outlawed by imperial fiat, no estate's rights were secure, and the question of due process shadowed every later imperial act.",
+      "source_refs": ["src_wilson_europes_tragedy", "src_public_reichsacht_frederick_1621"],
+      "review_status": "reviewed"
+    },
+    "dossier_spanish_road": {
+      "title": "The Spanish Road",
+      "dossier_type": "concept",
+      "summary": "The overland military corridor by which Spain moved troops and silver from its territories in Lombardy, through Savoy, Franche-Comté, and the Rhineland, to the army fighting the Dutch Revolt in the Netherlands. Vulnerable and politically sensitive, it made the Rhine valley a vital Spanish interest.",
+      "why_it_matters": "When the war reached the Rhenish Palatinate, Frederick V's lands lay athwart the Spanish Road. Spanish forces under Spinola occupied the Lower Palatinate in 1620 to secure the corridor, fusing Ferdinand's German war with Spain's war against the Dutch and turning a Bohemian quarrel into a question of European strategy.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_mansfeld": {
+      "title": "Ernst von Mansfeld",
+      "dossier_type": "person",
+      "summary": "Ernst von Mansfeld (c.1580–1626) was a Catholic-born mercenary general who became the most persistent military entrepreneur of the early war, fighting for the Protestant cause though driven as much by profit and survival. Outlawed after the Bohemian campaign, he kept armies in the field by living off the land.",
+      "why_it_matters": "Mansfeld, with Christian of Brunswick, carried the Palatine war on after White Mountain, denying Ferdinand a clean victory and spreading the conflict across the Empire. His self-financing armies, sustained by plunder and contribution, became the model for the destructive 'war feeds war' system that ravaged Germany.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_christian_brunswick": {
+      "title": "Christian of Brunswick",
+      "dossier_type": "person",
+      "summary": "Christian of Brunswick-Wolfenbüttel (1599–1626), Protestant administrator of Halberstadt, was a young, reckless cavalry commander who fought for Frederick V's cause as a freebooting ally of Mansfeld. Known as 'the mad Halberstadter,' he paid his troops by plundering church lands and struck coins inscribed 'God's friend, priests' enemy.'",
+      "why_it_matters": "Christian's campaigns in Westphalia and the Lower Saxon lands kept the Palatine war alive after White Mountain and helped widen it toward the north German circle, where it would soon draw in Denmark.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    }
+  },
+  "cards": {
+    "card_1620_white_mountain_aftermath": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "White Mountain had been more than a victory; it was an annihilation. In barely an hour the Bohemian army had broken, Frederick had fled Prague with his court, and the kingdom that had defied the Habsburgs for two years lay open and undefended. Ferdinand now held something rare in the Empire: a rebellion entirely at his mercy.",
+      "situation": "The question was what to make of such completeness. He could treat the revolt as treason and punish its leaders to terrify a generation; he could punish narrowly and keep law enough to part ringleaders from frightened followers; or he could offer broad pardon and bind Bohemia by gratitude rather than fear. Each road wrote a different future into the conquered kingdom.",
+      "context_links": [
+        { "term": "White Mountain", "dossier_id": "dossier_white_mountain" },
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_exemplary_punishment": {
+          "label": "Mark the leading rebels for exemplary punishment, and let the lesson travel.",
+          "consequence": "The Habsburg grip tightens, and the warning carries far beyond Prague. But terror makes martyrs as readily as subjects, and frightened estates note that obedience offered no protection."
+        },
+        "opt_selective_punishment": {
+          "label": "Punish the ringleaders, but keep law enough to part rebels from the mass of estates.",
+          "consequence": "The settlement is severe yet legible, and gives the moderate estates less reason to panic. The zealous complain that mercy is wasted on traitors."
+        },
+        "opt_amnesty_for_oaths": {
+          "label": "Offer broad amnesty to estates that swear renewed obedience.",
+          "consequence": "Fear recedes and the kingdom quiets faster — but the Catholic allies, who fought for a reckoning, see a thorough restoration slipping from their hands."
+        }
+      }
+    },
+    "card_1621_blood_court": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "The tribunals in Prague had done their work, and the sentences lay on Ferdinand's desk: death for the leaders of the revolt. Even Slavata and Martinitz — the regents thrown from the window — counselled mercy, and the vice-chancellor urged the galleys instead of the axe. But to Ferdinand the revolt was treason, and treason had its price.",
+      "situation": "He could make the punishment a public spectacle, teaching obedience by terror; he could commute most sentences and reserve death for a prominent few; or he could spare lives entirely and strike instead at names and lands through exile and confiscation. The Old Town Square waited on his answer.",
+      "context_links": [
+        { "term": "Old Town Square", "dossier_id": "dossier_blood_court" }
+      ],
+      "options": {
+        "opt_sign_blood_warrants": {
+          "label": "Sign the death warrants and let the executions be public.",
+          "consequence": "In the event, twenty-seven men — three lords, seven knights, seventeen burghers — were beheaded or hanged in the Old Town Square on 21 June 1621; twelve heads and the rector's tongue were nailed over the gates, where they stayed until 1631. Wilson calls it unnecessary and a mistake: it made the dead into martyrs, and Prague's sympathy turned back toward the rebels."
+        },
+        "opt_commute_most_sentences": {
+          "label": "Commute most sentences; reserve death for the most prominent few.",
+          "consequence": "Treason is still marked, but Prague sees that obedience need not end on the scaffold for every condemned man — and the court keeps a measure of mercy it can spend later."
+        },
+        "opt_punish_without_executions": {
+          "label": "Spare lives; punish through humiliation, exile, and confiscation instead.",
+          "consequence": "Names and lands are struck while lives are spared. The hardliners call it weakness — but no household is handed a martyr to mourn."
+        }
+      }
+    },
+    "card_1621_confiscations": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Victory had to be paid for. Ferdinand owed his soldiers, his Bavarian and Spanish allies, and the loyal nobles who had stood by him — and the defeated rebels owned half of Bohemia. Their estates could be confiscated to fund the settlement, reward friends, and remake the kingdom's ruling class in Catholic and loyal hands.",
+      "situation": "But confiscation on a grand scale would tell every estate in the Empire that defeat meant not merely punishment but extinction — the loss of land, status, and posterity. The crown could seize boldly and transform Bohemia at a stroke, confiscate with restraint and a public record, or commute seizures to fines and oaths and leave the defeated something to lose.",
+      "context_links": [],
+      "options": {
+        "opt_large_confiscations": {
+          "label": "Confiscate on a grand scale to reward the loyal and fund the war.",
+          "consequence": "In the event, nearly half the land in Bohemia changed hands, building a new aristocracy of Catholic loyalists, foreigners, and war profiteers — Wallenstein chief among them. Money and loyalty flow through the seized estates; so does the terror of total defeat."
+        },
+        "opt_limited_confiscations": {
+          "label": "Confiscate selectively, with a public legal record of each case.",
+          "consequence": "The settlement pays more slowly, but wears less the look of appetite crowned. Fewer neutral estates are pushed to conclude that loyalty offers no safety either."
+        },
+        "opt_commute_to_fines": {
+          "label": "Commute many seizures to fines and renewed oaths.",
+          "consequence": "Less is gathered and less transformed — but more of the defeated are left with property, and so with a stake in not rebelling again."
+        }
+      }
+    },
+    "card_1621_spanish_rhine": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "The war had reached the Rhine, and there it touched a Spanish nerve. Frederick's Palatine homeland straddled the Spanish Road — the corridor by which Spain marched men and silver from Italy to its war against the Dutch. With the Dutch truce expiring in 1621, Madrid had every reason to hold the Rhenish Palatinate, and Spinola's army had already occupied it.",
+      "situation": "Spanish help against Frederick was real and close at hand — but it came tangled in Spain's own war, and it made the imperial quarrel look like a Habsburg family enterprise spanning Europe. Ferdinand could embrace the coordination openly, take the help quietly while keeping imperial policy separate, or hold Spain at arm's length and insist the matter was purely German.",
+      "context_links": [
+        { "term": "Spanish Road", "dossier_id": "dossier_spanish_road" },
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_coordinate_with_spain": {
+          "label": "Coordinate openly with Spain along the Rhine and in the Palatinate.",
+          "consequence": "Dynastic Habsburg power gathers on a continental scale, and Frederick is squeezed from two sides. So do the fears of every state — Dutch, French, English — that watches the Rhine and sees Madrid and Vienna acting as one."
+        },
+        "opt_keep_spanish_distance": {
+          "label": "Take Spanish help quietly, but keep imperial policy visibly separate.",
+          "consequence": "Ferdinand gains soldiers without making the Empire look like Madrid's instrument — a harder line to walk, and one that fully satisfies neither the Spanish nor the purists at court."
+        },
+        "opt_decline_spanish_role": {
+          "label": "Hold Spain at arm's length; frame the war as a purely imperial matter.",
+          "consequence": "The legal story stays clean and German — but the practical resources are thinner, and the Palatinate is the harder to subdue without Spanish arms."
+        }
+      }
+    },
+    "card_1622_league_finance": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "The victories had not stopped the bills. The Catholic League's army — the instrument that won White Mountain — had to be paid, and Maximilian expected the emperor to find the money. Imperial officers, creditors, and the occupied territories all pressed on the same exhausted treasury.",
+      "situation": "Armies did not live on legitimacy. Ferdinand could squeeze the occupied and even loyal lands harder through war contributions, borrow against future confiscations and dynastic credit, or trim the war's aims until his finances could bear them. Each choice decided who paid for victory, and how much resentment came with the bill.",
+      "context_links": [
+        { "term": "Catholic League", "dossier_id": "dossier_catholic_league" },
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" }
+      ],
+      "options": {
+        "opt_contribution_system": {
+          "label": "Levy heavier war contributions on occupied and loyal lands alike.",
+          "consequence": "The army stays fed, and the system of making war pay for itself takes root. The countryside learns that loyalty buys no immunity from the soldiers' demands."
+        },
+        "opt_court_borrowing": {
+          "label": "Borrow against future confiscations and dynastic credit.",
+          "consequence": "Some immediate suffering is spared — but the crown's future narrows around its debts, and the men who lend expect repayment in land, office, or influence."
+        },
+        "opt_reduce_campaign_scope": {
+          "label": "Trim the war's aims until finance can catch up with ambition.",
+          "consequence": "The war draws breath and the treasury recovers — but the allies who fought for a reckoning ask why they are made to stop short of it."
+        }
+      }
+    },
+    "card_1621_ban_of_frederick": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy", "src_public_reichsacht_frederick_1621"],
+      "briefing": "Frederick had fled, but his claim had not. As an elector of the Empire he could still gather money, men, and sympathy across Protestant Europe. Ferdinand could end that by placing him under the imperial ban — the Empire's highest sanction, making him an outlaw whom every subject was bound to deny aid. But to outlaw an elector was no ordinary act of discipline.",
+      "situation": "The ban would give the victory the force of law and brand Frederick a rebel beyond the pale. Yet to impose it on an elector without the full Diet's hearing would teach every prince in the Empire that their rights, too, might be swept away by imperial decree. Ferdinand could issue the ban in its widest form, offer Frederick a conditional pardon, or proclaim the ban while reassuring the neutral princes that it touched one man alone.",
+      "context_links": [
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" },
+        { "term": "imperial ban", "dossier_id": "dossier_imperial_ban" }
+      ],
+      "options": {
+        "opt_issue_upper_ban": {
+          "label": "Place Frederick under the full imperial ban.",
+          "consequence": "In the event, Ferdinand outlawed Frederick in January 1621 with only a hand-picked few electors consulted, not the full Diet. The victory gained teeth in law — but even Catholic princes took alarm, for if an elector could be banned by fiat, no estate's rights were safe from the emperor's pen."
+        },
+        "opt_conditional_pardon": {
+          "label": "Offer Frederick pardon if he renounces Bohemia and disarms.",
+          "consequence": "The moderates see an exit from the crisis; the Catholic allies see a rebel king handed one more door, and wonder whether victory will ever be used."
+        },
+        "opt_narrow_ban_reassurance": {
+          "label": "Outlaw Frederick, but reassure the neutral princes that it touches him alone.",
+          "consequence": "The decree isolates one man instead of threatening every estate — but such restraint needs princes willing to trust the emperor's word about where the line stops."
+        }
+      }
+    },
+    "card_1622_palatine_settlement": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Heidelberg and Mannheim had fallen, yet the Palatine cause would not die. Two freebooting generals kept it alive: Ernst von Mansfeld, the mercenary who lived off the land, and Christian of Brunswick, the 'mad Halberstadter' who coined plundered church silver under the motto 'God's friend, priests' enemy.' English and Spanish envoys, meanwhile, hunted for terms each could call a peace.",
+      "situation": "Ferdinand could punish Frederick to the end, bargain over a conditional restoration, or split the lesser Palatine supporters from the elector's ruin. But every course brushed against Maximilian, who had been promised the Palatinate's lands and electoral title as the price of his army — and who would read any leniency to Frederick as a theft from himself.",
+      "context_links": [
+        { "term": "Ernst von Mansfeld", "dossier_id": "dossier_mansfeld" },
+        { "term": "Christian of Brunswick", "dossier_id": "dossier_christian_brunswick" },
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" }
+      ],
+      "options": {
+        "opt_palatine_conditional_restoration": {
+          "label": "Offer conditional restoration if Frederick renounces Bohemia and his armies disband.",
+          "consequence": "The Palatine grievance is given a road back into law — but Maximilian hears that victory may not bring him the full price promised at Munich, and grows wary."
+        },
+        "opt_palatine_keep_ban": {
+          "label": "Keep the ban in force and pursue a settlement by arms.",
+          "consequence": "In the event, Ferdinand pressed on militarily and kept Frederick outlawed. No prince mistook the victory for weakness — but the Palatine name stayed alive in exile, a ready grievance for every foreign power that wanted one."
+        },
+        "opt_palatine_separate_amnesty": {
+          "label": "Separate Frederick's punishment from amnesty for his lesser supporters.",
+          "consequence": "The elector stays marked while lesser men are offered a way home. The exile network loses some breadth — without satisfying Frederick's closest allies, who fight on."
+        },
+        "opt_palatine_spanish_bavarian_pressure": {
+          "label": "Use Spanish and Bavarian pressure to force a settlement on Habsburg terms.",
+          "consequence": "Allied force drives the settlement forward — but the Empire sees that Palatine law now moves in the shadow of Madrid and Munich, not Vienna."
+        }
+      }
+    },
+    "card_1623_electoral_transfer": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy", "src_vales_munich_treaty_1619"],
+      "briefing": "The bill from Munich now fell due. Maximilian had saved Ferdinand's cause, and the secret price had always been Frederick's electoral dignity — the vote that made the Palatinate one of the seven powers entitled to choose the emperor. To hand it to Bavaria would reward loyalty and crown the Catholic victory; it would also remake the electoral college by imperial will.",
+      "situation": "The electors guarded their number jealously, and Protestant Saxony and Brandenburg would read the transfer as a warning: that an emergency bargain could permanently alter the constitution. Ferdinand could fulfil the promise outright, delay it while compensating Bavaria with lands and revenues, or punish Frederick yet preserve the electoral balance for now — and risk turning a disappointed Maximilian into a dangerous one.",
+      "context_links": [
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" },
+        { "term": "electoral college", "dossier_id": "dossier_imperial_electors" },
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_transfer_to_bavaria": {
+          "label": "Fulfil the promise and transfer the electoral title to Maximilian.",
+          "consequence": "In the event, Ferdinand transferred the dignity to Bavaria at Regensburg in 1623 — at first only for Maximilian's lifetime, a fig-leaf that fooled no one. Bavaria is rewarded and the Catholic victory crowned; but the electors have learned that a bargain struck in emergency can become a permanent fact of the constitution."
+        },
+        "opt_delay_transfer": {
+          "label": "Delay the dignity, compensating Bavaria with lands and revenues instead.",
+          "consequence": "The constitutional shock is softened — but Maximilian's patience becomes another debt, and one that gathers interest."
+        },
+        "opt_preserve_electoral_balance": {
+          "label": "Punish Frederick, but keep the electoral balance untouched for now.",
+          "consequence": "The electors are reassured by the restraint; Bavaria is not. A disappointed ally is an armed ally still."
+        }
+      }
+    },
+    "card_1623_peace_feelers": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "By 1623 Ferdinand had won. Bohemia was crushed, Frederick outlawed and stripped, the Palatinate occupied, the electoral title passed to Bavaria. And yet the Empire would not settle. The victory had bred its own enemies: ruined exiles, frightened Protestant princes, unpaid soldiers, rewarded allies who wanted more, and foreign powers newly alarmed by Habsburg success.",
+      "situation": "Ferdinand stood at a crossroads few conquerors reach. He could try to turn victory back into law — calling a formal settlement to fix obedience and reassure the moderates — or press his advantage until no prince dared doubt imperial power, or bank the winnings, demobilize, and repair his exhausted finances. The first was slow, the second combustible, the third resented by the men who had profited from the war.",
+      "context_links": [
+        { "term": "electoral title passed to Bavaria", "dossier_id": "dossier_imperial_electors" }
+      ],
+      "options": {
+        "opt_call_imperial_settlement": {
+          "label": "Call a formal imperial settlement to lock in obedience and reassure moderates.",
+          "consequence": "Ferdinand tries to convert victory into law — slower than command, but far less apt to catch fire. The hardliners grumble that strength is being given away at the table."
+        },
+        "opt_continue_pressure": {
+          "label": "Press the advantage until no prince doubts imperial reach.",
+          "consequence": "From Vienna the authority looks magnificent. From the Protestant courts it looks like a forecast — and abroad, like a reason to act before it is too late."
+        },
+        "opt_demobilize_and_rebuild": {
+          "label": "Demobilize what can be spared and spend on fiscal repair.",
+          "consequence": "The war machine cools and the treasury mends — but the allies and officers who profited from its motion resist the stillness, and a half-paid army is its own danger."
+        }
+      }
+    },
+    "card_threshold_estates_offer_credit": {
+      "review_status": "reviewed",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "briefing": "Even amid the war, some moderate estates signalled that they could still be worked with. Their message was conditional: imperial terms could be carried into their diets and assemblies — provided the old liberties were named and respected, not quietly swallowed.",
+      "situation": "This was not affection but calculation: a belief, still alive, that obedience might protect privilege and confession better than armed resistance. Such credit was a wasting asset. Spent on a controlled settlement, it could keep more estates within reach; hoarded, it might be there later — or might curdle into the conviction that only force secures rights.",
+      "context_links": [],
+      "options": {
+        "opt_threshold_use_estate_credit_for_settlement": {
+          "label": "Spend the goodwill now: put the disputed claims before a controlled diet.",
+          "consequence": "The court trades trust for procedure and keeps more estates reachable. The zealous councillors complain that law is being made slow just when victory should speak plainly."
+        },
+        "opt_threshold_bank_estate_credit": {
+          "label": "Hold the goodwill in reserve for a later settlement.",
+          "consequence": "A quarrel is avoided today, and the estates' confidence stays useful. But petitioners who hoped for action begin to read the delay as policy."
+        }
+      }
+    }
+  }
+}

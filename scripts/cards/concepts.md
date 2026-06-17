@@ -29,6 +29,14 @@ Format: `concept — dossier_id — first explained on <card_id>`
 (Klesl, Thurn, Letter of Majesty, Defensors, Catholic League, Maximilian all linked,
 not re-explained.)
 
+## Introduced in Phase 3 (Palatinate consolidation)
+- The Prince-Electors — dossier_imperial_electors — card_1623_electoral_transfer (also peace_feelers)
+- The Blood Court — dossier_blood_court — card_1621_blood_court
+- The Imperial Ban — dossier_imperial_ban — card_1621_ban_of_frederick
+- The Spanish Road — dossier_spanish_road — card_1621_spanish_rhine
+- Ernst von Mansfeld — dossier_mansfeld — card_1622_palatine_settlement
+- Christian of Brunswick — dossier_christian_brunswick — card_1622_palatine_settlement
+
 ## Already-named entities with dossiers, to LINK (not re-explain) in later phases
 - Ferdinand II — dossier_ferdinand_ii (the player; rarely linked)
 - Bohemian Estates — dossier_bohemian_estates
