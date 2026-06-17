@@ -12,6 +12,7 @@ import {
   createInitialGameState,
   getCurrentCard,
   getDesignerReport,
+  getForcedOption,
   getOptionAvailability,
   getOptionsForCard,
   getPressureWarnings,
@@ -381,6 +382,7 @@ function EventCard({
   onSelectDossier: (dossierId: string) => void;
 }) {
   const options = getOptionsForCard(card, state);
+  const forced = getForcedOption(card, state);
 
   return (
     <article className="event-card">
@@ -409,6 +411,12 @@ function EventCard({
         />
       </section>
 
+      {forced ? (
+        <p className="forced-banner">
+          <span>The decision is no longer yours</span>
+          {card.forced_course?.note}
+        </p>
+      ) : null}
       <div className="choices" aria-label="Choices">
         {options.map((option) => {
           const availability = getOptionAvailability(option, state);

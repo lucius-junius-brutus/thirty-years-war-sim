@@ -272,6 +272,13 @@ const cardRecordSchema = z.object({
   memory_variants: z.array(cardMemoryVariantRecordSchema).optional(),
   pressure_variants: z.array(cardPressureVariantRecordSchema).optional(),
   context_links: z.array(cardContextLinkRecordSchema).optional(),
+  forced_course: z
+    .object({
+      requires_pressures: z.array(pressureConditionRecordSchema).min(1),
+      option_id: z.string().min(1),
+      note: z.string().min(1),
+    })
+    .optional(),
   options: z.array(cardOptionRecordSchema).min(2),
 });
 
@@ -405,6 +412,14 @@ export function validateGameDatabase(database: unknown): GameDatabase {
         throw new Error(`Unknown dossier in card ${card.id}: ${link.dossier_id}`);
       }
     });
+    if (
+      card.forced_course &&
+      !card.options.some((option) => option.id === card.forced_course?.option_id)
+    ) {
+      throw new Error(
+        `Unknown forced_course option in card ${card.id}: ${card.forced_course.option_id}`,
+      );
+    }
     card.options.forEach((option) => {
       if (option.historical_option !== true) {
         if (

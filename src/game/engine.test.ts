@@ -8,6 +8,7 @@ import {
   getActivePressureThresholds,
   getDesignerReport,
   getOptionAvailability,
+  getForcedOption,
   getOptionsForCard,
   getPressureWarnings,
   scoreOutcome,
@@ -985,6 +986,35 @@ describe("game engine", () => {
 
     // The choice did not touch fiscal capacity, but the crisis has deepened.
     expect(state.pressures.fiscal_capacity).toBeLessThan(20);
+  });
+
+  it("removes all but the forced course when overreliance takes the decision away", () => {
+    const card = {
+      ...baseCardFields(),
+      id: "card_forced",
+      title: "Forced",
+      forced_course: {
+        requires_pressures: [{ pressure: "military_dependence", min: 78 }],
+        option_id: "opt_patron",
+        note: "Wallenstein acts without waiting for the emperor's order.",
+      },
+      options: [mkOption("opt_patron"), mkOption("opt_resist"), mkOption("opt_other")],
+    } as unknown as (typeof gameDatabase)["cards"][number];
+
+    const base = createInitialGameState(gameDatabase, gameDatabase.playable_roles[0].id);
+
+    // Not yet dependent on the army: all courses are open.
+    expect(getOptionsForCard(card, base)).toHaveLength(3);
+
+    // Military dependence in crisis: only the patron's course remains.
+    const captive = {
+      ...base,
+      pressures: { ...base.pressures, military_dependence: 85 },
+    };
+    expect(getOptionsForCard(card, captive).map((option) => option.id)).toEqual([
+      "opt_patron",
+    ]);
+    expect(getForcedOption(card, captive)?.id).toBe("opt_patron");
   });
 
   it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {

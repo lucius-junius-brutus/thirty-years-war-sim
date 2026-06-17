@@ -227,6 +227,12 @@ export interface CardContextLinkRecord {
   dossier_id: string;
 }
 
+export interface ForcedCourseRecord {
+  requires_pressures: PressureConditionRecord[];
+  option_id: string;
+  note: string;
+}
+
 export interface CardRecord {
   id: string;
   role_id: string;
@@ -246,6 +252,7 @@ export interface CardRecord {
   memory_variants?: CardMemoryVariantRecord[];
   pressure_variants?: CardPressureVariantRecord[];
   context_links?: CardContextLinkRecord[];
+  forced_course?: ForcedCourseRecord;
   options: CardOptionRecord[];
 }
 

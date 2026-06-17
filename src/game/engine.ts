@@ -294,10 +294,30 @@ export function getOptionsForCard(
   card: CardRecord,
   state: GameState,
 ): CardOptionRecord[] {
+  const forced = getForcedOption(card, state);
+  if (forced) {
+    return [forced];
+  }
   return card.options.filter((option) => {
     const availability = getOptionAvailability(option, state);
     return availability.available || !option.hidden_when_unavailable;
   });
+}
+
+// Loss of agency: when a card defines a forced course and its pressure condition
+// holds, overreliance has taken the decision away — only that course remains.
+export function getForcedOption(
+  card: CardRecord,
+  state: GameState,
+): CardOptionRecord | null {
+  const forced = card.forced_course;
+  if (!forced) {
+    return null;
+  }
+  if (!matchesPressureConditions(forced.requires_pressures, state.pressures)) {
+    return null;
+  }
+  return card.options.find((option) => option.id === forced.option_id) ?? null;
 }
 
 export function getOptionAvailability(

@@ -87,6 +87,9 @@ for (const arg of args) {
     }
     if (Array.isArray(patch.source_refs)) card.source_refs = patch.source_refs;
     if (Array.isArray(patch.context_links)) card.context_links = patch.context_links;
+    if (patch.forced_course && typeof patch.forced_course === "object") {
+      card.forced_course = patch.forced_course;
+    }
     if (patch.options) {
       const optById = new Map((card.options ?? []).map((o) => [o.id, o]));
       for (const [optId, optPatch] of Object.entries(patch.options)) {

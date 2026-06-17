@@ -1320,7 +1320,17 @@
         "briefing": "The court's earlier condemnation of the leagues returns now as an awkwardness. Maximilian can still help — with Tilly and the Catholic League — but Vienna must explain why a Catholic armed association is unlawful in principle yet indispensable in practice.",
         "situation": "Bohemia requires force before any imperial levy can answer. To accept Bavarian aid by the Treaty of Munich, on these terms, is to make necessity stronger than the very law once invoked against faction."
       }
-    ]
+    ],
+    "forced_course": {
+      "requires_pressures": [
+        {
+          "pressure": "fiscal_capacity",
+          "max": 22
+        }
+      ],
+      "option_id": "opt_bavarian_military_assistance",
+      "note": "The treasury is empty past argument. There is no army to be had but Bavaria's, and no terms but Maximilian's; the emperor signs because there is nothing else to sign."
+    }
   },
   {
     "id": "card_1620_saxon_question",
@@ -3699,7 +3709,17 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "forced_course": {
+      "requires_pressures": [
+        {
+          "pressure": "military_dependence",
+          "min": 78
+        }
+      ],
+      "option_id": "opt_recall_wallenstein_broad",
+      "note": "With the army already his creature and no other force in the field, the emperor has no leverage left to limit the terms. Wallenstein returns on his own conditions, or not at all."
+    }
   },
   {
     "id": "card_1633_wallenstein_peace",
