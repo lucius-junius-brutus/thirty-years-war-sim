@@ -190,3 +190,27 @@ Both earlier follow-ups are now done:
 - Mid-game early exit: chooseOption sets completed when isCollapsed(), so a choice that drives
   a pressure past its crisis line ends the reign at once with the failure verdict, instead of
   only at the end of the deck.
+
+---
+
+## All five levers now built
+
+1. **Crisis interrupts (①).** getCurrentCard forces a crisis card (gated by a crisis-
+   threshold tag) to the front the moment its pressure enters crisis; an unaddressed crisis
+   then worsens CRISIS_ESCALATION_STEP (4) per turn (computeCrisisEscalation), compounding
+   toward collapse.
+2. **Option gating (②).** requires/excludes_memory_tags + requires_pressures on options;
+   moderate authored gate set.
+3. **Deferred consequences (③).** option.scheduled_effects -> a `scheduled` queue on
+   GameState that fires after a delay, folding into that turn's pressures/delta and an
+   aftermath "reckoning long deferred" line; can also tip into collapse. Four time-bombs
+   authored (Munich terms, Wallenstein's army, the Blood Court, the Edict).
+4. **Loss of agency (④).** card.forced_course collapses the card to one patron option when
+   its pressure condition holds (getForcedOption); UI shows a "the decision is no longer
+   yours" banner. Two forced courses (empty treasury -> Bavaria forced; army already
+   Wallenstein's -> broad recall forced).
+5. **Failure / divergence endings (⑤).** Seven collapse endings, data-driven off the crisis
+   thresholds (warn at the crisis line, collapse a margin past), with mid-game early exit.
+
+Engine source of truth for danger is the crisis pressure_thresholds: they unlock crisis
+cards, raise warnings, drive escalation, and (a margin past) trigger collapse endings.
