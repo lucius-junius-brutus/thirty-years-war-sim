@@ -174,6 +174,8 @@ export interface CardOptionRecord {
   research_tags?: string[];
   counterfactual_source_status?: CounterfactualSourceStatus;
   requires_pressures?: PressureConditionRecord[];
+  requires_memory_tags?: string[];
+  excludes_memory_tags?: string[];
   unavailable_text?: string;
   hidden_when_unavailable?: boolean;
 }

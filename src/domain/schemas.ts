@@ -216,6 +216,8 @@ const cardOptionRecordSchema = z.object({
   research_tags: z.array(z.string().min(1)).optional(),
   counterfactual_source_status: counterfactualSourceStatusSchema.optional(),
   requires_pressures: z.array(pressureConditionRecordSchema).optional(),
+  requires_memory_tags: z.array(z.string().min(1)).optional(),
+  excludes_memory_tags: z.array(z.string().min(1)).optional(),
   unavailable_text: z.string().min(1).optional(),
   hidden_when_unavailable: z.boolean().optional(),
 });

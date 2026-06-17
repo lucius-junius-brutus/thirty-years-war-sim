@@ -748,6 +748,50 @@ describe("game engine", () => {
     );
   });
 
+  it("locks an option once an excluded memory tag is present", () => {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const option = {
+      id: "opt_amnesty",
+      label: "Offer broad amnesty",
+      consequence: "c",
+      effects: {},
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      excludes_memory_tags: ["blood_court_executions"],
+      unavailable_text: "Impossible after the executions in Prague.",
+    };
+
+    expect(getOptionAvailability(option, base).available).toBe(true);
+
+    const afterBloodCourt = {
+      ...base,
+      memory_tags: ["blood_court_executions"],
+    };
+    const locked = getOptionAvailability(option, afterBloodCourt);
+    expect(locked.available).toBe(false);
+    expect(locked.reason).toBe("Impossible after the executions in Prague.");
+  });
+
+  it("keeps an option locked until its required memory tag is earned", () => {
+    const base = createInitialGameState(gameDatabase, "role_ferdinand_ii");
+    const option = {
+      id: "opt_recall",
+      label: "Recall the general",
+      consequence: "c",
+      effects: {},
+      causal_claim_ids: [gameDatabase.causal_claims[0].id],
+      requires_memory_tags: ["wallenstein_empowered"],
+      unavailable_text: "There is no such general to recall.",
+    };
+
+    expect(getOptionAvailability(option, base).available).toBe(false);
+    expect(
+      getOptionAvailability(option, {
+        ...base,
+        memory_tags: ["wallenstein_empowered"],
+      }).available,
+    ).toBe(true);
+  });
+
   it("does not skip a card that becomes eligible earlier in the deck after a choice", () => {
     const role = gameDatabase.playable_roles[0];
     const baseCard = {

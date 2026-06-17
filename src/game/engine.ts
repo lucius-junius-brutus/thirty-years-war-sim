@@ -229,15 +229,24 @@ export function getOptionAvailability(
   option: CardOptionRecord,
   state: GameState,
 ) {
-  const available = matchesPressureConditions(
-    option.requires_pressures,
-    state.pressures,
-  );
+  const available =
+    matchesPressureConditions(option.requires_pressures, state.pressures) &&
+    optionMemoryAllowed(option, state.memory_tags);
 
   return {
     available,
     reason: available ? undefined : option.unavailable_text,
   };
+}
+
+function optionMemoryAllowed(option: CardOptionRecord, memoryTags: string[]) {
+  const hasAllRequired = (option.requires_memory_tags ?? []).every((tag) =>
+    memoryTags.includes(tag),
+  );
+  const hasExcluded = (option.excludes_memory_tags ?? []).some((tag) =>
+    memoryTags.includes(tag),
+  );
+  return hasAllRequired && !hasExcluded;
 }
 
 export function getDesignerReport(
