@@ -72,16 +72,21 @@ describe("Empire in Ashes app", () => {
     expect(screen.queryByText(/aftermath/i)).not.toBeInTheDocument();
   });
 
-  it("keeps important historical terms inside an in-game dossier panel", () => {
+  it("opens an in-game dossier popover for an important historical term", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
     fireEvent.click(screen.getByRole("button", { name: /open the first report/i }));
     fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
-    expect(screen.getByRole("complementary", { name: /dossier/i })).toBeInTheDocument();
+    const dossier = screen.getByRole("dialog", { name: /dossier/i });
+    expect(dossier).toBeInTheDocument();
     expect(screen.getByText(/Lutheranism alongside Catholicism/i)).toBeInTheDocument();
     expect(screen.getByText(/Why it matters/i)).toBeInTheDocument();
+
+    // It is dismissible.
+    fireEvent.click(screen.getByRole("button", { name: /close dossier/i }));
+    expect(screen.queryByRole("dialog", { name: /dossier/i })).not.toBeInTheDocument();
   });
 
   it("keeps a private designer docket outside the normal play surface", () => {

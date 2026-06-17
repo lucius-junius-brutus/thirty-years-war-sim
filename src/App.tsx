@@ -1,5 +1,5 @@
-import { ClipboardList, RotateCcw, ScrollText, ShieldAlert } from "lucide-react";
-import { useState } from "react";
+import { ClipboardList, RotateCcw, ScrollText, ShieldAlert, X } from "lucide-react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gameDatabase } from "./data/gameDatabase";
 import type {
   CardContextLinkRecord,
@@ -52,7 +52,10 @@ function App() {
     return storage && loadGame(storage) ? "play" : "role-select";
   });
   const [showAftermath, setShowAftermath] = useState(false);
-  const [selectedDossierId, setSelectedDossierId] = useState<string | null>(null);
+  const [dossier, setDossier] = useState<{
+    id: string;
+    anchorEl: HTMLElement;
+  } | null>(null);
   const [showDesigner, setShowDesigner] = useState(false);
   const designerEnabled = isDesignerMode();
 
@@ -60,14 +63,18 @@ function App() {
   const card = getCurrentCard(gameDatabase, state);
   const outcome = state.completed ? scoreOutcome(gameDatabase, state) : null;
   const latestEntry = state.log.at(-1);
-  const selectedDossier = gameDatabase.dossiers.find(
-    (dossier) => dossier.id === selectedDossierId,
-  );
+  const selectedDossier = dossier
+    ? gameDatabase.dossiers.find((item) => item.id === dossier.id)
+    : undefined;
+
+  function openDossier(dossierId: string, anchorEl: HTMLElement) {
+    setDossier({ id: dossierId, anchorEl });
+  }
 
   function commitChoice(cardId: string, optionId: string) {
     const next = chooseOption(gameDatabase, state, cardId, optionId);
     setState(next);
-    setSelectedDossierId(null);
+    setDossier(null);
     const storage = getBrowserStorage();
     if (storage) {
       saveGame(storage, next);
@@ -80,7 +87,7 @@ function App() {
     setState(next);
     setScreen("role-select");
     setShowAftermath(false);
-    setSelectedDossierId(null);
+    setDossier(null);
     const storage = getBrowserStorage();
     if (storage) {
       clearGame(storage);
@@ -92,7 +99,7 @@ function App() {
     setState(next);
     setScreen("prelude");
     setShowAftermath(false);
-    setSelectedDossierId(null);
+    setDossier(null);
     const storage = getBrowserStorage();
     if (storage) {
       clearGame(storage);
@@ -101,12 +108,12 @@ function App() {
 
   function enterFirstReport() {
     setScreen("play");
-    setSelectedDossierId(null);
+    setDossier(null);
   }
 
   return (
     <main className="app-shell">
-      <header className="masthead">
+      <header className={screen === "play" ? "masthead masthead-compact" : "masthead"}>
         <button className="quiet-button" type="button" onClick={restart}>
           <RotateCcw size={16} />
           New campaign
@@ -146,7 +153,6 @@ function App() {
               </button>
             ) : null}
             {designerEnabled && showDesigner ? <DesignerPanel state={state} /> : null}
-            {selectedDossier ? <DossierPanel dossier={selectedDossier} /> : null}
           </aside>
 
           <section className="main-panel">
@@ -160,7 +166,7 @@ function App() {
                 card={card}
                 state={state}
                 onChoose={commitChoice}
-                onSelectDossier={setSelectedDossierId}
+                onSelectDossier={openDossier}
               />
             ) : (
               <OutcomePanel state={state} outcome={outcome} onRestart={restart} />
@@ -168,6 +174,14 @@ function App() {
           </section>
         </section>
       )}
+
+      {selectedDossier && dossier ? (
+        <DossierPopover
+          dossier={selectedDossier}
+          anchorEl={dossier.anchorEl}
+          onClose={() => setDossier(null)}
+        />
+      ) : null}
     </main>
   );
 }
@@ -379,7 +393,7 @@ function EventCard({
   card: CardRecord;
   state: GameState;
   onChoose: (cardId: string, optionId: string) => void;
-  onSelectDossier: (dossierId: string) => void;
+  onSelectDossier: (dossierId: string, anchorEl: HTMLElement) => void;
 }) {
   const options = getOptionsForCard(card, state);
   const forced = getForcedOption(card, state);
@@ -456,7 +470,7 @@ function LinkedParagraph({
 }: {
   text: string;
   links?: CardContextLinkRecord[];
-  onSelectDossier: (dossierId: string) => void;
+  onSelectDossier: (dossierId: string, anchorEl: HTMLElement) => void;
 }) {
   if (links.length === 0) {
     return <p>{text}</p>;
@@ -499,7 +513,9 @@ function LinkedParagraph({
             className="context-link"
             key={`${part.link.dossier_id}-${index}`}
             type="button"
-            onClick={() => onSelectDossier(part.link.dossier_id)}
+            onClick={(event) =>
+              onSelectDossier(part.link.dossier_id, event.currentTarget)
+            }
           >
             {part.text}
           </button>
@@ -509,16 +525,95 @@ function LinkedParagraph({
   );
 }
 
-function DossierPanel({ dossier }: { dossier: DossierRecord }) {
+function DossierPopover({
+  dossier,
+  anchorEl,
+  onClose,
+}: {
+  dossier: DossierRecord;
+  anchorEl: HTMLElement;
+  onClose: () => void;
+}) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState<{
+    top: number;
+    left: number;
+    width: number;
+    maxHeight: number;
+    placement: "above" | "below";
+  } | null>(null);
+
+  useLayoutEffect(() => {
+    function place() {
+      const a = anchorEl.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const margin = 12;
+      const gap = 8;
+      const width = Math.min(360, vw - margin * 2);
+      const panelH = panelRef.current?.offsetHeight ?? 280;
+      const spaceBelow = vh - a.bottom - gap - margin;
+      const spaceAbove = a.top - gap - margin;
+      const below = spaceBelow >= Math.min(panelH, 220) || spaceBelow >= spaceAbove;
+      const maxHeight = Math.max(160, below ? spaceBelow : spaceAbove);
+      const top = below
+        ? a.bottom + gap
+        : Math.max(margin, a.top - gap - Math.min(panelH, maxHeight));
+      const left = Math.min(Math.max(margin, a.left), vw - width - margin);
+      setPos({ top, left, width, maxHeight, placement: below ? "below" : "above" });
+    }
+    place();
+    window.addEventListener("resize", place);
+    window.addEventListener("scroll", place, true);
+    return () => {
+      window.removeEventListener("resize", place);
+      window.removeEventListener("scroll", place, true);
+    };
+  }, [anchorEl]);
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
   return (
-    <aside className="dossier-panel" aria-label="Dossier">
-      <div className="panel-title">Dossier</div>
-      <h3>{dossier.title}</h3>
-      <p className="dossier-type">{dossier.dossier_type}</p>
-      <p>{dossier.summary}</p>
-      <strong>Why it matters</strong>
-      <p>{dossier.why_it_matters}</p>
-    </aside>
+    <div className="dossier-overlay" onClick={onClose}>
+      <aside
+        ref={panelRef}
+        className={`dossier-popover dossier-popover--${pos?.placement ?? "below"}`}
+        role="dialog"
+        aria-label="Dossier"
+        onClick={(event) => event.stopPropagation()}
+        style={
+          pos
+            ? {
+                top: pos.top,
+                left: pos.left,
+                width: pos.width,
+                maxHeight: pos.maxHeight,
+              }
+            : { visibility: "hidden" }
+        }
+      >
+        <button
+          className="dossier-close"
+          type="button"
+          onClick={onClose}
+          aria-label="Close dossier"
+        >
+          <X size={14} />
+        </button>
+        <div className="panel-title">Dossier</div>
+        <h3>{dossier.title}</h3>
+        <p className="dossier-type">{dossier.dossier_type}</p>
+        <p>{dossier.summary}</p>
+        <strong>Why it matters</strong>
+        <p>{dossier.why_it_matters}</p>
+      </aside>
+    </div>
   );
 }
 

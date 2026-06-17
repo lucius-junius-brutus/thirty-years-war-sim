@@ -1,27 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 132" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the double-headed imperial eagle">
-  <rect width="400" height="132" fill="#cdbb92"/>
-  <g stroke="#18110e" stroke-width="1" opacity="0.3">
-    <line x1="0" y1="14" x2="40" y2="14"/><line x1="0" y1="22" x2="40" y2="22"/>
-    <line x1="360" y1="14" x2="400" y2="14"/><line x1="360" y1="22" x2="400" y2="22"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the double-headed imperial eagle">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
   </g>
-  <g fill="#18110e" stroke="#18110e" stroke-width="1">
-    <path d="M200 56 q-10 -10 -8 -24 q-14 8 -26 4 q8 12 4 18 q-16 2 -28 -6 q6 14 18 22 q-14 6 -28 2 q10 12 26 16 q-12 8 -26 8 q16 10 40 8 l28 -2z"/>
-    <path d="M200 56 q10 -10 8 -24 q14 8 26 4 q-8 12 -4 18 q16 2 28 -6 q-6 14 -18 22 q14 6 28 2 q-10 12 -26 16 q12 8 26 8 q-16 10 -40 8 l-28 -2z"/>
-    <path d="M192 36 q-6 -14 2 -24 q-12 -6 -10 -18 q10 6 16 2 q-2 -10 6 -14 q8 4 6 14 q6 4 16 -2 q2 12 -10 18 q8 10 2 24z"/>
-    <circle cx="186" cy="14" r="5"/><circle cx="214" cy="14" r="5"/>
-    <polygon points="181,12 186,2 191,12"/><polygon points="209,12 214,2 219,12"/>
-    <rect x="194" y="56" width="12" height="40"/>
-    <polygon points="190,96 210,96 206,112 194,112"/>
-    <path d="M194 78 l-16 6 l4 8 l14 -4z"/><path d="M206 78 l16 6 l-4 8 l-14 -4z"/>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
   </g>
-  <g stroke="#cdbb92" stroke-width="1.6">
-    <line x1="170" y1="44" x2="180" y2="48"/><line x1="166" y1="54" x2="178" y2="56"/>
-    <line x1="168" y1="64" x2="180" y2="64"/><line x1="230" y1="44" x2="220" y2="48"/>
-    <line x1="234" y1="54" x2="222" y2="56"/><line x1="232" y1="64" x2="220" y2="64"/>
-    <line x1="197" y1="64" x2="197" y2="90"/><line x1="203" y1="64" x2="203" y2="90"/>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
   </g>
-  <line x1="0" y1="118" x2="400" y2="118" stroke="#18110e" stroke-width="3"/>
-  <g stroke="#18110e" stroke-width="1" opacity="0.5">
-    <line x1="0" y1="124" x2="400" y2="124"/><line x1="0" y1="130" x2="400" y2="130"/>
+
+  <!-- double-headed eagle, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- crown -->
+    <path d="M424 30 l5 -12 l11 7 l11 -7 l5 12 l-4 8 l-24 0z"/>
+    <circle cx="440" cy="15" r="3"/>
+    <!-- left head + neck (faces out, left) -->
+    <path d="M436 40 q-8 0 -13 -8 q-6 5 -13 4 q4 6 11 6 q-9 4 -17 0 q6 8 18 7 q-3 5 1 9 l14 -5z"/>
+    <polygon points="410,38 398,40 410,44"/>
+    <!-- right head + neck (faces out, right) -->
+    <path d="M444 40 q8 0 13 -8 q6 5 13 4 q-4 6 -11 6 q9 4 17 0 q-6 8 -18 7 q3 5 -1 9 l-14 -5z"/>
+    <polygon points="470,38 482,40 470,44"/>
+    <!-- left wing: bold lobes sweeping down and out -->
+    <path d="M434 56
+      q-26 -10 -54 -4 q16 6 18 13
+      q-30 -8 -56 4 q20 6 30 9
+      q-26 2 -44 16 q24 4 42 0
+      q-18 8 -28 22 q30 -4 50 -18
+      q-4 14 -14 24 q24 -8 40 -30 z"/>
+    <!-- right wing (mirror) -->
+    <path d="M446 56
+      q26 -10 54 -4 q-16 6 -18 13
+      q30 -8 56 4 q-20 6 -30 9
+      q26 2 44 16 q-24 4 -42 0
+      q18 8 28 22 q-30 -4 -50 -18
+      q4 14 14 24 q-24 -8 -40 -30 z"/>
+    <!-- body and splayed tail -->
+    <path d="M430 56 q10 -6 20 0 q5 28 -2 52 q5 8 4 18 l-12 8 l-12 -8 q-1 -10 4 -18 q-7 -24 -2 -52z"/>
+  </g>
+
+  <!-- carved plumage highlights cut back to the ground -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <line x1="406" y1="58" x2="424" y2="66"/><line x1="392" y1="72" x2="416" y2="74"/>
+    <line x1="396" y1="86" x2="418" y2="84"/>
+    <line x1="474" y1="58" x2="456" y2="66"/><line x1="488" y1="72" x2="464" y2="74"/>
+    <line x1="484" y1="86" x2="462" y2="84"/>
+    <line x1="436" y1="66" x2="436" y2="108"/><line x1="444" y1="66" x2="444" y2="108"/>
+    <line x1="440" y1="64" x2="440" y2="110"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4">
+    <line x1="11" y1="115" x2="869" y2="115"/>
   </g>
 </svg>

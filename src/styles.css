@@ -78,11 +78,10 @@ button {
 }
 
 .seal {
-  width: 88px;
-  height: 88px;
+  width: 84px;
+  height: 84px;
   margin-bottom: 6px;
-  image-rendering: pixelated;
-  filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.45));
 }
 
 .eyebrow {
@@ -114,6 +113,37 @@ h1 {
   color: var(--paper-dim);
   font-size: 1.16rem;
   line-height: 1.5;
+}
+
+/* Compact masthead once a campaign is underway: a slim title bar so the
+   decision is not pushed below the fold and the logo does not repeat at full
+   size every turn. */
+.masthead-compact {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px 16px;
+}
+
+.masthead-compact .seal {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.masthead-compact h1 {
+  margin: 0;
+  font-size: clamp(1.3rem, 3.4vw, 1.7rem);
+  text-shadow:
+    2px 2px 0 var(--red),
+    4px 4px 0 var(--shadow);
+}
+
+.masthead-compact .eyebrow,
+.masthead-compact .dek {
+  display: none;
 }
 
 .quiet-button {
@@ -202,7 +232,7 @@ h1 {
 }
 
 .pressure-panel,
-.dossier-panel,
+.dossier-popover,
 .designer-panel {
   color: var(--paper);
   background: var(--panel);
@@ -219,21 +249,73 @@ h1 {
 }
 
 .pressure-panel,
-.dossier-panel,
+.dossier-popover,
 .designer-panel,
 .aftermath-panel {
   padding: 18px;
+}
+
+/* ---------- dossier popover ---------- */
+.dossier-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+}
+
+.dossier-popover {
+  position: fixed;
+  z-index: 61;
+  overflow-y: auto;
+  line-height: 1.5;
+  box-shadow:
+    inset 0 0 0 2px rgba(214, 180, 92, 0.25),
+    6px 6px 0 var(--shadow);
+  animation: dossier-pop 110ms steps(3) both;
+}
+
+@keyframes dossier-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dossier-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: var(--paper-dim);
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.dossier-close:hover {
+  color: var(--gold-bright);
+  border-color: var(--shadow);
+}
+
+.dossier-popover h3 {
+  margin-right: 24px;
 }
 
 /* ---------- woodcut header band ---------- */
 .woodcut-band {
   display: block;
   width: calc(100% + 52px);
-  height: 100px;
+  height: 128px;
   margin: -26px -26px 20px;
   object-fit: cover;
+  object-position: center 40%;
   border-bottom: var(--pixel) solid var(--shadow);
-  image-rendering: pixelated;
 }
 
 /* ---------- pixel labels ---------- */
@@ -244,7 +326,7 @@ h1 {
 .choice-button span,
 .pressure-row span,
 .dossier-type,
-.dossier-panel strong,
+.dossier-popover strong,
 .designer-line strong,
 .designer-group strong,
 .prelude-ledger strong,
@@ -839,24 +921,24 @@ h3 {
 }
 
 /* ---------- dossier (dark instrument) ---------- */
-.dossier-panel {
+.dossier-popover {
   line-height: 1.5;
 }
 
-.dossier-panel .panel-title {
+.dossier-popover .panel-title {
   color: var(--gold);
 }
 
-.dossier-panel h3 {
+.dossier-popover h3 {
   color: var(--gold-bright);
   font-size: 1.1rem;
 }
 
-.dossier-panel p {
+.dossier-popover p {
   margin: 8px 0 12px;
 }
 
-.dossier-panel strong {
+.dossier-popover strong {
   color: var(--gold);
   font-size: 0.6rem;
 }
