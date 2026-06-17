@@ -72,36 +72,35 @@
     "id": "dossier_munich_treaty",
     "title": "Treaty of Munich",
     "dossier_type": "treaty",
-    "summary": "The 1619 bargain by which Maximilian and the Catholic League supplied decisive aid to Ferdinand under conditions that protected Bavarian interests.",
-    "why_it_matters": "It turns a survival problem into a dependency problem. Later rewards to Bavaria are not merely generosity; they answer obligations created in the crisis.",
+    "summary": "An agreement concluded on 8 October 1619 between Ferdinand II and Maximilian of Bavaria that committed the Catholic League's army to suppressing the Bohemian Revolt. Ferdinand recognized the League and requested its aid; in return Maximilian, as the emperor's auxiliary, was promised full compensation for Bavaria's costs and given part of Austria as security until repaid.",
+    "why_it_matters": "The treaty gave Ferdinand the army he lacked — he called it taking 'the Bavarian devil to drive out the Bohemian Beelzebub' — but mortgaged the victory in advance. It was the legal basis for all later Bavarian action and for Maximilian's claims on the Upper Palatinate and the electoral title.",
     "source_refs": [
-      "src_vales_munich_treaty_1619",
-      "src_wilson_europes_tragedy"
+      "src_wilson_europes_tragedy",
+      "src_vales_munich_treaty_1619"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_frederick_v",
     "title": "Frederick V",
     "dossier_type": "person",
-    "summary": "Elector Palatine, elected king by the Bohemian Confederation in 1619 and later placed under the imperial ban.",
-    "why_it_matters": "His punishment and possible restoration become a European grievance linking Bohemia, the Palatinate, England, the Dutch, Spain, and Bavaria.",
+    "summary": "Frederick V (1596–1632) was the Calvinist Elector Palatine and head of the Protestant Union. In 1619 the rebel Bohemian estates offered him their crown; his acceptance, against much advice, made him king of Bohemia for a single winter. Married to Elizabeth Stuart, daughter of James I of England, he counted on English and Protestant support that never adequately came.",
+    "why_it_matters": "Frederick's acceptance of the Bohemian crown turned a provincial revolt into a European crisis. His defeat at White Mountain in 1620 cost him Bohemia, his Palatine lands, and ultimately his electoral title; mocked as the 'Winter King,' he became a stateless symbol whose cause drew foreign powers into the war.",
     "source_refs": [
-      "src_wilson_europes_tragedy",
-      "src_public_reichsacht_frederick_1621"
+      "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_john_george_saxony",
     "title": "John George I of Saxony",
     "dossier_type": "person",
-    "summary": "Lutheran elector whose legal cooperation helps isolate Bohemia, and whose later alarm helps make Swedish intervention effective.",
-    "why_it_matters": "Saxony is not simply Protestant opposition. Ferdinand can use Saxon legality, but only while Lutheran trust survives.",
+    "summary": "John George I (1585–1656) was the Lutheran Elector of Saxony and the senior Protestant prince of the Empire. Conservative and legalistic, he distrusted the Calvinist Palatinate and prized imperial order, repeatedly preferring negotiation and loyalty to the emperor over confessional solidarity.",
+    "why_it_matters": "Saxony's weight could make or break a Protestant cause. In 1620 John George invaded Lusatia for Ferdinand, helping isolate the Bohemian rebels; in 1635 his Peace of Prague with the emperor split the Protestant camp. His willingness to deal with Vienna repeatedly denied the anti-Habsburg coalition its natural leader.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
-    "review_status": "needs_review"
+    "review_status": "reviewed"
   },
   {
     "id": "dossier_wallenstein",
@@ -268,6 +267,40 @@
     "dossier_type": "person",
     "summary": "Count Heinrich Matthias von Thurn (1567–1640) was a Bohemian nobleman of north-Italian descent and a leading Protestant militant. A commander in the Long Turkish War, he was named a commander of the Protestant militia under the Letter of Majesty and given the post of Castellan of Karlstein, keeper of the Bohemian crown jewels. In 1617 Ferdinand had that post taken from him, sharpening his hostility.",
     "why_it_matters": "Thurn organized and led the Defenestration of Prague in May 1618 and became the chief military leader of the early Bohemian Revolt, even threatening Vienna in 1619. Most accounts judge him an inept strategist driven more by ambition and grievance than by religious conviction.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_defenestration_prague",
+    "review_status": "reviewed",
+    "title": "Defenestration of Prague",
+    "dossier_type": "concept",
+    "summary": "The throwing of two Catholic regents — Jaroslav Martinitz and Vilém Slavata — and their secretary from a window of the Hradschin castle on 23 May 1618 by a Protestant assembly led by Count Thurn. It deliberately echoed a Hussite defenestration of 1419. All three men survived the roughly seventeen-metre fall; Catholic writers later claimed the Virgin had caught them, Protestants that they landed in a dung-heap.",
+    "why_it_matters": "The act is the conventional starting point of the Thirty Years War. It turned a dispute over the Letter of Majesty into open revolt, committed the Bohemian estates to resistance against Habsburg rule, and forced Vienna to decide whether the affair was a riot, a lawsuit, or a war.",
+    "source_refs": [
+      "src_wilson_europes_tragedy",
+      "src_primary_apologia_1618_bsb11213319"
+    ]
+  },
+  {
+    "id": "dossier_tilly",
+    "review_status": "reviewed",
+    "title": "Count Tilly",
+    "dossier_type": "person",
+    "summary": "Johann Tserclaes, Count of Tilly (1559–1632), was a Brabant-born, Jesuit-educated soldier who commanded the army of the Catholic League from 1610. Austere, disciplined, and devoutly Catholic, he was the leading Catholic general of the war's first half.",
+    "why_it_matters": "Tilly won the Battle of White Mountain in 1620 and a string of victories that broke the Bohemian and Palatine causes and later the Danish intervention. His sack of Protestant Magdeburg in 1631 became a byword for atrocity; his defeat and death at the hands of the Swedes marked the turning of the war.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "dossier_white_mountain",
+    "review_status": "reviewed",
+    "title": "Battle of White Mountain",
+    "dossier_type": "concept",
+    "summary": "Fought on 8 November 1620 on a chalk ridge about eight kilometres west of Prague, this was the first major battle of the Thirty Years War and the most decisive. The combined imperial and Catholic League army under Maximilian of Bavaria and Tilly routed the Bohemian Confederate forces under Christian of Anhalt in little more than an hour.",
+    "why_it_matters": "White Mountain destroyed the Bohemian Revolt at a stroke. Frederick V fled, the estates' rebellion collapsed, and Ferdinand II was left free to remake Bohemia by execution, confiscation, and forced re-Catholicization — a victory so complete that it shaped the kingdom for three centuries.",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]

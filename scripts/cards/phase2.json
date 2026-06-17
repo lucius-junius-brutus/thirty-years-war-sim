@@ -1,0 +1,261 @@
+{
+  "dossiers": {
+    "dossier_defenestration_prague": {
+      "title": "Defenestration of Prague",
+      "dossier_type": "concept",
+      "summary": "The throwing of two Catholic regents — Jaroslav Martinitz and Vilém Slavata — and their secretary from a window of the Hradschin castle on 23 May 1618 by a Protestant assembly led by Count Thurn. It deliberately echoed a Hussite defenestration of 1419. All three men survived the roughly seventeen-metre fall; Catholic writers later claimed the Virgin had caught them, Protestants that they landed in a dung-heap.",
+      "why_it_matters": "The act is the conventional starting point of the Thirty Years War. It turned a dispute over the Letter of Majesty into open revolt, committed the Bohemian estates to resistance against Habsburg rule, and forced Vienna to decide whether the affair was a riot, a lawsuit, or a war.",
+      "source_refs": ["src_wilson_europes_tragedy", "src_primary_apologia_1618_bsb11213319"],
+      "review_status": "reviewed"
+    },
+    "dossier_frederick_v": {
+      "title": "Frederick V",
+      "dossier_type": "person",
+      "summary": "Frederick V (1596–1632) was the Calvinist Elector Palatine and head of the Protestant Union. In 1619 the rebel Bohemian estates offered him their crown; his acceptance, against much advice, made him king of Bohemia for a single winter. Married to Elizabeth Stuart, daughter of James I of England, he counted on English and Protestant support that never adequately came.",
+      "why_it_matters": "Frederick's acceptance of the Bohemian crown turned a provincial revolt into a European crisis. His defeat at White Mountain in 1620 cost him Bohemia, his Palatine lands, and ultimately his electoral title; mocked as the 'Winter King,' he became a stateless symbol whose cause drew foreign powers into the war.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_john_george_saxony": {
+      "title": "John George I of Saxony",
+      "dossier_type": "person",
+      "summary": "John George I (1585–1656) was the Lutheran Elector of Saxony and the senior Protestant prince of the Empire. Conservative and legalistic, he distrusted the Calvinist Palatinate and prized imperial order, repeatedly preferring negotiation and loyalty to the emperor over confessional solidarity.",
+      "why_it_matters": "Saxony's weight could make or break a Protestant cause. In 1620 John George invaded Lusatia for Ferdinand, helping isolate the Bohemian rebels; in 1635 his Peace of Prague with the emperor split the Protestant camp. His willingness to deal with Vienna repeatedly denied the anti-Habsburg coalition its natural leader.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_munich_treaty": {
+      "title": "Treaty of Munich",
+      "dossier_type": "treaty",
+      "summary": "An agreement concluded on 8 October 1619 between Ferdinand II and Maximilian of Bavaria that committed the Catholic League's army to suppressing the Bohemian Revolt. Ferdinand recognized the League and requested its aid; in return Maximilian, as the emperor's auxiliary, was promised full compensation for Bavaria's costs and given part of Austria as security until repaid.",
+      "why_it_matters": "The treaty gave Ferdinand the army he lacked — he called it taking 'the Bavarian devil to drive out the Bohemian Beelzebub' — but mortgaged the victory in advance. It was the legal basis for all later Bavarian action and for Maximilian's claims on the Upper Palatinate and the electoral title.",
+      "source_refs": ["src_wilson_europes_tragedy", "src_vales_munich_treaty_1619"],
+      "review_status": "reviewed"
+    },
+    "dossier_tilly": {
+      "title": "Count Tilly",
+      "dossier_type": "person",
+      "summary": "Johann Tserclaes, Count of Tilly (1559–1632), was a Brabant-born, Jesuit-educated soldier who commanded the army of the Catholic League from 1610. Austere, disciplined, and devoutly Catholic, he was the leading Catholic general of the war's first half.",
+      "why_it_matters": "Tilly won the Battle of White Mountain in 1620 and a string of victories that broke the Bohemian and Palatine causes and later the Danish intervention. His sack of Protestant Magdeburg in 1631 became a byword for atrocity; his defeat and death at the hands of the Swedes marked the turning of the war.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    },
+    "dossier_white_mountain": {
+      "title": "Battle of White Mountain",
+      "dossier_type": "concept",
+      "summary": "Fought on 8 November 1620 on a chalk ridge about eight kilometres west of Prague, this was the first major battle of the Thirty Years War and the most decisive. The combined imperial and Catholic League army under Maximilian of Bavaria and Tilly routed the Bohemian Confederate forces under Christian of Anhalt in little more than an hour.",
+      "why_it_matters": "White Mountain destroyed the Bohemian Revolt at a stroke. Frederick V fled, the estates' rebellion collapsed, and Ferdinand II was left free to remake Bohemia by execution, confiscation, and forced re-Catholicization — a victory so complete that it shaped the kingdom for three centuries.",
+      "source_refs": ["src_wilson_europes_tragedy"],
+      "review_status": "reviewed"
+    }
+  },
+  "cards": {
+    "card_1618_prague_defenestration": {
+      "review_status": "reviewed",
+      "briefing": "For nine years an uneasy peace had held in Bohemia on the strength of a single document — the Letter of Majesty, which guaranteed the Protestant estates their churches, their schools, and their worship. In 1617 those same estates accepted Ferdinand, a Styrian archduke famous for stamping out Protestantism in his own duchy, as their next king; only two delegates voted no. Ferdinand confirmed their privileges and believed he was keeping them. Then royal officials closed one Protestant church and pulled another down, arrested the men who complained, and set royal judges over parish funds. To Count Thurn and the Defensors, the charter was being dismantled clause by clause.",
+      "situation": "On 23 May 1618 Thurn led an armed assembly up the narrow stair of the Hradschin and threw two Catholic regents and their secretary from a high window. The act — at once called the Defenestration of Prague, after a Hussite revolt two centuries before — should have killed them; instead all three, astonishingly, survived the fall. The rebels insist they have struck not at the dynasty but at the 'evil advisers' who turned the king against his subjects; their cause, they say, is the Letter of Majesty itself. The first answer from Vienna will decide what this becomes: a riot to be punished, a lawsuit to be heard, or a war.",
+      "context_links": [
+        { "term": "Letter of Majesty", "dossier_id": "dossier_letter_of_majesty" },
+        { "term": "Count Thurn", "dossier_id": "dossier_thurn" },
+        { "term": "Defensors", "dossier_id": "dossier_defensors" },
+        { "term": "Defenestration of Prague", "dossier_id": "dossier_defenestration_prague" }
+      ],
+      "options": {
+        "opt_legal_commission": {
+          "label": "Treat the rising as a breach of the public peace — law, not the scaffold — and promise the chartered liberties will be reviewed, not revoked.",
+          "consequence": "The legal line gives the cautious estates a reason to keep their loyalty; the Catholic hardliners hear in it the preserving of the very charter they had wished buried."
+        },
+        "opt_public_punishment": {
+          "label": "Brand the defenestrators traitors and their appeal to the Letter of Majesty a mask for revolt.",
+          "consequence": "The Catholic allies applaud the plainness of it. The wavering estates hear that a recorded royal promise will not shelter them once obedience has failed — and begin to wonder whether they are safer in arms."
+        },
+        "opt_offer_conference": {
+          "label": "Offer to negotiate the disputed articles of the Letter of Majesty, if the rebels first reaffirm Habsburg kingship.",
+          "consequence": "The moderates are given a bridge back to obedience — but a bridge that narrows how far any later victory might carry the Catholic restoration."
+        }
+      }
+    },
+    "card_1618_remove_klesl": {
+      "review_status": "reviewed",
+      "briefing": "At the centre of the emperor Matthias's government stood Cardinal Klesl, the architect of a policy of patience: hold the Protestants by negotiation, and preserve imperial authority by never forcing a confrontation. With Prague in open revolt, that patience now looked to Ferdinand and the hardline archdukes like paralysis. Klesl's letters still promised that Bohemia could be talked down; meanwhile the rebels seized offices, raised men, and emptied the treasury.",
+      "situation": "Ferdinand's circle wanted a free hand, and Klesl stood in the way of it. The cardinal could still reach the moderate estates, and to remove him would breach every form — he was Matthias's minister, not Ferdinand's to dismiss. Yet every week of negotiation left the revolt in possession of the kingdom and the war chest unfilled.",
+      "context_links": [
+        { "term": "Cardinal Klesl", "dossier_id": "dossier_khlesl" }
+      ],
+      "options": {
+        "opt_keep_klesl_negotiating": {
+          "label": "Keep Klesl at the table, and demand Prague disarm before any further grace.",
+          "consequence": "The court keeps a channel to the moderates open — but the Catholic councillors complain that time and money are being handed to men already in arms."
+        },
+        "opt_remove_klesl_decisively": {
+          "label": "Remove Klesl from power and prepare a harder answer.",
+          "consequence": "In the event, Ferdinand and Archduke Maximilian had the cardinal seized on 20 July 1618 and spirited to a fortress in the Tyrol, without Matthias's knowledge. The chancery now moves with fewer scruples and the war chest mends — but Prague sees that Vienna no longer means to bargain."
+        },
+        "opt_sideline_klesl_keep_channel": {
+          "label": "Set Klesl aside in public, but quietly use his contacts to keep one door open.",
+          "consequence": "The hardliners hear that Ferdinand is no longer ruled by a cardinal's caution, while Prague receives just enough signal to keep talking."
+        }
+      }
+    },
+    "card_1618_mediation_channel": {
+      "review_status": "reviewed",
+      "briefing": "Even after the rising, lines of negotiation still ran between Vienna and Prague — carried by Klesl's old agents, by doubtful nobles, and by men who insisted they fought for their privileges and not against the dynasty. Neither the Protestant directors nor the emperor's moderates had yet despaired of a settlement.",
+      "situation": "But the terms on offer were narrower than Prague wanted and slower than the Catholic party would bear. A paper settlement was still possible — if either side would accept less than it had publicly sworn to win.",
+      "context_links": [
+        { "term": "Klesl", "dossier_id": "dossier_khlesl" }
+      ],
+      "options": {
+        "opt_accept_narrow_mediation": {
+          "label": "Accept a narrow settlement: the directors disarm, the royal authority stands.",
+          "consequence": "The moderates gain words to carry home — but neither the directors nor the Catholic party get the victory each promised its friends, and both begin to look past the table."
+        },
+        "opt_let_mediation_fail": {
+          "label": "Let the talks collapse rather than concede the crown's disputed rights.",
+          "consequence": "The language of negotiation is spent. Those who always said Vienna meant only delay now find the readier listeners, and both sides turn to their armies."
+        }
+      }
+    },
+    "card_1619_stormy_petition": {
+      "review_status": "reviewed",
+      "briefing": "By the summer of 1619 the revolt had spilled out of Bohemia. Count Thurn crossed the Austrian frontier with ten thousand men and marched on Vienna itself, gambling that a blow at the Habsburg capital would bring the wavering Moravians and Austrians off the fence. Inside the city, Protestant nobles of Lower Austria pressed into Ferdinand's presence to demand guarantees for their religion before they would swear obedience.",
+      "situation": "The palace waited on cavalry that might not arrive in time. Legend would say a Protestant deputy seized Ferdinand by the buttons, and that he knelt before a crucifix praying for deliverance — at the very moment Dampierre's horsemen clattered into the courtyard. To yield now, under armed pressure, would be heard in Prague as surrender; to refuse, with Thurn at the gates, might be heard as folly.",
+      "context_links": [
+        { "term": "Count Thurn", "dossier_id": "dossier_thurn" }
+      ],
+      "options": {
+        "opt_petition_hold_firm": {
+          "label": "Stand firm until the loyal horse reaches the city.",
+          "consequence": "In the event, Dampierre's arquebusiers dispersed the deputies, and Thurn — without siege guns and with no signal from his friends inside — retreated on 12 June. The danger passed, and the boldest petitioners were left exposed as conspirators."
+        },
+        "opt_petition_individual_privileges": {
+          "label": "Confirm individual nobles' privileges in return for their homage.",
+          "consequence": "The moderates receive something they can accept without joining Prague. Corporate unity weakens — but the crown has admitted, in writing, that it must bargain with frightened estates."
+        },
+        "opt_petition_broad_concession": {
+          "label": "Grant a broad corporate guarantee to quiet Lower Austria.",
+          "consequence": "The immediate danger eases. But Prague learns that armed pressure can draw written security out of Ferdinand, and stores the lesson."
+        }
+      }
+    },
+    "card_1619_imperial_election": {
+      "review_status": "reviewed",
+      "source_refs": ["src_public_bohemian_reasons_reject_ferdinand_1619", "src_public_letter_of_majesty_1609_cz_wikisource", "src_wilson_europes_tragedy"],
+      "briefing": "While Thurn besieged Vienna, the throne of the Holy Roman Empire fell vacant: Matthias was dead, and the seven electors gathered at Frankfurt to choose his successor. Ferdinand, as king of Bohemia, held an electoral vote himself — but the rebel estates argued that his Bohemian kingship was forfeit, that he had never been freely elected, and that they were entitled to choose another. Their reasoning drew on the Letter of Majesty, which had made religious liberty part of Bohemia's fundamental law.",
+      "situation": "The two crowns now hung together. If Ferdinand could secure the imperial title, he would answer the rebels from the highest seat in Christendom; if the Bohemians could make their case first, they might depose him and bestow their crown elsewhere — and they were already turning to Frederick of the Palatinate. Everything turned on whether this was treated as a question of law, to be argued, or of authority, to be asserted.",
+      "context_links": [
+        { "term": "Letter of Majesty", "dossier_id": "dossier_letter_of_majesty" },
+        { "term": "Frederick of the Palatinate", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_prioritize_electors": {
+          "label": "Court the electors and make the imperial title the first answer to Prague.",
+          "consequence": "The imperial crown steadies Ferdinand's hand and lifts him above the Bohemian estates. Their charter arguments still circulate — but now he answers them from a higher seat."
+        },
+        "opt_denounce_frederick": {
+          "label": "Denounce the estates' reasoning as rebellion dressed in the language of charter.",
+          "consequence": "The crown refuses to let Prague define the law. The cautious estates hear that old liberties may be judged after obedience, not before it — and the militants hear a door closing."
+        },
+        "opt_seek_compromise": {
+          "label": "Publish a legal rebuttal and promise a controlled review of the Letter's protections.",
+          "consequence": "Ferdinand answers the estates on their own ground. The zealous allies dislike granting rebels the dignity of an argument, and the promised review may bind his later settlement."
+        }
+      }
+    },
+    "card_1619_frankfurt_coronation": {
+      "review_status": "reviewed",
+      "briefing": "On 28 August 1619 the electors chose Ferdinand Holy Roman Emperor — unanimously, for even the Bohemian vote was cast in his favour, on the very day the rebels in Prague were declaring him deposed and electing Frederick in his place. The ceremony gave Ferdinand the regalia, the acclamation, and the coronation oath of the highest office in Christendom.",
+      "situation": "But that oath cut both ways. The same imperial dignity that let Ferdinand answer Prague as a rebellion against the whole Empire also gave the electors and estates a written standard by which to measure him. He could present every act of force as the lawful defence of imperial order — or be seen to have bound his own hands before the war was even won.",
+      "context_links": [
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_crown_as_mandate": {
+          "label": "Use Frankfurt as proof that Prague now defies the lawful emperor, not merely its king.",
+          "consequence": "The crown raises Ferdinand's voice above the Bohemian estates and turns a dynastic quarrel into a matter of imperial law. It also makes every act of coercion sound like an imperial precedent that other princes will remember."
+        },
+        "opt_crown_as_reassurance": {
+          "label": "Publish the coronation as a promise of law, consultation, and protected privilege.",
+          "consequence": "The moderate estates gain a language for loyalty without surrendering every fear. The Catholic allies hear the new emperor binding his own hands before the fight is won."
+        },
+        "opt_keep_ceremony_apart": {
+          "label": "Keep the imperial ceremony apart from Bohemia, lest the revolt become an imperial test case.",
+          "consequence": "Ferdinand blunts the sense that the new crown is aimed straight at Prague — but leaves his opponents more room to argue that the Bohemian dispute stands on its own separate law."
+        }
+      }
+    },
+    "card_1620_bavarian_army": {
+      "review_status": "reviewed",
+      "source_refs": ["src_vales_munich_treaty_1619", "src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy"],
+      "briefing": "The imperial title had not produced an army. Bohemia, Transylvania under Bethlen Gabor, and Frederick's supporters pressed on every side, and Ferdinand's own treasury was empty. The one prince who could put a disciplined Catholic army into the field at once was Maximilian of Bavaria, master of the Catholic League and patron of its veteran commander, Tilly.",
+      "situation": "But Maximilian's help came on Maximilian's terms. By the Treaty of Munich he would march as the emperor's auxiliary — and be repaid in full, with part of Austria pledged as security and a tacit claim on the Palatinate's lands and electoral title should the war be won. Ferdinand called it taking the Bavarian devil to drive out the Bohemian Beelzebub. The alternative was to wait for an imperial army that did not exist while the rebellion hardened into a new order.",
+      "context_links": [
+        { "term": "Maximilian of Bavaria", "dossier_id": "dossier_maximilian_bavaria" },
+        { "term": "Catholic League", "dossier_id": "dossier_catholic_league" },
+        { "term": "Treaty of Munich", "dossier_id": "dossier_munich_treaty" },
+        { "term": "Tilly", "dossier_id": "dossier_tilly" }
+      ],
+      "options": {
+        "opt_bavarian_military_assistance": {
+          "label": "Accept Maximilian's Munich terms — League command, full compensation, lands as security.",
+          "consequence": "Bavarian columns under Tilly give the cause its teeth, and the revolt's days are numbered. But Maximilian now holds a claim on the command, the compensation, and any future peace — a creditor as much as an ally."
+        },
+        "opt_broader_catholic_subscription": {
+          "label": "Seek a broader subscription of electors and Catholic estates first.",
+          "consequence": "The dependence is spread more widely and wears a more constitutional face — but Maximilian's army is slower to move, and ready money stays scarce while the rebels gather strength."
+        },
+        "opt_delay_for_imperial_levies": {
+          "label": "Refuse the bonds of separate compensation and raise an imperial force instead.",
+          "consequence": "Ferdinand keeps more of his freedom — and less of an army. The Bohemian and Transylvanian emergencies will not wait on a cleaner instrument."
+        }
+      }
+    },
+    "card_1620_saxon_question": {
+      "review_status": "reviewed",
+      "source_refs": ["src_burgdorf_wahlkapitulationen", "src_wilson_europes_tragedy"],
+      "briefing": "Ferdinand's deepest fear was that the revolt would fuse into a single Protestant cause. The one man who could prevent it was John George of Saxony — the senior Lutheran prince of the Empire, who despised the Calvinist Palatinate, distrusted Frederick's adventure, and valued imperial order above confessional solidarity. But he needed to be seen protecting Lutheran rights, not serving a Catholic crusade.",
+      "situation": "Handled as a question of law and loyalty, Saxony might be brought to act against Prague — and John George had his price, the Lusatian lands he could occupy in the emperor's name. Handled as a holy war, he would stand aside, and the Protestant estates might close ranks behind Frederick. The framing of the appeal would decide which Saxony answered.",
+      "context_links": [
+        { "term": "John George of Saxony", "dossier_id": "dossier_john_george_saxony" },
+        { "term": "Frederick", "dossier_id": "dossier_frederick_v" }
+      ],
+      "options": {
+        "opt_reassure_saxony": {
+          "label": "Promise Saxony that the religious peace and estate rights will be respected.",
+          "consequence": "Saxon cooperation grows easier, and with it the chance to isolate Frederick. The Catholic hardliners mutter that the emperor is bargaining with heresy."
+        },
+        "opt_pressure_saxony": {
+          "label": "Demand Saxony prove its loyalty before any talk of assurances.",
+          "consequence": "Ferdinand asserts his command — but Saxony hears obedience placed before the law the emperor swore to uphold, and grows colder."
+        },
+        "opt_ignore_saxony": {
+          "label": "Leave the matter to Bavaria and the Catholic allies; Saxony may follow or stand aside.",
+          "consequence": "Catholic unity is cleaner without Lutheran partners — but the constitutional, legal language that might have split the Protestants from Frederick goes unused."
+        }
+      }
+    },
+    "card_1620_march_on_prague": {
+      "review_status": "reviewed",
+      "briefing": "By autumn 1620 the allied armies had driven the revolt back toward its heart. Maximilian and the imperial forces stood in Bohemia, but the commanders disagreed: the cautious Bucquoy wanted to consolidate, while Tilly urged a swift march on Prague before winter closed the campaign and gave Frederick a reprieve.",
+      "situation": "Ferdinand overruled his own general and placed him under Maximilian's command. A direct thrust at Prague might bring down the rebel crown in a single battle — or strand the army before a hard city in a bad season. The road led toward a chalk ridge just west of the capital, the White Mountain.",
+      "context_links": [
+        { "term": "Tilly", "dossier_id": "dossier_tilly" },
+        { "term": "Maximilian", "dossier_id": "dossier_maximilian_bavaria" },
+        { "term": "White Mountain", "dossier_id": "dossier_white_mountain" }
+      ],
+      "options": {
+        "opt_march_direct_prague": {
+          "label": "Back Tilly: march directly on Prague and force a battle.",
+          "consequence": "In the event, the army slipped round the rebel position and raced for the city; on 8 November 1620, at the White Mountain, it shattered the Confederate army in barely an hour. Frederick fled, and Bohemia lay open to whatever Ferdinand chose to make of victory."
+        },
+        "opt_moravian_approach": {
+          "label": "Take Bucquoy's slower, surer approach through Moravia.",
+          "consequence": "The campaign promises firmer ground and fewer winter hazards — but gives Prague more time to gather courage, coin, and allies, and leaves the rebel crown standing into another year."
+        },
+        "opt_winter_pause": {
+          "label": "Halt for winter and consolidate the allied positions.",
+          "consequence": "The army is spared a perilous finish — but victory loses its terror, and the Confederates keep a court and a cause alive around Frederick through the cold months."
+        }
+      }
+    }
+  }
+}

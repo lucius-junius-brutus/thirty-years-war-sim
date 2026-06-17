@@ -555,8 +555,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "May 1618",
     "title": "Windows in Prague",
-    "briefing": "The Protestant estates of Prague had for years held the Letter of Majesty as a shield about their churches, their schools, and their place in the kingdom. When the Catholic royal officials narrowed that protection, and arrests and closures followed, a band of the bolder men resolved to force the quarrel into the open.",
-    "situation": "On the three-and-twentieth of May the royal officials were flung from the windows of the Hradschin. The rebels named the deed a defence of estate liberty, of religious privilege, and of the old royal promises set down in the Letter of Majesty. The first answer returned from Vienna would teach the Empire whether this was a local rising, a suit at law, or the opening of a reckoning.",
+    "briefing": "For nine years an uneasy peace had held in Bohemia on the strength of a single document — the Letter of Majesty, which guaranteed the Protestant estates their churches, their schools, and their worship. In 1617 those same estates accepted Ferdinand, a Styrian archduke famous for stamping out Protestantism in his own duchy, as their next king; only two delegates voted no. Ferdinand confirmed their privileges and believed he was keeping them. Then royal officials closed one Protestant church and pulled another down, arrested the men who complained, and set royal judges over parish funds. To Count Thurn and the Defensors, the charter was being dismantled clause by clause.",
+    "situation": "On 23 May 1618 Thurn led an armed assembly up the narrow stair of the Hradschin and threw two Catholic regents and their secretary from a high window. The act — at once called the Defenestration of Prague, after a Hussite revolt two centuries before — should have killed them; instead all three, astonishingly, survived the fall. The rebels insist they have struck not at the dynasty but at the 'evil advisers' who turned the king against his subjects; their cause, they say, is the Letter of Majesty itself. The first answer from Vienna will decide what this becomes: a riot to be punished, a lawsuit to be heard, or a war.",
     "historian_note": "The 1609 Letter of Majesty matters here because it turns Bohemian religious claims into a chartered estate-liberty problem: religion, schools, churches, defenders, and recorded royal protection all sit behind the rebels' language of privilege.",
     "source_refs": [
       "src_primary_augsburg_peace_1555_reference_translation",
@@ -568,12 +568,12 @@
       "claim_harsh_bohemian_punishment_alarm",
       "claim_letter_majesty_bohemian_liberties"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_legal_commission",
-        "label": "Treat the rising as a breach of law, the chartered Bohemian liberties reserved for review.",
-        "consequence": "The legal line gave the cautious estates a reason to hold to their loyalty. The Catholic hardliners heard in it the preserving of the very paper they had wished buried.",
+        "label": "Treat the rising as a breach of the public peace — law, not the scaffold — and promise the chartered liberties will be reviewed, not revoked.",
+        "consequence": "The legal line gives the cautious estates a reason to keep their loyalty; the Catholic hardliners hear in it the preserving of the very charter they had wished buried.",
         "effects": {
           "imperial_authority": -2,
           "confessional_legitimacy": -7,
@@ -598,8 +598,8 @@
       },
       {
         "id": "opt_public_punishment",
-        "label": "Declare the rebels traitors and cast their plea of privilege as a cover for revolt.",
-        "consequence": "The Catholic allies applauded the plainness of it. The Protestant and estate observers heard that a recorded royal promise might not shelter them once obedience had failed.",
+        "label": "Brand the defenestrators traitors and their appeal to the Letter of Majesty a mask for revolt.",
+        "consequence": "The Catholic allies applaud the plainness of it. The wavering estates hear that a recorded royal promise will not shelter them once obedience has failed — and begin to wonder whether they are safer in arms.",
         "effects": {
           "imperial_authority": 8,
           "confessional_legitimacy": 10,
@@ -624,8 +624,8 @@
       },
       {
         "id": "opt_offer_conference",
-        "label": "Offer a conference upon the Letter of Majesty, should the rebels reaffirm Habsburg kingship.",
-        "consequence": "The moderates were given a bridge back to obedience — but a bridge that narrowed how far any later victory might carry the Catholic restoration.",
+        "label": "Offer to negotiate the disputed articles of the Letter of Majesty, if the rebels first reaffirm Habsburg kingship.",
+        "consequence": "The moderates are given a bridge back to obedience — but a bridge that narrows how far any later victory might carry the Catholic restoration.",
         "effects": {
           "imperial_authority": -8,
           "confessional_legitimacy": -8,
@@ -648,6 +648,24 @@
           "option:opt_offer_conference"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Letter of Majesty",
+        "dossier_id": "dossier_letter_of_majesty"
+      },
+      {
+        "term": "Count Thurn",
+        "dossier_id": "dossier_thurn"
+      },
+      {
+        "term": "Defensors",
+        "dossier_id": "dossier_defensors"
+      },
+      {
+        "term": "Defenestration of Prague",
+        "dossier_id": "dossier_defenestration_prague"
+      }
     ]
   },
   {
@@ -657,8 +675,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "July 1618",
     "title": "The Cardinal in the Way",
-    "briefing": "Reports from Vienna named Cardinal Klesl as the man yet pressing for accommodation. His letters and his envoys promised obedience if Prague would but lay down its arms; the court, however, heard only delay, while the directors gathered their men and their money.",
-    "situation": "Ferdinand's friends demanded a firmer hand. Klesl could still speak to the moderates, yet every day given to negotiation left the revolt in possession of the Bohemian offices and pressed the harder upon the Habsburg treasury.",
+    "briefing": "At the centre of the emperor Matthias's government stood Cardinal Klesl, the architect of a policy of patience: hold the Protestants by negotiation, and preserve imperial authority by never forcing a confrontation. With Prague in open revolt, that patience now looked to Ferdinand and the hardline archdukes like paralysis. Klesl's letters still promised that Bohemia could be talked down; meanwhile the rebels seized offices, raised men, and emptied the treasury.",
+    "situation": "Ferdinand's circle wanted a free hand, and Klesl stood in the way of it. The cardinal could still reach the moderate estates, and to remove him would breach every form — he was Matthias's minister, not Ferdinand's to dismiss. Yet every week of negotiation left the revolt in possession of the kingdom and the war chest unfilled.",
     "historian_note": "Backend note: Wilson treats Klesl's removal as a real inflection, but the peace alternative remains inferred and requires later source checking.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -667,12 +685,12 @@
       "claim_klesl_removal_militarizes_bohemian_response",
       "claim_mediation_channel_preserves_compromise_path"
     ],
-    "review_status": "inferred",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_keep_klesl_negotiating",
-        "label": "Keep Klesl at his negotiation, and demand that Prague disarm before any further grace.",
-        "consequence": "The court kept thereby a channel to the moderate estates, though the Catholic counsellors complained that time was being granted to men already in arms.",
+        "label": "Keep Klesl at the table, and demand Prague disarm before any further grace.",
+        "consequence": "The court keeps a channel to the moderates open — but the Catholic councillors complain that time and money are being handed to men already in arms.",
         "effects": {
           "estate_trust": 5,
           "confessional_legitimacy": -4,
@@ -696,8 +714,8 @@
       },
       {
         "id": "opt_remove_klesl_decisively",
-        "label": "Remove Klesl from the seat of power and make ready a harder answer.",
-        "consequence": "The chancery moved thereafter with fewer scruples, and the war chest mended; but Prague saw fewer reasons to look for settlement out of Vienna.",
+        "label": "Remove Klesl from power and prepare a harder answer.",
+        "consequence": "In the event, Ferdinand and Archduke Maximilian had the cardinal seized on 20 July 1618 and spirited to a fortress in the Tyrol, without Matthias's knowledge. The chancery now moves with fewer scruples and the war chest mends — but Prague sees that Vienna no longer means to bargain.",
         "effects": {
           "imperial_authority": 5,
           "dynastic_security": 4,
@@ -715,8 +733,8 @@
       },
       {
         "id": "opt_sideline_klesl_keep_channel",
-        "label": "Set Klesl aside in public, yet use his contacts to keep one door ajar.",
-        "consequence": "The hardliners heard that Ferdinand was no longer governed by a cardinal's caution, while Prague received signals enough to keep the bargaining alive.",
+        "label": "Set Klesl aside in public, but quietly use his contacts to keep one door open.",
+        "consequence": "The hardliners hear that Ferdinand is no longer ruled by a cardinal's caution, while Prague receives just enough signal to keep talking.",
         "effects": {
           "imperial_authority": 2,
           "estate_trust": 2,
@@ -742,7 +760,7 @@
     ],
     "context_links": [
       {
-        "term": "Klesl",
+        "term": "Cardinal Klesl",
         "dossier_id": "dossier_khlesl"
       }
     ]
@@ -754,8 +772,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "Late 1618",
     "title": "Terms Carried Between Courts",
-    "briefing": "Klesl's agents went still between the doubtful nobles, the Catholic councillors, and the men who professed to fight for their privileges and not against the dynasty.",
-    "situation": "The offers were narrower than Prague desired, and slower than the Catholic party would endure. A settlement might yet be written, but only if one side would take less than it had proclaimed.",
+    "briefing": "Even after the rising, lines of negotiation still ran between Vienna and Prague — carried by Klesl's old agents, by doubtful nobles, and by men who insisted they fought for their privileges and not against the dynasty. Neither the Protestant directors nor the emperor's moderates had yet despaired of a settlement.",
+    "situation": "But the terms on offer were narrower than Prague wanted and slower than the Catholic party would bear. A paper settlement was still possible — if either side would accept less than it had publicly sworn to win.",
     "historian_note": "Backend note: this is a Wilson-inferred alternate branch from Klesl's conciliatory role, not a claim that peace would certainly have followed.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -763,15 +781,15 @@
     "causal_claim_ids": [
       "claim_mediation_channel_preserves_compromise_path"
     ],
-    "review_status": "inferred",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "klesl_retained"
     ],
     "options": [
       {
         "id": "opt_accept_narrow_mediation",
-        "label": "Accept a narrow settlement, the directors disarmed and the royal authority preserved.",
-        "consequence": "The moderates gained words to carry home; yet neither the directors nor the Catholic party received the victory each had promised its friends.",
+        "label": "Accept a narrow settlement: the directors disarm, the royal authority stands.",
+        "consequence": "The moderates gain words to carry home — but neither the directors nor the Catholic party get the victory each promised its friends, and both begin to look past the table.",
         "effects": {
           "estate_trust": 7,
           "foreign_intervention_risk": -5,
@@ -794,8 +812,8 @@
       },
       {
         "id": "opt_let_mediation_fail",
-        "label": "Suffer the talks to fail rather than concede the crown's disputed rights.",
-        "consequence": "The language of negotiation was spent. Those who had warned that Vienna meant only delay now found the readier listeners.",
+        "label": "Let the talks collapse rather than concede the crown's disputed rights.",
+        "consequence": "The language of negotiation is spent. Those who always said Vienna meant only delay now find the readier listeners, and both sides turn to their armies.",
         "effects": {
           "imperial_authority": 3,
           "confessional_legitimacy": 3,
@@ -817,6 +835,12 @@
           "option:opt_let_mediation_fail"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Klesl",
+        "dossier_id": "dossier_khlesl"
+      }
     ]
   },
   {
@@ -826,8 +850,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "June 1619",
     "title": "The Storm at Vienna",
-    "briefing": "Thurn had crossed the frontier, and the Protestant nobles of Lower Austria pressed into Ferdinand's very presence, demanding security before they would stand obedient.",
-    "situation": "The palace waited upon cavalry that might or might not come in time. Should Ferdinand yield under pressure, Prague would hear of it; should he refuse, Vienna might see how narrow his obedience had become.",
+    "briefing": "By the summer of 1619 the revolt had spilled out of Bohemia. Count Thurn crossed the Austrian frontier with ten thousand men and marched on Vienna itself, gambling that a blow at the Habsburg capital would bring the wavering Moravians and Austrians off the fence. Inside the city, Protestant nobles of Lower Austria pressed into Ferdinand's presence to demand guarantees for their religion before they would swear obedience.",
+    "situation": "The palace waited on cavalry that might not arrive in time. Legend would say a Protestant deputy seized Ferdinand by the buttons, and that he knelt before a crucifix praying for deliverance — at the very moment Dampierre's horsemen clattered into the courtyard. To yield now, under armed pressure, would be heard in Prague as surrender; to refuse, with Thurn at the gates, might be heard as folly.",
     "historian_note": "Backend note: Wilson supports the actual pattern of firmness followed by selective reassurance; broader alternatives are inferred from the pressure field.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -835,15 +859,15 @@
     "causal_claim_ids": [
       "claim_stormy_petition_split_estates"
     ],
-    "review_status": "inferred",
+    "review_status": "reviewed",
     "requires_memory_tags": [
       "klesl_removed"
     ],
     "options": [
       {
         "id": "opt_petition_hold_firm",
-        "label": "Stand firm until the loyal horse should enter the city.",
-        "consequence": "The petitioners withdrew without a corporate triumph. The danger passed, and their boldest men stood the more exposed for it.",
+        "label": "Stand firm until the loyal horse reaches the city.",
+        "consequence": "In the event, Dampierre's arquebusiers dispersed the deputies, and Thurn — without siege guns and with no signal from his friends inside — retreated on 12 June. The danger passed, and the boldest petitioners were left exposed as conspirators.",
         "effects": {
           "dynastic_security": 7,
           "imperial_authority": 5,
@@ -860,8 +884,8 @@
       },
       {
         "id": "opt_petition_individual_privileges",
-        "label": "Confirm the several noble privileges in return for homage.",
-        "consequence": "The moderates received something they could accept without joining Prague. The corporate union weakened, though the crown confessed it must bargain with anxious estates.",
+        "label": "Confirm individual nobles' privileges in return for their homage.",
+        "consequence": "The moderates receive something they can accept without joining Prague. Corporate unity weakens — but the crown has admitted, in writing, that it must bargain with frightened estates.",
         "effects": {
           "estate_trust": 5,
           "dynastic_security": 4,
@@ -884,8 +908,8 @@
       },
       {
         "id": "opt_petition_broad_concession",
-        "label": "Grant a broader corporate guarantee to quiet Lower Austria.",
-        "consequence": "The immediate danger eased; but Prague learned that armed pressure could draw written security out of Ferdinand.",
+        "label": "Grant a broad corporate guarantee to quiet Lower Austria.",
+        "consequence": "The immediate danger eases. But Prague learns that armed pressure can draw written security out of Ferdinand, and stores the lesson.",
         "effects": {
           "estate_trust": 9,
           "foreign_intervention_risk": -3,
@@ -906,6 +930,12 @@
           "option:opt_petition_broad_concession"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Count Thurn",
+        "dossier_id": "dossier_thurn"
+      }
     ]
   },
   {
@@ -915,26 +945,25 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "August 1619",
     "title": "The Crown and the Electors",
-    "briefing": "The Bohemian revolt had endured long enough to grow into a challenge of the constitution. Ferdinand must secure the imperial crown while Prague argued that his Bohemian kingship had been conditional, or unlawful, or forfeit.",
-    "situation": "The Bohemian estates set abroad their reasons: that the king had not been freely elected, that his promises had been conditional, that Spanish-Habsburg designs threatened their privileges. Their claims drew strength from an older royal settlement, for the Letter of Majesty had made religious liberty, schools, churches, and estate defenders a part of Bohemia's recorded political order.",
+    "briefing": "While Thurn besieged Vienna, the throne of the Holy Roman Empire fell vacant: Matthias was dead, and the seven electors gathered at Frankfurt to choose his successor. Ferdinand, as king of Bohemia, held an electoral vote himself — but the rebel estates argued that his Bohemian kingship was forfeit, that he had never been freely elected, and that they were entitled to choose another. Their reasoning drew on the Letter of Majesty, which had made religious liberty part of Bohemia's fundamental law.",
+    "situation": "The two crowns now hung together. If Ferdinand could secure the imperial title, he would answer the rebels from the highest seat in Christendom; if the Bohemians could make their case first, they might depose him and bestow their crown elsewhere — and they were already turning to Frederick of the Palatinate. Everything turned on whether this was treated as a question of law, to be argued, or of authority, to be asserted.",
     "historian_note": "A 1619 Bohemian estates text frames Ferdinand's problem as legal, confessional, and dynastic, not merely military. The 1609 Letter of Majesty explains why the dispute could be presented as defense of recorded liberties rather than simple disobedience. The likely effects of each response still need direct review in Wilson and Asch.",
     "source_refs": [
       "src_public_bohemian_reasons_reject_ferdinand_1619",
       "src_public_letter_of_majesty_1609_cz_wikisource",
-      "src_wilson_europes_tragedy",
-      "src_asch_thirty_years_war"
+      "src_wilson_europes_tragedy"
     ],
     "causal_claim_ids": [
       "claim_bohemian_rejection_legitimacy_crisis",
       "claim_legalism_reassures_estates",
       "claim_letter_majesty_bohemian_liberties"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_prioritize_electors",
         "label": "Court the electors and make the imperial title the first answer to Prague.",
-        "consequence": "The imperial crown steadied the royal hand. The estates' charter language circulated still, but the emperor now spoke from a higher desk.",
+        "consequence": "The imperial crown steadies Ferdinand's hand and lifts him above the Bohemian estates. Their charter arguments still circulate — but now he answers them from a higher seat.",
         "effects": {
           "imperial_authority": 12,
           "estate_trust": 2,
@@ -959,8 +988,8 @@
       },
       {
         "id": "opt_denounce_frederick",
-        "label": "Denounce the estates' reasons as rebellion dressed in the language of charter.",
-        "consequence": "The crown refused to let Prague define the law. The cautious estates heard that old liberties might be judged after obedience, and not before it.",
+        "label": "Denounce the estates' reasoning as rebellion dressed in the language of charter.",
+        "consequence": "The crown refuses to let Prague define the law. The cautious estates hear that old liberties may be judged after obedience, not before it — and the militants hear a door closing.",
         "effects": {
           "imperial_authority": 8,
           "confessional_legitimacy": 8,
@@ -985,8 +1014,8 @@
       },
       {
         "id": "opt_seek_compromise",
-        "label": "Publish a rebuttal in law and promise a controlled review of the Letter's protections.",
-        "consequence": "The crown answered the estates upon their chosen ground. The zealous allies misliked granting rebels the dignity of an argument, and the promised review might bind the later settlement.",
+        "label": "Publish a legal rebuttal and promise a controlled review of the Letter's protections.",
+        "consequence": "Ferdinand answers the estates on their own ground. The zealous allies dislike granting rebels the dignity of an argument, and the promised review may bind his later settlement.",
         "effects": {
           "imperial_authority": -3,
           "confessional_legitimacy": -7,
@@ -1009,6 +1038,16 @@
           "option:opt_seek_compromise"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Letter of Majesty",
+        "dossier_id": "dossier_letter_of_majesty"
+      },
+      {
+        "term": "Frederick of the Palatinate",
+        "dossier_id": "dossier_frederick_v"
+      }
     ]
   },
   {
@@ -1018,8 +1057,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "August-September 1619",
     "title": "Frankfurt's Oath",
-    "briefing": "Ferdinand had chosen the imperial election as the lever by which a dynastic crisis might be turned into a crisis of imperial law. The ceremony lent him authority; yet the coronation oath lent the electors and the Estates a standard to invoke against him.",
-    "situation": "Frankfurt gave ceremony and regalia, electors and ambassadors, acclamation and oath. The same pamphlet that reported the crowning carried also the din of the Bohemian and Austrian crisis — armed pressure, the failure of Protestant and Catholic to agree, the demand that privileges be secured. The crown could answer Prague; it could as easily give Prague, and every elector, an oath by which to measure the new emperor.",
+    "briefing": "On 28 August 1619 the electors chose Ferdinand Holy Roman Emperor — unanimously, for even the Bohemian vote was cast in his favour, on the very day the rebels in Prague were declaring him deposed and electing Frederick in his place. The ceremony gave Ferdinand the regalia, the acclamation, and the coronation oath of the highest office in Christendom.",
+    "situation": "But that oath cut both ways. The same imperial dignity that let Ferdinand answer Prague as a rebellion against the whole Empire also gave the electors and estates a written standard by which to measure him. He could present every act of force as the lawful defence of imperial order — or be seen to have bound his own hands before the war was even won.",
     "historian_note": "The English news pamphlet is useful because it places the coronation beside active crisis reporting and describes the public machinery of legitimacy: elector and ambassador roles, Golden Bull offices, regalia, acclamation, and oaths. It proves contemporary framing and ceremony, not the deeper causal weight of the coronation; that still needs direct comparison with modern scholarship.",
     "source_refs": [
       "src_public_relation_ferdinand_election_coronation_1620",
@@ -1031,12 +1070,12 @@
       "claim_bohemian_rejection_legitimacy_crisis",
       "claim_wahlkapitulation_limits_imperial_freedom"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_crown_as_mandate",
-        "label": "Make Frankfurt the proof that Prague now defies the lawful emperor.",
-        "consequence": "The crown raised the imperial voice above the Bohemian estates. It made, too, every act of coercion sound an imperial precedent and no mere dynastic quarrel.",
+        "label": "Use Frankfurt as proof that Prague now defies the lawful emperor, not merely its king.",
+        "consequence": "The crown raises Ferdinand's voice above the Bohemian estates and turns a dynastic quarrel into a matter of imperial law. It also makes every act of coercion sound like an imperial precedent that other princes will remember.",
         "effects": {
           "imperial_authority": 12,
           "dynastic_security": 6,
@@ -1060,8 +1099,8 @@
       },
       {
         "id": "opt_crown_as_reassurance",
-        "label": "Publish the coronation as a promise of law, of consultation, of protected privilege.",
-        "consequence": "The moderate estates gained a language for loyalty without surrendering every fear. The Catholic allies heard the new emperor binding his own hands before the fight was won.",
+        "label": "Publish the coronation as a promise of law, consultation, and protected privilege.",
+        "consequence": "The moderate estates gain a language for loyalty without surrendering every fear. The Catholic allies hear the new emperor binding his own hands before the fight is won.",
         "effects": {
           "imperial_authority": 4,
           "estate_trust": 12,
@@ -1087,8 +1126,8 @@
       },
       {
         "id": "opt_keep_ceremony_apart",
-        "label": "Hold the imperial ceremony apart from Bohemia, and make not the revolt an imperial test.",
-        "consequence": "The sense that the new crown was aimed straight at Prague was lessened. So too was left to the adversaries more room to argue that the Bohemian dispute stood upon its own law.",
+        "label": "Keep the imperial ceremony apart from Bohemia, lest the revolt become an imperial test case.",
+        "consequence": "Ferdinand blunts the sense that the new crown is aimed straight at Prague — but leaves his opponents more room to argue that the Bohemian dispute stands on its own separate law.",
         "effects": {
           "estate_trust": 5,
           "foreign_intervention_risk": -2,
@@ -1110,6 +1149,12 @@
           "option:opt_keep_ceremony_apart"
         ]
       }
+    ],
+    "context_links": [
+      {
+        "term": "Frederick",
+        "dossier_id": "dossier_frederick_v"
+      }
     ]
   },
   {
@@ -1119,26 +1164,25 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "1619-1620",
     "title": "The Bavarian Bargain",
-    "briefing": "The imperial title had not conjured an army. Bohemia, Transylvania, and Frederick's adherents made a present problem of force, and Maximilian of Bavaria was the Catholic prince most able to answer it quickly.",
-    "situation": "An army was wanted before the Bohemian revolt should harden into a new order. Maximilian of Bavaria and the Catholic League could furnish force; but the terms of the Munich Treaty would give Bavaria a hand in the command, in the compensation, and in any later settlement.",
+    "briefing": "The imperial title had not produced an army. Bohemia, Transylvania under Bethlen Gabor, and Frederick's supporters pressed on every side, and Ferdinand's own treasury was empty. The one prince who could put a disciplined Catholic army into the field at once was Maximilian of Bavaria, master of the Catholic League and patron of its veteran commander, Tilly.",
+    "situation": "But Maximilian's help came on Maximilian's terms. By the Treaty of Munich he would march as the emperor's auxiliary — and be repaid in full, with part of Austria pledged as security and a tacit claim on the Palatinate's lands and electoral title should the war be won. Ferdinand called it taking the Bavarian devil to drive out the Bohemian Beelzebub. The alternative was to wait for an imperial army that did not exist while the rebellion hardened into a new order.",
     "historian_note": "Valeš's legal-history article reads the 1619 Munich Treaty as an emergency bargain: Maximilian receives direction of Catholic defense preparations, Ferdinand accepts compensation obligations, and Article II restricts separate negotiation, peace, or truces with Protestants without Bavarian knowledge and cooperation. The treaty text itself is still an acquisition target, while Ferdinand's 1619 election capitulation adds the constitutional pressure that war, burdens, alliances, and legitimacy must still look lawful.",
     "source_refs": [
       "src_vales_munich_treaty_1619",
       "src_burgdorf_wahlkapitulationen",
-      "src_wilson_europes_tragedy",
-      "src_asch_thirty_years_war"
+      "src_wilson_europes_tragedy"
     ],
     "causal_claim_ids": [
       "claim_bavarian_help_leverage",
       "claim_munich_treaty_restricts_ferdinand_policy",
       "claim_wahlkapitulation_limits_imperial_freedom"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_bavarian_military_assistance",
-        "label": "Accept Maximilian's Munich terms for League command and compensation.",
-        "consequence": "The Bavarian columns gave the cause its teeth. Maximilian held thereafter a claim upon the command, the compensation, and any table of peace.",
+        "label": "Accept Maximilian's Munich terms — League command, full compensation, lands as security.",
+        "consequence": "Bavarian columns under Tilly give the cause its teeth, and the revolt's days are numbered. But Maximilian now holds a claim on the command, the compensation, and any future peace — a creditor as much as an ally.",
         "effects": {
           "imperial_authority": 10,
           "dynastic_security": 12,
@@ -1166,8 +1210,8 @@
       },
       {
         "id": "opt_broader_catholic_subscription",
-        "label": "Seek first a broader subscription of electors and Catholic estates.",
-        "consequence": "The dependence was spread the wider and wore a more constitutional face; yet Maximilian's army was the slower to move, and ready money remained scarce.",
+        "label": "Seek a broader subscription of electors and Catholic estates first.",
+        "consequence": "The dependence is spread more widely and wears a more constitutional face — but Maximilian's army is slower to move, and ready money stays scarce while the rebels gather strength.",
         "effects": {
           "imperial_authority": 5,
           "dynastic_security": 4,
@@ -1194,8 +1238,8 @@
       },
       {
         "id": "opt_delay_for_imperial_levies",
-        "label": "Refuse the bonds of separate peace and raise an imperial force instead.",
-        "consequence": "More of the imperial freedom was preserved; but the Bohemian and Transylvanian emergencies would not wait upon a cleaner army.",
+        "label": "Refuse the bonds of separate compensation and raise an imperial force instead.",
+        "consequence": "Ferdinand keeps more of his freedom — and less of an army. The Bohemian and Transylvanian emergencies will not wait on a cleaner instrument.",
         "effects": {
           "imperial_authority": -7,
           "estate_trust": 10,
@@ -1222,16 +1266,20 @@
     ],
     "context_links": [
       {
-        "term": "Maximilian",
+        "term": "Maximilian of Bavaria",
         "dossier_id": "dossier_maximilian_bavaria"
-      },
-      {
-        "term": "Munich",
-        "dossier_id": "dossier_munich_treaty"
       },
       {
         "term": "Catholic League",
         "dossier_id": "dossier_catholic_league"
+      },
+      {
+        "term": "Treaty of Munich",
+        "dossier_id": "dossier_munich_treaty"
+      },
+      {
+        "term": "Tilly",
+        "dossier_id": "dossier_tilly"
       }
     ],
     "memory_variants": [
@@ -1264,23 +1312,22 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "1620",
     "title": "Saxony and the Union",
-    "briefing": "Ferdinand could not suffer the Bohemian conflict to become one united Protestant cause. The elector of Saxony misliked Calvinist radicalism and prized imperial order; yet he needed also a visible protection for the Lutheran rights.",
-    "situation": "John George of Saxony was Lutheran, but he feared disorder and valued the legality of the Empire. He might serve to isolate Frederick, were the matter made a question of law rather than a Catholic crusade.",
+    "briefing": "Ferdinand's deepest fear was that the revolt would fuse into a single Protestant cause. The one man who could prevent it was John George of Saxony — the senior Lutheran prince of the Empire, who despised the Calvinist Palatinate, distrusted Frederick's adventure, and valued imperial order above confessional solidarity. But he needed to be seen protecting Lutheran rights, not serving a Catholic crusade.",
+    "situation": "Handled as a question of law and loyalty, Saxony might be brought to act against Prague — and John George had his price, the Lusatian lands he could occupy in the emperor's name. Handled as a holy war, he would stand aside, and the Protestant estates might close ranks behind Frederick. The framing of the appeal would decide which Saxony answered.",
     "historian_note": "Saxony is modeled as a legalist Protestant power, not as a simple confessional enemy. The election capitulation gives Ferdinand a direct vocabulary for reassurance: religious peace, Landfrieden, estate rights, and due process.",
     "source_refs": [
       "src_burgdorf_wahlkapitulationen",
-      "src_wilson_europes_tragedy",
-      "src_asch_thirty_years_war"
+      "src_wilson_europes_tragedy"
     ],
     "causal_claim_ids": [
       "claim_saxon_union_neutrality_isolates_bohemia"
     ],
-    "review_status": "needs_review",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_reassure_saxony",
-        "label": "Promise Saxony that the religious peace and the rights of estates would be respected.",
-        "consequence": "The Saxon cooperation grew the easier. The Catholic hardliners muttered that the emperor bargained with heresy.",
+        "label": "Promise Saxony that the religious peace and estate rights will be respected.",
+        "consequence": "Saxon cooperation grows easier, and with it the chance to isolate Frederick. The Catholic hardliners mutter that the emperor is bargaining with heresy.",
         "effects": {
           "estate_trust": 12,
           "foreign_intervention_risk": -4,
@@ -1305,8 +1352,8 @@
       },
       {
         "id": "opt_pressure_saxony",
-        "label": "Press Saxony to prove its loyalty before any debating of assurances in law.",
-        "consequence": "The crown asserted its command; but Saxony heard obedience set before the law the emperor had sworn to uphold.",
+        "label": "Demand Saxony prove its loyalty before any talk of assurances.",
+        "consequence": "Ferdinand asserts his command — but Saxony hears obedience placed before the law the emperor swore to uphold, and grows colder.",
         "effects": {
           "imperial_authority": 6,
           "estate_trust": -7,
@@ -1331,7 +1378,7 @@
       {
         "id": "opt_ignore_saxony",
         "label": "Leave the matter to Bavaria and the Catholic allies; Saxony may follow or stand aside.",
-        "consequence": "The Catholic union was the cleaner for it; the Protestant reassurance was not, and the electoral and constitutional language that might have isolated Frederick went unused.",
+        "consequence": "Catholic unity is cleaner without Lutheran partners — but the constitutional, legal language that might have split the Protestants from Frederick goes unused.",
         "effects": {
           "confessional_legitimacy": 8,
           "military_dependence": 7,
@@ -1355,7 +1402,17 @@
         ]
       }
     ],
-    "decision_point_id": "dp_1620_saxon_union_neutrality"
+    "decision_point_id": "dp_1620_saxon_union_neutrality",
+    "context_links": [
+      {
+        "term": "John George of Saxony",
+        "dossier_id": "dossier_john_george_saxony"
+      },
+      {
+        "term": "Frederick",
+        "dossier_id": "dossier_frederick_v"
+      }
+    ]
   },
   {
     "id": "card_1620_march_on_prague",
@@ -1364,8 +1421,8 @@
     "phase_id": "phase_bohemian_revolt",
     "date_label": "Autumn 1620",
     "title": "The Road to Prague",
-    "briefing": "The allied armies had forced the revolt backward, but the commanders fell out over the next stroke. Bucquoy looked toward Moravia; Tilly and Maximilian pressed the road to Prague.",
-    "situation": "Winter drew on. A direct march might bring the Bohemian crown down at a single blow, or leave the army stranded before a hard city in a bad season.",
+    "briefing": "By autumn 1620 the allied armies had driven the revolt back toward its heart. Maximilian and the imperial forces stood in Bohemia, but the commanders disagreed: the cautious Bucquoy wanted to consolidate, while Tilly urged a swift march on Prague before winter closed the campaign and gave Frederick a reprieve.",
+    "situation": "Ferdinand overruled his own general and placed him under Maximilian's command. A direct thrust at Prague might bring down the rebel crown in a single battle — or strand the army before a hard city in a bad season. The road led toward a chalk ridge just west of the capital, the White Mountain.",
     "historian_note": "Backend note: Wilson supports the actual direct march and political collapse; alternate campaign outcomes remain inferred.",
     "source_refs": [
       "src_wilson_europes_tragedy"
@@ -1373,12 +1430,12 @@
     "causal_claim_ids": [
       "claim_direct_prague_march_creates_decisive_collapse"
     ],
-    "review_status": "inferred",
+    "review_status": "reviewed",
     "options": [
       {
         "id": "opt_march_direct_prague",
-        "label": "Follow Tilly and Maximilian upon the road to Prague.",
-        "consequence": "The army moved where court and crown might be broken together. Should it succeed, the battle in the field would stand for a judgment in politics.",
+        "label": "Back Tilly: march directly on Prague and force a battle.",
+        "consequence": "In the event, the army slipped round the rebel position and raced for the city; on 8 November 1620, at the White Mountain, it shattered the Confederate army in barely an hour. Frederick fled, and Bohemia lay open to whatever Ferdinand chose to make of victory.",
         "effects": {
           "dynastic_security": 8,
           "military_dependence": 4,
@@ -1395,8 +1452,8 @@
       },
       {
         "id": "opt_moravian_approach",
-        "label": "Follow Bucquoy's slower approach through Moravia.",
-        "consequence": "The campaign promised firmer ground and fewer hazards of winter; but Prague was granted more time to gather courage, coin, and allies.",
+        "label": "Take Bucquoy's slower, surer approach through Moravia.",
+        "consequence": "The campaign promises firmer ground and fewer winter hazards — but gives Prague more time to gather courage, coin, and allies, and leaves the rebel crown standing into another year.",
         "effects": {
           "military_dependence": -2,
           "devastation": 4,
@@ -1419,8 +1476,8 @@
       },
       {
         "id": "opt_winter_pause",
-        "label": "Pause for the winter and make the allied positions sure.",
-        "consequence": "The army was spared a perilous finish; but the victory lost its terror, and the confederates kept a court about Frederick.",
+        "label": "Halt for winter and consolidate the allied positions.",
+        "consequence": "The army is spared a perilous finish — but victory loses its terror, and the Confederates keep a court and a cause alive around Frederick through the cold months.",
         "effects": {
           "fiscal_capacity": -6,
           "devastation": 5,
@@ -1440,6 +1497,20 @@
           "card:card_1620_march_on_prague",
           "option:opt_winter_pause"
         ]
+      }
+    ],
+    "context_links": [
+      {
+        "term": "Tilly",
+        "dossier_id": "dossier_tilly"
+      },
+      {
+        "term": "Maximilian",
+        "dossier_id": "dossier_maximilian_bavaria"
+      },
+      {
+        "term": "White Mountain",
+        "dossier_id": "dossier_white_mountain"
       }
     ]
   },
