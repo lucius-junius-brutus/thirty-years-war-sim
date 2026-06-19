@@ -77,14 +77,18 @@ const results: { gate: string; pass: boolean; detail: string }[] = [];
 
 // G1
 {
+  // The historical line must reach the role's declared historical outcome. That
+  // outcome can be a victory, a qualified survival, or a specific defeat (a losing
+  // character like Frederick V has a defeat as its historical outcome) — so G1
+  // checks the title, not the failure flag.
   const o = historical.outcome;
   const titleOk = role.historical_outcome
     ? o.title === role.historical_outcome
-    : true;
+    : !o.failure;
   results.push({
     gate: "G1 historical -> historical outcome",
-    pass: !o.failure && titleOk && historical.played > 0,
-    detail: `${o.failure ? "COLLAPSED" : "survived"} as "${o.title}" (${historical.played} cards)` +
+    pass: titleOk && historical.played > 0,
+    detail: `reached "${o.title}"${o.failure ? " (collapse)" : ""} (${historical.played} cards)` +
       (role.historical_outcome ? `; expected "${role.historical_outcome}"` : "; no declared outcome"),
   });
 }

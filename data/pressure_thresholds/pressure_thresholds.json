@@ -309,5 +309,316 @@
     ],
     "review_status": "needs_review",
     "collapse_tier": "severe"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_imperial_authority_high",
+    "pressure": "imperial_authority",
+    "kind": "reward",
+    "condition": {
+      "pressure": "imperial_authority",
+      "min": 75
+    },
+    "label": "His cause looks lawful",
+    "summary": "Electors and the Diet can still see him as a wronged elector, not a usurper.",
+    "memory_tags": [
+      "threshold_frederick_imperial_authority_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_imperial_authority_low",
+    "pressure": "imperial_authority",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "imperial_authority",
+      "max": 25
+    },
+    "label": "His acts are branded rebellion",
+    "summary": "Imperial law begins to treat him as an outlaw rather than an aggrieved elector.",
+    "memory_tags": [
+      "threshold_frederick_imperial_authority_crisis"
+    ],
+    "collapse_tier": "terminal",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_confessional_legitimacy_high",
+    "pressure": "confessional_legitimacy",
+    "kind": "reward",
+    "condition": {
+      "pressure": "confessional_legitimacy",
+      "min": 78
+    },
+    "label": "The Protestant cause rallies",
+    "summary": "Calvinist and Union opinion treats him as the champion of the faith.",
+    "memory_tags": [
+      "threshold_frederick_confessional_legitimacy_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_confessional_legitimacy_low",
+    "pressure": "confessional_legitimacy",
+    "kind": "warning",
+    "condition": {
+      "pressure": "confessional_legitimacy",
+      "max": 28
+    },
+    "label": "Protestants doubt him",
+    "summary": "Lutheran princes call him a reckless Calvinist adventurer endangering them all.",
+    "memory_tags": [
+      "threshold_frederick_confessional_legitimacy_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_estate_trust_high",
+    "pressure": "estate_trust",
+    "kind": "reward",
+    "condition": {
+      "pressure": "estate_trust",
+      "min": 70
+    },
+    "label": "The estates stand with him",
+    "summary": "Estates and princes will still carry his cause as their own.",
+    "memory_tags": [
+      "threshold_frederick_estate_trust_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_estate_trust_low",
+    "pressure": "estate_trust",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "estate_trust",
+      "max": 24
+    },
+    "label": "The estates are slipping away",
+    "summary": "The Bohemian estates and German princes begin to look to their own safety.",
+    "memory_tags": [
+      "threshold_frederick_estate_trust_crisis"
+    ],
+    "collapse_tier": "severe",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_fiscal_capacity_high",
+    "pressure": "fiscal_capacity",
+    "kind": "reward",
+    "condition": {
+      "pressure": "fiscal_capacity",
+      "min": 65
+    },
+    "label": "The cause can still pay its way",
+    "summary": "Credit and contribution let him keep an army in the field.",
+    "memory_tags": [
+      "threshold_frederick_fiscal_capacity_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_fiscal_capacity_crisis",
+    "pressure": "fiscal_capacity",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "fiscal_capacity",
+      "max": 22
+    },
+    "label": "The treasury is empty",
+    "summary": "There is no coin to pay the army or hold the court together.",
+    "memory_tags": [
+      "threshold_frederick_fiscal_capacity_crisis"
+    ],
+    "collapse_tier": "severe",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_military_dependence_low",
+    "pressure": "military_dependence",
+    "kind": "reward",
+    "condition": {
+      "pressure": "military_dependence",
+      "max": 35
+    },
+    "label": "He still commands his own war",
+    "summary": "He can act without first satisfying a mercenary captain or an ally's general.",
+    "memory_tags": [
+      "threshold_frederick_military_dependence_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_military_dependence_crisis",
+    "pressure": "military_dependence",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "military_dependence",
+      "min": 78
+    },
+    "label": "The captains answer to no one",
+    "summary": "Mansfeld and the freebooters wage their own war, ravaging friend and foe.",
+    "memory_tags": [
+      "threshold_frederick_military_dependence_crisis"
+    ],
+    "collapse_tier": "terminal",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_foreign_intervention_low",
+    "pressure": "foreign_intervention_risk",
+    "kind": "reward",
+    "condition": {
+      "pressure": "foreign_intervention_risk",
+      "max": 30
+    },
+    "label": "The cause is still his own",
+    "summary": "Foreign sympathy has not yet made him a pawn of others' calculations.",
+    "memory_tags": [
+      "threshold_frederick_foreign_intervention_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_foreign_intervention_crisis",
+    "pressure": "foreign_intervention_risk",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "foreign_intervention_risk",
+      "min": 78
+    },
+    "label": "His fate rests in foreign courts",
+    "summary": "England, the Dutch, and the northern crowns now decide his cause more than he does.",
+    "memory_tags": [
+      "threshold_frederick_foreign_intervention_crisis"
+    ],
+    "collapse_tier": "severe",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_dynastic_security_high",
+    "pressure": "dynastic_security",
+    "kind": "reward",
+    "condition": {
+      "pressure": "dynastic_security",
+      "min": 75
+    },
+    "label": "The inheritance is secure",
+    "summary": "Lands and title are safe enough to risk something for the cause.",
+    "memory_tags": [
+      "threshold_frederick_dynastic_security_high"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_dynastic_security_low",
+    "pressure": "dynastic_security",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "dynastic_security",
+      "max": 25
+    },
+    "label": "The Palatinate is in danger",
+    "summary": "His lands and the electoral dignity itself are now at hazard.",
+    "memory_tags": [
+      "threshold_frederick_dynastic_security_crisis"
+    ],
+    "collapse_tier": "terminal",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_devastation_low",
+    "pressure": "devastation",
+    "kind": "reward",
+    "condition": {
+      "pressure": "devastation",
+      "max": 28
+    },
+    "label": "The lands can still bear the war",
+    "summary": "His territories are not yet wrecked past recovery.",
+    "memory_tags": [
+      "threshold_frederick_devastation_low"
+    ],
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "threshold_frederick_devastation_crisis",
+    "pressure": "devastation",
+    "kind": "crisis",
+    "condition": {
+      "pressure": "devastation",
+      "min": 78
+    },
+    "label": "The lands are being consumed",
+    "summary": "Armies eat the Palatinate and Bohemia he claims to rule.",
+    "memory_tags": [
+      "threshold_frederick_devastation_crisis"
+    ],
+    "collapse_tier": "severe",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
   }
 ]

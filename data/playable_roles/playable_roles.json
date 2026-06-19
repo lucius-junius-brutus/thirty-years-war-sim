@@ -280,5 +280,232 @@
       }
     },
     "historical_outcome": "Army Recovered, Trust Spent"
+  },
+  {
+    "id": "role_frederick_v",
+    "actor_id": "actor_frederick_v",
+    "name": "Frederick V",
+    "office": "Elector Palatine; King of Bohemia, 1619-1620",
+    "why_playable": "Frederick holds a strong, secure position - elector, head of the Protestant Union, son-in-law of the king of England - and the chance to gamble it all on a crown. Can you avoid the catastrophe that history dealt the Winter King?",
+    "player_wants": [
+      "Hold or redeem the Palatinate and the electoral dignity",
+      "Champion the Protestant cause without wrecking it",
+      "Turn foreign sympathy into real support without becoming a pawn",
+      "Not lose everything on a single throw of the dice"
+    ],
+    "constraints": [
+      "A bankrupt Bohemian crown and a thin Palatine treasury",
+      "An army of mercenaries and allies that is not truly his own",
+      "Lutheran princes who distrust a Calvinist adventurer",
+      "An emperor backed by Spain, Bavaria, and the Catholic League"
+    ],
+    "resources": [
+      "The Protestant Union he leads",
+      "Marriage to England and the sympathy of the Dutch",
+      "The electoral dignity and Calvinist networks",
+      "The Bohemian estates' offer of a crown"
+    ],
+    "success_conditions": [
+      "Keep the Palatinate and the electoral dignity",
+      "Avoid the ban and keep standing in imperial law",
+      "Win the cause without becoming a pawn of foreign courts or borrowed swords"
+    ],
+    "failure_conditions": [
+      "The gamble for Bohemia costs the Palatinate and the title",
+      "Outlawed and abandoned by the Lutheran princes",
+      "A pawn of foreign powers, used and then discarded",
+      "His army of freebooters masters him"
+    ],
+    "mvp_suitable": false,
+    "initial_pressures": {
+      "imperial_authority": 60,
+      "confessional_legitimacy": 64,
+      "estate_trust": 55,
+      "fiscal_capacity": 38,
+      "military_dependence": 45,
+      "foreign_intervention_risk": 35,
+      "dynastic_security": 66,
+      "devastation": 12
+    },
+    "failure_priority": [
+      "dynastic_security",
+      "imperial_authority",
+      "military_dependence",
+      "foreign_intervention_risk",
+      "estate_trust",
+      "devastation",
+      "fiscal_capacity"
+    ],
+    "collapse_endings": {
+      "dynastic_security": {
+        "title": "The Winter King",
+        "legacy": "A single winter undoes him: the crown of Bohemia is lost, the Palatinate overrun, and the electoral dignity given away to Bavaria. He becomes a king without a kingdom and an elector without a vote.",
+        "inheritance": "What he keeps is the claim itself. He carries it into exile for a son to redeem, as Charles Louis one day will - but the man who threw the dice does not live to see it.",
+        "comparison": "This is the historical fate of the Winter King: a secure inheritance gambled on a crown and lost, with the cause kept barely alive in exile.",
+        "path_signals": [
+          "The Palatinate and the electoral dignity lost"
+        ]
+      },
+      "imperial_authority": {
+        "title": "Outlawed and Forgotten",
+        "legacy": "The imperial ban makes him a non-person in the Empire's law. Stripped of standing, he becomes a name princes are careful not to be seen beside.",
+        "inheritance": "His heirs inherit an attainder before they inherit a claim; the cause must be rebuilt from outlawry itself.",
+        "comparison": "This carries the ban to its end: not merely defeated, but written out of the constitution he appealed to.",
+        "path_signals": [
+          "Branded an outlaw beyond the law's protection"
+        ]
+      },
+      "military_dependence": {
+        "title": "Owned by the Sword",
+        "legacy": "The captains he hired to win his crown now wage their own war in his name, ravaging where they please and obeying when it suits them. The cause moves at the freebooters' pace, not his.",
+        "inheritance": "What passes on is a reputation for armies that plundered the very lands they claimed to free.",
+        "comparison": "This is the contractor's war turned against its paymaster: the instrument become the master.",
+        "path_signals": [
+          "The mercenary captains wage the war in his name"
+        ]
+      },
+      "foreign_intervention_risk": {
+        "title": "A Pawn Discarded",
+        "legacy": "His fate has passed wholly into foreign hands, and those hands let go. Courted while useful by England, the Dutch, and the northern crowns, he is set down the moment their calculations change.",
+        "inheritance": "The cause survives only as a card in other powers' games, played or pocketed as suits them.",
+        "comparison": "This is the exile's true danger: to become an instrument of others, and then surplus to their needs.",
+        "path_signals": [
+          "Reduced to a pawn of foreign courts, then dropped"
+        ]
+      },
+      "estate_trust": {
+        "title": "Abandoned by His Own",
+        "legacy": "The estates and princes who might have carried his cause look instead to their own safety. Even the Protestants who once cheered him now keep their distance from a man they call reckless.",
+        "inheritance": "He bequeaths a cause his own side learned to disown.",
+        "comparison": "This is the adventurer's ruin: undone less by the enemy than by the friends who will not follow.",
+        "path_signals": [
+          "Disowned by the estates and princes of his own side"
+        ]
+      },
+      "devastation": {
+        "title": "A Country Burned for a Crown",
+        "legacy": "The Palatinate and Bohemia are eaten by the war he brought them. Whatever claim he still holds is a claim to ashes.",
+        "inheritance": "His heirs inherit a wasted patrimony that will take generations to restore.",
+        "comparison": "This is the war's true price laid at the claimant's door: lands ruined in the reaching for a crown.",
+        "path_signals": [
+          "The lands consumed by the war he began"
+        ]
+      },
+      "fiscal_capacity": {
+        "title": "The Penniless Pretender",
+        "legacy": "The money runs out before the cause does. Unpaid soldiers melt away, creditors close the doors, and a king cannot buy bread for his own court.",
+        "inheritance": "What remains is a claim no one will finance.",
+        "comparison": "This follows the fiscal logic of the war: insolvency, not the enemy, decides what a prince can do.",
+        "path_signals": [
+          "The cause collapses for want of money"
+        ]
+      }
+    },
+    "outcome_endings": [
+      {
+        "title": "The Crown Held",
+        "legacy": "Against every expectation, Bohemia holds. A Protestant king sits secure in Prague, the estates behind him and the emperor checked. The gamble has paid off.",
+        "inheritance": "His heirs inherit not an exile's claim but a kingdom, and a Protestant cause that won where history says it could only lose.",
+        "comparison": "This is the ahistorical best case the Winter King never reached: the crown not merely seized but kept.",
+        "path_signals": [
+          "Bohemia held against the emperor"
+        ],
+        "match": [
+          {
+            "pressures": [
+              {
+                "pressure": "dynastic_security",
+                "min": 58
+              },
+              {
+                "pressure": "imperial_authority",
+                "min": 52
+              },
+              {
+                "pressure": "estate_trust",
+                "min": 52
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Elector Who Knew When to Stop",
+        "legacy": "He keeps the Palatinate and the electoral dignity intact, declining or letting go of the Bohemian gamble before it could ruin him. The cause is deferred, not destroyed.",
+        "inheritance": "His heirs inherit a secure inheritance and an unspent claim - the patience the Winter King lacked.",
+        "comparison": "This is the path history offered and Frederick refused: prudence over a crown.",
+        "path_signals": [
+          "The Palatinate and dignity kept whole"
+        ],
+        "match": [
+          {
+            "any_of_tags": [
+              [
+                "crown_declined",
+                "crown_relinquished_early"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Negotiated Survival",
+        "legacy": "Bohemia is lost, but not everything with it. By bargaining rather than fighting to the last, he keeps his lands and title and walks away battered but standing.",
+        "inheritance": "His heirs inherit a diminished but intact patrimony, and a claim that did not have to be rebuilt from nothing.",
+        "comparison": "This is the better defeat the historical Frederick never managed: a settlement instead of a catastrophe.",
+        "path_signals": [
+          "Lands and title preserved by settlement"
+        ],
+        "match": [
+          {
+            "pressures": [
+              {
+                "pressure": "dynastic_security",
+                "min": 42
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "More Than History Allowed",
+        "legacy": "He does not win, but he does not fall as far as the Winter King did. Something of the cause, the lands, or the standing survives the storm he raised.",
+        "inheritance": "His heirs inherit more than an exile's hope - which, for this gamble, is itself an achievement.",
+        "comparison": "This keeps the tragedy visible while granting that a steadier hand could have salvaged more from it."
+      }
+    ],
+    "outcome_path_signals": [
+      {
+        "any_of_tags": [
+          "bohemian_crown_accepted"
+        ],
+        "signal": "The crown of Bohemia accepted"
+      },
+      {
+        "any_of_tags": [
+          "imperial_ban_incurred"
+        ],
+        "signal": "The imperial ban hangs over the house"
+      },
+      {
+        "any_of_tags": [
+          "electorate_lost"
+        ],
+        "signal": "The electoral dignity passed to Bavaria"
+      }
+    ],
+    "woodcuts": {
+      "default": "woodcut-town.svg",
+      "by_phase": {
+        "phase_prewar_settlement": "woodcut-eagle.svg",
+        "phase_prague_succession": "woodcut-eagle.svg",
+        "phase_bohemian_revolt": "woodcut-town.svg"
+      }
+    },
+    "historical_outcome": "The Winter King",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
   }
 ]

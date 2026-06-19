@@ -70,5 +70,77 @@
     "low_label": "Contained",
     "high_label": "Ravaged",
     "high_is_dangerous": true
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "imperial_authority",
+    "name": "Imperial Standing",
+    "description": "Whether imperial law and opinion treat him as a wronged elector or a rebel.",
+    "low_label": "Outlawed",
+    "high_label": "Vindicated",
+    "high_is_dangerous": false
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "confessional_legitimacy",
+    "name": "Protestant Champion",
+    "description": "Confidence of the Calvinist and Union cause that he is its defender.",
+    "low_label": "Reckless Adventurer",
+    "high_label": "Protestant Champion",
+    "high_is_dangerous": false
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "estate_trust",
+    "name": "Estate Backing",
+    "description": "Support of the Bohemian estates and the German princes whose consent he needs.",
+    "low_label": "Abandoned",
+    "high_label": "Backed",
+    "high_is_dangerous": false
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "fiscal_capacity",
+    "name": "Treasury",
+    "description": "Money to pay armies and sustain a court and a cause.",
+    "low_label": "Penniless",
+    "high_label": "Solvent",
+    "high_is_dangerous": false
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "military_dependence",
+    "name": "Borrowed Swords",
+    "description": "Reliance on the Union, foreign mercenaries, and freebooting captains who are not his.",
+    "low_label": "His Own Master",
+    "high_label": "At the Mercenaries' Mercy",
+    "high_is_dangerous": true
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "foreign_intervention_risk",
+    "name": "Foreign Hands on His Fate",
+    "description": "How far great powers decide his cause rather than himself.",
+    "low_label": "His Own Cause",
+    "high_label": "A Pawn of Foreign Courts",
+    "high_is_dangerous": true
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "dynastic_security",
+    "name": "Palatinate and Dignity",
+    "description": "The security of his hereditary lands and the electoral title he gambled.",
+    "low_label": "Lands and Title Lost",
+    "high_label": "Inheritance Secure",
+    "high_is_dangerous": false
+  },
+  {
+    "role_id": "role_frederick_v",
+    "id": "devastation",
+    "name": "Devastation",
+    "description": "The ruin his gamble brings on the Palatinate and Bohemia.",
+    "low_label": "Spared",
+    "high_label": "Ravaged",
+    "high_is_dangerous": true
   }
 ]
