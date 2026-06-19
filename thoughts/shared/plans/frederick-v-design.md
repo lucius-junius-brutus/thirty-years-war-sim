@@ -67,26 +67,45 @@ Strong starting position he will squander: secure elector, head of the Union, ro
 - dynastic_security 66 (a secure, prestigious inheritance — for now)
 - devastation 12 (peace still holds)
 
-## Deck outline (the arc, ~16 base cards + thresholds)
+## Deck outline (~24 base cards + conditional crisis cards)
 
-1. **The Crown Offered (1619)** — accept the Bohemian crown, decline, or temporize. The hinge.
-2. **The Union's Hesitation (1619)** — bind the Protestant Union to the venture, or not.
-3. **Courting Foreign Backers (1619–20)** — lean on England/the Dutch; how hard, at what cost to agency.
-4. **Lutheran Saxony (1620)** — win over / antagonize / ignore John George (the Calvinist–Lutheran rift).
-5. **Coronation in Prague (1619)** — rule as a Calvinist zealot (strip Catholic imagery) or conciliate.
-6. **Bohemia's Empty Treasury (1620)** — fund the war: tax the estates, borrow, or trim.
-7. **Mansfeld and the Freebooters (1620)** — rely on mercenary captains who ravage and desert.
-8. **Before White Mountain (Nov 1620)** — give battle outside Prague, withdraw, or negotiate.
-9. **After White Mountain (Nov 1620)** — flight, last stand, or terms.
-10. **The Imperial Ban (1621)** — submit for mercy, defy, or appeal to the electors' fears.
-11. **The Palatinate Invaded (1621–22)** — defend the Rhine with Mansfeld/Brunswick, or abandon it.
-12. **The Electorate Transferred (1623)** — protest, bargain, or accept the loss of the title.
-13. **Exile in The Hague (1620s)** — keep a court-in-exile, intrigue with foreign powers.
-14. **The Danish Hope (1625–26)** — pin the cause on Christian IV's intervention.
-15. **The Swedish Hope (1631–32)** — return in Gustavus Adolphus's train; a pawn's last chance.
-16. **Death at Mainz (1632)** — the epilogue; what the claim passes to his heir.
+Scope decision: ~22–26 base cards — a full campaign that gives the balance model the
+decision density it needs (the gates only tune cleanly with enough divergent decisions),
+while keeping the low-agency exile years tight rather than padded.
 
-Each card: both-sides effects (G3), one `historical_option`, Wilson-grounded, dossiers for
-links. Tune with `probe-strategies`/`check-character` until the historical line lands on
-**The Winter King** (G1) and both extremes collapse (G2).
+**The Gamble (1619–20)**
+1. **The Crown Offered** — accept the Bohemian crown, decline, or temporize. The hinge.
+2. **The Union's Terms** — bind the Protestant Union to the venture, or go without it.
+3. **Courting England and the Dutch** — lean on the foreign in-laws; how hard, at what cost to agency.
+4. **The Bethlen Alliance** — ally with Bethlen Gábor of Transylvania (a second front) or keep distance.
+5. **Lutheran Saxony** — win over / antagonize / ignore John George (the Calvinist–Lutheran rift).
+6. **The Coronation in Prague** — rule as a Calvinist zealot (strip Catholic imagery) or conciliate.
+7. **Bohemia's Empty Treasury** — fund the war: tax the estates, borrow, or trim ambition.
+8. **The Estates' Demands** — concede Bohemian estate privileges to keep their backing, or assert kingship.
+
+**The Unraveling (1620–21)**
+9. **Mansfeld and the Freebooters** — rely on mercenary captains who ravage and desert.
+10. **The Spanish on the Rhine** — Spinola moves on the Palatinate; defend the homeland or hold Bohemia (not both).
+11. **The Eve of White Mountain** — give battle outside Prague, withdraw, or seek terms.
+12. **After White Mountain** — flight, a last stand in Prague, or surrender terms.
+13. **Silesia and Moravia** — fight on from the peripheries, or let them go.
+
+**Outlawry (1621–23)**
+14. **The Imperial Ban** — submit for mercy, defy, or appeal to the electors' constitutional fears.
+15. **Defending the Rhine Palatinate** — the Mansfeld/Brunswick campaigns, or abandon the homeland.
+16. **Heidelberg Falls** — the Palatine capital lost; fight on or seek a truce.
+17. **The Spanish Offer** — a negotiated submission (renounce Bohemia, keep the Palatinate?) — the road not taken.
+18. **The Electorate Transferred** — protest, bargain, or accept the loss of the title to Bavaria.
+
+**Exile (1623–32)**
+19. **The Court in Exile** — keep a government-in-exile and intrigue, or fade into private life.
+20. **The Danish Hope** — pin the cause on Christian IV's intervention.
+21. **The Restitution Question** — a chance to bargain for partial restoration on the emperor's terms.
+22. **The Swedish Hope** — return in Gustavus Adolphus's train; a pawn's last chance.
+23. **Frederick and Gustavus** — terms with the Swede: restoration as a client king, or hold out for independence.
+24. **Death at Mainz (1632)** — the epilogue; what the claim passes to his heir, Charles Louis.
+
+Each card: both-sides effects (G3), exactly one `historical_option`, Wilson-grounded, dossiers
+for links. Tune with `probe-strategies`/`check-character` until the historical line lands on
+**The Winter King** (G1) and both extremes collapse into their own defeats (G2).
 </content>
