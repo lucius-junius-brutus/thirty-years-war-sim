@@ -1,4 +1,4 @@
-// USAGE: npx tsx scripts/probe-strategies.ts
+// USAGE: npx tsx scripts/probe-strategies.ts [roleId]   (default role_ferdinand_ii)
 //
 // Diagnostic only (not committed gameplay). Plays a role's deck under three
 // archetypal strategies and reports the outcome + end pressures of each:
@@ -65,7 +65,7 @@ function play(strategy: string, roleId: string) {
   return { strategy, title: outcome.title, failure: outcome.failure, played, p, fmt };
 }
 
-const roleId = "role_ferdinand_ii";
+const roleId = process.argv[2] ?? "role_ferdinand_ii";
 const axes = Object.keys(createInitialGameState(gameDatabase, roleId).pressures);
 console.log(
   "strategy".padEnd(13),

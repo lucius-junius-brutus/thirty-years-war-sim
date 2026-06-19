@@ -215,47 +215,7 @@ describe("game engine", () => {
     });
   });
 
-  it("turns pressure movement into historical aftermath notes without exposing numbers", () => {
-    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const card = getCurrentCard(gameDatabase, state)!;
-    const next = chooseOption(
-      gameDatabase,
-      state,
-      card.id,
-      "opt_augsburg_compromise_inheritance",
-    );
-    const notes = next.log.at(-1)?.impact_notes ?? [];
-
-    expect(notes.length).toBeGreaterThanOrEqual(3);
-    expect(notes.join(" ")).toMatch(/Moderate estates|Doubtful estates|Petitioners/i);
-    expect(notes.join(" ")).not.toMatch(/[+-]\d/);
-    expect(notes.join(" ")).not.toMatch(/estate_trust|imperial_authority/i);
-  });
-
-  it("keeps aftermath consequences as attached bullets while retaining backend notes", () => {
-    const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
-    const card = getCurrentCard(gameDatabase, state)!;
-    const next = chooseOption(
-      gameDatabase,
-      state,
-      card.id,
-      "opt_augsburg_compromise_inheritance",
-    );
-    const entry = next.log.at(-1)!;
-
-    expect(entry.aftermath).toContain("guardian of the settlement");
-    expect(entry.aftermath).not.toMatch(/Consequences carried forward|[+-]\d/);
-    expect(entry.aftermath_bullets.length).toBeGreaterThanOrEqual(3);
-    expect(entry.aftermath_bullets.join(" ")).toMatch(
-      /Moderate estates|Doubtful estates|Petitioners/i,
-    );
-    expect(entry.aftermath_bullets.join(" ")).not.toMatch(
-      /Consequences carried forward|[+-]\d|estate_trust|imperial_authority/i,
-    );
-    expect(entry.impact_notes.length).toBeGreaterThan(0);
-  });
-
-  it("keeps the main aftermath paragraph from repeating the attached bullets", () => {
+  it("keeps the main aftermath paragraph to the authored consequence", () => {
     const state = createInitialGameState(gameDatabase, "role_ferdinand_ii");
     const card = getCurrentCard(gameDatabase, state)!;
     const next = chooseOption(
@@ -272,65 +232,7 @@ describe("game engine", () => {
 
     expect(sentenceCount).toBeLessThanOrEqual(2);
     expect(aftermath).not.toMatch(/submission\. Catholic reformers/i);
-    entry.aftermath_bullets.forEach((bullet) => {
-      expect(aftermath).not.toContain(bullet);
-    });
-  });
-
-  it("varies consequence prose across different choices with similar effects", () => {
-    const firstCard = gameDatabase.cards[0];
-    const sharedOption = firstCard.options[0];
-    const database = {
-      ...gameDatabase,
-      cards: [
-        {
-          ...firstCard,
-          options: [
-            {
-              ...sharedOption,
-              id: "opt_test_estates_a",
-              label: "Open one channel of consultation.",
-              consequence: "The files remain open and no estate is forced to retreat today.",
-              effects: {
-                estate_trust: 8,
-                imperial_authority: -3,
-              },
-            },
-            {
-              ...sharedOption,
-              id: "opt_test_estates_b",
-              label: "Open a second channel of consultation.",
-              consequence: "The files remain open and no estate is forced to retreat today.",
-              effects: {
-                estate_trust: 8,
-                imperial_authority: -3,
-              },
-            },
-          ],
-        },
-        ...gameDatabase.cards.slice(1),
-      ],
-    };
-    const state = createInitialGameState(database, "role_ferdinand_ii");
-    const afterFirst = chooseOption(
-      database,
-      state,
-      firstCard.id,
-      "opt_test_estates_a",
-    );
-    const afterSecond = chooseOption(
-      database,
-      state,
-      firstCard.id,
-      "opt_test_estates_b",
-    );
-
-    expect(afterFirst.log.at(-1)?.impact_notes.join(" ")).not.toBe(
-      afterSecond.log.at(-1)?.impact_notes.join(" "),
-    );
-    expect(afterFirst.log.at(-1)?.aftermath_bullets.join(" ")).not.toBe(
-      afterSecond.log.at(-1)?.aftermath_bullets.join(" "),
-    );
+    expect(aftermath).toContain("guardian of the settlement");
   });
 
   it("carries prior choices into later dispatch wording", () => {

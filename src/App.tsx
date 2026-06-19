@@ -17,6 +17,8 @@ import {
   getOptionsForCard,
   getPressureWarnings,
   getRole,
+  getRoleAxes,
+  getRoleThresholds,
   scoreOutcome,
   type GameState,
 } from "./game/engine";
@@ -24,18 +26,8 @@ import { clearGame, loadGame, saveGame } from "./game/save";
 
 const defaultRoleId = "role_ferdinand_ii";
 
-const woodcutByPhase: Record<string, string> = {
-  phase_prewar_settlement: "woodcut-eagle.svg",
-  phase_prague_succession: "woodcut-eagle.svg",
-  phase_bohemian_revolt: "woodcut-town.svg",
-  phase_palatinate_consolidation: "woodcut-town.svg",
-  phase_restitution_overreach: "woodcut-town.svg",
-  phase_danish_wallenstein: "woodcut-host.svg",
-  phase_swedish_wallenstein_crisis: "woodcut-host.svg",
-};
-
-function woodcutFor(phaseId: string) {
-  const file = woodcutByPhase[phaseId] ?? "woodcut-town.svg";
+function woodcutFor(role: ReturnType<typeof getRole>, phaseId: string) {
+  const file = role.woodcuts.by_phase[phaseId] ?? role.woodcuts.default;
   return `${import.meta.env.BASE_URL}assets/${file}`;
 }
 
@@ -184,6 +176,7 @@ function App() {
             {showAftermath && latestEntry ? (
               <AftermathPanel
                 entry={latestEntry}
+                roleId={state.roleId}
                 onContinue={() => setShowAftermath(false)}
               />
             ) : card ? (
@@ -377,9 +370,10 @@ function PressurePanel({
   compact?: boolean;
 }) {
   const warnings = new Map(
-    getPressureWarnings(state.pressures, gameDatabase.pressure_thresholds).map(
-      (warning) => [warning.pressure, warning.message],
-    ),
+    getPressureWarnings(
+      state.pressures,
+      getRoleThresholds(gameDatabase, state.roleId),
+    ).map((warning) => [warning.pressure, warning.message]),
   );
 
   return (
@@ -388,7 +382,7 @@ function PressurePanel({
         <ScrollText size={17} />
         Pressures
       </div>
-      {gameDatabase.game_variables.map((variable) => {
+      {getRoleAxes(gameDatabase, state.roleId).map((variable) => {
         const value = state.pressures[variable.id];
         const danger = variable.high_is_dangerous ? value >= 65 : value < 35;
         const change = delta?.[variable.id] ?? 0;
@@ -442,12 +436,13 @@ function EventCard({
 }) {
   const options = getOptionsForCard(card, state);
   const forced = getForcedOption(card, state);
+  const role = getRole(gameDatabase, state.roleId);
 
   return (
     <article className="event-card">
       <img
         className="woodcut-band"
-        src={woodcutFor(card.phase_id)}
+        src={woodcutFor(role, card.phase_id)}
         alt=""
         aria-hidden="true"
       />
@@ -720,16 +715,19 @@ function DesignerLine({ label, value }: { label: string; value: string }) {
 
 function AftermathPanel({
   entry,
+  roleId,
   onContinue,
 }: {
   entry: GameState["log"][number];
+  roleId: string;
   onContinue: () => void;
 }) {
+  const axes = getRoleAxes(gameDatabase, roleId);
   const deltas = Object.entries(entry.pressure_delta ?? {})
     .filter(([, value]) => value)
     .sort(([, a], [, b]) => Math.abs(b) - Math.abs(a))
     .map(([key, value]) => {
-      const variable = gameDatabase.game_variables.find((item) => item.id === key);
+      const variable = axes.find((item) => item.id === key);
       const rising = (value as number) > 0;
       // A shift "helps" Ferdinand when a good pressure rises or a dangerous one falls.
       const beneficial = variable?.high_is_dangerous ? !rising : rising;
@@ -820,11 +818,19 @@ function OutcomePanel({
       <div className="outcome-columns">
         <div>
           <h3>Strengths</h3>
-          <OutcomeList items={outcome?.strengths ?? []} fallback="None secure" />
+          <OutcomeList
+            items={outcome?.strengths ?? []}
+            fallback="None secure"
+            roleId={state.roleId}
+          />
         </div>
         <div>
           <h3>Dangers</h3>
-          <OutcomeList items={outcome?.dangers ?? []} fallback="None severe" />
+          <OutcomeList
+            items={outcome?.dangers ?? []}
+            fallback="None severe"
+            roleId={state.roleId}
+          />
         </div>
       </div>
       <button className="choice-button restart-choice" type="button" onClick={onRestart}>
@@ -891,14 +897,23 @@ function CounterfactualLedger({ state }: { state: GameState }) {
   );
 }
 
-function OutcomeList({ items, fallback }: { items: string[]; fallback: string }) {
+function OutcomeList({
+  items,
+  fallback,
+  roleId,
+}: {
+  items: string[];
+  fallback: string;
+  roleId: string;
+}) {
   if (items.length === 0) {
     return <p>{fallback}</p>;
   }
+  const axes = getRoleAxes(gameDatabase, roleId);
   return (
     <ul>
       {items.map((key) => {
-        const variable = gameDatabase.game_variables.find((item) => item.id === key);
+        const variable = axes.find((item) => item.id === key);
         return <li key={key}>{variable?.name ?? key}</li>;
       })}
     </ul>

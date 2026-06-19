@@ -111,12 +111,54 @@ export interface RelationshipRecord {
 }
 
 export interface GameVariableRecord {
+  // The role this axis framing belongs to. Axis ids are a shared vocabulary, so
+  // each role defines its own labels/valence for the axes it uses.
+  role_id: string;
   id: PressureKey;
   name: string;
   description: string;
   low_label: string;
   high_label: string;
   high_is_dangerous: boolean;
+}
+
+// Authored prose for a collapse ending, keyed by the axis that triggers it.
+export interface CollapseEndingRecord {
+  title: string;
+  legacy: string;
+  inheritance: string;
+  comparison: string;
+  path_signals: string[];
+}
+
+// A condition on the final game state for a (non-failure) outcome ending. All
+// present fields must hold (AND).
+export interface OutcomeConditionRecord {
+  all_of_tags?: string[]; // every tag present
+  any_of_tags?: string[][]; // each group: at least one present (AND across groups)
+  min_dangers?: number;
+  max_dangers?: number;
+  min_strengths?: number;
+  max_strengths?: number;
+  pressures?: PressureConditionRecord[];
+}
+
+// A nuanced ending. The first ending (in role order) whose `match` is satisfied
+// wins; an ending with no `match` is the always-true default and is listed last.
+export interface OutcomeEndingRecord {
+  title: string;
+  legacy: string;
+  inheritance: string;
+  comparison: string;
+  path_signals?: string[];
+  // OR of conditions; the ending matches if any condition holds. Absent/empty = default.
+  match?: OutcomeConditionRecord[];
+}
+
+// An additive ending note, appended whenever one of its tags is present.
+export interface OutcomePathSignalRecord {
+  any_of_tags: string[];
+  signal: string;
 }
 
 export interface PlayableRoleRecord {
@@ -132,6 +174,17 @@ export interface PlayableRoleRecord {
   failure_conditions: string[];
   mvp_suitable: boolean;
   initial_pressures: PressureMap;
+  // Order (most fatal first) used to pick which collapse ending to show when
+  // more than one axis has collapsed.
+  failure_priority: PressureKey[];
+  // Per-axis collapse ending prose for this role.
+  collapse_endings: Partial<Record<PressureKey, CollapseEndingRecord>>;
+  // Non-failure endings, evaluated in order (first match wins; default last).
+  outcome_endings: OutcomeEndingRecord[];
+  // Additive ending notes appended when their tags are present.
+  outcome_path_signals: OutcomePathSignalRecord[];
+  // The header woodcut to show, by phase, with a fallback.
+  woodcuts: { default: string; by_phase: Record<string, string> };
   source_refs: string[];
   review_status: ReviewStatus;
 }
@@ -203,6 +256,8 @@ export interface PressureConditionRecord {
 }
 
 export interface PressureThresholdRecord {
+  // The role whose pressure landscape this threshold belongs to.
+  role_id: string;
   id: string;
   pressure: PressureKey;
   kind: "reward" | "warning" | "crisis";

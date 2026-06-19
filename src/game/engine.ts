@@ -1,9 +1,13 @@
 import type {
   CardRecord,
   CardOptionRecord,
+  CollapseEndingRecord,
   GameDatabase,
+  OutcomeConditionRecord,
+  OutcomeEndingRecord,
   PlayableRoleRecord,
   PressureConditionRecord,
+  PressureKey,
   PressureMap,
   PressureThresholdRecord,
 } from "../domain/types";
@@ -16,8 +20,6 @@ export interface GameLogEntry {
   choice: string;
   consequence: string;
   aftermath: string;
-  aftermath_bullets: string[];
-  impact_notes: string[];
   docket_changes: DocketChange[];
   causal_claim_ids: string[];
   pressure_delta: Partial<PressureMap>;
@@ -124,6 +126,19 @@ export function getRole(
   return role;
 }
 
+// The axis framings (labels, valence) for a role. Axis ids are shared vocabulary;
+// each role frames the axes it uses in its own terms.
+export function getRoleAxes(database: GameDatabase, roleId: string) {
+  return database.game_variables.filter((axis) => axis.role_id === roleId);
+}
+
+// The crisis/reward/warning thresholds (and collapse tiers) for a role.
+export function getRoleThresholds(database: GameDatabase, roleId: string) {
+  return database.pressure_thresholds.filter(
+    (threshold) => threshold.role_id === roleId,
+  );
+}
+
 export function getCardsForRole(
   database: GameDatabase,
   roleOrState: string | GameState,
@@ -162,7 +177,7 @@ export function getCurrentCard(
   );
   // A card unlocked by a pressure entering crisis interrupts the normal
   // sequence: it is forced to the front instead of waiting its turn in the deck.
-  const crisisTags = crisisCardTags(database.pressure_thresholds);
+  const crisisTags = crisisCardTags(getRoleThresholds(database, state.roleId));
   return (
     eligible.find((card) => isCrisisCard(card, crisisTags)) ??
     eligible[0] ??
@@ -222,7 +237,7 @@ export function chooseOption(
   // worsens a step further this turn, compounding toward collapse if ignored.
   const escalation = computeCrisisEscalation(
     pressuresAfterChoice,
-    database.pressure_thresholds,
+    getRoleThresholds(database, state.roleId),
   );
   const combinedEffects = mergeEffects(choiceEffects, escalation);
   const pressures = applyEffects(pressuresAfterChoice, escalation);
@@ -255,9 +270,7 @@ export function chooseOption(
   const cards = getCardsForRole(database, nextState);
   const resolved = new Set(resolvedCardIds);
   const remaining = cards.filter((card) => !resolved.has(card.id));
-  const impactNotes = describeImmediateEffects(option);
   const docketChanges = getDocketChanges(previousCards, cards, currentCard.id);
-  const aftermathBullets = composeAftermathBullets(impactNotes, docketChanges);
 
   return {
     ...state,
@@ -269,7 +282,7 @@ export function chooseOption(
     // driven a pressure past its crisis line into collapse.
     completed:
       remaining.length === 0 ||
-      isCollapsed(pressures, database.pressure_thresholds),
+      isCollapsed(pressures, getRoleThresholds(database, state.roleId)),
     log: [
       ...state.log,
       {
@@ -280,8 +293,6 @@ export function chooseOption(
         choice: option.label,
         consequence: option.consequence,
         aftermath: option.consequence,
-        aftermath_bullets: aftermathBullets,
-        impact_notes: impactNotes,
         docket_changes: docketChanges,
         causal_claim_ids: option.causal_claim_ids,
         pressure_delta: combinedEffects,
@@ -397,7 +408,7 @@ export function getActivePressureThresholds(
   database: GameDatabase,
   state: GameState,
 ): PressureThresholdRecord[] {
-  return database.pressure_thresholds.filter((threshold) =>
+  return getRoleThresholds(database, state.roleId).filter((threshold) =>
     matchesPressureConditions([threshold.condition], state.pressures),
   );
 }
@@ -507,96 +518,6 @@ function collapseMargin(threshold: PressureThresholdRecord) {
     : TERMINAL_COLLAPSE_MARGIN;
 }
 
-// Priority order (most fatal first) when more than one pressure has collapsed.
-const FAILURE_PRIORITY: ReadonlyArray<keyof PressureMap> = [
-  "dynastic_security",
-  "military_dependence",
-  "foreign_intervention_risk",
-  "devastation",
-  "fiscal_capacity",
-  "estate_trust",
-  "imperial_authority",
-];
-
-type FailureEndingProse = Omit<
-  OutcomeScore,
-  "strengths" | "dangers" | "failure"
->;
-
-// Authored prose for each collapse, keyed by the pressure that triggers it.
-const FAILURE_ENDING_PROSE: Partial<Record<keyof PressureMap, FailureEndingProse>> = {
-  dynastic_security: {
-    title: "The House Brought Low",
-    legacy:
-      "Habsburg authority has cracked at its foundation: the hereditary lands waver, rivals scent weakness, and the dynasty's grip on its own crowns is no longer assured.",
-    inheritance:
-      "What began as a war for the faith has become a question of whether the house of Habsburg will keep its crowns at all. The reign breaks off here, its hold on power itself in doubt.",
-    comparison:
-      "This is the counterfactual Ferdinand always feared and never suffered: the dynasty itself, not merely its policy, brought into question.",
-    path_signals: ["Dynastic security collapsed"],
-  },
-  military_dependence: {
-    title: "Captive of the Sword",
-    legacy:
-      "The emperor has bought his armies and lost his freedom: the men who command the troops now set the terms, and imperial policy moves only at their pace.",
-    inheritance:
-      "From here the crown moves at the army's sufferance. What the emperor wills and what his commanders permit have become two different things, and the difference is no longer his to decide.",
-    comparison:
-      "This carries to its end the danger Wilson draws from the contractor armies: the instrument of survival become the master of the state.",
-    path_signals: ["The army's commanders outweigh the emperor"],
-  },
-  foreign_intervention_risk: {
-    title: "Europe Decides the Empire's Fate",
-    legacy:
-      "The imperial quarrel has become a European war. Foreign crowns now treat the Empire as a board for their own ambitions, and no settlement Vienna writes will hold without their leave.",
-    inheritance:
-      "The war is no longer the emperor's to end. Its terms will be dictated in Paris and Stockholm as much as in Vienna, and Ferdinand has become one player at a table he no longer commands.",
-    comparison:
-      "This is the war's historical widening carried to its limit: a domestic constitutional dispute drowned in a contest among the great powers.",
-    path_signals: ["Foreign intervention beyond the emperor's control"],
-  },
-  devastation: {
-    title: "A Realm Laid Waste",
-    legacy:
-      "The war has eaten the country it was fought over. Fields lie unsown, towns stand empty, and the contributions that fed the armies have consumed the lands that owed obedience.",
-    inheritance:
-      "Whatever authority the crown still holds is authority over a depopulated, exhausted land that will take generations to recover — if it recovers at all.",
-    comparison:
-      "This is the war's true face that the histories remember: dominion bought at the price of the Empire's own substance.",
-    path_signals: ["The lands consumed by the war"],
-  },
-  fiscal_capacity: {
-    title: "A Bankrupt Crown",
-    legacy:
-      "The treasury is spent past recovery. Unpaid armies mutter, creditors close in, and the crown's orders travel without the coin to make them obeyed.",
-    inheritance:
-      "The crown's debts outrun its revenues, and an army that serves only as long as it is fed will not be fed for long. The reign breaks off with the emperor unable to pay for his own commands.",
-    comparison:
-      "This follows the fiscal logic Wilson stresses: that arrears and insolvency, not battles, dictated what an emperor could actually do.",
-    path_signals: ["The crown spent into insolvency"],
-  },
-  estate_trust: {
-    title: "An Empire Ungovernable",
-    legacy:
-      "The estates no longer believe the emperor's word protects them, and an authority that must be enforced everywhere can be exercised nowhere.",
-    inheritance:
-      "The constitution is emptied of trust: every command must now be backed by an army to be obeyed, and there are not armies enough for that. The reign breaks off with the Empire ungoverned beneath its head.",
-    comparison:
-      "This is the constitutional failure beneath the confessional one: obedience withdrawn not by heresy but by fear of the crown itself.",
-    path_signals: ["Estate trust collapsed into open resistance"],
-  },
-  imperial_authority: {
-    title: "Imperial Command Dissolved",
-    legacy:
-      "The emperor's word no longer carries the force of law. Princes, estates, and cities act as if Vienna's commands were suggestions, and the imperial dignity has become a title without a writ.",
-    inheritance:
-      "What remains is the form of empire without its substance — an authority that would have to be rebuilt from nothing before it could be exercised again. The reign breaks off, the office hollowed out.",
-    comparison:
-      "This is the constitutional nightmare the Habsburgs always feared: imperial authority so doubted that the Empire governs itself in spite of its head.",
-    path_signals: ["Imperial command no longer obeyed"],
-  },
-};
-
 function crisisThreshold(
   thresholds: PressureThresholdRecord[],
   pressure: keyof PressureMap,
@@ -634,47 +555,102 @@ export function getPressureWarnings(
     .map((threshold) => ({ pressure: threshold.pressure, message: threshold.label }));
 }
 
-// Failure / divergence endings, reached when the reign comes apart. The trigger
-// is data-driven from the crisis thresholds and their collapse_tier:
+// Whether the reign comes apart, derived purely from the crisis thresholds and
+// their collapse_tier:
 //   - a "terminal" pressure past its collapse line ends the reign on its own
 //     (lost crowns, an insolvent crown, captivity to the sword);
 //   - a "severe" pressure past collapse is ruinous but survivable on its own
 //     (a wrecked land, a revolt, a wider war, eroded command), and only ends
 //     the reign when two or more collapse at once.
-// Only the prose is authored here; the most fatal collapsed axis supplies it.
+export function isCollapsed(
+  pressures: PressureMap,
+  thresholds: PressureThresholdRecord[],
+) {
+  const collapsed = thresholds.filter(
+    (threshold) =>
+      threshold.kind === "crisis" && pastCollapse(pressures, threshold),
+  );
+  const hasTerminal = collapsed.some(
+    (threshold) => (threshold.collapse_tier ?? "terminal") === "terminal",
+  );
+  const severeCount = collapsed.filter(
+    (threshold) => threshold.collapse_tier === "severe",
+  ).length;
+  return hasTerminal || severeCount >= 2;
+}
+
+// The collapse ending to show: the most fatal collapsed axis (by the role's
+// failure_priority) that has authored prose. Null when the reign has not collapsed.
 function scoreFailureEnding(
   pressures: PressureMap,
   thresholds: PressureThresholdRecord[],
-): FailureEndingProse | null {
-  const collapsed = FAILURE_PRIORITY.filter((pressure) => {
-    const threshold = crisisThreshold(thresholds, pressure);
-    return threshold && pastCollapse(pressures, threshold);
-  });
-  const tierOf = (pressure: keyof PressureMap) =>
-    crisisThreshold(thresholds, pressure)?.collapse_tier ?? "terminal";
-  const hasTerminal = collapsed.some((pressure) => tierOf(pressure) === "terminal");
-  const severeCount = collapsed.filter(
-    (pressure) => tierOf(pressure) === "severe",
-  ).length;
-  if (!hasTerminal && severeCount < 2) {
+  failurePriority: PressureKey[],
+  collapseEndings: Partial<Record<PressureKey, CollapseEndingRecord>>,
+): CollapseEndingRecord | null {
+  if (!isCollapsed(pressures, thresholds)) {
     return null;
   }
-  // collapsed is already in FAILURE_PRIORITY order, so the first with authored
-  // prose is the most fatal.
-  for (const pressure of collapsed) {
-    const prose = FAILURE_ENDING_PROSE[pressure];
-    if (prose) {
+  for (const pressure of failurePriority) {
+    const threshold = crisisThreshold(thresholds, pressure);
+    const prose = collapseEndings[pressure];
+    if (threshold && pastCollapse(pressures, threshold) && prose) {
       return prose;
     }
   }
   return null;
 }
 
-export function isCollapsed(
-  pressures: PressureMap,
-  thresholds: PressureThresholdRecord[],
-) {
-  return scoreFailureEnding(pressures, thresholds) !== null;
+interface OutcomeContext {
+  tags: Set<string>;
+  pressures: PressureMap;
+  strengthCount: number;
+  dangerCount: number;
+}
+
+function outcomeConditionMatches(
+  condition: OutcomeConditionRecord,
+  ctx: OutcomeContext,
+): boolean {
+  if (condition.all_of_tags && !condition.all_of_tags.every((tag) => ctx.tags.has(tag))) {
+    return false;
+  }
+  if (
+    condition.any_of_tags &&
+    !condition.any_of_tags.every((group) => group.some((tag) => ctx.tags.has(tag)))
+  ) {
+    return false;
+  }
+  if (condition.min_dangers !== undefined && ctx.dangerCount < condition.min_dangers) {
+    return false;
+  }
+  if (condition.max_dangers !== undefined && ctx.dangerCount > condition.max_dangers) {
+    return false;
+  }
+  if (
+    condition.min_strengths !== undefined &&
+    ctx.strengthCount < condition.min_strengths
+  ) {
+    return false;
+  }
+  if (
+    condition.max_strengths !== undefined &&
+    ctx.strengthCount > condition.max_strengths
+  ) {
+    return false;
+  }
+  if (condition.pressures && !matchesPressureConditions(condition.pressures, ctx.pressures)) {
+    return false;
+  }
+  return true;
+}
+
+// The first ending whose `match` holds wins; an ending with no `match` is the
+// always-true default.
+function outcomeEndingMatches(ending: OutcomeEndingRecord, ctx: OutcomeContext): boolean {
+  if (!ending.match || ending.match.length === 0) {
+    return true;
+  }
+  return ending.match.some((condition) => outcomeConditionMatches(condition, ctx));
 }
 
 export function scoreOutcome(
@@ -682,7 +658,7 @@ export function scoreOutcome(
   state: GameState,
 ): OutcomeScore {
   const variableById = new Map(
-    database.game_variables.map((variable) => [variable.id, variable]),
+    getRoleAxes(database, state.roleId).map((variable) => [variable.id, variable]),
   );
   const strengths = Object.entries(state.pressures).filter(([key, value]) => {
     const variable = variableById.get(key as keyof PressureMap);
@@ -695,7 +671,13 @@ export function scoreOutcome(
 
   // A pressure run to its extreme overrides the nuanced ending with a failure
   // verdict: the reign reaches its close in a state of collapse.
-  const failure = scoreFailureEnding(state.pressures, database.pressure_thresholds);
+  const role = getRole(database, state.roleId);
+  const failure = scoreFailureEnding(
+    state.pressures,
+    getRoleThresholds(database, state.roleId),
+    role.failure_priority,
+    role.collapse_endings,
+  );
   if (failure) {
     return {
       ...failure,
@@ -705,98 +687,33 @@ export function scoreOutcome(
     };
   }
 
-  const tags = new Set(state.memory_tags);
-  const hasAny = (...items: string[]) => items.some((item) => tags.has(item));
-  const hasAll = (...items: string[]) => items.every((item) => tags.has(item));
+  // The nuanced (non-failure) ending is chosen from the role's authored rules:
+  // the first whose condition matches, falling back to its always-true default.
+  const outcomeContext = {
+    tags: new Set(state.memory_tags),
+    pressures: state.pressures,
+    strengthCount: strengths.length,
+    dangerCount: dangers.length,
+  };
+  const ending =
+    role.outcome_endings.find((candidate) =>
+      outcomeEndingMatches(candidate, outcomeContext),
+    ) ?? role.outcome_endings[role.outcome_endings.length - 1];
 
-  let title = "Dynasty Secured, Peace Deferred";
-  let legacy =
-    "Ferdinand dies with the succession guarded and the imperial cause still standing, but the means of survival have left unsettled claims in every quarter of the Empire.";
-  let inheritance =
-    "Ferdinand III receives a crown strengthened by victory and burdened by war finance, armed allies, confessional grievance, and estates that have learned to bargain under arms.";
-  let comparison =
-    "The broad line still resembles the historical reign: recovery after Bohemia, enlarged imperial ambition, dependence on armed contractors, Swedish and French pressure, and no final peace before Ferdinand II's death.";
-  const pathSignals: string[] = [];
-
-  if (
-    hasAny("wallenstein_removed_by_force", "wallenstein_trial") &&
-    hasAny("wallenstein_recalled_broad", "wallenstein_recalled_limited")
-  ) {
-    title = "Army Recovered, Trust Spent";
-    legacy =
-      "The crown regains command from Wallenstein only after proving that its greatest servant can also become its most dangerous power center.";
-    inheritance =
-      "Ferdinand III inherits an imperial army that can still fight, but officers and princes now watch Vienna's promises with sharpened suspicion.";
-    comparison =
-      "This follows the historical warning Wilson draws from Wallenstein: military capacity solved immediate weakness while creating an authority beside the emperor.";
-    pathSignals.push("Wallenstein first empowered, then broken");
-  } else if (
-    hasAny("bohemian_punishment_hardline", "blood_court_executions") &&
-    hasAny("restitution_edict_issued", "prague_exclusions_hardline")
-  ) {
-    title = "Hard Victory, Unquiet Empire";
-    legacy =
-      "Punishment in Bohemia, the Edict of Restitution, and narrow peace terms give Ferdinand a visible Catholic victory while keeping Protestant and princely fear alive.";
-    inheritance =
-      "Ferdinand III receives stronger Habsburg rights, but also a wider coalition of enemies and allies who have learned to fear imperial overreach.";
-    comparison =
-      "This is closest to the hard edge of the historical course: victories were real, but they enlarged the war's political field rather than closing it.";
-    pathSignals.push("Bohemian punishment made exemplary");
-    pathSignals.push("Restitution pressed as imperial command");
-  } else if (
-    hasAll("prague_amnesty_broad", "palatine_proxy_settlement") ||
-    hasAll("restitution_peace_bargain", "palatine_proxy_settlement")
-  ) {
-    title = "A Settlement Bought by Restraint";
-    legacy =
-      "Ferdinand has traded some punishment and restoration for concession, preserving more room for settlement while disappointing those who expected complete Catholic recovery.";
-    inheritance =
-      "Ferdinand III inherits fewer enemies committed beyond recall, but also a court and Catholic party less certain that victory has been fully used.";
-    comparison =
-      "This course departs from the harsher historical pattern by accepting that imperial authority may survive through bargains rather than exemplary punishment alone.";
-    pathSignals.push("Broad amnesty or proxy settlement used to keep doors open");
-    pathSignals.push("Restitution treated as negotiable peace business");
-  } else if (dangers.length >= 4) {
-    title = "Victory Turns Against Itself";
-    legacy =
-      "The crown survives, but too many supports have become liabilities: fiscal strain, distrust, military dependence, devastation, or foreign alarm now answer every gain.";
-    inheritance =
-      "Ferdinand III receives authority in name, but the practical tools of rule have grown brittle.";
-    comparison =
-      "This keeps the historical tragedy visible: useful victories could harden the conditions that made peace harder.";
-  } else if (strengths.length >= 5 && dangers.length <= 1) {
-    title = "A Narrowly Governable Peace";
-    legacy =
-      "Ferdinand leaves a realm still divided, yet more of its princes and estates can imagine obedience without immediate ruin.";
-    inheritance =
-      "Ferdinand III receives a stronger hand than history usually allowed, though not a quiet Empire.";
-    comparison =
-      "This is a better-than-historical consolidation, bounded by the same constitutional, fiscal, and confessional pressures Wilson emphasizes.";
-  } else if (state.pressures.foreign_intervention_risk >= 75) {
-    title = "The Empire Draws Europe In";
-    legacy =
-      "Imperial success has become a summons to outsiders. What began as authority within the Empire now looks like a European balance problem.";
-    inheritance =
-      "Ferdinand III receives a crown whose German victories have invited Swedish, French, Dutch, or Spanish calculations into every settlement.";
-    comparison =
-      "This follows the war's historical widening, where domestic settlement and foreign security could no longer be separated.";
-  }
-
-  if (hasAny("ferdinand_iii_elected", "succession_broad_capitulation")) {
-    pathSignals.push("Succession secured before Ferdinand II's death");
-  }
-  if (hasAny("electoral_transfer_transferred", "electoral_transfer_delayed")) {
-    pathSignals.push("The Palatine electorate remains a constitutional wound");
-  }
-  if (hasAny("restitution_edict_issued", "restitution_diet_interpretation")) {
-    pathSignals.push("Ecclesiastical restitution shapes the late reign");
-  }
+  const pathSignals = [
+    ...(ending.path_signals ?? []),
+    ...role.outcome_path_signals
+      .filter((entry) =>
+        entry.any_of_tags.some((tag) => outcomeContext.tags.has(tag)),
+      )
+      .map((entry) => entry.signal),
+  ];
 
   return {
-    title,
-    legacy,
-    inheritance,
-    comparison,
+    title: ending.title,
+    legacy: ending.legacy,
+    inheritance: ending.inheritance,
+    comparison: ending.comparison,
     path_signals: pathSignals,
     strengths: strengths.map(([key]) => key),
     dangers: dangers.map(([key]) => key),
@@ -806,27 +723,6 @@ export function scoreOutcome(
 
 function clamp(value: number) {
   return Math.max(0, Math.min(100, Math.round(value)));
-}
-
-function describeImmediateEffects(option: CardOptionRecord) {
-  const tagNotes = describeMemoryTags(option.memory_tags, option.id);
-  const pressureNotes = Object.entries(option.effects)
-    .filter(([, delta]) => Math.abs(delta) >= 2)
-    .sort(([, a], [, b]) => Math.abs(b) - Math.abs(a))
-    .map(([key, delta]) =>
-      describePressureMovement(key as keyof PressureMap, delta, option.id),
-    );
-
-  return [...new Set([...tagNotes, ...pressureNotes])].slice(0, 4);
-}
-
-function composeAftermathBullets(
-  impactNotes: string[],
-  _docketChanges: DocketChange[],
-) {
-  // Docket changes are surfaced separately as "fork" lines in the UI, so the
-  // aftermath bullets stay focused on the immediate consequences of the choice.
-  return impactNotes.slice(0, 4);
 }
 
 export interface CounterfactualLedgerEntry {
@@ -856,189 +752,6 @@ export function buildCounterfactualLedger(
       diverged: Boolean(historical) && !chosenIsHistorical,
     };
   });
-}
-
-function describeMemoryTags(tags: string[] = [], seed: string) {
-  const notesByTag: Record<string, string[]> = {
-    klesl_retained: [
-      "A channel to moderate estates remains open, though Catholic councillors suspect delay.",
-      "Klesl's correspondents keep a door ajar for obedience without immediate humiliation.",
-      "Men still willing to mediate can approach Vienna, but zealous councillors mark the delay.",
-    ],
-    klesl_removed: [
-      "The court speaks with a harder voice, and Prague expects less mercy from Vienna.",
-      "Prague hears that the emperor's councillors now prefer resolution to accommodation.",
-      "The removal stiffens Vienna's hand and narrows the space for moderate language.",
-    ],
-    bavarian_dependence_high: [
-      "Bavaria becomes the necessary broker of armed Catholic assistance.",
-      "Maximilian's aid now carries the weight of a creditor's claim as well as an ally's counsel.",
-      "The League's soldiers answer the need of the hour, but Bavaria stands nearer the center of decision.",
-    ],
-    bavarian_dependence_medium: [
-      "Bavarian help remains close enough to demand reward and consultation.",
-      "Munich can still ask what price its loyalty has earned.",
-      "The court keeps Bavaria in harness, though not without future claims from Munich.",
-    ],
-    bavarian_dependence_low: [
-      "The court keeps more direction in its own hands, but with fewer certain swords.",
-      "Vienna preserves room to decide, at the cost of less assured Catholic force.",
-      "Independence from Munich leaves the crown freer and more exposed.",
-    ],
-    electoral_transfer_transferred: [
-      "Maximilian's reward becomes a constitutional fact other electors must now measure.",
-      "The electoral college receives not only a punishment of Frederick, but a warning about imperial emergency power.",
-      "Bavaria's elevation satisfies Catholic victory while unsettling the balance among electors.",
-    ],
-    wallenstein_empowered: [
-      "Military command begins to gather around a servant whose credit may outrun ordinary obedience.",
-      "Wallenstein's contracts promise armies faster than the estates can furnish them, and at a price not only reckoned in coin.",
-      "The court obtains soldiers by allowing a new military interest to gather authority around itself.",
-    ],
-    restitution_edict_issued: [
-      "Ecclesiastical restitution is no longer a petition at court but an imperial command.",
-      "Catholic claimants can now point to an edict, while Protestant estates read the same paper as menace.",
-      "The question of church lands leaves the docket of complaint and enters the language of enforcement.",
-    ],
-    prague_amnesty_broad: [
-      "Men who might otherwise remain enemies are given reason to seek terms under imperial authority.",
-      "The offer of grace gives frightened estates a road back to obedience.",
-      "Those not already ruined by rebellion can imagine settlement without complete destruction.",
-    ],
-    blood_court_executions: [
-      "The punishments in Prague teach obedience by terror as much as by law.",
-      "The scaffold makes an example for the kingdom, and also a memory that will not easily be quieted.",
-      "Royal justice is made visible in blood, binding obedience to fear.",
-    ],
-  };
-
-  return tags
-    .map((tag) => selectVariant(notesByTag[tag] ?? [], `${seed}:${tag}`))
-    .filter(Boolean);
-}
-
-function describePressureMovement(
-  pressure: keyof PressureMap,
-  delta: number,
-  seed: string,
-) {
-  const rising = delta > 0;
-  const notes: Record<keyof PressureMap, { rising: string[]; falling: string[] }> = {
-    imperial_authority: {
-      rising: [
-        "Imperial command is easier to present as lawful remedy.",
-        "The chancery can write more confidently in the language of mandate and obedience.",
-        "The crown's answer carries more of the weight of public authority.",
-      ],
-      falling: [
-        "More estates can say the crown governs by bargain rather than command.",
-        "The emperor's title remains high, but this settlement teaches others to ask for terms.",
-        "Authority is preserved in form while its exercise becomes more dependent on consent.",
-      ],
-    },
-    confessional_legitimacy: {
-      rising: [
-        "Catholic reformers hear firmer warrant for recovery of churches, schools, and revenues.",
-        "The Catholic party receives language it can carry to bishops, chapters, and Jesuit advisers.",
-        "Restoration-minded allies find more in the decree to praise than to excuse.",
-      ],
-      falling: [
-        "Catholic reformers hear caution where they expected recovery.",
-        "Zealous allies complain that peace is being purchased with church property still withheld.",
-        "Those pressing restoration find the court's hand slower than their petitions require.",
-      ],
-    },
-    estate_trust: {
-      rising: [
-        "Moderate estates gain room to remain obedient without surrendering every privilege.",
-        "Doubtful estates can describe obedience as prudence rather than submission.",
-        "Petitioners who fear innovation receive enough language of law to stay at the table.",
-      ],
-      falling: [
-        "Estate petitions speak more readily of fear, privilege, and precedent.",
-        "The language of obedience gives way to complaints over liberties and jurisdiction.",
-        "Moderates find it harder to answer neighbors who call the court's course a threat.",
-      ],
-    },
-    fiscal_capacity: {
-      rising: [
-        "Creditors and contributors see firmer means behind the court's orders.",
-        "The treasury can answer more petitions with payment rather than promises alone.",
-        "Contribution and credit look less like desperate expedients and more like policy.",
-      ],
-      falling: [
-        "The treasury must buy time with arrears, pledges, or new concessions.",
-        "Every order now travels with the question of who will pay for obedience.",
-        "Creditors hear more promises than coin, and soldiers learn to wait upon contribution.",
-      ],
-    },
-    military_dependence: {
-      rising: [
-        "Armed allies and military contractors gain a larger claim on the court.",
-        "The cause is strengthened by soldiers whose commanders will expect recompense.",
-        "Military necessity places new counsellors beside the legal ones.",
-      ],
-      falling: [
-        "The court carries more of its cause without surrendering direction to armed partners.",
-        "Vienna keeps a freer hand by asking less from men who command armies.",
-        "The crown avoids one creditor of war, though it must find strength elsewhere.",
-      ],
-    },
-    foreign_intervention_risk: {
-      rising: [
-        "Foreign courts receive a clearer pretext to watch, bargain, or intervene.",
-        "Envoys beyond the Empire can now describe the quarrel as a matter touching the balance of Europe.",
-        "The more decisive the court appears, the easier it is for outsiders to claim an interest.",
-      ],
-      falling: [
-        "Outsiders find fewer openings to present intervention as protection.",
-        "Foreign envoys receive less material for complaints dressed as guarantees.",
-        "The quarrel remains easier to describe as imperial business, not a summons to Europe.",
-      ],
-    },
-    dynastic_security: {
-      rising: [
-        "Habsburg succession and hereditary right look less exposed.",
-        "The dynasty's friends can speak with more confidence of continuity and right.",
-        "The hereditary lands appear less likely to choose their moment against the house.",
-      ],
-      falling: [
-        "The dynasty's claim appears more dependent on consent and military fortune.",
-        "Rivals can whisper that Habsburg right stands only where force or bargain upholds it.",
-        "The house keeps its titles, but less of the certainty that should attend them.",
-      ],
-    },
-    devastation: {
-      rising: [
-        "Billeting, contributions, and reprisals fall more heavily on the lands.",
-        "Subjects far from Vienna feel the decision in quarters, levies, and requisitions.",
-        "The war's necessities move from paper into barns, roads, and town accounts.",
-      ],
-      falling: [
-        "More districts escape the immediate weight of soldiers and contribution.",
-        "The countryside is spared one turn of quartering and forced provision.",
-        "Town councils and village officers receive fewer demands in the soldiers' name.",
-      ],
-    },
-  };
-
-  return selectVariant(
-    rising ? notes[pressure].rising : notes[pressure].falling,
-    `${seed}:${pressure}:${delta}`,
-  );
-}
-
-function selectVariant(variants: string[], seed: string) {
-  if (variants.length === 0) {
-    return "";
-  }
-  return variants[hashString(seed) % variants.length];
-}
-
-function hashString(value: string) {
-  return [...value].reduce((hash, char) => {
-    return (hash * 31 + char.charCodeAt(0)) >>> 0;
-  }, 17);
 }
 
 function getDocketChanges(

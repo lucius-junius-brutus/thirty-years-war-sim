@@ -127,6 +127,7 @@ const relationshipRecordSchema = z.object({
 });
 
 const gameVariableRecordSchema = z.object({
+  role_id: z.string().min(1),
   id: pressureKeySchema,
   name: z.string().min(1),
   description: z.string().min(1),
@@ -148,6 +149,7 @@ const pressureConditionRecordSchema = z
   });
 
 const pressureThresholdRecordSchema = z.object({
+  role_id: z.string().min(1),
   id: z.string().min(1),
   pressure: pressureKeySchema,
   kind: z.enum(["reward", "warning", "crisis"]),
@@ -168,6 +170,38 @@ const pressureThresholdRecordSchema = z.object({
   }
 });
 
+const collapseEndingRecordSchema = z.object({
+  title: z.string().min(1),
+  legacy: z.string().min(1),
+  inheritance: z.string().min(1),
+  comparison: z.string().min(1),
+  path_signals: z.array(z.string().min(1)),
+});
+
+const outcomeConditionRecordSchema = z.object({
+  all_of_tags: z.array(z.string().min(1)).optional(),
+  any_of_tags: z.array(z.array(z.string().min(1)).min(1)).optional(),
+  min_dangers: z.number().int().min(0).optional(),
+  max_dangers: z.number().int().min(0).optional(),
+  min_strengths: z.number().int().min(0).optional(),
+  max_strengths: z.number().int().min(0).optional(),
+  pressures: z.array(pressureConditionRecordSchema).optional(),
+});
+
+const outcomeEndingRecordSchema = z.object({
+  title: z.string().min(1),
+  legacy: z.string().min(1),
+  inheritance: z.string().min(1),
+  comparison: z.string().min(1),
+  path_signals: z.array(z.string().min(1)).optional(),
+  match: z.array(outcomeConditionRecordSchema).optional(),
+});
+
+const outcomePathSignalRecordSchema = z.object({
+  any_of_tags: z.array(z.string().min(1)).min(1),
+  signal: z.string().min(1),
+});
+
 const playableRoleRecordSchema = z.object({
   id: z.string().min(1),
   actor_id: z.string().min(1),
@@ -181,6 +215,14 @@ const playableRoleRecordSchema = z.object({
   failure_conditions: z.array(z.string().min(1)).min(1),
   mvp_suitable: z.boolean(),
   initial_pressures: pressureMapSchema,
+  failure_priority: z.array(pressureKeySchema).min(1),
+  collapse_endings: z.partialRecord(pressureKeySchema, collapseEndingRecordSchema),
+  outcome_endings: z.array(outcomeEndingRecordSchema).min(1),
+  outcome_path_signals: z.array(outcomePathSignalRecordSchema),
+  woodcuts: z.object({
+    default: z.string().min(1),
+    by_phase: z.record(z.string().min(1), z.string().min(1)),
+  }),
   source_refs: sourceRefsSchema,
   review_status: reviewStatusSchema,
 });
@@ -333,9 +375,14 @@ export function validateGameDatabase(database: unknown): GameDatabase {
   assertUnique(parsed.decision_points.map((item) => item.id), "decision point");
   assertUnique(parsed.dossiers.map((item) => item.id), "dossier");
   assertUnique(parsed.cards.map((item) => item.id), "card");
-  assertUnique(parsed.game_variables.map((item) => item.id), "game variable");
+  // Axis ids and threshold ids are a shared vocabulary reused across roles, so
+  // uniqueness is scoped per role rather than global.
   assertUnique(
-    parsed.pressure_thresholds.map((item) => item.id),
+    parsed.game_variables.map((item) => `${item.role_id}::${item.id}`),
+    "game variable",
+  );
+  assertUnique(
+    parsed.pressure_thresholds.map((item) => `${item.role_id}::${item.id}`),
     "pressure threshold",
   );
 
@@ -373,6 +420,30 @@ export function validateGameDatabase(database: unknown): GameDatabase {
     if (!actorIds.has(role.actor_id)) {
       throw new Error(`Unknown actor for role ${role.id}: ${role.actor_id}`);
     }
+  });
+
+  [...parsed.game_variables, ...parsed.pressure_thresholds].forEach((record) => {
+    if (!roleIds.has(record.role_id)) {
+      throw new Error(
+        `Unknown role_id on axis/threshold ${record.id}: ${record.role_id}`,
+      );
+    }
+  });
+
+  // Every role must define a full axis framing for each of its initial pressures.
+  parsed.playable_roles.forEach((role) => {
+    const axisIds = new Set(
+      parsed.game_variables
+        .filter((axis) => axis.role_id === role.id)
+        .map((axis) => axis.id),
+    );
+    Object.keys(role.initial_pressures).forEach((pressure) => {
+      if (!axisIds.has(pressure as (typeof parsed.game_variables)[number]["id"])) {
+        throw new Error(
+          `Role ${role.id} is missing an axis definition for ${pressure}`,
+        );
+      }
+    });
   });
 
   parsed.relationships.forEach((relationship) => {

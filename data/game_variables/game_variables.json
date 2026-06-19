@@ -1,5 +1,6 @@
 [
   {
+    "role_id": "role_ferdinand_ii",
     "id": "imperial_authority",
     "name": "Imperial Authority",
     "description": "How strongly Ferdinand can act as emperor and enforce settlement across the Empire.",
@@ -8,6 +9,7 @@
     "high_is_dangerous": false
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "confessional_legitimacy",
     "name": "Confessional Legitimacy",
     "description": "Catholic confidence that Ferdinand is defending the faith and restoring order.",
@@ -16,6 +18,7 @@
     "high_is_dangerous": false
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "estate_trust",
     "name": "Estate Trust",
     "description": "How much imperial and territorial estates believe their liberties and legal standing remain safe.",
@@ -24,6 +27,7 @@
     "high_is_dangerous": false
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "fiscal_capacity",
     "name": "Fiscal Capacity",
     "description": "The crown's ability to pay, borrow, reward allies, and keep armies functioning.",
@@ -32,6 +36,7 @@
     "high_is_dangerous": false
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "military_dependence",
     "name": "Military Dependence",
     "description": "Reliance on Bavaria, the League, Spain, and military entrepreneurs to solve force problems.",
@@ -40,6 +45,7 @@
     "high_is_dangerous": true
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "foreign_intervention_risk",
     "name": "Foreign Intervention Risk",
     "description": "How likely outside powers are to see imperial policy as a reason to intervene.",
@@ -48,6 +54,7 @@
     "high_is_dangerous": true
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "dynastic_security",
     "name": "Dynastic Security",
     "description": "The security of Habsburg rule in hereditary lands and the imperial succession.",
@@ -56,6 +63,7 @@
     "high_is_dangerous": false
   },
   {
+    "role_id": "role_ferdinand_ii",
     "id": "devastation",
     "name": "Devastation",
     "description": "The social and material damage caused by armies, confiscation, quartering, and prolonged war.",
