@@ -185,6 +185,8 @@ export interface PlayableRoleRecord {
   outcome_path_signals: OutcomePathSignalRecord[];
   // The header woodcut to show, by phase, with a fallback.
   woodcuts: { default: string; by_phase: Record<string, string> };
+  // The outcome the historical line should reach (acceptance gate G1). Optional.
+  historical_outcome?: string;
   source_refs: string[];
   review_status: ReviewStatus;
 }
