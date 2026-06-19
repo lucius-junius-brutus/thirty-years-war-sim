@@ -4864,5 +4864,583 @@
       }
     ],
     "context_links": []
+  },
+  {
+    "id": "card_fred_crown_offer",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "August 1619",
+    "title": "The Crown Offered",
+    "briefing": "The estates of Bohemia have deposed Ferdinand and offer their elective crown to you - a Calvinist elector, head of the Protestant Union, son-in-law of the king of England. To accept is to make war on the lawful emperor and stake the Palatinate on its outcome. To decline is to leave the Protestant cause without its readiest champion.",
+    "situation": "The Bohemian delegation waits on your answer. A crown, or the safety of your inheritance.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_crown_offer"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Bohemian estates",
+        "dossier_id": "dossier_bohemian_estates"
+      },
+      {
+        "term": "Protestant Union",
+        "dossier_id": "dossier_protestant_union"
+      },
+      {
+        "term": "emperor",
+        "dossier_id": "dossier_ferdinand_ii"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_accept_crown",
+        "label": "Accept the crown of Bohemia.",
+        "consequence": "In the event Frederick took the crown and the war with it. The Protestant world had its king; the Habsburgs had their rebel.",
+        "effects": {
+          "confessional_legitimacy": 14,
+          "estate_trust": 12,
+          "imperial_authority": -16,
+          "dynastic_security": -10,
+          "foreign_intervention_risk": 6,
+          "military_dependence": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "bohemian_crown_accepted"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_crown_offer"
+        ]
+      },
+      {
+        "id": "opt_fred_decline_crown",
+        "label": "Decline, and keep the Palatinate and your standing.",
+        "consequence": "Prudence preserves the inheritance, but the Bohemians look elsewhere and the cause loses its champion.",
+        "effects": {
+          "imperial_authority": 8,
+          "dynastic_security": 8,
+          "confessional_legitimacy": -16,
+          "estate_trust": -12
+        },
+        "memory_tags": [
+          "crown_declined"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_crown_offer"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_crown_offer",
+          "option:opt_fred_decline_crown"
+        ]
+      },
+      {
+        "id": "opt_fred_temporize_crown",
+        "label": "Temporize - demand guarantees from the Union and England first.",
+        "consequence": "Hesitation cools the Bohemians and puts your fate in others' hands while the moment slips.",
+        "effects": {
+          "confessional_legitimacy": 2,
+          "estate_trust": -6,
+          "foreign_intervention_risk": 6,
+          "imperial_authority": -2
+        },
+        "causal_claim_ids": [
+          "claim_fred_crown_offer"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_crown_offer",
+          "option:opt_fred_temporize_crown"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_union",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "Late 1619",
+    "title": "The Union's Terms",
+    "briefing": "The Protestant Union you lead is reluctant to make your Bohemian crown its own quarrel. Many of its members fear the emperor and Spain; some will sign for armed neutrality rather than war. You can lean on them to commit, or proceed on your own and mercenary strength.",
+    "situation": "The Union's princes hedge. Bind the cause to them, or fight without them.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_union"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Protestant Union",
+        "dossier_id": "dossier_protestant_union"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_bind_union",
+        "label": "Make Bohemia the Union's war.",
+        "consequence": "Pressing the Union wins paper commitments and rallies the Reformed, but its half-hearted soldiers answer to their own princes.",
+        "effects": {
+          "confessional_legitimacy": 8,
+          "military_dependence": 6,
+          "imperial_authority": -6,
+          "foreign_intervention_risk": -4
+        },
+        "memory_tags": [
+          "union_committed"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_union"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_union",
+          "option:opt_fred_bind_union"
+        ]
+      },
+      {
+        "id": "opt_fred_go_without_union",
+        "label": "Proceed on Palatine and mercenary strength when the Union hangs back.",
+        "consequence": "In the event the Union signed the Treaty of Ulm and stood aside; Frederick fought with Anhalt's army and hired men. The cause pressed on - but began to look like one prince's adventure.",
+        "effects": {
+          "estate_trust": 5,
+          "military_dependence": 12,
+          "fiscal_capacity": -8,
+          "confessional_legitimacy": -4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "union_stood_aside"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_union"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_foreign",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1619-1620",
+    "title": "England and the Dutch",
+    "briefing": "Your marriage ties you to James I of England; the Dutch have reason to want the Habsburgs checked. But James will not bless the taking of another king's crown, and Dutch help comes in subsidies, not armies. How far do you pin the cause on foreign courts?",
+    "situation": "Letters go to The Hague and to London. Hope, or your own strength.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_foreign"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "the Dutch",
+        "dossier_id": "dossier_protestant_union"
+      },
+      {
+        "term": "James I of England",
+        "dossier_id": "dossier_frederick_v"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_bank_foreign",
+        "label": "Bank the cause on English and Dutch support.",
+        "consequence": "In the event the support never matched the hope: James held back, the Dutch gave money and little more, and Frederick's fate began to rest on courts that were not his.",
+        "effects": {
+          "fiscal_capacity": 8,
+          "foreign_intervention_risk": 14,
+          "confessional_legitimacy": 4,
+          "military_dependence": 2
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "leaned_on_foreign_courts"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_foreign"
+        ]
+      },
+      {
+        "id": "opt_fred_keep_own_counsel",
+        "label": "Keep the cause your own; take foreign help only as it freely comes.",
+        "consequence": "Independence preserves your freedom of action at the cost of the money and arms only the great powers could supply.",
+        "effects": {
+          "foreign_intervention_risk": -8,
+          "fiscal_capacity": -6,
+          "military_dependence": 4
+        },
+        "causal_claim_ids": [
+          "claim_fred_foreign"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_foreign",
+          "option:opt_fred_keep_own_counsel"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_bethlen",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1619-1620",
+    "title": "The Transylvanian Offer",
+    "briefing": "Bethlen Gabor, Calvinist prince of Transylvania and vassal of the Sultan, offers to fall on the Habsburg lands from the east. His armies could pin Vienna while yours hold Bohemia - but his Ottoman backing hands your enemies the charge that the Protestant cause makes common purpose with the Turk.",
+    "situation": "Bethlen's envoy proposes a joint war. A second front, or clean hands.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_bethlen"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Bethlen Gabor",
+        "dossier_id": "dossier_bethlen_gabor"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_ally_bethlen",
+        "label": "Make common cause with Bethlen.",
+        "consequence": "In the event Bethlen's eastern war was the heaviest pressure on Vienna - and the surest proof, to Catholics and wary Lutherans, that the rebellion leaned on the Sultan.",
+        "effects": {
+          "military_dependence": 6,
+          "estate_trust": 6,
+          "imperial_authority": -8,
+          "confessional_legitimacy": -4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "bethlen_alliance"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_bethlen"
+        ]
+      },
+      {
+        "id": "opt_fred_refuse_bethlen",
+        "label": "Refuse the Ottoman-backed alliance.",
+        "consequence": "Clean hands keep the cause defensible in the Empire, but throw away the one ally who could divide the emperor's strength.",
+        "effects": {
+          "imperial_authority": 6,
+          "confessional_legitimacy": 2,
+          "estate_trust": -6,
+          "military_dependence": -2
+        },
+        "causal_claim_ids": [
+          "claim_fred_bethlen"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_bethlen",
+          "option:opt_fred_refuse_bethlen"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_saxony",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "Lutheran Saxony",
+    "briefing": "John George of Saxony is the greatest Protestant prince in the Empire, and a Lutheran who looks on your Calvinism with suspicion. Win him and the Protestant side is whole; lose him and he may serve the emperor against you. He will want the religious peace upheld and your zeal restrained.",
+    "situation": "Saxony watches and waits. Court the Lutheran, or press your own cause.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_saxony"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "John George of Saxony",
+        "dossier_id": "dossier_john_george_saxony"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_court_saxony",
+        "label": "Court John George - restrain the Calvinist zeal, defend the religious peace.",
+        "consequence": "Conciliation might hold the Protestant side together, but every concession to Lutheran caution disappoints the Reformed who made you king.",
+        "effects": {
+          "estate_trust": 10,
+          "imperial_authority": 6,
+          "confessional_legitimacy": -8
+        },
+        "memory_tags": [
+          "saxony_courted"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_saxony"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_saxony",
+          "option:opt_fred_court_saxony"
+        ]
+      },
+      {
+        "id": "opt_fred_press_own_cause",
+        "label": "Press your own cause and let Saxony keep its distance.",
+        "consequence": "In the event Frederick never won Saxony; John George, fearing the Calvinist adventure, sided with the emperor and took Lusatia and Silesia in his pay.",
+        "effects": {
+          "confessional_legitimacy": 6,
+          "estate_trust": -12,
+          "imperial_authority": -6,
+          "foreign_intervention_risk": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "saxony_lost"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_saxony"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_coronation",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "November 1619",
+    "title": "The Coronation in Prague",
+    "briefing": "Crowned in Prague, you must show what kind of king you mean to be. Your Calvinist chaplain Scultetus would cleanse the cathedral of its images and altars; the Bohemians who elected you are mostly Lutheran and Utraquist, and the city is full of Catholics. Zeal will thrill the Reformed and offend nearly everyone else.",
+    "situation": "The chaplains await your word on the cathedral. Reform it, or leave it be.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_coronation"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Bohemian estates",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_calvinist_zeal",
+        "label": "Let Scultetus cleanse the cathedral.",
+        "consequence": "In the event the stripping of Prague's cathedral scandalized Lutherans and Catholics alike; the new king looked less a sovereign than a sectarian.",
+        "effects": {
+          "confessional_legitimacy": 10,
+          "estate_trust": -14,
+          "imperial_authority": -4,
+          "devastation": 2
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "calvinist_iconoclasm"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_coronation"
+        ]
+      },
+      {
+        "id": "opt_fred_conciliate_crowd",
+        "label": "Rule for all your subjects - leave the churches as they are.",
+        "consequence": "Restraint keeps the broader city's obedience but disappoints the Reformed zealots who expected a champion.",
+        "effects": {
+          "estate_trust": 8,
+          "confessional_legitimacy": -6,
+          "imperial_authority": 2
+        },
+        "memory_tags": [
+          "coronation_conciliatory"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_coronation"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_coronation",
+          "option:opt_fred_conciliate_crowd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_treasury",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "Bohemia's Empty Treasury",
+    "briefing": "The crown you accepted is bankrupt. There is no money to pay the army that must defend it, and the estates who elected you guard their purses as jealously as their privileges. You can squeeze the lands for contributions, borrow against a future you may not have, or trim the war to what little you can afford.",
+    "situation": "The paymasters report empty coffers and unpaid men. Find the money, or cut the cloth.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_treasury"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Contributions",
+        "dossier_id": "dossier_contributions"
+      },
+      {
+        "term": "Bohemian estates",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_squeeze_contributions",
+        "label": "Levy heavy contributions on the Bohemian lands.",
+        "consequence": "In the event the war was paid for by squeezing and plunder; the soldiers were fed at the cost of the country they were meant to hold.",
+        "effects": {
+          "fiscal_capacity": 8,
+          "devastation": 10,
+          "estate_trust": -8,
+          "military_dependence": 2
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "heavy_contributions"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_treasury"
+        ]
+      },
+      {
+        "id": "opt_fred_borrow_against_future",
+        "label": "Borrow against the crown's future and dynastic credit.",
+        "consequence": "Credit buys an army now and mortgages whatever you have left, binding the cause tighter to its creditors.",
+        "effects": {
+          "fiscal_capacity": 6,
+          "dynastic_security": -8,
+          "foreign_intervention_risk": 4
+        },
+        "causal_claim_ids": [
+          "claim_fred_treasury"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_treasury",
+          "option:opt_fred_borrow_against_future"
+        ]
+      },
+      {
+        "id": "opt_fred_trim_war",
+        "label": "Trim the war to what the treasury can bear.",
+        "consequence": "Living within your means spares the lands but leaves you too weak to meet the gathering imperial and Spanish armies.",
+        "effects": {
+          "devastation": -4,
+          "estate_trust": 2,
+          "military_dependence": -6,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_treasury"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_treasury",
+          "option:opt_fred_trim_war"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_estates",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "The Estates' Demands",
+    "briefing": "The estates that elected you mean to keep what they won: a confederation of privileges that leaves the crown weak and the kingship conditional. To act as a king you would have to claw back power they will not yield; to keep their backing you must rule as little more than their first servant.",
+    "situation": "The estates present their confederate charter. Concede, or assert the crown.",
+    "historian_note": "Authored from Wilson's account of the Bohemian war and Frederick's gamble.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_estates"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Bohemian estates",
+        "dossier_id": "dossier_bohemian_estates"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_concede_estates",
+        "label": "Confirm the confederation and rule with their consent.",
+        "consequence": "In the event Frederick reigned as a weak elective king, dependent on estates who guarded their power even as the emperor's armies closed in.",
+        "effects": {
+          "estate_trust": 12,
+          "imperial_authority": -4,
+          "military_dependence": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "estates_confederation"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_estates"
+        ]
+      },
+      {
+        "id": "opt_fred_assert_crown",
+        "label": "Assert the crown's authority over the estates.",
+        "consequence": "Reaching for real kingship might give the war a single head, but it sours the very men whose consent put the crown on it.",
+        "effects": {
+          "imperial_authority": 6,
+          "estate_trust": -12,
+          "confessional_legitimacy": 2
+        },
+        "causal_claim_ids": [
+          "claim_fred_estates"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_estates",
+          "option:opt_fred_assert_crown"
+        ]
+      }
+    ]
   }
 ]

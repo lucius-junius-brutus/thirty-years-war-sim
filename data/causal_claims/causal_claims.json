@@ -509,5 +509,117 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "claim_fred_crown_offer",
+    "historical_fact": "In 1619 the Bohemian estates deposed Ferdinand and offered their elective crown to Frederick V, head of the Protestant Union.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Accepting the crown turns a secure elector into a rebel against the lawful emperor and stakes the Palatinate on a war; declining forfeits the Protestant cause's best champion.",
+    "causal_claim": "Accepting the crown turns a secure elector into a rebel against the lawful emperor and stakes the Palatinate on a war; declining forfeits the Protestant cause's best champion.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Accepting the crown turns a secure elector into a rebel against the lawful emperor and stakes the Palatinate on a war; declining forfeits the Protestant cause's best champion.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_union",
+    "historical_fact": "The Protestant Union declined to make Frederick's Bohemian venture its own and signed the Treaty of Ulm (1620) agreeing neutrality.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Without firm Union backing Frederick must lean on his own and mercenary forces, deepening his dependence on armies he does not control.",
+    "causal_claim": "Without firm Union backing Frederick must lean on his own and mercenary forces, deepening his dependence on armies he does not control.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Without firm Union backing Frederick must lean on his own and mercenary forces, deepening his dependence on armies he does not control.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_foreign",
+    "historical_fact": "Frederick's father-in-law James I of England refused to endorse the usurpation, and Dutch help was limited; Frederick banked on foreign support that largely failed to come.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Pinning the cause on foreign courts buys hope now but surrenders agency, making his fate turn on others' calculations.",
+    "causal_claim": "Pinning the cause on foreign courts buys hope now but surrenders agency, making his fate turn on others' calculations.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Pinning the cause on foreign courts buys hope now but surrenders agency, making his fate turn on others' calculations.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_bethlen",
+    "historical_fact": "Frederick allied with Bethlen Gabor of Transylvania, who attacked the Habsburg lands from the east in 1619-1620.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. The Transylvanian alliance opens a second front and pressures Vienna, but ties the Protestant cause to an Ottoman-backed prince and alarms moderates.",
+    "causal_claim": "The Transylvanian alliance opens a second front and pressures Vienna, but ties the Protestant cause to an Ottoman-backed prince and alarms moderates.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "The Transylvanian alliance opens a second front and pressures Vienna, but ties the Protestant cause to an Ottoman-backed prince and alarms moderates.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_saxony",
+    "historical_fact": "Frederick failed to win Lutheran Saxony; John George, distrustful of the Calvinist adventure, sided with the emperor and occupied Lusatia and Silesia.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Antagonizing or neglecting Lutheran Saxony loses the largest Protestant prince and brands Frederick a reckless Calvinist, splitting the Protestant side.",
+    "causal_claim": "Antagonizing or neglecting Lutheran Saxony loses the largest Protestant prince and brands Frederick a reckless Calvinist, splitting the Protestant side.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Antagonizing or neglecting Lutheran Saxony loses the largest Protestant prince and brands Frederick a reckless Calvinist, splitting the Protestant side.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_coronation",
+    "historical_fact": "Frederick's Calvinist chaplain Scultetus stripped images from Prague's cathedral, offending Bohemian Lutherans and Catholics alike.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Calvinist zeal at the coronation rallies the Reformed but alienates the broader population whose obedience the new king needs.",
+    "causal_claim": "Calvinist zeal at the coronation rallies the Reformed but alienates the broader population whose obedience the new king needs.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Calvinist zeal at the coronation rallies the Reformed but alienates the broader population whose obedience the new king needs.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_treasury",
+    "historical_fact": "The Bohemian crown was bankrupt and Frederick could not pay his army, relying on contributions and unpaid mercenaries.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Without money the war is fought on credit and plunder, eroding the treasury and the lands it should protect.",
+    "causal_claim": "Without money the war is fought on credit and plunder, eroding the treasury and the lands it should protect.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Without money the war is fought on credit and plunder, eroding the treasury and the lands it should protect.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_estates",
+    "historical_fact": "Frederick ruled as a weak elective king dependent on the Bohemian estates, who retained their confederate powers.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war frames this as a hinge in Frederick's gamble. Conceding to the estates keeps their backing but leaves the crown too weak to act; asserting kingship risks losing the consent that elected him.",
+    "causal_claim": "Conceding to the estates keeps their backing but leaves the crown too weak to act; asserting kingship risks losing the consent that elected him.",
+    "game_abstraction": "A decision in Frederick's Bohemian gamble, weighed against its later cost.",
+    "player_facing_text": "Conceding to the estates keeps their backing but leaves the crown too weak to act; asserting kingship risks losing the consent that elected him.",
+    "mechanical_effect": "Trades standing, the cause, the treasury, and the dynasty against one another.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

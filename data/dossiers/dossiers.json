@@ -414,5 +414,16 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "dossier_bethlen_gabor",
+    "title": "Bethlen Gabor",
+    "dossier_type": "person",
+    "summary": "Gabriel Bethlen, Calvinist Prince of Transylvania (1613-1629), an Ottoman vassal who repeatedly invaded Royal Hungary against the Habsburgs.",
+    "why_it_matters": "Bethlen's eastern offensives were the most effective military pressure on Vienna during the Bohemian war, but his Ottoman backing made him a compromising ally for a cause that claimed to defend Christendom's Protestants.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "review_status": "needs_review"
   }
 ]
