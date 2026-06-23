@@ -4903,7 +4903,7 @@
         "effects": {
           "confessional_legitimacy": 14,
           "estate_trust": 12,
-          "imperial_authority": -16,
+          "imperial_authority": -10,
           "dynastic_security": -10,
           "foreign_intervention_risk": 6,
           "military_dependence": 4
@@ -5127,7 +5127,7 @@
         "effects": {
           "military_dependence": 6,
           "estate_trust": 6,
-          "imperial_authority": -8,
+          "imperial_authority": -5,
           "confessional_legitimacy": -4
         },
         "historical_option": true,
@@ -5214,7 +5214,7 @@
         "effects": {
           "confessional_legitimacy": 6,
           "estate_trust": -12,
-          "imperial_authority": -6,
+          "imperial_authority": -4,
           "foreign_intervention_risk": 4
         },
         "historical_option": true,
@@ -5439,6 +5439,778 @@
           "needs_cross_source_check",
           "card:card_fred_estates",
           "option:opt_fred_assert_crown"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_mansfeld",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "Mansfeld and the Freebooters",
+    "briefing": "Your army is a patchwork of the Union's reluctant levies and hired captains - chief among them Ernst von Mansfeld, a soldier of fortune whose men feed themselves off the land. They can fight, but they obey their own interest and ravage friend and foe alike.",
+    "situation": "The captains want their pay and their plunder. Keep them in the field, or do without.",
+    "historian_note": "Authored from Wilson's account of White Mountain and the collapse of Frederick's cause.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_mansfeld"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Ernst von Mansfeld",
+        "dossier_id": "dossier_mansfeld"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_rely_mansfeld",
+        "label": "Keep Mansfeld and the mercenary captains in the field.",
+        "consequence": "In the event the freebooters fought Frederick's war and fed it on the country, holding an army together at the price of the lands it crossed.",
+        "effects": {
+          "estate_trust": 5,
+          "military_dependence": 12,
+          "devastation": 9
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "mansfeld_dependence"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_mansfeld"
+        ]
+      },
+      {
+        "id": "opt_fred_disband_freebooters",
+        "label": "Refuse the freebooters; rely on disciplined Union troops alone.",
+        "consequence": "Sparing the country leaves you a smaller, cleaner force - and far too weak to meet the imperial and Spanish armies gathering against you.",
+        "effects": {
+          "military_dependence": -8,
+          "devastation": -6,
+          "dynastic_security": -8,
+          "estate_trust": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_mansfeld"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_mansfeld",
+          "option:opt_fred_disband_freebooters"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_two_fronts",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "1620",
+    "title": "The Spanish on the Rhine",
+    "briefing": "While you hold Bohemia, Spinola's Spanish army of Flanders crosses into the Lower Palatinate - your own homeland on the Rhine. You cannot defend both the kingdom you have taken and the inheritance you staked. One must be left to its fate.",
+    "situation": "Word comes that the Spanish are in the Palatinate. Hold Bohemia, or turn for home.",
+    "historian_note": "Authored from Wilson's account of White Mountain and the collapse of Frederick's cause.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_two_fronts"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Spanish army of Flanders",
+        "dossier_id": "dossier_spanish_road"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_hold_bohemia",
+        "label": "Hold Bohemia and let the Palatinate be overrun.",
+        "consequence": "In the event the Spanish took the Lower Palatinate while Frederick clung to Prague; he kept the crown a little longer and lost the inheritance under it.",
+        "effects": {
+          "estate_trust": 5,
+          "confessional_legitimacy": 3,
+          "dynastic_security": -14,
+          "devastation": 8
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "palatinate_left_exposed"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_two_fronts"
+        ]
+      },
+      {
+        "id": "opt_fred_defend_palatinate",
+        "label": "Turn back to defend the Rhine, abandoning Bohemia.",
+        "consequence": "Saving the homeland means leaving the Bohemians who crowned you to the emperor - and confessing the crown was never truly held.",
+        "effects": {
+          "dynastic_security": 8,
+          "estate_trust": -14,
+          "confessional_legitimacy": -8
+        },
+        "causal_claim_ids": [
+          "claim_fred_two_fronts"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_two_fronts",
+          "option:opt_fred_defend_palatinate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_white_mountain_eve",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "November 1620",
+    "title": "The Eve of White Mountain",
+    "briefing": "The imperial and League army under Tilly and Bucquoy has reached the white limestone hill outside Prague. Your force, unpaid and outnumbered, holds the high ground. Anhalt urges battle; others urge withdrawal behind Prague's walls, or a bid for terms while you still have an army to bargain with.",
+    "situation": "The enemy forms up below the hill. Give battle, withdraw, or treat.",
+    "historian_note": "Authored from Wilson's account of White Mountain and the collapse of Frederick's cause.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_white_mountain_eve"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Battle of White Mountain",
+        "dossier_id": "dossier_white_mountain"
+      },
+      {
+        "term": "Tilly",
+        "dossier_id": "dossier_tilly"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_give_battle",
+        "label": "Give battle on the White Mountain.",
+        "consequence": "In the event the army was broken in a single hour. Everything staked on one throw was lost on it.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 2,
+          "dynastic_security": -12,
+          "devastation": 6
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "gave_battle_white_mountain"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_eve"
+        ]
+      },
+      {
+        "id": "opt_fred_withdraw_prague",
+        "label": "Withdraw behind Prague's walls and keep the army whole.",
+        "consequence": "Ceding the field preserves a force for another day, but cedes the country and the initiative with it.",
+        "effects": {
+          "estate_trust": 4,
+          "confessional_legitimacy": 2,
+          "dynastic_security": -4,
+          "devastation": 4
+        },
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_eve"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_white_mountain_eve",
+          "option:opt_fred_withdraw_prague"
+        ]
+      },
+      {
+        "id": "opt_fred_seek_terms_eve",
+        "label": "Seek terms while you still have an army.",
+        "consequence": "Bargaining from a battlefield might salvage the lands and a path back to the law - at the price of the crown and the cause that took it.",
+        "effects": {
+          "imperial_authority": 8,
+          "dynastic_security": 6,
+          "confessional_legitimacy": -12,
+          "estate_trust": -10
+        },
+        "memory_tags": [
+          "sought_terms_early"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_eve"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_white_mountain_eve",
+          "option:opt_fred_seek_terms_eve"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_white_mountain_after",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_bohemian_revolt",
+    "date_label": "November 1620",
+    "title": "After White Mountain",
+    "briefing": "The battle is lost. Prague lies open, your army scattered, the crown of a single winter slipping from your head. You can attempt a last stand in the city, flee to gather the war elsewhere, or throw yourself on the emperor's mercy.",
+    "situation": "Prague is yours for hours yet. Stand, flee, or submit.",
+    "historian_note": "Authored from Wilson's account of White Mountain and the collapse of Frederick's cause.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_white_mountain_after"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Winter King",
+        "dossier_id": "dossier_frederick_v"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_flee",
+        "label": "Flee Prague and carry the war elsewhere.",
+        "consequence": "In the event Frederick fled within days, the Winter King uncrowned - keeping the claim alive and losing everything that gave it substance.",
+        "effects": {
+          "confessional_legitimacy": 3,
+          "dynastic_security": -10,
+          "estate_trust": -8,
+          "imperial_authority": -4,
+          "foreign_intervention_risk": 6
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "fled_prague"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_after"
+        ]
+      },
+      {
+        "id": "opt_fred_last_stand",
+        "label": "A last stand in Prague.",
+        "consequence": "A doomed defense buys the cause a martyr's glory and the city a sack.",
+        "effects": {
+          "confessional_legitimacy": 7,
+          "dynastic_security": -14,
+          "devastation": 12
+        },
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_after"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_white_mountain_after",
+          "option:opt_fred_last_stand"
+        ]
+      },
+      {
+        "id": "opt_fred_submit_mercy",
+        "label": "Throw yourself on the emperor's mercy.",
+        "consequence": "Submission might preserve something of the lands and a place in the law, at the cost of the cause and the men who rose for it.",
+        "effects": {
+          "imperial_authority": 9,
+          "dynastic_security": 3,
+          "confessional_legitimacy": -14,
+          "estate_trust": -10
+        },
+        "memory_tags": [
+          "submitted_after_white_mountain"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_white_mountain_after"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_white_mountain_after",
+          "option:opt_fred_submit_mercy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_peripheries",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1621",
+    "title": "Silesia and Moravia",
+    "briefing": "The crown is lost, but pockets still resist - the Silesian and Moravian estates, and Bethlen in the east. You can try to keep the war alive from the peripheries, or release your remaining adherents to make their peace and spare them the emperor's vengeance.",
+    "situation": "Letters from Breslau and from Bethlen ask whether the war goes on. Fight on, or let them go.",
+    "historian_note": "Authored from Wilson's account of White Mountain and the collapse of Frederick's cause.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_peripheries"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Bethlen Gabor",
+        "dossier_id": "dossier_bethlen_gabor"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_fight_on_peripheries",
+        "label": "Keep the war alive from the peripheries.",
+        "consequence": "In the event resistance flickered on and was snuffed out; those who held to Frederick drew the emperor's vengeance down on themselves.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 3,
+          "imperial_authority": -4,
+          "devastation": 8,
+          "foreign_intervention_risk": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "fought_on_peripheries"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_peripheries"
+        ]
+      },
+      {
+        "id": "opt_fred_release_adherents",
+        "label": "Release your adherents to make their peace.",
+        "consequence": "Sparing them the emperor's reprisals means watching the last of the cause dissolve into separate surrenders.",
+        "effects": {
+          "devastation": -6,
+          "imperial_authority": 4,
+          "estate_trust": -6,
+          "confessional_legitimacy": -6
+        },
+        "causal_claim_ids": [
+          "claim_fred_peripheries"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_peripheries",
+          "option:opt_fred_release_adherents"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_ban",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "January 1621",
+    "title": "The Imperial Ban",
+    "briefing": "The emperor places you under the imperial ban - outlawed, your lands and titles forfeit in law, any prince free to seize them. You can submit and beg the ban's lifting, defy it and fight on, or appeal to the other electors' fear that an emperor who can outlaw one of their number by decree can outlaw any of them.",
+    "situation": "The ban is proclaimed across the Empire. Submit, defy, or appeal.",
+    "historian_note": "Authored from Wilson's account of the ban, the loss of the Palatinate, and the electoral transfer.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_ban"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "imperial ban",
+        "dossier_id": "dossier_imperial_ban"
+      },
+      {
+        "term": "electors",
+        "dossier_id": "dossier_imperial_electors"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_defy_ban",
+        "label": "Defy the ban and fight on.",
+        "consequence": "In the event Frederick refused to submit; the ban stood, and he carried it into a war he could no longer win.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "imperial_authority": -14,
+          "dynastic_security": -6,
+          "foreign_intervention_risk": 6
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "imperial_ban_incurred",
+          "defied_ban"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_ban"
+        ]
+      },
+      {
+        "id": "opt_fred_submit_ban",
+        "label": "Submit and beg the ban's lifting.",
+        "consequence": "Submission might restore a place in the law, at the price of the cause, the crown, and the men who followed you to it.",
+        "effects": {
+          "imperial_authority": 10,
+          "dynastic_security": 4,
+          "confessional_legitimacy": -14,
+          "estate_trust": -8
+        },
+        "memory_tags": [
+          "imperial_ban_incurred",
+          "submitted_to_ban"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_ban"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_ban",
+          "option:opt_fred_submit_ban"
+        ]
+      },
+      {
+        "id": "opt_fred_appeal_electors",
+        "label": "Appeal to the electors' fear of the precedent.",
+        "consequence": "Turning the ban into a constitutional question wins quiet sympathy among princes who fear the same fate - but does not lift it.",
+        "effects": {
+          "imperial_authority": 4,
+          "estate_trust": 7,
+          "confessional_legitimacy": -2,
+          "foreign_intervention_risk": 2
+        },
+        "memory_tags": [
+          "imperial_ban_incurred",
+          "appealed_electors"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_ban"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_ban",
+          "option:opt_fred_appeal_electors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_defend_rhine",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1621-1622",
+    "title": "Defending the Rhine",
+    "briefing": "Mansfeld and Christian of Brunswick fight on in the Palatinate, but they ravage as they go and lose more than they hold. You can pour what strength you have into defending the Rhine, or husband it and let the homeland go.",
+    "situation": "The captains hold a shrinking corner of the Palatinate. Reinforce the Rhine war, or let it go.",
+    "historian_note": "Authored from Wilson's account of the ban, the loss of the Palatinate, and the electoral transfer.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_defend_rhine"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Christian of Brunswick",
+        "dossier_id": "dossier_christian_brunswick"
+      },
+      {
+        "term": "Mansfeld",
+        "dossier_id": "dossier_mansfeld"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_defend_rhine",
+        "label": "Keep Mansfeld and Brunswick fighting for the Palatinate.",
+        "consequence": "In the event the Rhine war dragged on and ruined the country it claimed to defend, holding nothing in the end.",
+        "effects": {
+          "confessional_legitimacy": 3,
+          "dynastic_security": 2,
+          "military_dependence": 8,
+          "devastation": 10
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "rhine_war_continues"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_defend_rhine"
+        ]
+      },
+      {
+        "id": "opt_fred_husband_strength",
+        "label": "Husband your strength; let the homeland go.",
+        "consequence": "Sparing the country its last ravaging means watching the Palatinate fall without a fight.",
+        "effects": {
+          "devastation": -8,
+          "military_dependence": -6,
+          "dynastic_security": -10,
+          "confessional_legitimacy": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_defend_rhine"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_defend_rhine",
+          "option:opt_fred_husband_strength"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_heidelberg",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "September 1622",
+    "title": "Heidelberg Falls",
+    "briefing": "Tilly takes Heidelberg, your capital; its great library is carted off to Rome. The Lower Palatinate is lost. You can fight on for the scraps that remain, or seek a truce that admits the homeland is gone.",
+    "situation": "Heidelberg has fallen. Fight on for the scraps, or treat for a truce.",
+    "historian_note": "Authored from Wilson's account of the ban, the loss of the Palatinate, and the electoral transfer.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_heidelberg"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Heidelberg",
+        "dossier_id": "dossier_frederick_v"
+      },
+      {
+        "term": "Tilly",
+        "dossier_id": "dossier_tilly"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_fight_on_palatinate",
+        "label": "Fight on for what remains.",
+        "consequence": "In the event Frederick fought on after Heidelberg for a homeland already lost, with Mannheim and Frankenthal soon to follow.",
+        "effects": {
+          "confessional_legitimacy": 2,
+          "dynastic_security": -12,
+          "military_dependence": 4,
+          "devastation": 8
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "heidelberg_lost"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_heidelberg"
+        ]
+      },
+      {
+        "id": "opt_fred_seek_truce_palatinate",
+        "label": "Seek a truce admitting the homeland is gone.",
+        "consequence": "A truce spares the last towns and inches back toward the law, but signs away the Palatinate with your own hand.",
+        "effects": {
+          "imperial_authority": 6,
+          "devastation": -6,
+          "dynastic_security": -6,
+          "confessional_legitimacy": -8,
+          "estate_trust": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_heidelberg"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_heidelberg",
+          "option:opt_fred_seek_truce_palatinate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_spanish_offer",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1622",
+    "title": "The Spanish Offer",
+    "briefing": "Through Brussels the Spanish hint at terms: renounce Bohemia, abandon the war, submit to the emperor - and perhaps keep the Palatinate and your dignity. It is the road back. It is also the road of a man who threw the dice and lost.",
+    "situation": "The Spanish offer a way home. Take the road back, or hold to the claim.",
+    "historian_note": "Authored from Wilson's account of the ban, the loss of the Palatinate, and the electoral transfer.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_spanish_offer"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Spanish road",
+        "dossier_id": "dossier_spanish_road"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_refuse_spanish_offer",
+        "label": "Refuse; hold to the claim.",
+        "consequence": "In the event Frederick would not renounce Bohemia, and the chance to keep his lands and dignity passed with the offer.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 2,
+          "imperial_authority": -6,
+          "dynastic_security": -8,
+          "foreign_intervention_risk": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "refused_spanish_terms"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_spanish_offer"
+        ]
+      },
+      {
+        "id": "opt_fred_take_spanish_offer",
+        "label": "Take the Spanish road back.",
+        "consequence": "Renouncing Bohemia might keep the inheritance and a place in the Empire - and brand you forever the prince who gave up the cause to save himself.",
+        "effects": {
+          "imperial_authority": 12,
+          "dynastic_security": 14,
+          "confessional_legitimacy": -16,
+          "estate_trust": -12
+        },
+        "memory_tags": [
+          "crown_relinquished_early"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_spanish_offer"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_spanish_offer",
+          "option:opt_fred_take_spanish_offer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_transfer",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1623",
+    "title": "The Electorate Transferred",
+    "briefing": "At Regensburg the emperor transfers your electoral dignity - the rank your house has held for centuries - to Maximilian of Bavaria. The other electors protest the precedent but do not stop it. You can protest in vain, bargain for its eventual return to your heirs, or accept the loss.",
+    "situation": "The dignity is given to Bavaria. Protest, bargain, or accept.",
+    "historian_note": "Authored from Wilson's account of the ban, the loss of the Palatinate, and the electoral transfer.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_transfer"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Maximilian of Bavaria",
+        "dossier_id": "dossier_maximilian_bavaria"
+      },
+      {
+        "term": "Regensburg",
+        "dossier_id": "dossier_regensburg_congress"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_protest_transfer",
+        "label": "Protest the transfer and reject it utterly.",
+        "consequence": "In the event Frederick rejected the transfer as lawless and kept the claim pure - and empty, the dignity gone to Bavaria all the same.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 2,
+          "imperial_authority": -8,
+          "dynastic_security": -14
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "electorate_lost",
+          "protested_transfer"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_transfer"
+        ]
+      },
+      {
+        "id": "opt_fred_bargain_transfer",
+        "label": "Bargain for its eventual return to your heirs.",
+        "consequence": "Trading present pride for a future claim keeps a door open for a son, at the cost of conceding the loss now.",
+        "effects": {
+          "imperial_authority": 4,
+          "estate_trust": 4,
+          "dynastic_security": -6,
+          "confessional_legitimacy": -4
+        },
+        "memory_tags": [
+          "electorate_lost",
+          "bargained_transfer"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_transfer"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_transfer",
+          "option:opt_fred_bargain_transfer"
+        ]
+      },
+      {
+        "id": "opt_fred_accept_transfer",
+        "label": "Accept the loss and seek what peace you can.",
+        "consequence": "Accepting the dignity gone buys a measure of the emperor's tolerance and ends the house's electoral centuries.",
+        "effects": {
+          "imperial_authority": 8,
+          "dynastic_security": -8,
+          "confessional_legitimacy": -10,
+          "estate_trust": -6
+        },
+        "memory_tags": [
+          "electorate_lost",
+          "accepted_transfer"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_transfer"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_transfer",
+          "option:opt_fred_accept_transfer"
         ]
       }
     ]

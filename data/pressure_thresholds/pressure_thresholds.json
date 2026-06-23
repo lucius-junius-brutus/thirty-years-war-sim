@@ -343,7 +343,7 @@
     "memory_tags": [
       "threshold_frederick_imperial_authority_crisis"
     ],
-    "collapse_tier": "terminal",
+    "collapse_tier": "severe",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],
@@ -498,7 +498,7 @@
     "memory_tags": [
       "threshold_frederick_military_dependence_crisis"
     ],
-    "collapse_tier": "terminal",
+    "collapse_tier": "severe",
     "source_refs": [
       "src_wilson_europes_tragedy"
     ],

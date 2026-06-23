@@ -621,5 +621,145 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "claim_fred_mansfeld",
+    "historical_fact": "Frederick's army depended on mercenary captains, above all Ernst von Mansfeld, whose unpaid men plundered the lands they crossed.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war's collapse frames this as a turn in Frederick's ruin. Relying on freebooters keeps an army in the field but ravages the country and binds the cause to captains who answer to their own interest.",
+    "causal_claim": "Relying on freebooters keeps an army in the field but ravages the country and binds the cause to captains who answer to their own interest.",
+    "game_abstraction": "A decision as Frederick's cause comes apart, weighed against its cost to the dynasty.",
+    "player_facing_text": "Relying on freebooters keeps an army in the field but ravages the country and binds the cause to captains who answer to their own interest.",
+    "mechanical_effect": "Trades the cause and morale against the lands, the dignity, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_two_fronts",
+    "historical_fact": "While Frederick held Bohemia, Spinola's Spanish army of Flanders overran the Lower Palatinate in 1620.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war's collapse frames this as a turn in Frederick's ruin. He could not defend both the crown he had seized and the inheritance he had staked; holding Bohemia meant abandoning the Palatinate to the Spanish.",
+    "causal_claim": "He could not defend both the crown he had seized and the inheritance he had staked; holding Bohemia meant abandoning the Palatinate to the Spanish.",
+    "game_abstraction": "A decision as Frederick's cause comes apart, weighed against its cost to the dynasty.",
+    "player_facing_text": "He could not defend both the crown he had seized and the inheritance he had staked; holding Bohemia meant abandoning the Palatinate to the Spanish.",
+    "mechanical_effect": "Trades the cause and morale against the lands, the dignity, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_white_mountain_eve",
+    "historical_fact": "On 8 November 1620 the imperial and League army confronted Frederick's smaller, unpaid force on the White Mountain outside Prague.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war's collapse frames this as a turn in Frederick's ruin. Giving battle risked everything on one throw; withdrawing or seeking terms might have preserved an army to bargain with.",
+    "causal_claim": "Giving battle risked everything on one throw; withdrawing or seeking terms might have preserved an army to bargain with.",
+    "game_abstraction": "A decision as Frederick's cause comes apart, weighed against its cost to the dynasty.",
+    "player_facing_text": "Giving battle risked everything on one throw; withdrawing or seeking terms might have preserved an army to bargain with.",
+    "mechanical_effect": "Trades the cause and morale against the lands, the dignity, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_white_mountain_after",
+    "historical_fact": "Frederick's army was broken in about an hour; he fled Prague and Bohemia within days, earning the mocking title of the Winter King.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war's collapse frames this as a turn in Frederick's ruin. Flight kept the claim alive but surrendered the kingdom, the capital, and his standing; a last stand or a submission would have ended the war on other terms.",
+    "causal_claim": "Flight kept the claim alive but surrendered the kingdom, the capital, and his standing; a last stand or a submission would have ended the war on other terms.",
+    "game_abstraction": "A decision as Frederick's cause comes apart, weighed against its cost to the dynasty.",
+    "player_facing_text": "Flight kept the claim alive but surrendered the kingdom, the capital, and his standing; a last stand or a submission would have ended the war on other terms.",
+    "mechanical_effect": "Trades the cause and morale against the lands, the dignity, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_peripheries",
+    "historical_fact": "After White Mountain, resistance flickered on in Silesia, Moravia, and Bethlen's east before collapsing.",
+    "source_backed_interpretation": "Wilson's account of the Bohemian war's collapse frames this as a turn in Frederick's ruin. Fighting on from the peripheries kept the cause technically alive but invited the emperor's vengeance on those who had followed him.",
+    "causal_claim": "Fighting on from the peripheries kept the cause technically alive but invited the emperor's vengeance on those who had followed him.",
+    "game_abstraction": "A decision as Frederick's cause comes apart, weighed against its cost to the dynasty.",
+    "player_facing_text": "Fighting on from the peripheries kept the cause technically alive but invited the emperor's vengeance on those who had followed him.",
+    "mechanical_effect": "Trades the cause and morale against the lands, the dignity, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_ban",
+    "historical_fact": "In January 1621 the emperor placed Frederick under the imperial ban, declaring his lands and titles forfeit; the procedure alarmed even electors who disliked him.",
+    "source_backed_interpretation": "Wilson's account of Frederick's outlawry and the loss of the Palatinate frames this turn. Defying the ban keeps the cause alive at the price of outlawry; submitting might lift it but renounces everything the war was for; appealing to the electors' fear of the precedent is the one constitutional lever left.",
+    "causal_claim": "Defying the ban keeps the cause alive at the price of outlawry; submitting might lift it but renounces everything the war was for; appealing to the electors' fear of the precedent is the one constitutional lever left.",
+    "game_abstraction": "A decision as the lands and the dignity are stripped away, weighed against the claim itself.",
+    "player_facing_text": "Defying the ban keeps the cause alive at the price of outlawry; submitting might lift it but renounces everything the war was for; appealing to the electors' fear of the precedent is the one constitutional lever left.",
+    "mechanical_effect": "Trades the cause and the claim against the lands, the title, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_defend_rhine",
+    "historical_fact": "Mansfeld and Christian of Brunswick fought on in the Palatinate in 1621-22, losing ground while ravaging it.",
+    "source_backed_interpretation": "Wilson's account of Frederick's outlawry and the loss of the Palatinate frames this turn. Pouring strength into the Rhine war contests the homeland but wrecks it; husbanding strength concedes the Palatinate to save what little remains.",
+    "causal_claim": "Pouring strength into the Rhine war contests the homeland but wrecks it; husbanding strength concedes the Palatinate to save what little remains.",
+    "game_abstraction": "A decision as the lands and the dignity are stripped away, weighed against the claim itself.",
+    "player_facing_text": "Pouring strength into the Rhine war contests the homeland but wrecks it; husbanding strength concedes the Palatinate to save what little remains.",
+    "mechanical_effect": "Trades the cause and the claim against the lands, the title, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_heidelberg",
+    "historical_fact": "Tilly took Heidelberg in September 1622 and the Lower Palatinate was lost; the famous library was carted to Rome.",
+    "source_backed_interpretation": "Wilson's account of Frederick's outlawry and the loss of the Palatinate frames this turn. Fighting on for the scraps prolongs a hopeless defense; seeking a truce admits the homeland is gone and edges back toward submission.",
+    "causal_claim": "Fighting on for the scraps prolongs a hopeless defense; seeking a truce admits the homeland is gone and edges back toward submission.",
+    "game_abstraction": "A decision as the lands and the dignity are stripped away, weighed against the claim itself.",
+    "player_facing_text": "Fighting on for the scraps prolongs a hopeless defense; seeking a truce admits the homeland is gone and edges back toward submission.",
+    "mechanical_effect": "Trades the cause and the claim against the lands, the title, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_spanish_offer",
+    "historical_fact": "Spanish diplomacy through Brussels dangled terms by which Frederick might submit, renounce Bohemia, and perhaps keep his lands and dignity.",
+    "source_backed_interpretation": "Wilson's account of Frederick's outlawry and the loss of the Palatinate frames this turn. Taking the road back salvages the inheritance at the cost of the cause and the men who rose for it; refusing keeps faith with the cause and forfeits the rescue.",
+    "causal_claim": "Taking the road back salvages the inheritance at the cost of the cause and the men who rose for it; refusing keeps faith with the cause and forfeits the rescue.",
+    "game_abstraction": "A decision as the lands and the dignity are stripped away, weighed against the claim itself.",
+    "player_facing_text": "Taking the road back salvages the inheritance at the cost of the cause and the men who rose for it; refusing keeps faith with the cause and forfeits the rescue.",
+    "mechanical_effect": "Trades the cause and the claim against the lands, the title, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_transfer",
+    "historical_fact": "At the Regensburg Deputationstag of 1623 the emperor transferred Frederick's electoral dignity to Maximilian of Bavaria.",
+    "source_backed_interpretation": "Wilson's account of Frederick's outlawry and the loss of the Palatinate frames this turn. Protesting the loss keeps the claim pure and gains nothing; bargaining for its return to his heirs preserves a future; accepting it ends the matter on the emperor's terms.",
+    "causal_claim": "Protesting the loss keeps the claim pure and gains nothing; bargaining for its return to his heirs preserves a future; accepting it ends the matter on the emperor's terms.",
+    "game_abstraction": "A decision as the lands and the dignity are stripped away, weighed against the claim itself.",
+    "player_facing_text": "Protesting the loss keeps the claim pure and gains nothing; bargaining for its return to his heirs preserves a future; accepting it ends the matter on the emperor's terms.",
+    "mechanical_effect": "Trades the cause and the claim against the lands, the title, and the law.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

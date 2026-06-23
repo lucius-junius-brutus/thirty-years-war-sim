@@ -224,6 +224,7 @@ const playableRoleRecordSchema = z.object({
     by_phase: z.record(z.string().min(1), z.string().min(1)),
   }),
   historical_outcome: z.string().min(1).optional(),
+  clean_victory_titles: z.array(z.string().min(1)).optional(),
   source_refs: sourceRefsSchema,
   review_status: reviewStatusSchema,
 });

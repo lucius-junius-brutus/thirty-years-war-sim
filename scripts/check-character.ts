@@ -93,13 +93,27 @@ const results: { gate: string; pass: boolean; detail: string }[] = [];
   });
 }
 
-// G2
-results.push({
-  gate: "G2 no easy out",
-  pass: hardline.outcome.failure && conciliatory.outcome.failure,
-  detail: `hardline ${hardline.outcome.failure ? "fails" : "SURVIVES"} ("${hardline.outcome.title}"); ` +
-    `conciliatory ${conciliatory.outcome.failure ? "fails" : "SURVIVES"} ("${conciliatory.outcome.title}")`,
-});
+// G2 — for most roles, both extremes must collapse. For a losing/claimant role
+// (one that declares clean_victory_titles), bold play ruins you and cautious play
+// survives but hollow; the guarantee is that neither extreme reaches the real
+// prize, and that boldness still has consequences (at least one extreme fails).
+{
+  const clean = role.clean_victory_titles ?? [];
+  const reachesPrize = (o: typeof hardline.outcome) => clean.includes(o.title);
+  const g2pass = clean.length
+    ? !reachesPrize(hardline.outcome) &&
+      !reachesPrize(conciliatory.outcome) &&
+      (hardline.outcome.failure || conciliatory.outcome.failure)
+    : hardline.outcome.failure && conciliatory.outcome.failure;
+  results.push({
+    gate: "G2 no easy out",
+    pass: g2pass,
+    detail:
+      `hardline "${hardline.outcome.title}"${hardline.outcome.failure ? " (fails)" : ""}; ` +
+      `conciliatory "${conciliatory.outcome.title}"${conciliatory.outcome.failure ? " (fails)" : ""}` +
+      (clean.length ? `; neither may reach: ${clean.join(", ")}` : "; both must fail"),
+  });
+}
 
 // G3
 {

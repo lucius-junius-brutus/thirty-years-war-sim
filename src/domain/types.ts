@@ -187,6 +187,10 @@ export interface PlayableRoleRecord {
   woodcuts: { default: string; by_phase: Record<string, string> };
   // The outcome the historical line should reach (acceptance gate G1). Optional.
   historical_outcome?: string;
+  // For a losing/claimant role, the "no easy out" gate (G2) checks that neither
+  // extreme reaches one of these clean-victory outcomes (rather than the default
+  // check that both extremes collapse). Optional.
+  clean_victory_titles?: string[];
   source_refs: string[];
   review_status: ReviewStatus;
 }

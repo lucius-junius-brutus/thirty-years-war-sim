@@ -89,7 +89,7 @@ const cards = [
     [
       opt("opt_fred_accept_crown", "Accept the crown of Bohemia.",
         "In the event Frederick took the crown and the war with it. The Protestant world had its king; the Habsburgs had their rebel.",
-        { confessional_legitimacy: 14, estate_trust: 12, imperial_authority: -16, dynastic_security: -10, foreign_intervention_risk: 6, military_dependence: 4 },
+        { confessional_legitimacy: 14, estate_trust: 12, imperial_authority: -10, dynastic_security: -10, foreign_intervention_risk: 6, military_dependence: 4 },
         { historical_option: true, memory_tags: ["bohemian_crown_accepted"] }),
       opt("opt_fred_decline_crown", "Decline, and keep the Palatinate and your standing.",
         "Prudence preserves the inheritance, but the Bohemians look elsewhere and the cause loses its champion.",
@@ -145,7 +145,7 @@ const cards = [
     [
       opt("opt_fred_ally_bethlen", "Make common cause with Bethlen.",
         "In the event Bethlen's eastern war was the heaviest pressure on Vienna - and the surest proof, to Catholics and wary Lutherans, that the rebellion leaned on the Sultan.",
-        { military_dependence: 6, estate_trust: 6, imperial_authority: -8, confessional_legitimacy: -4 },
+        { military_dependence: 6, estate_trust: 6, imperial_authority: -5, confessional_legitimacy: -4 },
         { historical_option: true, memory_tags: ["bethlen_alliance"] }),
       opt("opt_fred_refuse_bethlen", "Refuse the Ottoman-backed alliance.",
         "Clean hands keep the cause defensible in the Empire, but throw away the one ally who could divide the emperor's strength.",
@@ -166,7 +166,7 @@ const cards = [
         { memory_tags: ["saxony_courted"] }),
       opt("opt_fred_press_own_cause", "Press your own cause and let Saxony keep its distance.",
         "In the event Frederick never won Saxony; John George, fearing the Calvinist adventure, sided with the emperor and took Lusatia and Silesia in his pay.",
-        { confessional_legitimacy: 6, estate_trust: -12, imperial_authority: -6, foreign_intervention_risk: 4 },
+        { confessional_legitimacy: 6, estate_trust: -12, imperial_authority: -4, foreign_intervention_risk: 4 },
         { historical_option: true, memory_tags: ["saxony_lost"] }),
     ],
     [link("John George of Saxony", "dossier_john_george_saxony")],
