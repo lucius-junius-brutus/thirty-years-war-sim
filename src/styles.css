@@ -23,7 +23,7 @@
   --blue: #5f738a;
   --violet: #6d5c7d;
   --shadow: #0c0a0d;
-  --line: rgba(214, 180, 92, 0.24);
+  --line: rgba(214, 180, 92, 0.42);
   --font-serif: "IM Fell English", Georgia, serif;
   --font-pixel: "Silkscreen", ui-monospace, monospace;
   --pixel: 3px;
@@ -873,10 +873,33 @@ h3 {
 }
 
 /* ---------- outcome ---------- */
+/* Outcome: the ending title is the climax of the whole run, set larger than a
+   dispatch title and divided from the verdict prose by a single gilt rule. */
+.outcome-eyebrow {
+  margin: var(--space-3) 0 0;
+  font-family: var(--font-pixel);
+  font-size: var(--text-label-sm);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red-deep);
+}
+
+.outcome-card h2 {
+  font-size: clamp(2.3rem, 5.6vw, 3.6rem);
+  margin: var(--space-2) 0 0;
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--line);
+}
+
 .outcome-card .situation {
-  margin: 10px 0;
+  max-width: 64ch;
+  margin: var(--space-3) 0;
   line-height: 1.6;
   font-size: var(--text-heading);
+}
+
+.outcome-card .situation:first-of-type {
+  margin-top: var(--space-4);
 }
 
 .outcome-columns {

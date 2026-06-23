@@ -820,15 +820,17 @@ function OutcomePanel({
   onRestart: () => void;
 }) {
   const failed = Boolean(outcome?.failure);
-  const endDate = state.log.at(-1)?.date_label ?? "1637";
+  const endDate = state.log.at(-1)?.date_label ?? "";
+  const endYear = endDate.match(/\d{4}/)?.[0] ?? endDate;
 
   return (
     <article className="event-card outcome-card">
       <div className="dispatch-meta">
         <span>{failed ? "The reign breaks off" : "Memorial of the reign"}</span>
-        <span>{failed ? `As of ${endDate}` : "Filed after Vienna, 1637"}</span>
+        {endDate ? <span>As of {endDate}</span> : null}
       </div>
-      <div className="date-ribbon">{failed ? endDate : "1637 assessment"}</div>
+      {endYear ? <div className="date-ribbon">{endYear}</div> : null}
+      <p className="outcome-eyebrow">The verdict of the record</p>
       <h2>{outcome?.title ?? "Campaign Complete"}</h2>
       <p className="situation">{outcome?.legacy}</p>
       <p className="situation">{outcome?.inheritance}</p>
@@ -871,7 +873,7 @@ function OutcomePanel({
       </div>
       <button className="choice-button restart-choice" type="button" onClick={onRestart}>
         <span>Return</span>
-        Begin again from Augsburg
+        Begin a new campaign
       </button>
     </article>
   );
