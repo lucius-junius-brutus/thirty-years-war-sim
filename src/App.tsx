@@ -834,7 +834,6 @@ function OutcomePanel({
       <h2>{outcome?.title ?? "Campaign Complete"}</h2>
       <p className="situation">{outcome?.legacy}</p>
       <p className="situation">{outcome?.inheritance}</p>
-      <p className="situation">{outcome?.comparison}</p>
       {outcome?.path_signals.length ? (
         <div className="outcome-path">
           <h3>Marks on the record</h3>
@@ -845,32 +844,33 @@ function OutcomePanel({
           </ul>
         </div>
       ) : null}
-      <CounterfactualLedger state={state} />
-      <p className="situation">
-        {failed
-          ? `The reign breaks off after ${state.log.length} ${
-              state.log.length === 1 ? "decision" : "decisions"
-            }, far short of its close.`
-          : `The reign closes with ${state.log.length} recorded acts in the docket.`}
-      </p>
       <div className="outcome-columns">
         <div>
-          <h3>Strengths</h3>
+          <h3>What held</h3>
           <OutcomeList
             items={outcome?.strengths ?? []}
-            fallback="None secure"
+            fallback="Nothing stood secure."
+            pressures={state.pressures}
             roleId={state.roleId}
           />
         </div>
         <div>
-          <h3>Dangers</h3>
+          <h3>What gave way</h3>
           <OutcomeList
             items={outcome?.dangers ?? []}
-            fallback="None severe"
+            fallback="Nothing was driven to ruin."
+            pressures={state.pressures}
             roleId={state.roleId}
           />
         </div>
       </div>
+      <CounterfactualLedger state={state} />
+      {outcome?.comparison ? (
+        <p className="historian-note">
+          <span className="historian-note__label">Against the record</span>
+          {outcome.comparison}
+        </p>
+      ) : null}
       <button className="choice-button restart-choice" type="button" onClick={onRestart}>
         <span>Return</span>
         Begin a new campaign
@@ -881,56 +881,52 @@ function OutcomePanel({
 
 function CounterfactualLedger({ state }: { state: GameState }) {
   const ledger = buildCounterfactualLedger(gameDatabase, state);
-  if (ledger.length === 0) {
+  // Only forks where history records a course are counterfactuals; show those.
+  const recorded = ledger.filter((row) => row.historical_label);
+  if (recorded.length === 0) {
     return null;
   }
-  const divergences = ledger.filter((row) => row.diverged).length;
+  const diverged = recorded.filter((row) => row.diverged);
+  const kept = recorded.length - diverged.length;
 
   return (
-    <section className="outcome-path" aria-label="The road taken against the record">
-      <h3>The road taken against the record</h3>
+    <section className="outcome-path" aria-label="The road not taken">
+      <h3>The road not taken</h3>
       <p className="situation">
-        {divergences === 0
-          ? "At every recorded fork, the reign held to the course history attests."
-          : `At ${divergences} ${divergences === 1 ? "turn" : "turns"}, the reign departed from the course history attests — proof that it could have run otherwise.`}
+        {diverged.length === 0
+          ? "At every recorded fork, the reign held to the course history attests — the same road, walked again."
+          : `At ${diverged.length} ${diverged.length === 1 ? "turn" : "turns"} the reign broke from the record — proof, in your own hand, that it could have run otherwise.`}
       </p>
-      <div className="outcome-ledger">
-        {ledger.map((row) => (
-          <div
-            className={row.diverged ? "ledger-row diverged" : "ledger-row"}
-            key={`${row.date_label}-${row.title}`}
-          >
-            <div className="ledger-head">
-              <span>
-                {row.date_label} — {row.title}
-              </span>
-              <span>
-                {row.historical_label
-                  ? row.diverged
-                    ? "Departed from the record"
-                    : "As it happened"
-                  : "No recorded course"}
-              </span>
-            </div>
-            <div className="ledger-cols">
-              <div className={row.diverged ? "ledger-col" : "ledger-col kept"}>
-                <strong>The course taken</strong>
-                <span>{row.chosen_label}</span>
-              </div>
-              <div className="ledger-col">
-                <strong>What history records</strong>
+      {diverged.length > 0 ? (
+        <div className="outcome-ledger">
+          {diverged.map((row) => (
+            <div className="ledger-row diverged" key={`${row.date_label}-${row.title}`}>
+              <div className="ledger-head">
                 <span>
-                  {row.historical_label
-                    ? row.diverged
-                      ? row.historical_label
-                      : "The same course."
-                    : "The field was open; no single course was forced."}
+                  {row.date_label} — {row.title}
                 </span>
+                <span>Departed from the record</span>
+              </div>
+              <div className="ledger-cols">
+                <div className="ledger-col">
+                  <strong>You chose</strong>
+                  <span>{row.chosen_label}</span>
+                </div>
+                <div className="ledger-col">
+                  <strong>History records</strong>
+                  <span>{row.historical_label}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : null}
+      {kept > 0 && diverged.length > 0 ? (
+        <p className="ledger-kept-note">
+          At the other {kept} recorded {kept === 1 ? "turn" : "turns"}, you held to
+          history&apos;s course.
+        </p>
+      ) : null}
     </section>
   );
 }
@@ -938,10 +934,12 @@ function CounterfactualLedger({ state }: { state: GameState }) {
 function OutcomeList({
   items,
   fallback,
+  pressures,
   roleId,
 }: {
   items: string[];
   fallback: string;
+  pressures: GameState["pressures"];
   roleId: string;
 }) {
   if (items.length === 0) {
@@ -952,7 +950,17 @@ function OutcomeList({
     <ul>
       {items.map((key) => {
         const variable = axes.find((item) => item.id === key);
-        return <li key={key}>{variable?.name ?? key}</li>;
+        if (!variable) {
+          return <li key={key}>{key}</li>;
+        }
+        // The qualitative read the pressure panel uses, as the reign's final state.
+        const value = pressures[variable.id];
+        const state = value >= 50 ? variable.high_label : variable.low_label;
+        return (
+          <li key={key}>
+            {variable.name} — <em>{state}</em>
+          </li>
+        );
       })}
     </ul>
   );
