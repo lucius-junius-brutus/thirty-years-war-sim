@@ -360,6 +360,40 @@ h3 {
   color: var(--red-deep);
 }
 
+/* Character chooser on the role-select screen */
+.role-chooser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.role-chip {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 9px 13px;
+  color: var(--ink-dim);
+  background: var(--paper-band);
+  border: 2px solid var(--shadow);
+  box-shadow: 3px 3px 0 var(--shadow);
+  cursor: pointer;
+  transition: transform 80ms steps(2), box-shadow 80ms steps(2);
+}
+
+.role-chip:hover {
+  color: var(--ink);
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.role-chip--active,
+.role-chip--active:hover {
+  color: var(--paper-bright);
+  background: var(--red);
+}
+
 .role-card h2 {
   color: var(--red-deep);
   font-size: clamp(1.9rem, 5vw, 2.9rem);

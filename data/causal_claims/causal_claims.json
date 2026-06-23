@@ -761,5 +761,89 @@
     "source_refs": [
       "src_wilson_europes_tragedy"
     ]
+  },
+  {
+    "id": "claim_fred_exile_court",
+    "historical_fact": "After 1620 Frederick kept a court-in-exile at The Hague, sustaining the claim and intriguing for restoration.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. Maintaining a government-in-exile keeps the cause alive at constant cost and on foreign sufferance; fading into private life preserves what little remains but ends the struggle.",
+    "causal_claim": "Maintaining a government-in-exile keeps the cause alive at constant cost and on foreign sufferance; fading into private life preserves what little remains but ends the struggle.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "Maintaining a government-in-exile keeps the cause alive at constant cost and on foreign sufferance; fading into private life preserves what little remains but ends the struggle.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_danish",
+    "historical_fact": "Frederick pinned hopes on Christian IV of Denmark, whose 1625-29 intervention against the emperor was beaten back.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. Banking the cause on a foreign king's war offers a chance of restoration but makes Frederick a piece in another's game.",
+    "causal_claim": "Banking the cause on a foreign king's war offers a chance of restoration but makes Frederick a piece in another's game.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "Banking the cause on a foreign king's war offers a chance of restoration but makes Frederick a piece in another's game.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_restitution",
+    "historical_fact": "By the late 1620s the emperor, at his height, would consider only a partial and conditional restoration of Frederick on humiliating terms.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. Taking partial restoration recovers something of the lands at the price of renouncing the cause; refusing keeps faith and keeps him landless.",
+    "causal_claim": "Taking partial restoration recovers something of the lands at the price of renouncing the cause; refusing keeps faith and keeps him landless.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "Taking partial restoration recovers something of the lands at the price of renouncing the cause; refusing keeps faith and keeps him landless.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_swedish",
+    "historical_fact": "Gustavus Adolphus's 1630-32 intervention reopened the war and Frederick joined the Swedish king in hope of restoration.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. Returning in Sweden's train is the cause's last real chance and its deepest dependence; the restored prince would be Sweden's client, not his own man.",
+    "causal_claim": "Returning in Sweden's train is the cause's last real chance and its deepest dependence; the restored prince would be Sweden's client, not his own man.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "Returning in Sweden's train is the cause's last real chance and its deepest dependence; the restored prince would be Sweden's client, not his own man.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_gustavus_terms",
+    "historical_fact": "Gustavus offered Frederick a restoration that would have made him a Swedish client; the two never settled terms before Frederick's death.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. Accepting client-kingship recovers the lands as another's vassal; holding out for an independent restoration keeps his dignity and may keep him landless.",
+    "causal_claim": "Accepting client-kingship recovers the lands as another's vassal; holding out for an independent restoration keeps his dignity and may keep him landless.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "Accepting client-kingship recovers the lands as another's vassal; holding out for an independent restoration keeps his dignity and may keep him landless.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
+  },
+  {
+    "id": "claim_fred_death",
+    "historical_fact": "Frederick died of plague at Mainz in November 1632, weeks after Gustavus's death at Lützen, the claim unredeemed.",
+    "source_backed_interpretation": "Wilson's account of Frederick's exile and the foreign interventions frames this turn. He bequeathed an unredeemed claim to his son Charles Louis, who would regain the Lower Palatinate and a (new, eighth) electoral dignity at the Peace of Westphalia in 1648.",
+    "causal_claim": "He bequeathed an unredeemed claim to his son Charles Louis, who would regain the Lower Palatinate and a (new, eighth) electoral dignity at the Peace of Westphalia in 1648.",
+    "game_abstraction": "A decision in exile, weighing a chance of restoration against deeper dependence on foreign arms.",
+    "player_facing_text": "He bequeathed an unredeemed claim to his son Charles Louis, who would regain the Lower Palatinate and a (new, eighth) electoral dignity at the Peace of Westphalia in 1648.",
+    "mechanical_effect": "Trades a chance at the lands and the cause against agency and the patience of foreign courts.",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ]
   }
 ]

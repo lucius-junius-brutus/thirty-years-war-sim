@@ -27,7 +27,7 @@ import type { CardOptionRecord } from "../src/domain/types";
 
 const roleId = process.argv[2] ?? "role_ferdinand_ii";
 const role = getRole(gameDatabase, roleId);
-const dangerAxes = new Set(
+const dangerAxes = new Set<string>(
   getRoleAxes(gameDatabase, roleId)
     .filter((axis) => axis.high_is_dangerous)
     .map((axis) => axis.id),

@@ -6214,5 +6214,387 @@
         ]
       }
     ]
+  },
+  {
+    "id": "card_fred_exile_court",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_palatinate_consolidation",
+    "date_label": "1620s",
+    "title": "The Court in Exile",
+    "briefing": "Driven from your lands, you keep a court at The Hague - a government without a country, sustained by your wife's spirit and your in-laws' charity. You can hold it together as the living claim to all you lost, or fold it and husband what little the family still holds.",
+    "situation": "The exile court costs more than it has. Keep the claim alive, or let it rest.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_exile_court"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "the Dutch",
+        "dossier_id": "dossier_protestant_union"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_keep_court",
+        "label": "Keep the court and the claim alive.",
+        "consequence": "In the event Frederick kept his court and his cause through the exile years, on hope and on others' money.",
+        "effects": {
+          "confessional_legitimacy": 6,
+          "foreign_intervention_risk": 8,
+          "fiscal_capacity": -8
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "court_in_exile"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_exile_court"
+        ]
+      },
+      {
+        "id": "opt_fred_fade_private",
+        "label": "Fold the court and husband what remains.",
+        "consequence": "Letting the claim rest spares the family its ruin and confesses the cause is spent.",
+        "effects": {
+          "fiscal_capacity": 6,
+          "dynastic_security": 4,
+          "confessional_legitimacy": -10,
+          "foreign_intervention_risk": -6
+        },
+        "causal_claim_ids": [
+          "claim_fred_exile_court"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_exile_court",
+          "option:opt_fred_fade_private"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_danish",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_danish_wallenstein",
+    "date_label": "1625-1626",
+    "title": "The Danish Hope",
+    "briefing": "Christian IV of Denmark takes up the Protestant war and the Lower Saxon command. His campaign could carry your restoration on its banners - or it could fail, and leave you the more plainly a beggar at foreign courts.",
+    "situation": "The Dane marches. Pin the cause on him, or keep your distance.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_danish"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Christian IV",
+        "dossier_id": "dossier_danish_crown"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_pin_denmark",
+        "label": "Pin the cause on Christian's intervention.",
+        "consequence": "In the event the Danish war was beaten out of Germany by 1629, and the hope pinned to it went down with it.",
+        "effects": {
+          "confessional_legitimacy": 6,
+          "dynastic_security": 3,
+          "foreign_intervention_risk": 12,
+          "military_dependence": 4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "danish_hope"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_danish"
+        ]
+      },
+      {
+        "id": "opt_fred_keep_clear_denmark",
+        "label": "Keep clear of the Danish adventure.",
+        "consequence": "Standing aside preserves what dignity a landless prince keeps, but lets the one army fighting your enemy fight without you.",
+        "effects": {
+          "foreign_intervention_risk": -8,
+          "confessional_legitimacy": -6,
+          "estate_trust": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_danish"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_danish",
+          "option:opt_fred_keep_clear_denmark"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_restitution",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_restitution_overreach",
+    "date_label": "1627-1628",
+    "title": "The Restitution Question",
+    "briefing": "At the summit of his power the emperor will consider restoring you - in part, conditionally, and on terms that confess you were rightly punished. It is the road back to some of your lands, paved with the renunciation of everything you fought for.",
+    "situation": "The emperor offers a partial restoration on his terms. Take what is offered, or refuse it.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_restitution"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Edict of Restitution",
+        "dossier_id": "dossier_edict_of_restitution"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_refuse_partial",
+        "label": "Refuse; hold out for a full and honorable restoration.",
+        "consequence": "In the event Frederick would not buy back a fragment of his lands with the surrender of his cause, and stayed landless.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "estate_trust": 2,
+          "imperial_authority": -4,
+          "dynastic_security": -6
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "refused_partial_restoration"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_restitution"
+        ]
+      },
+      {
+        "id": "opt_fred_take_partial",
+        "label": "Take the partial restoration the emperor offers.",
+        "consequence": "Recovering a portion of the lands means confessing before all that the gamble was a crime - and that you have repented it.",
+        "effects": {
+          "imperial_authority": 8,
+          "dynastic_security": 12,
+          "confessional_legitimacy": -12,
+          "estate_trust": -6
+        },
+        "memory_tags": [
+          "took_partial_restoration"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_restitution"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_restitution",
+          "option:opt_fred_take_partial"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_swedish",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1631",
+    "title": "The Swedish Hope",
+    "briefing": "Gustavus Adolphus of Sweden lands in Germany and breaks the emperor's armies. The war is reopened, and with it the only real chance of your restoration - if you will follow in the Swede's train and on the Swede's terms.",
+    "situation": "Gustavus offers to carry your cause. Join him, or hold back.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_swedish"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Gustavus Adolphus",
+        "dossier_id": "dossier_gustavus_adolphus"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_join_gustavus",
+        "label": "Return in Gustavus's train.",
+        "consequence": "In the event Frederick joined the Swedish king, the cause's last real chance bound to a foreign crown's will.",
+        "effects": {
+          "confessional_legitimacy": 8,
+          "dynastic_security": 4,
+          "foreign_intervention_risk": 12,
+          "military_dependence": 6
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "swedish_hope"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_swedish"
+        ]
+      },
+      {
+        "id": "opt_fred_hold_back_sweden",
+        "label": "Hold back from the Swedish gamble.",
+        "consequence": "Refusing to be carried preserves the last of your independence and forfeits the last of your chances.",
+        "effects": {
+          "foreign_intervention_risk": -8,
+          "confessional_legitimacy": -6,
+          "dynastic_security": -4
+        },
+        "causal_claim_ids": [
+          "claim_fred_swedish"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_swedish",
+          "option:opt_fred_hold_back_sweden"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_gustavus_terms",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "1632",
+    "title": "Frederick and Gustavus",
+    "briefing": "Marching with the Swedes through your own lost lands, you must settle what your restoration would mean. Gustavus will give it - as his client, his vassal in all but name. To insist on an independent restoration is to risk having none at all.",
+    "situation": "The Swede will restore you on his terms. Accept the client's crown, or hold for your own.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_gustavus_terms"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Gustavus Adolphus",
+        "dossier_id": "dossier_gustavus_adolphus"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_client_king",
+        "label": "Accept restoration as Sweden's client.",
+        "consequence": "In the event the terms were never settled; but the price of a Swedish restoration was always to be Sweden's man.",
+        "effects": {
+          "dynastic_security": 10,
+          "confessional_legitimacy": 4,
+          "foreign_intervention_risk": 10,
+          "imperial_authority": -4
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "gustavus_client"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_gustavus_terms"
+        ]
+      },
+      {
+        "id": "opt_fred_hold_independence",
+        "label": "Hold out for an independent restoration.",
+        "consequence": "Keeping your dignity may keep you landless, with no patron willing to restore a prince who will not be owned.",
+        "effects": {
+          "imperial_authority": 4,
+          "foreign_intervention_risk": -6,
+          "dynastic_security": -8
+        },
+        "causal_claim_ids": [
+          "claim_fred_gustavus_terms"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_gustavus_terms",
+          "option:opt_fred_hold_independence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card_fred_death",
+    "role_id": "role_frederick_v",
+    "phase_id": "phase_swedish_wallenstein_crisis",
+    "date_label": "November 1632",
+    "title": "Death at Mainz",
+    "briefing": "Plague takes you at Mainz, weeks after Gustavus falls at Lützen and the Swedish thunderbolt is spent. The claim you carried for thirteen years is still unredeemed. What you leave is a name, a grievance, and a son.",
+    "situation": "The reckoning comes. What passes to your heir.",
+    "historian_note": "Authored from Wilson's account of Frederick's exile and the foreign interventions.",
+    "source_refs": [
+      "src_wilson_europes_tragedy"
+    ],
+    "causal_claim_ids": [
+      "claim_fred_death"
+    ],
+    "review_status": "reviewed",
+    "context_links": [
+      {
+        "term": "Battle of Lützen",
+        "dossier_id": "dossier_lutzen"
+      }
+    ],
+    "options": [
+      {
+        "id": "opt_fred_claim_to_heir",
+        "label": "Bequeath the unredeemed claim to your son.",
+        "consequence": "In the event the claim outlived the man: Charles Louis would win back the Lower Palatinate and a new electoral dignity at Westphalia in 1648.",
+        "effects": {
+          "confessional_legitimacy": 4,
+          "dynastic_security": 3,
+          "imperial_authority": -2,
+          "foreign_intervention_risk": 2
+        },
+        "historical_option": true,
+        "memory_tags": [
+          "claim_to_heir"
+        ],
+        "causal_claim_ids": [
+          "claim_fred_death"
+        ]
+      },
+      {
+        "id": "opt_fred_let_claim_lapse",
+        "label": "Make your peace and let the claim lapse with you.",
+        "consequence": "Releasing your son from the grievance buys him a quieter life and ends the house's old quarrel unwon.",
+        "effects": {
+          "imperial_authority": 4,
+          "confessional_legitimacy": -6,
+          "dynastic_security": -2
+        },
+        "causal_claim_ids": [
+          "claim_fred_death"
+        ],
+        "counterfactual_source_status": "wilson_inference",
+        "research_tags": [
+          "source:wilson_europes_tragedy",
+          "needs_cross_source_check",
+          "card:card_fred_death",
+          "option:opt_fred_let_claim_lapse"
+        ]
+      }
+    ]
   }
 ]

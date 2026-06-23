@@ -26,6 +26,9 @@ import { clearGame, loadGame, saveGame } from "./game/save";
 
 const defaultRoleId = "role_ferdinand_ii";
 
+// Roles with an authored prelude scene; others go straight from select to play.
+const rolesWithPrelude = new Set(["role_ferdinand_ii"]);
+
 function woodcutFor(role: ReturnType<typeof getRole>, phaseId: string) {
   const file = role.woodcuts.by_phase[phaseId] ?? role.woodcuts.default;
   return `${import.meta.env.BASE_URL}assets/${file}`;
@@ -66,6 +69,7 @@ function App() {
     anchorEl: HTMLElement;
   } | null>(null);
   const [showDesigner, setShowDesigner] = useState(false);
+  const [selectedRoleId, setSelectedRoleId] = useState(defaultRoleId);
   const designerEnabled = isDesignerMode();
 
   const isNarrow = useMediaQuery("(max-width: 860px)");
@@ -104,10 +108,10 @@ function App() {
     }
   }
 
-  function startRole() {
-    const next = createInitialGameState(gameDatabase, defaultRoleId);
+  function startRole(roleId: string) {
+    const next = createInitialGameState(gameDatabase, roleId);
     setState(next);
-    setScreen("prelude");
+    setScreen(rolesWithPrelude.has(roleId) ? "prelude" : "play");
     setShowAftermath(false);
     setDossier(null);
     const storage = getBrowserStorage();
@@ -142,7 +146,12 @@ function App() {
       </header>
 
       {screen === "role-select" ? (
-        <RoleSelect role={role} onStart={startRole} />
+        <RoleSelect
+          roles={gameDatabase.playable_roles}
+          selectedId={selectedRoleId}
+          onSelect={setSelectedRoleId}
+          onStart={startRole}
+        />
       ) : screen === "prelude" ? (
         <FerdinandPrelude role={role} onContinue={enterFirstReport} />
       ) : (
@@ -299,12 +308,17 @@ function isDesignerMode() {
 }
 
 function RoleSelect({
-  role,
+  roles,
+  selectedId,
+  onSelect,
   onStart,
 }: {
-  role: ReturnType<typeof getRole>;
-  onStart: () => void;
+  roles: ReturnType<typeof getRole>[];
+  selectedId: string;
+  onSelect: (roleId: string) => void;
+  onStart: (roleId: string) => void;
 }) {
+  const role = roles.find((item) => item.id === selectedId) ?? roles[0];
   return (
     <section className="role-select" aria-label="Choose a role">
       <div className="role-card">
@@ -312,6 +326,24 @@ function RoleSelect({
           <ShieldAlert size={17} />
           Choose your office
         </div>
+        {roles.length > 1 ? (
+          <div className="role-chooser" role="tablist" aria-label="Playable characters">
+            {roles.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                role="tab"
+                aria-selected={item.id === role.id}
+                className={
+                  item.id === role.id ? "role-chip role-chip--active" : "role-chip"
+                }
+                onClick={() => onSelect(item.id)}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+        ) : null}
         <h2>{role.name}</h2>
         <p className="office">{role.office}</p>
         <p>{role.why_playable}</p>
@@ -351,9 +383,13 @@ function RoleSelect({
             </ul>
           </div>
         </div>
-        <button className="choice-button start-role" type="button" onClick={onStart}>
+        <button
+          className="choice-button start-role"
+          type="button"
+          onClick={() => onStart(role.id)}
+        >
           <span>Begin</span>
-          Play Ferdinand II
+          Play {role.name}
         </button>
       </div>
     </section>
