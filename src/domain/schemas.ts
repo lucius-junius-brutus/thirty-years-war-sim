@@ -223,6 +223,19 @@ const playableRoleRecordSchema = z.object({
     default: z.string().min(1),
     by_phase: z.record(z.string().min(1), z.string().min(1)),
   }),
+  // The seal/crest shown in the masthead while this reign is on screen.
+  crest: z.string().min(1),
+  // Character-portrait framing for the role-select page.
+  epithet: z.string().min(1),
+  portrait_dek: z.string().min(1),
+  portrait_beats: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        text: z.string().min(1),
+      }),
+    )
+    .min(2),
   historical_outcome: z.string().min(1).optional(),
   clean_victory_titles: z.array(z.string().min(1)).optional(),
   source_refs: sourceRefsSchema,
@@ -311,6 +324,7 @@ const cardRecordSchema = z.object({
   role_id: z.string().min(1),
   decision_point_id: z.string().min(1).optional(),
   phase_id: z.string().min(1),
+  woodcut: z.string().min(1).optional(),
   date_label: z.string().min(1),
   title: z.string().min(1),
   briefing: z.string().min(1),

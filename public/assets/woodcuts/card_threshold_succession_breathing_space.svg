@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a settled imperial crown resting at peace upon a tasselled cushion, a secure succession">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <circle cx="60" cy="64" r="3" fill="#1c140f"/><circle cx="820" cy="64" r="3" fill="#1c140f"/>
+  </g>
+  <!-- central motif: a crown settled on a cushion, ink fills, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- tasselled cushion, broad and stable -->
+    <path d="M362 102 L518 102 L508 78 L372 78 Z"/>
+    <!-- cushion piping ridge -->
+    <path d="M372 78 L508 78 L505 72 L375 72 Z"/>
+    <!-- corner tassels -->
+    <path d="M360 102 l-6 12 l8 0 l4 -10 z"/>
+    <path d="M520 102 l6 12 l-8 0 l-4 -10 z"/>
+    <!-- crown base band -->
+    <path d="M388 78 L492 78 L488 60 L392 60 Z"/>
+    <!-- crown jewels on band -->
+    <circle cx="412" cy="69" r="4"/><circle cx="440" cy="69" r="5"/><circle cx="468" cy="69" r="4"/>
+    <!-- crown points: settled, upright, not tilted -->
+    <path d="M392 60 L398 40 L406 60 Z"/>
+    <path d="M414 60 L424 32 L434 60 Z"/>
+    <path d="M438 60 L440 28 L442 60 Z"/>
+    <path d="M446 60 L456 32 L466 60 Z"/>
+    <path d="M474 60 L482 40 L488 60 Z"/>
+    <!-- mitre arch of the imperial crown, rising calm over the points -->
+    <path d="M398 44 Q440 14 482 44 L478 50 Q440 24 402 50 Z"/>
+    <!-- pearls capping the points -->
+    <circle cx="398" cy="40" r="3"/><circle cx="424" cy="32" r="3"/>
+    <circle cx="440" cy="28" r="3"/><circle cx="456" cy="32" r="3"/><circle cx="482" cy="40" r="3"/>
+    <!-- surmounting orb and cross at rest atop the arch -->
+    <circle cx="440" cy="17" r="6"/>
+    <rect x="438" y="4" width="4" height="14"/>
+    <rect x="432" y="8" width="16" height="4"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged metal, jewel facets, cushion folds -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- glints on crown band -->
+    <line x1="396" y1="64" x2="486" y2="64"/>
+    <!-- facet cuts on jewels -->
+    <line x1="410" y1="67" x2="414" y2="71"/>
+    <line x1="438" y1="66" x2="442" y2="72"/>
+    <line x1="466" y1="67" x2="470" y2="71"/>
+    <!-- light gouged up the arch -->
+    <path d="M404 46 Q440 20 476 46" fill="none"/>
+    <!-- cushion fold cuts -->
+    <line x1="392" y1="92" x2="486" y2="92"/>
+    <line x1="404" y1="84" x2="476" y2="84"/>
+    <!-- glint on the orb -->
+    <line x1="437" y1="16" x2="441" y2="20"/>
+  </g>
+  <!-- engraved shading hatch tucked under the cushion -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.3">
+    <line x1="372" y1="104" x2="380" y2="98"/><line x1="392" y1="104" x2="400" y2="98"/>
+    <line x1="480" y1="104" x2="488" y2="98"/><line x1="500" y1="104" x2="508" y2="98"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

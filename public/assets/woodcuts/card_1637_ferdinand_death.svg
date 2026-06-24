@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the deathbed of Emperor Ferdinand II, his crown set aside on a cushion">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: deathbed with shrouded emperor, crown set aside -->
+  <g fill="#1c140f">
+    <!-- bed canopy posts and tester -->
+    <rect x="338" y="24" width="206" height="9"/>
+    <rect x="338" y="24" width="9" height="78"/>
+    <rect x="535" y="24" width="9" height="78"/>
+    <!-- canopy valance hanging cloth (blocky scallops) -->
+    <path d="M347 33 h188 v8 l-12 9 -12 -9 -12 9 -12 -9 -12 9 -12 -9 -12 9 -12 -9 -12 9 -12 -9 -12 9 -12 -9 -12 9 -12 -9 -12 9 -8 -6 z"/>
+    <!-- bed frame / bier base -->
+    <rect x="352" y="86" width="180" height="16"/>
+    <!-- mattress and shroud over the body, peaked feet -->
+    <path d="M356 86 l24 -22 q60 -10 128 0 l24 22 z"/>
+    <!-- pillow lump for head, left -->
+    <path d="M362 70 q14 -12 30 -8 q6 10 -2 16 q-16 4 -28 -2 z"/>
+    <!-- folded hands ridge on the shroud -->
+    <path d="M430 70 l10 -7 10 7 -10 6 z"/>
+    <!-- side table / stool bearing the cushion, at right -->
+    <rect x="486" y="92" width="6" height="22"/>
+    <rect x="524" y="92" width="6" height="22"/>
+    <rect x="480" y="84" width="52" height="9"/>
+    <!-- cushion on the table, with corner tassels -->
+    <path d="M484 84 q22 -12 44 0 q-22 8 -44 0 z"/>
+    <circle cx="483" cy="84" r="3"/><circle cx="529" cy="84" r="3"/>
+    <!-- imperial crown SET ASIDE on the cushion -->
+    <path d="M492 80 l3 -16 5 9 5 -12 5 12 5 -9 3 16 z"/>
+    <rect x="490" y="79" width="32" height="5"/>
+    <!-- crown arch (mitre band) and orb-cross -->
+    <path d="M495 70 q11 -14 22 0" fill="none" stroke="#1c140f" stroke-width="2.5"/>
+    <circle cx="506" cy="58" r="3"/>
+    <rect x="505" y="51" width="2" height="7"/>
+    <rect x="502" y="53" width="8" height="2"/>
+    <!-- a single tall taper candle at the bed head, mourning -->
+    <rect x="360" y="48" width="5" height="38"/>
+    <path d="M362.5 40 q-5 5 0 9 q5 -4 0 -9 z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged folds in the shroud -->
+    <path d="M372 82 l18 -16"/>
+    <path d="M398 84 l16 -16"/>
+    <path d="M470 84 l16 -16"/>
+    <path d="M494 86 l14 -14"/>
+    <!-- pillow highlight -->
+    <path d="M368 68 q10 -7 20 -4"/>
+    <!-- glint on the crown band -->
+    <path d="M494 81 h26"/>
+    <!-- cut on the canopy valance -->
+    <path d="M360 38 h160" stroke-width="1.2"/>
+    <!-- candle flame core -->
+    <path d="M362.5 44 v4" stroke-width="1.2"/>
+    <!-- post bevels -->
+    <path d="M341 30 v66"/><path d="M538 30 v66"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

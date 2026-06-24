@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a map of Bohemia carved up by a blade, with confiscated title deeds and a pendant seal redistributing rebel estates to loyalists">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: deeds laid behind a carved map of Bohemia, centred ~x=440 -->
+  <g fill="#1c140f">
+    <!-- stacked title deeds fanned behind, left -->
+    <path d="M338 38 L412 30 L420 96 L346 104 Z"/>
+    <!-- second deed offset -->
+    <path d="M352 33 L430 28 L437 92 L360 98 Z"/>
+    <!-- the rhomboid map sheet of Bohemia, ink ground -->
+    <path d="M396 26 L520 32 L536 100 L408 106 Z"/>
+    <!-- pendant wax seal hanging from the map by a cord -->
+    <rect x="498" y="100" width="3" height="14"/>
+    <circle cx="500" cy="118" r="9"/>
+    <!-- the blade carving the land, struck diagonally across -->
+    <path d="M430 18 L470 18 L520 112 L480 112 Z"/>
+    <!-- blade hilt knob at top -->
+    <rect x="436" y="10" width="28" height="10"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: map borders, parcels, blade edge -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged outline of the Bohemia map sheet -->
+    <path d="M404 34 L512 39 L525 94 L416 99 Z"/>
+    <!-- confiscated parcels carved up across the map -->
+    <line x1="404" y1="58" x2="520" y2="63"/>
+    <line x1="408" y1="78" x2="523" y2="82"/>
+    <line x1="446" y1="36" x2="455" y2="97"/>
+    <line x1="484" y1="38" x2="494" y2="96"/>
+    <!-- a small estate marked with an X (seized) -->
+    <line x1="420" y1="46" x2="432" y2="56"/>
+    <line x1="432" y1="46" x2="420" y2="56"/>
+    <!-- bright edge along the carving blade -->
+    <line x1="468" y1="22" x2="514" y2="106"/>
+    <!-- deed lines on the fanned papers behind -->
+    <line x1="360" y1="48" x2="402" y2="44"/>
+    <line x1="362" y1="60" x2="404" y2="56"/>
+    <line x1="364" y1="72" x2="406" y2="68"/>
+    <!-- seal device cut into the wax -->
+    <line x1="496" y1="118" x2="504" y2="118"/>
+  </g>
+  <!-- hatching shadow beneath the deeds -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.3">
+    <line x1="346" y1="100" x2="408" y2="94"/>
+    <line x1="350" y1="104" x2="412" y2="98"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut: a victor's sword raised over a fallen Bohemian lion amid shattered standards after the Battle of White Mountain">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M40 64 l-10 -6 v12 z"/><path d="M840 64 l10 -6 v12 z"/>
+  </g>
+  <!-- distant smoke and broken field standards behind (within safe zone) -->
+  <g fill="#1c140f">
+    <!-- snapped pike shafts leaning on the field -->
+    <path d="M330 100 l6 -58 4 1 -4 58 z"/>
+    <path d="M352 100 l-9 -40 4 -1 9 40 z"/>
+    <path d="M560 100 l-7 -50 4 -1 7 50 z"/>
+    <!-- tattered fallen banner, drooping from a snapped staff -->
+    <path d="M540 46 l3 0 0 54 -3 0 z"/>
+    <path d="M543 48 l34 4 -6 9 8 8 -34 -3 z"/>
+    <!-- low smoke band over the field -->
+    <path d="M312 90 q14 -10 30 -4 q16 -10 34 -2 q14 -8 28 0 l0 6 q-46 -2 -92 2 z" opacity="0.85"/>
+    <path d="M488 92 q18 -9 34 -3 q16 -8 34 0 l0 6 q-34 -1 -68 1 z" opacity="0.85"/>
+  </g>
+  <!-- central motif: the raised sword of the victor over the fallen Bohemian lion -->
+  <g fill="#1c140f">
+    <!-- the prostrate, beaten lion (Bohemia) collapsed on the ground line -->
+    <path d="M372 108
+             q-4 -18 14 -24
+             q-6 -12 8 -18
+             q10 -5 18 2
+             q8 -2 12 6
+             q14 4 18 16
+             q10 2 12 14
+             l-12 0
+             q-2 -8 -10 -8
+             q-2 6 -10 6
+             q-6 8 -16 6
+             q-8 6 -18 2
+             q-10 2 -16 -2
+             z"/>
+    <!-- bowed lion head, mane in blocky cut tufts -->
+    <path d="M372 84
+             q-12 -2 -14 -14
+             q-2 -12 10 -16
+             q-2 -10 8 -12
+             q10 -2 12 8
+             q10 0 10 12
+             q0 12 -10 16
+             q-2 10 -12 12
+             q-2 6 -4 6 z"/>
+    <!-- lion's foreleg flung forward, claw splayed in defeat -->
+    <path d="M360 104 l-26 4 1 5 27 -3 z"/>
+    <path d="M334 108 l-4 -1 -3 4 4 1 z"/>
+    <path d="M340 108 l-4 0 -2 4 4 1 z"/>
+    <!-- lion's tail fallen slack -->
+    <path d="M452 96 q16 2 22 14 l-5 2 q-6 -10 -19 -11 z"/>
+
+    <!-- the great victor's arm and sword, raised to strike: mercy or terror -->
+    <!-- gauntleted fist gripping the hilt, hovering high above -->
+    <path d="M470 40 q14 -4 22 4 q8 8 4 18 l-14 -2 q3 -6 -2 -10 q-6 -4 -12 0 z"/>
+    <!-- cross-guard and grip -->
+    <path d="M462 44 l40 0 0 7 -40 0 z"/>
+    <path d="M478 51 l8 0 0 9 -8 0 z"/>
+    <path d="M474 60 q8 -3 16 0 l-2 5 -12 0 z"/>
+    <!-- the long blade rising to the frame, poised over the lion -->
+    <path d="M480 40 l5 0 -2 -34 -1 0 z"/>
+    <path d="M481 8 l3 0 -1 -4 -1 0 z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged plumage/mane, blade glint, claw edges -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- mane tuft cuts -->
+    <path d="M360 76 l8 -4"/><path d="M362 84 l9 -3"/><path d="M366 70 l7 -3"/>
+    <!-- defeated eye / muzzle line -->
+    <path d="M374 80 l8 0"/>
+    <!-- flank fur strokes on the collapsed body -->
+    <path d="M392 96 l14 -3"/><path d="M398 102 l16 -2"/><path d="M414 92 l12 -2"/>
+    <!-- blade centre-glint (the cold light on the raised sword) -->
+    <path d="M482 38 l0 -28" stroke-width="1.2"/>
+    <!-- knuckle cuts on the gauntlet -->
+    <path d="M476 44 l10 0"/>
+    <!-- splayed claw highlights -->
+    <path d="M330 109 l5 -2"/><path d="M336 109 l5 -2"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

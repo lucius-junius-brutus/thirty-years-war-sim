@@ -103,7 +103,8 @@
         "term": "Ecclesiastical Reservation",
         "dossier_id": "dossier_ecclesiastical_reservation"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1555_augsburg_settlement.svg"
   },
   {
     "id": "card_1608_security_blocs",
@@ -237,7 +238,8 @@
         "term": "Maximilian of Bavaria",
         "dossier_id": "dossier_maximilian_bavaria"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1608_security_blocs.svg"
   },
   {
     "id": "card_1609_letter_of_majesty",
@@ -349,7 +351,8 @@
         "term": "Count Thurn",
         "dossier_id": "dossier_thurn"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1609_letter_of_majesty.svg"
   },
   {
     "id": "card_1598_styrian_reform",
@@ -435,7 +438,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1598_styrian_reform.svg"
   },
   {
     "id": "card_1617_bohemian_enforcement",
@@ -549,7 +553,8 @@
         "term": "Cardinal Klesl",
         "dossier_id": "dossier_khlesl"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1617_bohemian_enforcement.svg"
   },
   {
     "id": "card_1618_prague_defenestration",
@@ -670,7 +675,8 @@
         "term": "Defenestration of Prague",
         "dossier_id": "dossier_defenestration_prague"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1618_prague_defenestration.svg"
   },
   {
     "id": "card_1618_remove_klesl",
@@ -767,7 +773,8 @@
         "term": "Cardinal Klesl",
         "dossier_id": "dossier_khlesl"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1618_remove_klesl.svg"
   },
   {
     "id": "card_1618_mediation_channel",
@@ -846,7 +853,8 @@
         "term": "Klesl",
         "dossier_id": "dossier_khlesl"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1618_mediation_channel.svg"
   },
   {
     "id": "card_1619_stormy_petition",
@@ -941,7 +949,8 @@
         "term": "Count Thurn",
         "dossier_id": "dossier_thurn"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1619_stormy_petition.svg"
   },
   {
     "id": "card_1619_imperial_election",
@@ -1054,7 +1063,8 @@
         "term": "Frederick of the Palatinate",
         "dossier_id": "dossier_frederick_v"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1619_imperial_election.svg"
   },
   {
     "id": "card_1619_frankfurt_coronation",
@@ -1162,7 +1172,8 @@
         "term": "Frederick",
         "dossier_id": "dossier_frederick_v"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1619_frankfurt_coronation.svg"
   },
   {
     "id": "card_1620_bavarian_army",
@@ -1338,7 +1349,8 @@
       ],
       "option_id": "opt_bavarian_military_assistance",
       "note": "The treasury is empty past argument. There is no army to be had but Bavaria's, and no terms but Maximilian's; the emperor signs because there is nothing else to sign."
-    }
+    },
+    "woodcut": "woodcuts/card_1620_bavarian_army.svg"
   },
   {
     "id": "card_1620_saxon_question",
@@ -1447,7 +1459,8 @@
         "term": "Frederick",
         "dossier_id": "dossier_frederick_v"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1620_saxon_question.svg"
   },
   {
     "id": "card_1620_march_on_prague",
@@ -1547,7 +1560,8 @@
         "term": "White Mountain",
         "dossier_id": "dossier_white_mountain"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1620_march_on_prague.svg"
   },
   {
     "id": "card_1620_white_mountain_aftermath",
@@ -1654,7 +1668,8 @@
         "term": "Frederick",
         "dossier_id": "dossier_frederick_v"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1620_white_mountain_aftermath.svg"
   },
   {
     "id": "card_1621_blood_court",
@@ -1758,7 +1773,8 @@
         "term": "Old Town Square",
         "dossier_id": "dossier_blood_court"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1621_blood_court.svg"
   },
   {
     "id": "card_1621_confiscations",
@@ -1852,7 +1868,8 @@
         ]
       }
     ],
-    "context_links": []
+    "context_links": [],
+    "woodcut": "woodcuts/card_1621_confiscations.svg"
   },
   {
     "id": "card_1621_spanish_rhine",
@@ -1958,7 +1975,8 @@
         "term": "Frederick",
         "dossier_id": "dossier_frederick_v"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1621_spanish_rhine.svg"
   },
   {
     "id": "card_1622_league_finance",
@@ -2069,7 +2087,8 @@
         "term": "Maximilian",
         "dossier_id": "dossier_maximilian_bavaria"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1622_league_finance.svg"
   },
   {
     "id": "card_1621_ban_of_frederick",
@@ -2173,7 +2192,8 @@
         "term": "imperial ban",
         "dossier_id": "dossier_imperial_ban"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1621_ban_of_frederick.svg"
   },
   {
     "id": "card_1622_palatine_settlement",
@@ -2302,7 +2322,8 @@
         "term": "Maximilian",
         "dossier_id": "dossier_maximilian_bavaria"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1622_palatine_settlement.svg"
   },
   {
     "id": "card_1623_electoral_transfer",
@@ -2450,7 +2471,8 @@
         "briefing": "The memorials from Munich no longer read as requests. They read as accounts due. Maximilian's service in Bohemia, the League's expense, and the unsettled Palatine title are now presented together.",
         "situation": "The electors hear that the emperor must reward useful loyalty, but several courts warn that an electoral title cannot be moved without wounding the balance of the Empire."
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1623_electoral_transfer.svg"
   },
   {
     "id": "card_1623_peace_feelers",
@@ -2559,7 +2581,8 @@
         "term": "electoral title passed to Bavaria",
         "dossier_id": "dossier_imperial_electors"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1623_peace_feelers.svg"
   },
   {
     "id": "card_1625_lower_saxon_neutrality",
@@ -2650,7 +2673,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1625_lower_saxon_neutrality.svg"
   },
   {
     "id": "card_1625_wallenstein_army",
@@ -2765,7 +2789,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1625_wallenstein_army.svg"
   },
   {
     "id": "card_1627_palatine_peace_opening",
@@ -2854,7 +2879,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1627_palatine_peace_opening.svg"
   },
   {
     "id": "card_1627_restoration_mandates",
@@ -2960,7 +2986,8 @@
         "term": "Styrian method",
         "dossier_id": "dossier_inner_austria"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1627_restoration_mandates.svg"
   },
   {
     "id": "card_1628_mecklenburg_reward",
@@ -3057,7 +3084,8 @@
         "unavailable_text": "The treasury cannot credibly satisfy Wallenstein's arrears without using land, offices, or future contributions.",
         "hidden_when_unavailable": false
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1628_mecklenburg_reward.svg"
   },
   {
     "id": "card_1629_lubeck_peace",
@@ -3159,7 +3187,8 @@
         "unavailable_text": "Too much alarm has gathered for a general settlement to be credible without first quieting Protestant security fears.",
         "hidden_when_unavailable": false
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1629_lubeck_peace.svg"
   },
   {
     "id": "card_1629_restitution_edict",
@@ -3331,7 +3360,8 @@
         "briefing": "The earlier willingness to settle the Palatine matter by proxy has kept a language of compromise alive. The restitution petitions, grounded on the Peace of Augsburg, now test whether that restraint can survive a Catholic victory.",
         "situation": "A broad Edict of Restitution would reverse the tone of compromise at a stroke. A narrower reading might keep the wavering Lutheran estates from treating every imperial paper as a threat."
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1629_restitution_edict.svg"
   },
   {
     "id": "card_1630_regensburg_wallenstein",
@@ -3429,7 +3459,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1630_regensburg_wallenstein.svg"
   },
   {
     "id": "card_1631_intervention_crisis",
@@ -3551,7 +3582,8 @@
         "briefing": "Because restitution has been treated as a matter for bargaining rather than command alone, the Saxon envoys still have language enough to ask for public terms before they choose Gustavus Adolphus and his arms.",
         "situation": "Sweden is on German soil, but the Lutheran middle has not yet lost every reason to deal with the emperor — if the Edict can be seen to bend."
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1631_intervention_crisis.svg"
   },
   {
     "id": "card_1631_saxon_break",
@@ -3636,7 +3668,8 @@
           "branch_impact_pass"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1631_saxon_break.svg"
   },
   {
     "id": "card_1632_recall_wallenstein",
@@ -3735,7 +3768,8 @@
       ],
       "option_id": "opt_recall_wallenstein_broad",
       "note": "With the army already his creature and no other force in the field, the emperor has no leverage left to limit the terms. Wallenstein returns on his own conditions, or not at all."
-    }
+    },
+    "woodcut": "woodcuts/card_1632_recall_wallenstein.svg"
   },
   {
     "id": "card_1633_wallenstein_peace",
@@ -3826,7 +3860,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1633_wallenstein_peace.svg"
   },
   {
     "id": "card_1634_remove_wallenstein",
@@ -3915,7 +3950,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1634_remove_wallenstein.svg"
   },
   {
     "id": "card_1635_prague_peace",
@@ -4048,7 +4084,8 @@
         "briefing": "Because restitution has already been treated as negotiable peace business, the Saxon articles after Nördlingen arrive less as a surrender than as a form the court itself has made possible.",
         "situation": "The settlement can restore obedience widely — but every prince and exile excluded from it remains useful to France or to Sweden."
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1635_prague_peace.svg"
   },
   {
     "id": "card_1636_hessen_amnesty",
@@ -4141,7 +4178,8 @@
         "term": "France",
         "dossier_id": "dossier_french_crown"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1636_hessen_amnesty.svg"
   },
   {
     "id": "card_1637_ferdinand_iii_election",
@@ -4226,7 +4264,8 @@
         ],
         "counterfactual_source_status": "game_inference"
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_1637_ferdinand_iii_election.svg"
   },
   {
     "id": "card_threshold_estates_offer_credit",
@@ -4294,7 +4333,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_estates_offer_credit.svg"
   },
   {
     "id": "card_threshold_estate_guarantees",
@@ -4371,7 +4411,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_estate_guarantees.svg"
   },
   {
     "id": "card_threshold_army_arrears",
@@ -4445,7 +4486,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_army_arrears.svg"
   },
   {
     "id": "card_threshold_treasury_bargain",
@@ -4517,7 +4559,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_treasury_bargain.svg"
   },
   {
     "id": "card_threshold_military_creditors",
@@ -4595,7 +4638,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_military_creditors.svg"
   },
   {
     "id": "card_threshold_foreign_courts",
@@ -4672,7 +4716,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_foreign_courts.svg"
   },
   {
     "id": "card_threshold_succession_breathing_space",
@@ -4740,7 +4785,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_succession_breathing_space.svg"
   },
   {
     "id": "card_threshold_devastation_petitions",
@@ -4814,7 +4860,8 @@
           "pressure_threshold_system"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_threshold_devastation_petitions.svg"
   },
   {
     "id": "card_1637_ferdinand_death",
@@ -4863,7 +4910,8 @@
         "counterfactual_source_status": "game_inference"
       }
     ],
-    "context_links": []
+    "context_links": [],
+    "woodcut": "woodcuts/card_1637_ferdinand_death.svg"
   },
   {
     "id": "card_fred_crown_offer",
@@ -4961,7 +5009,8 @@
           "option:opt_fred_temporize_crown"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_crown_offer.svg"
   },
   {
     "id": "card_fred_union",
@@ -5028,7 +5077,8 @@
           "claim_fred_union"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_union.svg"
   },
   {
     "id": "card_fred_foreign",
@@ -5095,7 +5145,8 @@
           "option:opt_fred_keep_own_counsel"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_foreign.svg"
   },
   {
     "id": "card_fred_bethlen",
@@ -5159,7 +5210,8 @@
           "option:opt_fred_refuse_bethlen"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_bethlen.svg"
   },
   {
     "id": "card_fred_saxony",
@@ -5225,7 +5277,8 @@
           "claim_fred_saxony"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_saxony.svg"
   },
   {
     "id": "card_fred_coronation",
@@ -5291,7 +5344,8 @@
           "option:opt_fred_conciliate_crowd"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_coronation.svg"
   },
   {
     "id": "card_fred_treasury",
@@ -5379,7 +5433,8 @@
           "option:opt_fred_trim_war"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_treasury.svg"
   },
   {
     "id": "card_fred_estates",
@@ -5441,7 +5496,8 @@
           "option:opt_fred_assert_crown"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_estates.svg"
   },
   {
     "id": "card_fred_mansfeld",
@@ -5504,7 +5560,8 @@
           "option:opt_fred_disband_freebooters"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_mansfeld.svg"
   },
   {
     "id": "card_fred_two_fronts",
@@ -5567,7 +5624,8 @@
           "option:opt_fred_defend_palatinate"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_two_fronts.svg"
   },
   {
     "id": "card_fred_white_mountain_eve",
@@ -5659,7 +5717,8 @@
           "option:opt_fred_seek_terms_eve"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_white_mountain_eve.svg"
   },
   {
     "id": "card_fred_white_mountain_after",
@@ -5747,7 +5806,8 @@
           "option:opt_fred_submit_mercy"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_white_mountain_after.svg"
   },
   {
     "id": "card_fred_peripheries",
@@ -5812,7 +5872,8 @@
           "option:opt_fred_release_adherents"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_peripheries.svg"
   },
   {
     "id": "card_fred_ban",
@@ -5910,7 +5971,8 @@
           "option:opt_fred_appeal_electors"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_ban.svg"
   },
   {
     "id": "card_fred_defend_rhine",
@@ -5978,7 +6040,8 @@
           "option:opt_fred_husband_strength"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_defend_rhine.svg"
   },
   {
     "id": "card_fred_heidelberg",
@@ -6047,7 +6110,8 @@
           "option:opt_fred_seek_truce_palatinate"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_heidelberg.svg"
   },
   {
     "id": "card_fred_spanish_offer",
@@ -6115,7 +6179,8 @@
           "option:opt_fred_take_spanish_offer"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_spanish_offer.svg"
   },
   {
     "id": "card_fred_transfer",
@@ -6213,7 +6278,8 @@
           "option:opt_fred_accept_transfer"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_transfer.svg"
   },
   {
     "id": "card_fred_exile_court",
@@ -6276,7 +6342,8 @@
           "option:opt_fred_fade_private"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_exile_court.svg"
   },
   {
     "id": "card_fred_danish",
@@ -6339,7 +6406,8 @@
           "option:opt_fred_keep_clear_denmark"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_danish.svg"
   },
   {
     "id": "card_fred_restitution",
@@ -6406,7 +6474,8 @@
           "option:opt_fred_take_partial"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_restitution.svg"
   },
   {
     "id": "card_fred_swedish",
@@ -6469,7 +6538,8 @@
           "option:opt_fred_hold_back_sweden"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_swedish.svg"
   },
   {
     "id": "card_fred_gustavus_terms",
@@ -6532,7 +6602,8 @@
           "option:opt_fred_hold_independence"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_gustavus_terms.svg"
   },
   {
     "id": "card_fred_death",
@@ -6595,6 +6666,7 @@
           "option:opt_fred_let_claim_lapse"
         ]
       }
-    ]
+    ],
+    "woodcut": "woodcuts/card_fred_death.svg"
   }
 ]

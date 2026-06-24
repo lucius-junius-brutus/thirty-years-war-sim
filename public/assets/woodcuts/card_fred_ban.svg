@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the imperial ban: a sealed proclamation with a pendant wax seal and crossed quills, decreeing Frederick an outlaw">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the sealed imperial edict, crossed quills behind, pendant seal below -->
+  <g fill="#1c140f">
+    <!-- crossed quills behind the document -->
+    <polygon points="356,26 372,30 470,98 462,104"/>
+    <polygon points="524,26 508,30 410,98 418,104"/>
+    <!-- quill feather barbs (blocky) -->
+    <polygon points="356,26 348,18 362,22 372,30"/>
+    <polygon points="524,26 532,18 518,22 508,30"/>
+    <!-- the proclamation sheet, with torn/curled lower edge -->
+    <path d="M376,24 L504,24 L504,92 Q495,86 487,92 Q478,98 470,92 Q461,86 453,92 Q444,98 436,92 Q427,86 419,92 Q410,98 402,92 Q393,86 385,92 L376,92 Z"/>
+    <!-- imperial double-eagle emblem block at the head of the decree -->
+    <rect x="424" y="30" width="32" height="20"/>
+    <polygon points="440,30 432,38 440,44 448,38"/>
+    <!-- ruled lines of the edict (cut as ink bars) -->
+    <rect x="388" y="56" width="104" height="3"/>
+    <rect x="388" y="63" width="104" height="3"/>
+    <rect x="388" y="70" width="80" height="3"/>
+    <rect x="388" y="77" width="92" height="3"/>
+    <!-- cord descending to the pendant seal -->
+    <rect x="438" y="92" width="4" height="14"/>
+    <!-- pendant wax seal (heavy disc) -->
+    <circle cx="440" cy="112" r="11"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- quill spine highlights -->
+    <line x1="362" y1="30" x2="456" y2="96"/>
+    <line x1="518" y1="30" x2="424" y2="96"/>
+    <!-- feather barb cuts -->
+    <line x1="354" y1="24" x2="360" y2="30"/>
+    <line x1="526" y1="24" x2="520" y2="30"/>
+    <!-- emblem eagle wing notches -->
+    <line x1="436" y1="38" x2="440" y2="42"/>
+    <line x1="444" y1="38" x2="440" y2="42"/>
+    <!-- seal device: gouged cross + rim -->
+    <circle cx="440" cy="112" r="7"/>
+    <line x1="440" y1="106" x2="440" y2="118"/>
+    <line x1="434" y1="112" x2="446" y2="112"/>
+    <!-- sheet curl highlight along torn edge -->
+    <line x1="386" y1="90" x2="470" y2="90"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a vacant imperial throne flanked by two crowns hanging on cords, an empty seat between the electors choosing">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: vacant throne centred at x=440, two crowns hung either side -->
+  <g fill="#1c140f">
+    <!-- canopy beam across the top from which crowns and drape hang -->
+    <rect x="330" y="22" width="220" height="7"/>
+    <polygon points="330,29 550,29 540,40 340,40"/>
+    <!-- empty high-backed throne, the seat conspicuously vacant -->
+    <rect x="412" y="40" width="56" height="58"/>
+    <rect x="406" y="92" width="68" height="10"/>
+    <!-- throne armrests -->
+    <rect x="404" y="70" width="10" height="26"/>
+    <rect x="466" y="70" width="10" height="26"/>
+    <!-- finials atop the throne back -->
+    <polygon points="412,40 423,24 434,40"/>
+    <polygon points="446,40 457,24 468,40"/>
+    <!-- LEFT crown: the imperial crown, hung by a cord from the beam -->
+    <line x1="365" y1="40" x2="365" y2="54" stroke="#1c140f" stroke-width="2"/>
+    <path d="M340 86 L340 66 L350 76 L365 60 L380 76 L390 66 L390 86 Z"/>
+    <rect x="338" y="86" width="54" height="9"/>
+    <circle cx="350" cy="64" r="3"/><circle cx="365" cy="56" r="3.5"/><circle cx="380" cy="64" r="3"/>
+    <!-- RIGHT crown: the Bohemian crown offered to Frederick, hung opposite -->
+    <line x1="515" y1="40" x2="515" y2="54" stroke="#1c140f" stroke-width="2"/>
+    <path d="M490 86 L490 66 L500 76 L515 60 L530 76 L540 66 L540 86 Z"/>
+    <rect x="488" y="86" width="54" height="9"/>
+    <circle cx="500" cy="64" r="3"/><circle cx="515" cy="56" r="3.5"/><circle cx="530" cy="64" r="3"/>
+    <!-- a cross-arch over the right crown to mark it a kingdom's crown -->
+    <path d="M500 70 Q515 50 530 70" fill="none" stroke="#1c140f" stroke-width="2.5"/>
+    <!-- crossed electors' sceptres laid before the empty seat -->
+    <rect x="396" y="100" width="88" height="4" transform="rotate(8 440 102)"/>
+    <rect x="396" y="100" width="88" height="4" transform="rotate(-8 440 102)"/>
+    <polygon points="392,96 400,90 404,98" transform="rotate(8 440 102)"/>
+    <polygon points="476,90 484,96 472,98" transform="rotate(-8 440 102)"/>
+  </g>
+  <!-- engraved hatching on the throne and drape (suggesting carved shadow) -->
+  <g stroke="#1c140f" stroke-width="0.7" opacity="0.3">
+    <line x1="416" y1="46" x2="464" y2="46"/><line x1="416" y1="54" x2="464" y2="54"/>
+    <line x1="416" y1="62" x2="464" y2="62"/><line x1="416" y1="70" x2="464" y2="70"/>
+    <line x1="416" y1="78" x2="464" y2="78"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged sheen on the two crown bands -->
+    <line x1="346" y1="90" x2="384" y2="90"/>
+    <line x1="496" y1="90" x2="534" y2="90"/>
+    <!-- highlight on each crown peak -->
+    <line x1="360" y1="62" x2="370" y2="62"/>
+    <line x1="510" y1="62" x2="520" y2="62"/>
+    <!-- vertical chiselled light down the empty throne back -->
+    <line x1="440" y1="44" x2="440" y2="90" stroke-width="2"/>
+    <!-- nick of light on the crossed sceptres -->
+    <line x1="410" y1="101" x2="470" y2="101" stroke-width="1.2"/>
+    <!-- carved gleam on the canopy beam -->
+    <line x1="340" y1="25" x2="540" y2="25" stroke-width="1.2"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

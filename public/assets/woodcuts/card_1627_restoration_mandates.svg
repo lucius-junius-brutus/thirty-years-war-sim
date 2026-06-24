@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a sealed Catholic restoration mandate with pendant seal and crossed quills, flanked by a chapel cross and a hand of office, Faith by Decree 1627">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- ========= CENTRAL MOTIF (x=300..580): the sealed mandate ========= -->
+  <g fill="#1c140f">
+    <!-- crossed quills behind the document -->
+    <polygon points="352,30 368,38 446,98 438,106 358,46"/>
+    <polygon points="528,30 512,38 434,98 442,106 522,46"/>
+    <!-- quill nibs -->
+    <polygon points="349,28 360,32 356,42"/>
+    <polygon points="531,28 520,32 524,42"/>
+
+    <!-- the great parchment edict (slightly curled at foot) -->
+    <path d="M384,26 L496,26 L496,96 Q470,108 440,100 Q410,108 384,96 Z"/>
+
+    <!-- three engraved lines of the decree: worship | schooling | office -->
+    <!-- (rendered as carved highlights below) -->
+
+    <!-- pendant seal hanging from the mandate -->
+    <line x1="440" y1="100" x2="440" y2="112" stroke="#1c140f" stroke-width="4"/>
+    <circle cx="440" cy="120" r="11"/>
+
+    <!-- LEFT EMBLEM: chapel gable + cross (worship re-enforced) -->
+    <polygon points="318,70 346,52 374,70 374,98 318,98"/>
+    <rect x="354" y="44" width="6" height="22"/>
+    <rect x="348" y="50" width="18" height="6"/>
+
+    <!-- RIGHT EMBLEM: hand of office gripping a staff (office by decree) -->
+    <rect x="520" y="48" width="6" height="50"/>
+    <polygon points="508,72 538,72 538,84 524,92 508,84"/>
+    <rect x="516" y="44" width="14" height="8"/>
+  </g>
+
+  <!-- ========= carved highlights cut BACK to the ground colour ========= -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- three decree lines gouged into the parchment -->
+    <line x1="398" y1="42" x2="482" y2="42"/>
+    <line x1="398" y1="54" x2="482" y2="54"/>
+    <line x1="398" y1="66" x2="470" y2="66"/>
+    <!-- quill shaft glints -->
+    <line x1="362" y1="40" x2="430" y2="92"/>
+    <line x1="518" y1="40" x2="450" y2="92"/>
+    <!-- seal stamp: a gouged cross -->
+    <line x1="440" y1="114" x2="440" y2="126"/>
+    <line x1="434" y1="120" x2="446" y2="120"/>
+    <!-- chapel cross glint + gable seam -->
+    <line x1="346" y1="54" x2="346" y2="68"/>
+    <line x1="357" y1="46" x2="357" y2="64"/>
+    <!-- hand knuckle cuts -->
+    <line x1="514" y1="78" x2="532" y2="78"/>
+    <line x1="523" y1="50" x2="523" y2="92"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

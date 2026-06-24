@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a crown held aloft over an empty throne, with a sealed parchment of conditions chained to the throne arm">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- central motif, ink fills, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- the crown held aloft, offered to the son -->
+    <!-- crown band -->
+    <rect x="404" y="40" width="72" height="13"/>
+    <!-- crown points with pearls -->
+    <path d="M404 40 L412 22 L424 38 L440 18 L456 38 L468 22 L476 40 Z"/>
+    <circle cx="412" cy="20" r="4"/><circle cx="440" cy="16" r="4.5"/><circle cx="468" cy="20" r="4"/>
+    <!-- imperial arch over the crown -->
+    <path d="M408 40 Q440 6 472 40 L468 40 Q440 14 412 40 Z"/>
+    <!-- orb and cross atop -->
+    <circle cx="440" cy="10" r="4"/>
+    <rect x="438" y="0" width="4" height="11"/><rect x="434" y="3" width="12" height="3.5"/>
+
+    <!-- two hands raising the crown -->
+    <!-- left hand and forearm -->
+    <path d="M388 92 L404 60 L416 58 L412 70 L406 92 Z"/>
+    <path d="M404 55 q-2 -6 4 -7 q3 4 0 9 z"/>
+    <path d="M410 54 q-1 -7 5 -7 q3 4 0 9 z"/>
+    <!-- right hand and forearm -->
+    <path d="M492 92 L476 60 L464 58 L468 70 L474 92 Z"/>
+    <path d="M476 55 q2 -6 -4 -7 q-3 4 0 9 z"/>
+    <path d="M470 54 q1 -7 -5 -7 q-3 4 0 9 z"/>
+
+    <!-- empty throne behind, the dynasty's seat -->
+    <rect x="424" y="58" width="32" height="44"/>
+    <rect x="418" y="54" width="6" height="48"/><rect x="456" y="54" width="6" height="48"/>
+    <path d="M418 54 L424 44 L456 44 L462 54 Z"/>
+
+    <!-- pendant-sealed document of conditions, chained to the throne arm -->
+    <path d="M338 70 L380 70 L380 104 L359 96 L338 104 Z"/>
+    <!-- chain links binding the conditions to the throne -->
+    <circle cx="388" cy="74" r="3" fill="none" stroke="#1c140f" stroke-width="2"/>
+    <circle cx="395" cy="76" r="3" fill="none" stroke="#1c140f" stroke-width="2"/>
+    <circle cx="402" cy="78" r="3" fill="none" stroke="#1c140f" stroke-width="2"/>
+    <!-- wax seal hanging from the document -->
+    <line x1="359" y1="96" x2="359" y2="108" stroke="#1c140f" stroke-width="2"/>
+    <circle cx="359" cy="114" r="7"/>
+
+    <!-- crossed sceptre and sword flanking the throne base -->
+    <rect x="500" y="62" width="3.5" height="44" transform="rotate(18 501 84)"/>
+    <rect x="522" y="62" width="3.5" height="44" transform="rotate(-18 523 84)"/>
+    <circle cx="496" cy="60" r="5"/>
+  </g>
+
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gleam on the crown band -->
+    <line x1="410" y1="46" x2="470" y2="46"/>
+    <line x1="414" y1="50" x2="466" y2="50"/>
+    <!-- knuckle gouges on the hands -->
+    <line x1="406" y1="64" x2="412" y2="62"/><line x1="408" y1="68" x2="414" y2="66"/>
+    <line x1="474" y1="64" x2="468" y2="62"/><line x1="472" y1="68" x2="466" y2="66"/>
+    <!-- creases ruled across the conditions document -->
+    <line x1="344" y1="78" x2="374" y2="78"/><line x1="344" y1="84" x2="374" y2="84"/>
+    <line x1="344" y1="90" x2="372" y2="90"/>
+    <!-- carved grain down the throne back -->
+    <line x1="432" y1="62" x2="432" y2="98"/><line x1="448" y1="62" x2="448" y2="98"/>
+    <!-- cross-light on the wax seal -->
+    <line x1="356" y1="112" x2="362" y2="116"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

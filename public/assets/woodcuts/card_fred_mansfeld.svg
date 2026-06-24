@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of Mansfeld, a rough mercenary captain leading a marauding column of pikes">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the marauding column of pikes behind the captain -->
+  <g stroke="#1c140f" stroke-width="3" stroke-linecap="round">
+    <!-- thicket of slanted pikes raised over the column -->
+    <line x1="470" y1="98" x2="500" y2="20"/>
+    <line x1="486" y1="98" x2="514" y2="26"/>
+    <line x1="502" y1="98" x2="528" y2="22"/>
+    <line x1="518" y1="98" x2="546" y2="30"/>
+    <line x1="534" y1="98" x2="560" y2="24"/>
+    <line x1="550" y1="98" x2="574" y2="34"/>
+  </g>
+  <g fill="#1c140f">
+    <!-- pike heads (blocky leaf-blades) -->
+    <path d="M500 20 l-5 12 l5 -3 l5 3 z"/>
+    <path d="M514 26 l-5 12 l5 -3 l5 3 z"/>
+    <path d="M528 22 l-5 12 l5 -3 l5 3 z"/>
+    <path d="M546 30 l-5 12 l5 -3 l5 3 z"/>
+    <path d="M560 24 l-5 12 l5 -3 l5 3 z"/>
+    <path d="M574 34 l-5 12 l5 -3 l5 3 z"/>
+    <!-- the marauding column: massed blocky helmeted heads/shoulders -->
+    <path d="M476 98 l0 -20 a10 10 0 0 1 20 0 l0 20 z"/>
+    <path d="M500 98 l0 -24 a11 11 0 0 1 22 0 l0 24 z"/>
+    <path d="M526 98 l0 -22 a10 10 0 0 1 20 0 l0 22 z"/>
+    <path d="M550 98 l0 -18 a9 9 0 0 1 18 0 l0 18 z"/>
+    <!-- the rough captain, striding forward, larger, in front -->
+    <!-- broad plumed hat -->
+    <path d="M400 36 q40 -16 78 0 q-12 -10 -39 -11 q-27 1 -39 11 z"/>
+    <ellipse cx="439" cy="40" rx="22" ry="8"/>
+    <!-- jutting feather plume -->
+    <path d="M460 38 q24 -18 40 -6 q-20 0 -34 14 z"/>
+    <!-- head and bearded face -->
+    <circle cx="439" cy="52" r="11"/>
+    <path d="M430 56 q9 12 18 0 q-2 9 -9 9 q-7 0 -9 -9 z"/>
+    <!-- broad cloaked torso / buff coat -->
+    <path d="M414 98 l4 -30 q21 -14 42 0 l4 30 z"/>
+    <!-- slung sword arm reaching across, fist forward -->
+    <path d="M460 72 l34 14 l-3 8 l-34 -14 z"/>
+    <circle cx="495" cy="89" r="6"/>
+    <!-- the captain's drawn blade pointing the march -->
+    <path d="M500 88 l40 -10 l2 5 l-40 11 z"/>
+    <!-- a slung plunder sack at his hip -->
+    <path d="M412 84 q-12 2 -12 12 q0 8 12 8 q12 0 12 -8 q0 -10 -12 -12 z"/>
+    <path d="M408 80 l8 0 l-2 6 l-4 0 z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged folds in the hat brim and plume -->
+    <line x1="412" y1="38" x2="466" y2="38"/>
+    <line x1="470" y1="34" x2="488" y2="28"/>
+    <!-- highlight on the buff coat -->
+    <line x1="426" y1="74" x2="430" y2="94"/>
+    <line x1="448" y1="74" x2="452" y2="94"/>
+    <!-- sheen along the captain's blade -->
+    <line x1="504" y1="86" x2="538" y2="78"/>
+    <!-- cuts on the plunder sack -->
+    <line x1="404" y1="92" x2="420" y2="92"/>
+    <!-- glint on massed helmets -->
+    <line x1="482" y1="82" x2="490" y2="80"/>
+    <line x1="507" y1="80" x2="515" y2="78"/>
+    <line x1="532" y1="82" x2="540" y2="80"/>
+    <!-- shine streaks down a few pike shafts -->
+    <line x1="490" y1="50" x2="476" y2="86"/>
+    <line x1="552" y1="52" x2="540" y2="86"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

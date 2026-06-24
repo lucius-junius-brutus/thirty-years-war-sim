@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the wary Lutheran Saxon elector enthroned, turned aside beneath crossed electoral swords, refusing a hand offered from the wings">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the wary elector enthroned, turned aside; ink fills -->
+  <g fill="#1c140f">
+    <!-- canopied throne back -->
+    <rect x="402" y="30" width="76" height="74"/>
+    <path d="M396 32 L484 32 L470 18 L410 18 Z"/>
+    <!-- crossed electoral swords above the throne (Saxon Kurschwerter) -->
+    <path d="M440 8 L420 50 L426 52 L446 12 Z"/>
+    <path d="M440 8 L460 50 L454 52 L434 12 Z"/>
+    <rect x="430" y="6" width="20" height="6"/>
+    <!-- robed seated figure, body square to throne but head turned aside (watching) -->
+    <path d="M414 102 L414 64 Q414 50 440 50 Q466 50 466 64 L466 102 Z"/>
+    <!-- head turned to the left, away -->
+    <path d="M428 48 Q420 36 432 32 Q448 30 448 44 Q448 52 438 52 Z"/>
+    <!-- electoral cap / bonnet -->
+    <path d="M422 34 Q420 24 436 24 Q452 24 450 36 L448 38 Q438 30 426 36 Z"/>
+    <!-- folded arm held close, not reaching -->
+    <path d="M438 64 L416 80 L420 86 L444 70 Z"/>
+    <!-- a hand offered from the wings (the Calvinist suit) reaching but unclasped -->
+    <path d="M504 70 L478 66 L478 60 L506 62 Q514 62 514 66 Q514 70 504 70 Z"/>
+    <!-- the offered cuff, cropped at the right edge of the safe zone -->
+    <path d="M514 56 L560 50 L560 80 L514 74 Z"/>
+    <!-- throne base / dais -->
+    <rect x="398" y="100" width="84" height="8"/>
+    <rect x="408" y="96" width="64" height="6"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged folds of the robe -->
+    <line x1="424" y1="64" x2="424" y2="100"/>
+    <line x1="434" y1="58" x2="434" y2="100"/>
+    <line x1="446" y1="58" x2="446" y2="100"/>
+    <line x1="456" y1="64" x2="456" y2="100"/>
+    <!-- blade lights on the crossed swords -->
+    <line x1="430" y1="16" x2="424" y2="44"/>
+    <line x1="450" y1="16" x2="456" y2="44"/>
+    <!-- canopy ridge -->
+    <line x1="414" y1="24" x2="466" y2="24"/>
+    <!-- cap fur notch -->
+    <line x1="428" y1="32" x2="444" y2="32"/>
+    <!-- gap between the unclasped hands (the courtship refused) -->
+    <line x1="470" y1="68" x2="476" y2="64" stroke-width="2.2"/>
+    <!-- cuff seams on the offered sleeve -->
+    <line x1="522" y1="56" x2="522" y2="78"/>
+    <line x1="538" y1="54" x2="538" y2="80"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

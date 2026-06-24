@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the Peace of Lubeck: a sealed treaty with clasped hands, as a Swedish standard and pikes stir behind">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif -->
+  <g fill="#1c140f">
+    <!-- Sweden stirs behind: a tall standard pole with a forked banner, and massed pikes to the left -->
+    <rect x="382" y="20" width="4" height="76"/>
+    <path d="M386 22 L432 28 L420 38 L432 48 L386 50 Z"/>
+    <!-- distant pikes (Swedish army gathering), angled blades -->
+    <g stroke="#1c140f" stroke-width="3" stroke-linecap="round">
+      <line x1="344" y1="96" x2="356" y2="30"/>
+      <line x1="356" y1="96" x2="366" y2="34"/>
+      <line x1="368" y1="96" x2="376" y2="32"/>
+    </g>
+    <g>
+      <path d="M354 24 l5 -9 l5 9 z"/>
+      <path d="M364 28 l5 -9 l5 9 z"/>
+      <path d="M374 26 l5 -9 l5 9 z"/>
+    </g>
+    <!-- the treaty document: a broad parchment sheet, centred -->
+    <path d="M414 40 L520 40 L520 100 L444 100 L414 86 Z"/>
+    <!-- ribbon descending to the pendant seal -->
+    <rect x="470" y="100" width="10" height="10"/>
+    <!-- pendant wax seal of the treaty -->
+    <circle cx="475" cy="118" r="13"/>
+    <!-- crossed quills laid over the document, the signing -->
+    <g stroke="#1c140f" stroke-width="3" stroke-linecap="round" fill="none">
+      <line x1="426" y1="92" x2="470" y2="50"/>
+      <line x1="468" y1="92" x2="424" y2="50"/>
+    </g>
+    <path d="M470 48 l8 -8 l2 9 l-9 1 z"/>
+    <path d="M424 48 l-8 -8 l-2 9 l9 1 z"/>
+    <!-- two clasped hands across the treaty: Ferdinand and Christian IV make peace -->
+    <path d="M440 70 q14 -10 30 0 q14 8 30 0 l0 12 q-16 8 -30 0 q-16 -8 -30 0 z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- ruled lines of writing on the treaty -->
+    <line x1="426" y1="52" x2="508" y2="52"/>
+    <line x1="430" y1="60" x2="508" y2="60"/>
+    <line x1="446" y1="84" x2="508" y2="84"/>
+    <!-- seal impression: an emblematic cross gouged into the wax -->
+    <line x1="475" y1="110" x2="475" y2="126"/>
+    <line x1="467" y1="118" x2="483" y2="118"/>
+    <!-- knuckle and cuff gouges on the clasped hands -->
+    <line x1="452" y1="74" x2="458" y2="78"/>
+    <line x1="482" y1="74" x2="488" y2="78"/>
+    <!-- fold of the banner -->
+    <line x1="392" y1="30" x2="416" y2="33"/>
+    <!-- pike-shaft glints -->
+    <line x1="350" y1="60" x2="353" y2="44"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

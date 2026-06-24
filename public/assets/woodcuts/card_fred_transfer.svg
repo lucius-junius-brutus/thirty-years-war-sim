@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of an electoral cap lifted from an empty cushion by a reaching hand, the dignity transferred away">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: electoral cap lifted away from a tasselled cushion by a reaching hand/arm from the right -->
+  <g fill="#1c140f">
+    <!-- the empty cushion on its base, left of centre, now bereft -->
+    <path d="M330 100 L430 100 L420 88 L340 88 Z"/>
+    <path d="M338 88 Q380 76 422 88 Q424 95 420 100 L340 100 Q336 95 338 88 Z"/>
+    <!-- cushion tassels -->
+    <path d="M332 100 L328 112 L324 100 Z"/>
+    <path d="M428 100 L432 112 L436 100 Z"/>
+    <!-- faint trace where the cap once sat: a shallow ink hollow -->
+    <ellipse cx="380" cy="86" rx="30" ry="6"/>
+
+    <!-- the electoral cap, lifted up and to the right, between cushion and the receiving hand -->
+    <!-- ermine brim -->
+    <path d="M452 70 Q495 58 538 70 Q540 78 534 82 Q495 92 456 82 Q450 78 452 70 Z"/>
+    <!-- crimson velvet dome (blocky crown) -->
+    <path d="M462 70 Q470 40 495 36 Q520 40 528 70 Q495 60 462 70 Z"/>
+    <!-- arch and orb cresting the cap -->
+    <path d="M468 56 Q495 34 522 56 Q495 46 468 56 Z"/>
+    <circle cx="495" cy="30" r="6"/>
+    <rect x="492" y="18" width="6" height="10"/>
+    <path d="M488 16 L502 16 L495 8 Z"/>
+
+    <!-- the receiving arm reaching in from the right (Bavaria's grasp) -->
+    <path d="M572 96 L520 84 L518 76 L572 86 Z"/>
+    <!-- hand / fist closing on the cap -->
+    <path d="M520 70 L540 64 L548 70 L546 84 L524 88 L516 80 Z"/>
+    <path d="M538 62 L546 60 L550 66 L544 70 Z"/>
+    <path d="M542 70 L552 70 L552 76 L544 78 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged ermine, velvet nap, knuckles -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- ermine spots / cut marks on the brim -->
+    <line x1="466" y1="76" x2="466" y2="80"/>
+    <line x1="482" y1="78" x2="482" y2="82"/>
+    <line x1="498" y1="78" x2="498" y2="82"/>
+    <line x1="514" y1="78" x2="514" y2="82"/>
+    <line x1="528" y1="76" x2="528" y2="80"/>
+    <!-- velvet dome gouges -->
+    <line x1="478" y1="64" x2="484" y2="50"/>
+    <line x1="495" y1="62" x2="495" y2="46"/>
+    <line x1="512" y1="64" x2="506" y2="50"/>
+    <!-- orb highlight -->
+    <line x1="493" y1="29" x2="497" y2="31"/>
+    <!-- cushion surface gouges -->
+    <line x1="350" y1="84" x2="362" y2="80"/>
+    <line x1="372" y1="82" x2="388" y2="79"/>
+    <line x1="398" y1="82" x2="410" y2="80"/>
+    <!-- knuckle cuts on the grasping hand -->
+    <line x1="526" y1="72" x2="532" y2="72"/>
+    <line x1="534" y1="74" x2="540" y2="74"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of an enthroned emperor offering a stooped, bare-headed exile a torn fragment of charter across a broken crown">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif, ink fills -->
+  <g fill="#1c140f">
+    <!-- LEFT: the emperor enthroned at his height, a tall canopied seat -->
+    <!-- throne canopy / baldachin -->
+    <path d="M318 18 L398 18 L390 30 L326 30 Z"/>
+    <rect x="326" y="30" width="64" height="4"/>
+    <!-- high throne back -->
+    <rect x="332" y="34" width="52" height="58"/>
+    <!-- emperor body, robed and broad -->
+    <path d="M330 50 L386 50 L392 96 L324 96 Z"/>
+    <!-- imperial crowned head -->
+    <circle cx="358" cy="44" r="10"/>
+    <path d="M346 38 L350 30 L354 36 L358 28 L362 36 L366 30 L370 38 Z"/>
+    <!-- sceptre / orb arm at his height, raised -->
+    <rect x="384" y="40" width="4" height="34" transform="rotate(18 386 57)"/>
+    <circle cx="398" cy="40" r="5"/>
+    <!-- the extended offering hand reaching across the divide -->
+    <path d="M386 60 L420 66 L420 72 L388 70 Z"/>
+    <!-- the partial fragment of charter held out: small, torn-edged -->
+    <path d="M418 56 L446 60 L444 80 L420 78 L424 70 L418 66 Z"/>
+
+    <!-- CENTRE: a broken crown lying between them on the ground -->
+    <path d="M438 100 L446 86 L452 96 L460 84 L468 96 L474 86 L480 100 Z"/>
+    <!-- the crown cracked: a split through its band -->
+    <path d="M458 100 L456 88 L460 84 L463 90 L461 100 Z" fill="#d2c198"/>
+
+    <!-- RIGHT: the exile, bare-headed and stooped, diminished -->
+    <!-- bowed head, no crown -->
+    <circle cx="528" cy="50" r="9"/>
+    <!-- stooped shoulders / cloak falling forward -->
+    <path d="M512 58 L546 56 L552 96 L500 96 Z"/>
+    <!-- one open empty hand reaching low to receive -->
+    <path d="M500 76 L470 80 L470 86 L502 86 Z"/>
+    <!-- the surrendered cause: his standard cast down at his feet -->
+    <rect x="540" y="60" width="3" height="40" transform="rotate(22 541 80)"/>
+    <path d="M548 64 L572 70 L548 78 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: plumage, cloth folds, gouged stone -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- folds in the emperor's robe -->
+    <line x1="342" y1="56" x2="346" y2="92"/>
+    <line x1="358" y1="56" x2="360" y2="92"/>
+    <line x1="374" y1="56" x2="372" y2="92"/>
+    <!-- canopy ribs -->
+    <line x1="340" y1="22" x2="346" y2="29"/>
+    <line x1="376" y1="22" x2="370" y2="29"/>
+    <!-- gleam on the offered fragment -->
+    <line x1="424" y1="62" x2="438" y2="65"/>
+    <line x1="424" y1="70" x2="436" y2="72"/>
+    <!-- exile's bowed cloak folds -->
+    <line x1="520" y1="64" x2="516" y2="92"/>
+    <line x1="534" y1="62" x2="536" y2="92"/>
+    <!-- crack of light through the broken crown -->
+    <line x1="459" y1="98" x2="459" y2="86"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

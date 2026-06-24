@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of two clasped hands of reconciliation over a sealed treaty with pendant seal, the Peace of Prague">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <circle cx="262" cy="64" r="2.5" fill="#1c140f"/><circle cx="618" cy="64" r="2.5" fill="#1c140f"/>
+  </g>
+  <!-- central motif, ink fills, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- the unrolled treaty document behind the hands -->
+    <path d="M352 40 L528 40 L532 96 L348 96 Z"/>
+    <!-- rolled curl at left edge -->
+    <path d="M344 38 a8 8 0 0 0 0 16 l8 0 0 -16 z"/>
+    <!-- rolled curl at right edge -->
+    <path d="M528 38 a8 8 0 0 1 0 16 l-8 0 0 -16 z"/>
+    <!-- two forearms / sleeves entering from the sides -->
+    <path d="M356 70 L398 60 L412 72 L404 86 L360 88 Z"/>
+    <path d="M524 70 L482 60 L468 72 L476 86 L520 88 Z"/>
+    <!-- clasped hands at centre, blocky interlock -->
+    <path d="M398 60 L440 66 L482 60 L476 76 L440 82 L404 76 Z"/>
+    <!-- gripped knuckles silhouette -->
+    <path d="M420 64 L440 70 L460 64 L460 78 L440 84 L420 78 Z"/>
+    <!-- pendant seal cord -->
+    <rect x="436" y="92" width="8" height="14"/>
+    <!-- wax seal disc -->
+    <circle cx="440" cy="112" r="11"/>
+    <!-- small cross-quills laid over upper document -->
+    <path d="M370 44 L408 30 L411 33 L373 47 Z"/>
+    <path d="M510 44 L472 30 L469 33 L507 47 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged fingers across the clasp -->
+    <line x1="426" y1="66" x2="430" y2="80"/>
+    <line x1="436" y1="68" x2="440" y2="82"/>
+    <line x1="446" y1="68" x2="450" y2="80"/>
+    <line x1="454" y1="66" x2="456" y2="78"/>
+    <!-- sleeve folds -->
+    <line x1="372" y1="74" x2="396" y2="68"/>
+    <line x1="508" y1="74" x2="484" y2="68"/>
+    <!-- document ruling lines -->
+    <line x1="360" y1="50" x2="520" y2="50"/>
+    <line x1="358" y1="58" x2="424" y2="58"/>
+    <line x1="456" y1="58" x2="522" y2="58"/>
+    <!-- carved emblem on the wax seal -->
+    <line x1="440" y1="105" x2="440" y2="119"/>
+    <line x1="433" y1="112" x2="447" y2="112"/>
+    <circle cx="440" cy="112" r="6" stroke="#d2c198" stroke-width="1.2"/>
+  </g>
+  <!-- shading hatch on the parchment field -->
+  <g stroke="#1c140f" stroke-width="0.7" opacity="0.22">
+    <line x1="466" y1="50" x2="466" y2="92"/>
+    <line x1="478" y1="52" x2="478" y2="92"/>
+    <line x1="490" y1="52" x2="490" y2="92"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

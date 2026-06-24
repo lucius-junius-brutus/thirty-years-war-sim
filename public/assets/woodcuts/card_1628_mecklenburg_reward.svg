@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a princely coronet held aloft on a cushion over a toppled ducal shield, marking Mecklenburg given to Wallenstein as payment">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M250 64 l-12 -7 0 14 z"/><path d="M630 64 l12 -7 0 14 z"/>
+  </g>
+  <!-- central motif: two hands raise a princely coronet on a cushion; below, the old house's shield turned out -->
+  <g fill="#1c140f">
+    <!-- the toppled ducal escutcheon (old house turned out), tilted, lower right of centre -->
+    <path d="M468 96 l30 4 -6 26 -28 -6 z"/>
+    <!-- a bend/bar across the fallen shield -->
+    <!-- crossed staves of office, broken, lower left -->
+    <rect x="392" y="86" width="46" height="6" transform="rotate(28 415 89)"/>
+    <rect x="392" y="86" width="46" height="6" transform="rotate(-24 415 89)"/>
+    <!-- cushion that bears the new dignity -->
+    <path d="M396 78 q44 -16 88 0 q6 4 0 9 q-44 13 -88 0 q-6 -5 0 -9 z"/>
+    <!-- tassels at the cushion corners -->
+    <path d="M394 86 l-5 9 4 2 4 -9z"/><path d="M486 86 l5 9 -4 2 -4 -9z"/>
+    <!-- the princely coronet, raised aloft, centred at x=440 -->
+    <!-- circlet band -->
+    <rect x="404" y="58" width="72" height="11"/>
+    <!-- points of the coronet with pearls -->
+    <path d="M408 58 l8 -22 8 22z"/><path d="M428 58 l6 -28 6 28z"/>
+    <path d="M452 58 l6 -28 6 28z"/><path d="M464 58 l8 -22 8 22z"/>
+    <circle cx="416" cy="32" r="4"/><circle cx="434" cy="26" r="4"/>
+    <circle cx="446" cy="26" r="4"/><circle cx="468" cy="32" r="4"/>
+    <!-- the two hands offering it up from below -->
+    <path d="M380 96 q14 -8 30 -4 l-2 12 q-16 4 -30 -2 z"/>
+    <path d="M500 96 q-14 -8 -30 -4 l2 12 q16 4 30 -2 z"/>
+    <!-- cuffed sleeves -->
+    <path d="M366 104 l22 -6 4 14 -22 6z"/>
+    <path d="M514 104 l-22 -6 -4 14 22 6z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouges across the circlet band -->
+    <line x1="412" y1="63" x2="468" y2="63"/>
+    <line x1="410" y1="66" x2="470" y2="66"/>
+    <!-- cut light on the coronet points -->
+    <line x1="416" y1="40" x2="416" y2="52"/>
+    <line x1="440" y1="34" x2="440" y2="52"/>
+    <line x1="464" y1="40" x2="464" y2="52"/>
+    <!-- cushion plumping / cloth folds -->
+    <path d="M408 80 q32 -8 64 0" stroke-width="1.3"/>
+    <path d="M414 84 q26 6 52 0" stroke-width="1.3"/>
+    <!-- knuckle cuts on the hands -->
+    <line x1="388" y1="98" x2="404" y2="96"/>
+    <line x1="492" y1="98" x2="476" y2="96"/>
+    <!-- a slash across the fallen shield, the old line struck through -->
+    <line x1="466" y1="100" x2="494" y2="122"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

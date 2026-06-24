@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a cardinal in robes set aside, an imperial hand gripping his shoulder to lead him away">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: a cardinal led aside, ink fills -->
+  <g fill="#1c140f">
+    <!-- the cardinal's body, a heavy robed silhouette canted as if being pulled -->
+    <path d="M404 108 L408 70 Q412 56 424 52 L452 50 Q466 52 470 70 L476 108 Z"/>
+    <!-- shoulders / mozzetta cape over the robe -->
+    <path d="M402 72 Q438 58 480 74 L474 88 Q438 76 408 90 Z"/>
+    <!-- neck and head, tilted toward the gripping hand -->
+    <path d="M432 54 Q430 42 440 38 Q452 38 452 50 Q452 58 444 60 Z"/>
+    <!-- the broad cardinal's galero hat, wide flat brim with crown -->
+    <path d="M410 36 L474 36 Q478 36 476 40 L468 40 Q452 30 432 32 Q420 33 414 40 L408 40 Q406 36 410 36 Z"/>
+    <ellipse cx="442" cy="29" rx="18" ry="7"/>
+    <!-- pendant tassels falling from the hat brim -->
+    <path d="M412 40 L408 58 M420 40 L417 62 M464 40 L468 58 M472 40 L474 60" stroke="#1c140f" stroke-width="2" fill="none"/>
+    <circle cx="408" cy="60" r="2.4"/><circle cx="417" cy="64" r="2.4"/>
+    <circle cx="468" cy="60" r="2.4"/><circle cx="474" cy="62" r="2.4"/>
+    <!-- the imperial hand reaching in from the right, gripping the shoulder -->
+    <path d="M520 70 L486 74 Q478 76 480 82 Q482 88 492 86 L498 85 Q494 92 502 92 L508 90 Q506 96 514 94 L520 91 Q524 90 524 84 L526 72 Q524 68 520 70 Z"/>
+    <!-- the gauntlet cuff of that arm, blocky -->
+    <path d="M520 66 L556 60 L560 84 L524 90 Z"/>
+    <!-- a fallen crozier / staff laid down at his feet, set aside -->
+    <path d="M398 104 L506 96 L506 100 L398 108 Z"/>
+    <path d="M396 96 Q388 96 388 104 Q388 110 396 110 Q392 104 398 102 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged folds in the robe -->
+    <path d="M424 96 L428 70"/><path d="M444 98 L448 72"/><path d="M460 100 L462 76"/>
+    <!-- light across the mozzetta cape -->
+    <path d="M414 80 Q442 70 470 80"/>
+    <!-- crown ridge of the galero hat -->
+    <path d="M428 28 Q442 24 456 29"/>
+    <!-- knuckle cuts on the gripping hand -->
+    <path d="M492 80 L500 79 M500 86 L508 85 M514 88 L520 87"/>
+    <!-- shine on the gauntlet cuff -->
+    <path d="M528 70 L552 66"/>
+    <!-- glint along the laid-down crozier -->
+    <path d="M404 104 L500 97"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

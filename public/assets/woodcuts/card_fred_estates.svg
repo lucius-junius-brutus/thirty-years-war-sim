@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the Bohemian estates kneeling to present their confederate charter, with pendant seal, to the enthroned new king">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M60 64 l10 -6 v12 z"/><path d="M820 64 l-10 -6 v12 z"/>
+  </g>
+  <!-- central motif: enthroned king (right) receiving the confederate charter from kneeling estates (left) -->
+  <g fill="#1c140f">
+    <!-- canopy / throne baldachin over the king at right -->
+    <path d="M505 22 h78 v8 h-78 z"/>
+    <path d="M505 30 l8 10 h62 l8 -10 z"/>
+    <!-- throne back -->
+    <rect x="540" y="40" width="34" height="58"/>
+    <path d="M540 40 l17 -10 l17 10 z"/>
+    <!-- enthroned king silhouette -->
+    <path d="M525 56 q12 -16 24 0 v44 h-24 z"/>
+    <circle cx="537" cy="49" r="9"/>
+    <!-- crown atop king -->
+    <path d="M528 41 h18 l-2 -8 l-4 5 l-3 -7 l-3 7 l-4 -5 z"/>
+    <!-- king's extended arm reaching toward the charter -->
+    <path d="M525 64 l-22 6 l2 6 l22 -6 z"/>
+    <!-- sceptre in other hand -->
+    <rect x="552" y="50" width="3" height="34"/>
+    <circle cx="553" cy="48" r="4"/>
+    <!-- two kneeling estate envoys at left, robed, bowed -->
+    <path d="M360 100 q4 -34 20 -34 q16 0 20 34 z"/>
+    <circle cx="380" cy="60" r="10"/>
+    <path d="M398 100 q4 -30 18 -30 q14 0 18 30 z"/>
+    <circle cx="416" cy="66" r="9"/>
+    <!-- estates' outstretched arms presenting the charter -->
+    <path d="M398 78 l44 -10 l2 6 l-44 10 z"/>
+    <!-- the confederate charter: a broad sealed document held between them and the king -->
+    <rect x="440" y="62" width="64" height="30"/>
+    <!-- rolled top edge of the charter -->
+    <path d="M440 62 q32 -8 64 0 v4 q-32 -8 -64 0 z"/>
+    <!-- pendant seal hanging from the charter on a cord -->
+    <line x1="470" y1="92" x2="470" y2="104" stroke="#1c140f" stroke-width="3"/>
+    <circle cx="470" cy="110" r="8"/>
+    <!-- crossed quills laid over the document corner -->
+    <path d="M496 60 l16 -16 l3 3 l-16 16 z"/>
+    <path d="M512 60 l-16 -16 l-3 3 l16 16 z"/>
+  </g>
+  <!-- engraved hatching: shadow beneath canopy and on charter -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.3">
+    <line x1="446" y1="70" x2="498" y2="70"/><line x1="446" y1="76" x2="498" y2="76"/>
+    <line x1="446" y1="82" x2="498" y2="82"/><line x1="446" y1="88" x2="498" y2="88"/>
+    <line x1="510" y1="34" x2="578" y2="34"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged folds on king's robe -->
+    <path d="M531 64 v32" fill="none"/>
+    <path d="M540 66 v30" fill="none"/>
+    <!-- glint on crown -->
+    <line x1="535" y1="38" x2="540" y2="38"/>
+    <!-- gouged folds on kneeling robes -->
+    <path d="M373 74 v24" fill="none"/>
+    <path d="M386 76 v22" fill="none"/>
+    <path d="M410 80 v18" fill="none"/>
+    <!-- cut lines suggesting writing on the charter -->
+    <line x1="450" y1="73" x2="494" y2="73"/>
+    <line x1="450" y1="85" x2="486" y2="85"/>
+    <!-- highlight wax mark on the seal -->
+    <path d="M467 108 l4 4" fill="none"/>
+    <!-- quill barb cuts -->
+    <line x1="500" y1="52" x2="508" y2="48"/>
+    <line x1="508" y1="52" x2="500" y2="48"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

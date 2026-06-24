@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the enemy army massing with pikes and standards below the chalk White Mountain on the eve of battle">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the chalk White Mountain crowned by massed enemy pikes and standards -->
+  <g fill="#1c140f">
+    <!-- the chalk hill, a broad blocky silhouette -->
+    <path d="M312 100 L360 64 L400 50 L450 44 L500 48 L548 62 L568 100 Z"/>
+    <!-- a crowning ridge band of massed troops on the slope -->
+    <path d="M356 66 L572 66 L568 78 L360 78 Z" opacity="0.0"/>
+    <!-- standards / banners planted along the crest -->
+    <rect x="372" y="30" width="3" height="40"/><path d="M375 31 L398 35 L375 45 Z"/>
+    <rect x="500" y="26" width="3" height="44"/><path d="M503 27 L528 32 L503 43 Z"/>
+    <rect x="438" y="22" width="3" height="48"/><path d="M441 23 L420 28 L441 38 Z"/>
+    <!-- massed pike forest, angular blades raised -->
+    <g stroke="#1c140f" stroke-width="2.4" stroke-linecap="square">
+      <line x1="356" y1="68" x2="350" y2="34"/><line x1="364" y1="68" x2="362" y2="30"/>
+      <line x1="382" y1="68" x2="384" y2="32"/><line x1="392" y1="68" x2="388" y2="36"/>
+      <line x1="408" y1="68" x2="406" y2="28"/><line x1="418" y1="68" x2="422" y2="34"/>
+      <line x1="452" y1="68" x2="450" y2="30"/><line x1="462" y1="68" x2="466" y2="34"/>
+      <line x1="478" y1="68" x2="474" y2="32"/><line x1="488" y1="68" x2="490" y2="28"/>
+      <line x1="512" y1="68" x2="508" y2="34"/><line x1="522" y1="68" x2="526" y2="30"/>
+      <line x1="540" y1="68" x2="544" y2="36"/><line x1="552" y1="68" x2="550" y2="40"/>
+    </g>
+    <!-- pike-head wedges -->
+    <g>
+      <path d="M350 34 l-3 7 l6 0 Z"/><path d="M362 30 l-3 7 l6 0 Z"/>
+      <path d="M406 28 l-3 7 l6 0 Z"/><path d="M450 30 l-3 7 l6 0 Z"/>
+      <path d="M490 28 l-3 7 l6 0 Z"/><path d="M526 30 l-3 7 l6 0 Z"/>
+    </g>
+    <!-- the dense block of soldiers, a blocky ink mass at the hillfoot -->
+    <path d="M348 90 L572 90 L572 100 L348 100 Z"/>
+    <!-- smoke / drifting cannon haze, rounded angular puffs to the side -->
+    <path d="M540 86 q14 -10 26 -2 q10 -8 16 2 q-6 8 -16 6 q-12 6 -26 -6 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged chalk face, plumed standards, cuts in the block -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- chalk striations down the white hill -->
+    <line x1="404" y1="56" x2="380" y2="96"/><line x1="430" y1="50" x2="416" y2="96"/>
+    <line x1="458" y1="50" x2="466" y2="96"/><line x1="490" y1="56" x2="510" y2="94"/>
+    <!-- banner folds -->
+    <line x1="380" y1="36" x2="392" y2="38"/><line x1="510" y1="33" x2="522" y2="35"/>
+    <line x1="430" y1="29" x2="424" y2="31"/>
+    <!-- separations between the ranks of the massed block -->
+    <line x1="380" y1="92" x2="380" y2="100"/><line x1="420" y1="92" x2="420" y2="100"/>
+    <line x1="460" y1="92" x2="460" y2="100"/><line x1="500" y1="92" x2="500" y2="100"/>
+    <line x1="538" y1="92" x2="538" y2="100"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

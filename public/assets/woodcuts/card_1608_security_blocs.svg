@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of two opposed armed camps, a Protestant Union banner and pikes facing a Catholic League banner and pikes across a dividing pale">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- central motif: two armed camps divided by a central pale -->
+  <g fill="#1c140f">
+    <!-- LEFT CAMP: Protestant Union — massed pikes and a banner -->
+    <!-- pike shafts -->
+    <rect x="312" y="40" width="2.4" height="68"/>
+    <rect x="320" y="34" width="2.4" height="74"/>
+    <rect x="328" y="42" width="2.4" height="66"/>
+    <rect x="336" y="36" width="2.4" height="72"/>
+    <rect x="344" y="44" width="2.4" height="64"/>
+    <!-- pike heads (blocky leaf points) -->
+    <polygon points="313,40 309,28 317,28"/>
+    <polygon points="321,34 317,20 325,20"/>
+    <polygon points="329,42 325,30 333,30"/>
+    <polygon points="337,36 333,22 341,22"/>
+    <polygon points="345,44 341,32 349,32"/>
+    <!-- Union banner on a staff, swallow-tail to the right -->
+    <rect x="358" y="30" width="2.6" height="78"/>
+    <path d="M361 34 L408 38 L394 50 L408 62 L361 60 Z"/>
+
+    <!-- DIVIDING PALE: a tall central post with confronted blocks -->
+    <polygon points="436,18 444,18 446,24 434,24"/>
+    <rect x="437" y="24" width="6" height="84"/>
+
+    <!-- RIGHT CAMP: Catholic League — massed pikes and a banner -->
+    <!-- League banner on a staff, swallow-tail to the left -->
+    <rect x="519" y="30" width="2.6" height="78"/>
+    <path d="M519 34 L472 38 L486 50 L472 62 L519 60 Z"/>
+    <!-- pike shafts -->
+    <rect x="535" y="44" width="2.4" height="64"/>
+    <rect x="543" y="36" width="2.4" height="72"/>
+    <rect x="551" y="42" width="2.4" height="66"/>
+    <rect x="559" y="34" width="2.4" height="74"/>
+    <rect x="567" y="40" width="2.4" height="68"/>
+    <!-- pike heads -->
+    <polygon points="536,44 532,32 540,32"/>
+    <polygon points="544,36 540,22 548,22"/>
+    <polygon points="552,42 548,30 556,30"/>
+    <polygon points="560,34 556,20 564,20"/>
+    <polygon points="568,40 564,28 572,28"/>
+  </g>
+
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- emblem gouged into Union banner: a cross-staff bar -->
+    <line x1="370" y1="40" x2="394" y2="44"/>
+    <line x1="380" y1="36" x2="380" y2="54"/>
+    <!-- emblem gouged into League banner: confronted bar -->
+    <line x1="486" y1="40" x2="510" y2="44"/>
+    <line x1="498" y1="36" x2="498" y2="54"/>
+    <!-- chiselled facets on the dividing post -->
+    <line x1="440" y1="28" x2="440" y2="104"/>
+    <!-- flecks of light along the pike shafts (left) -->
+    <line x1="313" y1="50" x2="313" y2="58"/>
+    <line x1="337" y1="46" x2="337" y2="54"/>
+    <!-- flecks of light along the pike shafts (right) -->
+    <line x1="544" y1="46" x2="544" y2="54"/>
+    <line x1="560" y1="44" x2="560" y2="52"/>
+    <!-- cut edge on banner staves -->
+    <line x1="358.4" y1="46" x2="358.4" y2="96"/>
+    <line x1="520.4" y1="46" x2="520.4" y2="96"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

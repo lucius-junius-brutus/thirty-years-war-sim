@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a defiant walled gate-tower under a flag of refusal while a column of pikes advances to reduce the last holdouts">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: defiant gate-tower (right), advancing pike column (left) -->
+  <g fill="#1c140f">
+    <!-- left curtain wall with crenellations -->
+    <rect x="372" y="74" width="80" height="36"/>
+    <rect x="372" y="68" width="10" height="8"/><rect x="392" y="68" width="10" height="8"/>
+    <rect x="412" y="68" width="10" height="8"/><rect x="432" y="68" width="10" height="8"/>
+    <!-- the holdout gate-tower, blocky and tall -->
+    <rect x="452" y="40" width="56" height="70"/>
+    <rect x="452" y="32" width="11" height="8"/><rect x="474" y="32" width="11" height="8"/><rect x="497" y="32" width="11" height="8"/>
+    <!-- shut gate arch -->
+    <path d="M468 110 v-22 a12 12 0 0 1 24 0 v22 z"/>
+    <!-- defiant flag of refusal on a staff above the tower -->
+    <rect x="478" y="6" width="4" height="28"/>
+    <path d="M482 8 h34 l-9 8 l9 8 h-34 z"/>
+    <!-- second curtain wall right side -->
+    <rect x="508" y="80" width="40" height="30"/>
+    <rect x="508" y="74" width="10" height="8"/><rect x="528" y="74" width="10" height="8"/>
+    <!-- advancing pike column from the west: angled shafts -->
+    <g stroke="#1c140f" stroke-width="3" stroke-linecap="round">
+      <line x1="306" y1="108" x2="322" y2="56"/>
+      <line x1="318" y1="108" x2="334" y2="56"/>
+      <line x1="330" y1="108" x2="346" y2="56"/>
+      <line x1="342" y1="108" x2="358" y2="56"/>
+      <line x1="354" y1="108" x2="370" y2="58"/>
+    </g>
+    <!-- pike heads -->
+    <path d="M322 56 l-4 7 l8 0 z"/><path d="M334 56 l-4 7 l8 0 z"/>
+    <path d="M346 56 l-4 7 l8 0 z"/><path d="M358 56 l-4 7 l8 0 z"/>
+    <!-- massed soldier silhouette base behind the pikes -->
+    <path d="M304 110 q26 -14 60 -10 l0 10 z"/>
+    <!-- a cannon trained on the tower -->
+    <rect x="356" y="100" width="20" height="8"/>
+    <circle cx="358" cy="108" r="6"/><circle cx="374" cy="108" r="5"/>
+    <rect x="372" y="98" width="22" height="5" transform="rotate(-8 372 100)"/>
+    <!-- drifting smoke puffs -->
+    <circle cx="420" cy="46" r="8"/><circle cx="432" cy="40" r="6"/><circle cx="410" cy="40" r="6"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged stone courses on the holdout tower -->
+    <line x1="456" y1="52" x2="504" y2="52"/><line x1="456" y1="66" x2="504" y2="66"/>
+    <line x1="456" y1="80" x2="504" y2="80"/><line x1="456" y1="94" x2="504" y2="94"/>
+    <line x1="470" y1="40" x2="470" y2="110"/><line x1="490" y1="40" x2="490" y2="88"/>
+    <!-- cloth folds carved into the flag of refusal -->
+    <line x1="488" y1="10" x2="500" y2="13"/><line x1="488" y1="18" x2="504" y2="20"/><line x1="488" y1="26" x2="500" y2="27"/>
+    <!-- stone on the curtain walls -->
+    <line x1="376" y1="86" x2="448" y2="86"/><line x1="376" y1="98" x2="448" y2="98"/>
+    <line x1="512" y1="92" x2="544" y2="92"/>
+    <!-- glint along the pike shafts -->
+    <line x1="313" y1="100" x2="324" y2="64"/><line x1="337" y1="100" x2="348" y2="64"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

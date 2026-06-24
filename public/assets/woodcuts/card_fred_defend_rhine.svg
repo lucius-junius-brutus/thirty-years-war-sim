@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of Palatine pikemen holding a thin line along the river Rhine, a shrinking shore behind them">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- river behind: the Rhine, engraved water lines across the centre -->
+  <g stroke="#1c140f" stroke-width="1.4" opacity="0.4">
+    <line x1="304" y1="92" x2="576" y2="92"/>
+    <line x1="320" y1="98" x2="560" y2="98"/>
+    <line x1="336" y1="104" x2="544" y2="104"/>
+  </g>
+  <!-- central motif: a thin defended line of pikes on the near shore -->
+  <g fill="#1c140f">
+    <!-- the held bank: a blocky earthwork the line stands on -->
+    <path d="M312 88 L568 88 L560 100 L320 100 Z"/>
+    <!-- the shrinking corner: a wedge of land pressed to the river edge -->
+    <path d="M392 88 L488 88 L470 78 L410 78 Z"/>
+    <!-- standard at the centre, the Palatine banner held high -->
+    <rect x="438" y="20" width="4" height="70"/>
+    <path d="M442 22 L478 30 L442 44 Z"/>
+    <!-- four captains' pikemen, a thin rank shoulder to shoulder -->
+    <rect x="408" y="58" width="7" height="30"/>
+    <rect x="424" y="56" width="7" height="32"/>
+    <rect x="450" y="56" width="7" height="32"/>
+    <rect x="466" y="58" width="7" height="30"/>
+    <!-- helmeted heads, blocky morions -->
+    <path d="M405 56 L418 56 L416 50 L407 50 Z"/>
+    <path d="M421 54 L434 54 L432 48 L423 48 Z"/>
+    <path d="M447 54 L460 54 L458 48 L449 48 Z"/>
+    <path d="M463 56 L476 56 L474 50 L465 50 Z"/>
+    <!-- the long pikes, levelled toward the far bank, angular -->
+    <path d="M412 58 L404 8 L408 8 L416 58 Z"/>
+    <path d="M428 56 L424 6 L428 6 L432 56 Z"/>
+    <path d="M453 56 L457 6 L461 6 L457 56 Z"/>
+    <path d="M469 58 L477 8 L481 8 L473 58 Z"/>
+    <!-- pressing foe across the water: a dense thicket of enemy pikes, smaller, far bank -->
+    <g>
+      <rect x="500" y="74" width="3" height="14"/><rect x="508" y="72" width="3" height="16"/>
+      <rect x="516" y="74" width="3" height="14"/><rect x="524" y="73" width="3" height="15"/>
+      <rect x="532" y="74" width="3" height="14"/>
+      <path d="M501 74 L498 50 L500 50 Z"/><path d="M509 72 L506 46 L508 46 Z"/>
+      <path d="M517 74 L514 50 L516 50 Z"/><path d="M525 73 L522 48 L524 48 Z"/>
+      <path d="M533 74 L530 50 L532 50 Z"/>
+    </g>
+    <!-- a low watch-tower stub on the held corner -->
+    <path d="M360 88 L360 64 L376 64 L376 88 Z"/>
+    <path d="M357 64 L379 64 L368 54 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged shine on the near pike-shafts -->
+    <line x1="411" y1="62" x2="411" y2="84"/>
+    <line x1="427" y1="60" x2="427" y2="84"/>
+    <line x1="453" y1="60" x2="453" y2="84"/>
+    <line x1="469" y1="62" x2="469" y2="84"/>
+    <!-- bright fold across the standard cloth -->
+    <line x1="448" y1="28" x2="470" y2="33"/>
+    <!-- light catching the helmets -->
+    <line x1="409" y1="52" x2="414" y2="52"/>
+    <line x1="425" y1="50" x2="430" y2="50"/>
+    <line x1="451" y1="50" x2="456" y2="50"/>
+    <line x1="467" y1="52" x2="472" y2="52"/>
+    <!-- chiselled edge along the earthwork bank -->
+    <line x1="322" y1="90" x2="558" y2="90"/>
+    <!-- a cut down the tower face -->
+    <line x1="368" y1="66" x2="368" y2="86"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of two armoured hands clasped across a drawn line between the Saxon and Swedish shields, sealing Saxony's armed alliance with Sweden">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: two armoured hands clasped over a drawn line, flanked by shields -->
+  <g fill="#1c140f">
+    <!-- left shield: Saxony (crossed swords) -->
+    <path d="M320 30 L372 30 L372 58 Q372 82 346 94 Q320 82 320 58 Z"/>
+    <!-- right shield: Sweden (crown), as a blocky escutcheon -->
+    <path d="M508 30 L560 30 L560 58 Q560 82 534 94 Q508 82 508 58 Z"/>
+    <!-- left forearm in armour, reaching to centre -->
+    <path d="M372 76 L420 60 L438 66 L432 80 L388 92 Z"/>
+    <rect x="376" y="70" width="9" height="20" transform="rotate(-18 380 80)"/>
+    <!-- right forearm in armour, reaching to centre -->
+    <path d="M508 76 L460 60 L442 66 L448 80 L492 92 Z"/>
+    <rect x="495" y="70" width="9" height="20" transform="rotate(18 500 80)"/>
+    <!-- the clasp of hands at centre x=440 -->
+    <path d="M424 58 Q440 50 456 58 L460 72 Q440 84 420 72 Z"/>
+    <!-- gauntlet knuckle blocks -->
+    <rect x="426" y="60" width="7" height="9"/><rect x="435" y="58" width="7" height="9"/><rect x="444" y="58" width="7" height="9"/><rect x="452" y="60" width="7" height="9"/>
+    <!-- the drawn line of crossing: a sword laid vertical behind the clasp -->
+    <rect x="437" y="22" width="6" height="46"/>
+    <polygon points="440,16 446,24 434,24"/>
+    <rect x="428" y="40" width="24" height="5"/>
+  </g>
+  <!-- Saxony crossed-swords emblem on left shield (ground-cut) -->
+  <g stroke="#d2c198" stroke-width="2.4" stroke-linecap="round">
+    <line x1="330" y1="40" x2="362" y2="74"/>
+    <line x1="362" y1="40" x2="330" y2="74"/>
+  </g>
+  <!-- Sweden three-crown hint on right shield (ground-cut blocks) -->
+  <g stroke="#d2c198" stroke-width="2.2" stroke-linecap="round">
+    <line x1="520" y1="44" x2="548" y2="44"/>
+    <line x1="522" y1="44" x2="522" y2="38"/><line x1="534" y1="44" x2="534" y2="36"/><line x1="546" y1="44" x2="546" y2="38"/>
+    <line x1="524" y1="58" x2="544" y2="58"/>
+    <line x1="528" y1="70" x2="540" y2="70"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged armour and blade glints -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <line x1="396" y1="68" x2="426" y2="56"/>
+    <line x1="484" y1="68" x2="454" y2="56"/>
+    <line x1="430" y1="64" x2="450" y2="64"/>
+    <line x1="440" y1="24" x2="440" y2="64"/>
+    <line x1="378" y1="74" x2="384" y2="86"/>
+    <line x1="496" y1="74" x2="502" y2="86"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

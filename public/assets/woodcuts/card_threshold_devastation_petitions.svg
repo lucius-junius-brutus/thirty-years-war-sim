@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of starving petitioners kneeling before a burnt village, raising a petition amid ruin">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved smoke-sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: burnt village behind, kneeling petitioners before, petition raised -->
+  <g fill="#1c140f">
+    <!-- rising smoke columns from the burnt village -->
+    <path d="M330 40 q-8 -14 4 -24 q-10 -10 2 -22 l5 2 q-7 9 1 17 q9 9 -2 19 q7 9 -3 16z"/>
+    <path d="M560 42 q9 -13 -3 -24 q11 -9 -1 -22 l-5 2 q8 8 0 16 q-9 9 3 19 q-8 8 2 17z"/>
+    <!-- burnt cottage left: broken roof and standing gable -->
+    <path d="M322 80 l0 -22 l22 -16 l22 16 l0 6 l-8 -5 l0 21z"/>
+    <rect x="328" y="66" width="9" height="14"/>
+    <!-- charred timbers leaning -->
+    <path d="M348 80 l3 -26 l4 0 l-2 26z"/>
+    <!-- ruined church/tower right with broken steeple -->
+    <path d="M548 80 l0 -34 l8 -12 l3 5 l-4 6 l0 35z"/>
+    <rect x="556" y="58" width="18" height="22"/>
+    <path d="M556 58 l9 -12 l9 12z"/>
+    <rect x="562" y="66" width="6" height="14"/>
+    <!-- low burnt wall stumps between -->
+    <path d="M372 80 l0 -10 l10 0 l0 6 l8 0 l0 -8 l10 0 l0 12z"/>
+    <!-- the large petition scroll, raised between two suppliant arms -->
+    <path d="M430 58 l40 0 l0 30 l-40 0 z"/>
+    <path d="M430 58 q-6 4 0 8 l0 22 q-6 4 0 8z" />
+    <path d="M470 58 q6 4 0 8 l0 22 q6 4 0 8z" />
+    <!-- ruled lines of the plea (ink bars) -->
+    <!-- pendant wax seal hanging from the scroll -->
+    <path d="M448 88 l4 8 l-2 0 z"/>
+    <circle cx="450" cy="100" r="7"/>
+    <!-- kneeling petitioner, left, arms lifted to the scroll -->
+    <path d="M408 104 q-2 -18 8 -24 q-10 -6 -4 -16 q4 -7 11 -4 q7 3 4 11 q8 6 4 18 l6 0 q5 -2 9 -10 l4 4 q-6 12 -16 13 l-7 0 q3 9 2 18z"/>
+    <!-- kneeling petitioner, right, arms lifted, hollow-cheeked -->
+    <path d="M492 104 q2 -18 -8 -24 q10 -6 4 -16 q-4 -7 -11 -4 q-7 3 -4 11 q-8 6 -4 18 l-6 0 q-5 -2 -9 -10 l-4 4 q6 12 16 13 l7 0 q-3 9 -2 18z"/>
+    <!-- a child clinging, low and small, centre -->
+    <path d="M444 104 q-2 -12 5 -16 q-6 -4 -1 -10 q4 -4 8 0 q4 5 -1 10 q6 5 4 16z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged cloth, ash, plea-lines -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- plea lines ruled across the petition -->
+    <line x1="436" y1="66" x2="464" y2="66"/>
+    <line x1="436" y1="72" x2="464" y2="72"/>
+    <line x1="436" y1="78" x2="460" y2="78"/>
+    <!-- seal nick -->
+    <line x1="447" y1="98" x2="453" y2="102"/>
+    <!-- gouged folds on the left suppliant's robe -->
+    <line x1="412" y1="92" x2="416" y2="102"/>
+    <line x1="420" y1="88" x2="422" y2="100"/>
+    <!-- gouged folds on the right suppliant -->
+    <line x1="488" y1="92" x2="484" y2="102"/>
+    <line x1="480" y1="88" x2="478" y2="100"/>
+    <!-- hollow of the lifted arms -->
+    <line x1="426" y1="74" x2="432" y2="70"/>
+    <line x1="474" y1="74" x2="468" y2="70"/>
+    <!-- ash-light on the broken gable and tower -->
+    <line x1="328" y1="62" x2="338" y2="56"/>
+    <line x1="558" y1="62" x2="558" y2="74"/>
+    <line x1="566" y1="50" x2="566" y2="58"/>
+    <!-- child's small fold -->
+    <line x1="450" y1="94" x2="452" y2="102"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

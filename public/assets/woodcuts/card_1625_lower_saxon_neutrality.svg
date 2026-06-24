@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a northern muster: a column of raised pikes behind a war drum, fed by sacks of Danish and English subsidy coin">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: massed pikes rising behind a war drum, flanked by subsidy coin sacks -->
+  <g fill="#1c140f">
+    <!-- raised pikeshafts, the northern muster bristling skyward -->
+    <polygon points="350,24 354,24 360,98 344,98"/>
+    <polygon points="372,18 376,18 382,98 366,98"/>
+    <polygon points="396,22 400,22 404,98 390,98"/>
+    <polygon points="420,16 424,16 426,98 414,98"/>
+    <polygon points="456,16 460,16 466,98 454,98"/>
+    <polygon points="480,22 484,22 490,98 476,98"/>
+    <polygon points="504,18 508,18 514,98 498,98"/>
+    <polygon points="528,24 532,24 540,98 522,98"/>
+    <!-- pike heads, leaf-blade points -->
+    <polygon points="352,8 348,26 356,26"/>
+    <polygon points="374,2 370,20 378,20"/>
+    <polygon points="398,6 394,24 402,24"/>
+    <polygon points="422,0 418,18 426,18"/>
+    <polygon points="458,0 454,18 462,18"/>
+    <polygon points="482,6 478,24 486,24"/>
+    <polygon points="506,2 502,20 510,20"/>
+    <polygon points="530,8 526,26 534,26"/>
+    <!-- a standard hung amid the pikes -->
+    <polygon points="436,18 440,18 440,54 436,54"/>
+    <polygon points="440,20 470,28 440,40"/>
+    <!-- war drum at centre, blocky and braced -->
+    <rect x="396" y="74" width="88" height="34"/>
+    <polygon points="396,74 484,74 478,80 402,80"/>
+    <!-- drum tension cords as zig-zag -->
+    <polygon points="402,80 410,108 414,108 406,80"/>
+    <polygon points="420,80 428,108 432,108 424,80"/>
+    <polygon points="438,80 446,108 450,108 442,80"/>
+    <polygon points="456,80 464,108 468,108 460,80"/>
+    <!-- crossed drumsticks above the drum -->
+    <polygon points="404,66 470,86 472,82 406,62"/>
+    <polygon points="476,66 410,86 408,82 474,62"/>
+    <circle cx="404" cy="64" r="4"/><circle cx="476" cy="64" r="4"/>
+    <!-- left subsidy coin-sack (Danish gold) -->
+    <path d="M338,108 Q330,82 348,80 Q366,82 358,108 Z"/>
+    <rect x="343" y="76" width="10" height="6"/>
+    <circle cx="332" cy="96" r="7"/><circle cx="324" cy="102" r="6"/>
+    <!-- right subsidy coin-sack (English subsidy) -->
+    <path d="M522,108 Q514,82 532,80 Q550,82 542,108 Z"/>
+    <rect x="527" y="76" width="10" height="6"/>
+    <circle cx="548" cy="96" r="7"/><circle cx="556" cy="102" r="6"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- glints down the pikeshafts -->
+    <line x1="352" y1="34" x2="356" y2="90"/>
+    <line x1="374" y1="28" x2="379" y2="90"/>
+    <line x1="422" y1="26" x2="423" y2="90"/>
+    <line x1="458" y1="26" x2="460" y2="90"/>
+    <line x1="506" y1="28" x2="511" y2="90"/>
+    <line x1="530" y1="34" x2="536" y2="90"/>
+    <!-- drumhead rim and tension band -->
+    <line x1="404" y1="78" x2="476" y2="78"/>
+    <line x1="400" y1="92" x2="480" y2="92"/>
+    <!-- coin-sack belly highlights -->
+    <line x1="346" y1="86" x2="346" y2="102"/>
+    <line x1="332" y1="94" x2="335" y2="98"/>
+    <line x1="534" y1="86" x2="534" y2="102"/>
+    <line x1="548" y1="94" x2="545" y2="98"/>
+    <!-- standard fold -->
+    <line x1="446" y1="24" x2="462" y2="29"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

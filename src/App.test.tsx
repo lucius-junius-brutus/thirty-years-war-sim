@@ -13,14 +13,20 @@ describe("Empire in Ashes app", () => {
     expect(screen.getByRole("heading", { name: /empire in ashes/i })).toBeInTheDocument();
     expect(screen.getByText(/choose your office/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /play ferdinand ii/i })).toBeInTheDocument();
-    // The select screen surfaces the win/lose model, including the late-game
-    // failure modes that were previously truncated off.
-    expect(screen.getByText(/what victory looks like/i)).toBeInTheDocument();
-    expect(screen.getByText(/how a reign falls/i)).toBeInTheDocument();
-    expect(screen.getByText(/political captivity/i)).toBeInTheDocument();
-    expect(screen.getByText(/wider european war/i)).toBeInTheDocument();
+    // The select screen is a character portrait: an epithet, a dramatic dek, and
+    // labelled beats. The win/lose model now lives on the primer page that follows.
+    expect(screen.getByText(/the unbending/i)).toBeInTheDocument();
+    expect(screen.getByText(/the conviction/i)).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+
+    // The primer explains how a reign is won or lost before play begins.
+    expect(
+      screen.getByRole("heading", { name: /how a reign is won or lost/i }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/eight pressures/i)).toBeInTheDocument();
+    expect(screen.getByText(/the reign ends outright/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /take up the reign/i }));
 
     expect(screen.getByText(/ferdinand ii's position/i)).toBeInTheDocument();
     expect(screen.getByText(/Peace of Augsburg/i)).toBeInTheDocument();
@@ -85,6 +91,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+    fireEvent.click(screen.getByRole("button", { name: /take up the reign/i }));
     fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
     fireEvent.click(screen.getByRole("button", { name: /Peace of Augsburg/i }));
 
@@ -103,6 +110,7 @@ describe("Empire in Ashes app", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /play ferdinand ii/i }));
+    fireEvent.click(screen.getByRole("button", { name: /take up the reign/i }));
     fireEvent.click(screen.getByRole("button", { name: /enter the first decision/i }));
 
     expect(screen.queryByText(/designer docket/i)).not.toBeInTheDocument();

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of two clasped hands sealing the Saxon bargain, an electoral hat and an offered scroll of Lusatian land between them">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M250 64 l14 -7 v14 z" fill="#1c140f"/><path d="M630 64 l-14 -7 v14 z" fill="#1c140f"/>
+  </g>
+  <!-- central motif, ink fills, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- offered scroll of Lusatian land, hung between the hands like a banner -->
+    <path d="M396 26 h88 l-6 8 v52 l6 8 h-88 l6 -8 v-52 z"/>
+    <!-- electoral hat (Saxon) sitting atop the offer -->
+    <path d="M422 20 q18 -12 36 0 q-4 8 -18 8 q-14 0 -18 -8 z"/>
+    <rect x="424" y="20" width="32" height="5"/>
+    <!-- left hand and forearm of the Emperor (cuffed sleeve from the left) -->
+    <path d="M312 82 q22 -10 46 -6 l30 8 q10 4 6 12 q-4 8 -16 6 l-30 -6 q-20 -2 -36 6 q-10 -10 0 -26 z"/>
+    <path d="M388 88 q14 4 22 -2 q-2 12 -16 14 q-12 1 -18 -6 z"/>
+    <!-- right hand and forearm of the Elector (cuffed sleeve from the right) -->
+    <path d="M568 82 q-22 -10 -46 -6 l-30 8 q-10 4 -6 12 q4 8 16 6 l30 -6 q20 -2 36 6 q10 -10 0 -26 z"/>
+    <path d="M492 88 q-14 4 -22 -2 q2 12 16 14 q12 1 18 -6 z"/>
+    <!-- the clasp where the two hands meet -->
+    <ellipse cx="440" cy="92" rx="20" ry="13"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged folds on the offered scroll -->
+    <line x1="408" y1="40" x2="408" y2="82"/>
+    <line x1="440" y1="40" x2="440" y2="82"/>
+    <line x1="472" y1="40" x2="472" y2="82"/>
+    <!-- crown rim of the electoral hat -->
+    <path d="M426 22 q14 -8 28 0"/>
+    <!-- knuckle cuts on the left hand -->
+    <line x1="360" y1="78" x2="384" y2="84"/>
+    <line x1="362" y1="84" x2="386" y2="90"/>
+    <!-- knuckle cuts on the right hand -->
+    <line x1="520" y1="78" x2="496" y2="84"/>
+    <line x1="518" y1="84" x2="494" y2="90"/>
+    <!-- cuff seams -->
+    <line x1="320" y1="70" x2="334" y2="92"/>
+    <line x1="560" y1="70" x2="546" y2="92"/>
+    <!-- glint across the clasp -->
+    <path d="M428 88 q12 -6 24 0"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

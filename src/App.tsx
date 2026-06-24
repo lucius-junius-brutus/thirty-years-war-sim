@@ -23,15 +23,15 @@ import {
   type GameState,
 } from "./game/engine";
 import { clearGame, loadGame, saveGame } from "./game/save";
+import { resolveWoodcut } from "./game/woodcut";
 
 const defaultRoleId = "role_ferdinand_ii";
 
 // Roles with an authored prelude scene; others go straight from select to play.
 const rolesWithPrelude = new Set(["role_ferdinand_ii"]);
 
-function woodcutFor(role: ReturnType<typeof getRole>, phaseId: string) {
-  const file = role.woodcuts.by_phase[phaseId] ?? role.woodcuts.default;
-  return `${import.meta.env.BASE_URL}assets/${file}`;
+function woodcutFor(role: ReturnType<typeof getRole>, card: CardRecord) {
+  return `${import.meta.env.BASE_URL}assets/${resolveWoodcut(role, card)}`;
 }
 
 function useMediaQuery(query: string) {
@@ -59,7 +59,9 @@ function App() {
     }
     return loadGame(storage) ?? createInitialGameState(gameDatabase, defaultRoleId);
   });
-  const [screen, setScreen] = useState<"role-select" | "prelude" | "play">(() => {
+  const [screen, setScreen] = useState<
+    "role-select" | "primer" | "prelude" | "play"
+  >(() => {
     const storage = getBrowserStorage();
     return storage && loadGame(storage) ? "play" : "role-select";
   });
@@ -74,6 +76,13 @@ function App() {
 
   const isNarrow = useMediaQuery("(max-width: 860px)");
   const role = getRole(gameDatabase, state.roleId);
+  // Whose reign themes the page: the picker's selection before play, the reign
+  // itself once underway. Drives both the masthead crest and the colour scheme.
+  const onboarding = screen === "role-select" || screen === "primer";
+  const activeRole = getRole(
+    gameDatabase,
+    onboarding ? selectedRoleId : state.roleId,
+  );
   const card = getCurrentCard(gameDatabase, state);
   const outcome = state.completed ? scoreOutcome(gameDatabase, state) : null;
   const latestEntry = state.log.at(-1);
@@ -108,6 +117,18 @@ function App() {
     }
   }
 
+  // Picking a character does not begin play: it opens the primer that explains
+  // how a reign is won or lost. The reign itself begins from there.
+  function choosePrimer(roleId: string) {
+    setSelectedRoleId(roleId);
+    setScreen("primer");
+    setDossier(null);
+    const storage = getBrowserStorage();
+    if (storage) {
+      clearGame(storage);
+    }
+  }
+
   function startRole(roleId: string) {
     const next = createInitialGameState(gameDatabase, roleId);
     setState(next);
@@ -126,7 +147,7 @@ function App() {
   }
 
   return (
-    <main className="app-shell">
+    <main className="app-shell" data-role={activeRole.id}>
       <header className={screen === "play" ? "masthead masthead-compact" : "masthead"}>
         <button className="quiet-button" type="button" onClick={restart}>
           <RotateCcw size={16} />
@@ -134,8 +155,8 @@ function App() {
         </button>
         <img
           className="seal"
-          src={`${import.meta.env.BASE_URL}assets/imperial-seal.svg`}
-          alt="Imperial chancery seal"
+          src={`${import.meta.env.BASE_URL}assets/${activeRole.crest}`}
+          alt={`Seal of ${activeRole.name}`}
         />
         <p className="eyebrow">A Thirty Years' War Political Simulator</p>
         <h1>Empire in Ashes</h1>
@@ -150,7 +171,13 @@ function App() {
           roles={gameDatabase.playable_roles}
           selectedId={selectedRoleId}
           onSelect={setSelectedRoleId}
-          onStart={startRole}
+          onStart={choosePrimer}
+        />
+      ) : screen === "primer" ? (
+        <MechanicsPrimer
+          role={activeRole}
+          onBack={() => setScreen("role-select")}
+          onBegin={() => startRole(selectedRoleId)}
         />
       ) : screen === "prelude" ? (
         <FerdinandPrelude role={role} onContinue={enterFirstReport} />
@@ -344,56 +371,146 @@ function RoleSelect({
             ))}
           </div>
         ) : null}
+        <p className="portrait-epithet">{role.epithet}</p>
         <h2>{role.name}</h2>
         <p className="office">{role.office}</p>
-        <p>{role.why_playable}</p>
-        <div className="role-columns">
-          <div className="compact-list">
-            <strong>Wants</strong>
-            <ul>
-              {role.player_wants.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="compact-list">
-            <strong>Constraints</strong>
-            <ul>
-              {role.constraints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="role-columns">
-          <div className="compact-list">
-            <strong>What victory looks like</strong>
-            <ul>
-              {role.success_conditions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="compact-list">
-            <strong>How a reign falls</strong>
-            <ul>
-              {role.failure_conditions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <p className="portrait-dek">{role.portrait_dek}</p>
+        <dl className="portrait-beats">
+          {role.portrait_beats.map((beat) => (
+            <div className="portrait-beat" key={beat.label}>
+              <dt>{beat.label}</dt>
+              <dd>{beat.text}</dd>
+            </div>
+          ))}
+        </dl>
         <button
           className="choice-button start-role"
           type="button"
           onClick={() => onStart(role.id)}
         >
-          <span>Begin</span>
+          <span>Choose</span>
           Play {role.name}
         </button>
       </div>
     </section>
   );
+}
+
+function MechanicsPrimer({
+  role,
+  onBack,
+  onBegin,
+}: {
+  role: ReturnType<typeof getRole>;
+  onBack: () => void;
+  onBegin: () => void;
+}) {
+  const axes = getRoleAxes(gameDatabase, role.id);
+  // The axes whose collapse ends the reign on their own, named for the player.
+  const terminalAxisNames = getRoleThresholds(gameDatabase, role.id)
+    .filter((t) => t.kind === "crisis" && t.collapse_tier === "terminal")
+    .map((t) => axes.find((a) => a.id === t.pressure)?.name)
+    .filter((name, index, list): name is string =>
+      Boolean(name) && list.indexOf(name) === index,
+    );
+
+  return (
+    <section className="primer-screen" aria-label="How the game works">
+      <div className="role-card primer-card">
+        <div className="panel-title">
+          <ShieldAlert size={17} />
+          Before you begin
+        </div>
+        <p className="portrait-epithet">{role.name} · {role.epithet}</p>
+        <h2>How a reign is won or lost</h2>
+        <p className="portrait-dek">
+          Your reign is measured along {numberWord(axes.length)} pressures. Every
+          useful choice eases some and worsens others — there is no costless
+          move, only which problem you would rather have.
+        </p>
+
+        <dl className="primer-axes">
+          {axes.map((axis) => (
+            <div className="primer-axis" key={axis.id}>
+              <dt>{axis.name}</dt>
+              <dd>
+                <span
+                  className={
+                    axis.high_is_dangerous ? "axis-pole" : "axis-pole axis-pole--danger"
+                  }
+                >
+                  {axis.low_label}
+                </span>
+                <span className="axis-track" aria-hidden="true" />
+                <span
+                  className={
+                    axis.high_is_dangerous ? "axis-pole axis-pole--danger" : "axis-pole"
+                  }
+                >
+                  {axis.high_label}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="primer-rules">
+          <p>
+            <span className="primer-rules__label">Collapse</span>
+            Push a pressure past its breaking point and it collapses.
+            {terminalAxisNames.length > 0 ? (
+              <>
+                {" "}
+                Let <strong>{joinWithAnd(terminalAxisNames)}</strong> break and the
+                reign ends outright; the others can be survived in ruin — until too
+                many give way at once.
+              </>
+            ) : (
+              " Some collapses end everything; others can be survived in ruin."
+            )}
+          </p>
+          <p>
+            <span className="primer-rules__label">The verdict</span>
+            When your reign closes, your road is laid against the one history
+            actually took — every turn you departed from the record is counted.
+          </p>
+        </div>
+
+        <div className="primer-actions">
+          <button className="quiet-button" type="button" onClick={onBack}>
+            Choose another
+          </button>
+          <button className="choice-button start-role" type="button" onClick={onBegin}>
+            <span>Begin</span>
+            Take up the reign
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function numberWord(n: number): string {
+  const words = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+  ];
+  return words[n] ?? String(n);
+}
+
+function joinWithAnd(items: string[]): string {
+  if (items.length <= 1) return items[0] ?? "";
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
 }
 
 function PressurePanel({
@@ -478,7 +595,7 @@ function EventCard({
     <article className="event-card">
       <img
         className="woodcut-band"
-        src={woodcutFor(role, card.phase_id)}
+        src={woodcutFor(role, card)}
         alt=""
         aria-hidden="true"
       />

@@ -48,6 +48,23 @@
   --space-7: 48px;
 }
 
+/* ---------- per-character heraldry ----------
+   The accent palette re-themes by whose reign is on screen. Defaults above are
+   the Habsburg register (imperial gold + oxblood) carried by Ferdinand. Each
+   role overrides the accent tokens on the shell; custom properties inherit, so
+   every chrome element that references --red/--gold/--line re-themes for free.
+   The parchment base stays shared so the chronicle still reads as one book. */
+.app-shell[data-role="role_frederick_v"] {
+  /* Palatine sable-and-or + the Bohemian gules-and-argent: a cooler, more
+     crimson register, with a pewter hairline standing in for the silver lion. */
+  --red: #a8202c;
+  --red-bright: #cf3a40;
+  --red-deep: #761a20;
+  --gold: #cbb05a;
+  --gold-bright: #ecd488;
+  --line: rgba(199, 205, 212, 0.34);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -205,11 +222,17 @@ h1 {
 /* ---------- layout ---------- */
 .desk-grid,
 .role-select,
+.primer-screen,
 .prelude-screen {
   display: grid;
   gap: var(--space-5);
   align-items: start;
   margin-top: var(--space-6);
+}
+
+.primer-screen {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
 }
 
 .desk-grid {
@@ -454,6 +477,156 @@ h3 {
 .outcome-card ul {
   margin: 8px 0 0;
   padding-left: 20px;
+}
+
+/* ---------- character portrait (role-select) ---------- */
+.portrait-epithet {
+  margin: 2px 0 0;
+  font-family: var(--font-pixel);
+  font-size: var(--text-label);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.portrait-card h2 {
+  margin-top: 2px;
+}
+
+.portrait-dek {
+  max-width: 60ch;
+  margin: 6px 0 0;
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.portrait-beats {
+  display: grid;
+  gap: 0;
+  margin: var(--space-5) 0 var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.portrait-beat {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.28fr) 1fr;
+  gap: var(--space-4);
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.portrait-beat dt {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: var(--text-label-sm);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--red-deep);
+}
+
+.portrait-beat dd {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+@media (max-width: 560px) {
+  .portrait-beat {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}
+
+/* ---------- mechanics primer ---------- */
+.primer-axes {
+  margin: var(--space-5) 0;
+  border-top: 1px solid var(--line);
+}
+
+.primer-axis {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.primer-axis dt {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: var(--text-label-sm);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.primer-axis dd {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  font-size: var(--text-body);
+}
+
+.axis-pole {
+  flex: 0 0 auto;
+  color: var(--ink-dim);
+  font-style: italic;
+}
+
+.axis-pole--danger {
+  color: var(--red-deep);
+  font-style: normal;
+}
+
+.axis-track {
+  flex: 1 1 auto;
+  height: 0;
+  border-top: 2px dotted var(--line);
+}
+
+.primer-rules {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+
+.primer-rules p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.primer-rules__label {
+  display: inline-block;
+  margin-right: var(--space-2);
+  font-family: var(--font-pixel);
+  font-size: var(--text-label-sm);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--red-deep);
+}
+
+.primer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 560px) {
+  .primer-axis {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+  .primer-axis dd {
+    flex-wrap: wrap;
+  }
 }
 
 /* ---------- pressures (dark instrument) ---------- */

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of an imperial-Bavarian army marching in column toward the chalk ridge of the White Mountain">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the chalk ridge and the marching column of pikes -->
+  <g fill="#1c140f">
+    <!-- the White Mountain: a low chalk ridge rising to the right, blocky woodcut slopes -->
+    <path d="M470 88 L505 66 L548 56 L582 58 L582 88 Z"/>
+    <path d="M520 88 L560 50 L600 47 L600 88 Z"/>
+    <!-- column of pikes: a dense forest of angled shafts, the marching tercio -->
+    <g stroke="#1c140f" stroke-width="2.4" stroke-linecap="square">
+      <line x1="314" y1="86" x2="306" y2="40"/>
+      <line x1="326" y1="86" x2="319" y2="36"/>
+      <line x1="338" y1="86" x2="332" y2="41"/>
+      <line x1="350" y1="86" x2="345" y2="34"/>
+      <line x1="362" y1="86" x2="358" y2="39"/>
+      <line x1="374" y1="86" x2="371" y2="33"/>
+      <line x1="386" y1="86" x2="384" y2="38"/>
+      <line x1="398" y1="86" x2="397" y2="32"/>
+      <line x1="410" y1="86" x2="410" y2="37"/>
+      <line x1="422" y1="86" x2="423" y2="33"/>
+      <line x1="434" y1="86" x2="436" y2="38"/>
+      <line x1="446" y1="86" x2="449" y2="35"/>
+    </g>
+    <!-- pike heads: small angular spear tips at varied heights -->
+    <g>
+      <path d="M306 40 l-4 7 8 0 Z"/><path d="M319 36 l-4 7 8 0 Z"/>
+      <path d="M345 34 l-4 7 8 0 Z"/><path d="M371 33 l-4 7 8 0 Z"/>
+      <path d="M397 32 l-4 7 8 0 Z"/><path d="M410 37 l-4 7 8 0 Z"/>
+      <path d="M423 33 l-4 7 8 0 Z"/><path d="M449 35 l-4 7 8 0 Z"/>
+    </g>
+    <!-- massed silhouette of the marching block beneath the pikes -->
+    <path d="M308 88 L308 74 Q380 66 452 74 L452 88 Z"/>
+    <!-- a standard borne at the head of the column -->
+    <rect x="458" y="44" width="3" height="44"/>
+    <path d="M461 46 L492 50 L488 58 L492 66 L461 70 Z"/>
+    <!-- two cold marching figures, blocky, at the front -->
+    <path d="M440 88 L440 76 L446 70 L452 76 L452 88 Z"/>
+    <path d="M424 88 L424 78 L429 72 L434 78 L434 88 Z"/>
+    <!-- a drum carried in the ranks -->
+    <rect x="408" y="78" width="12" height="9"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: snow on the ridge, plumed light, cloth folds -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <line x1="512" y1="64" x2="538" y2="58"/>
+    <line x1="552" y1="55" x2="576" y2="59"/>
+    <line x1="566" y1="51" x2="592" y2="50"/>
+    <line x1="466" y1="54" x2="486" y2="56"/>
+    <line x1="466" y1="62" x2="484" y2="64"/>
+    <line x1="378" y1="76" x2="430" y2="71"/>
+    <line x1="411" y1="81" x2="417" y2="81"/>
+  </g>
+  <!-- faint driven sleet, hard season -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.18">
+    <line x1="470" y1="20" x2="462" y2="34"/><line x1="500" y1="16" x2="492" y2="30"/>
+    <line x1="530" y1="22" x2="522" y2="36"/><line x1="560" y1="18" x2="552" y2="32"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

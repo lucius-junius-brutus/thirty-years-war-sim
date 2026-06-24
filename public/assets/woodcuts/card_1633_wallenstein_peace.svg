@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a general's secret peace: a sealed letter with broken wax and a divided commander's baton beneath crossed quills">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- central motif: the secret letter, crossed quills above, a baton split by shadow -->
+  <g fill="#1c140f">
+    <!-- crossed quills above the letter: the negotiation in writing -->
+    <polygon points="362,26 370,30 432,86 426,90"/>
+    <polygon points="518,26 510,30 448,86 454,90"/>
+    <!-- quill feather barbs (blocky cut nibs of the plumes) -->
+    <polygon points="362,26 350,22 356,32 346,34 360,40 368,30"/>
+    <polygon points="518,26 530,22 524,32 534,34 520,40 512,30"/>
+
+    <!-- the sealed letter, tilted, ambiguous -->
+    <polygon points="350,46 530,42 538,98 358,104"/>
+    <!-- a second sheet beneath, hinting at hidden correspondence -->
+    <polygon points="360,52 520,50 524,60 360,62"/>
+
+    <!-- the wax seal, hanging / broken: loyalty in doubt -->
+    <circle cx="440" cy="100" r="15"/>
+    <!-- jagged crack splitting the seal -->
+    <polygon points="440,86 436,93 444,96 438,101 446,104 440,114 432,104 437,99 431,94 438,90"/>
+
+    <!-- a commander's baton laid across, but cleft down the middle by silence -->
+    <rect x="372" y="70" width="136" height="9"/>
+    <polygon points="372,70 380,70 380,79 372,79"/>
+    <polygon points="500,70 508,70 508,79 500,79"/>
+  </g>
+
+  <!-- ground-colour cuts: gouged highlights over the ink -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- shafts of the quills catching light -->
+    <line x1="368" y1="34" x2="424" y2="84"/>
+    <line x1="512" y1="34" x2="456" y2="84"/>
+    <!-- engraved lines of secret text on the letter -->
+    <line x1="372" y1="68" x2="450" y2="65"/>
+    <line x1="372" y1="74" x2="430" y2="72"/>
+    <line x1="460" y1="73" x2="516" y2="71"/>
+    <line x1="372" y1="86" x2="500" y2="82"/>
+    <line x1="372" y1="92" x2="470" y2="89"/>
+    <!-- the crack through the wax seal, lit -->
+    <line x1="440" y1="88" x2="440" y2="112"/>
+    <!-- baton facets -->
+    <line x1="384" y1="74" x2="496" y2="74"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

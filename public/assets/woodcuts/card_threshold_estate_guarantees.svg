@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a charter with pendant seal held out beneath a drawn sword, estates demanding guarantees before obedience">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif, ink fills -->
+  <g fill="#1c140f">
+    <!-- the drawn sword, descending diagonally from upper right, point toward the charter -->
+    <polygon points="372,98 392,88 540,18 547,24 400,96 380,104"/>
+    <!-- sword fuller / blade body widening to the cross-guard -->
+    <polygon points="538,16 560,6 566,14 545,24"/>
+    <!-- cross-guard -->
+    <polygon points="544,8 576,24 572,32 540,16"/>
+    <!-- grip -->
+    <rect x="560" y="6" width="20" height="9" transform="rotate(28 570 10)"/>
+    <!-- pommel -->
+    <circle cx="586" cy="4" r="7"/>
+    <!-- the held-out charter: a fist gripping the rolled top edge -->
+    <path d="M352 84 l34 -6 4 14 -34 8 z"/>
+    <ellipse cx="356" cy="86" rx="9" ry="11"/>
+    <!-- the unfurled charter sheet hanging open -->
+    <polygon points="384,80 470,72 478,110 392,118"/>
+    <!-- ragged lower edge of parchment -->
+    <polygon points="392,118 408,112 422,118 438,112 452,118 466,112 478,110 478,118 392,124"/>
+    <!-- pendant seal cord -->
+    <rect x="438" y="104" width="5" height="14" transform="rotate(8 440 110)"/>
+    <!-- the wax seal, heavy disc -->
+    <circle cx="440" cy="120" r="11"/>
+    <!-- crossed quills behind the charter, marking the demand -->
+    <polygon points="430,70 500,40 503,46 433,76"/>
+    <polygon points="460,40 412,70 415,76 463,46"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- glint along the sword blade -->
+    <line x1="396" y1="90" x2="528" y2="26"/>
+    <!-- engraved lines of writing on the charter -->
+    <line x1="396" y1="86" x2="458" y2="80"/>
+    <line x1="397" y1="93" x2="460" y2="87"/>
+    <line x1="398" y1="100" x2="462" y2="94"/>
+    <line x1="399" y1="107" x2="448" y2="102"/>
+    <!-- knuckle cuts on the gripping fist -->
+    <line x1="351" y1="80" x2="351" y2="92"/>
+    <line x1="358" y1="79" x2="358" y2="91"/>
+    <!-- device gouged into the wax seal -->
+    <line x1="440" y1="113" x2="440" y2="127"/>
+    <line x1="433" y1="120" x2="447" y2="120"/>
+    <!-- spine cuts on the crossed quills -->
+    <line x1="440" y1="66" x2="494" y2="44"/>
+    <line x1="420" y1="66" x2="456" y2="48"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

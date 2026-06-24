@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the Edict of Restitution: a towering sealed decree with a great pendant wax seal and the emperor's pen, crossed by quills">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <circle cx="120" cy="64" r="2.5" fill="#1c140f"/><circle cx="760" cy="64" r="2.5" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the towering sealed edict, centred near x=440 -->
+  <g fill="#1c140f">
+    <!-- crossed quills behind the document -->
+    <polygon points="372,30 382,34 432,98 426,104"/>
+    <polygon points="508,30 498,34 448,98 454,104"/>
+    <!-- the great decree: a tall blocky charter, top edge rolled -->
+    <path d="M398,22 Q440,16 482,22 L488,26 L488,100 L392,100 L392,26 Z"/>
+    <!-- rolled top bar -->
+    <rect x="390" y="20" width="100" height="8"/>
+    <!-- carved lines of imperial script (ink blocks within the ground reserve come from white cuts below) -->
+    <!-- emperor's hand and pen striking the page -->
+    <polygon points="500,40 540,18 546,26 506,48"/>
+    <polygon points="498,42 510,46 504,52"/>
+    <!-- the great pendant wax seal hung on a cord -->
+    <line x1="440" y1="100" x2="440" y2="110" stroke="#1c140f" stroke-width="3"/>
+    <circle cx="440" cy="116" r="11"/>
+    <!-- seal points / heraldic star within seal -->
+    <polygon points="440,108 443,114 449,114 444,118 446,124 440,120 434,124 436,118 431,114 437,114"/>
+  </g>
+  <!-- inked side pillars framing the decree (blocky) -->
+  <g fill="#1c140f">
+    <rect x="356" y="36" width="9" height="62"/>
+    <rect x="515" y="52" width="9" height="46"/>
+    <polygon points="352,36 369,36 360,26"/>
+    <polygon points="511,52 528,52 519,42"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- ruled lines of the rewritten constitution -->
+    <line x1="404" y1="40" x2="476" y2="40"/>
+    <line x1="404" y1="48" x2="478" y2="48"/>
+    <line x1="404" y1="56" x2="474" y2="56"/>
+    <line x1="404" y1="64" x2="480" y2="64"/>
+    <line x1="404" y1="72" x2="472" y2="72"/>
+    <line x1="404" y1="80" x2="478" y2="80"/>
+    <line x1="404" y1="88" x2="466" y2="88"/>
+    <!-- gouge along the rolled top -->
+    <line x1="396" y1="24" x2="484" y2="24"/>
+    <!-- highlight on the seal -->
+    <path d="M433,110 Q438,107 446,110" fill="none"/>
+    <!-- glint on the pen nib -->
+    <line x1="534" y1="22" x2="540" y2="26"/>
+    <!-- quill barbs cut into the feathers -->
+    <line x1="376" y1="33" x2="384" y2="40"/>
+    <line x1="504" y1="33" x2="496" y2="40"/>
+    <!-- carved flutes on the pillars -->
+    <line x1="360" y1="42" x2="360" y2="94"/>
+    <line x1="519" y1="58" x2="519" y2="94"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

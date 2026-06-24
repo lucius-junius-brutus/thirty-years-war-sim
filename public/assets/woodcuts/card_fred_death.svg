@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the Winter King dead on a curtained bed, a fallen crown beside him and a guttering candle">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: the deathbed at Mainz, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- canopy crossbar and posts -->
+    <rect x="356" y="26" width="168" height="9"/>
+    <rect x="356" y="26" width="8" height="78"/>
+    <rect x="516" y="26" width="8" height="78"/>
+    <!-- finials -->
+    <polygon points="360,26 354,16 366,16"/>
+    <polygon points="520,26 514,16 526,16"/>
+    <!-- gathered curtain swags hanging from the rail -->
+    <path d="M364 35 q14 26 28 4 q14 26 28 4 q14 26 28 4 q14 26 28 4 q14 26 28 4 l0 -12 l-140 0 z"/>
+    <!-- the bed frame / bier -->
+    <rect x="350" y="92" width="180" height="12"/>
+    <rect x="358" y="78" width="164" height="16"/>
+    <!-- pillow mound -->
+    <path d="M366 78 q10 -16 30 -12 l0 12 z"/>
+    <!-- the king's body under a heavy pall, blocky folds -->
+    <path d="M388 78 L500 78 L508 92 L380 92 Z"/>
+    <!-- the still head on the pillow -->
+    <circle cx="392" cy="73" r="9"/>
+    <!-- hands crossed on the breast -->
+    <polygon points="438,76 452,76 445,84"/>
+    <!-- fallen crown on the coverlet, the claim unredeemed -->
+    <path d="M470 70 l4 -12 l5 8 l5 -10 l5 10 l5 -8 l4 12 z"/>
+    <rect x="470" y="70" width="32" height="5"/>
+    <!-- guttering candle on a tall stand at the bed-foot -->
+    <rect x="332" y="60" width="6" height="44"/>
+    <rect x="326" y="58" width="18" height="5"/>
+    <rect x="332" y="46" width="6" height="14"/>
+    <path d="M335 46 q-7 -8 0 -16 q7 8 0 16 z"/>
+    <!-- a mourning figure bowed at the bedside, foreign gable beyond -->
+    <path d="M512 60 q12 -4 16 10 l4 24 l-22 0 l-2 -24 z"/>
+    <circle cx="520" cy="56" r="7"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged folds of the pall -->
+    <line x1="404" y1="80" x2="412" y2="90"/>
+    <line x1="424" y1="80" x2="432" y2="90"/>
+    <line x1="466" y1="80" x2="474" y2="90"/>
+    <line x1="486" y1="80" x2="494" y2="90"/>
+    <!-- crown jewel points cut back -->
+    <line x1="479" y1="64" x2="479" y2="60"/>
+    <line x1="489" y1="64" x2="489" y2="60"/>
+    <!-- candle-flame heart -->
+    <line x1="335" y1="42" x2="335" y2="34"/>
+    <!-- highlight on the brow of the dead king -->
+    <path d="M387 70 q5 -4 10 0" fill="none"/>
+    <!-- carved fall of the curtain swags -->
+    <line x1="392" y1="40" x2="392" y2="52"/>
+    <line x1="448" y1="40" x2="448" y2="52"/>
+    <line x1="504" y1="40" x2="504" y2="52"/>
+    <!-- mourner's bowed cowl -->
+    <path d="M514 53 q6 -3 11 1" fill="none"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

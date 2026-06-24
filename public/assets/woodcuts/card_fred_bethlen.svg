@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a Transylvanian steppe horseman offering alliance, raising a sabre beneath an eastern crescent standard">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: steppe horseman offering alliance, centred near x=440 -->
+  <g fill="#1c140f">
+    <!-- standard pole with crescent emblem of the east, planted -->
+    <rect x="378" y="22" width="4" height="86"/>
+    <path d="M362 30 A18 18 0 1 0 362 66 A13 13 0 1 1 362 30 Z"/>
+    <!-- pennant of the standard -->
+    <path d="M382 28 L412 33 L382 42 Z"/>
+    <!-- horse body, blocky barrel -->
+    <path d="M414 70 L414 56 Q436 48 470 50 L502 52 L508 62 L506 78 L494 80 L490 70 L440 72 L432 84 L420 84 Z"/>
+    <!-- horse neck and head, reaching forward -->
+    <path d="M502 52 L520 36 L532 30 L540 34 L536 46 L526 50 L516 56 Z"/>
+    <!-- mane -->
+    <path d="M504 44 L514 30 L520 34 L512 50 Z"/>
+    <!-- four legs, angular -->
+    <path d="M424 84 L420 108 L428 108 L432 84 Z"/>
+    <path d="M444 78 L442 108 L450 108 L452 78 Z"/>
+    <path d="M482 80 L480 108 L488 108 L490 80 Z"/>
+    <path d="M498 76 L502 108 L510 108 L506 76 Z"/>
+    <!-- tail flowing back -->
+    <path d="M414 58 L398 60 L390 74 L398 78 L406 70 L414 70 Z"/>
+    <!-- rider torso seated on horse -->
+    <path d="M448 30 L462 30 L466 46 L460 56 L446 56 L442 44 Z"/>
+    <!-- rider cloak sweeping behind -->
+    <path d="M442 36 L426 40 L424 56 L440 54 L446 44 Z"/>
+    <!-- rider head with eastern fur cap -->
+    <circle cx="455" cy="22" r="8"/>
+    <path d="M446 18 Q455 6 464 18 L462 22 L448 22 Z"/>
+    <!-- offered right arm raised, open hand of alliance -->
+    <path d="M462 34 L482 22 L490 24 L488 30 L470 40 Z"/>
+    <!-- raised curved sabre held aloft as offer/pledge -->
+    <path d="M488 26 Q512 6 522 4 Q510 14 500 30 L490 30 Z"/>
+    <!-- sabre hilt -->
+    <rect x="484" y="24" width="10" height="6"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged horse barrel muscle -->
+    <line x1="430" y1="60" x2="470" y2="60"/>
+    <line x1="436" y1="66" x2="476" y2="66"/>
+    <!-- horse neck sheen -->
+    <line x1="510" y1="46" x2="522" y2="40"/>
+    <!-- crescent inner cut -->
+    <path d="M356 38 A11 11 0 0 0 356 58" fill="none"/>
+    <!-- rider cloak fold -->
+    <line x1="430" y1="44" x2="440" y2="50"/>
+    <!-- sabre blade glint -->
+    <line x1="498" y1="28" x2="512" y2="12"/>
+    <!-- cap rim -->
+    <line x1="448" y1="20" x2="462" y2="20"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of armed commanders pressing forward with halberds and a demanding fist over weighed scales sagging with coin sacks, credit curdling into armed rivalry">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: armed creditors press from the left; demanding fist; sagging scales of coin on the right -->
+  <g fill="#1c140f">
+    <!-- forest of raised pikes / halberds bristling on the left of the demand -->
+    <polygon points="312,98 316,98 318,28 314,28"/>
+    <polygon points="314,28 318,28 320,18 312,20"/>
+    <polygon points="326,98 330,98 331,22 327,22"/>
+    <polygon points="327,22 331,22 333,12 325,14"/>
+    <polygon points="340,98 344,98 345,30 341,30"/>
+    <polygon points="341,30 345,30 347,20 339,22"/>
+    <!-- a halberd blade -->
+    <polygon points="354,98 358,98 359,26 355,26"/>
+    <polygon points="355,26 369,30 359,16 356,18"/>
+    <!-- massed shoulders / cloaks of the demanding commanders -->
+    <path d="M308,98 L308,66 Q320,52 338,54 Q356,52 366,66 L366,98 Z"/>
+    <!-- a blunt helmet on the foremost captain -->
+    <path d="M334,54 Q335,40 348,40 Q361,40 362,54 L356,54 Q356,46 348,46 Q340,46 340,54 Z"/>
+    <!-- the demanding arm thrust toward the centre: clenched fist -->
+    <path d="M366,72 L408,64 L410,76 L368,84 Z"/>
+    <path d="M404,58 q14,-2 18,8 q3,10 -8,14 q-12,3 -16,-8 q-3,-10 6,-14 Z"/>
+    <!-- knuckle ridges of the fist -->
+    <rect x="406" y="58" width="4" height="8"/>
+    <rect x="412" y="57" width="4" height="9"/>
+    <rect x="418" y="59" width="4" height="8"/>
+    <!-- the scale beam pivots at the centre, tilting under the weight of coin -->
+    <rect x="438" y="34" width="6" height="42"/>
+    <polygon points="430,30 452,30 446,40 436,40"/>
+    <!-- tilted beam -->
+    <polygon points="441,40 524,58 524,63 441,45"/>
+    <polygon points="441,40 460,36 460,41 441,45"/>
+    <!-- left pan, light, risen high -->
+    <line x1="460" y1="38" x2="454" y2="50" stroke="#1c140f" stroke-width="1.5"/>
+    <line x1="460" y1="38" x2="470" y2="50" stroke="#1c140f" stroke-width="1.5"/>
+    <path d="M450,50 Q462,60 474,50 Z"/>
+    <!-- right pan, heavy, sunk low with coin sacks -->
+    <line x1="524" y1="60" x2="512" y2="78" stroke="#1c140f" stroke-width="1.5"/>
+    <line x1="524" y1="60" x2="540" y2="78" stroke="#1c140f" stroke-width="1.5"/>
+    <path d="M506,78 Q526,96 546,78 Z"/>
+    <!-- coin sacks heaped on the heavy pan -->
+    <path d="M512,78 Q510,64 522,62 Q534,64 532,78 Z"/>
+    <path d="M530,80 Q529,70 538,68 Q547,70 546,80 Z"/>
+    <!-- spilled coins -->
+    <circle cx="520" cy="88" r="3"/><circle cx="528" cy="92" r="3"/><circle cx="536" cy="89" r="3"/>
+    <!-- a drawn sword crossing behind the scale: credit curdling into the threat of arms -->
+    <polygon points="486,30 492,30 490,86 488,86"/>
+    <rect x="478" y="40" width="22" height="4"/>
+    <polygon points="486,24 492,24 489,16 489,16"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged steel, cloth folds, coin shine -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <line x1="315" y1="40" x2="315" y2="70"/>
+    <line x1="329" y1="36" x2="329" y2="70"/>
+    <line x1="345" y1="46" x2="345" y2="72"/>
+    <line x1="320" y1="74" x2="330" y2="90"/>
+    <line x1="350" y1="74" x2="342" y2="90"/>
+    <line x1="348" y1="44" x2="356" y2="50"/>
+    <line x1="384" y1="68" x2="400" y2="64"/>
+    <line x1="412" y1="62" x2="412" y2="70"/>
+    <line x1="488" y1="36" x2="488" y2="60"/>
+    <line x1="518" y1="68" x2="518" y2="74"/>
+    <line x1="536" y1="72" x2="536" y2="77"/>
+    <line x1="442" y1="42" x2="500" y2="55"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

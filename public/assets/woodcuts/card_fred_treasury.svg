@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of an empty Bohemian treasury: an overturned strongbox with no coin, an empty balance, and a paymaster's bare upturned hands">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M250 64 l-14 -7 v14 z"/><path d="M630 64 l14 -7 v14 z"/>
+  </g>
+  <!-- central motif, ink fills -->
+  <g fill="#1c140f">
+    <!-- LEFT: paymaster's bare upturned hands, empty -->
+    <!-- forearm sleeve / cuff -->
+    <path d="M306 100 l34 -10 6 14 -34 12 z"/>
+    <!-- open palm with splayed fingers, nothing in it -->
+    <path d="M338 84 q14 -10 30 -8 q10 1 17 6 l-3 6 q-8 -4 -16 -4 l4 -8 -7 7 q-6 -1 -11 0 l5 -9 -9 9 q-5 1 -9 4 z"/>
+    <!-- thumb -->
+    <path d="M336 92 q-7 -6 -4 -13 l6 2 q-1 5 4 8 z"/>
+    <!-- CENTRE: overturned strongbox / coffer, lid flung open, empty -->
+    <!-- box body on its side -->
+    <path d="M398 78 l72 -8 6 38 -72 8 z"/>
+    <!-- thrown-open lid -->
+    <path d="M398 78 l60 -30 14 16 -68 14 z"/>
+    <!-- broken hasp / lock plate -->
+    <rect x="468" y="70" width="10" height="18"/>
+    <path d="M470 70 l8 -6 4 6 -6 5 z"/>
+    <!-- iron banding straps on the box -->
+    <rect x="416" y="74" width="5" height="36" transform="rotate(-6 418 92)"/>
+    <rect x="446" y="71" width="5" height="36" transform="rotate(-6 448 89)"/>
+    <!-- one lone fallen coin, on its edge -->
+    <ellipse cx="486" cy="104" rx="7" ry="3"/>
+    <!-- RIGHT: an empty balance / scales, beams level and pans bare -->
+    <!-- standing post -->
+    <rect x="535" y="58" width="6" height="48"/>
+    <!-- cross beam -->
+    <path d="M508 60 l60 -4 1 6 -60 4 z"/>
+    <!-- pivot knob -->
+    <circle cx="538" cy="58" r="5"/>
+    <!-- chains to empty pans -->
+    <g stroke="#1c140f" stroke-width="1.6" fill="none">
+      <line x1="510" y1="62" x2="504" y2="80"/><line x1="510" y1="62" x2="520" y2="80"/>
+      <line x1="566" y1="58" x2="560" y2="76"/><line x1="566" y1="58" x2="576" y2="76"/>
+    </g>
+    <!-- empty pans (shallow open dishes) -->
+    <path d="M498 80 q14 12 28 0 q-14 6 -28 0 z"/>
+    <path d="M554 76 q14 12 28 0 q-14 6 -28 0 z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouges on box body suggesting bare grain -->
+    <line x1="406" y1="84" x2="464" y2="78"/>
+    <line x1="408" y1="94" x2="466" y2="88"/>
+    <line x1="410" y1="102" x2="468" y2="96"/>
+    <!-- light on the flung-open lid -->
+    <line x1="406" y1="70" x2="460" y2="58"/>
+    <!-- knuckle / finger separations on the open hand -->
+    <line x1="350" y1="82" x2="346" y2="90"/>
+    <line x1="360" y1="80" x2="358" y2="88"/>
+    <line x1="370" y1="81" x2="370" y2="89"/>
+    <!-- glint rim on the lone coin -->
+    <path d="M481 103 q5 -2 10 0" stroke-width="1.2"/>
+    <!-- highlight along the scale beam and post -->
+    <line x1="510" y1="59" x2="566" y2="55"/>
+    <line x1="537" y1="62" x2="537" y2="100"/>
+    <!-- inner curve of the empty pans -->
+    <path d="M502 82 q10 6 20 0" stroke-width="1.2"/>
+    <path d="M558 78 q10 6 20 0" stroke-width="1.2"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

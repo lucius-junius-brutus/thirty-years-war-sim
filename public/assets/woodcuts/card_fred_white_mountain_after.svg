@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a beaten king at a gabled doorway, an abandoned crown on the threshold, distant smoke over a hill of broken pikes">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- distant hill of broken pikes and smoke (the lost battle behind) -->
+  <g fill="#1c140f">
+    <path d="M308 96 L344 70 L380 96 Z"/>
+    <path d="M548 96 L572 74 L596 96 Z"/>
+  </g>
+  <g stroke="#1c140f" stroke-width="1.4">
+    <line x1="322" y1="86" x2="318" y2="62"/><line x1="332" y1="82" x2="330" y2="58"/>
+    <line x1="344" y1="80" x2="346" y2="54"/><line x1="356" y1="82" x2="361" y2="60"/>
+    <line x1="366" y1="86" x2="372" y2="66"/>
+  </g>
+  <!-- drifting smoke clouds over the hill -->
+  <g fill="#1c140f" opacity="0.35">
+    <path d="M316 50 q10 -12 24 -8 q4 -10 18 -6 q14 -2 12 10 q-30 6 -54 4 Z"/>
+  </g>
+  <!-- central motif: the gabled doorway, the king deciding -->
+  <g fill="#1c140f">
+    <!-- gable / lintel of the palace door -->
+    <path d="M404 40 L440 18 L476 40 L476 50 L404 50 Z"/>
+    <rect x="408" y="50" width="64" height="6"/>
+    <!-- door jambs framing the threshold -->
+    <rect x="408" y="56" width="9" height="50"/>
+    <rect x="463" y="56" width="9" height="50"/>
+    <!-- dark interior beyond the door -->
+    <rect x="417" y="56" width="46" height="50"/>
+    <!-- the beaten king on the threshold: stooped, cloaked, head bowed -->
+    <path d="M438 58 q-12 1 -14 14 l-3 30 q-1 6 5 6 l24 0 q6 0 5 -6 l-3 -34 q-2 -9 -10 -10 Z"/>
+    <!-- bowed head and shoulders -->
+    <circle cx="436" cy="56" r="7"/>
+    <path d="M430 60 q6 6 14 1 l2 8 l-20 0 Z"/>
+    <!-- a heavy hand / arm hanging at his side -->
+    <path d="M424 74 q-6 8 -4 20 l4 1 q1 -12 5 -18 Z"/>
+  </g>
+  <!-- the abandoned crown set down on the threshold stone -->
+  <g fill="#1c140f">
+    <path d="M450 100 L450 90 L455 96 L460 88 L465 96 L470 90 L470 100 Z"/>
+    <rect x="448" y="100" width="24" height="5"/>
+  </g>
+  <!-- base threshold step the crown rests on -->
+  <rect x="404" y="105" width="72" height="5" fill="#1c140f"/>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged folds in the king's cloak -->
+    <line x1="430" y1="74" x2="427" y2="100"/>
+    <line x1="440" y1="74" x2="440" y2="100"/>
+    <line x1="448" y1="76" x2="450" y2="98"/>
+    <!-- light catching the bowed brow -->
+    <line x1="432" y1="53" x2="438" y2="53"/>
+    <!-- highlight on the gable edge -->
+    <line x1="409" y1="44" x2="440" y2="23"/>
+    <!-- glints on the abandoned crown points -->
+    <line x1="455" y1="95" x2="455" y2="91"/>
+    <line x1="465" y1="95" x2="465" y2="91"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

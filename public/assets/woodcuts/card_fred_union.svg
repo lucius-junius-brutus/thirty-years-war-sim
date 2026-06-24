@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the Protestant Union's allied shields linked by a faltering clasped hand, half-hearted hedged support">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M120 64 l12 -7 0 14 z" fill="#1c140f"/><path d="M760 64 l-12 -7 0 14 z" fill="#1c140f"/>
+  </g>
+  <!-- central motif: two allied shields, leaning apart, joined by a half-clasped hand -->
+  <g fill="#1c140f">
+    <!-- LEFT shield: Frederick's, upright, firm -->
+    <path d="M352 30 L416 30 L416 64 Q416 92 384 104 Q352 92 352 64 Z"/>
+    <!-- RIGHT shield: an allied prince's, tilted back, hedging -->
+    <path d="M470 34 L532 28 L536 62 Q538 90 510 104 Q476 96 470 68 Z"/>
+    <!-- the faltering clasped hand bridging the gulf between them -->
+    <path d="M420 60 q14 -6 28 0 q10 4 16 2 l-2 10 q-12 4 -22 -1 q-10 -5 -22 -3 z"/>
+    <!-- a wrist/cuff on each side -->
+    <rect x="408" y="58" width="14" height="16" rx="2"/>
+    <rect x="462" y="56" width="14" height="16" rx="2"/>
+  </g>
+  <!-- charges carved BACK to ground colour, gouged into the shields -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- left shield: a bold rampant chevron + bar (steadfast) -->
+    <path d="M362 50 L384 40 L406 50"/>
+    <path d="M362 64 L384 54 L406 64"/>
+    <line x1="384" y1="72" x2="384" y2="92"/>
+    <!-- right shield: a divided/parted field — broken, half-committed -->
+    <line x1="484" y1="42" x2="524" y2="40"/>
+    <path d="M480 56 L508 54 M508 54 L508 88" stroke-dasharray="5 5"/>
+    <!-- gouged plumes / cut highlights on the hand and cuffs -->
+    <path d="M424 62 q12 -4 24 0"/>
+    <line x1="412" y1="61" x2="412" y2="71"/>
+    <line x1="466" y1="59" x2="466" y2="69"/>
+  </g>
+  <!-- a single doubt-mark: the right shield casts back, a thin gap of ground between them -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4">
+    <line x1="452" y1="30" x2="452" y2="100"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

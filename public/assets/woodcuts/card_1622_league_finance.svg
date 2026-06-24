@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of war contributions squeezed from occupied lands: coin sacks and an open ledger beside a soldier's outstretched gauntlet demanding payment">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <circle cx="40" cy="64" r="2.5" fill="#1c140f"/><circle cx="840" cy="64" r="2.5" fill="#1c140f"/>
+  </g>
+  <!-- central motif, ink fills -->
+  <g fill="#1c140f">
+    <!-- open ledger on the left, propped on a table edge -->
+    <path d="M320 96 L322 70 L378 64 L380 92 Z"/>
+    <path d="M380 92 L378 64 L434 70 L436 96 Z"/>
+    <!-- two coin sacks, bulging, tied at the neck -->
+    <path d="M392 104 C386 104 380 99 380 91 C380 82 387 76 392 71 C394 68 400 68 402 71 C407 76 414 82 414 91 C414 99 408 104 402 104 Z"/>
+    <path d="M398 71 L388 64 L406 64 Z"/>
+    <path d="M448 105 C440 105 433 99 433 89 C433 78 442 71 448 65 C450 62 458 62 460 65 C466 71 475 78 475 89 C475 99 468 105 460 105 Z"/>
+    <path d="M455 65 L443 57 L467 57 Z"/>
+    <!-- spilled coins on the ground -->
+    <circle cx="424" cy="103" r="5"/><circle cx="416" cy="106" r="4"/><circle cx="486" cy="104" r="5"/>
+    <!-- the soldier's outstretched arm and demanding gauntlet, reaching from the right -->
+    <path d="M560 60 L512 78 L514 90 L562 76 Z"/>
+    <!-- gauntlet cuff -->
+    <path d="M508 72 L520 70 L522 96 L506 94 Z"/>
+    <!-- open palm and splayed fingers demanding coin -->
+    <path d="M506 78 L484 76 L483 70 L505 73 Z"/>
+    <path d="M506 84 L482 84 L482 78 L506 79 Z"/>
+    <path d="M506 90 L484 92 L485 86 L506 85 Z"/>
+    <path d="M506 95 L488 99 L490 93 L507 91 Z"/>
+    <!-- thumb -->
+    <path d="M508 75 L500 67 L496 71 L504 80 Z"/>
+    <!-- pikestaff slanting behind the arm, soldier's threat -->
+    <path d="M556 52 L560 50 L538 110 L534 110 Z"/>
+    <path d="M548 50 L568 50 L558 40 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged ledger page divisions and ruled lines -->
+    <line x1="380" y1="68" x2="380" y2="92"/>
+    <line x1="328" y1="76" x2="372" y2="71"/><line x1="329" y1="82" x2="373" y2="77"/><line x1="330" y1="88" x2="374" y2="83"/>
+    <line x1="388" y1="71" x2="430" y2="76"/><line x1="389" y1="77" x2="431" y2="82"/><line x1="390" y1="83" x2="432" y2="88"/>
+    <!-- coin-sack ties and bulge highlights -->
+    <line x1="386" y1="74" x2="408" y2="74"/>
+    <line x1="392" y1="84" x2="392" y2="98"/>
+    <line x1="442" y1="68" x2="466" y2="68"/>
+    <line x1="449" y1="80" x2="449" y2="98"/>
+    <!-- coin faces nicked -->
+    <line x1="421" y1="101" x2="427" y2="105"/><line x1="483" y1="102" x2="489" y2="106"/>
+    <!-- gauntlet plate joints gouged -->
+    <line x1="530" y1="68" x2="528" y2="84"/>
+    <line x1="543" y1="64" x2="541" y2="80"/>
+    <line x1="513" y1="76" x2="513" y2="92"/>
+    <!-- finger separations -->
+    <line x1="490" y1="74" x2="504" y2="76"/><line x1="489" y1="86" x2="505" y2="86"/>
+    <!-- pike shaft sheen -->
+    <line x1="552" y1="58" x2="540" y2="100"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

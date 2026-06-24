@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a Bohemian delegate offering a crown on a cushion to Frederick">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- central motif: delegate (left) offering crown on cushion to Frederick (right) -->
+  <g fill="#1c140f">
+    <!-- LEFT: Bohemian delegate, bowing, robed -->
+    <!-- robe / cloak as a heavy blocky silhouette -->
+    <path d="M312 109 L320 60 L332 50 L352 48 L368 58 L372 109 Z"/>
+    <!-- bowed head -->
+    <circle cx="350" cy="46" r="11"/>
+    <!-- delegate's cap, angular -->
+    <path d="M338 42 L342 30 L362 32 L364 44 Z"/>
+    <!-- extended arms reaching toward centre with the cushion -->
+    <path d="M360 60 L420 70 L420 78 L360 72 Z"/>
+
+    <!-- THE CUSHION held out, square tasselled pillow -->
+    <path d="M408 64 L470 60 L478 80 L412 84 Z"/>
+    <!-- cushion tassels at corners -->
+    <path d="M408 64 L402 56 L410 56 Z"/>
+    <path d="M470 60 L478 52 L482 60 Z"/>
+    <path d="M412 84 L406 92 L414 92 Z"/>
+    <path d="M478 80 L486 86 L480 90 Z"/>
+
+    <!-- THE CROWN of Bohemia upon the cushion -->
+    <!-- crown band -->
+    <path d="M420 54 L470 50 L472 62 L418 64 Z"/>
+    <!-- crown points / fleurons -->
+    <path d="M420 54 L416 38 L426 50 Z"/>
+    <path d="M432 53 L430 34 L440 49 Z"/>
+    <path d="M445 51 L445 32 L454 49 Z"/>
+    <path d="M458 51 L462 34 L466 49 Z"/>
+    <!-- jewels as cut studs -->
+    <circle cx="430" cy="58" r="2.5"/>
+    <circle cx="445" cy="57" r="2.5"/>
+    <circle cx="460" cy="56" r="2.5"/>
+    <!-- arched diadem over the crown with surmounting cross -->
+    <path d="M422 53 Q446 30 470 50 L468 53 Q446 36 424 56 Z"/>
+    <path d="M444 36 L448 36 L448 28 L452 28 L452 24 L448 24 L448 20 L444 20 L444 24 L440 24 L440 28 L444 28 Z"/>
+
+    <!-- RIGHT: Frederick, taller, reaching to receive -->
+    <path d="M512 109 L508 56 L520 46 L542 44 L558 54 L562 109 Z"/>
+    <!-- head -->
+    <circle cx="536" cy="42" r="12"/>
+    <!-- princely hat with plume base -->
+    <path d="M522 38 L526 24 L548 26 L552 40 Z"/>
+    <!-- arm reaching down toward the crown -->
+    <path d="M512 58 L466 66 L466 74 L514 70 Z"/>
+    <!-- open receiving hand -->
+    <path d="M460 64 L474 62 L476 74 L462 76 Z"/>
+  </g>
+
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged folds in delegate robe -->
+    <line x1="330" y1="62" x2="336" y2="104"/>
+    <line x1="350" y1="58" x2="352" y2="106"/>
+    <!-- gouged folds in Frederick cloak -->
+    <line x1="522" y1="58" x2="524" y2="104"/>
+    <line x1="546" y1="56" x2="548" y2="106"/>
+    <!-- cut light on the cushion -->
+    <line x1="420" y1="72" x2="468" y2="68"/>
+    <!-- glint on crown band and arch -->
+    <line x1="424" y1="59" x2="466" y2="55"/>
+    <path d="M428 50 Q446 36 464 50" stroke-width="1.2"/>
+    <!-- plume cut on Frederick's hat -->
+    <line x1="528" y1="34" x2="544" y2="30"/>
+  </g>
+
+  <!-- plume feather over hat in ink, with carved barbs -->
+  <g fill="#1c140f">
+    <path d="M548 38 L572 18 L576 24 L556 42 Z"/>
+  </g>
+  <g stroke="#d2c198" stroke-width="1" stroke-linecap="round">
+    <line x1="556" y1="32" x2="566" y2="24"/>
+    <line x1="560" y1="36" x2="570" y2="28"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

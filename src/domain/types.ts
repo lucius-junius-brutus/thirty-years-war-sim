@@ -185,6 +185,13 @@ export interface PlayableRoleRecord {
   outcome_path_signals: OutcomePathSignalRecord[];
   // The header woodcut to show, by phase, with a fallback.
   woodcuts: { default: string; by_phase: Record<string, string> };
+  // The seal/crest shown in the masthead while this reign is on screen.
+  crest: string;
+  // Character-portrait framing for the role-select page: an epithet, a dramatic
+  // dek, and 2-4 labelled beats (e.g. The position / The temptation / The risk).
+  epithet: string;
+  portrait_dek: string;
+  portrait_beats: { label: string; text: string }[];
   // The outcome the historical line should reach (acceptance gate G1). Optional.
   historical_outcome?: string;
   // For a losing/claimant role, the "no easy out" gate (G2) checks that neither
@@ -304,6 +311,9 @@ export interface CardRecord {
   role_id: string;
   decision_point_id?: string;
   phase_id: string;
+  // A bespoke woodcut for this specific event, as a path under assets/ (e.g.
+  // "woodcuts/card_x.svg"). Falls back to the role's per-phase band if absent.
+  woodcut?: string;
   date_label: string;
   title: string;
   briefing: string;

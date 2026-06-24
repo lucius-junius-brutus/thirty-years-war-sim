@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of a marching column of pikes beneath a contested heraldic shield: Frederick's Protestant captains still in the field while his Palatine lands are promised to Bavaria">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: marching pike column + standard under a contested shield -->
+  <g fill="#1c140f">
+    <!-- distant smoke/ground swell behind the column -->
+    <path d="M312 92 q24 -18 52 -8 q22 -16 50 -6 q26 -14 54 -4 q24 -12 50 -2 l0 18 l-256 0 Z"/>
+    <!-- the marching column: blocky pikemen silhouettes -->
+    <rect x="330" y="60" width="14" height="34"/><rect x="334" y="48" width="6" height="14"/>
+    <rect x="352" y="58" width="14" height="36"/><rect x="356" y="46" width="6" height="14"/>
+    <rect x="374" y="60" width="14" height="34"/><rect x="378" y="48" width="6" height="14"/>
+    <rect x="510" y="60" width="14" height="34"/><rect x="514" y="48" width="6" height="14"/>
+    <rect x="532" y="58" width="14" height="36"/><rect x="536" y="46" width="6" height="14"/>
+    <!-- bristling pikes, angled like a marching hedge -->
+    <g stroke="#1c140f" stroke-width="3" stroke-linecap="round">
+      <line x1="336" y1="60" x2="320" y2="20"/><line x1="358" y1="58" x2="344" y2="18"/>
+      <line x1="380" y1="60" x2="368" y2="20"/><line x1="402" y1="58" x2="392" y2="18"/>
+      <line x1="516" y1="60" x2="528" y2="20"/><line x1="538" y1="58" x2="552" y2="18"/>
+      <line x1="556" y1="60" x2="570" y2="20"/>
+    </g>
+    <!-- the captain's standard still aloft, centre stage -->
+    <rect x="436" y="20" width="4" height="74"/>
+    <path d="M440 24 l46 8 l-46 16 Z"/>
+    <!-- contested shield raised above: party per pale, Palatine lion | Bavarian lozenges -->
+    <path d="M412 30 l56 0 l0 18 q0 18 -28 30 q-28 -12 -28 -30 Z"/>
+    <!-- crown of the disputed electorate atop the shield -->
+    <path d="M414 30 l52 0 l-4 -12 l-9 7 l-13 -11 l-13 11 l-9 -7 Z"/>
+    <circle cx="421" cy="17" r="2.4"/><circle cx="440" cy="11" r="2.4"/><circle cx="459" cy="17" r="2.4"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- the pale dividing the contested shield -->
+    <line x1="440" y1="31" x2="440" y2="74"/>
+    <!-- Palatine rampant lion gouged into the left half -->
+    <path d="M420 40 q6 -4 9 2 q3 6 -2 9"/>
+    <line x1="421" y1="52" x2="427" y2="58"/>
+    <!-- Bavarian lozenges gouged into the right half -->
+    <line x1="448" y1="38" x2="455" y2="45"/><line x1="455" y1="38" x2="448" y2="45"/>
+    <line x1="450" y1="50" x2="457" y2="57"/><line x1="457" y1="50" x2="450" y2="57"/>
+    <!-- folds / device cut into the standard cloth -->
+    <line x1="446" y1="30" x2="468" y2="34"/><line x1="446" y1="38" x2="466" y2="41"/>
+    <!-- glint along raised pikes -->
+    <line x1="328" y1="34" x2="333" y2="46"/><line x1="350" y1="32" x2="355" y2="44"/>
+    <line x1="546" y1="34" x2="541" y2="46"/>
+    <!-- carved highlights on marching cuirasses -->
+    <line x1="335" y1="66" x2="335" y2="86"/><line x1="357" y1="64" x2="357" y2="86"/>
+    <line x1="515" y1="66" x2="515" y2="86"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

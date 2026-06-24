@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of two armoured hands clasped in alliance above a sealed pledge and a column of Catholic League pikes, an electoral crown set as the price">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+
+  <!-- central motif, ink fills, centred at x=440 -->
+  <g fill="#1c140f">
+    <!-- column of Catholic League pikes rising behind, the offered army -->
+    <g stroke="#1c140f" stroke-width="2.4" stroke-linecap="round">
+      <line x1="338" y1="96" x2="334" y2="30"/>
+      <line x1="352" y1="96" x2="350" y2="24"/>
+      <line x1="366" y1="96" x2="365" y2="30"/>
+      <line x1="528" y1="96" x2="532" y2="30"/>
+      <line x1="542" y1="96" x2="544" y2="24"/>
+      <line x1="556" y1="96" x2="558" y2="30"/>
+    </g>
+    <!-- pike heads (blocky leaf blades) -->
+    <path d="M334 30 l-4 -10 l4 -6 l4 6 z"/>
+    <path d="M350 24 l-4 -10 l4 -6 l4 6 z"/>
+    <path d="M365 30 l-4 -10 l4 -6 l4 6 z"/>
+    <path d="M532 30 l-4 -10 l4 -6 l4 6 z"/>
+    <path d="M544 24 l-4 -10 l4 -6 l4 6 z"/>
+    <path d="M558 30 l-4 -10 l4 -6 l4 6 z"/>
+    <!-- League drum at the foot of the left muster -->
+    <rect x="330" y="78" width="40" height="22" rx="2"/>
+    <!-- League standard, right -->
+    <path d="M530 30 l46 4 l-46 14 z"/>
+
+    <!-- the electoral crown set as the price, raised on its band -->
+    <path d="M404 18 l72 0 l-6 22 l-60 0 z"/>
+    <path d="M404 18 l-6 -14 l14 8 l8 -12 l10 12 l10 -12 l8 12 l14 -8 l-6 14 z"/>
+    <circle cx="440" cy="11" r="4"/>
+
+    <!-- two armoured forearms clasped: the bargain -->
+    <!-- left arm reaching from low-left up to centre -->
+    <path d="M384 100 L386 90 L420 64 L444 58 L446 70 L424 80 L398 100 Z"/>
+    <!-- right arm reaching from low-right up to centre -->
+    <path d="M496 100 L494 90 L460 64 L436 58 L434 70 L456 80 L482 100 Z"/>
+    <!-- gauntlet cuffs -->
+    <path d="M378 100 l16 -10 l8 12 l-16 10 z"/>
+    <path d="M502 100 l-16 -10 l-8 12 l16 10 z"/>
+    <!-- the grip knuckle block where hands meet -->
+    <rect x="424" y="54" width="32" height="20" rx="4"/>
+
+    <!-- sealed pledge document with pendant seal, the pawned Austrian lands -->
+    <path d="M410 100 l60 0 l0 -2 l-6 -4 l6 -4 l-6 -4 l6 -4 l-60 0 z"/>
+    <line x1="416" y1="84" x2="458" y2="84" stroke="#1c140f" stroke-width="1.2"/>
+    <line x1="416" y1="89" x2="452" y2="89" stroke="#1c140f" stroke-width="1.2"/>
+    <line x1="416" y1="94" x2="460" y2="94" stroke="#1c140f" stroke-width="1.2"/>
+    <line x1="464" y1="100" x2="468" y2="108" stroke="#1c140f" stroke-width="1.4"/>
+    <circle cx="470" cy="112" r="6"/>
+  </g>
+
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gouged plate on the forearms -->
+    <line x1="402" y1="92" x2="430" y2="70"/>
+    <line x1="478" y1="92" x2="450" y2="70"/>
+    <line x1="408" y1="96" x2="424" y2="84"/>
+    <line x1="472" y1="96" x2="456" y2="84"/>
+    <!-- knuckle ridges on the grip -->
+    <line x1="430" y1="60" x2="450" y2="60"/>
+    <line x1="430" y1="68" x2="450" y2="68"/>
+    <!-- facets cut into the electoral crown -->
+    <line x1="416" y1="30" x2="464" y2="30"/>
+    <line x1="430" y1="22" x2="430" y2="36"/>
+    <line x1="450" y1="22" x2="450" y2="36"/>
+    <!-- seal cross -->
+    <line x1="470" y1="108" x2="470" y2="116"/>
+    <line x1="466" y1="112" x2="474" y2="112"/>
+    <!-- drum cord chevrons -->
+    <line x1="334" y1="82" x2="346" y2="96"/>
+    <line x1="346" y1="82" x2="358" y2="96"/>
+    <line x1="358" y1="82" x2="366" y2="92"/>
+  </g>
+
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

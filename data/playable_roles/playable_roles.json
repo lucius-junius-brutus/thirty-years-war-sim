@@ -279,6 +279,23 @@
         "phase_swedish_wallenstein_crisis": "woodcut-host.svg"
       }
     },
+    "crest": "imperial-seal.svg",
+    "epithet": "The Unbending",
+    "portrait_dek": "An untried archduke of Styria, heir to a Habsburg inheritance split by faith, with almost no army of his own and the unshakable conviction that God wills a Catholic Empire.",
+    "portrait_beats": [
+      {
+        "label": "The position",
+        "text": "Bohemia and the hereditary lands, a fractured Empire, and a Catholic cause you mean to restore — backed by devotion far more than by soldiers."
+      },
+      {
+        "label": "The conviction",
+        "text": "That compromise on the faith is itself a sin, and that every revolt is to be answered, in the end, by force."
+      },
+      {
+        "label": "The risk",
+        "text": "That you win too well — and teach all Germany that any liberty can be swept away by the emperor's pen."
+      }
+    ],
     "historical_outcome": "Army Recovered, Trust Spent"
   },
   {
@@ -502,6 +519,23 @@
         "phase_bohemian_revolt": "woodcut-town.svg"
       }
     },
+    "crest": "frederick-seal.svg",
+    "epithet": "The Winter King",
+    "portrait_dek": "Elector Palatine. Head of the Protestant Union. Son-in-law to the King of England. And the offer of a crown that could cost him everything.",
+    "portrait_beats": [
+      {
+        "label": "The position",
+        "text": "Secure, envied, and well-married — the brightest of the Protestant princes, with the most to lose."
+      },
+      {
+        "label": "The temptation",
+        "text": "A kingdom in Bohemia, held out by rebels, if you will only reach out and seize it."
+      },
+      {
+        "label": "The risk",
+        "text": "The imperial ban, exile, and a forfeit electorate — everything, staked on a single throw of the dice."
+      }
+    ],
     "historical_outcome": "The Winter King",
     "source_refs": [
       "src_wilson_europes_tragedy"

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of Wallenstein the mercenary general raising his baton before a massed column of pikes and a drum">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: massed pike column (right) + commanding general (left of centre) + drum -->
+  <g fill="#1c140f">
+    <!-- forest of upright pikes, the self-raised host -->
+    <g stroke="#1c140f" stroke-width="2.4" stroke-linecap="square">
+      <line x1="470" y1="98" x2="466" y2="22"/>
+      <line x1="486" y1="98" x2="484" y2="16"/>
+      <line x1="502" y1="98" x2="502" y2="24"/>
+      <line x1="518" y1="98" x2="520" y2="14"/>
+      <line x1="534" y1="98" x2="536" y2="26"/>
+      <line x1="550" y1="98" x2="554" y2="18"/>
+      <line x1="566" y1="98" x2="570" y2="28"/>
+    </g>
+    <!-- pike heads (angular leaf blades) -->
+    <polygon points="466,22 462,12 470,12"/>
+    <polygon points="484,16 480,4 488,4"/>
+    <polygon points="502,24 498,14 506,14"/>
+    <polygon points="520,14 516,2 524,2"/>
+    <polygon points="536,26 532,16 540,16"/>
+    <polygon points="554,18 550,6 558,6"/>
+    <polygon points="570,28 566,18 574,18"/>
+    <!-- regimental standard hung among the pikes -->
+    <polygon points="538,30 538,54 576,48 568,40 576,32"/>
+    <!-- massed ranks suggested as a dark block behind the pikes -->
+    <path d="M462,98 L462,80 Q516,72 576,80 L576,98 Z"/>
+
+    <!-- the general: broad hat, cloak, baton raised -->
+    <!-- cloak / body, blocky silhouette -->
+    <path d="M388,98 L380,70 Q384,58 404,56 Q424,58 428,70 L420,98 Z"/>
+    <!-- sash across the chest -->
+    <path d="M390,72 L424,60 L426,66 L394,80 Z" fill="#d2c198"/>
+    <!-- head -->
+    <circle cx="404" cy="46" r="9"/>
+    <!-- broad cavalier hat with plume -->
+    <path d="M384,42 Q404,30 424,42 Q414,38 404,38 Q394,38 384,42 Z"/>
+    <path d="M424,42 Q436,28 444,18 Q438,32 432,42 Z"/>
+    <!-- raised baton arm, pointing toward the host -->
+    <path d="M420,64 L452,40 L458,46 L426,70 Z"/>
+    <!-- baton head -->
+    <rect x="450" y="34" width="12" height="8"/>
+
+    <!-- drum at the general's feet: the muster call -->
+    <path d="M348,80 L378,80 L374,98 L352,98 Z"/>
+    <!-- drum tension cords -->
+    <g stroke="#1c140f" stroke-width="1.4">
+      <line x1="350" y1="82" x2="376" y2="96"/>
+      <line x1="376" y1="82" x2="350" y2="96"/>
+      <line x1="358" y1="80" x2="358" y2="98"/>
+      <line x1="368" y1="80" x2="368" y2="98"/>
+    </g>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour: gouged cloth, plume, drumhead, mass -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- cloak folds -->
+    <line x1="396" y1="74" x2="392" y2="96"/>
+    <line x1="410" y1="74" x2="414" y2="96"/>
+    <!-- plume catchlights -->
+    <line x1="430" y1="40" x2="438" y2="28"/>
+    <line x1="436" y1="34" x2="442" y2="24"/>
+    <!-- hat brim cut -->
+    <line x1="388" y1="42" x2="420" y2="42"/>
+    <!-- drumhead rim -->
+    <line x1="350" y1="83" x2="377" y2="83"/>
+    <!-- gouges in the dark mass of ranks -->
+    <line x1="476" y1="86" x2="476" y2="96"/>
+    <line x1="496" y1="84" x2="496" y2="96"/>
+    <line x1="516" y1="83" x2="516" y2="96"/>
+    <line x1="536" y1="84" x2="536" y2="96"/>
+    <line x1="556" y1="86" x2="556" y2="96"/>
+    <!-- standard device -->
+    <line x1="548" y1="36" x2="560" y2="44"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

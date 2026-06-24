@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of foreign ships with bellied sails converging on the Empire's shore, two foreign shields raised above the prows">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sea/sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+  </g>
+  <!-- central motif: foreign ships converging, raised intervention shields -->
+  <g fill="#1c140f">
+    <!-- left ship (Sweden) hull -->
+    <path d="M312 92 L388 92 L380 104 L322 104 Z"/>
+    <!-- left mast and bellied sail filling toward the right -->
+    <rect x="349" y="44" width="3" height="50"/>
+    <path d="M352 47 C384 50 392 66 388 86 L352 86 Z"/>
+    <!-- left standard pennant -->
+    <path d="M349 44 L334 48 L349 52 Z"/>
+    <!-- right ship (France) hull -->
+    <path d="M492 92 L568 92 L558 104 L500 104 Z"/>
+    <!-- right mast and bellied sail filling toward the left -->
+    <rect x="528" y="44" width="3" height="50"/>
+    <path d="M528 47 C496 50 488 66 492 86 L528 86 Z"/>
+    <!-- right standard pennant -->
+    <path d="M531 44 L546 48 L531 52 Z"/>
+    <!-- central shore prow / contested coast, two raised intervention shields -->
+    <path d="M428 96 L452 96 L448 106 L432 106 Z"/>
+    <!-- left raised shield -->
+    <path d="M420 40 L444 40 L444 56 L432 70 L420 56 Z"/>
+    <!-- right raised shield overlapping -->
+    <path d="M438 44 L462 44 L462 60 L450 74 L438 60 Z"/>
+    <!-- crossed staves joining the two shields (alliance / shared cause) -->
+    <path d="M414 78 L470 50 L473 54 L417 82 Z"/>
+    <path d="M470 78 L414 50 L411 54 L467 82 Z"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged folds in the left sail -->
+    <path d="M360 54 C372 58 378 70 376 82"/>
+    <path d="M368 50 C378 56 384 70 382 84"/>
+    <!-- gouged folds in the right sail -->
+    <path d="M520 54 C508 58 502 70 504 82"/>
+    <path d="M512 50 C502 56 496 70 498 84"/>
+    <!-- shield charges, cut as bright bars -->
+    <path d="M428 48 L436 48"/><path d="M427 56 L433 62"/>
+    <path d="M446 52 L454 52"/><path d="M445 60 L451 66"/>
+    <!-- hull planking strokes -->
+    <path d="M328 97 L376 97"/><path d="M504 97 L552 97"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

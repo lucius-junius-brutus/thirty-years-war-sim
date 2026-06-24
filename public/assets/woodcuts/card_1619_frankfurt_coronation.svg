@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of an imperial crown held aloft between two hands above an open book of law, marking Ferdinand II's coronation oath at Frankfurt">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <path d="M250 64 l12 -6 0 12 z" fill="#1c140f"/><path d="M630 64 l-12 -6 0 12 z" fill="#1c140f"/>
+  </g>
+  <!-- central motif: crown held aloft between two hands above the open book of law -->
+  <g fill="#1c140f">
+    <!-- left forearm and cuffed hand reaching in -->
+    <path d="M300 96 L360 72 L372 80 L378 70 L386 78 L394 70 L400 82 L398 92 L360 96 Z"/>
+    <!-- right forearm and cuffed hand reaching in -->
+    <path d="M580 96 L520 72 L508 80 L502 70 L494 78 L486 70 L480 82 L482 92 L520 96 Z"/>
+    <!-- the open book of law on the pedestal below -->
+    <path d="M388 104 L440 96 L492 104 L492 110 L440 102 L388 110 Z"/>
+    <path d="M412 100 L440 96 L440 102 L412 104 Z"/>
+    <path d="M468 100 L440 96 L440 102 L468 104 Z"/>
+    <!-- imperial crown: lower circlet band -->
+    <path d="M404 60 L476 60 L470 76 L410 76 Z"/>
+    <!-- crown points rising from circlet -->
+    <path d="M410 60 L416 44 L424 60 Z"/>
+    <path d="M428 60 L436 40 L444 60 Z"/>
+    <path d="M448 60 L456 40 L464 60 Z"/>
+    <path d="M404 60 L408 48 L414 60 Z"/>
+    <path d="M466 60 L472 48 L476 60 Z"/>
+    <!-- arched mitre band over the crown -->
+    <path d="M416 50 Q440 18 464 50 L460 56 Q440 30 420 56 Z"/>
+    <!-- surmounting cross above the arch -->
+    <rect x="437" y="16" width="6" height="18"/>
+    <rect x="431" y="22" width="18" height="5"/>
+    <!-- jewel bosses on the circlet -->
+    <rect x="426" y="64" width="6" height="6"/>
+    <rect x="448" y="64" width="6" height="6"/>
+  </g>
+  <!-- engraved shading hatching on the crown band and book -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.32">
+    <line x1="414" y1="66" x2="466" y2="66"/>
+    <line x1="416" y1="70" x2="464" y2="70"/>
+    <line x1="392" y1="106" x2="488" y2="106"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round">
+    <!-- gleam on the mitre arch -->
+    <path d="M424 46 Q440 28 456 46" fill="none"/>
+    <!-- glint on the cross -->
+    <line x1="440" y1="20" x2="440" y2="30"/>
+    <!-- cut faces of the crown points -->
+    <line x1="436" y1="46" x2="436" y2="58"/>
+    <line x1="456" y1="46" x2="456" y2="58"/>
+    <line x1="416" y1="50" x2="416" y2="58"/>
+    <!-- knuckle cuts on the two hands -->
+    <line x1="378" y1="72" x2="384" y2="76"/>
+    <line x1="502" y1="72" x2="496" y2="76"/>
+    <!-- open page split on the book -->
+    <line x1="440" y1="97" x2="440" y2="102"/>
+    <line x1="416" y1="101" x2="432" y2="100"/>
+    <line x1="448" y1="100" x2="464" y2="101"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>

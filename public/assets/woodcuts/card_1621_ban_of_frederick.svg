@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 128" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Woodcut of the imperial ban against Frederick: a great sealed decree with pendant wax seal and crossed quills">
+  <rect width="880" height="128" fill="#d2c198"/>
+  <!-- engraved sky hatching across the band -->
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.14">
+    <line x1="0" y1="30" x2="30" y2="0"/><line x1="0" y1="55" x2="55" y2="0"/>
+    <line x1="0" y1="80" x2="80" y2="0"/><line x1="0" y1="105" x2="105" y2="0"/>
+    <line x1="880" y1="30" x2="850" y2="0"/><line x1="880" y1="55" x2="825" y2="0"/>
+    <line x1="880" y1="80" x2="800" y2="0"/><line x1="880" y1="105" x2="775" y2="0"/>
+  </g>
+  <!-- printer's frame -->
+  <g stroke="#1c140f" fill="none">
+    <rect x="5" y="5" width="870" height="118" stroke-width="3"/>
+    <rect x="11" y="11" width="858" height="106" stroke-width="1"/>
+  </g>
+  <!-- flanking ornamental rules (safe to crop) -->
+  <g stroke="#1c140f" stroke-width="2">
+    <line x1="20" y1="64" x2="300" y2="64"/><line x1="580" y1="64" x2="860" y2="64"/>
+    <circle cx="300" cy="64" r="4" fill="#1c140f"/><circle cx="580" cy="64" r="4" fill="#1c140f"/>
+    <line x1="40" y1="58" x2="40" y2="70"/><line x1="840" y1="58" x2="840" y2="70"/>
+  </g>
+  <!-- central motif: the great sealed decree, centred near x=440 -->
+  <g fill="#1c140f">
+    <!-- crossed quills behind the document -->
+    <polygon points="352,30 360,28 426,92 420,98"/>
+    <polygon points="528,30 520,28 454,92 460,98"/>
+    <!-- quill feather barbs -->
+    <polygon points="352,30 338,22 348,40 360,28"/>
+    <polygon points="528,30 542,22 532,40 520,28"/>
+    <!-- the parchment decree (blocky scroll with curled top corners) -->
+    <path d="M372,28 Q380,20 392,26 L392,98 L368,98 Q364,90 372,82 Z"/>
+    <rect x="392" y="26" width="96" height="72"/>
+    <path d="M488,26 Q500,20 508,28 L508,82 Q516,90 512,98 L488,98 Z"/>
+    <!-- engraved lines of the proclaiming text (ink bars) -->
+    <rect x="404" y="38" width="72" height="4"/>
+    <rect x="404" y="48" width="72" height="4"/>
+    <rect x="404" y="58" width="60" height="4"/>
+    <rect x="404" y="68" width="72" height="4"/>
+    <!-- imperial double-eagle stamp condemning the rebel -->
+    <polygon points="440,76 430,84 436,90 444,90 450,84"/>
+    <circle cx="434" cy="80" r="3"/><circle cx="446" cy="80" r="3"/>
+    <!-- pendant cord and wax seal hanging below -->
+    <rect x="436" y="98" width="3" height="14"/>
+    <rect x="442" y="98" width="3" height="14"/>
+    <circle cx="440" cy="116" r="13"/>
+    <!-- broken-seal radiating notches (the ban cast out) -->
+    <polygon points="440,103 444,109 436,109"/>
+  </g>
+  <!-- carved highlights cut BACK to the ground colour -->
+  <g stroke="#d2c198" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <!-- gouged sheen down the parchment face -->
+    <line x1="416" y1="32" x2="416" y2="94"/>
+    <line x1="470" y1="34" x2="470" y2="80"/>
+    <!-- curl shadows lifted from the rolled corners -->
+    <path d="M376,30 Q382,26 388,30"/>
+    <path d="M494,30 Q500,26 504,32"/>
+    <!-- quill spine catchlights -->
+    <line x1="362" y1="34" x2="418" y2="88"/>
+    <line x1="518" y1="34" x2="462" y2="88"/>
+    <!-- wax seal device cut into the ink -->
+    <circle cx="440" cy="116" r="6"/>
+    <line x1="440" y1="110" x2="440" y2="122"/>
+    <line x1="434" y1="116" x2="446" y2="116"/>
+  </g>
+  <!-- seal rays radiating outward (ground-cut notches around wax) -->
+  <g stroke="#d2c198" stroke-width="1.4" stroke-linecap="round">
+    <line x1="440" y1="103" x2="440" y2="100"/>
+    <line x1="453" y1="116" x2="456" y2="116"/>
+    <line x1="427" y1="116" x2="424" y2="116"/>
+  </g>
+  <!-- base ground line + hatching -->
+  <line x1="11" y1="110" x2="869" y2="110" stroke="#1c140f" stroke-width="2.5"/>
+  <g stroke="#1c140f" stroke-width="0.8" opacity="0.4"><line x1="11" y1="115" x2="869" y2="115"/></g>
+</svg>
